@@ -1,0 +1,22 @@
+form[name='form'] {
+  .av-button-primary {
+	
+    .wdg-button {
+      background: transparent;
+      border: 1px;
+      border-style: solid;
+      .override-color(border-color, @av-button-primary-color, @av-primary-color);
+      .override-color(background, @av-button-primary-color, @av-primary-color);
+      .override-color(color, @av-button-contrast, @av-primary-contrast);
+            
+      &:hover {
+        background: transparent;
+        .override-color(color, @av-button-primary-color, @av-primary-color);  
+      } 
+          
+      &:focus, &:active {
+        background: @av-focus-color;
+      }     
+    } 
+  }
+}

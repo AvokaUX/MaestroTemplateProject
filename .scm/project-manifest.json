@@ -1,0 +1,52 @@
+{
+  "activeFlag": false,
+  "configJson": "",
+  "releaseVersion": "17.10.0",
+  "forms": [],
+  "components": [],
+  "templates": [],
+  "libraries": [
+    "ben-walsh-avoka-template-library"
+  ],
+  "libraryIncludes": [
+    {
+      "nameNorm": "identity",
+      "sequenceNumber": 4,
+      "type": "Release",
+      "version": "17.10.0"
+    },
+    {
+      "nameNorm": "navigation",
+      "sequenceNumber": 6,
+      "type": "Release",
+      "version": "17.10.0"
+    },
+    {
+      "nameNorm": "maguire",
+      "sequenceNumber": 5,
+      "type": "Release",
+      "version": "17.10.0"
+    },
+    {
+      "nameNorm": "cards",
+      "sequenceNumber": 2,
+      "type": "Release",
+      "version": "17.10.0"
+    },
+    {
+      "nameNorm": "core",
+      "sequenceNumber": 3,
+      "type": "Release",
+      "version": "17.10.0"
+    },
+    {
+      "nameNorm": "ben-walsh-avoka-template-library",
+      "sequenceNumber": 1,
+      "type": "Project",
+      "version": "1.0.0"
+    }
+  ],
+  "description": "Development project for Avoka Template",
+  "name": "Ben Walsh - Avoka Template",
+  "nameNormalized": "ben-walsh-avoka-template"
+}
