@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Library databaseVersion="1855" environmentName="MAESTRO AU - PROD" exportDate="2018-01-08" revisionNumber="50a508b" sfmVersion="17.10.0">
+  <readOnlyFlag>false</readOnlyFlag>
+  <releaseMaxVersion/>
+  <releaseMinVersion/>
+  <tmMinVersion/>
+  <nameNormalized>templates</nameNormalized>
+  <versionNumber>1.0.0</versionNumber>
+  <createdAt type="Date">1515376980000</createdAt>
+  <createdBy>bwalsh@avoka.com</createdBy>
+  <lastModifiedAt type="Date"/>
+  <lastModifiedBy/>
+  <description></description>
+  <name>templates</name>
+  <type>Project</type>
+</Library>
