@@ -5187,7 +5187,7 @@
 		"logo",
 		"pageController"
 	],
-	"templateName": "Avoka - Base Template",
+	"templateName": "avoka-base-template",
 	"parentExtensions": [
 		"AvokaSmartForm"
 	],
