@@ -4,7 +4,7 @@
   <releaseMaxVersion/>
   <releaseMinVersion/>
   <tmMinVersion/>
-  <nameNormalized>templates</nameNormalized>
+  <nameNormalized>coretemplates</nameNormalized>
   <versionNumber>1.0.0</versionNumber>
   <createdAt type="Date">1515376980000</createdAt>
   <createdBy>bwalsh@avoka.com</createdBy>
