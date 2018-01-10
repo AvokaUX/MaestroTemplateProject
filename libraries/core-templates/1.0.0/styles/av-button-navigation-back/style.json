@@ -3,6 +3,6 @@
 	"file": "style.less",
 	"label": "AV back button",
 	"widgets": [
-		"button-navigation"
+		"button-docking"
 	]
 }
