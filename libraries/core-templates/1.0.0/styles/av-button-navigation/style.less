@@ -1,19 +1,16 @@
 form[name='form'] {
-  .av-button-navigation {	
+  .av-button-navigation {  	
     width:80px;
     height:80px; 
-    position:fixed;
-    .override-color(color, @av-button-navigation-font-color, @av-neutral-color);  
+    .override-color(color, @av-button-docking-font-color, @av-neutral-color);  
 	
 	.wdg-button {		// Button
-      width:80px;
-      height:80px; 
-      .override-color(background-color, @av-button-navigation-color, @av-primary-contrast);
+      .override-color(background-color, @av-button-docking-color, @av-primary-contrast);
       border-radius:50%;
       outline:0;
 
       &:hover, &:focus{
-      	.override-color(background-color, @av-button-navigation-contrast, @av-primary-color);             
+      	.override-color(background-color, @av-primary-color, @av-button-docking-contrast);             
       }
       
       &:active{
@@ -28,7 +25,6 @@ form[name='form'] {
 	.wdg-button-label {		// Button label
       padding:0;
       font-size: 12px;    		
-      display:block;
 	}
   }
 }

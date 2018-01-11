@@ -12,12 +12,12 @@ define(["app"], function(app) {
 				  var hh = $scope.$header.outerHeight();
 				  var sp = newValue;
 				  var dp = Form.getItemProperty("data.dockingController","dockPosition");
-				  var ds = hh * (1 - sp/dp);
-				  var relativeMargin = $(window).width() * 0.001;
-				  $scope.$navContainer.css({"width": "calc(100% + " + (lw*(1 - Math.pow(sp/dp, 0.2)) - ((1 - ds/hh) * relativeMargin)) + "px)"});
-				  //$scope.$navContainer.css({"width": "calc(100% + " + (lw*(1 - Math.pow(sp/dp, 0.2))) + "px)"});
+				  var ds = (hh - 10) * (1 - sp/dp);
+				  var relativeMargin = ($(window).width() * 0.01) + 36;
+				  //$scope.$navContainer.css({"width": "calc(100% + " + (lw*(1 - Math.pow(sp/dp, 0.2)) - ((1 - ds/hh) * relativeMargin)) + "px)"});
+				  $scope.$navContainer.css({"width": "calc(100% + " + (lw*(1 - Math.pow(sp/dp, 0.2)) - (sp/dp * relativeMargin)) + "px)"});
 				  $scope.$navContainer.css({"top": ds + "px"});
-				  $scope.$banner .css({"height": ds + "px"});
+				  $scope.$banner.css({"height": (hh - sp) + "px"});
 				 });
 				data.scrollPosition = 0;
 			  });

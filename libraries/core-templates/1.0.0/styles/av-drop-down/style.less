@@ -1,5 +1,5 @@
 form[name='form'] {
-	.bs-drop-down-33719 {
+	.av-drop-down {
 	
 		.wdg-label {		// Label
 		
@@ -23,7 +23,8 @@ form[name='form'] {
             left: 0;
             bottom: -2px;
             right: 0;
-            border-bottom: 2px solid @av-primary-color;
+            border-bottom: 2px solid;
+            .override-color(border-bottom-color, @av-primary-color, @av-focus-color);
             transform: scale(0.5);
             opacity: 0;
             transition: transform 0.2s, opacity 0.2s;

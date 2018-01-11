@@ -5,13 +5,13 @@ form[name='form'] {
       background: transparent;
       border: 1px;
       border-style: solid;
-      .override-color(border-color, @av-button-primary-color, @av-primary-color);
-      .override-color(background, @av-button-primary-color, @av-primary-color);
-      .override-color(color, @av-button-contrast, @av-primary-contrast);
+      .override-color(border-color, @av-primary-color, @av-button-primary-color);
+      .override-color(background, @av-primary-color, @av-button-primary-color);
+      .override-color(color, @av-primary-contrast, @av-button-contrast);
             
       &:hover {
         background: transparent;
-        .override-color(color, @av-button-primary-color, @av-primary-color);  
+        .override-color(color, @av-primary-color, @av-button-primary-color);  
       } 
           
       &:focus, &:active {

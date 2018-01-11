@@ -7,7 +7,7 @@
 					[
 						{
 							"styles": [
-								"av-form-field",
+								"av-global-layout",
 								"bs-close-dialog-77958"
 							],
 							"hideLabel": false,

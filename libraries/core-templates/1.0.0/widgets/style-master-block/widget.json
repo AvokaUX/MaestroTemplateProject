@@ -75,8 +75,8 @@
 								[
 									{
 										"styles": [
-											"av-form-field",
-											"bs-drop-down-33719"
+											"av-global-layout",
+											"av-drop-down"
 										],
 										"properties": {
 											"dataPath": "data.daysData"
@@ -103,8 +103,8 @@
 									},
 									{
 										"styles": [
-											"av-form-field",
-											"bs-drop-down-33719"
+											"av-global-layout",
+											"av-drop-down"
 										],
 										"rules": {
 											"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
@@ -194,8 +194,8 @@
 					[
 						{
 							"styles": [
-								"av-form-field",
-								"bs-text-field-71719"
+								"av-global-layout",
+								"av-text-field"
 							],
 							"type": "decimal",
 							"path": "DecimalField",
@@ -226,7 +226,7 @@
 					[
 						{
 							"styles": [
-								"av-form-field",
+								"av-global-layout",
 								"bs-checkbox-04598"
 							],
 							"properties": {
@@ -268,7 +268,7 @@
 										},
 										"label": "Left Link Button",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-link"
 										],
 										"properties": {
@@ -291,7 +291,7 @@
 										"styles": [
 											"av-button-primary",
 											"bs-small-button-25462",
-											"av-form-field"
+											"av-global-layout"
 										],
 										"type": "button",
 										"path": "",
@@ -309,7 +309,7 @@
 										},
 										"label": "Primary Small",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-primary",
 											"bs-small-button-25462"
 										],
@@ -329,7 +329,7 @@
 										},
 										"label": "Primary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-primary"
 										],
 										"type": "button",
@@ -348,7 +348,7 @@
 										},
 										"label": "Primary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-primary",
 											"av-button"
 										],
@@ -379,7 +379,7 @@
 										},
 										"label": "Secondary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-secondary",
 											"bs-small-button-25462"
 										],
@@ -399,7 +399,7 @@
 										},
 										"label": "Secondary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-secondary",
 											"bs-small-button-25462"
 										],
@@ -419,7 +419,7 @@
 										},
 										"label": "Secondary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-secondary"
 										],
 										"type": "button",
@@ -438,7 +438,7 @@
 										},
 										"label": "Secondary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-secondary",
 											"av-button"
 										],
@@ -469,7 +469,7 @@
 										},
 										"label": "Right Link Button",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"av-button-link"
 										],
 										"properties": {
@@ -491,7 +491,7 @@
 										},
 										"label": "Tertiary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"bs-tertiary-button-29051",
 											"bs-small-button-25462"
 										],
@@ -514,7 +514,7 @@
 										},
 										"label": "Tertiary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"bs-tertiary-button-29051",
 											"bs-small-button-25462"
 										],
@@ -534,7 +534,7 @@
 										},
 										"label": "Tertiary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"bs-tertiary-button-29051"
 										],
 										"type": "button",
@@ -553,7 +553,7 @@
 										},
 										"label": "Tertiary",
 										"styles": [
-											"av-form-field",
+											"av-global-layout",
 											"bs-tertiary-button-29051",
 											"av-button"
 										],

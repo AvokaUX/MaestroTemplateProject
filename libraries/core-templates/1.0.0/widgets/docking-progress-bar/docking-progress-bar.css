@@ -25,7 +25,7 @@ form[name='form'] .av-progress-bar-container > .row {
 }
 form[name='form'] .av-form-heading-container {
 	position: absolute;
-    top: -100%;
+    top: calc(-100% + 10px);
     right: 0;
     height: 100%;
 }

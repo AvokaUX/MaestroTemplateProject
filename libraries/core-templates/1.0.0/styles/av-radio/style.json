@@ -1,11 +1,11 @@
 {
-  "label": "BS Text Field",
+  "label": "AV Radio",
   "block": {
     "decs": {},
     "blocks": {}
   },
   "file": "style.less",
   "widgets": [
-    "text-input"
+    "radio-button-group"
   ]
 }

@@ -12,14 +12,19 @@ form[name='form'] .progress-wrapper {
   display: table;
   width: 100%;
 }
+form[name='form'] .wdg-progress-bar-heading {
+  position: absolute;
+}
 form[name='form'] .wdg-progress-bar-heading-docked {
-  display: table-cell;
-  width: 3%;
+  width: 36px;
+  position: absolute;
+  right: 100%;
+  height: 100%;
 }
 form[name='form'] .progress-bar-wrapper {
   display: table-cell;
   position: relative;
-  padding-top: 5px;
+  height: 8px;
 }
 form[name='form'] .progress-container .wdg-page-group-icon-container {
   position: relative;
@@ -102,7 +107,6 @@ form[name='form'] .progress-container .wdg-progress-bar-background {
 form[name='form'] .progress-container .progress-subtext-wrapper {
   display: block;
   width: 100%;
-  padding-top: 10px;
 }
 form[name='form'] .progress-container .progress-subtext-wrapper span {
   display: inline-block;
