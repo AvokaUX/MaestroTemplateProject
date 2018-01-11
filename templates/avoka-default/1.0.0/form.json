@@ -176,52 +176,60 @@
 				],
 				[
 					{
-						"exclude": true,
-						"htmlLabel": "Dialog Content excluded",
-						"id": "dialogContentExcluded_2",
-						"label": "Dialog Content excluded",
-						"path": "",
+						"id": "dialogBody_3",
 						"rows": [
 							[
 								{
-									"id": "section_5",
-									"rows": [
-										[]
-									],
-									"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "c67d616b1ece48abaeab4eec3f70710c",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"id": "dialogFooter_9",
-						"rows": [
-							[
-								{
-									"id": "dialogFooterBlock_3",
+									"exclude": true,
+									"htmlLabel": "Dialog Content excluded",
+									"id": "dialogContentExcluded_2",
+									"label": "Dialog Content excluded",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "okay_9",
-												"rules": {
-													"sh": ""
-												},
-												"subId": "6471b7e4d063409483e51ff9138ed85e",
-												"type": "button"
+												"id": "section_5",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
 											}
 										]
 									],
-									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_9",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_3",
+												"rows": [
+													[
+														{
+															"id": "okay_9",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
 									"type": "block"
 								}
 							]
 						],
-						"subId": "50ead585f74e4a198aa3f799c7663b9c",
 						"type": "block"
 					}
 				],
@@ -598,65 +606,149 @@
 		},
 		"bsGeneralDialog": {
 			"exclude": false,
+			"htmlLabel": "Save Dialog",
 			"id": "bsGeneralDialog",
+			"label": "Save Dialog",
 			"path": "",
 			"rows": [
 				[
 					{
 						"id": "dialogHeader_5",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "close_5",
-									"path": "",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
 									"type": "icon-button"
 								}
 							]
 						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogContent_3",
+						"id": "dialogBody_2",
 						"path": "",
 						"rows": [
 							[
 								{
-									"id": "section_2",
-									"path": "",
-									"rows": [
-										[]
-									],
-									"type": "section-2"
-								}
-							]
-						],
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"id": "dialogFooter_7",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "dialogFooterBlock",
+									"id": "dialogContent_3",
 									"path": "",
 									"rows": [
 										[
 											{
-												"id": "okay_6",
-												"path": "",
-												"rules": {
-													"sh": ""
-												},
-												"type": "button"
+												"htmlLabel": "Save information",
+												"id": "section_2",
+												"label": "Save information",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Save confirm message",
+															"id": "saveConfirmMessage_1",
+															"label": "Save confirm message",
+															"path": "",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "First name:",
+															"id": "firstName_2",
+															"label": "First name:",
+															"path": "FirstName",
+															"type": "text-input"
+														},
+														{
+															"exclude": false,
+															"htmlLabel": "Last name:",
+															"id": "lastName_2",
+															"label": "Last name:",
+															"path": "LastName",
+															"type": "text-input"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "radioButtonGroup_1",
+															"path": "RadioButtonGroup",
+															"properties": {},
+															"type": "radio-button-group"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "radioButtonGroup_2",
+															"path": "RadioButtonGroup",
+															"properties": {},
+															"type": "radio-button-group"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "radioButtonGroup_3",
+															"path": "RadioButtonGroup",
+															"properties": {},
+															"type": "radio-button-group"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "radioButtonGroup_4",
+															"path": "RadioButtonGroup",
+															"properties": {},
+															"type": "radio-button-group"
+														}
+													]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
 											}
 										]
 									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_7",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock",
+												"path": "",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Save",
+															"id": "okay_6",
+															"label": "Save",
+															"path": "",
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
 									"type": "block"
 								}
 							]
@@ -693,52 +785,60 @@
 				],
 				[
 					{
-						"exclude": true,
-						"htmlLabel": "Dialog Content excluded",
-						"id": "dialogContentExcluded_1",
-						"label": "Dialog Content excluded",
-						"path": "",
+						"id": "dialogBody_1",
 						"rows": [
 							[
 								{
-									"id": "section_4",
-									"rows": [
-										[]
-									],
-									"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "c67d616b1ece48abaeab4eec3f70710c",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"id": "dialogFooter_8",
-						"rows": [
-							[
-								{
-									"id": "dialogFooterBlock_2",
+									"exclude": true,
+									"htmlLabel": "Dialog Content excluded",
+									"id": "dialogContentExcluded_1",
+									"label": "Dialog Content excluded",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "okay_8",
-												"rules": {
-													"sh": ""
-												},
-												"subId": "6471b7e4d063409483e51ff9138ed85e",
-												"type": "button"
+												"id": "section_4",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
 											}
 										]
 									],
-									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_8",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_2",
+												"rows": [
+													[
+														{
+															"id": "okay_8",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
 									"type": "block"
 								}
 							]
 						],
-						"subId": "50ead585f74e4a198aa3f799c7663b9c",
 						"type": "block"
 					}
 				],
@@ -990,52 +1090,60 @@
 				],
 				[
 					{
-						"exclude": true,
-						"htmlLabel": "Dialog Content excluded",
-						"id": "dialogContentExcluded_3",
-						"label": "Dialog Content excluded",
-						"path": "",
+						"id": "dialogBody_4",
 						"rows": [
 							[
 								{
-									"id": "section_6",
-									"rows": [
-										[]
-									],
-									"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "c67d616b1ece48abaeab4eec3f70710c",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"id": "dialogFooter_10",
-						"rows": [
-							[
-								{
-									"id": "dialogFooterBlock_4",
+									"exclude": true,
+									"htmlLabel": "Dialog Content excluded",
+									"id": "dialogContentExcluded_3",
+									"label": "Dialog Content excluded",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "okay_10",
-												"rules": {
-													"sh": ""
-												},
-												"subId": "6471b7e4d063409483e51ff9138ed85e",
-												"type": "button"
+												"id": "section_6",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
 											}
 										]
 									],
-									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_10",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_4",
+												"rows": [
+													[
+														{
+															"id": "okay_10",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
 									"type": "block"
 								}
 							]
 						],
-						"subId": "50ead585f74e4a198aa3f799c7663b9c",
 						"type": "block"
 					}
 				],
@@ -1243,56 +1351,64 @@
 				],
 				[
 					{
-						"exclude": true,
-						"hasCustomId": true,
-						"htmlLabel": "Dialog Content excluded",
-						"id": "dialogContentExcluded",
-						"label": "Dialog Content excluded",
-						"path": "",
+						"id": "dialogBody",
 						"rows": [
 							[
 								{
-									"id": "section_3",
+									"exclude": true,
+									"hasCustomId": true,
+									"htmlLabel": "Dialog Content excluded",
+									"id": "dialogContentExcluded",
+									"label": "Dialog Content excluded",
+									"path": "",
 									"rows": [
-										[]
+										[
+											{
+												"id": "section_3",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
 									],
-									"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-									"type": "section-2"
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
 								}
-							]
-						],
-						"subId": "c67d616b1ece48abaeab4eec3f70710c",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"exclude": false,
-						"id": "dialogFooter_6",
-						"rows": [
+							],
 							[
 								{
 									"exclude": false,
-									"id": "dialogFooterBlock_1",
+									"id": "dialogFooter_6",
 									"rows": [
 										[
 											{
 												"exclude": false,
-												"id": "okay_7",
-												"rules": {
-													"sh": ""
-												},
-												"subId": "6471b7e4d063409483e51ff9138ed85e",
-												"type": "button"
+												"id": "dialogFooterBlock_1",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"id": "okay_7",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
 											}
 										]
 									],
-									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
 									"type": "block"
 								}
 							]
 						],
-						"subId": "50ead585f74e4a198aa3f799c7663b9c",
 						"type": "block"
 					}
 				],
