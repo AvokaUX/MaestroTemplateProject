@@ -9,7 +9,7 @@
 						{
 							"label": "Close",
 							"styles": [
-								"av-form-field",
+								"av-global-layout",
 								"bs-general-dialog-close-85088"
 							],
 							"type": "icon-button",

@@ -100,7 +100,7 @@
 						{
 							"label": "Start a new form",
 							"styles": [
-								"av-form-field",
+								"av-global-layout",
 								"av-button",
 								"av-button-primary"
 							],

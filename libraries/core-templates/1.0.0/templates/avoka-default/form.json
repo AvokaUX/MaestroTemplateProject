@@ -400,7 +400,7 @@
 							"styles": [
 								"av-button",
 								"bs-submit-button-65937",
-								"av-form-field"
+								"av-global-layout"
 							],
 							"properties": {
 								"legacyMethod": false
@@ -1065,7 +1065,7 @@
 				"dialog-cancel-hide-desktop",
 				"dialog-cancel-hide-mobile",
 				"dialog-confirm-button",
-				"av-form-field",
+				"av-global-layout",
 				"form-help-start-chat-button",
 				"link-button-style",
 				"mg-button",
@@ -1077,18 +1077,18 @@
 				"bs-next-error-36745"
 			],
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {}
 		},
 		"button-group": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"av-button-group",
 				"align-top"
 			],
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"av-button-group"
 			],
 			"properties": {}
@@ -1140,12 +1140,12 @@
 		"checkbox": {
 			"styles": [
 				"mg-checkbox",
-				"av-form-field",
+				"av-global-layout",
 				"bs-checkbox-04598"
 			],
 			"availableStyles": [
 				"mg-checkbox",
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
 				"bs-checkbox-04598"
 			],
@@ -1153,26 +1153,26 @@
 		},
 		"currency": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"bs-currency-field-75729"
 			],
 			"availableStyles": [
 				"align-top",
 				"bs-currency-field-75729",
-				"av-form-field",
-				"bs-text-field-71719"
+				"av-global-layout",
+				"av-text-field"
 			],
 			"properties": {}
 		},
 		"dropdown": {
 			"styles": [
-				"av-form-field",
-				"bs-drop-down-33719"
+				"av-global-layout",
+				"av-drop-down"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
-				"bs-drop-down-33719"
+				"av-drop-down"
 			],
 			"properties": {
 				"icon": "fa fa-angle-down"
@@ -1190,23 +1190,23 @@
 		},
 		"dropdown-years": {
 			"styles": [
-				"av-form-field",
-				"bs-drop-down-33719"
+				"av-global-layout",
+				"av-drop-down"
 			],
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-drop-down-33719"
+				"av-global-layout",
+				"av-drop-down"
 			],
 			"properties": {}
 		},
 		"dropdown-multi-select": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"dropdown-multi-select"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"dropdown-multi-select",
 				"align-top"
 			],
@@ -1214,35 +1214,35 @@
 		},
 		"data-checkbox-group": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
 				"mg-checkbox",
 				"mg-checkbox-group",
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
 		},
 		"data-dropdown": {
 			"styles": [
-				"av-form-field",
-				"bs-drop-down-33719"
+				"av-global-layout",
+				"av-drop-down"
 			],
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-drop-down-33719"
+				"av-global-layout",
+				"av-drop-down"
 			],
 			"properties": {}
 		},
 		"data-radio-group": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-basic"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-basic",
 				"radio-border",
 				"radio-icon-top",
@@ -1254,13 +1254,13 @@
 		},
 		"data-typeahead": {
 			"styles": [
-				"av-form-field",
-				"bs-text-field-71719"
+				"av-global-layout",
+				"av-text-field"
 			],
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-text-field-71719"
+				"av-global-layout",
+				"av-text-field"
 			],
 			"properties": {}
 		},
@@ -1268,7 +1268,7 @@
 			"styles": [
 				"mg-datepicker",
 				"date-picker-base",
-				"av-form-field",
+				"av-global-layout",
 				"bs-date-field-64466"
 			],
 			"availableStyles": [
@@ -1276,19 +1276,19 @@
 				"bs-date-field-64466",
 				"mg-datepicker",
 				"date-picker-base",
-				"av-form-field",
-				"bs-text-field-71719"
+				"av-global-layout",
+				"av-text-field"
 			],
 			"properties": {}
 		},
 		"decimal": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-text-field-71719"
+				"av-global-layout",
+				"av-text-field"
 			],
 			"properties": {}
 		},
@@ -1304,20 +1304,20 @@
 		},
 		"iframe": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
 		},
 		"linkedin-prefill": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
@@ -1326,7 +1326,7 @@
 			"availableStyles": [
 				"mg-checkbox",
 				"mg-radio-button-group",
-				"av-form-field",
+				"av-global-layout",
 				"mg-checkbox-group",
 				"align-top"
 			],
@@ -1364,11 +1364,11 @@
 		},
 		"radio-button-group-graphical": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-graphical-group"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-graphical-group",
 				"align-top"
 			],
@@ -1392,29 +1392,29 @@
 		},
 		"radio-button-group": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-basic",
-				"bs-radio-57278"
+				"av-radio"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-basic",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
-				"bs-radio-57278",
+				"av-radio",
 				"align-top"
 			],
 			"properties": {}
 		},
 		"radio-button-repeating": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-basic"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-basic",
 				"radio-border",
 				"radio-icon-top",
@@ -1426,11 +1426,11 @@
 		},
 		"repeat-add-button": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"repeat-button"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"repeat-button",
 				"align-top"
 			],
@@ -1438,11 +1438,11 @@
 		},
 		"repeat-delete-button": {
 			"styles": [
-				"av-form-field",
+				"av-global-layout",
 				"repeat-button"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"repeat-button",
 				"align-top"
 			],
@@ -1450,20 +1450,20 @@
 		},
 		"route-select": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
 		},
 		"signature": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
 				"signature-dialog-15537"
 			],
@@ -1471,27 +1471,27 @@
 		},
 		"slider": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
 		},
 		"text-area": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
 		},
 		"text-display": {
 			"styles": [
-				"av-form-field"
+				"av-global-layout"
 			],
 			"availableStyles": [
 				"advice-block-info-content",
@@ -1501,7 +1501,7 @@
 				"bs-form-name-03674",
 				"mg-bold",
 				"email-complete-message",
-				"av-form-field",
+				"av-global-layout",
 				"form-footer-text",
 				"mg-row-header",
 				"job-details-text",
@@ -1521,14 +1521,14 @@
 		},
 		"text-input": {
 			"styles": [
-				"av-form-field",
-				"bs-text-field-71719"
+				"av-global-layout",
+				"av-text-field"
 			],
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
 				"bs-form-text-field-32514",
-				"bs-text-field-71719",
+				"av-text-field",
 				"bs-dialog-text-field-14963",
 				"bs-online-chat-82522"
 			],
@@ -1591,7 +1591,7 @@
 		},
 		"attachment-field": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
@@ -1897,7 +1897,7 @@
 		},
 		"time": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top"
 			],
 			"properties": {}
@@ -4643,7 +4643,7 @@
 								{
 									"label": "Start a new form",
 									"styles": [
-										"av-form-field",
+										"av-global-layout",
 										"av-button",
 										"av-button-primary"
 									],

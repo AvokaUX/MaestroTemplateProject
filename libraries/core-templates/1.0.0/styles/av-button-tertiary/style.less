@@ -5,12 +5,12 @@ form[name='form'] {
       background: transparent;
       border: 1px;
       border-style: solid;
-      .override-color(border-color, @av-button-contrast, @av-tertiary-color);
-      .override-color(color, @av-button-contrast, @av-tertiary-color);
+      .override-color(border-color, @av-tertiary-color, @av-button-contrast);
+      .override-color(color, @av-tertiary-color, @av-button-contrast);
             
       &:hover {
         background: transparent;
-        .override-color(color, @av-button-secondary-color, @av-secondary-color);  
+        .override-color(color, @av-secondary-color, @av-button-secondary-color);  
       } 
           
       &:focus, &:active {
