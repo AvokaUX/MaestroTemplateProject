@@ -185,7 +185,7 @@
 			"type": "color",
 			"label": "Dialog Background Color",
 			"category": "Dialogs",
-			"defaultValue": ""
+			"defaultValue": "#000"
 		},
 		{
 			"name": "av-button-font-size",
