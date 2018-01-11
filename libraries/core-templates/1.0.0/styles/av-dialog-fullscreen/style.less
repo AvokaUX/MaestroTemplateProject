@@ -1,6 +1,5 @@
-@import "../av-style-variables/style";
 .av-dialog-mask {
- 
+  transition: 0.5s all ease-in-out;  
   .av-dialog { 
     width: 100% !important;
     height: 100% !important; 
@@ -14,5 +13,19 @@
     border: 0;
     background-color: @av-dialog-background;
     padding-top: 64px;
+    > .row:nth-of-type(2), > .row:nth-of-type(3) {
+      position: relative;
+      top: 150px;
+    }
+    &ng-enter, &ng-leave {
+      transition: 0.5s all ease-in-out;
+    }
+    &ng-enter, &ng-leave.ng-leave-active {
+      top: -100%;
+    }
+    &ng-leave, &ng-enter.ng-enter-active {
+      top: 0%;
+    }
+    
   }
 }

@@ -6,6 +6,7 @@
 	"styles": [
 		"av-form-field",
 		"av-button-icon",
-		"av-button-dialog-cancel"
+		"av-button-dialog-cancel",
+		"bs-general-dialog-close-85088"
 	]
 }
