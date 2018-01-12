@@ -227,7 +227,7 @@
 						{
 							"styles": [
 								"av-global-layout",
-								"av-checkbox"
+								"bs-checkbox-04598"
 							],
 							"properties": {
 								"unselectedIconClass": "",

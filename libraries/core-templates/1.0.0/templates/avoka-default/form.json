@@ -197,7 +197,7 @@
 																"label": "Logo",
 																"properties": {
 																	"src": {
-																		"fileName": "avoka-logo.png"
+																		"fileName": "blue-steel-logo.png"
 																	}
 																},
 																"exclude": false,
@@ -286,7 +286,7 @@
 										"exclude": false,
 										"path": "",
 										"styles": [
-											"av-docking-errors"
+											"av-block-error"
 										],
 										"type": "docking-errors",
 										"id": "dockingErrorBlock"
@@ -1139,24 +1139,26 @@
 		},
 		"checkbox": {
 			"styles": [
+				"mg-checkbox",
 				"av-global-layout",
-				"av-checkbox"
+				"bs-checkbox-04598"
 			],
 			"availableStyles": [
+				"mg-checkbox",
 				"av-global-layout",
 				"align-top",
-				"av-checkbox"
+				"bs-checkbox-04598"
 			],
 			"properties": {}
 		},
 		"currency": {
 			"styles": [
 				"av-global-layout",
-				"av-currency"
+				"bs-currency-field-75729"
 			],
 			"availableStyles": [
 				"align-top",
-				"av-currency",
+				"bs-currency-field-75729",
 				"av-global-layout",
 				"av-text-field"
 			],
@@ -1215,6 +1217,7 @@
 				"av-global-layout"
 			],
 			"availableStyles": [
+				"mg-checkbox",
 				"mg-checkbox-group",
 				"av-global-layout",
 				"align-top"
@@ -1236,11 +1239,11 @@
 		"data-radio-group": {
 			"styles": [
 				"av-global-layout",
-				"av-radio"
+				"radio-basic"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"av-radio",
+				"radio-basic",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -1266,11 +1269,11 @@
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
-				"av-date"
+				"bs-date-field-64466"
 			],
 			"availableStyles": [
 				"align-top",
-				"av-date",
+				"bs-date-field-64466",
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
@@ -1321,6 +1324,7 @@
 		},
 		"payment-type-selector": {
 			"availableStyles": [
+				"mg-checkbox",
 				"mg-radio-button-group",
 				"av-global-layout",
 				"mg-checkbox-group",
@@ -1377,7 +1381,7 @@
 			],
 			"availableStyles": [
 				"radio-graphical",
-				"av-radio",
+				"radio-basic",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -1389,15 +1393,17 @@
 		"radio-button-group": {
 			"styles": [
 				"av-global-layout",
+				"radio-basic",
 				"av-radio"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"av-radio",
+				"radio-basic",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
+				"av-radio",
 				"align-top"
 			],
 			"properties": {}
@@ -1405,11 +1411,11 @@
 		"radio-button-repeating": {
 			"styles": [
 				"av-global-layout",
-				"av-radio"
+				"radio-basic"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"av-radio",
+				"radio-basic",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -1607,7 +1613,7 @@
 		},
 		"docking-errors": {
 			"availableStyles": [
-				"av-docking-errors",
+				"av-block-error",
 				"align-top"
 			],
 			"properties": {}
@@ -1897,99 +1903,22 @@
 			"properties": {}
 		}
 	},
-	"brandOptions": {
-		"logo": [
-			{
-				"category": "Logo",
-				"label": "Logo",
-				"path": "properties.src",
-				"linkedItems": [
-					{
-						"id" : "submit_success_logo",
-						"path" : "properties.src"
-					},
-					{
-						"id" : "save_success_logo",
-						"path" : "properties.src"
-					},
-					{
-						"id" : "cancel_success_logo",
-						"path" : "properties.src"
-					}
-				]
-			}
-		],
-		"functionalMenuFabMenu": []
-	},
 	"brands": {
 		"Default": {
 			"label": "Default",
 			"itemOptions": {
-				"logo": {
-					"properties": {
-						"src": {
-							"fileName": "logo.png",
-							"width": "",
-							"height": ""
-						}
-					},
-                    "linkedItems": [
-                      {
-                        "id" : "submit_success_logo",
-                        "path" : "properties.src"
-                      },
-                      {
-                        "id" : "save_success_logo",
-                        "path" : "properties.src"
-                      },
-                      {
-                        "id" : "cancel_success_logo",
-                        "path" : "properties.src"
-                      }
-                    ]
-				}
-			}
-		}
-	},
-	"brands": {
-		"Avoka": {
-			"itemOptions": {
-				"logo": {
-					"properties": {
-						"src": {
-							"fileName": "logo.png",
-							"width": "",
-							"height": ""
-						}
-					},
-                    "linkedItems": [
-                      {
-                        "id" : "submit_success_logo",
-                        "path" : "properties.src"
-                      },
-                      {
-                        "id" : "save_success_logo",
-                        "path" : "properties.src"
-                      },
-                      {
-                        "id" : "cancel_success_logo",
-                        "path" : "properties.src"
-                      }
-                    ]
-				},
 				"functionalMenuFabMenu": {
 					"properties": {}
 				}
 			},
-			"label": "Avoka",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
 				"av-button-font-size": "16px",
 				"av-font-color": "#333333",
-				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
+				"av-font-family": "Arial, Helvetica, sans-serif",
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
-				"av-max-form-width": "999999px",
+				"av-max-form-width": "1020px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
 				"av-menu-color-active": "",
@@ -1998,14 +1927,14 @@
 				"av-menu-hover-color": "",
 				"av-menu-text-color": "",
 				"av-menu-text-hover-color": "",
-				"av-neutral-color": "#EEEEEE",
-				"av-neutral-contrast": "#333333",
-				"av-popover-help": "#fff",
+				"av-neutral-color": "#F2F2F2",
+				"av-neutral-contrast": "#8C8C8C",
+				"av-popover-help": "#0C384B",
 				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#7bd5ff",
-				"av-primary-contrast": "#64767f",
-				"av-secondary-color": "#454753",
-				"av-secondary-contrast": "#64767f",
+				"av-primary-color": "#FF6405",
+				"av-primary-contrast": "#FFFFFF",
+				"av-secondary-color": "#FFFFFF",
+				"av-secondary-contrast": "#0C384B",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
@@ -2040,21 +1969,21 @@
 				"page-gutters": "40px"
 			}
 		},
-		"Default": {
+		"Blue Sky": {
 			"itemOptions": {
 				"functionalMenuFabMenu": {
 					"properties": {}
 				}
 			},
-			"label": "Default",
+			"label": "Blue Sky",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
 				"av-button-font-size": "16px",
 				"av-font-color": "#333333",
-				"av-font-family": "Arial, Helvetica, sans-serif",
+				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
-				"av-max-form-width": "1020px",
+				"av-max-form-width": "999999px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
 				"av-menu-color-active": "",
@@ -2063,14 +1992,14 @@
 				"av-menu-hover-color": "",
 				"av-menu-text-color": "",
 				"av-menu-text-hover-color": "",
-				"av-neutral-color": "#F2F2F2",
-				"av-neutral-contrast": "#8C8C8C",
-				"av-popover-help": "#0C384B",
+				"av-neutral-color": "#EEEEEE",
+				"av-neutral-contrast": "#333333",
+				"av-popover-help": "#fff",
 				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#FF6405",
-				"av-primary-contrast": "#FFFFFF",
-				"av-secondary-color": "#FFFFFF",
-				"av-secondary-contrast": "#0C384B",
+				"av-primary-color": "#7bd5ff",
+				"av-primary-contrast": "#64767f",
+				"av-secondary-color": "#454753",
+				"av-secondary-contrast": "#64767f",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
@@ -4654,7 +4583,7 @@
 																		"label": "Modal logo image",
 																		"properties": {
 																			"src": {
-																				"fileName": "avoka-logo.png"
+																				"fileName": "bs-logo.png"
 																			}
 																		},
 																		"exclude": false,
@@ -5284,6 +5213,9 @@
 	},
 	"clearHidden": "no",
 	"path": "AvokaSmartForm",
+	"brandOptions": {
+		"functionalMenuFabMenu": []
+	},
 	"themeOverrides": [
 		{
 			"category": "Other",
@@ -5310,7 +5242,7 @@
 		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15307",
 		"publishLibraryId": 10988
 	},
-	"selectedBrand": "default",
+	"selectedBrand": "Blue Sky",
 	"styleMods": {
 		"id-modalHeader": {
 			"blocks": {},

@@ -147,14 +147,14 @@
 		{
 			"name": "av-focus-color",
 			"type": "color",
-			"label": "Focus and Hover Color",
+			"label": "Focus color",
 			"category": "Action colors",
 			"defaultValue": ""
 		},
-	    {
-			"name": "av-selected-color",
+		{
+			"name": "av-hover-color",
 			"type": "color",
-			"label": "Selected Color",
+			"label": "Hover Color",
 			"category": "Action colors",
 			"defaultValue": ""
 		},

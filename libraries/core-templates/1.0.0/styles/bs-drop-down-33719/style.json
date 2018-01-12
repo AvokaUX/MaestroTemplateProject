@@ -19,5 +19,9 @@
   "file": "style.less",
   "widgets": [
     "dropdown"
+<<<<<<< HEAD
   ]
+=======
+  ]
+>>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 }
