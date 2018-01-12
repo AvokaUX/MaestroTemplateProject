@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
 	"rows": [
 		[
 			{
@@ -1007,14 +1006,7 @@
 	],
 	"properties": {
 		"popoverHelpIcon": "fa fa-question"
-=======
-	"blockInfo": {
-		"designVersion": "1.0.0",
-		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15307",
-		"publishLibraryId": 10988
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 	},
-<<<<<<< HEAD
 	"type": "form",
 	"breakpoints": [
 		400,
@@ -1906,13 +1898,8 @@
 			],
 			"properties": {}
 		}
-=======
-	"brandOptions": {
-		"functionalMenuFabMenu": []
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 	},
 	"brands": {
-<<<<<<< HEAD
 		"Default": {
 			"label": "Default",
 			"itemOptions": {
@@ -1979,9 +1966,6 @@
 			}
 		},
 		"default": {
-=======
-		"Blue Sky": {
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			"itemOptions": {
 				"functionalMenuFabMenu": {
 					"properties": {}
@@ -2937,7 +2921,6 @@
 											}
 										]
 									],
-<<<<<<< HEAD
 									"rules": {
 										"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
 									},
@@ -3282,9 +3265,6 @@
 									"path": "",
 									"subId": "bb5814bedb0d4dbba07b45add19f5b3d",
 									"id": "referenceCodeBlockSave",
-=======
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 									"type": "block"
 								}
 							]
@@ -5477,7 +5457,6 @@
 			"type": "px"
 		}
 	],
-<<<<<<< HEAD
 	"blockInfo": {
 		"designVersion": "1.0.0",
 		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15307",
@@ -5519,9 +5498,6 @@
 			"decs": {}
 		}
 	},
-=======
-	"transact": {},
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 	"translation": {
 		"defaultLanguageCode": "en",
 		"languages": [
