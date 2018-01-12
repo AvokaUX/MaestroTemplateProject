@@ -7,5 +7,9 @@
   "file": "style.less",
   "widgets": [
     "text-input"
+<<<<<<< HEAD
   ]
+=======
+  ]
+>>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 }
