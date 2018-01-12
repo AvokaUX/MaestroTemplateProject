@@ -1,0 +1,1410 @@
+{
+	"id": "AvokaSmartForm",
+	"rows": [
+		[
+			{
+				"category": "Custom Components",
+				"exclude": false,
+				"hasCustomId": true,
+				"htmlLabel": "Cancel Confirm",
+				"id": "cancelconfirm",
+				"label": "Cancel Confirm",
+				"path": "",
+				"rows": [
+					[
+						{
+							"id": "dialogHeader_4",
+							"pubId": "a658d5aa6767473fa2b1cf4c29fb820a",
+							"rows": [
+								[
+									{
+										"id": "close_4",
+										"pubId": "d85962d96d4b42bcb517de498e25ed4d",
+										"rules": {
+											"click": "Form.showDialog();"
+										},
+										"subId": "1056a8426290467db5649e4a3e08ea47",
+										"type": "icon-button"
+									}
+								]
+							],
+							"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+							"type": "block"
+						}
+					],
+					[
+						{
+							"id": "dialogBody_4",
+							"path": "",
+							"pubId": "a49a77d639a3429da9811bd1afbf0914",
+							"rows": [
+								[
+									{
+										"entityPath": "dialog_content_cancel",
+										"exclude": false,
+										"hasCustomId": true,
+										"htmlLabel": "Cancel Confirm Content",
+										"id": "dialog_content_cancel_confirm",
+										"label": "Cancel Confirm Content",
+										"path": "",
+										"pathContext": "abs",
+										"pubId": "c5ad53604b5a45ebb50f466dce69b7e5",
+										"rows": [
+											[
+												{
+													"entityPath": "confirm",
+													"hasCustomId": true,
+													"htmlLabel": "Confirm Cancellation",
+													"id": "confirm_cancellation",
+													"label": "Confirm Cancellation",
+													"pathContext": "abs",
+													"pubId": "4e0da32bfa7f4de99b42910a16e5f34b",
+													"rows": [
+														[
+															{
+																"entityPath": "cancel_confirm",
+																"exclude": false,
+																"hasCustomId": true,
+																"htmlLabel": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+																"id": "cancel_confirm_text",
+																"label": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+																"path": "Cancel/Confirm/Text",
+																"pathContext": "abs",
+																"pubId": "01580dd2461f46b1adcd5d798f9c9022",
+																"span": {
+																	"lg": 12,
+																	"md": 12
+																},
+																"type": "text-input"
+															}
+														],
+														[
+															{
+																"exclude": false,
+																"hasCustomId": true,
+																"htmlLabel": "Options",
+																"id": "options",
+																"label": "Options",
+																"path": "",
+																"pathContext": "abs",
+																"pubId": "b96cac978be14864b0c639319cf871ea",
+																"rows": [
+																	[
+																		{
+																			"entityPath": "help",
+																			"exclude": false,
+																			"hasCustomId": true,
+																			"htmlLabel": "Help Option",
+																			"id": "help_option",
+																			"label": "Help Option",
+																			"path": "",
+																			"pathContext": "abs",
+																			"pubId": "9c448bc2598642feaed9f29d9f6a626a",
+																			"rows": [
+																				[
+																					{
+																						"entityPath": "info_block",
+																						"exclude": false,
+																						"hasCustomId": true,
+																						"htmlLabel": "Info Block Image",
+																						"id": "info_block_image_1",
+																						"path": "",
+																						"pathContext": "abs",
+																						"properties": {},
+																						"pubId": "e466b3e73d3c461e89942221d615e515",
+																						"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																						"type": "image"
+																					},
+																					{
+																						"entityPath": "container_help",
+																						"exclude": false,
+																						"hasCustomId": true,
+																						"htmlLabel": "Container",
+																						"id": "container_help_option",
+																						"label": "Container",
+																						"path": "",
+																						"pathContext": "abs",
+																						"pubId": "56548e048d444443a4d35cfcf2572f21",
+																						"rows": [
+																							[
+																								{
+																									"exclude": false,
+																									"hasCustomId": true,
+																									"hideLabel": true,
+																									"id": "header_5",
+																									"label": "OK, Lets Get Started!",
+																									"path": "",
+																									"pubId": "6d0c4bed56fa4cdb8efd19bb5d61a67e",
+																									"subId": "e349c33a8a244107942968737f085a50",
+																									"type": "text-display"
+																								}
+																							],
+																							[
+																								{
+																									"entityPath": "content_help",
+																									"exclude": false,
+																									"hasCustomId": true,
+																									"htmlLabel": "If you need any assistance completing your form, let us help you.",
+																									"id": "content_help_option",
+																									"label": "If you need any assistance completing your form, let us help you.",
+																									"path": "",
+																									"pathContext": "abs",
+																									"pubId": "b7da4cef81d34255876152b8a7b1308c",
+																									"subId": "a0f122e70d81447bae6f63fe3b381734",
+																									"type": "text-display"
+																								}
+																							],
+																							[
+																								{
+																									"entityPath": "get",
+																									"exclude": false,
+																									"hasCustomId": true,
+																									"htmlLabel": "Get help",
+																									"id": "get_help",
+																									"label": "Get help",
+																									"path": "",
+																									"pathContext": "abs",
+																									"pubId": "ec4a7b4bb428414b8a37d1b857682a1a",
+																									"rules": {
+																										"click": "Form.showDialog(\"formh\");"
+																									},
+																									"span": {
+																										"lg": 12,
+																										"md": 12
+																									},
+																									"styles": [
+																										"link-button-style"
+																									],
+																									"type": "button"
+																								}
+																							]
+																						],
+																						"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																						"type": "block"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 6,
+																				"md": 6
+																			},
+																			"type": "advice-block-info"
+																		},
+																		{
+																			"entityPath": "save",
+																			"exclude": false,
+																			"hasCustomId": true,
+																			"htmlLabel": "Save Option",
+																			"id": "save_option",
+																			"label": "Save Option",
+																			"path": "",
+																			"pathContext": "abs",
+																			"pubId": "277254ff674746c0bb1db55752b6759c",
+																			"rows": [
+																				[
+																					{
+																						"entityPath": "info_block",
+																						"exclude": false,
+																						"hasCustomId": true,
+																						"htmlLabel": "Info Block Image",
+																						"id": "info_block_image_2",
+																						"path": "",
+																						"pathContext": "abs",
+																						"properties": {},
+																						"pubId": "11e68a8a73254b9c9fe680e1a482917f",
+																						"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																						"type": "image"
+																					},
+																					{
+																						"entityPath": "container_save",
+																						"exclude": false,
+																						"hasCustomId": true,
+																						"htmlLabel": "Container",
+																						"id": "container_save_option",
+																						"label": "Container",
+																						"path": "",
+																						"pathContext": "abs",
+																						"pubId": "fe30dc8aff2042a58bbb92cdab55e607",
+																						"rows": [
+																							[
+																								{
+																									"exclude": false,
+																									"hasCustomId": true,
+																									"id": "header_6",
+																									"label": "OK, Lets Get Started!",
+																									"path": "",
+																									"pubId": "9f562319b7984ac49d69a38e7e827f51",
+																									"subId": "e349c33a8a244107942968737f085a50",
+																									"type": "text-display"
+																								}
+																							],
+																							[
+																								{
+																									"exclude": false,
+																									"hasCustomId": true,
+																									"htmlLabel": "Did you know you can securely save your progress and resume at a later time?",
+																									"id": "conyent_2",
+																									"label": "Did you know you can securely save your progress and resume at a later time?",
+																									"path": "",
+																									"pubId": "7da56928272c4000a5e128427b11c489",
+																									"subId": "a0f122e70d81447bae6f63fe3b381734",
+																									"type": "text-display"
+																								}
+																							],
+																							[
+																								{
+																									"entityPath": "save_for",
+																									"exclude": false,
+																									"hasCustomId": true,
+																									"htmlLabel": "Save for later",
+																									"id": "save_for_later",
+																									"label": "Save for later",
+																									"path": "",
+																									"pathContext": "abs",
+																									"pubId": "ecef8243838a44999ee2062343270b0a",
+																									"rules": {
+																										"click": "Form.showDialog(\"saveconfirm\");"
+																									},
+																									"span": {
+																										"lg": 12,
+																										"md": 12
+																									},
+																									"styles": [
+																										"link-button-style"
+																									],
+																									"type": "button"
+																								}
+																							]
+																						],
+																						"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																						"type": "block"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 6,
+																				"md": 6
+																			},
+																			"type": "advice-block-info"
+																		}
+																	]
+																],
+																"type": "block"
+															}
+														],
+														[
+															{
+																"exclude": false,
+																"hasCustomId": true,
+																"htmlLabel": "Feedback",
+																"id": "feedback",
+																"label": "Feedback",
+																"path": "",
+																"pathContext": "abs",
+																"properties": {
+																	"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
+																},
+																"pubId": "66800abae2f84be5953bd85d3488a708",
+																"rows": [
+																	[
+																		{
+																			"entityPath": "what_is_the_main",
+																			"exclude": false,
+																			"hasCustomId": true,
+																			"htmlLabel": "What is the main reason for your cancellation?",
+																			"id": "what_is_the_main_reason",
+																			"label": "What is the main reason for your cancellation?",
+																			"path": "What/Is/The/Main/Reason",
+																			"pathContext": "abs",
+																			"properties": {
+																				"options": [
+																					{
+																						"label": "I don't have all the information required",
+																						"value": "Lacking Information"
+																					},
+																					{
+																						"label": "I don't understand the questions",
+																						"value": "Don't Understand"
+																					},
+																					{
+																						"label": "I don't have the time to complete it now",
+																						"value": "Out of Time"
+																					},
+																					{
+																						"label": "I don't know why you need this information",
+																						"value": "Relevance Unclear"
+																					},
+																					{
+																						"label": "I am experiencing technical difficulties",
+																						"value": "Technical Issue"
+																					},
+																					{
+																						"label": "I just changed my mind",
+																						"value": "Changed Mind"
+																					},
+																					{
+																						"label": "Other",
+																						"value": "Other"
+																					}
+																				]
+																			},
+																			"pubId": "86b0113180ed4b10b882f69c81c29dc8",
+																			"span": {
+																				"lg": 12,
+																				"md": 12
+																			},
+																			"type": "dropdown"
+																		}
+																	],
+																	[
+																		{
+																			"exclude": false,
+																			"hasCustomId": true,
+																			"htmlLabel": "Comments",
+																			"id": "comments",
+																			"label": "Comments",
+																			"path": "Comments",
+																			"pubId": "dde09b0b91bd4249929ecde1cbec14de",
+																			"type": "text-area"
+																		}
+																	]
+																],
+																"styles": [
+																	"mg-section-2"
+																],
+																"type": "section-2"
+															}
+														]
+													],
+													"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+													"type": "section-2"
+												}
+											]
+										],
+										"subId": "c67d616b1ece48abaeab4eec3f70710c",
+										"type": "dialog-content"
+									}
+								],
+								[
+									{
+										"entityPath": "dialog_footer_cancel",
+										"exclude": false,
+										"hasCustomId": true,
+										"htmlLabel": "Dialog Footer",
+										"id": "dialog_footer_cancel_confirm",
+										"path": "",
+										"pathContext": "abs",
+										"pubId": "175796f975994f1e9a438e9e025d1fa0",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"htmlLabel": "Confirm",
+													"id": "dialogFooterBlock_4",
+													"label": "Confirm",
+													"path": "",
+													"pubId": "7314fa1adde847e3a442130e7580de3a",
+													"rows": [
+														[
+															{
+																"exclude": false,
+																"hasCustomId": true,
+																"htmlLabel": "Confirm",
+																"id": "confirm_2",
+																"label": "Confirm",
+																"path": "",
+																"pubId": "30bcbd69db2b490e8e125e3ddd15e80c",
+																"rules": {
+																	"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																	"sh": ""
+																},
+																"subId": "6471b7e4d063409483e51ff9138ed85e",
+																"type": "button"
+															}
+														]
+													],
+													"rules": {},
+													"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+													"type": "block"
+												}
+											]
+										],
+										"subId": "50ead585f74e4a198aa3f799c7663b9c",
+										"type": "block"
+									}
+								]
+							],
+							"type": "block"
+						}
+					]
+				],
+				"type": "dialog"
+			}
+		]
+	],
+	"styleMods": {},
+	"styles": [
+		"mg-base",
+		"mg-form",
+		"bs-overrides-87851",
+		"bs-tooltip-39326",
+		"bs-fonts-79473",
+		"bs-hide-in-design-83044"
+	],
+	"templateName": "Core - Empty Form",
+	"type": "form",
+	"widgetOverrides": {
+		"address-lookup-google": {
+			"availableStyles": [
+				"google-address-lookup",
+				"align-top"
+			],
+			"properties": {},
+			"styles": [
+				"google-address-lookup"
+			]
+		},
+		"advice-block-info": {
+			"availableStyles": [
+				"av-message-block",
+				"form-help-option-container",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"advice-block-promo": {
+			"availableStyles": [
+				"mg-info-block-with-image",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"attachment-field": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {}
+		},
+		"block": {
+			"availableStyles": [
+				"align-top",
+				"bc-white-background-20804",
+				"av-background-image",
+				"bs-fixed-bottom-right-46166",
+				"bs-fixed-position-21768",
+				"bs-floating-layer-60091",
+				"bs-floating-right-29171",
+				"bs-functional-menu-10498",
+				"bs-max-width-73189",
+				"bs-min-height-64689",
+				"bs-primary-background-02324",
+				"bs-text-align-right-83697",
+				"bs-tramline-container-62540",
+				"bs-transparent-background-93141",
+				"dialog-content",
+				"follow-on-options-block",
+				"pull-right",
+				"reference-code-block",
+				"mg-selector-block",
+				"bs-form-name-03674",
+				"bs-functional-bar-background-56524",
+				"bs-full-screen-layer-18272",
+				"bs-fade-transition-50987",
+				"bs-bottom-nav-15636",
+				"bs-dialog-navigation-56885",
+				"bs-navigator-background-70332",
+				"bs-top-navigation-bar-05168",
+				"bs-top-navigation-container-95011",
+				"bs-fan-menu-mask-86056",
+				"nav-bar-73803",
+				"bs-fab-menu-background-88907",
+				"bs-dialog-footer-10282",
+				"bs-ben-test-63099",
+				"bs-test-progress-container-15954",
+				"bs-top-nav-container-18605",
+				"bs-logo-container-86033",
+				"bs-header-background-58145",
+				"bs-progress-banner-76461",
+				"bs-form-header-34876"
+			],
+			"properties": {}
+		},
+		"button": {
+			"availableStyles": [
+				"align-top",
+				"av-button",
+				"bs-float-right-04479",
+				"bs-functional-button-bottom-18795",
+				"bs-functional-button-items-64706",
+				"bs-functional-buttons-items-vertical-04402",
+				"bs-functional-help-03059",
+				"bs-functional-print-16338",
+				"bs-functional-save-36481",
+				"bs-icon-button-right-96539",
+				"av-button-link",
+				"av-button-primary",
+				"av-button-navigation",
+				"av-button-secondary",
+				"bs-small-button-25462",
+				"bs-tertiary-button-29051",
+				"bs-text-align-right-83697",
+				"bs-wizard-bar-left-button-64658",
+				"bs-wizard-bar-right-button-24568",
+				"dialog-cancel-button",
+				"dialog-cancel-hide-desktop",
+				"dialog-cancel-hide-mobile",
+				"dialog-confirm-button",
+				"av-form-field",
+				"form-help-start-chat-button",
+				"link-button-style",
+				"mg-button",
+				"mg-icon-button",
+				"mg-nav-button",
+				"message-banner",
+				"bs-dialog-button-12962",
+				"bs-dialog-link-button-09809",
+				"bs-next-error-36745",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"button-group": {
+			"availableStyles": [
+				"av-form-field",
+				"av-button-group",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-button-group",
+				"av-form-field"
+			]
+		},
+		"checkbox": {
+			"availableStyles": [
+				"mg-checkbox",
+				"av-form-field",
+				"align-top",
+				"bs-checkbox-04598",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"mg-checkbox",
+				"av-global-layout",
+				"bs-checkbox-04598",
+				"av-form-field"
+			]
+		},
+		"currency": {
+			"availableStyles": [
+				"align-top",
+				"bs-currency-field-75729",
+				"av-form-field",
+				"bs-text-field-71719",
+				"av-global-layout",
+				"av-text-field"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"bs-currency-field-75729",
+				"av-form-field"
+			]
+		},
+		"data-checkbox-group": {
+			"availableStyles": [
+				"mg-checkbox",
+				"mg-checkbox-group",
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"data-dropdown": {
+			"availableStyles": [
+				"align-top",
+				"av-form-field",
+				"bs-drop-down-33719",
+				"av-global-layout",
+				"av-drop-down"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-drop-down",
+				"av-form-field"
+			]
+		},
+		"data-radio-group": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"radio-basic",
+				"av-form-field"
+			]
+		},
+		"data-typeahead": {
+			"availableStyles": [
+				"align-top",
+				"av-form-field",
+				"bs-text-field-71719",
+				"av-global-layout",
+				"av-text-field"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-text-field",
+				"av-form-field"
+			]
+		},
+		"date-picker": {
+			"availableStyles": [
+				"align-top",
+				"bs-date-field-64466",
+				"mg-datepicker",
+				"date-picker-base",
+				"av-form-field",
+				"bs-text-field-71719",
+				"av-global-layout",
+				"av-text-field"
+			],
+			"properties": {},
+			"styles": [
+				"mg-datepicker",
+				"date-picker-base",
+				"av-global-layout",
+				"bs-date-field-64466",
+				"av-form-field"
+			]
+		},
+		"decimal": {
+			"availableStyles": [
+				"align-top",
+				"av-form-field",
+				"bs-text-field-71719",
+				"av-global-layout",
+				"av-text-field"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"dialog-content": {
+			"availableStyles": [
+				"dialog-content",
+				"align-top"
+			],
+			"properties": {},
+			"styles": [
+				"dialog-content"
+			]
+		},
+		"dialog-navigation-bar": {
+			"availableStyles": [
+				"dialog-navigation-bar",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"dialog-save-confirm": {
+			"availableStyles": [
+				"align-top",
+				"av-dialog-fullscreen",
+				"bs-dialog-layout-51204"
+			],
+			"properties": {}
+		},
+		"docking-errors": {
+			"availableStyles": [
+				"av-block-error",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"docking-progress-bar": {
+			"availableStyles": [
+				"av-docking-progress-bar",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"dropdown": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"bs-drop-down-33719",
+				"av-global-layout",
+				"av-drop-down"
+			],
+			"properties": {
+				"icon": "fa fa-angle-down"
+			},
+			"styles": [
+				"av-global-layout",
+				"av-drop-down",
+				"av-form-field"
+			]
+		},
+		"dropdown-dob-block": {
+			"availableStyles": [
+				"date-of-birth-dropdown",
+				"align-top"
+			],
+			"properties": {},
+			"styles": [
+				"date-of-birth-dropdown"
+			]
+		},
+		"dropdown-multi-select": {
+			"availableStyles": [
+				"av-form-field",
+				"dropdown-multi-select",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"dropdown-multi-select",
+				"av-form-field"
+			]
+		},
+		"dropdown-years": {
+			"availableStyles": [
+				"align-top",
+				"av-form-field",
+				"bs-drop-down-33719",
+				"av-global-layout",
+				"av-drop-down"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-drop-down",
+				"av-form-field"
+			]
+		},
+		"floating-functional-component": {
+			"availableStyles": [
+				"bs-functional-fab-menu-06259",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"floating-functional-vertical-component": {
+			"availableStyles": [
+				"bs-functional-vertical-menu-01583",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"form": {
+			"availableStyles": [
+				"mg-base",
+				"mg-form",
+				"align-top",
+				"bs-overrides-87851",
+				"bs-tooltip-39326",
+				"bs-fonts-79473",
+				"av-focus-styling",
+				"bs-hide-in-design-83044"
+			],
+			"properties": {},
+			"styles": [
+				"av-focus-styling"
+			]
+		},
+		"form-bundle-job-tasks": {
+			"availableStyles": [
+				"form-bundle-job-tasks",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"form-footer": {
+			"availableStyles": [
+				"form-footer-container",
+				"align-top",
+				"bs-modal-footer-03990"
+			],
+			"properties": {}
+		},
+		"form-header": {
+			"availableStyles": [
+				"mg-header",
+				"mg-header-tracking-code",
+				"align-top",
+				"bs-max-width-73189",
+				"bs-test-table-27269"
+			],
+			"properties": {}
+		},
+		"icon-button": {
+			"availableStyles": [
+				"align-top",
+				"bs-close-button-top-right-83159",
+				"bs-floating-layer-60091",
+				"bs-floating-right-29171",
+				"av-button-icon",
+				"bs-icon-only-button-71254",
+				"bs-text-align-right-83697",
+				"mg-icon-button",
+				"av-button-dialog-cancel",
+				"bs-dialog-close-button-04342"
+			],
+			"properties": {}
+		},
+		"iframe": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"image": {
+			"availableStyles": [
+				"align-top",
+				"info-block-image-right",
+				"job-details-image",
+				"bs-logo-fixed-40891",
+				"bs-test-image-02011",
+				"bs-test-img-85183"
+			],
+			"properties": {}
+		},
+		"job-details": {
+			"availableStyles": [
+				"job-details-container",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"link": {
+			"availableStyles": [
+				"mg-link",
+				"form-help-hotline",
+				"form-help-image",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"linkedin-prefill": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"mitek-license-prefill": {
+			"availableStyles": [
+				"mitek-license-prefill",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"mobile-progress-bar": {
+			"availableStyles": [
+				"bs-mobile-progress-bar-61507",
+				"align-top",
+				"bs-mobile-progress-60529",
+				"bs-ben-test-progress-bar-14477"
+			],
+			"properties": {}
+		},
+		"modal-mobile-header": {
+			"availableStyles": [
+				"mg-menu",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"nav-btn-cancel": {
+			"availableStyles": [
+				"mg-icon-button",
+				"mg-nav-button",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"nav-btn-open": {
+			"availableStyles": [
+				"mg-icon-button",
+				"mg-nav-button",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"nav-btn-save": {
+			"availableStyles": [
+				"mg-icon-button",
+				"mg-nav-button",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"nav-content": {
+			"availableStyles": [
+				"page-fade-transition",
+				"align-top"
+			],
+			"properties": {},
+			"styles": [
+				"page-fade-transition"
+			]
+		},
+		"nav-errors": {
+			"availableStyles": [
+				"error-block",
+				"bs-max-width-73189",
+				"align-top",
+				"small-error-block-48902"
+			],
+			"properties": {},
+			"styles": [
+				"error-block"
+			]
+		},
+		"nav-page": {
+			"availableStyles": [
+				"bs-max-width-73189",
+				"align-top",
+				"bs-page-transition-20212"
+			],
+			"properties": {
+				"hideHeader": true
+			},
+			"styles": [
+				"mg-section-1",
+				"bs-max-width-73189"
+			]
+		},
+		"nav-step-count": {
+			"availableStyles": [
+				"bs-steps-04947",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"nav-wizard-bar": {
+			"availableStyles": [
+				"bs-navigation-wizard-25468",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"navigator": {
+			"availableStyles": [
+				"nav-base",
+				"mg-menu",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"navigator-chevron": {
+			"availableStyles": [
+				"mg-menu",
+				"align-top",
+				"bs-progress-bar-33644"
+			],
+			"properties": {}
+		},
+		"navigator-second-level": {
+			"availableStyles": [
+				"mg-second-level-menu",
+				"mg-second-level-tramline-menu",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"navigator-tramline": {
+			"availableStyles": [
+				"tramline",
+				"align-top",
+				"bs-tramline-16726"
+			],
+			"properties": {},
+			"styles": [
+				"tramline"
+			]
+		},
+		"navigator-wizard-bar": {
+			"availableStyles": [
+				"nav-wizard-bar",
+				"align-top",
+				"bs-navigator-wizard-bar-46800"
+			],
+			"properties": {}
+		},
+		"page-controller": {
+			"availableStyles": [
+				"page-fade-transition",
+				"align-top"
+			],
+			"properties": {},
+			"styles": [
+				"page-fade-transition"
+			]
+		},
+		"payment-type-selector": {
+			"availableStyles": [
+				"mg-checkbox",
+				"mg-radio-button-group",
+				"av-form-field",
+				"mg-checkbox-group",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {}
+		},
+		"percentage-indicator": {
+			"availableStyles": [
+				"percentage-indicator",
+				"align-top"
+			],
+			"properties": {},
+			"styles": [
+				"percentage-indicator"
+			]
+		},
+		"popover-widget-container": {
+			"availableStyles": [
+				"popover-widget-container",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"progress-bar": {
+			"availableStyles": [
+				"align-top",
+				"progress-bar-ben"
+			],
+			"properties": {}
+		},
+		"radio-button-graphical": {
+			"availableStyles": [
+				"radio-graphical",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon",
+				"align-top"
+			],
+			"properties": {},
+			"styles": [
+				"radio-border",
+				"radio-graphical"
+			]
+		},
+		"radio-button-group": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon",
+				"bs-radio-57278",
+				"align-top",
+				"av-global-layout",
+				"av-radio"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"radio-basic",
+				"av-radio",
+				"av-form-field"
+			]
+		},
+		"radio-button-group-graphical": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-graphical-group",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"radio-graphical-group",
+				"av-form-field"
+			]
+		},
+		"radio-button-repeating": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"radio-basic",
+				"av-form-field"
+			]
+		},
+		"repeat": {
+			"availableStyles": [
+				"mg-repeat",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"repeat-add-button": {
+			"availableStyles": [
+				"av-form-field",
+				"repeat-button",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"repeat-button",
+				"av-form-field"
+			]
+		},
+		"repeat-block-template": {
+			"availableStyles": [
+				"repeat-template",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"repeat-delete-button": {
+			"availableStyles": [
+				"av-form-field",
+				"repeat-button",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"repeat-button",
+				"av-form-field"
+			]
+		},
+		"repeat-index-text": {
+			"availableStyles": [
+				"repeat-template-item-header",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"route-select": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"section": {
+			"availableStyles": [
+				"mg-section-1",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"section-2": {
+			"availableStyles": [
+				"align-top",
+				"bc-white-background-20804",
+				"bs-transparent-background-93141",
+				"form-help-visit-us",
+				"mg-section-2",
+				"bs-max-width-73189",
+				"bs-center-align-19822",
+				"bs-save-dialog-text-82753",
+				"bs-modal-content-96022",
+				"bs-dialog-content-scroll-92184"
+			],
+			"properties": {
+				"topToBottom": true
+			},
+			"styles": [
+				"mg-section-2",
+				"bc-white-background-20804"
+			]
+		},
+		"signature": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"signature-dialog-15537",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"slider": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"step-name": {
+			"availableStyles": [
+				"bs-steps-04947",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"sticky-panel": {
+			"availableStyles": [
+				"bs-header-20084",
+				"bs-primary-background-02324",
+				"align-top",
+				"bs-error-banner-14443",
+				"bs-fixed-header-40325"
+			],
+			"properties": {}
+		},
+		"submit": {
+			"availableStyles": [
+				"av-button-navigation",
+				"bs-float-right-04479",
+				"bs-submit-button-65937",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"text-area": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"text-display": {
+			"availableStyles": [
+				"advice-block-info-content",
+				"advice-block-info-header",
+				"mg-info-header",
+				"align-top",
+				"bs-form-name-03674",
+				"mg-bold",
+				"email-complete-message",
+				"av-form-field",
+				"form-footer-text",
+				"mg-row-header",
+				"job-details-text",
+				"no-bullet-indent",
+				"reference-code-text",
+				"scrollable-text-box",
+				"mg-section-3-header",
+				"mg-selector-desc",
+				"mg-selector-header",
+				"show-xml-display-text",
+				"submission-expiry-text",
+				"submit-success-message",
+				"bs-center-align-19822",
+				"bs-docked-error-63227",
+				"av-global-layout"
+			],
+			"properties": {},
+			"styles": [
+				"av-global-layout",
+				"av-form-field"
+			]
+		},
+		"text-display-popover": {
+			"availableStyles": [
+				"text-display-popover-button",
+				"text-display-popover-panel",
+				"align-top"
+			],
+			"properties": {}
+		},
+		"text-input": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"bs-form-text-field-32514",
+				"bs-text-field-71719",
+				"bs-dialog-text-field-14963",
+				"bs-online-chat-82522",
+				"av-global-layout",
+				"av-text-field"
+			],
+			"properties": {
+				"helpText": ""
+			},
+			"styles": [
+				"av-global-layout",
+				"av-text-field",
+				"av-form-field"
+			]
+		},
+		"time": {
+			"availableStyles": [
+				"av-form-field",
+				"align-top",
+				"av-global-layout"
+			],
+			"properties": {}
+		}
+	}
+}

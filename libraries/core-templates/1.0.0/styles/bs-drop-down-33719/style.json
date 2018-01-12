@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "label": "BS Drop Down",
   "block": {
@@ -20,4 +21,28 @@
   "widgets": [
     "dropdown"
   ]
+=======
+{
+  "label": "BS Drop Down",
+  "block": {
+    "decs": {},
+    "blocks": {
+      "wdg-input": {
+        "decs": {
+          "border-style": "solid",
+          "border-top-width": "1px",
+          "border-left-width": "1px",
+          "border-right-width": "1px",
+          "border-bottom-width": "1px",
+          "border-color": "#0188cc"
+        },
+        "blocks": {}
+      }
+    }
+  },
+  "file": "style.less",
+  "widgets": [
+    "dropdown"
+  ]
+>>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 }
