@@ -64,5 +64,5 @@
 			}
 		]		
 	],
-	"style": ["av-block-error"]
+	"style": ["av-docking-errors"]
 }
