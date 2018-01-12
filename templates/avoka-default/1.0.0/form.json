@@ -160,11 +160,11 @@
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_3",
+						"id": "dialogHeader_6",
 						"rows": [
 							[
 								{
-									"id": "close_3",
+									"id": "close_6",
 									"subId": "1056a8426290467db5649e4a3e08ea47",
 									"type": "icon-button"
 								}
@@ -176,7 +176,7 @@
 				],
 				[
 					{
-						"id": "dialogBody_3",
+						"id": "dialogBody_5",
 						"rows": [
 							[
 								{
@@ -188,7 +188,7 @@
 									"rows": [
 										[
 											{
-												"id": "section_5",
+												"id": "section_4",
 												"rows": [
 													[]
 												],
@@ -203,17 +203,21 @@
 							],
 							[
 								{
-									"id": "dialogFooter_9",
+									"exclude": true,
+									"htmlLabel": "Dialog Footer excluded",
+									"id": "dialogFooterExcluded_2",
+									"label": "Dialog Footer excluded",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "dialogFooterBlock_3",
+												"id": "dialogNavigationBar_7",
 												"rows": [
 													[
 														{
-															"id": "okay_9",
+															"id": "button_14",
 															"rules": {
-																"sh": ""
+																"sh": "item.$$parent.properties.dialogNavButtons == 'okay' || item.$$parent.properties.dialogNavButtons == 'okay-cancel'"
 															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
@@ -230,45 +234,6 @@
 								}
 							]
 						],
-						"type": "block"
-					}
-				],
-				[
-					{
-						"exData": true,
-						"exLayout": true,
-						"exProp": true,
-						"id": "__2",
-						"label": "Missing Field of Type: undefined",
-						"type": "missing-field"
-					}
-				],
-				[
-					{
-						"exclude": true,
-						"htmlLabel": "Dialog Footer excluded",
-						"id": "dialogFooterExcluded_2",
-						"label": "Dialog Footer excluded",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "dialogNavigationBar_7",
-									"rows": [
-										[
-											{
-												"id": "button_14",
-												"subId": "6471b7e4d063409483e51ff9138ed85e",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-									"type": "block"
-								}
-							]
-						],
-						"subId": "50ead585f74e4a198aa3f799c7663b9c",
 						"type": "block"
 					}
 				],
@@ -400,7 +365,7 @@
 																	},
 																	{
 																		"exclude": false,
-																		"id": "block_6",
+																		"id": "block_7",
 																		"path": "",
 																		"rows": [
 																			[
@@ -604,161 +569,6 @@
 			"rules": {},
 			"type": "bs-general-dialog"
 		},
-		"bsGeneralDialog": {
-			"exclude": false,
-			"htmlLabel": "Save Dialog",
-			"id": "bsGeneralDialog",
-			"label": "Save Dialog",
-			"path": "",
-			"rows": [
-				[
-					{
-						"id": "dialogHeader_5",
-						"rows": [
-							[
-								{
-									"id": "close_5",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"id": "dialogBody_2",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "dialogContent_3",
-									"path": "",
-									"rows": [
-										[
-											{
-												"htmlLabel": "Save information",
-												"id": "section_2",
-												"label": "Save information",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Save confirm message",
-															"id": "saveConfirmMessage_1",
-															"label": "Save confirm message",
-															"path": "",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "First name:",
-															"id": "firstName_2",
-															"label": "First name:",
-															"path": "FirstName",
-															"type": "text-input"
-														},
-														{
-															"exclude": false,
-															"htmlLabel": "Last name:",
-															"id": "lastName_2",
-															"label": "Last name:",
-															"path": "LastName",
-															"type": "text-input"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"id": "radioButtonGroup_1",
-															"path": "RadioButtonGroup",
-															"properties": {},
-															"type": "radio-button-group"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"id": "radioButtonGroup_2",
-															"path": "RadioButtonGroup",
-															"properties": {},
-															"type": "radio-button-group"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"id": "radioButtonGroup_3",
-															"path": "RadioButtonGroup",
-															"properties": {},
-															"type": "radio-button-group"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"id": "radioButtonGroup_4",
-															"path": "RadioButtonGroup",
-															"properties": {},
-															"type": "radio-button-group"
-														}
-													]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_7",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock",
-												"path": "",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Save",
-															"id": "okay_6",
-															"label": "Save",
-															"path": "",
-															"rules": {
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
-									"type": "block"
-								}
-							]
-						],
-						"type": "block"
-					}
-				]
-			],
-			"type": "bs-general-dialog"
-		},
 		"bsHelpDialog": {
 			"exclude": false,
 			"hasCustomId": true,
@@ -797,7 +607,7 @@
 									"rows": [
 										[
 											{
-												"id": "section_4",
+												"id": "section_3",
 												"rows": [
 													[]
 												],
@@ -812,17 +622,22 @@
 							],
 							[
 								{
-									"id": "dialogFooter_8",
+									"exclude": true,
+									"htmlLabel": "Dialog Footer excluded",
+									"id": "dialogFooterExcluded_1",
+									"label": "Dialog Footer excluded",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "dialogFooterBlock_2",
+												"exclude": false,
+												"id": "dialogNavigationBar_5",
 												"rows": [
 													[
 														{
-															"id": "okay_8",
+															"id": "button_10",
 															"rules": {
-																"sh": ""
+																"sh": "item.$$parent.properties.dialogNavButtons == 'okay' || item.$$parent.properties.dialogNavButtons == 'okay-cancel'"
 															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
@@ -1074,11 +889,11 @@
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_4",
+						"id": "dialogHeader_7",
 						"rows": [
 							[
 								{
-									"id": "close_4",
+									"id": "close_7",
 									"subId": "1056a8426290467db5649e4a3e08ea47",
 									"type": "icon-button"
 								}
@@ -1090,7 +905,7 @@
 				],
 				[
 					{
-						"id": "dialogBody_4",
+						"id": "dialogBody_6",
 						"rows": [
 							[
 								{
@@ -1102,7 +917,7 @@
 									"rows": [
 										[
 											{
-												"id": "section_6",
+												"id": "section_5",
 												"rows": [
 													[]
 												],
@@ -1117,17 +932,21 @@
 							],
 							[
 								{
-									"id": "dialogFooter_10",
+									"exclude": true,
+									"htmlLabel": "Dialog Footer excluded",
+									"id": "dialogFooterExcluded_3",
+									"label": "Dialog Footer excluded",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "dialogFooterBlock_4",
+												"id": "dialogNavigationBar_9",
 												"rows": [
 													[
 														{
-															"id": "okay_10",
+															"id": "button_18",
 															"rules": {
-																"sh": ""
+																"sh": "item.$$parent.properties.dialogNavButtons == 'okay' || item.$$parent.properties.dialogNavButtons == 'okay-cancel'"
 															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
@@ -1144,45 +963,6 @@
 								}
 							]
 						],
-						"type": "block"
-					}
-				],
-				[
-					{
-						"exData": true,
-						"exLayout": true,
-						"exProp": true,
-						"id": "__3",
-						"label": "Missing Field of Type: undefined",
-						"type": "missing-field"
-					}
-				],
-				[
-					{
-						"exclude": true,
-						"htmlLabel": "Dialog Footer excluded",
-						"id": "dialogFooterExcluded_3",
-						"label": "Dialog Footer excluded",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "dialogNavigationBar_9",
-									"rows": [
-										[
-											{
-												"id": "button_18",
-												"subId": "6471b7e4d063409483e51ff9138ed85e",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-									"type": "block"
-								}
-							]
-						],
-						"subId": "50ead585f74e4a198aa3f799c7663b9c",
 						"type": "block"
 					}
 				],
@@ -1364,7 +1144,7 @@
 									"rows": [
 										[
 											{
-												"id": "section_3",
+												"id": "section_2",
 												"rows": [
 													[]
 												],
@@ -1379,20 +1159,24 @@
 							],
 							[
 								{
-									"exclude": false,
-									"id": "dialogFooter_6",
+									"exclude": true,
+									"htmlLabel": "Dialog Footer excluded",
+									"id": "dialogFooterExcluded",
+									"label": "Dialog Footer excluded",
+									"path": "",
 									"rows": [
 										[
 											{
 												"exclude": false,
-												"id": "dialogFooterBlock_1",
+												"id": "dialogNavigationBar_3",
 												"rows": [
 													[
 														{
 															"exclude": false,
-															"id": "okay_7",
+															"id": "button_6",
 															"rules": {
-																"sh": ""
+																"click": "console.log(\"dddt\");\nForm.showDialog(\"\");",
+																"sh": "item.$$parent.properties.dialogNavButtons == 'okay' || item.$$parent.properties.dialogNavButtons == 'okay-cancel'"
 															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
@@ -1543,576 +1327,964 @@
 			"type": "bs-general-dialog"
 		},
 		"cancelconfirm": {
-			"exclude": true,
+			"exclude": false,
+			"hasCustomId": true,
+			"htmlLabel": "Cancel Confirm",
 			"id": "cancelconfirm",
+			"label": "Cancel Confirm",
+			"path": "",
 			"rows": [
 				[
 					{
-						"id": "block_1",
+						"id": "dialogHeader_4",
 						"rows": [
 							[
 								{
-									"id": "iconButton",
-									"subId": "81ab3bfe44644a55a558697d80247f00",
-									"type": "button-dialog-cancel"
+									"id": "close_4",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "fe1cf03c645344499f240f27f798542d",
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialog_content_cancel_confirm",
+						"id": "dialogBody_4",
+						"path": "",
 						"rows": [
 							[
 								{
-									"id": "confirm_cancellation",
+									"entityPath": "dialog_content_cancel",
+									"exclude": false,
+									"hasCustomId": true,
+									"htmlLabel": "Cancel Confirm Content",
+									"id": "dialog_content_cancel_confirm",
+									"label": "Cancel Confirm Content",
+									"path": "",
+									"pathContext": "abs",
 									"rows": [
 										[
 											{
-												"htmlLabel": "Cancel Confirm Text1",
-												"id": "cancelConfirmText1",
-												"label": "Cancel Confirm Text1",
-												"path": "CancelConfirmText1",
-												"rows": [
-													[]
-												],
-												"subId": "198a22cdd77d41d0ae64ae130817922f",
-												"type": "text-display"
-											},
-											{
-												"id": "options",
+												"entityPath": "confirm",
+												"hasCustomId": true,
+												"htmlLabel": "Confirm Cancellation",
+												"id": "confirm_cancellation",
+												"label": "Confirm Cancellation",
+												"pathContext": "abs",
 												"rows": [
 													[
 														{
+															"entityPath": "cancel_confirm",
 															"exclude": false,
-															"id": "help_option",
-															"rows": [
-																[
-																	{
-																		"id": "info_block_image_1",
-																		"properties": {},
-																		"subId": "db77b9edb6b640159ce91b8face355b3",
-																		"type": "image"
-																	},
-																	{
-																		"id": "container_help_option",
-																		"rows": [
-																			[
-																				{
-																					"exclude": false,
-																					"id": "header_5",
-																					"subId": "6b4785fb7a674fc5865f9f88786f32b3",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"exclude": false,
-																					"id": "content_help_option",
-																					"subId": "ac8089c56eb94e2f9a76a9522ef5b9b8",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"exclude": false,
-																					"id": "get_help",
-																					"subId": "93dd6fe450a44dbbbcc6d9773a7ee90f",
-																					"type": "button"
-																				}
-																			]
-																		],
-																		"subId": "faeafbe9afe84502b2dcaea76bce503c",
-																		"type": "block"
-																	}
-																]
-															],
-															"subId": "720dbaa4449d4aaabd9bdd9c9f92ba38",
-															"type": "advice-block-info"
-														},
-														{
-															"exclude": false,
-															"id": "save_option",
-															"rows": [
-																[
-																	{
-																		"id": "info_block_image_2",
-																		"properties": {},
-																		"subId": "bce62f602fee44ba9839c5e6454c579d",
-																		"type": "image"
-																	},
-																	{
-																		"id": "container_save_option",
-																		"rows": [
-																			[
-																				{
-																					"exclude": false,
-																					"id": "header_6",
-																					"subId": "ff92bcaa79204ddf81f19b3c836e190b",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"exclude": false,
-																					"id": "content_2",
-																					"subId": "668eca97df5444038727276478676591",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"id": "save_for_later",
-																					"subId": "11b77efbd2fc48e2bc2ab5ffb8dbe683",
-																					"type": "button"
-																				}
-																			]
-																		],
-																		"subId": "f58dc0762d9f4b01a5eb0b03e2006420",
-																		"type": "block"
-																	}
-																]
-															],
-															"subId": "c4b7e7867d1940e19ec032364e0e42fe",
-															"type": "advice-block-info"
-														}
-													]
-												],
-												"subId": "37dceeed7f5c44d7b11f2c1e11852ddb",
-												"type": "block"
-											}
-										],
-										[
-											{
-												"exclude": false,
-												"id": "feedback",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"id": "what_is_the_main_reason_for_your_cancellation",
-															"properties": {},
-															"subId": "a21a1502ac76416b923d1fd64c5694df",
-															"type": "dropdown"
+															"hasCustomId": true,
+															"htmlLabel": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+															"id": "cancel_confirm_text",
+															"label": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+															"path": "Cancel/Confirm/Text",
+															"pathContext": "abs",
+															"span": {
+																"lg": 12,
+																"md": 12
+															},
+															"type": "text-input"
 														}
 													],
 													[
 														{
 															"exclude": false,
-															"id": "comments",
-															"subId": "21d9bdc0b8094cc98df766975fe7f09f",
-															"type": "text-area"
+															"hasCustomId": true,
+															"htmlLabel": "Options",
+															"id": "options",
+															"label": "Options",
+															"path": "",
+															"pathContext": "abs",
+															"rows": [
+																[
+																	{
+																		"entityPath": "help",
+																		"exclude": false,
+																		"hasCustomId": true,
+																		"htmlLabel": "Help Option",
+																		"id": "help_option",
+																		"label": "Help Option",
+																		"path": "",
+																		"pathContext": "abs",
+																		"rows": [
+																			[
+																				{
+																					"entityPath": "info_block",
+																					"exclude": false,
+																					"hasCustomId": true,
+																					"htmlLabel": "Info Block Image",
+																					"id": "info_block_image_1",
+																					"path": "",
+																					"pathContext": "abs",
+																					"properties": {},
+																					"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																					"type": "image"
+																				},
+																				{
+																					"entityPath": "container_help",
+																					"exclude": false,
+																					"hasCustomId": true,
+																					"htmlLabel": "Container",
+																					"id": "container_help_option",
+																					"label": "Container",
+																					"path": "",
+																					"pathContext": "abs",
+																					"rows": [
+																						[
+																							{
+																								"exclude": false,
+																								"hasCustomId": true,
+																								"hideLabel": true,
+																								"id": "header_5",
+																								"label": "OK, Lets Get Started!",
+																								"path": "",
+																								"subId": "e349c33a8a244107942968737f085a50",
+																								"type": "text-display"
+																							}
+																						],
+																						[
+																							{
+																								"entityPath": "content_help",
+																								"exclude": false,
+																								"hasCustomId": true,
+																								"htmlLabel": "If you need any assistance completing your form, let us help you.",
+																								"id": "content_help_option",
+																								"label": "If you need any assistance completing your form, let us help you.",
+																								"path": "",
+																								"pathContext": "abs",
+																								"subId": "a0f122e70d81447bae6f63fe3b381734",
+																								"type": "text-display"
+																							}
+																						],
+																						[
+																							{
+																								"entityPath": "get",
+																								"exclude": false,
+																								"hasCustomId": true,
+																								"htmlLabel": "Get help",
+																								"id": "get_help",
+																								"label": "Get help",
+																								"path": "",
+																								"pathContext": "abs",
+																								"rules": {
+																									"click": "Form.showDialog(\"formh\");"
+																								},
+																								"span": {
+																									"lg": 12,
+																									"md": 12
+																								},
+																								"styles": [
+																									"link-button-style"
+																								],
+																								"type": "button"
+																							}
+																						]
+																					],
+																					"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																					"type": "block"
+																				}
+																			]
+																		],
+																		"span": {
+																			"lg": 6,
+																			"md": 6
+																		},
+																		"type": "advice-block-info"
+																	},
+																	{
+																		"entityPath": "save",
+																		"exclude": false,
+																		"hasCustomId": true,
+																		"htmlLabel": "Save Option",
+																		"id": "save_option",
+																		"label": "Save Option",
+																		"path": "",
+																		"pathContext": "abs",
+																		"rows": [
+																			[
+																				{
+																					"entityPath": "info_block",
+																					"exclude": false,
+																					"hasCustomId": true,
+																					"htmlLabel": "Info Block Image",
+																					"id": "info_block_image_2",
+																					"path": "",
+																					"pathContext": "abs",
+																					"properties": {},
+																					"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																					"type": "image"
+																				},
+																				{
+																					"entityPath": "container_save",
+																					"exclude": false,
+																					"hasCustomId": true,
+																					"htmlLabel": "Container",
+																					"id": "container_save_option",
+																					"label": "Container",
+																					"path": "",
+																					"pathContext": "abs",
+																					"rows": [
+																						[
+																							{
+																								"exclude": false,
+																								"hasCustomId": true,
+																								"id": "header_6",
+																								"label": "OK, Lets Get Started!",
+																								"path": "",
+																								"subId": "e349c33a8a244107942968737f085a50",
+																								"type": "text-display"
+																							}
+																						],
+																						[
+																							{
+																								"exclude": false,
+																								"hasCustomId": true,
+																								"htmlLabel": "Did you know you can securely save your progress and resume at a later time?",
+																								"id": "conyent_2",
+																								"label": "Did you know you can securely save your progress and resume at a later time?",
+																								"path": "",
+																								"subId": "a0f122e70d81447bae6f63fe3b381734",
+																								"type": "text-display"
+																							}
+																						],
+																						[
+																							{
+																								"entityPath": "save_for",
+																								"exclude": false,
+																								"hasCustomId": true,
+																								"htmlLabel": "Save for later",
+																								"id": "save_for_later",
+																								"label": "Save for later",
+																								"path": "",
+																								"pathContext": "abs",
+																								"rules": {
+																									"click": "Form.showDialog(\"saveconfirm\");"
+																								},
+																								"span": {
+																									"lg": 12,
+																									"md": 12
+																								},
+																								"styles": [
+																									"link-button-style"
+																								],
+																								"type": "button"
+																							}
+																						]
+																					],
+																					"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																					"type": "block"
+																				}
+																			]
+																		],
+																		"span": {
+																			"lg": 6,
+																			"md": 6
+																		},
+																		"type": "advice-block-info"
+																	}
+																]
+															],
+															"type": "block"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "Feedback",
+															"id": "feedback",
+															"label": "Feedback",
+															"path": "",
+															"pathContext": "abs",
+															"properties": {
+																"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
+															},
+															"rows": [
+																[
+																	{
+																		"entityPath": "what_is_the_main",
+																		"exclude": false,
+																		"hasCustomId": true,
+																		"htmlLabel": "What is the main reason for your cancellation?",
+																		"id": "what_is_the_main_reason",
+																		"label": "What is the main reason for your cancellation?",
+																		"path": "What/Is/The/Main/Reason",
+																		"pathContext": "abs",
+																		"properties": {
+																			"options": [
+																				{
+																					"label": "I don't have all the information required",
+																					"value": "Lacking Information"
+																				},
+																				{
+																					"label": "I don't understand the questions",
+																					"value": "Don't Understand"
+																				},
+																				{
+																					"label": "I don't have the time to complete it now",
+																					"value": "Out of Time"
+																				},
+																				{
+																					"label": "I don't know why you need this information",
+																					"value": "Relevance Unclear"
+																				},
+																				{
+																					"label": "I am experiencing technical difficulties",
+																					"value": "Technical Issue"
+																				},
+																				{
+																					"label": "I just changed my mind",
+																					"value": "Changed Mind"
+																				},
+																				{
+																					"label": "Other",
+																					"value": "Other"
+																				}
+																			]
+																		},
+																		"span": {
+																			"lg": 12,
+																			"md": 12
+																		},
+																		"type": "dropdown"
+																	}
+																],
+																[
+																	{
+																		"exclude": false,
+																		"hasCustomId": true,
+																		"htmlLabel": "Comments",
+																		"id": "comments",
+																		"label": "Comments",
+																		"path": "Comments",
+																		"type": "text-area"
+																	}
+																]
+															],
+															"styles": [
+																"mg-section-2"
+															],
+															"type": "section-2"
 														}
 													]
 												],
-												"subId": "350cf017b44a461b8418b642c7a5f1fe",
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "8ff44421e031489e83fa57edae29eca9",
-									"type": "section-2"
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
 								}
-							]
-						],
-						"subId": "0e1c6a6d41ae404e85b8dd3061a1984d",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"id": "dialogFooter_1",
-						"path": "",
-						"rows": [
+							],
 							[
 								{
-									"id": "dialogNavigationBar_1",
+									"entityPath": "dialog_footer_cancel",
+									"exclude": false,
+									"hasCustomId": true,
+									"htmlLabel": "Dialog Footer",
+									"id": "dialog_footer_cancel_confirm",
 									"path": "",
+									"pathContext": "abs",
 									"rows": [
 										[
 											{
-												"id": "cancel_1",
+												"exclude": false,
+												"htmlLabel": "Confirm",
+												"id": "dialogFooterBlock_4",
+												"label": "Confirm",
 												"path": "",
-												"rules": {
-													"sh": ""
-												},
-												"subId": "b6e26f39a1754ef6b11a943e1548bb9a",
-												"type": "button"
-											},
-											{
-												"id": "confirm_1",
-												"path": "",
-												"subId": "ee86a6f41404425187e38cc92272e3e5",
-												"type": "button-resume-form"
-											},
-											{
-												"id": "confirm_2",
-												"path": "",
-												"subId": "5407f002a4184f3bba4b71f0e15dc267",
-												"type": "button"
-											},
-											{
-												"id": "okay_1",
-												"path": "",
-												"subId": "45a23f00a8194a9b92f59ebd5e7fa8c8",
-												"type": "button"
-											},
-											{
-												"id": "cancel_2",
-												"path": "",
-												"subId": "314b31bce4b74da78498074f50d480f6",
-												"type": "button"
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "Confirm",
+															"id": "confirm_2",
+															"label": "Confirm",
+															"path": "",
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"rules": {},
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
 											}
 										]
 									],
-									"subId": "6c2cc09e967a4deba0901802070b0009",
-									"type": "dialog-navigation-bar"
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
 								}
 							]
 						],
-						"subId": "0fbf0ed09bdc49828a565c108ca6592e",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog-cancel-confirm"
+			"type": "dialog"
 		},
 		"formhelp": {
-			"exclude": true,
+			"exclude": false,
+			"hasCustomId": true,
+			"htmlLabel": "Form Help",
 			"id": "formhelp",
+			"label": "Form Help",
+			"path": "",
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_1",
+						"id": "dialogHeader_3",
 						"rows": [
 							[
 								{
-									"id": "close",
-									"subId": "a64390c37ca341678774a41c717ffb3b",
-									"type": "button-dialog-cancel"
+									"id": "close_3",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "6fc8f53de6734e689e06c99e02da1406",
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialog_content_form_help",
-						"rows": [
-							[
-								{
-									"id": "need_assistance",
-									"rows": [
-										[
-											{
-												"id": "online_chat_block",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"id": "info_block_image_3",
-															"properties": {},
-															"subId": "e9752e2587a64983ad4dd0dfb5f92594",
-															"type": "image"
-														},
-														{
-															"exclude": false,
-															"id": "container",
-															"rows": [
-																[
-																	{
-																		"exclude": false,
-																		"id": "online_chat_header",
-																		"subId": "8cb6250cd6774325b09326d9ebad1764",
-																		"type": "text-display"
-																	}
-																],
-																[
-																	{
-																		"id": "online_chat_times",
-																		"subId": "ccb28bc3b30f490ba99f9acb9e05aadf",
-																		"type": "text-display"
-																	}
-																],
-																[
-																	{
-																		"exclude": false,
-																		"id": "start_chat",
-																		"subId": "7ece3fd6b8b0404da40540759c06ab2b",
-																		"type": "button"
-																	}
-																]
-															],
-															"subId": "87d8fe8dacbd495b877fca60ecc3500c",
-															"type": "block"
-														}
-													]
-												],
-												"subId": "0fc00e13886f4ee487e471ec71c22c9b",
-												"type": "advice-block-info"
-											},
-											{
-												"exclude": false,
-												"id": "call_us_block",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"id": "info_block_image_4",
-															"properties": {},
-															"subId": "72f5c5879e15419496968e710e8a3de3",
-															"type": "image"
-														},
-														{
-															"exclude": false,
-															"id": "container_1",
-															"rows": [
-																[
-																	{
-																		"exclude": false,
-																		"id": "header_8",
-																		"subId": "1f43fb58c48940f88e59d74c7fa9f8b0",
-																		"type": "text-display"
-																	}
-																],
-																[
-																	{
-																		"exclude": false,
-																		"id": "content_3",
-																		"subId": "083f760faaa543a7b898fea980b255df",
-																		"type": "text-display"
-																	}
-																],
-																[
-																	{
-																		"exclude": false,
-																		"id": "form_help_hot_line_link",
-																		"subId": "26b462e7096440458459e2dd732326b8",
-																		"type": "link"
-																	}
-																]
-															],
-															"subId": "6279c634ea6f4ef7b3234fee83eed660",
-															"type": "block"
-														}
-													]
-												],
-												"subId": "5614be50ffc749a395d3748f91172519",
-												"type": "advice-block-info"
-											},
-											{
-												"exclude": false,
-												"id": "assistant",
-												"properties": {},
-												"subId": "15b967cb8b964f5083befb0ff515eba0",
-												"type": "image"
-											}
-										],
-										[
-											{
-												"exclude": false,
-												"id": "visit_us",
-												"rows": [
-													[]
-												],
-												"subId": "063ca0b03bc74cc29c9cfa8e00095816",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "e2192220d6c44b4ca0f618a507ddf465",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "85548b6ed6754ac2b59f7c349f1cfbe9",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"id": "dialogFooter1",
+						"id": "dialogBody_3",
 						"path": "",
 						"rows": [
 							[
 								{
-									"id": "dialogNavigationBar1",
+									"entityPath": "dialog_content_form",
+									"exclude": false,
+									"hasCustomId": true,
+									"htmlLabel": "Form Help Content",
+									"id": "dialog_content_form_help",
+									"label": "Form Help Content",
 									"path": "",
+									"pathContext": "abs",
 									"rows": [
 										[
 											{
-												"exclude": false,
-												"id": "cancel2",
-												"path": "",
-												"rules": {
-													"sh": ""
-												},
-												"subId": "d356965e6c36497784898a7fc47f731e",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "confirm2",
-												"path": "",
-												"subId": "72b1d5c866924c4bb73223d482765a89",
-												"type": "button-resume-form"
-											},
-											{
-												"id": "confirm3",
-												"path": "",
-												"subId": "647d5ee200db470f856da9b76fd1e6a5",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "okay1",
-												"path": "",
-												"subId": "aa1038e9aa144591b77461150857972c",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "cancel3",
-												"path": "",
-												"subId": "dedbaadd2ca14afaa31bbb59fda5314a",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "a7c3f9dc19004fb19f57f04eb3e3f16d",
-									"type": "dialog-navigation-bar"
-								}
-							]
-						],
-						"subId": "47dab162cc094a0888a340240722caa5",
-						"type": "block"
-					}
-				]
-			],
-			"type": "dialog-form-help"
-		},
-		"saveconfirm": {
-			"exclude": true,
-			"id": "saveconfirm",
-			"rows": [
-				[
-					{
-						"id": "block_3",
-						"rows": [
-							[
-								{
-									"id": "iconButton_2",
-									"subId": "00a50f465ca74adb8cf3249af32e4cb2",
-									"type": "button-dialog-cancel"
-								}
-							]
-						],
-						"subId": "b64019bc48f2448dab80fcfd254a44ce",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"id": "dialog_content_save_confirm",
-						"rows": [
-							[
-								{
-									"id": "section2_1",
-									"rows": [
-										[
-											{
-												"htmlLabel": "First name:",
-												"id": "firstName_1",
-												"label": "First name:",
-												"path": "FirstName",
+												"entityPath": "need",
+												"hasCustomId": true,
+												"htmlLabel": "Need Assistance?",
+												"id": "need_assistance",
+												"label": "Need Assistance?",
+												"pathContext": "abs",
 												"rows": [
-													[]
+													[
+														{
+															"entityPath": "need",
+															"exclude": false,
+															"htmlLabel": "Online Chat Block",
+															"id": "need_onlineChatBlock_1",
+															"label": "Online Chat Block",
+															"path": "Need/OnlineChatBlock",
+															"pathContext": "abs",
+															"span": {
+																"lg": 4
+															},
+															"styles": [
+																"bs-online-chat-82522"
+															],
+															"type": "text-input"
+														},
+														{
+															"entityPath": "need",
+															"exclude": false,
+															"htmlLabel": "Call us block",
+															"id": "need_callUsBlock_1",
+															"label": "Call us block",
+															"path": "",
+															"pathContext": "abs",
+															"rows": [
+																[
+																	{
+																		"exclude": false,
+																		"id": "infoBlockImage_4",
+																		"path": "",
+																		"properties": {},
+																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																		"type": "image"
+																	},
+																	{
+																		"exclude": false,
+																		"id": "block_6",
+																		"path": "",
+																		"rows": [
+																			[
+																				{
+																					"exclude": false,
+																					"htmlLabel": "Call us",
+																					"id": "callUs_2",
+																					"label": "Call us",
+																					"path": "",
+																					"subId": "e349c33a8a244107942968737f085a50",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"exclude": false,
+																					"htmlLabel": "(Anytime, day or night)",
+																					"id": "anytimeDayOrNight_2",
+																					"label": "(Anytime, day or night)",
+																					"path": "",
+																					"subId": "a0f122e70d81447bae6f63fe3b381734",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"exclude": false,
+																					"htmlLabel": "1800",
+																					"id": "_1800_2",
+																					"label": "1800",
+																					"path": "_1800",
+																					"properties": {
+																						"linkUrl": "tel:1800"
+																					},
+																					"styles": [
+																						"form-help-hotline"
+																					],
+																					"type": "link"
+																				}
+																			]
+																		],
+																		"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																		"type": "block"
+																	}
+																]
+															],
+															"span": {
+																"lg": 4,
+																"md": 6
+															},
+															"styles": [
+																"av-message-block",
+																"form-help-option-container"
+															],
+															"type": "advice-block-info"
+														},
+														{
+															"entityPath": "need",
+															"exclude": false,
+															"htmlLabel": "Assistant",
+															"id": "need_assistant_2",
+															"label": "Assistant",
+															"path": "",
+															"pathContext": "abs",
+															"properties": {
+																"src": {
+																	"fileName": "Assistant.png"
+																}
+															},
+															"span": {
+																"lg": 4,
+																"md": 4
+															},
+															"styles": [
+																"bs-assistant-image-73027"
+															],
+															"type": "image"
+														},
+														{
+															"entityPath": "need",
+															"exclude": false,
+															"htmlLabel": "Visit us",
+															"id": "need_visitUs_1",
+															"label": "Visit us",
+															"path": "",
+															"pathContext": "abs",
+															"properties": {
+																"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
+															},
+															"rows": [
+																[]
+															],
+															"span": {
+																"lg": 8,
+																"md": 9
+															},
+															"styles": [
+																"mg-section-2",
+																"form-help-visit-us"
+															],
+															"type": "section-2"
+														}
+													]
 												],
-												"subId": "222fbb96cdbf4a599f17933d36a77fed",
-												"type": "text-input"
-											}
-										],
-										[
-											{
-												"exclude": false,
-												"htmlLabel": "Last name",
-												"id": "lastName",
-												"label": "Last name",
-												"path": "LastName",
-												"type": "text-input"
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
 											}
 										]
 									],
-									"subId": "e66f909d41a94a6587b8bf49a199b69d",
-									"type": "section-2"
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
 								}
-							]
-						],
-						"subId": "9b8ffed1237741b8b2e7ba457e8c10be",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"id": "dialog_footer_save_confirm",
-						"rows": [
+							],
 							[
 								{
 									"exclude": true,
-									"id": "dialog_navigation_bar_save_confirm",
+									"id": "dialogFooter_1",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "button",
-												"rules": {
-													"sh": ""
-												},
-												"subId": "f0e766cdc61a45e5bcae78d7763c6f89",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "buttonResumeForm",
-												"subId": "817ae2d3c1b84402b8ff37d3d9d8b77b",
-												"type": "button-resume-form"
-											},
-											{
-												"exclude": false,
-												"id": "button_1",
-												"subId": "74b2ea03bb6a48a7ad30508736fdb701",
-												"type": "button"
-											},
-											{
-												"id": "button_2",
-												"subId": "9a8cc0549c0c44a88a636f2d54d462a7",
-												"type": "button"
-											},
-											{
-												"id": "button_3",
-												"subId": "a33aafecc6a64bb4bc9925d1863345af",
-												"type": "button"
+												"id": "dialogFooterBlock_3",
+												"path": "",
+												"rows": [
+													[
+														{
+															"id": "okay_1",
+															"path": "",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
 											}
 										]
 									],
-									"subId": "d7232c5b115f404c853ee5f3d0e51428",
-									"type": "dialog-navigation-bar"
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
 								}
 							]
 						],
-						"styles": [
-							"bs-dialog-footer-10282"
-						],
-						"subId": "ac339dcf21b34b2db8d9e179388b7ad4",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog-save-confirm"
+			"type": "dialog"
+		},
+		"savechallenge": {
+			"exclude": false,
+			"hasCustomId": true,
+			"htmlLabel": "Save Challenge",
+			"id": "savechallenge",
+			"label": "Save Challenge",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader_5",
+						"rows": [
+							[
+								{
+									"id": "close_5",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_2",
+						"path": "",
+						"rows": [
+							[
+								{
+									"entityPath": "dialog_content_save",
+									"exclude": false,
+									"hasCustomId": true,
+									"htmlLabel": "Save Challenge Content",
+									"id": "dialog_content_save_challenge",
+									"label": "Save Challenge Content",
+									"path": "",
+									"pathContext": "abs",
+									"rows": [
+										[
+											{
+												"entityPath": "open_your_saved",
+												"hasCustomId": true,
+												"htmlLabel": "Open Your Saved Form",
+												"id": "open_your_saved_form",
+												"label": "Open Your Saved Form",
+												"pathContext": "abs",
+												"rows": [
+													[
+														{
+															"entityPath": "save_challenge",
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "To resume your form please complete the following details.",
+															"id": "save_challenge_message",
+															"label": "To resume your form please complete the following details.",
+															"path": "",
+															"pathContext": "abs",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"entityPath": "save_challenge_reference_code",
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "Reference Code",
+															"id": "save_challenge_reference_code_section",
+															"label": "Reference Code",
+															"path": "",
+															"pathContext": "abs",
+															"rows": [
+																[
+																	{
+																		"entityPath": "save_challenge_reference",
+																		"exclude": false,
+																		"hasCustomId": true,
+																		"htmlLabel": "Reference Code",
+																		"id": "save_challenge_reference_code",
+																		"label": "Reference Code",
+																		"mandatory": true,
+																		"path": "Save/Challenge/Reference/Code",
+																		"pathContext": "abs",
+																		"rules": {
+																			"eq": "return Util.getUrlQueryParam(\"referenceNumber\") != \"\" && Util.getUrlQueryParam(\"referenceNumber\") ? Util.getUrlQueryParam(\"referenceNumber\") : Form.saveChallengeRequired === true ? Form.getSystemData(\"TrackingCode\") : value;"
+																		},
+																		"type": "text-input"
+																	}
+																]
+															],
+															"styles": [
+																"mg-section-2"
+															],
+															"type": "section-2"
+														}
+													],
+													[
+														{
+															"animateVisibility": true,
+															"entityPath": "save_challenge_question",
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "Security Question",
+															"id": "save_challenge_question_section",
+															"label": "Security Question",
+															"path": "",
+															"pathContext": "abs",
+															"properties": {
+																"infoText": "Your answer to this question must match the information you previously provided."
+															},
+															"rows": [
+																[]
+															],
+															"rules": {
+																"eq": "return item.rows[0].length > 0 ? Form.data[item.rows[0][0].id] : \"\";",
+																"sh": "return item.rows[0].length > 0;"
+															},
+															"styles": [
+																"mg-section-2"
+															],
+															"type": "section-2"
+														}
+													]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_7",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock",
+												"path": "",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Open",
+															"id": "okay_6",
+															"label": "Open",
+															"path": "",
+															"rules": {
+																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				]
+			],
+			"type": "dialog"
+		},
+		"saveconfirm": {
+			"exclude": false,
+			"hasCustomId": true,
+			"htmlLabel": "Save Confirm",
+			"id": "saveconfirm",
+			"label": "Save Confirm",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader_9",
+						"rows": [
+							[
+								{
+									"id": "close_9",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_8",
+						"path": "",
+						"rows": [
+							[
+								{
+									"entityPath": "dialog_content_save",
+									"exclude": false,
+									"hasCustomId": true,
+									"htmlLabel": "Save Confirm Content",
+									"id": "dialog_content_save_confirm",
+									"label": "Save Confirm Content",
+									"path": "",
+									"pathContext": "abs",
+									"rows": [
+										[
+											{
+												"entityPath": "save_your",
+												"hasCustomId": true,
+												"htmlLabel": "Save Your Form",
+												"id": "save_your_form",
+												"label": "Save Your Form",
+												"pathContext": "abs",
+												"rows": [
+													[
+														{
+															"entityPath": "save_confirm",
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "Save confirm message",
+															"id": "save_confirm_message",
+															"label": "Save confirm message",
+															"path": "",
+															"pathContext": "abs",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"entityPath": "security_question_save",
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "Security Question",
+															"id": "security_question_save_confirm",
+															"label": "Security Question",
+															"path": "",
+															"pathContext": "abs",
+															"properties": {
+																"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
+															},
+															"rows": [
+																[]
+															],
+															"styles": [
+																"mg-section-2"
+															],
+															"type": "section-2"
+														}
+													]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_18",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_12",
+												"path": "",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Save",
+															"id": "okay_18",
+															"label": "Save",
+															"path": "",
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				]
+			],
+			"type": "dialog"
 		},
 		"saveconfirm_1": {
 			"exclude": true,
@@ -2128,7 +2300,7 @@
 								{
 									"id": "iconButton_1",
 									"subId": "00a50f465ca74adb8cf3249af32e4cb2",
-									"type": "button-dialog-cancel"
+									"type": "icon-button"
 								}
 							]
 						],
@@ -2151,17 +2323,45 @@
 													[]
 												],
 												"subId": "222fbb96cdbf4a599f17933d36a77fed",
-												"type": "text-input"
+												"type": "section-2"
 											}
 										]
 									],
 									"subId": "e66f909d41a94a6587b8bf49a199b69d",
-									"type": "section-2"
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_6",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_1",
+												"rows": [
+													[
+														{
+															"id": "okay_7",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
 								}
 							]
 						],
 						"subId": "9b8ffed1237741b8b2e7ba457e8c10be",
-						"type": "dialog-content"
+						"type": "block"
 					}
 				],
 				[
@@ -2179,9 +2379,6 @@
 											{
 												"id": "cancel_3",
 												"path": "",
-												"rules": {
-													"sh": ""
-												},
 												"subId": "f0e766cdc61a45e5bcae78d7763c6f89",
 												"type": "button"
 											},
@@ -2224,9 +2421,174 @@
 				]
 			],
 			"type": "dialog-save-confirm"
+		},
+		"showxml": {
+			"exclude": false,
+			"hasCustomId": true,
+			"htmlLabel": "Show XML",
+			"id": "showxml",
+			"label": "Show XML",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader_1",
+						"rows": [
+							[
+								{
+									"id": "close",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_7",
+						"path": "",
+						"rows": [
+							[
+								{
+									"id": "dialogContent_3",
+									"path": "",
+									"rows": [
+										[
+											{
+												"entityPath": "show_xml",
+												"hasCustomId": true,
+												"htmlLabel": "Show XML Content",
+												"id": "show_xml_content",
+												"label": "Show XML Content",
+												"pathContext": "abs",
+												"rows": [
+													[
+														{
+															"entityPath": "xml",
+															"exclude": false,
+															"hasCustomId": true,
+															"htmlLabel": "{{Form.getDataXml(true)}}",
+															"id": "xml_display",
+															"label": "",
+															"path": "",
+															"pathContext": "abs",
+															"type": "text-display"
+														}
+													]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"exclude": true,
+									"id": "dialogFooter_8",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_2",
+												"path": "",
+												"rows": [
+													[
+														{
+															"id": "okay_8",
+															"path": "",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				]
+			],
+			"type": "dialog"
 		}
 	},
-	"entities": {},
+	"entities": {
+		"cancel": {
+			"confirm": {}
+		},
+		"confirm": {},
+		"container": {
+			"help": {},
+			"save": {}
+		},
+		"content": {
+			"help": {}
+		},
+		"dialog": {
+			"content": {
+				"cancel": {},
+				"form": {},
+				"save": {}
+			},
+			"footer": {
+				"cancel": {}
+			}
+		},
+		"get": {},
+		"help": {},
+		"info": {
+			"block": {}
+		},
+		"need": {},
+		"open": {
+			"your": {
+				"saved": {}
+			}
+		},
+		"save": {
+			"challenge": {
+				"question": {},
+				"reference": {
+					"code": {}
+				}
+			},
+			"confirm": {},
+			"for": {},
+			"your": {}
+		},
+		"security": {
+			"question": {
+				"save": {}
+			}
+		},
+		"show": {
+			"xml": {}
+		},
+		"what": {
+			"is": {
+				"the": {
+					"main": {}
+				}
+			}
+		},
+		"xml": {}
+	},
 	"exclude": false,
 	"extractMap": {},
 	"formOptions": {
@@ -2259,15 +2621,16 @@
 	"id": "AvokaSmartForm",
 	"isPreview": false,
 	"localDialogs": [
-		"formhelp",
-		"cancelconfirm",
-		"saveconfirm_1",
 		"saveconfirm",
+		"savechallenge",
+		"cancelconfirm",
+		"formhelp",
 		"bsSaveDialog",
 		"bsHelpDialog",
 		"bsCancelDialog",
+		"saveconfirm_1",
 		"bsResumeDialog",
-		"bsGeneralDialog"
+		"showxml"
 	],
 	"localModals": [
 		"cancelsuccess",
@@ -3685,7 +4048,7 @@
 							"exclude": false,
 							"id": "exit",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\n//Form.showDialog(\"cancelconfirm\");\nForm.showDialog(\"bsCancelDialog\");"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\");"
 							},
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"type": "button"
@@ -3694,7 +4057,7 @@
 							"exclude": false,
 							"id": "resume",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\n//Form.showDialog(\"saveconfirm_1\");\nForm.showDialog(\"bsResumeDialog\");"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");"
 							},
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"type": "button"
@@ -3703,21 +4066,22 @@
 							"exclude": false,
 							"id": "help",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\n//Form.showDialog(\"formhelp\");\nForm.showDialog(\"bsHelpDialog\");"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");"
 							},
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"type": "button"
 						},
 						{
 							"exclude": false,
+							"hasCustomId": true,
 							"htmlLabel": "Save",
-							"id": "save_1",
+							"id": "save",
 							"label": "Save",
 							"properties": {
 								"icon": "fa fa-floppy-o"
 							},
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"bsGeneralDialog\");\n//Form.showDialog(\"bsSaveDialog\");\n"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");\n"
 							},
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"type": "button"
