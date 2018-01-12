@@ -197,7 +197,7 @@
 																"label": "Logo",
 																"properties": {
 																	"src": {
-																		"fileName": "blue-steel-logo.png"
+																		"fileName": "avoka-logo.png"
 																	}
 																},
 																"exclude": false,
@@ -286,7 +286,7 @@
 										"exclude": false,
 										"path": "",
 										"styles": [
-											"av-block-error"
+											"av-docking-errors"
 										],
 										"type": "docking-errors",
 										"id": "dockingErrorBlock"
@@ -1139,26 +1139,24 @@
 		},
 		"checkbox": {
 			"styles": [
-				"mg-checkbox",
 				"av-global-layout",
-				"bs-checkbox-04598"
+				"av-checkbox"
 			],
 			"availableStyles": [
-				"mg-checkbox",
 				"av-global-layout",
 				"align-top",
-				"bs-checkbox-04598"
+				"av-checkbox"
 			],
 			"properties": {}
 		},
 		"currency": {
 			"styles": [
 				"av-global-layout",
-				"bs-currency-field-75729"
+				"av-currency"
 			],
 			"availableStyles": [
 				"align-top",
-				"bs-currency-field-75729",
+				"av-currency",
 				"av-global-layout",
 				"av-text-field"
 			],
@@ -1217,7 +1215,6 @@
 				"av-global-layout"
 			],
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-checkbox-group",
 				"av-global-layout",
 				"align-top"
@@ -1239,11 +1236,11 @@
 		"data-radio-group": {
 			"styles": [
 				"av-global-layout",
-				"radio-basic"
+				"av-radio"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -1269,11 +1266,11 @@
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
-				"bs-date-field-64466"
+				"av-date"
 			],
 			"availableStyles": [
 				"align-top",
-				"bs-date-field-64466",
+				"av-date",
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
@@ -1324,7 +1321,6 @@
 		},
 		"payment-type-selector": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-radio-button-group",
 				"av-global-layout",
 				"mg-checkbox-group",
@@ -1381,7 +1377,7 @@
 			],
 			"availableStyles": [
 				"radio-graphical",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -1393,12 +1389,12 @@
 		"radio-button-group": {
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"av-radio"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -1411,11 +1407,11 @@
 		"radio-button-repeating": {
 			"styles": [
 				"av-global-layout",
-				"radio-basic"
+				"av-radio"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -1613,7 +1609,7 @@
 		},
 		"docking-errors": {
 			"availableStyles": [
-				"av-block-error",
+				"av-docking-errors",
 				"align-top"
 			],
 			"properties": {}
@@ -1969,13 +1965,13 @@
 				"page-gutters": "40px"
 			}
 		},
-		"Blue Sky": {
+		"default": {
 			"itemOptions": {
 				"functionalMenuFabMenu": {
 					"properties": {}
 				}
 			},
-			"label": "Blue Sky",
+			"label": "default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
 				"av-button-font-size": "16px",
@@ -4583,7 +4579,7 @@
 																		"label": "Modal logo image",
 																		"properties": {
 																			"src": {
-																				"fileName": "bs-logo.png"
+																				"fileName": "avoka-logo.png"
 																			}
 																		},
 																		"exclude": false,
@@ -5242,7 +5238,7 @@
 		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15307",
 		"publishLibraryId": 10988
 	},
-	"selectedBrand": "Blue Sky",
+	"selectedBrand": "default",
 	"styleMods": {
 		"id-modalHeader": {
 			"blocks": {},

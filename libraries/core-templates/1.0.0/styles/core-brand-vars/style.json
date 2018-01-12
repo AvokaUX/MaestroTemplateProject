@@ -147,14 +147,14 @@
 		{
 			"name": "av-focus-color",
 			"type": "color",
-			"label": "Focus color",
+			"label": "Focus and Hover Color",
 			"category": "Action colors",
 			"defaultValue": ""
 		},
-		{
-			"name": "av-hover-color",
+	    {
+			"name": "av-selected-color",
 			"type": "color",
-			"label": "Hover Color",
+			"label": "Selected Color",
 			"category": "Action colors",
 			"defaultValue": ""
 		},
@@ -185,7 +185,7 @@
 			"type": "color",
 			"label": "Dialog Background Color",
 			"category": "Dialogs",
-			"defaultValue": ""
+			"defaultValue": "#000"
 		},
 		{
 			"name": "av-button-font-size",
