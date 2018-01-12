@@ -1,87 +1,75 @@
 form[name='form'] {
-  .av-radio {
-     vertical-align: top;
-     
-     .wdg-input-container {
-       padding: 0 5px 10px 0;
-    	
-	  .wdg-button-icon {
-        font-sixe: 14px;
-        min-width: 24px;
-        min-height: 24px;
-        background: #fff;
-        border: solid 1px;
-        border-color: #636f71;
-        border-radius: 50%;
-
-        &:before {            
-          content: '';
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;            
+  .radio-basic {
+    &.av-radio {
+    	vertical-align: top;
+	    .wdg-button-icon {
+          min-width: 24px;
+          min-height: 24px;
           background: #fff;
+          border-color:#636f71; 
+          &:before {            
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;            
+            background: #fff;
+       	  }
         }
-      }
-        
-      &.has-error {
-        .wdg-button-icon {
-        }
-      }
-        
-      .wdg-input {
-       padding-left: 36px;
-      }
-        
-      /* States */
-      /* Checked */
-      input:checked + .wdg-input { 
-        .wdg-button-icon {
-        	.override-color(background, @av-secondary-color, @av-selected-color);
-        }
-      }
-    
-      /* Hover */
-      input:hover + .wdg-input {  
-        .wdg-button-icon {
-        	.override-color(background, @av-primary-color, @av-focus-color);
-          transition: width 250ms, height 250ms, background-color 250ms;
-        }
-      }
-      input:checked:hover + .wdg-input {
-        .wdg-button-icon {
-      	  .override-color(background, @av-primary-color, @av-focus-color);
-        }
-      }
-    
-      /* Focus */
-      input:focus + .wdg-input {
-        .wdg-button-icon {
-          .override-color(border-color, @av-primary-color, @av-focus-color);
-        }
-      }
-      input:checked:focus + .wdg-input {
-        .wdg-button-icon {
-      	  .override-color(border-color, @av-secondary-color, @av-selected-color);
-      	  .override-color(background, @av-secondary-color, @av-selected-color);       
-          transition: width 250ms, height 250ms, background-color 250ms;
-          &:before {
-            .override-color(background, @av-primary-color, @av-focus-color);                        
+        &.has-error {
+          .wdg-button-icon {
           }
         }
-      }
-    
-      /* Active */
-      input:active + .wdg-input {
-        .wdg-button-icon {
-      	  .override-color(background, @av-primary-color, @av-selected-color);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+        .wdg-input {
+          padding-left: 36px;
         }
-      }
-    
-      /* Disabled */
-      input:disabled + .wdg-input {
-        cursor: not-allowed;
-      }
-    }
-  }
+        /* States */
+      
+      	/* Checked */
+      	input:checked + .wdg-input { 
+         .wdg-button-icon {
+            background: @av-secondary-color;           
+
+          }
+        }
+     	/* Hover */
+        input:hover + .wdg-input {  
+            .wdg-button-icon {
+            background: @av-primary-color;
+            transition: width 250ms, height 250ms, background-color 250ms;
+
+          }
+          }
+        
+        input:checked:hover + .wdg-input {
+          .wdg-button-icon {
+            background: @av-secondary-color;
+          }
+        }
+      	/* Focus */
+        input:focus + .wdg-input {
+               .wdg-button-icon {
+               	.override-color(border-color, @av-primary-color, @av-focus-color);
+          }
+        }
+        input:checked:focus + .wdg-input {
+          .wdg-button-icon {
+            background: @av-secondary-color;
+            border-color: @av-primary-color;            
+            transition: width 250ms, height 250ms, background-color 250ms;
+
+          }
+        }
+      	/* Active */
+       	input:active + .wdg-input {
+          .wdg-button-icon {
+            background: @av-primary-color;
+          	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+          }
+        }
+      	/* Disabled */
+       	input:disabled + .wdg-input {
+          cursor: not-allowed;
+        }
+	}
+ }
 }

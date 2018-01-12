@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
 	"block": {},
 	"file": "style.less",
@@ -6,13 +5,4 @@
 	"widgets": [
 		"button"
 	]
-=======
-{
-	"block": {},
-	"file": "style.less",
-	"label": "AV docking button",
-	"widgets": [
-		"button"
-	]
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 }
