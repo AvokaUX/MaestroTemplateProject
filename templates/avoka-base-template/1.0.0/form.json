@@ -355,9 +355,10 @@
 			"type": "cancel-confirm"
 		},
 		"formhelp": {
-			"htmlLabel": "Formhelp",
+			"exclude": false,
+			"htmlLabel": "Form Help",
 			"id": "formhelp",
-			"label": "Formhelp",
+			"label": "Form Help",
 			"rows": [
 				[
 					{
@@ -608,9 +609,10 @@
 			"type": "save-challenge"
 		},
 		"saveconfirm": {
-			"htmlLabel": "Saveconfirm",
+			"exclude": false,
+			"htmlLabel": "Save Confirm",
 			"id": "saveconfirm",
-			"label": "Saveconfirm",
+			"label": "Save Confirm",
 			"rows": [
 				[
 					{
@@ -879,7 +881,6 @@
 		"pageController": []
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"formhelp",
 		"saveconfirm",
@@ -981,11 +982,18 @@
 						"rows": [
 							[
 								{
-									"exclude": false,
 									"id": "formFooterText",
-									"path": "",
+									"rows": [
+										[
+											{
+												"id": "textDisplay",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"type": "text-display"
+											}
+										]
+									],
 									"subId": "1c81a4fdb80045d49654478a23b0d632",
-									"type": "text-display"
+									"type": "section-2"
 								}
 							]
 						],
@@ -1085,8 +1093,17 @@
 							[
 								{
 									"id": "formFooterText_4",
+									"rows": [
+										[
+											{
+												"id": "textDisplay_4",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"type": "text-display"
+											}
+										]
+									],
 									"subId": "082a0f34bab7496ab942025374652910",
-									"type": "text-display"
+									"type": "section-2"
 								}
 							]
 						],
@@ -1356,9 +1373,17 @@
 							[
 								{
 									"id": "formFooterText_1",
-									"path": "",
+									"rows": [
+										[
+											{
+												"id": "textDisplay_3",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"type": "text-display"
+											}
+										]
+									],
 									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"type": "text-display"
+									"type": "section-2"
 								}
 							]
 						],
@@ -1512,11 +1537,19 @@
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"id": "formFooterText_3",
-									"path": "",
-									"subId": "8c9b02742d3841d8a9c30d826878b6af",
-									"type": "text-display"
+									"id": "footerSection",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"id": "formFooterText_3",
+												"path": "",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"type": "text-display"
+											}
+										]
+									],
+									"type": "section-2"
 								}
 							]
 						],
@@ -1734,9 +1767,17 @@
 							[
 								{
 									"id": "formFooterText_2",
-									"path": "",
+									"rows": [
+										[
+											{
+												"id": "textDisplay_1",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"type": "text-display"
+											}
+										]
+									],
 									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"type": "text-display"
+									"type": "section-2"
 								}
 							]
 						],
@@ -2478,6 +2519,12 @@
 										"id": "datePicker",
 										"noData": true,
 										"path": "",
+										"styles": [
+											"mg-datepicker",
+											"date-picker-base",
+											"av-global-layout",
+											"av-form-field"
+										],
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
 										"type": "date-picker"
 									}

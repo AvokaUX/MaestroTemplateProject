@@ -771,6 +771,12 @@
 								],
 								[
 									{
+										"styles": [
+											"mg-datepicker",
+											"date-picker-base",
+											"av-global-layout",
+											"av-form-field"
+										],
 										"path": "",
 										"noData": true,
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
@@ -2102,7 +2108,7 @@
 	},
 	"dialogs": {
 		"formhelp": {
-			"label": "Formhelp",
+			"label": "Form Help",
 			"rows": [
 				[
 					{
@@ -2248,11 +2254,12 @@
 				]
 			],
 			"type": "form-help",
-			"htmlLabel": "Formhelp",
-			"id": "formhelp"
+			"htmlLabel": "Form Help",
+			"id": "formhelp",
+			"exclude": false
 		},
 		"saveconfirm": {
-			"label": "Saveconfirm",
+			"label": "Save Confirm",
 			"rows": [
 				[
 					{
@@ -2351,8 +2358,9 @@
 				]
 			],
 			"type": "save-confirm",
-			"htmlLabel": "Saveconfirm",
-			"id": "saveconfirm"
+			"htmlLabel": "Save Confirm",
+			"id": "saveconfirm",
+			"exclude": false
 		},
 		"savechallenge": {
 			"rows": [
@@ -2881,11 +2889,18 @@
 						"rows": [
 							[
 								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay",
+												"type": "text-display"
+											}
+										]
+									],
+									"type": "section-2",
 									"subId": "1c81a4fdb80045d49654478a23b0d632",
-									"exclude": false,
-									"path": "",
-									"id": "formFooterText",
-									"type": "text-display"
+									"id": "formFooterText"
 								}
 							]
 						],
@@ -3146,10 +3161,18 @@
 						"rows": [
 							[
 								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay_1",
+												"type": "text-display"
+											}
+										]
+									],
+									"type": "section-2",
 									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"path": "",
-									"id": "formFooterText_2",
-									"type": "text-display"
+									"id": "formFooterText_2"
 								}
 							]
 						],
@@ -3301,11 +3324,19 @@
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"path": "",
-									"subId": "8c9b02742d3841d8a9c30d826878b6af",
-									"id": "formFooterText_3",
-									"type": "text-display"
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"path": "",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "formFooterText_3",
+												"type": "text-display"
+											}
+										]
+									],
+									"id": "footerSection",
+									"type": "section-2"
 								}
 							]
 						],
@@ -3649,10 +3680,18 @@
 						"rows": [
 							[
 								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay_3",
+												"type": "text-display"
+											}
+										]
+									],
+									"type": "section-2",
 									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"path": "",
-									"id": "formFooterText_1",
-									"type": "text-display"
+									"id": "formFooterText_1"
 								}
 							]
 						],
@@ -3757,9 +3796,18 @@
 						"rows": [
 							[
 								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay_4",
+												"type": "text-display"
+											}
+										]
+									],
+									"type": "section-2",
 									"subId": "082a0f34bab7496ab942025374652910",
-									"id": "formFooterText_4",
-									"type": "text-display"
+									"id": "formFooterText_4"
 								}
 							]
 						],
@@ -4604,8 +4652,8 @@
 						}
 					},
 					"formhelp": {
-						"label": "Formhelp",
-						"htmlLabel": "Formhelp",
+						"label": "Form Help",
+						"htmlLabel": "Form Help",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -4744,8 +4792,8 @@
 						}
 					},
 					"saveconfirm": {
-						"label": "Saveconfirm",
-						"htmlLabel": "Saveconfirm",
+						"label": "Save Confirm",
+						"htmlLabel": "Save Confirm",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5332,6 +5380,14 @@
 						}
 					},
 					"formFooterText": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay": {
 						"label": "Form Footer Text",
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
@@ -5527,6 +5583,14 @@
 						}
 					},
 					"formFooterText_2": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_1": {
 						"label": "Form Footer Text",
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
@@ -5612,6 +5676,14 @@
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
+						}
+					},
+					"footerSection": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
 						}
 					},
 					"formFooterText_3": {
@@ -5854,6 +5926,14 @@
 						}
 					},
 					"formFooterText_1": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_3": {
 						"label": "Form Footer Text",
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
@@ -5942,6 +6022,14 @@
 						}
 					},
 					"formFooterText_4": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_4": {
 						"label": "Form Footer Text",
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
@@ -6016,6 +6104,5 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.0",
 	"id": "AvokaSmartForm",
-	"exclude": false,
-	"isPreview": false
+	"exclude": false
 }
