@@ -284,15 +284,8 @@
 											"mobileA11yMessageAfter": "Please select the screen to go to the first error."
 										},
 										"exclude": false,
-<<<<<<< HEAD
-										"path": "",
-										"styles": [
-											"av-docking-errors"
-										],
-=======
 										"path": "",
 										"styles": [],
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 										"type": "docking-errors",
 										"id": "dockingErrorBlock"
 									}
@@ -1148,40 +1141,25 @@
 		},
 		"checkbox": {
 			"styles": [
-<<<<<<< HEAD
-				"av-global-layout",
-				"av-checkbox"
-=======
 				"mg-checkbox",
 				"av-global-layout",
 				"bs-checkbox-04598",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"availableStyles": [
 				"mg-checkbox",
 				"av-global-layout",
-<<<<<<< HEAD
-				"align-top",
-				"av-checkbox"
-=======
 				"align-top",
 				"bs-checkbox-04598",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"properties": {}
 		},
 		"currency": {
 			"styles": [
-<<<<<<< HEAD
-				"av-global-layout",
-				"av-currency"
-=======
 				"av-global-layout",
 				"bs-currency-field-75729",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"availableStyles": [
 				"align-top",
@@ -1276,14 +1254,9 @@
 		},
 		"data-radio-group": {
 			"styles": [
-<<<<<<< HEAD
-				"av-global-layout",
-				"av-radio"
-=======
 				"av-global-layout",
 				"radio-basic",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"availableStyles": [
 				"av-global-layout",
@@ -1315,14 +1288,9 @@
 			"styles": [
 				"mg-datepicker",
 				"date-picker-base",
-<<<<<<< HEAD
-				"av-global-layout",
-				"av-date"
-=======
 				"av-global-layout",
 				"bs-date-field-64466",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"availableStyles": [
 				"align-top",
@@ -1455,15 +1423,10 @@
 		},
 		"radio-button-group": {
 			"styles": [
-<<<<<<< HEAD
-				"av-global-layout",
-				"av-radio"
-=======
 				"av-global-layout",
 				"radio-basic",
 				"av-radio",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"availableStyles": [
 				"av-global-layout",
@@ -1471,28 +1434,18 @@
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
-<<<<<<< HEAD
-				"av-button-group-icon",
-				"align-top"
-=======
 				"av-button-group-icon",
 				"av-radio",
 				"align-top",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"properties": {}
 		},
 		"radio-button-repeating": {
 			"styles": [
-<<<<<<< HEAD
-				"av-global-layout",
-				"av-radio"
-=======
 				"av-global-layout",
 				"radio-basic",
 				"av-form-field"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 			],
 			"availableStyles": [
 				"av-global-layout",
@@ -2160,11 +2113,7 @@
 										"click": "Form.showDialog();"
 									},
 									"subId": "9e296fc30de940628ec8b5dbda46ae26",
-<<<<<<< HEAD
 									"id": "close_5",
-=======
-									"id": "close_5",
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 									"type": "icon-button"
 								}
 							]
@@ -2184,71 +2133,6 @@
 											{
 												"rows": [
 													[
-<<<<<<< HEAD
-														{
-															"subId": "e980bc7790844721b70b990b2f02348c",
-															"id": "need_onlineChatBlock_1",
-												"type": "text-input"
-											},
-											{
-												"rows": [
-													[
-														{
-															"properties": {},
-																		"subId": "066f9f02c8ed4d3dbe6fbafadb2c168c",
-																		"id": "infoBlockImage_4",
-															"type": "image"
-														},
-														{
-															"rows": [
-																[
-																	{
-																					"subId": "40b0d27a39634b32aa5aae46f63f2878",
-																					"id": "callUs_2",
-																		"type": "text-display"
-																	}
-																],
-																[
-																	{
-																					"subId": "f65b0de563ec4eb586ada9d3ef28dacd",
-																					"id": "anytimeDayOrNight_2",
-																		"type": "text-display"
-																	}
-																],
-																[
-																	{
-																					"subId": "103eaa13e6744ec69b8514f232cb918d",
-																					"id": "_1800_2",
-																		"type": "link"
-																	}
-																]
-															],
-																		"subId": "c7e09a0bd7c54ffb9ac7ffcc8a59a4e7",
-																		"id": "block_7",
-															"type": "block"
-														}
-													]
-												],
-															"subId": "77e108d25348486b8ea63797c551f722",
-															"id": "need_callUsBlock_1",
-												"type": "advice-block-info"
-											},
-											{
-												"properties": {},
-															"subId": "b025358609db40e9af2928640aaa2178",
-															"id": "need_assistant_2",
-												"type": "image"
-														},
-											{
-												"rows": [
-													[]
-												],
-												"properties": {
-																"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
-												},
-															"subId": "ff69444690424238a908235995c16dd5",
-															"id": "need_visitUs_1",
-=======
 														{
 															"subId": "e980bc7790844721b70b990b2f02348c",
 															"id": "need_onlineChatBlock_1",
@@ -2852,582 +2736,19 @@
 												],
 												"subId": "79e5d5cac3914789865650272a1b8f0e",
 												"id": "show_xml_content",
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 												"type": "section-2"
 											}
 										]
-<<<<<<< HEAD
-									],
-												"subId": "1107cf85ef3843dc91c0824f91ecaf68",
-												"id": "need_assistance_1",
-									"type": "section-2"
-								}
-							]
-						],
-									"subId": "3cd91d5bc47e4583a3a00652f0d3cc10",
-									"id": "dialog_content_form_help_1",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"rows": [
-=======
 									],
 									"subId": "c0303162902c41669857d1f7683dca48",
 									"id": "dialogContent_3",
 									"type": "dialog-content"
 								}
 							],
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 							[
 								{
 									"rows": [
 										[
-<<<<<<< HEAD
-											{
-												"rules": {
-													"click": "Form.showDialog(\"\");",
-																"sh": ""
-												},
-															"subId": "dc7f4001523f4d2abc3993898559c950",
-															"id": "okay_10",
-												"type": "button"
-											}
-										]
-									],
-												"subId": "4504af28b4034b5b80bd444f5ae4f86e",
-												"id": "dialogFooterBlock_4",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "a8009a0488e04ef6b4962a2f5d0c5e51",
-									"id": "dialogFooter_10",
-									"type": "block"
-								}
-							]
-						],
-						"subId": "113f48f6928a4f5e991def874d02cb4a",
-						"id": "dialogBody_4",
-						"type": "block"
-					}
-				]
-			],
-			"type": "form-help",
-			"htmlLabel": "Formhelp",
-			"id": "formhelp"
-		},
-		"saveconfirm": {
-			"label": "Saveconfirm",
-			"rows": [
-				[
-					{
-						"rows": [
-							[
-								{
-									"rules": {
-										"click": "Form.showDialog();"
-									},
-									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
-									"id": "close_9",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "92a58e3bd4c94da895bad4b6f1b10f66",
-						"id": "dialogHeader_9",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rows": [
-													[
-														{
-															"subId": "4aa53510219745c392c1b2c184aff183",
-															"id": "save_confirm_message",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-												"rows": [
-																[]
-													],
-												"properties": {
-																"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
-												},
-															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
-															"id": "security_question_save_confirm",
-												"type": "section-2"
-											}
-										]
-									],
-												"subId": "f95da043f0bf4debb102897946a959d8",
-												"id": "save_your_form",
-									"type": "section-2"
-								}
-							]
-						],
-									"subId": "00d88526276f4719ba460d7a9baede85",
-									"id": "dialog_content_save_confirm_1",
-						"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rules": {
-													"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
-																"sh": ""
-												},
-															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
-															"id": "okay_18",
-												"type": "button"
-											}
-										]
-									],
-												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
-												"id": "dialogFooterBlock_12",
-						"type": "block"
-					}
-				]
-			],
-									"subId": "2cd134f2d6f84810a8770240d8f4acc7",
-									"id": "dialogFooter_18",
-						"type": "block"
-					}
-										]
-									],
-						"subId": "1ea05f9f06654a3abe01133ecdc0782d",
-						"id": "dialogBody_8",
-						"type": "block"
-					}
-				]
-			],
-			"type": "save-confirm",
-			"htmlLabel": "Saveconfirm",
-			"id": "saveconfirm"
-		},
-		"savechallenge": {
-			"rows": [
-				[
-					{
-						"rows": [
-							[
-								{
-									"rules": {
-										"click": "Form.showDialog();"
-									},
-									"subId": "5b00e0bbb7da47fcbd5ca16369a6e6af",
-									"id": "close_6",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "04b32c294db74c8aafac241d2f157a65",
-						"id": "dialogHeader_6",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-									"rows": [
-										[
-											{
-															"subId": "99a462658fab4254b2b4ce80afb34406",
-															"id": "save_challenge_message",
-															"type": "text-display"
-											}
-									],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rules": {
-																			"eq": "return Util.getUrlQueryParam(\"referenceNumber\") != \"\" && Util.getUrlQueryParam(\"referenceNumber\") ? Util.getUrlQueryParam(\"referenceNumber\") : Form.saveChallengeRequired === true ? Form.getSystemData(\"TrackingCode\") : value;"
-									},
-																		"subId": "85628c35c7c64f678d83b46721c08e73",
-																		"id": "save_challenge_reference_code",
-																		"type": "text-input"
-								}
-							]
-						],
-															"subId": "9d91c3f3db0d42ccaa56296cb16ce906",
-															"id": "save_challenge_reference_code_section",
-															"type": "section-2"
-					}
-				],
-				[
-					{
-						"rows": [
-							[]
-						],
-															"properties": {
-																"infoText": "Your answer to this question must match the information you previously provided."
-												},
-												"rules": {
-																"eq": "return item.rows[0].length > 0 ? Form.data[item.rows[0][0].id] : \"\";",
-																"sh": "return item.rows[0].length > 0;"
-												},
-															"subId": "bf60f3af33fa4fc1b16450de3b351b70",
-															"id": "save_challenge_question_section",
-															"type": "section-2"
-											}
-										]
-									],
-												"subId": "ae14d3a46a3e4437b4a86f4ee460da83",
-												"id": "open_your_saved_form",
-												"type": "section-2"
-								}
-							]
-						],
-									"subId": "c85b168aeca949219fc6b80703db8480",
-									"id": "dialog_content_save_challenge",
-									"type": "dialog-content"
-								}
-						],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rules": {
-																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
-																"sh": ""
-												},
-															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
-															"id": "open_6",
-												"type": "button"
-											}
-										]
-									],
-												"subId": "fd74176fc1154642871b572034d297fb",
-												"id": "dialogFooterBlock",
-						"type": "block"
-					}
-										]
-									],
-									"subId": "37791d13d93240f884ed597d039da865",
-									"id": "dialogFooter_9",
-						"type": "block"
-					}
-																]
-															],
-						"subId": "be31e6d5451642c28ed57b817cd621a8",
-						"id": "dialogBody_5",
-															"type": "block"
-														}
-													]
-												],
-			"type": "save-challenge",
-			"id": "savechallenge"
-											},
-		"cancelconfirm": {
-			"rows": [
-				[
-					{
-						"rows": [
-							[
-								{
-									"rules": {
-										"click": "Form.showDialog();"
-									},
-									"subId": "d85962d96d4b42bcb517de498e25ed4d",
-									"id": "close_4",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "a658d5aa6767473fa2b1cf4c29fb820a",
-						"id": "dialogHeader_4",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"rows": [
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-															"subId": "01580dd2461f46b1adcd5d798f9c9022",
-															"id": "cancel_confirm_text",
-															"type": "text-input"
-					}
-				],
-				[
-					{
-									"rows": [
-										[
-											{
-															"rows": [
-																[
-																	{
-																		"properties": {},
-																					"subId": "e466b3e73d3c461e89942221d615e515",
-																					"id": "info_block_image_3",
-																		"type": "image"
-																	},
-																	{
-																		"rows": [
-																			[
-																				{
-																								"subId": "6d0c4bed56fa4cdb8efd19bb5d61a67e",
-																								"id": "header_7",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																								"subId": "b7da4cef81d34255876152b8a7b1308c",
-																								"id": "content_help_option_1",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																								"rules": {
-																									"click": "Form.showDialog(\"formh\");"
-																					},
-																								"subId": "ec4a7b4bb428414b8a37d1b857682a1a",
-																								"id": "get_help_1",
-																								"type": "button"
-																				}
-																			]
-																		],
-																					"subId": "56548e048d444443a4d35cfcf2572f21",
-																					"id": "container_help_option_1",
-																		"type": "block"
-																	}
-																]
-															],
-																		"subId": "9c448bc2598642feaed9f29d9f6a626a",
-																		"id": "help_option_1",
-																		"type": "advice-block-info"
-														},
-														{
-															"rows": [
-																[
-																	{
-																		"properties": {},
-																					"subId": "11e68a8a73254b9c9fe680e1a482917f",
-																					"id": "info_block_image_4",
-																		"type": "image"
-																	},
-																	{
-																		"rows": [
-																			[
-																				{
-																								"subId": "9f562319b7984ac49d69a38e7e827f51",
-																								"id": "header_8",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																								"subId": "7da56928272c4000a5e128427b11c489",
-																								"id": "conyent_2",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																								"rules": {
-																									"click": "Form.showDialog(\"saveconfirm\");"
-																					},
-																								"subId": "ecef8243838a44999ee2062343270b0a",
-																								"id": "save_for_later_1",
-																								"type": "button"
-																				}
-																			]
-																		],
-																					"subId": "fe30dc8aff2042a58bbb92cdab55e607",
-																					"id": "container_save_option_1",
-																		"type": "block"
-																	}
-																]
-															],
-																		"subId": "277254ff674746c0bb1db55752b6759c",
-																		"id": "save_option_1",
-																		"type": "advice-block-info"
-														}
-													]
-												],
-															"subId": "b96cac978be14864b0c639319cf871ea",
-															"id": "options_2",
-															"type": "block"
-											}
-										],
-										[
-											{
-												"rows": [
-													[
-														{
-																		"properties": {},
-																		"subId": "86b0113180ed4b10b882f69c81c29dc8",
-																		"id": "what_is_the_main_reason",
-																		"type": "dropdown"
-																	}
-													],
-													[
-														{
-																		"subId": "dde09b0b91bd4249929ecde1cbec14de",
-																		"id": "comments_2",
-																		"type": "text-area"
-														}
-													]
-												],
-												"properties": {
-													"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
-												},
-															"subId": "66800abae2f84be5953bd85d3488a708",
-															"id": "feedback_2",
-															"type": "section-2"
-											}
-										]
-									],
-												"subId": "4e0da32bfa7f4de99b42910a16e5f34b",
-												"id": "confirm_cancellation_1",
-												"type": "section-2"
-								}
-							]
-						],
-									"subId": "c5ad53604b5a45ebb50f466dce69b7e5",
-									"id": "dialog_content_cancel_confirm_1",
-									"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rules": {
-													"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
-																"sh": ""
-												},
-															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
-															"id": "confirm_3",
-												"type": "button"
-											}
-										]
-									],
-												"subId": "7314fa1adde847e3a442130e7580de3a",
-												"id": "dialogFooterBlock_5",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "175796f975994f1e9a438e9e025d1fa0",
-									"id": "dialog_footer_cancel_confirm",
-									"type": "block"
-								}
-							]
-						],
-						"subId": "a49a77d639a3429da9811bd1afbf0914",
-						"id": "dialogBody_6",
-						"type": "block"
-					}
-				]
-			],
-			"type": "cancel-confirm",
-			"id": "cancelconfirm"
-		},
-		"showxml": {
-			"rows": [
-				[
-					{
-						"rows": [
-							[
-								{
-									"rules": {
-										"click": "Form.showDialog();"
-									},
-									"subId": "dbfbfa08cfd0446da064233de0d20684",
-									"id": "close",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "5afbc9d2c55d491686da20cbd937af4a",
-						"id": "dialogHeader_1",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"rows": [
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
-															"id": "xml_display",
-															"type": "text-display"
-											}
-										]
-									],
-												"subId": "79e5d5cac3914789865650272a1b8f0e",
-												"id": "show_xml_content",
-												"type": "section-2"
-								}
-							]
-						],
-									"subId": "c0303162902c41669857d1f7683dca48",
-									"id": "dialogContent_3",
-									"type": "dialog-content"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rules": {
-													"click": "Form.showDialog(\"\");",
-																"sh": ""
-												},
-															"subId": "59aead05e87845a9acdbf2b2946a5169",
-															"id": "okay_8",
-												"type": "button"
-=======
 											{
 												"rows": [
 													[
@@ -3439,7 +2760,6 @@
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"id": "okay_8",
 															"type": "button"
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 														}
 													]
 												],
@@ -5439,11 +4759,7 @@
 							"ariaLabel": ""
 						}
 					},
-<<<<<<< HEAD
 					"close_9": {
-=======
-					"close_9": {
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 						"label": "Close",
 						"htmlLabel": "Close",
 						"mandatoryMsg": "",
@@ -5630,32 +4946,6 @@
 							"ariaLabel": ""
 						}
 					},
-<<<<<<< HEAD
-					"close_4": {
-						"label": "Close",
-						"htmlLabel": "Close",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"dialogBody_8": {
-						"label": "Dialog Body",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"dialog_content_cancel_confirm_1": {
-						"label": "Cancel Confirm Content",
-						"htmlLabel": "Cancel Confirm Content",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-=======
 					"close_4": {
 						"label": "Close",
 						"htmlLabel": "Close",
@@ -5680,7 +4970,6 @@
 							"ariaLabel": ""
 						}
 					},
->>>>>>> refs/remotes/AvokaUX-MaestroTemplateProject/master
 					"confirm_cancellation_1": {
 						"label": "Confirm Cancellation",
 						"htmlLabel": "Confirm Cancellation",
