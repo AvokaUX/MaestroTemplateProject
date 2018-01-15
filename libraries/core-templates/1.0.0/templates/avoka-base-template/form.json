@@ -320,19 +320,6 @@
 								[
 									{
 										"rows": [
-											[]
-										],
-										"type": "nav-page",
-										"exclude": false,
-										"isFirstInGroup": false,
-										"isLastInGroup": false,
-										"path": "",
-										"id": "page_1"
-									}
-								],
-								[
-									{
-										"rows": [
 											[
 												{
 													"rows": [
@@ -385,7 +372,10 @@
 					"bs-max-width-73189"
 				],
 				"type": "block",
-				"id": "content"
+				"id": "content",
+				"rules": {
+					"dc": "if (Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+				}
 			}
 		],
 		[
@@ -4077,18 +4067,6 @@
 						"htmlLabel": "",
 						"mandatoryMsg": ""
 					},
-					"page_1": {
-						"label": "Page",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"sectionHeading": "{{T[item.id].label}}",
-							"formName": "{{T[Form.view.id].label}}",
-							"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>",
-							"helpText": "",
-							"menuText": ""
-						}
-					},
 					"page": {
 						"label": "Page",
 						"htmlLabel": "Page",
@@ -6117,5 +6095,6 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.0",
 	"id": "AvokaSmartForm",
-	"exclude": false
+	"exclude": false,
+	"isPreview": false
 }

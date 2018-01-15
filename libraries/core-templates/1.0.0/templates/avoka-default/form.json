@@ -6507,5 +6507,6 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.0",
 	"id": "AvokaSmartForm",
-	"exclude": false
+	"exclude": false,
+	"isPreview": false
 }

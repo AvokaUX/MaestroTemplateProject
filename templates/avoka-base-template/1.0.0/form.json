@@ -875,6 +875,7 @@
 		"pageController": []
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"formhelp",
 		"saveconfirm",
@@ -2083,19 +2084,6 @@
 								[
 									{
 										"exclude": false,
-										"id": "page_1",
-										"isFirstInGroup": false,
-										"isLastInGroup": false,
-										"path": "",
-										"rows": [
-											[]
-										],
-										"type": "nav-page"
-									}
-								],
-								[
-									{
-										"exclude": false,
 										"hasCustomId": true,
 										"htmlLabel": "Page",
 										"id": "page",
@@ -2134,6 +2122,9 @@
 						}
 					]
 				],
+				"rules": {
+					"dc": "if (Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+				},
 				"styles": [
 					"bs-min-height-64689",
 					"bs-max-width-73189"
