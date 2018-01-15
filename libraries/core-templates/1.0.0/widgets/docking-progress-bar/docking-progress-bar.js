@@ -7,6 +7,7 @@ define(["app"], function(app) {
 				$scope.$header = $('.id-formHeader');
 				$scope.$banner = $element.find('.av-progress-bar-banner');
 				$scope.$navContainer = $element.find('.av-docking-block');
+				console.log("Jun");
 				$scope.$watch("data.scrollPosition", function(newValue, oldValue) {
 				  var lw = $scope.$logo.width();
 				  var hh = $scope.$header.outerHeight();
