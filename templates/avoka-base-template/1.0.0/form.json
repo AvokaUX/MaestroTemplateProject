@@ -2123,7 +2123,7 @@
 					]
 				],
 				"rules": {
-					"dc": "if (Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+					"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
 				},
 				"styles": [
 					"bs-min-height-64689",

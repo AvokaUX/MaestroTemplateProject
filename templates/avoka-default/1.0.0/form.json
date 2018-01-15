@@ -2520,7 +2520,7 @@
 										"hasCustomId": true,
 										"htmlLabel": "Page",
 										"id": "page",
-										"isFirstInGroup": true,
+										"isFirstInGroup": false,
 										"isLastInGroup": false,
 										"path": "",
 										"rows": [
@@ -2555,6 +2555,9 @@
 						}
 					]
 				],
+				"rules": {
+					"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+				},
 				"styles": [
 					"bs-min-height-64689",
 					"bs-max-width-73189"
