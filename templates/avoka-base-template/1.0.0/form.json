@@ -355,10 +355,7 @@
 			"type": "cancel-confirm"
 		},
 		"formhelp": {
-			"exclude": false,
-			"htmlLabel": "Form Help",
 			"id": "formhelp",
-			"label": "Form Help",
 			"rows": [
 				[
 					{
@@ -609,10 +606,7 @@
 			"type": "save-challenge"
 		},
 		"saveconfirm": {
-			"exclude": false,
-			"htmlLabel": "Save Confirm",
 			"id": "saveconfirm",
-			"label": "Save Confirm",
 			"rows": [
 				[
 					{
@@ -891,9 +885,9 @@
 	"localModals": [
 		"cancelsuccess",
 		"submitsuccess_1",
-		"submitsuccess",
 		"savesuccessoriginal",
-		"savesuccess"
+		"savesuccess",
+		"submitsuccess"
 	],
 	"maestroReleaseVersion": "17.10.0",
 	"modals": {
@@ -1396,172 +1390,143 @@
 			"type": "modal-save-success"
 		},
 		"submitsuccess": {
-			"exclude": false,
-			"hasCustomId": true,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
-			"path": "",
 			"properties": {},
 			"rows": [
 				[
 					{
-						"id": "modalBackground",
+						"id": "modalBackground_2",
 						"rows": [
 							[]
 						],
+						"subId": "fb2710bf445348a0b3348c277ae25d53",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
-						"exclude": false,
-						"htmlLabel": "Modal header",
-						"id": "modalHeader",
-						"label": "Modal header",
-						"path": "",
+						"id": "modalHeader_4",
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"htmlLabel": "Sticky Panel-modal",
-									"id": "stickyPanelModal",
-									"label": "Sticky Panel-modal",
-									"path": "StickyPanelmodal",
+									"id": "stickyPanelModal_2",
 									"rows": [
 										[
 											{
-												"exclude": false,
-												"htmlLabel": "Modal Header",
-												"id": "modalHeader_1",
-												"label": "Modal Header",
-												"path": "",
+												"id": "modalHeader_5",
 												"rows": [
 													[
 														{
-															"exclude": false,
-															"htmlLabel": "Modal logo",
-															"id": "modalLogo",
-															"label": "Modal logo",
-															"path": "",
+															"id": "modalLogo_2",
 															"rows": [
 																[
 																	{
-																		"exclude": false,
-																		"htmlLabel": "Modal logo image",
-																		"id": "modalLogoImage",
-																		"label": "Modal logo image",
-																		"path": "",
-																		"properties": {
-																			"src": {
-																				"fileName": "bs-logo.png"
-																			}
-																		},
-																		"span": {
-																			"lg": 12,
-																			"md": 12
-																		},
+																		"id": "modalLogoImage_2",
+																		"properties": {},
+																		"subId": "e16044b6f54649b29f8fc0217e584b77",
 																		"type": "image"
 																	}
 																]
 															],
-															"styles": [
-																"bs-logo-container-86033"
-															],
+															"subId": "6fc01299872445448b85622c2188b494",
 															"type": "block"
 														}
 													]
 												],
-												"styles": [
-													"mg-header",
-													"bs-max-width-73189"
-												],
+												"subId": "89fb5406cfe4459b86fa72fcc4cf81fe",
 												"type": "form-header"
 											}
 										]
 									],
-									"styles": [
-										"bs-fixed-header-40325"
-									],
+									"subId": "0556f32929054ae994a65aebdedc76ac",
 									"type": "sticky-panel"
 								}
 							]
 						],
+						"subId": "9dff6f6d9f3e40299733766ce093bda7",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"exclude": false,
-						"htmlLabel": "<h1>Submit Modal Content</h1>",
-						"id": "submitModalContent",
-						"label": "Submit Modal Content",
-						"path": "",
+						"htmlLabel": "<h1>Application Received</h1>",
+						"id": "saveModalContent_1",
+						"label": "Application Received",
 						"properties": {
-							"infoText": "Your Application has been received"
+							"infoText": "Thank you, your submission has been received."
 						},
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"htmlLabel": "Start a new form",
-									"id": "startANewForm",
-									"label": "Start a new form",
-									"path": "",
-									"styles": [
-										"av-global-layout",
-										"av-button",
-										"av-button-primary"
-									],
+									"id": "startANewForm_5",
+									"subId": "664e44d55e00407d9d4d24d4e1426fae",
 									"type": "button"
+								}
+							],
+							[
+								{
+									"id": "followOnOptionsBlock_3",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"id": "startANewForm",
+												"path": "",
+												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
+												"type": "button"
+											},
+											{
+												"id": "returnToPortal_3",
+												"path": "",
+												"subId": "2f32e2834fd4493280fa83492b6b143c",
+												"type": "button"
+											},
+											{
+												"id": "showFormXml_3",
+												"path": "",
+												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
+												"type": "button"
+											}
+										]
+									],
+									"type": "follow-on-options"
 								}
 							]
 						],
-						"styles": [
-							"mg-section-2",
-							"bc-white-background-20804",
-							"bs-center-align-19822",
-							"bs-max-width-73189",
-							"bs-modal-content-96022"
-						],
+						"subId": "ea5b9f4077a24d2b93f412748bbf4bf9",
 						"type": "section-2"
 					}
 				],
 				[
 					{
-						"exclude": false,
-						"htmlLabel": "Modal Footer",
-						"id": "modalFooter",
-						"label": "Modal Footer",
-						"path": "",
+						"id": "modalFooter_2",
 						"rows": [
 							[
 								{
-									"id": "footerSection",
+									"id": "formFooterText_5",
 									"rows": [
 										[
 											{
-												"exclude": false,
-												"id": "formFooterText_3",
+												"id": "textDisplay_5",
 												"path": "",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"subId": "46f9f22172c44180a9cc84ada4a4aead",
 												"type": "text-display"
 											}
 										]
 									],
+									"subId": "321156c132f54510ad5c0f0d9040cc05",
 									"type": "section-2"
 								}
 							]
 						],
-						"styles": [
-							"bc-white-background-20804",
-							"bs-modal-footer-03990"
-						],
+						"subId": "105c8613ddd44fd580970e2f3d22ba7f",
 						"type": "form-footer"
 					}
 				]
 			],
-			"type": "modal"
+			"type": "modal-page-core"
 		},
 		"submitsuccess_1": {
 			"exclude": false,
@@ -2118,10 +2083,23 @@
 								[
 									{
 										"exclude": false,
+										"id": "page_1",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"path": "",
+										"rows": [
+											[]
+										],
+										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
 										"hasCustomId": true,
 										"htmlLabel": "Page",
 										"id": "page",
-										"isFirstInGroup": true,
+										"isFirstInGroup": false,
 										"isLastInGroup": false,
 										"path": "",
 										"rows": [
@@ -2191,7 +2169,7 @@
 								"legacyMethod": false
 							},
 							"rules": {
-								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
 								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
 							"span": {
@@ -2743,27 +2721,6 @@
 	},
 	"selectedBrand": "Blue Sky",
 	"styleMods": {
-		"id-modalHeader": {
-			"blocks": {},
-			"decs": {
-				"border-bottom-width": "4px",
-				"border-color": "#225881",
-				"border-left-width": "0px",
-				"border-right-width": "0px",
-				"border-style": "solid",
-				"border-top-width": "0px"
-			}
-		},
-		"id-modalHeader_1": {
-			"blocks": {},
-			"decs": {
-				"border-bottom-width": "4px",
-				"border-color": "#3531a3",
-				"border-style": "none",
-				"padding-bottom": "10px",
-				"padding-top": "10px"
-			}
-		},
 		"id-submit2": {
 			"blocks": {
 				"wdg-button": {
