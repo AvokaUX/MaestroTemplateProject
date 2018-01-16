@@ -1,20 +1,64 @@
 {
 	"blockInfo": {
-		"designVersion": "1.0.0",
-		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15461",
-		"publishLibraryId": 16680
+		"designVersion": "46.0.1",
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/14974",
+		"publishLibraryId": 10988
 	},
 	"brandOptions": {
+		"logo": [
+			{
+				"category": "Logo",
+				"label": "Logo",
+				"path": "properties.src",
+				"linkedItems": [
+					{
+						"id" : "submit_success_logo",
+						"path" : "properties.src"
+					},
+					{
+						"id" : "save_success_logo",
+						"path" : "properties.src"
+					},
+					{
+						"id" : "cancel_success_logo",
+						"path" : "properties.src"
+					}
+				]
+			}
+		],
 		"functionalMenuFabMenu": []
 	},
 	"brands": {
-		"Blue Sky": {
+		"Default": {
 			"itemOptions": {
+				"logo": {
+					"properties": {
+						"src": {
+							"fileName": "avoka-logo.png",
+							"width": "52",
+							"height": "40"
+						}
+					},
+                    "linkedItems": [
+                      {
+                        "id" : "submit_success_logo",
+                        "path" : "properties.src"
+                      },
+                      {
+                        "id" : "save_success_logo",
+                        "path" : "properties.src"
+                      },
+                      {
+                        "id" : "cancel_success_logo",
+                        "path" : "properties.src"
+                      }
+                    ]
+				},
 				"functionalMenuFabMenu": {
 					"properties": {}
 				}
 			},
-			"label": "Blue Sky",
+			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
 				"av-button-font-size": "16px",
@@ -72,71 +116,6 @@
 				"mobile-page-gutters": "15px",
 				"page-gutters": "40px"
 			}
-		},
-		"Default": {
-			"itemOptions": {
-				"functionalMenuFabMenu": {
-					"properties": {}
-				}
-			},
-			"label": "Default",
-			"styleVars": {
-				"av-body-background-color": "#FFFFFF",
-				"av-button-font-size": "16px",
-				"av-font-color": "#333333",
-				"av-font-family": "Arial, Helvetica, sans-serif",
-				"av-form-background-color": "#FFFFFF",
-				"av-form-inner-background-color": "#FFFFFF",
-				"av-max-form-width": "1020px",
-				"av-menu-active-text-color": "",
-				"av-menu-color": "",
-				"av-menu-color-active": "",
-				"av-menu-font-size": "13px",
-				"av-menu-height": "57px",
-				"av-menu-hover-color": "",
-				"av-menu-text-color": "",
-				"av-menu-text-hover-color": "",
-				"av-neutral-color": "#F2F2F2",
-				"av-neutral-contrast": "#8C8C8C",
-				"av-popover-help": "#0C384B",
-				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#FF6405",
-				"av-primary-contrast": "#FFFFFF",
-				"av-secondary-color": "#FFFFFF",
-				"av-secondary-contrast": "#0C384B",
-				"av-section-1-header-color": "#202B34",
-				"av-section-1-title-font-size": "30px",
-				"av-section-2-header-color": "#202B34",
-				"av-section-2-title-font-size": "21px",
-				"av-slide-menu-color": "#005280",
-				"av-slide-menu-extra-item-active-color": "",
-				"av-slide-menu-extra-item-color": "",
-				"av-slide-menu-extra-item-hover-color": "",
-				"av-slide-menu-extra-item-pointer-active-color": "",
-				"av-slide-menu-extra-item-pointer-color": "",
-				"av-slide-menu-extra-item-pointer-hover-color": "",
-				"av-slide-menu-extra-item-text-active-color": "",
-				"av-slide-menu-extra-item-text-color": "",
-				"av-slide-menu-extra-item-text-hover-color": "",
-				"av-slide-menu-item-active-color": "",
-				"av-slide-menu-item-color": "",
-				"av-slide-menu-item-hover-color": "",
-				"av-slide-menu-item-pointer-active-color": "#f39900",
-				"av-slide-menu-item-pointer-color": "#f39900",
-				"av-slide-menu-item-pointer-hover-color": "#f39900",
-				"av-slide-menu-item-text-active-color": "",
-				"av-slide-menu-item-text-color": "",
-				"av-slide-menu-item-text-hover-color": "",
-				"av-sub-menu-active-background-color": "#FFFFFF",
-				"av-sub-menu-active-text-color": "#005280",
-				"av-sub-menu-background-color": "#FFFFFF",
-				"av-sub-menu-background-hover-color": "#EEEEEE",
-				"av-sub-menu-text-color": "#005280",
-				"av-sub-menu-text-hover-color": "#005280",
-				"av-touch-button-color": "",
-				"mobile-page-gutters": "15px",
-				"page-gutters": "40px"
-			}
 		}
 	},
 	"breakpoints": [
@@ -149,146 +128,297 @@
 	],
 	"clearHidden": "no",
 	"dialogs": {
-		"cancelconfirm": {
-			"id": "cancelconfirm",
+		"bsCancelDialog": {
+			"exclude": false,
+			"htmlLabel": "BS Cancel Dialog",
+			"id": "bsCancelDialog",
+			"label": "BS Cancel Dialog",
+			"path": "",
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_4",
+						"id": "dialogHeader_3",
 						"rows": [
 							[
 								{
-									"id": "close_4",
-									"subId": "d85962d96d4b42bcb517de498e25ed4d",
+									"id": "close_3",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "a658d5aa6767473fa2b1cf4c29fb820a",
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_6",
+						"exclude": true,
+						"htmlLabel": "Dialog Content excluded",
+						"id": "dialogContentExcluded_2",
+						"label": "Dialog Content excluded",
+						"path": "",
+						"rows": [
+							[]
+						],
+						"subId": "c67d616b1ece48abaeab4eec3f70710c",
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"htmlLabel": "Dialog Footer excluded",
+						"id": "dialogFooterExcluded_2",
+						"label": "Dialog Footer excluded",
+						"path": "",
 						"rows": [
 							[
 								{
-									"id": "dialog_content_cancel_confirm_1",
+									"id": "dialogNavigationBar_7",
 									"rows": [
 										[
 											{
-												"id": "confirm_cancellation_1",
+												"id": "button_12",
+												"subId": "284bef0efc7e469ebe7e6ce3c801adff",
+												"type": "button"
+											},
+											{
+												"id": "buttonResumeForm_3",
+												"subId": "a76ba45636c445f58641f1f65256cf74",
+												"type": "button-resume-form"
+											},
+											{
+												"id": "button_13",
+												"subId": "b302d9b1e90240828356190cda328fb0",
+												"type": "button"
+											},
+											{
+												"id": "button_14",
+												"subId": "6471b7e4d063409483e51ff9138ed85e",
+												"type": "button"
+											},
+											{
+												"id": "button_15",
+												"subId": "263ce51171ce44ce9a4d4c9837d50384",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"subId": "50ead585f74e4a198aa3f799c7663b9c",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"htmlLabel": "Cancel Dialog Content",
+						"id": "cancelDialogContent",
+						"label": "Cancel Dialog Content",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Confirm Cancellation",
+									"id": "confirmCancellation",
+									"label": "Confirm Cancellation",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+												"id": "areYouSureYouWantToCancel",
+												"label": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+												"path": "AreYouSureYouWantToCancel",
+												"type": "text-input"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Options",
+												"id": "options_1",
+												"label": "Options",
+												"path": "",
 												"rows": [
 													[
 														{
-															"id": "cancel_confirm_text",
-															"subId": "01580dd2461f46b1adcd5d798f9c9022",
-															"type": "text-input"
-														}
-													],
-													[
-														{
-															"id": "options_2",
+															"exclude": false,
+															"htmlLabel": "Help Option",
+															"id": "helpOption",
+															"label": "Help Option",
+															"path": "",
 															"rows": [
 																[
 																	{
-																		"id": "help_option_1",
-																		"rows": [
-																			[
-																				{
-																					"id": "info_block_image_3",
-																					"properties": {},
-																					"subId": "e466b3e73d3c461e89942221d615e515",
-																					"type": "image"
-																				},
-																				{
-																					"id": "container_help_option_1",
-																					"rows": [
-																						[
-																							{
-																								"id": "header_7",
-																								"subId": "6d0c4bed56fa4cdb8efd19bb5d61a67e",
-																								"type": "text-display"
-																							}
-																						],
-																						[
-																							{
-																								"id": "content_help_option_1",
-																								"subId": "b7da4cef81d34255876152b8a7b1308c",
-																								"type": "text-display"
-																							}
-																						],
-																						[
-																							{
-																								"id": "get_help_1",
-																								"subId": "ec4a7b4bb428414b8a37d1b857682a1a",
-																								"type": "button"
-																							}
-																						]
-																					],
-																					"subId": "56548e048d444443a4d35cfcf2572f21",
-																					"type": "block"
-																				}
-																			]
-																		],
-																		"subId": "9c448bc2598642feaed9f29d9f6a626a",
-																		"type": "advice-block-info"
+																		"exclude": false,
+																		"id": "infoBlockImage_1",
+																		"path": "",
+																		"properties": {},
+																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																		"type": "image"
 																	},
 																	{
-																		"id": "save_option_1",
+																		"exclude": false,
+																		"htmlLabel": "Container",
+																		"id": "container_2",
+																		"label": "Container",
+																		"path": "",
 																		"rows": [
 																			[
 																				{
-																					"id": "info_block_image_4",
-																					"properties": {},
-																					"subId": "11e68a8a73254b9c9fe680e1a482917f",
-																					"type": "image"
-																				},
+																					"exclude": true,
+																					"hideLabel": true,
+																					"htmlLabel": "",
+																					"id": "textDisplay_3",
+																					"label": "",
+																					"path": "",
+																					"subId": "e349c33a8a244107942968737f085a50",
+																					"type": "text-display"
+																				}
+																			],
+																			[
 																				{
-																					"id": "container_save_option_1",
-																					"rows": [
-																						[
-																							{
-																								"id": "header_8",
-																								"subId": "9f562319b7984ac49d69a38e7e827f51",
-																								"type": "text-display"
-																							}
-																						],
-																						[
-																							{
-																								"id": "conyent_2",
-																								"subId": "7da56928272c4000a5e128427b11c489",
-																								"type": "text-display"
-																							}
-																						],
-																						[
-																							{
-																								"id": "save_for_later_1",
-																								"subId": "ecef8243838a44999ee2062343270b0a",
-																								"type": "button"
-																							}
-																						]
+																					"exclude": false,
+																					"htmlLabel": "If you need any assistance completing your form, let us help you.",
+																					"id": "ifYouNeedAnyAssistance",
+																					"label": "If you need any assistance completing your form, let us help you.",
+																					"path": "",
+																					"subId": "a0f122e70d81447bae6f63fe3b381734",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"exclude": false,
+																					"htmlLabel": "Get help",
+																					"id": "getHelp",
+																					"label": "Get help",
+																					"path": "",
+																					"span": {
+																						"lg": 12,
+																						"md": 12
+																					},
+																					"styles": [
+																						"link-button-style"
 																					],
-																					"subId": "fe30dc8aff2042a58bbb92cdab55e607",
-																					"type": "block"
+																					"type": "button"
 																				}
 																			]
 																		],
-																		"subId": "277254ff674746c0bb1db55752b6759c",
-																		"type": "advice-block-info"
+																		"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																		"type": "block"
 																	}
 																]
 															],
-															"subId": "b96cac978be14864b0c639319cf871ea",
-															"type": "block"
-														}
-													],
-													[
+															"span": {
+																"lg": 6,
+																"md": 6
+															},
+															"type": "advice-block-info"
+														},
 														{
-															"id": "feedback_2",
+															"exclude": false,
+															"htmlLabel": "Save Option",
+															"id": "saveOption",
+															"label": "Save Option",
+															"path": "",
 															"rows": [
 																[
+																	{
+																		"exclude": false,
+																		"id": "infoBlockImage_2",
+																		"path": "",
+																		"properties": {},
+																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																		"type": "image"
+																	},
+																	{
+																		"exclude": false,
+																		"id": "block_6",
+																		"path": "",
+																		"rows": [
+																			[
+																				{
+																					"exclude": true,
+																					"id": "header_1",
+																					"path": "",
+																					"subId": "e349c33a8a244107942968737f085a50",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"exclude": false,
+																					"htmlLabel": "Did you know you can securely save your progress and resume at a later time?",
+																					"id": "didYouKnowYouCanSecurely",
+																					"label": "Did you know you can securely save your progress and resume at a later time?",
+																					"path": "",
+																					"subId": "a0f122e70d81447bae6f63fe3b381734",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"exclude": false,
+																					"htmlLabel": "Save for later",
+																					"id": "saveForLater",
+																					"label": "Save for later",
+																					"path": "",
+																					"span": {
+																						"lg": 12,
+																						"md": 12
+																					},
+																					"styles": [
+																						"link-button-style"
+																					],
+																					"type": "button"
+																				}
+																			]
+																		],
+																		"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																		"type": "block"
+																	}
+																]
+															],
+															"span": {
+																"lg": 6,
+																"md": 6
+															},
+															"type": "advice-block-info"
+														}
+													]
+												],
+												"type": "block"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Feedback",
+												"id": "feedback_1",
+												"label": "Feedback",
+												"path": "",
+												"properties": {
+													"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
+												},
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "What is the main reason for your cancellation?",
+															"id": "whatIsTheMainReasonFor",
+															"label": "What is the main reason for your cancellation?",
+															"path": "WhatIsTheMainReasonForYour",
+															"properties": {
+																"options": [
 																	{
 																		"id": "what_is_the_main_reason",
 																		"properties": {},
@@ -359,246 +489,774 @@
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_5",
+						"id": "dialogHeader_2",
 						"rows": [
 							[
 								{
-									"id": "close_5",
-									"subId": "9e296fc30de940628ec8b5dbda46ae26",
+									"id": "close_2",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "5c9d9ff72c1f42e689d9e5be9b70217b",
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_4",
+						"exclude": true,
+						"htmlLabel": "Dialog Content excluded",
+						"id": "dialogContentExcluded_1",
+						"label": "Dialog Content excluded",
+						"path": "",
+						"rows": [
+							[]
+						],
+						"subId": "c67d616b1ece48abaeab4eec3f70710c",
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"htmlLabel": "Dialog Footer excluded",
+						"id": "dialogFooterExcluded_1",
+						"label": "Dialog Footer excluded",
+						"path": "",
 						"rows": [
 							[
 								{
-									"id": "dialog_content_form_help_1",
+									"exclude": false,
+									"id": "dialogNavigationBar_5",
 									"rows": [
 										[
 											{
-												"id": "need_assistance_1",
+												"id": "button_8",
+												"subId": "284bef0efc7e469ebe7e6ce3c801adff",
+												"type": "button"
+											},
+											{
+												"id": "buttonResumeForm_2",
+												"subId": "a76ba45636c445f58641f1f65256cf74",
+												"type": "button-resume-form"
+											},
+											{
+												"id": "button_9",
+												"subId": "b302d9b1e90240828356190cda328fb0",
+												"type": "button"
+											},
+											{
+												"id": "button_10",
+												"subId": "6471b7e4d063409483e51ff9138ed85e",
+												"type": "button"
+											},
+											{
+												"id": "button_11",
+												"subId": "263ce51171ce44ce9a4d4c9837d50384",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"subId": "50ead585f74e4a198aa3f799c7663b9c",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"id": "dialogContent_1",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Need Assistance?",
+									"id": "needAssistance",
+									"label": "Need Assistance?",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Online Chat Block",
+												"id": "onlineChatBlock",
+												"label": "Online Chat Block",
+												"path": "OnlineChatBlock",
+												"span": {
+													"lg": 4
+												},
+												"styles": [
+													"bs-online-chat-82522"
+												],
+												"type": "text-input"
+											},
+											{
+												"exclude": false,
+												"htmlLabel": "Call us block",
+												"id": "callUsBlock",
+												"label": "Call us block",
+												"path": "",
 												"rows": [
 													[
 														{
-															"id": "need_onlineChatBlock_1",
-															"subId": "e980bc7790844721b70b990b2f02348c",
-															"type": "text-input"
-														},
-														{
-															"id": "need_callUsBlock_1",
-															"rows": [
-																[
-																	{
-																		"id": "infoBlockImage_4",
-																		"properties": {},
-																		"subId": "066f9f02c8ed4d3dbe6fbafadb2c168c",
-																		"type": "image"
-																	},
-																	{
-																		"id": "block_7",
-																		"rows": [
-																			[
-																				{
-																					"id": "callUs_2",
-																					"subId": "40b0d27a39634b32aa5aae46f63f2878",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"id": "anytimeDayOrNight_2",
-																					"subId": "f65b0de563ec4eb586ada9d3ef28dacd",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"id": "_1800_2",
-																					"subId": "103eaa13e6744ec69b8514f232cb918d",
-																					"type": "link"
-																				}
-																			]
-																		],
-																		"subId": "c7e09a0bd7c54ffb9ac7ffcc8a59a4e7",
-																		"type": "block"
-																	}
-																]
-															],
-															"subId": "77e108d25348486b8ea63797c551f722",
-															"type": "advice-block-info"
-														},
-														{
-															"id": "need_assistant_2",
+															"exclude": false,
+															"id": "infoBlockImage",
+															"path": "",
 															"properties": {},
-															"subId": "b025358609db40e9af2928640aaa2178",
+															"subId": "b1318f7593d14e64a914fb7274e32b1b",
 															"type": "image"
 														},
 														{
-															"id": "need_visitUs_1",
+															"exclude": false,
+															"id": "block_4",
+															"path": "",
 															"rows": [
-																[]
+																[
+																	{
+																		"exclude": false,
+																		"htmlLabel": "Call us",
+																		"id": "callUs",
+																		"label": "Call us",
+																		"path": "",
+																		"subId": "e349c33a8a244107942968737f085a50",
+																		"type": "text-display"
+																	}
+																],
+																[
+																	{
+																		"exclude": false,
+																		"htmlLabel": "(Anytime, day or night)",
+																		"id": "anytimeDayOrNight",
+																		"label": "(Anytime, day or night)",
+																		"path": "",
+																		"subId": "a0f122e70d81447bae6f63fe3b381734",
+																		"type": "text-display"
+																	}
+																],
+																[
+																	{
+																		"exclude": false,
+																		"htmlLabel": "1800",
+																		"id": "_1800",
+																		"label": "1800",
+																		"path": "_1800",
+																		"properties": {
+																			"linkUrl": "tel:1800"
+																		},
+																		"styles": [
+																			"form-help-hotline"
+																		],
+																		"type": "link"
+																	}
+																]
 															],
-															"subId": "ff69444690424238a908235995c16dd5",
-															"type": "section-2"
+															"subId": "3d8afb72dfec47f3a61a08907884c96c",
+															"type": "block"
 														}
 													]
 												],
-												"subId": "1107cf85ef3843dc91c0824f91ecaf68",
+												"span": {
+													"lg": 4,
+													"md": 6
+												},
+												"styles": [
+													"av-message-block",
+													"form-help-option-container"
+												],
+												"type": "advice-block-info"
+											},
+											{
+												"exclude": false,
+												"htmlLabel": "Assistant",
+												"id": "assistant_1",
+												"label": "Assistant",
+												"path": "",
+												"properties": {
+													"src": {
+														"fileName": "Assistant.png"
+													}
+												},
+												"span": {
+													"lg": 4,
+													"md": 4
+												},
+												"styles": [
+													"bs-assistant-image-73027"
+												],
+												"type": "image"
+											},
+											{
+												"exclude": false,
+												"htmlLabel": "Visit us",
+												"id": "visitUs",
+												"label": "Visit us",
+												"path": "",
+												"properties": {
+													"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
+												},
+												"rows": [
+													[]
+												],
+												"span": {
+													"lg": 8,
+													"md": 9
+												},
+												"styles": [
+													"mg-section-2",
+													"form-help-visit-us"
+												],
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "3cd91d5bc47e4583a3a00652f0d3cc10",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_10",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_4",
-												"rows": [
-													[
-														{
-															"id": "okay_10",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "dc7f4001523f4d2abc3993898559c950",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "4504af28b4034b5b80bd444f5ae4f86e",
-												"type": "block"
-											}
-										]
+									"styles": [
+										"mg-section-2",
+										"bs-save-dialog-text-82753",
+										"bs-dialog-content-scroll-92184"
 									],
-									"subId": "a8009a0488e04ef6b4962a2f5d0c5e51",
-									"type": "block"
+									"type": "section-2"
 								}
 							]
 						],
-						"subId": "113f48f6928a4f5e991def874d02cb4a",
-						"type": "block"
+						"type": "dialog-content"
 					}
-				]
-			],
-			"type": "form-help"
-		},
-		"savechallenge": {
-			"id": "savechallenge",
-			"rows": [
+				],
 				[
 					{
-						"id": "dialogHeader_6",
+						"exclude": true,
+						"htmlLabel": "Dialog Footer",
+						"id": "dialogFooter_3",
+						"label": "Dialog Footer",
+						"path": "",
 						"rows": [
 							[
 								{
-									"id": "close_6",
-									"subId": "5b00e0bbb7da47fcbd5ca16369a6e6af",
+									"exclude": false,
+									"id": "dialogNavigationBar_4",
+									"path": "",
+									"properties": {
+										"dialogNavButtons": "okay"
+									},
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"id": "cancel_6",
+												"path": "",
+												"subId": "fad2a15bdc304560a68f9afe23cbafe3",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "confirm_6",
+												"path": "",
+												"subId": "fef8893fe6d94ccfb597bbc16a095522",
+												"type": "button-resume-form"
+											},
+											{
+												"id": "confirm_7",
+												"path": "",
+												"subId": "d13d9442de724ebb9db6dc29ef3a6b78",
+												"type": "button"
+											},
+											{
+												"id": "okay_3",
+												"path": "",
+												"subId": "fe2f5e305ba14cc989ec6e19e3d0b551",
+												"type": "button"
+											},
+											{
+												"id": "cancel_7",
+												"path": "",
+												"subId": "19bced4d359e481b832a8f5c939e0298",
+												"type": "button"
+											}
+										]
+									],
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"styles": [],
+						"type": "dialog-content"
+					}
+				]
+			],
+			"type": "bs-general-dialog"
+		},
+		"bsResumeDialog": {
+			"exclude": false,
+			"htmlLabel": "BS Resume Dialog",
+			"id": "bsResumeDialog",
+			"label": "BS Resume Dialog",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader_4",
+						"rows": [
+							[
+								{
+									"id": "close_4",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "04b32c294db74c8aafac241d2f157a65",
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_5",
+						"exclude": true,
+						"htmlLabel": "Dialog Content excluded",
+						"id": "dialogContentExcluded_3",
+						"label": "Dialog Content excluded",
+						"path": "",
+						"rows": [
+							[]
+						],
+						"subId": "c67d616b1ece48abaeab4eec3f70710c",
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"htmlLabel": "Dialog Footer excluded",
+						"id": "dialogFooterExcluded_3",
+						"label": "Dialog Footer excluded",
+						"path": "",
 						"rows": [
 							[
 								{
-									"id": "dialog_content_save_challenge",
+									"id": "dialogNavigationBar_9",
 									"rows": [
 										[
 											{
-												"id": "open_your_saved_form",
-												"rows": [
-													[
-														{
-															"id": "save_challenge_message",
-															"subId": "99a462658fab4254b2b4ce80afb34406",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"id": "save_challenge_reference_code_section",
-															"rows": [
-																[
-																	{
-																		"id": "save_challenge_reference_code",
-																		"subId": "85628c35c7c64f678d83b46721c08e73",
-																		"type": "text-input"
-																	}
-																]
-															],
-															"subId": "9d91c3f3db0d42ccaa56296cb16ce906",
-															"type": "section-2"
-														}
-													],
-													[
-														{
-															"id": "save_challenge_question_section",
-															"rows": [
-																[]
-															],
-															"subId": "bf60f3af33fa4fc1b16450de3b351b70",
-															"type": "section-2"
-														}
-													]
-												],
-												"subId": "ae14d3a46a3e4437b4a86f4ee460da83",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c85b168aeca949219fc6b80703db8480",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_9",
-									"rows": [
-										[
+												"id": "button_16",
+												"subId": "284bef0efc7e469ebe7e6ce3c801adff",
+												"type": "button"
+											},
 											{
-												"id": "dialogFooterBlock",
-												"rows": [
-													[
-														{
-															"id": "open_6",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "fd74176fc1154642871b572034d297fb",
-												"type": "block"
+												"id": "buttonResumeForm_4",
+												"subId": "a76ba45636c445f58641f1f65256cf74",
+												"type": "button-resume-form"
+											},
+											{
+												"id": "button_17",
+												"subId": "b302d9b1e90240828356190cda328fb0",
+												"type": "button"
+											},
+											{
+												"id": "button_18",
+												"subId": "6471b7e4d063409483e51ff9138ed85e",
+												"type": "button"
+											},
+											{
+												"id": "button_19",
+												"subId": "263ce51171ce44ce9a4d4c9837d50384",
+												"type": "button"
 											}
 										]
 									],
-									"subId": "37791d13d93240f884ed597d039da865",
-									"type": "block"
+									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"type": "dialog-navigation-bar"
 								}
 							]
 						],
-						"subId": "be31e6d5451642c28ed57b817cd621a8",
+						"subId": "50ead585f74e4a198aa3f799c7663b9c",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"id": "dialogContent_2",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Open saved form",
+									"id": "openSavedForm",
+									"label": "Open saved form",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Tracking code",
+												"id": "trackingCode",
+												"label": "Tracking code",
+												"path": "TrackingCode",
+												"type": "text-input"
+											},
+											{
+												"exclude": false,
+												"htmlLabel": "Challenge answer",
+												"id": "challengeAnswer",
+												"label": "Challenge answer",
+												"path": "ChallengeAnswer",
+												"type": "text-input"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Open form options",
+												"id": "openFormOptions",
+												"label": "Open form options",
+												"path": "OpenFormOptions",
+												"properties": {},
+												"type": "radio-button-group"
+											}
+										]
+									],
+									"styles": [
+										"mg-section-2",
+										"bs-save-dialog-text-82753",
+										"bs-dialog-content-scroll-92184"
+									],
+									"type": "section-2"
+								}
+							]
+						],
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"htmlLabel": "Dialog Footer",
+						"id": "dialogFooter_5",
+						"label": "Dialog Footer",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"id": "dialogNavigationBar_8",
+									"path": "",
+									"properties": {
+										"dialogNavButtons": "open",
+										"validationRef": "openSavedForm"
+									},
+									"rows": [
+										[
+											{
+												"exclude": true,
+												"id": "cancel_10",
+												"path": "",
+												"subId": "fad2a15bdc304560a68f9afe23cbafe3",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"htmlLabel": "Resume",
+												"id": "resume_1",
+												"label": "Resume",
+												"path": "",
+												"properties": {
+													"challengeAnswerField": "data.challengeAnswer",
+													"trackingCodeField": "data.trackingCode"
+												},
+												"rules": {
+													"click": "/*\nForm.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});\n*/\ntry {  \n\tForm.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField);\n}\ncatch (error) {\n\tconsole.log(error);\n}"
+												},
+												"styles": [
+													"bs-dialog-button-12962"
+												],
+												"subId": "fef8893fe6d94ccfb597bbc16a095522",
+												"type": "button-resume-form"
+											},
+											{
+												"exclude": true,
+												"htmlLabel": "Confirm",
+												"id": "confirm_5",
+												"path": "",
+												"subId": "d13d9442de724ebb9db6dc29ef3a6b78",
+												"type": "button"
+											},
+											{
+												"exclude": true,
+												"id": "okay_5",
+												"path": "",
+												"subId": "fe2f5e305ba14cc989ec6e19e3d0b551",
+												"type": "button"
+											},
+											{
+												"exclude": true,
+												"id": "cancel_11",
+												"path": "",
+												"subId": "19bced4d359e481b832a8f5c939e0298",
+												"type": "button"
+											}
+										]
+									],
+									"styles": [
+										"bs-dialog-navigation-56885",
+										"bs-max-width-73189"
+									],
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"styles": [],
+						"type": "dialog-content"
+					}
+				]
+			],
+			"type": "bs-general-dialog"
+		},
+		"bsSaveDialog": {
+			"exclude": false,
+			"htmlLabel": "BS Save Dialog",
+			"id": "bsSaveDialog",
+			"label": "BS Save Dialog",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader",
+						"rows": [
+							[
+								{
+									"id": "close_1",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"hasCustomId": true,
+						"htmlLabel": "Dialog Content excluded",
+						"id": "dialogContentExcluded",
+						"label": "Dialog Content excluded",
+						"path": "",
+						"rows": [
+							[]
+						],
+						"subId": "c67d616b1ece48abaeab4eec3f70710c",
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"htmlLabel": "Dialog Footer excluded",
+						"id": "dialogFooterExcluded",
+						"label": "Dialog Footer excluded",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"id": "dialogNavigationBar_3",
+									"rows": [
+										[
+											{
+												"id": "button_4",
+												"subId": "284bef0efc7e469ebe7e6ce3c801adff",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "buttonResumeForm_1",
+												"subId": "a76ba45636c445f58641f1f65256cf74",
+												"type": "button-resume-form"
+											},
+											{
+												"exclude": false,
+												"id": "button_5",
+												"subId": "b302d9b1e90240828356190cda328fb0",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "button_6",
+												"rules": {
+													"click": "console.log(\"dddt\");\nForm.showDialog(\"\");"
+												},
+												"subId": "6471b7e4d063409483e51ff9138ed85e",
+												"type": "button"
+											},
+											{
+												"id": "button_7",
+												"subId": "263ce51171ce44ce9a4d4c9837d50384",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"subId": "50ead585f74e4a198aa3f799c7663b9c",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"id": "dialogContent",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Save information:",
+									"id": "saveInformation",
+									"label": "Save information:",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Save confirm message",
+												"id": "saveConfirmMessage",
+												"label": "Save confirm message",
+												"path": "",
+												"type": "text-display"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "First name:",
+												"id": "firstName",
+												"label": "First name:",
+												"path": "FirstName",
+												"type": "text-input"
+											},
+											{
+												"exclude": false,
+												"htmlLabel": "Last name:",
+												"id": "lastName_1",
+												"label": "Last name:",
+												"path": "LastName",
+												"type": "text-input"
+											}
+										]
+									],
+									"styles": [
+										"mg-section-2",
+										"bs-save-dialog-text-82753",
+										"bs-dialog-content-scroll-92184"
+									],
+									"type": "section-2"
+								}
+							]
+						],
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"htmlLabel": "Dialog Footer",
+						"id": "dialogFooter",
+						"label": "Dialog Footer",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"id": "dialogNavigationBar",
+									"path": "",
+									"properties": {
+										"dialogNavButtons": "save"
+									},
+									"rows": [
+										[
+											{
+												"exclude": true,
+												"id": "cancel",
+												"path": "",
+												"subId": "fad2a15bdc304560a68f9afe23cbafe3",
+												"type": "button"
+											},
+											{
+												"exclude": true,
+												"id": "confirm",
+												"path": "",
+												"subId": "fef8893fe6d94ccfb597bbc16a095522",
+												"type": "button-resume-form"
+											},
+											{
+												"exclude": false,
+												"htmlLabel": "Save",
+												"id": "save_2",
+												"label": "Save",
+												"path": "",
+												"styles": [
+													"bs-dialog-button-12962"
+												],
+												"subId": "d13d9442de724ebb9db6dc29ef3a6b78",
+												"type": "button"
+											},
+											{
+												"exclude": true,
+												"id": "okay",
+												"path": "",
+												"subId": "fe2f5e305ba14cc989ec6e19e3d0b551",
+												"type": "button"
+											},
+											{
+												"exclude": true,
+												"id": "cancel_5",
+												"path": "",
+												"subId": "19bced4d359e481b832a8f5c939e0298",
+												"type": "button"
+											}
+										]
+									],
+									"styles": [
+										"bs-dialog-navigation-56885",
+										"bs-max-width-73189"
+									],
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"styles": [],
+						"type": "dialog-content"
+					}
+				]
+			],
+			"type": "bs-general-dialog"
+		},
+		"cancelconfirm": {
+			"exclude": true,
+			"id": "cancelconfirm",
+			"rows": [
+				[
+					{
+						"id": "block_1",
+						"rows": [
+							[
+								{
+									"id": "iconButton",
+									"subId": "81ab3bfe44644a55a558697d80247f00",
+									"type": "button-dialog-cancel"
+								}
+							]
+						],
+						"subId": "fe1cf03c645344499f240f27f798542d",
 						"type": "block"
 					}
 				]
@@ -692,15 +1350,16 @@
 								}
 							]
 						],
-						"subId": "1ea05f9f06654a3abe01133ecdc0782d",
+						"subId": "0fbf0ed09bdc49828a565c108ca6592e",
 						"type": "block"
 					}
 				]
 			],
-			"type": "save-confirm"
+			"type": "dialog-cancel-confirm"
 		},
-		"showxml": {
-			"id": "showxml",
+		"formhelp": {
+			"exclude": true,
+			"id": "formhelp",
 			"rows": [
 				[
 					{
@@ -709,142 +1368,427 @@
 							[
 								{
 									"id": "close",
-									"subId": "dbfbfa08cfd0446da064233de0d20684",
-									"type": "icon-button"
+									"subId": "a64390c37ca341678774a41c717ffb3b",
+									"type": "button-dialog-cancel"
 								}
 							]
 						],
-						"subId": "5afbc9d2c55d491686da20cbd937af4a",
+						"subId": "6fc8f53de6734e689e06c99e02da1406",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_7",
+						"id": "dialog_content_form_help",
 						"rows": [
 							[
 								{
-									"id": "dialogContent_3",
+									"id": "need_assistance",
 									"rows": [
 										[
 											{
-												"id": "show_xml_content",
+												"id": "online_chat_block",
 												"rows": [
 													[
 														{
-															"id": "xml_display",
-															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
-															"type": "text-display"
+															"exclude": false,
+															"id": "info_block_image_3",
+															"properties": {},
+															"subId": "e9752e2587a64983ad4dd0dfb5f92594",
+															"type": "image"
+														},
+														{
+															"exclude": false,
+															"id": "container",
+															"rows": [
+																[
+																	{
+																		"exclude": false,
+																		"id": "online_chat_header",
+																		"subId": "8cb6250cd6774325b09326d9ebad1764",
+																		"type": "text-display"
+																	}
+																],
+																[
+																	{
+																		"id": "online_chat_times",
+																		"subId": "ccb28bc3b30f490ba99f9acb9e05aadf",
+																		"type": "text-display"
+																	}
+																],
+																[
+																	{
+																		"exclude": false,
+																		"id": "start_chat",
+																		"subId": "7ece3fd6b8b0404da40540759c06ab2b",
+																		"type": "button"
+																	}
+																]
+															],
+															"subId": "87d8fe8dacbd495b877fca60ecc3500c",
+															"type": "block"
 														}
 													]
 												],
-												"subId": "79e5d5cac3914789865650272a1b8f0e",
+												"subId": "0fc00e13886f4ee487e471ec71c22c9b",
+												"type": "text-input"
+											},
+											{
+												"exclude": false,
+												"id": "call_us_block",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"id": "info_block_image_4",
+															"properties": {},
+															"subId": "72f5c5879e15419496968e710e8a3de3",
+															"type": "image"
+														},
+														{
+															"exclude": false,
+															"id": "container_1",
+															"rows": [
+																[
+																	{
+																		"exclude": false,
+																		"id": "header_8",
+																		"subId": "1f43fb58c48940f88e59d74c7fa9f8b0",
+																		"type": "text-display"
+																	}
+																],
+																[
+																	{
+																		"exclude": false,
+																		"id": "content_3",
+																		"subId": "083f760faaa543a7b898fea980b255df",
+																		"type": "text-display"
+																	}
+																],
+																[
+																	{
+																		"exclude": false,
+																		"id": "form_help_hot_line_link",
+																		"subId": "26b462e7096440458459e2dd732326b8",
+																		"type": "link"
+																	}
+																]
+															],
+															"subId": "6279c634ea6f4ef7b3234fee83eed660",
+															"type": "block"
+														}
+													]
+												],
+												"subId": "5614be50ffc749a395d3748f91172519",
+												"type": "advice-block-info"
+											},
+											{
+												"exclude": false,
+												"id": "assistant",
+												"properties": {},
+												"subId": "15b967cb8b964f5083befb0ff515eba0",
+												"type": "image"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"id": "visit_us",
+												"rows": [
+													[]
+												],
+												"subId": "063ca0b03bc74cc29c9cfa8e00095816",
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "c0303162902c41669857d1f7683dca48",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_8",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_2",
-												"rows": [
-													[
-														{
-															"id": "okay_8",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "59aead05e87845a9acdbf2b2946a5169",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "9cd0823d0cd341cb86bf35e712f4b5d3",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "b185f47ec7c042c3a9dbcfdde93052cf",
-									"type": "block"
+									"subId": "e2192220d6c44b4ca0f618a507ddf465",
+									"type": "section-2"
 								}
 							]
 						],
-						"subId": "f220c8df9c284490b3f507a489e0fe4a",
+						"subId": "85548b6ed6754ac2b59f7c349f1cfbe9",
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"id": "dialogFooter1",
+						"path": "",
+						"rows": [
+							[
+								{
+									"id": "dialogNavigationBar1",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"id": "cancel2",
+												"path": "",
+												"subId": "d356965e6c36497784898a7fc47f731e",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "confirm2",
+												"path": "",
+												"subId": "72b1d5c866924c4bb73223d482765a89",
+												"type": "button-resume-form"
+											},
+											{
+												"id": "confirm3",
+												"path": "",
+												"subId": "647d5ee200db470f856da9b76fd1e6a5",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "okay1",
+												"path": "",
+												"subId": "aa1038e9aa144591b77461150857972c",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "cancel3",
+												"path": "",
+												"subId": "dedbaadd2ca14afaa31bbb59fda5314a",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "a7c3f9dc19004fb19f57f04eb3e3f16d",
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"subId": "47dab162cc094a0888a340240722caa5",
 						"type": "block"
 					}
 				]
 			],
-			"type": "show-xml"
+			"type": "dialog-form-help"
+		},
+		"saveconfirm": {
+			"exclude": true,
+			"id": "saveconfirm",
+			"rows": [
+				[
+					{
+						"id": "block_3",
+						"rows": [
+							[
+								{
+									"id": "iconButton_2",
+									"subId": "00a50f465ca74adb8cf3249af32e4cb2",
+									"type": "button-dialog-cancel"
+								}
+							]
+						],
+						"subId": "b64019bc48f2448dab80fcfd254a44ce",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialog_content_save_confirm",
+						"rows": [
+							[
+								{
+									"id": "section2_1",
+									"rows": [
+										[
+											{
+												"htmlLabel": "First name:",
+												"id": "firstName_1",
+												"label": "First name:",
+												"path": "FirstName",
+												"subId": "222fbb96cdbf4a599f17933d36a77fed",
+												"type": "text-input"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "Last name",
+												"id": "lastName",
+												"label": "Last name",
+												"path": "LastName",
+												"type": "text-input"
+											}
+										]
+									],
+									"subId": "e66f909d41a94a6587b8bf49a199b69d",
+									"type": "section-2"
+								}
+							]
+						],
+						"subId": "9b8ffed1237741b8b2e7ba457e8c10be",
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"id": "dialog_footer_save_confirm",
+						"rows": [
+							[
+								{
+									"exclude": true,
+									"id": "dialog_navigation_bar_save_confirm",
+									"rows": [
+										[
+											{
+												"id": "button",
+												"subId": "f0e766cdc61a45e5bcae78d7763c6f89",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "buttonResumeForm",
+												"subId": "817ae2d3c1b84402b8ff37d3d9d8b77b",
+												"type": "button-resume-form"
+											},
+											{
+												"exclude": false,
+												"id": "button_1",
+												"subId": "74b2ea03bb6a48a7ad30508736fdb701",
+												"type": "button"
+											},
+											{
+												"id": "button_2",
+												"subId": "9a8cc0549c0c44a88a636f2d54d462a7",
+												"type": "button"
+											},
+											{
+												"id": "button_3",
+												"subId": "a33aafecc6a64bb4bc9925d1863345af",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "d7232c5b115f404c853ee5f3d0e51428",
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"styles": [
+							"bs-dialog-footer-10282"
+						],
+						"subId": "ac339dcf21b34b2db8d9e179388b7ad4",
+						"type": "block"
+					}
+				]
+			],
+			"type": "dialog-save-confirm"
+		},
+		"saveconfirm_1": {
+			"exclude": true,
+			"htmlLabel": "Resume Confirm",
+			"id": "saveconfirm_1",
+			"label": "Resume Confirm",
+			"rows": [
+				[
+					{
+						"id": "block_2",
+						"rows": [
+							[
+								{
+									"id": "iconButton_1",
+									"subId": "00a50f465ca74adb8cf3249af32e4cb2",
+									"type": "button-dialog-cancel"
+								}
+							]
+						],
+						"subId": "b64019bc48f2448dab80fcfd254a44ce",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "saveConfirmContent",
+						"rows": [
+							[
+								{
+									"id": "section2",
+									"rows": [
+										[
+											{
+												"id": "textInput",
+												"subId": "222fbb96cdbf4a599f17933d36a77fed",
+												"type": "text-input"
+											}
+										]
+									],
+									"subId": "e66f909d41a94a6587b8bf49a199b69d",
+									"type": "section-2"
+								}
+							]
+						],
+						"subId": "9b8ffed1237741b8b2e7ba457e8c10be",
+						"type": "dialog-content"
+					}
+				],
+				[
+					{
+						"id": "dialogFooter_2",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": true,
+									"id": "dialogNavigationBar_2",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "cancel_3",
+												"path": "",
+												"subId": "f0e766cdc61a45e5bcae78d7763c6f89",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "confirm_3",
+												"path": "",
+												"subId": "817ae2d3c1b84402b8ff37d3d9d8b77b",
+												"type": "button-resume-form"
+											},
+											{
+												"exclude": false,
+												"id": "confirm_4",
+												"path": "",
+												"subId": "74b2ea03bb6a48a7ad30508736fdb701",
+												"type": "button"
+											},
+											{
+												"id": "okay_2",
+												"path": "",
+												"subId": "9a8cc0549c0c44a88a636f2d54d462a7",
+												"type": "button"
+											},
+											{
+												"id": "cancel_4",
+												"path": "",
+												"subId": "a33aafecc6a64bb4bc9925d1863345af",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "d7232c5b115f404c853ee5f3d0e51428",
+									"type": "dialog-navigation-bar"
+								}
+							]
+						],
+						"subId": "ac339dcf21b34b2db8d9e179388b7ad4",
+						"type": "block"
+					}
+				]
+			],
+			"type": "dialog-save-confirm"
 		}
 	},
-	"entities": {
-		"cancel": {
-			"confirm": {}
-		},
-		"confirm": {},
-		"container": {
-			"help": {},
-			"save": {}
-		},
-		"content": {
-			"help": {}
-		},
-		"dialog": {
-			"content": {
-				"cancel": {},
-				"form": {},
-				"save": {}
-			},
-			"footer": {
-				"cancel": {}
-			}
-		},
-		"get": {},
-		"help": {},
-		"info": {
-			"block": {}
-		},
-		"need": {},
-		"open": {
-			"your": {
-				"saved": {}
-			}
-		},
-		"save": {
-			"challenge": {
-				"question": {},
-				"reference": {
-					"code": {}
-				}
-			},
-			"confirm": {},
-			"for": {},
-			"your": {}
-		},
-		"security": {
-			"question": {
-				"save": {}
-			}
-		},
-		"show": {
-			"xml": {}
-		},
-		"what": {
-			"is": {
-				"the": {
-					"main": {}
-				}
-			}
-		},
-		"xml": {}
-	},
+	"entities": {},
 	"exclude": false,
 	"extractMap": {},
 	"formOptions": {
@@ -878,10 +1822,13 @@
 	"isPreview": false,
 	"localDialogs": [
 		"formhelp",
-		"saveconfirm",
-		"savechallenge",
 		"cancelconfirm",
-		"showxml"
+		"saveconfirm_1",
+		"saveconfirm",
+		"bsSaveDialog",
+		"bsHelpDialog",
+		"bsCancelDialog",
+		"bsResumeDialog"
 	],
 	"localModals": [
 		"cancelsuccess",
@@ -977,18 +1924,11 @@
 						"rows": [
 							[
 								{
+									"exclude": false,
 									"id": "formFooterText",
-									"rows": [
-										[
-											{
-												"id": "textDisplay",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
+									"path": "",
 									"subId": "1c81a4fdb80045d49654478a23b0d632",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1088,17 +2028,8 @@
 							[
 								{
 									"id": "formFooterText_4",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_4",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
 									"subId": "082a0f34bab7496ab942025374652910",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1368,17 +2299,9 @@
 							[
 								{
 									"id": "formFooterText_1",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_3",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
+									"path": "",
 									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1733,17 +2656,9 @@
 							[
 								{
 									"id": "formFooterText_2",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_1",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
+									"path": "",
 									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1779,239 +2694,232 @@
 	"rows": [
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Web Fonts",
-				"id": "webFonts",
+				"span": {
+					"xs": 0,
+					"sm": 0,
+					"md": 0,
+					"lg": 0
+				},
 				"label": "Web Fonts",
-				"path": "",
 				"rows": [
 					[
 						{
+							"label": "Quicksand Regular",
+							"properties": {
+								"font": {
+									"fontFamily": "QuicksandRegular",
+									"eotFileName": "Quicksand-Regular.eot",
+									"woffFileName": "Quicksand-Regular.woff",
+									"svgFileName": "Quicksand-Regular.svg",
+									"ttfFileName": "Quicksand-Regular.ttf"
+								}
+							},
 							"exclude": false,
 							"htmlLabel": "Quicksand Regular",
-							"id": "quicksandRegular",
-							"label": "Quicksand Regular",
 							"path": "",
-							"properties": {
-								"font": {
-									"eotFileName": "Quicksand-Regular.eot",
-									"fontFamily": "QuicksandRegular",
-									"svgFileName": "Quicksand-Regular.svg",
-									"ttfFileName": "Quicksand-Regular.ttf",
-									"woffFileName": "Quicksand-Regular.woff"
-								}
-							},
-							"type": "resource-font"
+							"type": "resource-font",
+							"id": "quicksandRegular"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Quicksand Medium",
-							"id": "quicksandMedium",
 							"label": "Quicksand Medium",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Quicksand-Medium.eot",
 									"fontFamily": "QuicksandMedium",
+									"eotFileName": "Quicksand-Medium.eot",
+									"woffFileName": "Quicksand-Medium.woff",
 									"svgFileName": "Quicksand-Medium.svg",
 									"ttfFileName": "Quicksand-Medium.ttf",
-									"undefined": "Quicksand-Medium.otf",
-									"woffFileName": "Quicksand-Medium.woff"
+									"undefined": "Quicksand-Medium.otf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Quicksand Medium",
+							"path": "",
+							"type": "resource-font",
+							"id": "quicksandMedium"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Quicksand Bold",
-							"id": "quicksandBold",
 							"label": "Quicksand Bold",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Quicksand-Bold.eot",
 									"fontFamily": "QuicksandBold",
+									"eotFileName": "Quicksand-Bold.eot",
+									"woffFileName": "Quicksand-Bold.woff",
 									"svgFileName": "Quicksand-Bold.svg",
-									"ttfFileName": "Quicksand-Bold.ttf",
-									"woffFileName": "Quicksand-Bold.woff"
+									"ttfFileName": "Quicksand-Bold.ttf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Quicksand Bold",
+							"path": "",
+							"type": "resource-font",
+							"id": "quicksandBold"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Quicksand Light",
-							"id": "quicksandLight",
 							"label": "Quicksand Light",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Quicksand-Light.eot",
 									"fontFamily": "QuicksandLight",
+									"eotFileName": "Quicksand-Light.eot",
+									"woffFileName": "Quicksand-Light.woff",
 									"svgFileName": "Quicksand-Light.svg",
-									"ttfFileName": "Quicksand-Light.ttf",
-									"woffFileName": "Quicksand-Light.woff"
+									"ttfFileName": "Quicksand-Light.ttf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Quicksand Light",
+							"path": "",
+							"type": "resource-font",
+							"id": "quicksandLight"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Lato-Regular",
-							"id": "latoregular",
 							"label": "Lato-Regular",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Lato-Regular.eot",
 									"fontFamily": "Lato-Regular",
+									"eotFileName": "Lato-Regular.eot",
+									"woffFileName": "Lato-Regular.woff",
 									"svgFileName": "Lato-Regular.svg",
-									"ttfFileName": "Lato-Regular.ttf",
-									"woffFileName": "Lato-Regular.woff"
+									"ttfFileName": "Lato-Regular.ttf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Lato-Regular",
+							"path": "",
+							"type": "resource-font",
+							"id": "latoregular"
 						}
 					]
 				],
-				"span": {
-					"lg": 0,
-					"md": 0,
-					"sm": 0,
-					"xs": 0
-				},
-				"type": "block"
+				"exclude": false,
+				"htmlLabel": "Web Fonts",
+				"path": "",
+				"type": "block",
+				"id": "webFonts"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"id": "dockingController",
-				"path": "DockingController",
+				"rows": [
+					[
+						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
+							"exclude": false,
+							"path": "",
+							"id": "scrollPosition",
+							"type": "data-field"
+						},
+						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
+							"path": "",
+							"id": "docked",
+							"type": "data-field"
+						},
+						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
+							"path": "",
+							"id": "undocked",
+							"type": "data-field"
+						}
+					]
+				],
 				"properties": {
 					"dockPosition": 50
 				},
-				"rows": [
-					[
-						{
-							"exclude": false,
-							"id": "scrollPosition",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"id": "docked",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"id": "undocked",
-							"path": "",
-							"type": "data-field"
-						}
-					]
-				],
-				"type": "docking-controller"
+				"exclude": false,
+				"path": "DockingController",
+				"type": "docking-controller",
+				"id": "dockingController"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Background",
-				"id": "background",
 				"label": "Background",
-				"path": "",
 				"rows": [
 					[]
 				],
+				"exclude": false,
+				"htmlLabel": "Background",
+				"path": "",
 				"styles": [
 					"av-background-image"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "background"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Form Header",
-				"id": "formHeader1",
 				"label": "Form Header",
-				"path": "",
 				"rows": [
 					[
 						{
-							"exclude": false,
-							"id": "stickyPanel1",
-							"path": "StickyPanel",
 							"rows": [
 								[
 									{
-										"exclude": false,
-										"id": "formHeader",
-										"path": "",
-										"properties": {
-											"showTrackingCode": false
-										},
 										"rows": [
 											[
 												{
-													"exclude": false,
-													"htmlLabel": "Brand logo",
-													"id": "brandLogo",
+													"span": {
+														"xs": 3,
+														"sm": 3,
+														"md": 3,
+														"lg": 3
+													},
 													"label": "Brand logo",
-													"path": "",
 													"rows": [
 														[
 															{
-																"exclude": false,
-																"htmlLabel": "Logo",
-																"id": "logo",
+																"span": {
+																	"md": 4,
+																	"lg": 4,
+																	"xs": 3,
+																	"sm": 3
+																},
 																"label": "Logo",
-																"path": "",
 																"properties": {
 																	"src": {
-																		"fileName": "blue-steel-logo.png"
+																		"fileName": "avoka-logo.png"
 																	}
 																},
-																"span": {
-																	"lg": 4,
-																	"md": 4,
-																	"sm": 3,
-																	"xs": 3
-																},
+																"exclude": false,
+																"htmlLabel": "Logo",
+																"path": "",
 																"styles": [],
-																"type": "image"
+																"type": "image",
+																"id": "logo"
 															}
 														]
 													],
-													"span": {
-														"lg": 3,
-														"md": 3,
-														"sm": 3,
-														"xs": 3
-													},
+													"exclude": false,
+													"htmlLabel": "Brand logo",
+													"path": "",
 													"styles": [
 														"bs-logo-container-86033"
 													],
-													"type": "block"
+													"type": "block",
+													"id": "brandLogo"
 												},
 												{
-													"exclude": false,
-													"id": "dockingProgressBar_1",
-													"path": "DockingProgressBar",
 													"rows": [
 														[
 															{
-																"exclude": false,
-																"id": "progressBar_1",
-																"path": "ProgressBar",
 																"properties": {
 																	"displayGroupIcon": false
 																},
+																"exclude": false,
+																"path": "ProgressBar",
+																"id": "progressBar_1",
 																"type": "progress-bar"
 															}
 														]
@@ -2019,70 +2927,109 @@
 													"styles": [
 														"av-docking-progress-bar"
 													],
-													"type": "docking-progress-bar"
+													"exclude": false,
+													"path": "DockingProgressBar",
+													"type": "docking-progress-bar",
+													"id": "dockingProgressBar_1"
 												}
 											]
 										],
+										"properties": {
+											"showTrackingCode": false
+										},
+										"exclude": false,
+										"path": "",
 										"styles": [
 											"mg-header",
 											"bs-max-width-73189"
 										],
-										"type": "form-header"
+										"type": "form-header",
+										"id": "formHeader"
 									}
 								],
 								[
 									{
-										"exclude": false,
-										"id": "dockingErrorBlock",
-										"path": "",
 										"rows": [
 											[
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "dockErrors",
 													"type": "data-field"
 												},
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "errorsDockLock",
 													"type": "data-field"
 												}
 											]
 										],
-										"styles": [],
-										"type": "docking-errors"
+										"properties": {
+											"header": "Please resolve the following issues before proceeding",
+											"subHeader": "Click on an issue to go directly to the related section of the form.",
+											"dockedHeader": "{{Form.validation.errors.length}} error(s) found",
+											"dockedSubHeader": "Please touch here to resolve the next error.",
+											"mobileA11yMessageBefore": "The following {{Form.validation.errors.length + (Form.validation.errors.length == 1 && ' issue was' || ' issues were')}} found.",
+											"mobileA11yMessageAfter": "Please select the screen to go to the first error."
+										},
+										"exclude": false,
+										"path": "",
+										"styles": [
+											"av-docking-errors"
+										],
+										"type": "docking-errors",
+										"id": "dockingErrorBlock"
 									}
 								]
 							],
+							"exclude": false,
+							"path": "StickyPanel",
 							"styles": [
 								"bs-fixed-header-40325"
 							],
-							"type": "sticky-panel"
+							"type": "sticky-panel",
+							"id": "stickyPanel1"
 						}
 					]
 				],
+				"exclude": false,
+				"htmlLabel": "Form Header",
+				"path": "",
 				"rules": {},
 				"styles": [],
-				"type": "block"
+				"type": "block",
+				"id": "formHeader1"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Content",
-				"id": "content",
 				"label": "Content",
-				"path": "",
 				"rows": [
 					[
 						{
-							"exclude": false,
-							"id": "pageController",
-							"path": "",
-							"properties": {
-								"transitionDelay": 600
-							},
 							"rows": [
 								[
 									{
+										"rows": [
+											[
+												{
+													"rows": [
+														[]
+													],
+													"exclude": false,
+													"path": "",
+													"type": "section-2",
+													"id": "section"
+												}
+											]
+										],
+										"type": "nav-page",
+										"styles": [
+											"mg-section-1"
+										],
 										"exclude": false,
 										"hasCustomId": true,
 										"htmlLabel": "Page",
@@ -2090,35 +3037,25 @@
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
 										"path": "",
-										"rows": [
-											[
-												{
-													"exclude": false,
-													"id": "section",
-													"path": "",
-													"rows": [
-														[]
-													],
-													"type": "section-2"
-												}
-											]
-										],
 										"rules": {
 											"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
 										},
-										"styles": [
-											"mg-section-1"
-										],
-										"type": "nav-page"
+										"id": "page"
 									}
 								]
 							],
+							"properties": {
+								"transitionDelay": 600
+							},
+							"exclude": false,
+							"path": "",
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n   }",
 								"dc": "data.pageChangeAnimation",
 								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");\n"
 							},
-							"type": "page-controller"
+							"type": "page-controller",
+							"id": "pageController"
 						}
 					]
 				],
@@ -2129,588 +3066,633 @@
 					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "content"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Bottom Nav",
-				"id": "bottomNav",
-				"label": "Bottom Nav",
 				"offset": {
-					"lg": "0",
-					"md": "0"
+					"md": "0",
+					"lg": "0"
 				},
-				"path": "",
+				"label": "Bottom Nav",
 				"rows": [
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"id": "submit2",
-							"offset": {
-								"lg": "0",
-								"md": "0",
-								"sm": "0",
-								"xs": "0"
-							},
-							"path": "",
-							"properties": {
-								"legacyMethod": false
-							},
-							"rules": {
-								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
 							"span": {
-								"sm": 6,
-								"xs": 6
+								"xs": 6,
+								"sm": 6
+							},
+							"offset": {
+								"xs": "0",
+								"sm": "0",
+								"md": "0",
+								"lg": "0"
 							},
 							"styles": [
 								"av-button",
 								"bs-submit-button-65937",
 								"av-global-layout"
 							],
-							"type": "submit"
+							"properties": {
+								"legacyMethod": false
+							},
+							"type": "submit",
+							"rules": {
+								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+							},
+							"animateVisibility": true,
+							"exclude": false,
+							"path": "",
+							"id": "submit2"
 						}
 					]
 				],
+				"exclude": false,
+				"htmlLabel": "Bottom Nav",
+				"path": "",
 				"styles": [
 					"bs-bottom-nav-15636"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "bottomNav"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Navigation Bar",
-				"id": "navigationBar",
 				"label": "Navigation Bar",
-				"path": "",
 				"rows": [
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Next",
-							"id": "next",
+							"span": {
+								"md": 2,
+								"lg": 2,
+								"xs": 2,
+								"sm": 2
+							},
 							"label": "Next",
-							"labelPlacementLeft": false,
-							"path": "",
+							"styles": [
+							    "av-button-navigation-next",
+								"av-button-navigation"
+							],
 							"properties": {
 								"icon": "fa fa-angle-right"
 							},
+							"animateVisibility": true,
+							"exclude": false,
+							"htmlLabel": "Next",
+							"labelPlacementLeft": false,
+							"path": "",
 							"rules": {
 								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\nForm.$Pages.move(true);\n$timeout(function() {\t\n  data.blockNext = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockNext = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n",
 								"dc": "return data.blockNext  ? \"error\" : \"\";",
 								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
-							"span": {
-								"lg": 2,
-								"md": 2,
-								"sm": 2,
-								"xs": 2
-							},
-							"styles": [
-								"av-button-navigation-next",
-								"av-button-navigation"
-							],
-							"type": "button-docking-right"
+							"type": "button-docking-right",
+							"id": "next"
 						}
 					],
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Back",
-							"id": "back",
-							"label": "Back",
-							"path": "",
-							"properties": {
-								"icon": "fa fa-angle-left"
-							},
-							"rules": {
-								"click": "Form.$Pages.move(false);",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst;\n} else {\n\treturn true;\n}\n"
-							},
 							"span": {
-								"lg": 2,
 								"md": 2,
-								"sm": 2,
-								"xs": 2
+								"lg": 2,
+								"xs": 2,
+								"sm": 2
 							},
+							"label": "Back",
 							"styles": [
 								"av-button-navigation-back",
 								"av-button-navigation"
 							],
-							"type": "button-docking-left"
+							"properties": {
+								"icon": "fa fa-angle-left"
+							},
+							"animateVisibility": true,
+							"exclude": false,
+							"htmlLabel": "Back",
+							"path": "",
+							"rules": {
+								"click": "Form.$Pages.move(false);",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst;\n} else {\n\treturn true;\n}\n"
+							},
+							"type": "button-docking-left",
+							"id": "back"
 						}
 					],
 					[
 						{
+							"label": "Block Next",
 							"exclude": false,
 							"htmlLabel": "Block Next",
-							"id": "blockNext",
-							"label": "Block Next",
 							"path": "",
-							"type": "data-field"
+							"type": "data-field",
+							"id": "blockNext"
 						}
 					],
 					[
 						{
+							"label": "Page Change Animation",
 							"exclude": false,
 							"htmlLabel": "Page Change Animation",
-							"id": "pageChangeAnimation",
-							"label": "Page Change Animation",
 							"path": "",
-							"type": "data-field"
+							"type": "data-field",
+							"id": "pageChangeAnimation"
 						}
 					]
 				],
+				"exclude": false,
+				"htmlLabel": "Navigation Bar",
+				"path": "",
 				"styles": [
 					"nav-bar-73803"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "navigationBar"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"id": "functionalMenuFabMenu",
-				"properties": {
-					"menuLayout": " fab-menu"
-				},
 				"rows": [
 					[
 						{
-							"animateVisibility": false,
-							"exclude": false,
-							"id": "background_1",
 							"rows": [
 								[]
 							],
-							"rules": {
-								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}"
-							},
 							"styles": [
 								"bc-white-background-20804",
 								"bs-fab-menu-background-88907"
 							],
+							"rules": {
+								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}",
+								"sh": "return data.onlyOneVisible !== \"function-items-1\" && data.functionalMenu ",
+								"click": "Form.fireRule(\"click\" ,\"functionalMenu\" , data);"
+							},
+							"animateVisibility": false,
+							"exclude": false,
 							"subId": "9c7b2d04c05c4ccca6c8aff32ff6cfe3",
+							"id": "background_1",
 							"type": "block"
 						}
 					],
 					[
 						{
+							"rules": {
+								"sh": "return data.onlyOneVisible !== \"function-items-1\";",
+								"eq": "if (data.onlyOneVisible !== \"function-items-1\") {\n    return false;\n}\nreturn true;",
+								"click": "data[item.id] = data[item.id] !== true;"
+							},
 							"exclude": false,
-							"id": "functionalMenu",
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
+							"id": "functionalMenu",
 							"type": "button-toggle-icon"
 						}
 					],
 					[
 						{
-							"exclude": false,
-							"id": "exit",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\")"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\")",
+								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
 							},
+							"exclude": false,
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
+							"id": "exit",
 							"type": "button"
 						},
 						{
-							"exclude": false,
-							"id": "resume",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");",
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
+							"id": "resume",
 							"type": "button"
 						},
 						{
-							"exclude": false,
-							"id": "help",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");",
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "97601a07e3304ceab704b6152d1174b9",
+							"id": "help",
 							"type": "button"
 						},
 						{
-							"exclude": false,
-							"htmlLabel": "Save",
-							"id": "save_1",
 							"label": "Save",
 							"properties": {
 								"icon": "fa fa-floppy-o"
 							},
+							"htmlLabel": "Save",
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu",
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");"
+							},
+							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
+							"id": "save_1",
 							"type": "button"
 						}
 					],
 					[
 						{
-							"exclude": false,
-							"id": "onlyOneVisible",
 							"rules": {
 								"eq": "var buttonResume = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") ? 1 : 0;\nvar buttonShare = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") ? 1 : 0;\nvar buttonHelp = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") ? 1 : 0;\nvar buttonExit = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\") ? 1 : 0;\n\nvar buttonCount = buttonResume + buttonShare + buttonHelp + buttonExit;\nreturn {\n  0: \"function-items-0\",\n  1: \"function-items-1\",\n  2: \"function-items-2\",\n  3: \"function-items-3\",\n  4: \"function-items-4\"\n\n}[buttonCount]"
 							},
+							"exclude": false,
 							"subId": "9cf017397c5f424a8777239803df5dc6",
+							"id": "onlyOneVisible",
 							"type": "data-field"
 						}
 					],
 					[
 						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field\n\nreturn Form.getItemProperty(\"data.functionalMenuFabMenu\",\"menuLayout\");"
+							},
 							"exclude": false,
-							"id": "menuLayout",
 							"subId": "cc4063f5d8e346399c7d6affb77f151f",
+							"id": "menuLayout",
 							"type": "data-field"
 						}
 					]
 				],
-				"type": "floating-functional-component"
+				"properties": {
+					"menuLayout": " fab-menu"
+				},
+				"type": "floating-functional-component",
+				"rules": {
+					"dc": "return data.onlyOneVisible + data.menuLayout\n "
+				},
+				"exclude": false,
+				"id": "functionalMenuFabMenu"
 			}
 		],
 		[
 			{
-				"exclude": true,
-				"id": "styleMasterBlock",
 				"rows": [
 					[
 						{
-							"exclude": false,
-							"id": "personalDetails",
 							"rows": [
 								[
 									{
-										"id": "firstName1",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "6aa417b9582d40969acb60350725a52d",
+										"id": "firstName1",
 										"type": "text-input"
 									},
 									{
-										"id": "middleNameOptional",
+										"path": "",
 										"mandatory": "",
 										"noData": true,
-										"path": "",
 										"subId": "df57af35e318476cb223b379c1a5e01a",
+										"id": "middleNameOptional",
 										"type": "text-input"
 									},
 									{
-										"id": "lastName1",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "0382c8ac5f9844c4aeaf827a4780d248",
+										"id": "lastName1",
 										"type": "text-input"
 									}
 								],
 								[
 									{
-										"id": "country",
-										"noData": true,
-										"path": "",
 										"properties": {},
+										"path": "",
+										"noData": true,
 										"subId": "2bd1d8e014264f38a82f66a931f57b9f",
+										"id": "country",
 										"type": "dropdown"
 									}
 								],
 								[
 									{
-										"id": "dateOfBirthDropdown",
 										"rows": [
 											[
 												{
-													"id": "day",
-													"noData": true,
-													"path": "",
+													"properties": {
+														"dataPath": "data.daysData"
+													},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "var day = !Util.isBlank(data.date) && data.date.split(\"-\")[2]; \n return day && typeof day === \"string\" ? day.replace(/^[0]/,\"\") : value;"
+													},
 													"subId": "76182bfd13724884b4288cd928247150",
+													"path": "",
+													"noData": true,
+													"id": "day",
 													"type": "data-dropdown"
 												},
 												{
-													"id": "month",
-													"noData": true,
-													"path": "",
 													"properties": {},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : value;"
+													},
 													"subId": "d08f3ac71df4450094742607de9e92f4",
+													"path": "",
+													"noData": true,
+													"id": "month",
 													"type": "dropdown"
 												},
 												{
-													"id": "year",
-													"noData": true,
-													"path": "",
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[0] : value;"
+													},
 													"subId": "4d099b1664374469a28d935e5f39fe25",
+													"path": "",
+													"noData": true,
+													"id": "year",
 													"type": "dropdown-years"
 												}
 											],
 											[
 												{
-													"id": "date",
+													"rules": {
+														"eq": "// Since we cannot remove this cal rule, return self value\nvalue"
+													},
 													"subId": "fb68b0fdefc64e8192c84c1aacf492dc",
+													"id": "date",
 													"type": "data-field"
 												}
 											],
 											[
 												{
-													"id": "daysData",
+													"rules": {
+														"eq": "var month = !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : \"\",\n\tday = data.day,\n    range,\n    selectionArr,\n    max = 31;\n\nif (month == \"02\") max = Util.isLeapYear(data.year) ? 29 : 28;\n\nelse if(Util.contains([\"04\",\"06\",\"09\",\"11\"],month)) max = 30;\n\nif(+day > max) data.day = max.toString();\n\nrange = Util.range(1, max).map(function(day){\n  return day.toString(); \n});\n\n// Convert to comma delimited and then convert to delimited selection array\nreturn Calc.delimitedSelection(range.join(\",\"));"
+													},
 													"subId": "53b69d508a60404db8b3ef75b4aa4556",
+													"id": "daysData",
 													"type": "data-field"
 												}
 											]
 										],
+										"rules": {
+											"ok": "if(Util.isBlank(data.date) || (!item.properties.minAge && !item.properties.maxAge && !item.properties.pastDate)) {\n  return true;\n}\nvar currentTime = new Date().getTime(),\n    minAge = item.properties.minAge,\n    maxAge = item.properties.maxAge,\n    pastDate = item.properties.pastDate,\n    dobDate = Calc.date(data.date);\n\nif(pastDate && Calc.daysBetween(dobDate, new Date()) < 0) {\n    return \"Must be a date in the past\";\n}\n\nif(!Util.isBlank(minAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+minAge);\n\tif (currentTime <= dobDate.getTime()) {\n\t\treturn \"You must be at least \"+minAge+\" years old\";\n\t}\n}\n\nif(!Util.isBlank(maxAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+maxAge);\n\tif (currentTime >= dobDate.getTime()) {\n\t\treturn \"You must be under \"+maxAge+\" years old\";\n\t}\n}\n\nreturn true;"
+										},
 										"subId": "eb2a794cd58c42af94471c18973dc8aa",
+										"id": "dateOfBirthDropdown",
 										"type": "dropdown-dob-block"
 									}
 								]
 							],
+							"exclude": false,
 							"subId": "18bbf754f32a4d6e96b7eca3e68f4e86",
+							"id": "personalDetails",
 							"type": "section-2"
 						}
 					],
 					[
 						{
-							"exclude": true,
-							"id": "otherDetails",
 							"rows": [
 								[
 									{
-										"id": "emailAddress",
-										"noData": true,
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
 										"path": "",
+										"noData": true,
 										"subId": "82537d43d5a541c78ae556a6a5f33098",
+										"id": "emailAddress",
 										"type": "email"
 									}
 								],
 								[
 									{
-										"id": "datePicker",
-										"noData": true,
 										"path": "",
-										"styles": [
-											"mg-datepicker",
-											"date-picker-base",
-											"av-global-layout",
-											"av-form-field"
-										],
+										"noData": true,
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
+										"id": "datePicker",
 										"type": "date-picker"
 									}
 								],
 								[
 									{
-										"id": "currencyField",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "3d4acf7191404c30a5619f5a4d4f5c2f",
+										"id": "currencyField",
 										"type": "currency"
 									}
 								],
 								[
 									{
-										"id": "decimalField",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "1e7af05e0367400587f197c82eb6ce92",
+										"id": "decimalField",
 										"type": "decimal"
 									}
 								],
 								[
 									{
-										"id": "emailAddress2",
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
+										"path": "",
 										"mandatory": true,
 										"noData": true,
-										"path": "",
 										"subId": "d591a940ed7d4260b99e8adb7a67a47e",
+										"id": "emailAddress2",
 										"type": "email"
 									}
 								],
 								[
 									{
-										"id": "radioButtonGroup",
-										"noData": true,
-										"path": "",
 										"properties": {},
+										"path": "",
+										"noData": true,
 										"subId": "16d7bc4912da4460a374f51a484d9228",
+										"id": "radioButtonGroup",
 										"type": "radio-button-group"
 									}
 								],
 								[
 									{
-										"id": "checkbox",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "98ba81dcb4cb47e8a63ee89ee04412a6",
+										"id": "checkbox",
 										"type": "checkbox"
 									}
 								]
 							],
+							"exclude": true,
 							"subId": "0c6f9a0f209a4dfdadab56f9127b97e5",
+							"id": "otherDetails",
 							"type": "section-2"
 						}
 					],
 					[
 						{
-							"exclude": true,
-							"id": "buttons",
 							"rows": [
 								[
 									{
-										"id": "block",
 										"rows": [
 											[
 												{
-													"id": "leftLinkButton",
 													"subId": "f68f5692046d4f028d4569b7ce2d17df",
+													"id": "leftLinkButton",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primarySmall",
 													"subId": "1797ebe5044f4dd4ba71c19e2ddf5442",
+													"id": "primarySmall",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primarySmall1",
 													"subId": "682349e8c23f410a98982bff55d9a7af",
+													"id": "primarySmall1",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primary",
 													"subId": "ae570d801c55486bb3b00e882df5a948",
+													"id": "primary",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primary1",
 													"subId": "7d8c074047df4e37a0ab3b537b696e1a",
+													"id": "primary1",
 													"type": "button"
 												}
 											]
 										],
 										"subId": "c245e3914ce44d36a8dab5fa4c067db9",
+										"id": "block",
 										"type": "block"
 									},
 									{
-										"id": "block1",
 										"rows": [
 											[
 												{
-													"id": "secondary",
 													"subId": "6275f07e5ecb47dbb955679156197df7",
+													"id": "secondary",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "secondary1",
 													"subId": "f724bde317d64b2fb927c1620164d50e",
+													"id": "secondary1",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "secondary2",
 													"subId": "9646615088ce475d849dc324140f4ae3",
+													"id": "secondary2",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "secondary3",
 													"subId": "a2068a5825ba48f18e58ab506d7a00dc",
+													"id": "secondary3",
 													"type": "button"
 												}
 											]
 										],
 										"subId": "bf0b1ea6ed8f42debcae7e3ae27e9a13",
+										"id": "block1",
 										"type": "block"
 									},
 									{
-										"id": "block2",
 										"rows": [
 											[
 												{
-													"id": "rightLinkButton",
 													"subId": "ff1871ad44dc436189332e0a8f4b23d6",
+													"id": "rightLinkButton",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary",
 													"subId": "e79ba2d359074c6cac0d0d36dbb60bdb",
+													"id": "tertiary",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary1",
 													"subId": "23c01cbc4fb64d33beaf0a2dee6addf5",
+													"id": "tertiary1",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary2",
 													"subId": "d03f424680414e3f96dce44bc39988a7",
+													"id": "tertiary2",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary3",
 													"subId": "6096879ca2d44ece859e4e47e89d6f4e",
+													"id": "tertiary3",
 													"type": "button"
 												}
 											]
 										],
 										"subId": "2ce4a1382d7a48d3bbc0e1be7192e9b4",
+										"id": "block2",
 										"type": "block"
 									}
 								]
 							],
+							"exclude": true,
 							"subId": "536df813050644f883b4f0e00cdb1a0f",
+							"id": "buttons",
 							"type": "section-2"
 						}
 					],
 					[
 						{
-							"htmlLabel": "About You",
-							"id": "aboutYou",
 							"label": "About You",
-							"path": "",
 							"rows": [
 								[
 									{
-										"id": "block3",
-										"path": "",
 										"rows": [
 											[]
 										],
-										"type": "block"
+										"path": "",
+										"type": "block",
+										"id": "block3"
 									}
 								]
 							],
-							"type": "section-2"
+							"htmlLabel": "About You",
+							"path": "",
+							"type": "section-2",
+							"id": "aboutYou"
 						}
 					]
 				],
-				"type": "style-master-block"
+				"type": "style-master-block",
+				"exclude": true,
+				"id": "styleMasterBlock"
 			}
 		]
 	],
 	"rules": {
 		"dc": "data.pageChangeAnimation"
 	},
-	"selectedBrand": "Blue Sky",
+	"selectedBrand": "Default",
 	"styleMods": {
 		"id-submit2": {
 			"blocks": {
@@ -2876,12 +3858,12 @@
 				"bs-dialog-button-12962",
 				"bs-dialog-link-button-09809",
 				"bs-next-error-36745",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"button-group": {
@@ -2889,58 +3871,55 @@
 				"av-global-layout",
 				"av-button-group",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-button-group",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"checkbox": {
 			"availableStyles": [
-				"mg-checkbox",
 				"av-global-layout",
 				"align-top",
-				"bs-checkbox-04598",
-				"av-form-field"
+				"av-checkbox",
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
-				"mg-checkbox",
 				"av-global-layout",
-				"bs-checkbox-04598",
-				"av-form-field"
+				"av-checkbox",
+				"av-global-layout"
 			]
 		},
 		"currency": {
 			"availableStyles": [
 				"align-top",
-				"bs-currency-field-75729",
+				"av-currency",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"bs-currency-field-75729",
-				"av-form-field"
+				"av-currency",
+				"av-global-layout"
 			]
 		},
 		"data-checkbox-group": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-checkbox-group",
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"data-dropdown": {
@@ -2948,31 +3927,31 @@
 				"align-top",
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"data-radio-group": {
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
-				"av-form-field"
+				"av-radio",
+				"av-global-layout"
 			]
 		},
 		"data-typeahead": {
@@ -2980,32 +3959,32 @@
 				"align-top",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"date-picker": {
 			"availableStyles": [
 				"align-top",
-				"bs-date-field-64466",
+				"av-date",
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
-				"bs-date-field-64466",
-				"av-form-field"
+				"av-date",
+				"av-global-layout"
 			]
 		},
 		"decimal": {
@@ -3013,12 +3992,12 @@
 				"align-top",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"dialog-content": {
@@ -3045,7 +4024,7 @@
 		},
 		"docking-errors": {
 			"availableStyles": [
-				"av-block-error",
+				"av-docking-errors",
 				"align-top"
 			],
 			"properties": {}
@@ -3062,7 +4041,7 @@
 				"av-global-layout",
 				"align-top",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {
 				"icon": "fa fa-angle-down"
@@ -3070,7 +4049,7 @@
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"dropdown-dob-block": {
@@ -3085,13 +4064,13 @@
 				"av-global-layout",
 				"dropdown-multi-select",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"dropdown-multi-select",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"dropdown-years": {
@@ -3099,13 +4078,13 @@
 				"align-top",
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"floating-functional-component": {
@@ -3179,12 +4158,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"image": {
@@ -3218,12 +4197,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"mitek-license-prefill": {
@@ -3366,12 +4345,11 @@
 		},
 		"payment-type-selector": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-radio-button-group",
 				"av-global-layout",
 				"mg-checkbox-group",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {}
 		},
@@ -3399,7 +4377,7 @@
 		"radio-button-graphical": {
 			"availableStyles": [
 				"radio-graphical",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -3411,21 +4389,20 @@
 		"radio-button-group": {
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"av-radio",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
 				"av-radio",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"radio-button-group-graphical": {
@@ -3433,31 +4410,31 @@
 				"av-global-layout",
 				"radio-graphical-group",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"radio-graphical-group",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"radio-button-repeating": {
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
-				"av-form-field"
+				"av-radio",
+				"av-global-layout"
 			]
 		},
 		"repeat": {
@@ -3472,13 +4449,13 @@
 				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"repeat-button",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"repeat-block-template": {
@@ -3493,13 +4470,13 @@
 				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"repeat-button",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"repeat-index-text": {
@@ -3513,12 +4490,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"section": {
@@ -3554,24 +4531,24 @@
 				"av-global-layout",
 				"align-top",
 				"signature-dialog-15537",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"slider": {
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"step-name": {
@@ -3604,12 +4581,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"text-display": {
@@ -3636,12 +4613,12 @@
 				"submit-success-message",
 				"bs-center-align-19822",
 				"bs-docked-error-63227",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"text-display-popover": {
@@ -3660,7 +4637,7 @@
 				"av-text-field",
 				"bs-dialog-text-field-14963",
 				"bs-online-chat-82522",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {
 				"helpText": ""
@@ -3668,7 +4645,7 @@
 			"styles": [
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"time": {

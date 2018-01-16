@@ -197,7 +197,7 @@
 																"label": "Logo",
 																"properties": {
 																	"src": {
-																		"fileName": "blue-steel-logo.png"
+																		"fileName": "avoka-logo.png"
 																	}
 																},
 																"exclude": false,
@@ -339,7 +339,7 @@
 										"exclude": false,
 										"hasCustomId": true,
 										"htmlLabel": "Page",
-										"isFirstInGroup": false,
+										"isFirstInGroup": true,
 										"isLastInGroup": false,
 										"path": "",
 										"rules": {
@@ -367,9 +367,6 @@
 				"exclude": false,
 				"htmlLabel": "Content",
 				"path": "",
-				"rules": {
-					"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
-				},
 				"styles": [
 					"bs-min-height-64689",
 					"bs-max-width-73189"
@@ -408,7 +405,7 @@
 							},
 							"type": "submit",
 							"rules": {
-								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
 								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
 							"animateVisibility": true,
@@ -530,7 +527,7 @@
 								[]
 							],
 							"styles": [
-								"bc-white-background-20804",
+								"av-section",
 								"bs-fab-menu-background-88907"
 							],
 							"rules": {
@@ -1107,7 +1104,7 @@
 		"block": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"av-background-image",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
@@ -1903,11 +1900,11 @@
 		"section-2": {
 			"styles": [
 				"mg-section-2",
-				"bc-white-background-20804"
+				"av-section"
 			],
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",
@@ -1963,13 +1960,60 @@
 			"properties": {}
 		}
 	},
+	+	"brandOptions": {
+	+		"logo": [
+	+			{
+	+				"category": "Logo",
++				"label": "Logo",
++				"path": "properties.src",
++				"linkedItems": [
++					{
++						"id" : "submit_success_logo",
++						"path" : "properties.src"
++					},
++					{
++						"id" : "save_success_logo",
++						"path" : "properties.src"
++					},
++					{
++						"id" : "cancel_success_logo",
++						"path" : "properties.src"
++					}
++				]
++			}
++		],
++		"functionalMenuFabMenu": []
++	},
 	"brands": {
 		"Default": {
 			"label": "Default",
 			"itemOptions": {
 				"functionalMenuFabMenu": {
 					"properties": {}
-				}
+				},
+                "logo": {
++					"properties": {
++						"src": {
++							"fileName": "logo.png",
++							"width": "",
++							"height": ""
++						}
++					},
++                    "linkedItems": [
++                      {
++                        "id" : "submit_success_logo",
++                        "path" : "properties.src"
++                      },
++                      {
++                        "id" : "save_success_logo",
++                        "path" : "properties.src"
++                      },
++                      {
++                        "id" : "cancel_success_logo",
++                        "path" : "properties.src"
++                      }
++                    ]
++				}
 			},
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
@@ -2111,6 +2155,7 @@
 	},
 	"dialogs": {
 		"formhelp": {
+			"label": "Form Help",
 			"rows": [
 				[
 					{
@@ -2256,9 +2301,12 @@
 				]
 			],
 			"type": "form-help",
-			"id": "formhelp"
+			"htmlLabel": "Form Help",
+			"id": "formhelp",
+			"exclude": false
 		},
 		"saveconfirm": {
+			"label": "Save Confirm",
 			"rows": [
 				[
 					{
@@ -2357,7 +2405,9 @@
 				]
 			],
 			"type": "save-confirm",
-			"id": "saveconfirm"
+			"htmlLabel": "Save Confirm",
+			"id": "saveconfirm",
+			"exclude": false
 		},
 		"savechallenge": {
 			"rows": [
@@ -2895,9 +2945,9 @@
 											}
 										]
 									],
+									"type": "section-2",
 									"subId": "1c81a4fdb80045d49654478a23b0d632",
-									"id": "formFooterText",
-									"type": "section-2"
+									"id": "formFooterText"
 								}
 							]
 						],
@@ -3167,9 +3217,9 @@
 											}
 										]
 									],
+									"type": "section-2",
 									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"id": "formFooterText_2",
-									"type": "section-2"
+									"id": "formFooterText_2"
 								}
 							]
 						],
@@ -3188,6 +3238,177 @@
 			"exclude": false,
 			"htmlLabel": "Submit Success old",
 			"id": "submitsuccess_1"
+		},
+		"submitsuccess": {
+			"label": "Submit Success",
+			"rows": [
+				[
+					{
+						"rows": [
+							[]
+						],
+						"type": "modal-background",
+						"id": "modalBackground"
+					}
+				],
+				[
+					{
+						"label": "Modal header",
+						"rows": [
+							[
+								{
+									"label": "Sticky Panel-modal",
+									"rows": [
+										[
+											{
+												"label": "Modal Header",
+												"rows": [
+													[
+														{
+															"label": "Modal logo",
+															"rows": [
+																[
+																	{
+																		"span": {
+																			"md": 12,
+																			"lg": 12
+																		},
+																		"label": "Modal logo image",
+																		"properties": {
+																			"src": {
+																				"fileName": "avoka-logo.png"
+																			}
+																		},
+																		"exclude": false,
+																		"htmlLabel": "Modal logo image",
+																		"path": "",
+																		"type": "image",
+																		"id": "modalLogoImage"
+																	}
+																]
+															],
+															"exclude": false,
+															"htmlLabel": "Modal logo",
+															"path": "",
+															"styles": [
+																"bs-logo-container-86033"
+															],
+															"type": "block",
+															"id": "modalLogo"
+														}
+													]
+												],
+												"exclude": false,
+												"htmlLabel": "Modal Header",
+												"path": "",
+												"styles": [
+													"mg-header",
+													"bs-max-width-73189"
+												],
+												"type": "form-header",
+												"id": "modalHeader_1"
+											}
+										]
+									],
+									"exclude": false,
+									"htmlLabel": "Sticky Panel-modal",
+									"path": "StickyPanelmodal",
+									"styles": [
+										"bs-fixed-header-40325"
+									],
+									"type": "sticky-panel",
+									"id": "stickyPanelModal"
+								}
+							]
+						],
+						"exclude": false,
+						"htmlLabel": "Modal header",
+						"path": "",
+						"type": "block",
+						"id": "modalHeader"
+					}
+				],
+				[
+					{
+						"label": "Submit Modal Content",
+						"rows": [
+							[
+								{
+									"label": "Start a new form",
+									"styles": [
+										"av-global-layout",
+										"av-button",
+										"av-button-primary"
+									],
+									"exclude": false,
+									"htmlLabel": "Start a new form",
+									"path": "",
+									"type": "button",
+									"id": "startANewForm"
+								}
+							]
+						],
+						"styles": [
+							"mg-section-2",
+							"av-section",
+							"bs-center-align-19822",
+							"bs-max-width-73189",
+							"bs-modal-content-96022"
+						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
+						"exclude": false,
+						"htmlLabel": "<h1>Submit Modal Content</h1>",
+						"path": "",
+						"type": "section-2",
+						"id": "submitModalContent"
+					}
+				],
+				[
+					{
+						"label": "Modal Footer",
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"path": "",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "formFooterText_3",
+												"type": "text-display"
+											}
+										]
+									],
+									"id": "footerSection",
+									"type": "section-2"
+								}
+							]
+						],
+						"type": "form-footer",
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
+						"exclude": false,
+						"htmlLabel": "Modal Footer",
+						"path": "",
+						"styles": [
+							"av-section",
+							"bs-modal-footer-03990"
+						],
+						"id": "modalFooter"
+					}
+				]
+			],
+			"properties": {},
+			"type": "modal",
+			"exclude": false,
+			"hasCustomId": true,
+			"htmlLabel": "Submit Success",
+			"path": "",
+			"id": "submitsuccess"
 		},
 		"savesuccessoriginal": {
 			"label": "Save Success old",
@@ -3515,9 +3736,9 @@
 											}
 										]
 									],
+									"type": "section-2",
 									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"id": "formFooterText_1",
-									"type": "section-2"
+									"id": "formFooterText_1"
 								}
 							]
 						],
@@ -3631,9 +3852,9 @@
 											}
 										]
 									],
+									"type": "section-2",
 									"subId": "082a0f34bab7496ab942025374652910",
-									"id": "formFooterText_4",
-									"type": "section-2"
+									"id": "formFooterText_4"
 								}
 							]
 						],
@@ -3650,160 +3871,6 @@
 			"type": "bs-modal-page",
 			"htmlLabel": "Save Success",
 			"id": "savesuccess"
-		},
-		"submitsuccess": {
-			"label": "Submit Success",
-			"rows": [
-				[
-					{
-						"rows": [
-							[]
-						],
-						"subId": "fb2710bf445348a0b3348c277ae25d53",
-						"id": "modalBackground_2",
-						"type": "modal-background"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rows": [
-													[
-														{
-															"rows": [
-																[
-																	{
-																		"properties": {},
-																		"subId": "e16044b6f54649b29f8fc0217e584b77",
-																		"id": "modalLogoImage_2",
-																		"type": "image"
-																	}
-																]
-															],
-															"subId": "6fc01299872445448b85622c2188b494",
-															"id": "modalLogo_2",
-															"type": "block"
-														}
-													]
-												],
-												"subId": "89fb5406cfe4459b86fa72fcc4cf81fe",
-												"id": "modalHeader_5",
-												"type": "form-header"
-											}
-										]
-									],
-									"subId": "0556f32929054ae994a65aebdedc76ac",
-									"id": "stickyPanelModal_2",
-									"type": "sticky-panel"
-								}
-							]
-						],
-						"subId": "9dff6f6d9f3e40299733766ce093bda7",
-						"id": "modalHeader_4",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"label": "Application Received",
-						"rows": [
-							[
-								{
-									"subId": "664e44d55e00407d9d4d24d4e1426fae",
-									"id": "startANewForm_5",
-									"type": "button"
-								}
-							],
-							[
-								{
-									"rows": [
-										[
-											{
-												"rules": {
-													"sh": "return item['$$parent'].properties.includeStartAgain;",
-													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
-												},
-												"exclude": false,
-												"path": "",
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
-												"id": "startANewForm",
-												"type": "button"
-											},
-											{
-												"rules": {
-													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
-													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
-												},
-												"path": "",
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
-												"id": "returnToPortal_3",
-												"type": "button"
-											},
-											{
-												"rules": {
-													"sh": "Resource.preview || Resource.design",
-													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
-												},
-												"path": "",
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
-												"id": "showFormXml_3",
-												"type": "button"
-											}
-										]
-									],
-									"type": "follow-on-options",
-									"id": "followOnOptionsBlock_3"
-								}
-							]
-						],
-						"properties": {
-							"infoText": "Thank you, your submission has been received."
-						},
-						"htmlLabel": "<h1>Application Received</h1>",
-						"subId": "ea5b9f4077a24d2b93f412748bbf4bf9",
-						"id": "saveModalContent_1",
-						"type": "section-2"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"subId": "46f9f22172c44180a9cc84ada4a4aead",
-												"path": "",
-												"id": "textDisplay_5",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "321156c132f54510ad5c0f0d9040cc05",
-									"id": "formFooterText_5",
-									"type": "section-2"
-								}
-							]
-						],
-						"rules": {
-							"sh": "!Util.isReceipt"
-						},
-						"subId": "105c8613ddd44fd580970e2f3d22ba7f",
-						"id": "modalFooter_2",
-						"type": "form-footer"
-					}
-				]
-			],
-			"properties": {},
-			"type": "modal-page-core",
-			"htmlLabel": "Submit Success",
-			"id": "submitsuccess"
 		}
 	},
 	"formOptions": {
@@ -3843,9 +3910,9 @@
 	"localModals": [
 		"cancelsuccess",
 		"submitsuccess_1",
+		"submitsuccess",
 		"savesuccessoriginal",
-		"savesuccess",
-		"submitsuccess"
+		"savesuccess"
 	],
 	"localDialogs": [
 		"formhelp",
@@ -3890,6 +3957,27 @@
 	},
 	"selectedBrand": "Blue Sky",
 	"styleMods": {
+		"id-modalHeader": {
+			"blocks": {},
+			"decs": {
+				"border-bottom-width": "4px",
+				"border-color": "#225881",
+				"border-left-width": "0px",
+				"border-right-width": "0px",
+				"border-style": "solid",
+				"border-top-width": "0px"
+			}
+		},
+		"id-modalHeader_1": {
+			"blocks": {},
+			"decs": {
+				"border-bottom-width": "4px",
+				"border-color": "#3531a3",
+				"border-style": "none",
+				"padding-bottom": "10px",
+				"padding-top": "10px"
+			}
+		},
 		"id-submit2": {
 			"blocks": {
 				"wdg-button": {
@@ -5554,6 +5642,102 @@
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
 					},
+					"submitsuccess": {
+						"label": "Submit Success",
+						"htmlLabel": "Submit Success",
+						"mandatoryMsg": "",
+						"properties": {
+							"leavePageWarningMessage": "",
+							"mandatoryMsgSuffix": "is required",
+							"progressMsg": "Please wait...",
+							"linkWarningMsg": "opens in a new window",
+							"alertMsg": ""
+						}
+					},
+					"modalBackground": {
+						"label": "Modal background",
+						"htmlLabel": "Modal background",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalHeader": {
+						"label": "Modal header",
+						"htmlLabel": "Modal header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"stickyPanelModal": {
+						"label": "Sticky Panel-modal",
+						"htmlLabel": "Sticky Panel-modal",
+						"mandatoryMsg": ""
+					},
+					"modalHeader_1": {
+						"label": "Modal Header",
+						"htmlLabel": "Modal Header",
+						"mandatoryMsg": "",
+						"properties": {
+							"trackingCodePrefix": "Reference Code: "
+						}
+					},
+					"modalLogo": {
+						"label": "Modal logo",
+						"htmlLabel": "Modal logo",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalLogoImage": {
+						"label": "Modal logo image",
+						"htmlLabel": "Modal logo image",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"submitModalContent": {
+						"label": "Submit Modal Content",
+						"htmlLabel": "<h1>Submit Modal Content</h1>",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Your Application has been received"
+						}
+					},
+					"startANewForm": {
+						"label": "Start a new form",
+						"htmlLabel": "Start a new form",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalFooter": {
+						"label": "Modal Footer",
+						"htmlLabel": "Modal Footer",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"footerSection": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"formFooterText_3": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
+					},
 					"savesuccessoriginal": {
 						"label": "Save Success old",
 						"htmlLabel": "Save Success old",
@@ -5896,134 +6080,6 @@
 						"label": "Form Footer Text",
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
-					},
-					"submitsuccess": {
-						"label": "Submit Success",
-						"htmlLabel": "Submit Success",
-						"mandatoryMsg": "",
-						"properties": {
-							"leavePageWarningMessage": "",
-							"mandatoryMsgSuffix": "is required",
-							"progressMsg": "Please wait...",
-							"linkWarningMsg": "opens in a new window",
-							"alertMsg": ""
-						}
-					},
-					"modalBackground_2": {
-						"label": "Modal background",
-						"htmlLabel": "Modal background",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalHeader_4": {
-						"label": "Modal header",
-						"htmlLabel": "Modal header",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"stickyPanelModal_2": {
-						"label": "Sticky Panel-modal",
-						"htmlLabel": "Sticky Panel-modal",
-						"mandatoryMsg": ""
-					},
-					"modalHeader_5": {
-						"label": "Modal Header",
-						"htmlLabel": "Modal Header",
-						"mandatoryMsg": "",
-						"properties": {
-							"trackingCodePrefix": "Reference Code: "
-						}
-					},
-					"modalLogo_2": {
-						"label": "Modal logo",
-						"htmlLabel": "Modal logo",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalLogoImage_2": {
-						"label": "Modal logo image",
-						"htmlLabel": "Modal logo image",
-						"mandatoryMsg": "",
-						"properties": {
-							"alternativeText": "",
-							"toolTip": "",
-							"imageLink": ""
-						}
-					},
-					"saveModalContent_1": {
-						"label": "Application Received",
-						"htmlLabel": "<h1>Application Received</h1>",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "Thank you, your submission has been received."
-						}
-					},
-					"startANewForm_5": {
-						"label": "Action button",
-						"htmlLabel": "Action button",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"followOnOptionsBlock_3": {
-						"label": "Follow On Options Block",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"startANewForm": {
-						"label": "Start a new form",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"returnToPortal_3": {
-						"label": "Return to portal",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"showFormXml_3": {
-						"label": "Show form XML",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalFooter_2": {
-						"label": "Modal Footer",
-						"htmlLabel": "Modal Footer",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"formFooterText_5": {
-						"label": "Footer Section",
-						"htmlLabel": "Footer Section",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": ""
-						}
-					},
-					"textDisplay_5": {
-						"label": "Form Footer Text",
-						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
-						"mandatoryMsg": ""
 					}
 				}
 			}
@@ -6095,6 +6151,5 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.0",
 	"id": "AvokaSmartForm",
-	"exclude": false,
-	"isPreview": false
+	"exclude": false
 }
