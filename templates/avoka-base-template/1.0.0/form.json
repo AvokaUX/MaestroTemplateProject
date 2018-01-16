@@ -417,23 +417,23 @@
 															"id": "whatIsTheMainReasonFor",
 															"label": "What is the main reason for your cancellation?",
 															"path": "WhatIsTheMainReasonForYour",
-															"properties": {
-																"options": [
-																	{
-																		"id": "what_is_the_main_reason",
-																		"properties": {},
-																		"subId": "86b0113180ed4b10b882f69c81c29dc8",
-																		"type": "dropdown"
-																	}
-																],
-																[
-																	{
-																		"id": "comments_2",
-																		"subId": "dde09b0b91bd4249929ecde1cbec14de",
-																		"type": "text-area"
-																	}
-																]
-															],
+                                                            "rows": [
+                                                              [
+                                                                {
+                                                                  "id": "what_is_the_main_reason",
+                                                                  "properties": {},
+                                                                  "subId": "86b0113180ed4b10b882f69c81c29dc8",
+                                                                  "type": "dropdown"
+                                                                }
+                                                              ],
+                                                              [
+                                                                {
+                                                                  "id": "comments_2",
+                                                                  "subId": "dde09b0b91bd4249929ecde1cbec14de",
+                                                                  "type": "text-area"
+                                                                }
+                                                              ]
+                                                            ],
 															"subId": "66800abae2f84be5953bd85d3488a708",
 															"type": "section-2"
 														}
