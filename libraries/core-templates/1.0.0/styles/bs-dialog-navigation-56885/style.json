@@ -1,8 +1,8 @@
 {
-  "label": "BS Dialog Navigation",
-  "block": {},
-  "file": "style.less",
-  "widgets": [
-    "block"
-  ]
+	"block": {},
+	"file": "style.less",
+	"label": "BS Dialog Navigation",
+	"widgets": [
+		"block"
+	]
 }
