@@ -5,16 +5,60 @@
 		"publishLibraryId": 16680
 	},
 	"brandOptions": {
+		"logo": [
+			{
+				"category": "Logo",
+				"label": "Logo",
+				"path": "properties.src",
+				"linkedItems": [
+					{
+						"id" : "submit_success_logo",
+						"path" : "properties.src"
+					},
+					{
+						"id" : "save_success_logo",
+						"path" : "properties.src"
+					},
+					{
+						"id" : "cancel_success_logo",
+						"path" : "properties.src"
+					}
+				]
+			}
+		],
 		"functionalMenuFabMenu": []
 	},
 	"brands": {
-		"Blue Sky": {
+		"Default": {
 			"itemOptions": {
+				"logo": {
+					"properties": {
+						"src": {
+							"fileName": "avoka-logo.png",
+							"width": "52",
+							"height": "40"
+						}
+					},
+                    "linkedItems": [
+                      {
+                        "id" : "submit_success_logo",
+                        "path" : "properties.src"
+                      },
+                      {
+                        "id" : "save_success_logo",
+                        "path" : "properties.src"
+                      },
+                      {
+                        "id" : "cancel_success_logo",
+                        "path" : "properties.src"
+                      }
+                    ]
+				},
 				"functionalMenuFabMenu": {
 					"properties": {}
 				}
 			},
-			"label": "Blue Sky",
+			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
 				"av-button-font-size": "16px",
@@ -39,71 +83,6 @@
 				"av-primary-contrast": "#64767f",
 				"av-secondary-color": "#454753",
 				"av-secondary-contrast": "#64767f",
-				"av-section-1-header-color": "#202B34",
-				"av-section-1-title-font-size": "30px",
-				"av-section-2-header-color": "#202B34",
-				"av-section-2-title-font-size": "21px",
-				"av-slide-menu-color": "#005280",
-				"av-slide-menu-extra-item-active-color": "",
-				"av-slide-menu-extra-item-color": "",
-				"av-slide-menu-extra-item-hover-color": "",
-				"av-slide-menu-extra-item-pointer-active-color": "",
-				"av-slide-menu-extra-item-pointer-color": "",
-				"av-slide-menu-extra-item-pointer-hover-color": "",
-				"av-slide-menu-extra-item-text-active-color": "",
-				"av-slide-menu-extra-item-text-color": "",
-				"av-slide-menu-extra-item-text-hover-color": "",
-				"av-slide-menu-item-active-color": "",
-				"av-slide-menu-item-color": "",
-				"av-slide-menu-item-hover-color": "",
-				"av-slide-menu-item-pointer-active-color": "#f39900",
-				"av-slide-menu-item-pointer-color": "#f39900",
-				"av-slide-menu-item-pointer-hover-color": "#f39900",
-				"av-slide-menu-item-text-active-color": "",
-				"av-slide-menu-item-text-color": "",
-				"av-slide-menu-item-text-hover-color": "",
-				"av-sub-menu-active-background-color": "#FFFFFF",
-				"av-sub-menu-active-text-color": "#005280",
-				"av-sub-menu-background-color": "#FFFFFF",
-				"av-sub-menu-background-hover-color": "#EEEEEE",
-				"av-sub-menu-text-color": "#005280",
-				"av-sub-menu-text-hover-color": "#005280",
-				"av-touch-button-color": "",
-				"mobile-page-gutters": "15px",
-				"page-gutters": "40px"
-			}
-		},
-		"Default": {
-			"itemOptions": {
-				"functionalMenuFabMenu": {
-					"properties": {}
-				}
-			},
-			"label": "Default",
-			"styleVars": {
-				"av-body-background-color": "#FFFFFF",
-				"av-button-font-size": "16px",
-				"av-font-color": "#333333",
-				"av-font-family": "Arial, Helvetica, sans-serif",
-				"av-form-background-color": "#FFFFFF",
-				"av-form-inner-background-color": "#FFFFFF",
-				"av-max-form-width": "1020px",
-				"av-menu-active-text-color": "",
-				"av-menu-color": "",
-				"av-menu-color-active": "",
-				"av-menu-font-size": "13px",
-				"av-menu-height": "57px",
-				"av-menu-hover-color": "",
-				"av-menu-text-color": "",
-				"av-menu-text-hover-color": "",
-				"av-neutral-color": "#F2F2F2",
-				"av-neutral-contrast": "#8C8C8C",
-				"av-popover-help": "#0C384B",
-				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#FF6405",
-				"av-primary-contrast": "#FFFFFF",
-				"av-secondary-color": "#FFFFFF",
-				"av-secondary-contrast": "#0C384B",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
@@ -975,17 +954,9 @@
 							[
 								{
 									"id": "formFooterText",
-									"rows": [
-										[
-											{
-												"id": "textDisplay",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
+									"path": "",
 									"subId": "1c81a4fdb80045d49654478a23b0d632",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1085,17 +1056,8 @@
 							[
 								{
 									"id": "formFooterText_4",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_4",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
 									"subId": "082a0f34bab7496ab942025374652910",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1365,17 +1327,9 @@
 							[
 								{
 									"id": "formFooterText_1",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_3",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
+									"path": "",
 									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1730,17 +1684,9 @@
 							[
 								{
 									"id": "formFooterText_2",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_1",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
+									"path": "",
 									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"type": "section-2"
+									"type": "text-display"
 								}
 							]
 						],
@@ -1776,239 +1722,232 @@
 	"rows": [
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Web Fonts",
-				"id": "webFonts",
+				"span": {
+					"xs": 0,
+					"sm": 0,
+					"md": 0,
+					"lg": 0
+				},
 				"label": "Web Fonts",
-				"path": "",
 				"rows": [
 					[
 						{
+							"label": "Quicksand Regular",
+							"properties": {
+								"font": {
+									"fontFamily": "QuicksandRegular",
+									"eotFileName": "Quicksand-Regular.eot",
+									"woffFileName": "Quicksand-Regular.woff",
+									"svgFileName": "Quicksand-Regular.svg",
+									"ttfFileName": "Quicksand-Regular.ttf"
+								}
+							},
 							"exclude": false,
 							"htmlLabel": "Quicksand Regular",
-							"id": "quicksandRegular",
-							"label": "Quicksand Regular",
 							"path": "",
-							"properties": {
-								"font": {
-									"eotFileName": "Quicksand-Regular.eot",
-									"fontFamily": "QuicksandRegular",
-									"svgFileName": "Quicksand-Regular.svg",
-									"ttfFileName": "Quicksand-Regular.ttf",
-									"woffFileName": "Quicksand-Regular.woff"
-								}
-							},
-							"type": "resource-font"
+							"type": "resource-font",
+							"id": "quicksandRegular"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Quicksand Medium",
-							"id": "quicksandMedium",
 							"label": "Quicksand Medium",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Quicksand-Medium.eot",
 									"fontFamily": "QuicksandMedium",
+									"eotFileName": "Quicksand-Medium.eot",
+									"woffFileName": "Quicksand-Medium.woff",
 									"svgFileName": "Quicksand-Medium.svg",
 									"ttfFileName": "Quicksand-Medium.ttf",
-									"undefined": "Quicksand-Medium.otf",
-									"woffFileName": "Quicksand-Medium.woff"
+									"undefined": "Quicksand-Medium.otf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Quicksand Medium",
+							"path": "",
+							"type": "resource-font",
+							"id": "quicksandMedium"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Quicksand Bold",
-							"id": "quicksandBold",
 							"label": "Quicksand Bold",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Quicksand-Bold.eot",
 									"fontFamily": "QuicksandBold",
+									"eotFileName": "Quicksand-Bold.eot",
+									"woffFileName": "Quicksand-Bold.woff",
 									"svgFileName": "Quicksand-Bold.svg",
-									"ttfFileName": "Quicksand-Bold.ttf",
-									"woffFileName": "Quicksand-Bold.woff"
+									"ttfFileName": "Quicksand-Bold.ttf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Quicksand Bold",
+							"path": "",
+							"type": "resource-font",
+							"id": "quicksandBold"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Quicksand Light",
-							"id": "quicksandLight",
 							"label": "Quicksand Light",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Quicksand-Light.eot",
 									"fontFamily": "QuicksandLight",
+									"eotFileName": "Quicksand-Light.eot",
+									"woffFileName": "Quicksand-Light.woff",
 									"svgFileName": "Quicksand-Light.svg",
-									"ttfFileName": "Quicksand-Light.ttf",
-									"woffFileName": "Quicksand-Light.woff"
+									"ttfFileName": "Quicksand-Light.ttf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Quicksand Light",
+							"path": "",
+							"type": "resource-font",
+							"id": "quicksandLight"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Lato-Regular",
-							"id": "latoregular",
 							"label": "Lato-Regular",
-							"path": "",
 							"properties": {
 								"font": {
-									"eotFileName": "Lato-Regular.eot",
 									"fontFamily": "Lato-Regular",
+									"eotFileName": "Lato-Regular.eot",
+									"woffFileName": "Lato-Regular.woff",
 									"svgFileName": "Lato-Regular.svg",
-									"ttfFileName": "Lato-Regular.ttf",
-									"woffFileName": "Lato-Regular.woff"
+									"ttfFileName": "Lato-Regular.ttf"
 								}
 							},
-							"type": "resource-font"
+							"htmlLabel": "Lato-Regular",
+							"path": "",
+							"type": "resource-font",
+							"id": "latoregular"
 						}
 					]
 				],
-				"span": {
-					"lg": 0,
-					"md": 0,
-					"sm": 0,
-					"xs": 0
-				},
-				"type": "block"
+				"exclude": false,
+				"htmlLabel": "Web Fonts",
+				"path": "",
+				"type": "block",
+				"id": "webFonts"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"id": "dockingController",
-				"path": "DockingController",
+				"rows": [
+					[
+						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
+							"exclude": false,
+							"path": "",
+							"id": "scrollPosition",
+							"type": "data-field"
+						},
+						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
+							"path": "",
+							"id": "docked",
+							"type": "data-field"
+						},
+						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
+							"path": "",
+							"id": "undocked",
+							"type": "data-field"
+						}
+					]
+				],
 				"properties": {
 					"dockPosition": 50
 				},
-				"rows": [
-					[
-						{
-							"exclude": false,
-							"id": "scrollPosition",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"id": "docked",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"id": "undocked",
-							"path": "",
-							"type": "data-field"
-						}
-					]
-				],
-				"type": "docking-controller"
+				"exclude": false,
+				"path": "DockingController",
+				"type": "docking-controller",
+				"id": "dockingController"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Background",
-				"id": "background",
 				"label": "Background",
-				"path": "",
 				"rows": [
 					[]
 				],
+				"exclude": false,
+				"htmlLabel": "Background",
+				"path": "",
 				"styles": [
 					"av-background-image"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "background"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Form Header",
-				"id": "formHeader1",
 				"label": "Form Header",
-				"path": "",
 				"rows": [
 					[
 						{
-							"exclude": false,
-							"id": "stickyPanel1",
-							"path": "StickyPanel",
 							"rows": [
 								[
 									{
-										"exclude": false,
-										"id": "formHeader",
-										"path": "",
-										"properties": {
-											"showTrackingCode": false
-										},
 										"rows": [
 											[
 												{
-													"exclude": false,
-													"htmlLabel": "Brand logo",
-													"id": "brandLogo",
+													"span": {
+														"xs": 3,
+														"sm": 3,
+														"md": 3,
+														"lg": 3
+													},
 													"label": "Brand logo",
-													"path": "",
 													"rows": [
 														[
 															{
-																"exclude": false,
-																"htmlLabel": "Logo",
-																"id": "logo",
+																"span": {
+																	"md": 4,
+																	"lg": 4,
+																	"xs": 3,
+																	"sm": 3
+																},
 																"label": "Logo",
-																"path": "",
 																"properties": {
 																	"src": {
-																		"fileName": "blue-steel-logo.png"
+																		"fileName": "avoka-logo.png"
 																	}
 																},
-																"span": {
-																	"lg": 4,
-																	"md": 4,
-																	"sm": 3,
-																	"xs": 3
-																},
+																"exclude": false,
+																"htmlLabel": "Logo",
+																"path": "",
 																"styles": [],
-																"type": "image"
+																"type": "image",
+																"id": "logo"
 															}
 														]
 													],
-													"span": {
-														"lg": 3,
-														"md": 3,
-														"sm": 3,
-														"xs": 3
-													},
+													"exclude": false,
+													"htmlLabel": "Brand logo",
+													"path": "",
 													"styles": [
 														"bs-logo-container-86033"
 													],
-													"type": "block"
+													"type": "block",
+													"id": "brandLogo"
 												},
 												{
-													"exclude": false,
-													"id": "dockingProgressBar_1",
-													"path": "DockingProgressBar",
 													"rows": [
 														[
 															{
-																"exclude": false,
-																"id": "progressBar_1",
-																"path": "ProgressBar",
 																"properties": {
 																	"displayGroupIcon": false
 																},
+																"exclude": false,
+																"path": "ProgressBar",
+																"id": "progressBar_1",
 																"type": "progress-bar"
 															}
 														]
@@ -2016,70 +1955,109 @@
 													"styles": [
 														"av-docking-progress-bar"
 													],
-													"type": "docking-progress-bar"
+													"exclude": false,
+													"path": "DockingProgressBar",
+													"type": "docking-progress-bar",
+													"id": "dockingProgressBar_1"
 												}
 											]
 										],
+										"properties": {
+											"showTrackingCode": false
+										},
+										"exclude": false,
+										"path": "",
 										"styles": [
 											"mg-header",
 											"bs-max-width-73189"
 										],
-										"type": "form-header"
+										"type": "form-header",
+										"id": "formHeader"
 									}
 								],
 								[
 									{
-										"exclude": false,
-										"id": "dockingErrorBlock",
-										"path": "",
 										"rows": [
 											[
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "dockErrors",
 													"type": "data-field"
 												},
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "errorsDockLock",
 													"type": "data-field"
 												}
 											]
 										],
-										"styles": [],
-										"type": "docking-errors"
+										"properties": {
+											"header": "Please resolve the following issues before proceeding",
+											"subHeader": "Click on an issue to go directly to the related section of the form.",
+											"dockedHeader": "{{Form.validation.errors.length}} error(s) found",
+											"dockedSubHeader": "Please touch here to resolve the next error.",
+											"mobileA11yMessageBefore": "The following {{Form.validation.errors.length + (Form.validation.errors.length == 1 && ' issue was' || ' issues were')}} found.",
+											"mobileA11yMessageAfter": "Please select the screen to go to the first error."
+										},
+										"exclude": false,
+										"path": "",
+										"styles": [
+											"av-docking-errors"
+										],
+										"type": "docking-errors",
+										"id": "dockingErrorBlock"
 									}
 								]
 							],
+							"exclude": false,
+							"path": "StickyPanel",
 							"styles": [
 								"bs-fixed-header-40325"
 							],
-							"type": "sticky-panel"
+							"type": "sticky-panel",
+							"id": "stickyPanel1"
 						}
 					]
 				],
+				"exclude": false,
+				"htmlLabel": "Form Header",
+				"path": "",
 				"rules": {},
 				"styles": [],
-				"type": "block"
+				"type": "block",
+				"id": "formHeader1"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Content",
-				"id": "content",
 				"label": "Content",
-				"path": "",
 				"rows": [
 					[
 						{
-							"exclude": false,
-							"id": "pageController",
-							"path": "",
-							"properties": {
-								"transitionDelay": 600
-							},
 							"rows": [
 								[
 									{
+										"rows": [
+											[
+												{
+				"rows": [
+														[]
+													],
+							"exclude": false,
+							"path": "",
+													"type": "section-2",
+													"id": "section"
+												}
+											]
+										],
+										"type": "nav-page",
+										"styles": [
+											"mg-section-1"
+										],
 										"exclude": false,
 										"hasCustomId": true,
 										"htmlLabel": "Page",
@@ -2087,35 +2065,25 @@
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
 										"path": "",
-										"rows": [
-											[
-												{
-													"exclude": false,
-													"id": "section",
-													"path": "",
-													"rows": [
-														[]
-													],
-													"type": "section-2"
-												}
-											]
-										],
 										"rules": {
 											"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
 										},
-										"styles": [
-											"mg-section-1"
-										],
-										"type": "nav-page"
+										"id": "page"
 									}
 								]
 							],
+							"properties": {
+								"transitionDelay": 600
+							},
+													"exclude": false,
+													"path": "",
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n   }",
 								"dc": "data.pageChangeAnimation",
 								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");\n"
 							},
-							"type": "page-controller"
+							"type": "page-controller",
+							"id": "pageController"
 						}
 					]
 				],
@@ -2126,588 +2094,633 @@
 					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "content"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Bottom Nav",
-				"id": "bottomNav",
-				"label": "Bottom Nav",
 				"offset": {
-					"lg": "0",
-					"md": "0"
+					"md": "0",
+					"lg": "0"
 				},
-				"path": "",
+				"label": "Bottom Nav",
 				"rows": [
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"id": "submit2",
-							"offset": {
-								"lg": "0",
-								"md": "0",
-								"sm": "0",
-								"xs": "0"
-							},
-							"path": "",
-							"properties": {
-								"legacyMethod": false
-							},
-							"rules": {
-								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
 							"span": {
-								"sm": 6,
-								"xs": 6
+								"xs": 6,
+								"sm": 6
+							},
+							"offset": {
+								"xs": "0",
+								"sm": "0",
+								"md": "0",
+								"lg": "0"
 							},
 							"styles": [
 								"av-button",
 								"bs-submit-button-65937",
 								"av-global-layout"
 							],
-							"type": "submit"
+							"properties": {
+								"legacyMethod": false
+							},
+							"type": "submit",
+							"rules": {
+								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+							},
+							"animateVisibility": true,
+							"exclude": false,
+							"path": "",
+							"id": "submit2"
 						}
 					]
 				],
+				"exclude": false,
+				"htmlLabel": "Bottom Nav",
+				"path": "",
 				"styles": [
 					"bs-bottom-nav-15636"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "bottomNav"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"htmlLabel": "Navigation Bar",
-				"id": "navigationBar",
 				"label": "Navigation Bar",
-				"path": "",
 				"rows": [
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Next",
-							"id": "next",
+							"span": {
+								"md": 2,
+								"lg": 2,
+								"xs": 2,
+								"sm": 2
+							},
 							"label": "Next",
-							"labelPlacementLeft": false,
-							"path": "",
+							"styles": [
+							    "av-button-navigation-next",
+								"av-button-navigation"
+							],
 							"properties": {
 								"icon": "fa fa-angle-right"
 							},
+							"animateVisibility": true,
+							"exclude": false,
+							"htmlLabel": "Next",
+							"labelPlacementLeft": false,
+							"path": "",
 							"rules": {
 								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\nForm.$Pages.move(true);\n$timeout(function() {\t\n  data.blockNext = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockNext = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n",
 								"dc": "return data.blockNext  ? \"error\" : \"\";",
 								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
-							"span": {
-								"lg": 2,
-								"md": 2,
-								"sm": 2,
-								"xs": 2
-							},
-							"styles": [
-								"av-button-navigation-next",
-								"av-button-navigation"
-							],
-							"type": "button-docking-right"
+							"type": "button-docking-right",
+							"id": "next"
 						}
 					],
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Back",
-							"id": "back",
-							"label": "Back",
-							"path": "",
-							"properties": {
-								"icon": "fa fa-angle-left"
-							},
-							"rules": {
-								"click": "Form.$Pages.move(false);",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst;\n} else {\n\treturn true;\n}\n"
-							},
 							"span": {
-								"lg": 2,
 								"md": 2,
-								"sm": 2,
-								"xs": 2
+								"lg": 2,
+								"xs": 2,
+								"sm": 2
 							},
+							"label": "Back",
 							"styles": [
 								"av-button-navigation-back",
 								"av-button-navigation"
 							],
-							"type": "button-docking-left"
+							"properties": {
+								"icon": "fa fa-angle-left"
+							},
+							"animateVisibility": true,
+							"exclude": false,
+							"htmlLabel": "Back",
+							"path": "",
+							"rules": {
+								"click": "Form.$Pages.move(false);",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst;\n} else {\n\treturn true;\n}\n"
+							},
+							"type": "button-docking-left",
+							"id": "back"
 						}
 					],
 					[
 						{
+							"label": "Block Next",
 							"exclude": false,
 							"htmlLabel": "Block Next",
-							"id": "blockNext",
-							"label": "Block Next",
 							"path": "",
-							"type": "data-field"
+							"type": "data-field",
+							"id": "blockNext"
 						}
 					],
 					[
 						{
+							"label": "Page Change Animation",
 							"exclude": false,
 							"htmlLabel": "Page Change Animation",
-							"id": "pageChangeAnimation",
-							"label": "Page Change Animation",
 							"path": "",
-							"type": "data-field"
+							"type": "data-field",
+							"id": "pageChangeAnimation"
 						}
 					]
 				],
+				"exclude": false,
+				"htmlLabel": "Navigation Bar",
+				"path": "",
 				"styles": [
 					"nav-bar-73803"
 				],
-				"type": "block"
+				"type": "block",
+				"id": "navigationBar"
 			}
 		],
 		[
 			{
-				"exclude": false,
-				"id": "functionalMenuFabMenu",
-				"properties": {
-					"menuLayout": " fab-menu"
-				},
 				"rows": [
 					[
 						{
-							"animateVisibility": false,
-							"exclude": false,
-							"id": "background_1",
 							"rows": [
 								[]
 							],
-							"rules": {
-								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}"
-							},
 							"styles": [
 								"bc-white-background-20804",
 								"bs-fab-menu-background-88907"
 							],
+							"rules": {
+								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}",
+								"sh": "return data.onlyOneVisible !== \"function-items-1\" && data.functionalMenu ",
+								"click": "Form.fireRule(\"click\" ,\"functionalMenu\" , data);"
+							},
+							"animateVisibility": false,
+							"exclude": false,
 							"subId": "9c7b2d04c05c4ccca6c8aff32ff6cfe3",
+							"id": "background_1",
 							"type": "block"
 						}
 					],
 					[
 						{
+							"rules": {
+								"sh": "return data.onlyOneVisible !== \"function-items-1\";",
+								"eq": "if (data.onlyOneVisible !== \"function-items-1\") {\n    return false;\n}\nreturn true;",
+								"click": "data[item.id] = data[item.id] !== true;"
+							},
 							"exclude": false,
-							"id": "functionalMenu",
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
+							"id": "functionalMenu",
 							"type": "button-toggle-icon"
 						}
 					],
 					[
 						{
-							"exclude": false,
-							"id": "exit",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\")"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\")",
+								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
 							},
+							"exclude": false,
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
+							"id": "exit",
 							"type": "button"
 						},
 						{
-							"exclude": false,
-							"id": "resume",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");",
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
+							"id": "resume",
 							"type": "button"
 						},
 						{
-							"exclude": false,
-							"id": "help",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");"
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");",
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "97601a07e3304ceab704b6152d1174b9",
+							"id": "help",
 							"type": "button"
 						},
 						{
-							"exclude": false,
-							"htmlLabel": "Save",
-							"id": "save_1",
 							"label": "Save",
 							"properties": {
 								"icon": "fa fa-floppy-o"
 							},
+							"htmlLabel": "Save",
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu",
+								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");"
+							},
+							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
+							"id": "save_1",
 							"type": "button"
 						}
 					],
 					[
 						{
-							"exclude": false,
-							"id": "onlyOneVisible",
 							"rules": {
 								"eq": "var buttonResume = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") ? 1 : 0;\nvar buttonShare = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") ? 1 : 0;\nvar buttonHelp = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") ? 1 : 0;\nvar buttonExit = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\") ? 1 : 0;\n\nvar buttonCount = buttonResume + buttonShare + buttonHelp + buttonExit;\nreturn {\n  0: \"function-items-0\",\n  1: \"function-items-1\",\n  2: \"function-items-2\",\n  3: \"function-items-3\",\n  4: \"function-items-4\"\n\n}[buttonCount]"
 							},
+							"exclude": false,
 							"subId": "9cf017397c5f424a8777239803df5dc6",
+							"id": "onlyOneVisible",
 							"type": "data-field"
 						}
 					],
 					[
 						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field\n\nreturn Form.getItemProperty(\"data.functionalMenuFabMenu\",\"menuLayout\");"
+							},
 							"exclude": false,
-							"id": "menuLayout",
 							"subId": "cc4063f5d8e346399c7d6affb77f151f",
+							"id": "menuLayout",
 							"type": "data-field"
 						}
 					]
 				],
-				"type": "floating-functional-component"
+				"properties": {
+					"menuLayout": " fab-menu"
+				},
+				"type": "floating-functional-component",
+				"rules": {
+					"dc": "return data.onlyOneVisible + data.menuLayout\n "
+				},
+				"exclude": false,
+				"id": "functionalMenuFabMenu"
 			}
 		],
 		[
 			{
-				"exclude": true,
-				"id": "styleMasterBlock",
 				"rows": [
 					[
 						{
-							"exclude": false,
-							"id": "personalDetails",
 							"rows": [
 								[
 									{
-										"id": "firstName1",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "6aa417b9582d40969acb60350725a52d",
+										"id": "firstName1",
 										"type": "text-input"
 									},
 									{
-										"id": "middleNameOptional",
+										"path": "",
 										"mandatory": "",
 										"noData": true,
-										"path": "",
 										"subId": "df57af35e318476cb223b379c1a5e01a",
+										"id": "middleNameOptional",
 										"type": "text-input"
 									},
 									{
-										"id": "lastName1",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "0382c8ac5f9844c4aeaf827a4780d248",
+										"id": "lastName1",
 										"type": "text-input"
 									}
 								],
 								[
 									{
-										"id": "country",
-										"noData": true,
-										"path": "",
 										"properties": {},
+										"path": "",
+										"noData": true,
 										"subId": "2bd1d8e014264f38a82f66a931f57b9f",
+										"id": "country",
 										"type": "dropdown"
 									}
 								],
 								[
 									{
-										"id": "dateOfBirthDropdown",
 										"rows": [
 											[
 												{
-													"id": "day",
-													"noData": true,
-													"path": "",
+													"properties": {
+														"dataPath": "data.daysData"
+													},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "var day = !Util.isBlank(data.date) && data.date.split(\"-\")[2]; \n return day && typeof day === \"string\" ? day.replace(/^[0]/,\"\") : value;"
+													},
 													"subId": "76182bfd13724884b4288cd928247150",
+													"path": "",
+													"noData": true,
+													"id": "day",
 													"type": "data-dropdown"
 												},
 												{
-													"id": "month",
-													"noData": true,
-													"path": "",
 													"properties": {},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : value;"
+													},
 													"subId": "d08f3ac71df4450094742607de9e92f4",
+													"path": "",
+													"noData": true,
+													"id": "month",
 													"type": "dropdown"
 												},
 												{
-													"id": "year",
-													"noData": true,
-													"path": "",
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[0] : value;"
+													},
 													"subId": "4d099b1664374469a28d935e5f39fe25",
+													"path": "",
+													"noData": true,
+													"id": "year",
 													"type": "dropdown-years"
 												}
 											],
 											[
 												{
-													"id": "date",
+													"rules": {
+														"eq": "// Since we cannot remove this cal rule, return self value\nvalue"
+													},
 													"subId": "fb68b0fdefc64e8192c84c1aacf492dc",
+													"id": "date",
 													"type": "data-field"
 												}
 											],
 											[
 												{
-													"id": "daysData",
+													"rules": {
+														"eq": "var month = !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : \"\",\n\tday = data.day,\n    range,\n    selectionArr,\n    max = 31;\n\nif (month == \"02\") max = Util.isLeapYear(data.year) ? 29 : 28;\n\nelse if(Util.contains([\"04\",\"06\",\"09\",\"11\"],month)) max = 30;\n\nif(+day > max) data.day = max.toString();\n\nrange = Util.range(1, max).map(function(day){\n  return day.toString(); \n});\n\n// Convert to comma delimited and then convert to delimited selection array\nreturn Calc.delimitedSelection(range.join(\",\"));"
+													},
 													"subId": "53b69d508a60404db8b3ef75b4aa4556",
+													"id": "daysData",
 													"type": "data-field"
 												}
 											]
 										],
+										"rules": {
+											"ok": "if(Util.isBlank(data.date) || (!item.properties.minAge && !item.properties.maxAge && !item.properties.pastDate)) {\n  return true;\n}\nvar currentTime = new Date().getTime(),\n    minAge = item.properties.minAge,\n    maxAge = item.properties.maxAge,\n    pastDate = item.properties.pastDate,\n    dobDate = Calc.date(data.date);\n\nif(pastDate && Calc.daysBetween(dobDate, new Date()) < 0) {\n    return \"Must be a date in the past\";\n}\n\nif(!Util.isBlank(minAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+minAge);\n\tif (currentTime <= dobDate.getTime()) {\n\t\treturn \"You must be at least \"+minAge+\" years old\";\n\t}\n}\n\nif(!Util.isBlank(maxAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+maxAge);\n\tif (currentTime >= dobDate.getTime()) {\n\t\treturn \"You must be under \"+maxAge+\" years old\";\n\t}\n}\n\nreturn true;"
+										},
 										"subId": "eb2a794cd58c42af94471c18973dc8aa",
+										"id": "dateOfBirthDropdown",
 										"type": "dropdown-dob-block"
 									}
 								]
 							],
+							"exclude": false,
 							"subId": "18bbf754f32a4d6e96b7eca3e68f4e86",
+							"id": "personalDetails",
 							"type": "section-2"
 						}
 					],
 					[
 						{
-							"exclude": true,
-							"id": "otherDetails",
 							"rows": [
 								[
 									{
-										"id": "emailAddress",
-										"noData": true,
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
 										"path": "",
+										"noData": true,
 										"subId": "82537d43d5a541c78ae556a6a5f33098",
+										"id": "emailAddress",
 										"type": "email"
 									}
 								],
 								[
 									{
-										"id": "datePicker",
-										"noData": true,
 										"path": "",
-										"styles": [
-											"mg-datepicker",
-											"date-picker-base",
-											"av-global-layout",
-											"av-form-field"
-										],
+										"noData": true,
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
+										"id": "datePicker",
 										"type": "date-picker"
 									}
 								],
 								[
 									{
-										"id": "currencyField",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "3d4acf7191404c30a5619f5a4d4f5c2f",
+										"id": "currencyField",
 										"type": "currency"
 									}
 								],
 								[
 									{
-										"id": "decimalField",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "1e7af05e0367400587f197c82eb6ce92",
+										"id": "decimalField",
 										"type": "decimal"
 									}
 								],
 								[
 									{
-										"id": "emailAddress2",
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
+										"path": "",
 										"mandatory": true,
 										"noData": true,
-										"path": "",
 										"subId": "d591a940ed7d4260b99e8adb7a67a47e",
+										"id": "emailAddress2",
 										"type": "email"
 									}
 								],
 								[
 									{
-										"id": "radioButtonGroup",
-										"noData": true,
-										"path": "",
 										"properties": {},
+										"path": "",
+										"noData": true,
 										"subId": "16d7bc4912da4460a374f51a484d9228",
+										"id": "radioButtonGroup",
 										"type": "radio-button-group"
 									}
 								],
 								[
 									{
-										"id": "checkbox",
-										"noData": true,
 										"path": "",
+										"noData": true,
 										"subId": "98ba81dcb4cb47e8a63ee89ee04412a6",
+										"id": "checkbox",
 										"type": "checkbox"
 									}
 								]
 							],
+							"exclude": true,
 							"subId": "0c6f9a0f209a4dfdadab56f9127b97e5",
+							"id": "otherDetails",
 							"type": "section-2"
 						}
 					],
 					[
 						{
-							"exclude": true,
-							"id": "buttons",
 							"rows": [
 								[
 									{
-										"id": "block",
 										"rows": [
 											[
 												{
-													"id": "leftLinkButton",
 													"subId": "f68f5692046d4f028d4569b7ce2d17df",
+													"id": "leftLinkButton",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primarySmall",
 													"subId": "1797ebe5044f4dd4ba71c19e2ddf5442",
+													"id": "primarySmall",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primarySmall1",
 													"subId": "682349e8c23f410a98982bff55d9a7af",
+													"id": "primarySmall1",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primary",
 													"subId": "ae570d801c55486bb3b00e882df5a948",
+													"id": "primary",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "primary1",
 													"subId": "7d8c074047df4e37a0ab3b537b696e1a",
+													"id": "primary1",
 													"type": "button"
 												}
 											]
 										],
 										"subId": "c245e3914ce44d36a8dab5fa4c067db9",
+										"id": "block",
 										"type": "block"
 									},
 									{
-										"id": "block1",
 										"rows": [
 											[
 												{
-													"id": "secondary",
 													"subId": "6275f07e5ecb47dbb955679156197df7",
+													"id": "secondary",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "secondary1",
 													"subId": "f724bde317d64b2fb927c1620164d50e",
+													"id": "secondary1",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "secondary2",
 													"subId": "9646615088ce475d849dc324140f4ae3",
+													"id": "secondary2",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "secondary3",
 													"subId": "a2068a5825ba48f18e58ab506d7a00dc",
+													"id": "secondary3",
 													"type": "button"
 												}
 											]
 										],
 										"subId": "bf0b1ea6ed8f42debcae7e3ae27e9a13",
+										"id": "block1",
 										"type": "block"
 									},
 									{
-										"id": "block2",
 										"rows": [
 											[
 												{
-													"id": "rightLinkButton",
 													"subId": "ff1871ad44dc436189332e0a8f4b23d6",
+													"id": "rightLinkButton",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary",
 													"subId": "e79ba2d359074c6cac0d0d36dbb60bdb",
+													"id": "tertiary",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary1",
 													"subId": "23c01cbc4fb64d33beaf0a2dee6addf5",
+													"id": "tertiary1",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary2",
 													"subId": "d03f424680414e3f96dce44bc39988a7",
+													"id": "tertiary2",
 													"type": "button"
 												}
 											],
 											[
 												{
-													"id": "tertiary3",
 													"subId": "6096879ca2d44ece859e4e47e89d6f4e",
+													"id": "tertiary3",
 													"type": "button"
 												}
 											]
 										],
 										"subId": "2ce4a1382d7a48d3bbc0e1be7192e9b4",
+										"id": "block2",
 										"type": "block"
 									}
 								]
 							],
+							"exclude": true,
 							"subId": "536df813050644f883b4f0e00cdb1a0f",
+							"id": "buttons",
 							"type": "section-2"
 						}
 					],
 					[
 						{
-							"htmlLabel": "About You",
-							"id": "aboutYou",
 							"label": "About You",
-							"path": "",
 							"rows": [
 								[
 									{
-										"id": "block3",
-										"path": "",
 										"rows": [
 											[]
 										],
-										"type": "block"
+							"path": "",
+										"type": "block",
+										"id": "block3"
 									}
 								]
 							],
-							"type": "section-2"
+							"htmlLabel": "About You",
+										"path": "",
+							"type": "section-2",
+							"id": "aboutYou"
 						}
 					]
 				],
-				"type": "style-master-block"
+				"type": "style-master-block",
+				"exclude": true,
+				"id": "styleMasterBlock"
 			}
 		]
 	],
 	"rules": {
 		"dc": "data.pageChangeAnimation"
 	},
-	"selectedBrand": "Blue Sky",
+	"selectedBrand": "Default",
 	"styleMods": {
 		"id-submit2": {
 			"blocks": {
@@ -2873,12 +2886,12 @@
 				"bs-dialog-button-12962",
 				"bs-dialog-link-button-09809",
 				"bs-next-error-36745",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"button-group": {
@@ -2886,58 +2899,55 @@
 				"av-global-layout",
 				"av-button-group",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-button-group",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"checkbox": {
 			"availableStyles": [
-				"mg-checkbox",
 				"av-global-layout",
 				"align-top",
-				"bs-checkbox-04598",
-				"av-form-field"
+				"av-checkbox",
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
-				"mg-checkbox",
 				"av-global-layout",
-				"bs-checkbox-04598",
-				"av-form-field"
+				"av-checkbox",
+				"av-global-layout"
 			]
 		},
 		"currency": {
 			"availableStyles": [
 				"align-top",
-				"bs-currency-field-75729",
+				"av-currency",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"bs-currency-field-75729",
-				"av-form-field"
+				"av-currency",
+				"av-global-layout"
 			]
 		},
 		"data-checkbox-group": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-checkbox-group",
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"data-dropdown": {
@@ -2945,31 +2955,31 @@
 				"align-top",
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"data-radio-group": {
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
-				"av-form-field"
+				"av-radio",
+				"av-global-layout"
 			]
 		},
 		"data-typeahead": {
@@ -2977,32 +2987,32 @@
 				"align-top",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"date-picker": {
 			"availableStyles": [
 				"align-top",
-				"bs-date-field-64466",
+				"av-date",
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
-				"bs-date-field-64466",
-				"av-form-field"
+				"av-date",
+				"av-global-layout"
 			]
 		},
 		"decimal": {
@@ -3010,12 +3020,12 @@
 				"align-top",
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"dialog-content": {
@@ -3042,7 +3052,7 @@
 		},
 		"docking-errors": {
 			"availableStyles": [
-				"av-block-error",
+				"av-docking-errors",
 				"align-top"
 			],
 			"properties": {}
@@ -3059,7 +3069,7 @@
 				"av-global-layout",
 				"align-top",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {
 				"icon": "fa fa-angle-down"
@@ -3067,7 +3077,7 @@
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"dropdown-dob-block": {
@@ -3082,13 +3092,13 @@
 				"av-global-layout",
 				"dropdown-multi-select",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"dropdown-multi-select",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"dropdown-years": {
@@ -3096,13 +3106,13 @@
 				"align-top",
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"floating-functional-component": {
@@ -3176,12 +3186,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"image": {
@@ -3215,12 +3225,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"mitek-license-prefill": {
@@ -3363,12 +3373,11 @@
 		},
 		"payment-type-selector": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-radio-button-group",
 				"av-global-layout",
 				"mg-checkbox-group",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {}
 		},
@@ -3396,7 +3405,7 @@
 		"radio-button-graphical": {
 			"availableStyles": [
 				"radio-graphical",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
@@ -3408,21 +3417,20 @@
 		"radio-button-group": {
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"av-radio",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
 				"av-radio",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"radio-button-group-graphical": {
@@ -3430,31 +3438,31 @@
 				"av-global-layout",
 				"radio-graphical-group",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"radio-graphical-group",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"radio-button-repeating": {
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
-				"av-form-field"
+				"av-radio",
+				"av-global-layout"
 			]
 		},
 		"repeat": {
@@ -3469,13 +3477,13 @@
 				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"repeat-button",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"repeat-block-template": {
@@ -3490,13 +3498,13 @@
 				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"repeat-button",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"repeat-index-text": {
@@ -3510,12 +3518,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"section": {
@@ -3551,24 +3559,24 @@
 				"av-global-layout",
 				"align-top",
 				"signature-dialog-15537",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"slider": {
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"step-name": {
@@ -3601,12 +3609,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"text-display": {
@@ -3633,12 +3641,12 @@
 				"submit-success-message",
 				"bs-center-align-19822",
 				"bs-docked-error-63227",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"text-display-popover": {
@@ -3657,7 +3665,7 @@
 				"av-text-field",
 				"bs-dialog-text-field-14963",
 				"bs-online-chat-82522",
-				"av-form-field"
+				"av-global-layout"
 			],
 			"properties": {
 				"helpText": ""
@@ -3665,7 +3673,7 @@
 			"styles": [
 				"av-global-layout",
 				"av-text-field",
-				"av-form-field"
+				"av-global-layout"
 			]
 		},
 		"time": {
