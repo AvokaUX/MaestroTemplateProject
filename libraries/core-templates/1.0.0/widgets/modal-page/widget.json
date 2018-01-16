@@ -115,7 +115,7 @@
 				],
 				"styles": [
 					"mg-section-2",
-					"av-section",
+					"bc-white-background-20804",
 					"bs-center-align-19822",
 					"bs-max-width-73189",
 					"bs-modal-content-96022"
@@ -154,7 +154,7 @@
 				"exclude": false,
 				"htmlLabel": "Modal Footer",
 				"styles": [
-					"av-section",
+					"bc-white-background-20804",
 					"bs-modal-footer-03990"
 				],
 				"id": "modalFooter",

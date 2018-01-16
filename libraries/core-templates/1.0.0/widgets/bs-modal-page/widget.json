@@ -119,7 +119,7 @@
 				],
 				"styles": [
 					"mg-section-2",
-					"av-section",
+					"bc-white-background-20804",
 					"bs-center-align-19822",
 					"bs-max-width-73189",
 					"bs-modal-content-96022"
@@ -158,7 +158,7 @@
 				"label": "Modal Footer",
 				"htmlLabel": "Modal Footer",
 				"styles": [
-					"av-section",
+					"bc-white-background-20804",
 					"bs-modal-footer-03990"
 				],
 				"pubId": "b4eb8296a924482c880d6c3abca4bb61"
