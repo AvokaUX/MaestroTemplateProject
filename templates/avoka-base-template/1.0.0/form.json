@@ -915,12 +915,10 @@
 									"id": "logo_1",
 									"path": "",
 									"properties": {},
-									"subId": "05fa1618bac3410cac7208dd0c297403",
 									"type": "image"
 								}
 							]
 						],
-						"subId": "0be6bfdb2cd9477fbfa75947b24ac1a3",
 						"type": "form-header"
 					}
 				],
@@ -933,7 +931,6 @@
 								{
 									"id": "textDisplay_2",
 									"path": "",
-									"subId": "5a07f0b154ba4c479ab3df966e214c62",
 									"type": "text-display"
 								},
 								{
