@@ -113,7 +113,7 @@
 				"av-slide-menu-extra-item-color": "",
 				"av-slide-menu-extra-item-hover-color": "",
 				"av-slide-menu-extra-item-pointer-active-color": "",
-				"av-slide-menu-extra-item-pointer-color": "",
+			"av-slide-menu-extra-item-pointer-color": "",
 				"av-slide-menu-extra-item-pointer-hover-color": "",
 				"av-slide-menu-extra-item-text-active-color": "",
 				"av-slide-menu-extra-item-text-color": "",
@@ -1923,7 +1923,7 @@
 						],
 						"styles": [
 							"mg-section-2",
-							"bc-white-background-20804",
+							"av-section",
 							"bs-center-align-19822",
 							"bs-max-width-73189",
 							"bs-modal-content-96022"
@@ -1950,7 +1950,7 @@
 							]
 						],
 						"styles": [
-							"bc-white-background-20804",
+							"av-section",
 							"bs-modal-footer-03990"
 						],
 						"type": "form-footer"
@@ -2712,7 +2712,7 @@
 								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}"
 							},
 							"styles": [
-								"bc-white-background-20804",
+								"av-section",
 								"bs-fab-menu-background-88907"
 							],
 							"subId": "9c7b2d04c05c4ccca6c8aff32ff6cfe3",
@@ -3203,7 +3203,7 @@
 		"block": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"av-background-image",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
@@ -3831,7 +3831,7 @@
 		"section-2": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",

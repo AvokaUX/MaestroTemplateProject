@@ -525,7 +525,7 @@
 								[]
 							],
 							"styles": [
-								"bc-white-background-20804",
+								"av-section",
 								"bs-fab-menu-background-88907"
 							],
 							"rules": {
@@ -1097,7 +1097,7 @@
 		"block": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"av-background-image",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
@@ -1903,11 +1903,11 @@
 		"section-2": {
 			"styles": [
 				"mg-section-2",
-				"bc-white-background-20804"
+				"av-section"
 			],
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",
@@ -3689,7 +3689,7 @@
 						],
 						"styles": [
 							"mg-section-2",
-							"bc-white-background-20804",
+							"av-section",
 							"bs-center-align-19822",
 							"bs-max-width-73189",
 							"bs-modal-content-96022"
@@ -3726,7 +3726,7 @@
 						"htmlLabel": "Modal Footer",
 						"path": "",
 						"styles": [
-							"bc-white-background-20804",
+							"av-section",
 							"bs-modal-footer-03990"
 						],
 						"id": "modalFooter"

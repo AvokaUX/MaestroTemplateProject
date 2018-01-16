@@ -57,6 +57,15 @@
 			"order": 6
 		},
 		{
+			"name": "av-section-background",
+			"type": "text",
+			"label": "Primary Contrast",
+			"description": "",
+			"category": "Color palette",
+			"defaultValue": "rgba(255,255,255,0.9)",
+			"order": 2
+		},
+		{
 			"name": "av-font-color",
 			"type": "color",
 			"label": "Font Color",
