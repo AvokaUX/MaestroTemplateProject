@@ -36,9 +36,7 @@ form[name='form'] .av-form-heading {
     transform: translateY(-50%);
  }
 form[name='form'] .av-form-heading-container .av-form-heading-single-page {
-    position: fixed;
-    top: 25px;
-    transform: translateY(-50%) translateX(-100%);
+    top: 125%;
 }
  form[name='form'] .av-form-heading h1 {
      position:relative;

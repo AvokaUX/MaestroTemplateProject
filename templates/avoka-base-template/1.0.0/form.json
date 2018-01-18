@@ -5,28 +5,28 @@
 		"publishLibraryId": 10988
 	},
 	"brandOptions": {
+		"functionalMenuFabMenu": [],
 		"logo": [
 			{
 				"category": "Logo",
 				"label": "Logo",
-				"path": "properties.src",
 				"linkedItems": [
 					{
-						"id" : "submit_success_logo",
-						"path" : "properties.src"
+						"id": "submit_success_logo",
+						"path": "properties.src"
 					},
 					{
-						"id" : "save_success_logo",
-						"path" : "properties.src"
+						"id": "save_success_logo",
+						"path": "properties.src"
 					},
 					{
-						"id" : "cancel_success_logo",
-						"path" : "properties.src"
+						"id": "cancel_success_logo",
+						"path": "properties.src"
 					}
-				]
+				],
+				"path": "properties.src"
 			}
-		],
-		"functionalMenuFabMenu": []
+		]
 	},
 	"brands": {
 		"Default": {
@@ -56,6 +56,29 @@
 				},
 				"functionalMenuFabMenu": {
 					"properties": {}
+				},
+				"logo": {
+					"linkedItems": [
+						{
+							"id": "submit_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "save_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "cancel_success_logo",
+							"path": "properties.src"
+						}
+					],
+					"properties": {
+						"src": {
+							"fileName": "avoka-logo.png",
+							"height": "40",
+							"width": "52"
+						}
+					}
 				}
 			},
 			"label": "Default",
@@ -886,6 +909,95 @@
 				],
 				[
 					{
+						"id": "form_header_cancel_success",
+						"rows": [
+							[
+								{
+									"id": "cancel_success_logo",
+									"properties": {
+										"src": {
+											"fileName": "avoka-logo.png",
+											"height": "40",
+											"width": "52"
+										}
+									},
+									"subId": "05fa1618bac3410cac7208dd0c297403",
+									"type": "image"
+								}
+							]
+						],
+						"subId": "0be6bfdb2cd9477fbfa75947b24ac1a3",
+						"type": "form-header"
+					}
+				],
+				[
+					{
+						"id": "application_cancelled",
+						"rows": [
+							[
+								{
+									"id": "cancel_success_message",
+									"subId": "5a07f0b154ba4c479ab3df966e214c62",
+									"type": "text-display"
+								},
+								{
+									"id": "follow_on_options_block_cancel_success",
+									"rows": [
+										[
+											{
+												"id": "start_a_new_form_2",
+												"subId": "3578bbae676d4f5185886b229eb619d1",
+												"type": "button"
+											},
+											{
+												"id": "return_to_portal_2",
+												"subId": "9fd5b384ebc8409aadf1156f5d24417d",
+												"type": "button"
+											},
+											{
+												"id": "show_form_xml_2",
+												"subId": "562eae2e29164872ba074a6e85be7a46",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "e9db2ecddc77421db5a5a2b4f00a6fb8",
+									"type": "follow-on-options"
+								}
+							]
+						],
+						"subId": "1cd690237c3049849df9680d9e8798fa",
+						"type": "section"
+					}
+				],
+				[
+					{
+						"id": "avoka_footer_cancel_success",
+						"rows": [
+							[
+								{
+									"id": "form_footer_text_3",
+									"rows": [
+										[
+											{
+												"id": "textDisplay",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"type": "text-display"
+											}
+										]
+									],
+									"subId": "1c81a4fdb80045d49654478a23b0d632",
+									"type": "section-2"
+								}
+							]
+						],
+						"subId": "92dd87f9aa99469396fd45638c42d9d5",
+						"type": "form-footer"
+					}
+				],
+				[],
+				[
+					{
 						"id": "formHeader_1",
 						"path": "",
 						"rows": [
@@ -894,12 +1006,10 @@
 									"id": "logo_1",
 									"path": "",
 									"properties": {},
-									"subId": "05fa1618bac3410cac7208dd0c297403",
 									"type": "image"
 								}
 							]
 						],
-						"subId": "0be6bfdb2cd9477fbfa75947b24ac1a3",
 						"type": "form-header"
 					}
 				],
@@ -912,7 +1022,6 @@
 								{
 									"id": "textDisplay_2",
 									"path": "",
-									"subId": "5a07f0b154ba4c479ab3df966e214c62",
 									"type": "text-display"
 								},
 								{
@@ -920,21 +1029,18 @@
 									"rows": [
 										[
 											{
-												"id": "startANewForm_1",
-												"path": "",
-												"subId": "3578bbae676d4f5185886b229eb619d1",
+												"id": "startANewForm_6",
+												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
 												"type": "button"
 											},
 											{
-												"id": "returnToPortal",
-												"path": "",
-												"subId": "9fd5b384ebc8409aadf1156f5d24417d",
+												"id": "returnToPortal_4",
+												"subId": "2f32e2834fd4493280fa83492b6b143c",
 												"type": "button"
 											},
 											{
-												"id": "showFormXml",
-												"path": "",
-												"subId": "562eae2e29164872ba074a6e85be7a46",
+												"id": "showFormXml_4",
+												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
 												"type": "button"
 											}
 										]
@@ -956,17 +1062,16 @@
 						"rows": [
 							[
 								{
-									"id": "formFooterText",
+									"id": "footerSection",
 									"rows": [
 										[
 											{
-												"id": "textDisplay",
+												"id": "formFooterText_3",
 												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"type": "text-display"
 											}
 										]
 									],
-									"subId": "1c81a4fdb80045d49654478a23b0d632",
 									"type": "section-2"
 								}
 							]
@@ -1953,7 +2058,9 @@
 																"path": "",
 																"properties": {
 																	"src": {
-																		"fileName": "blue-steel-logo.png"
+																		"fileName": "avoka-logo.png",
+																		"height": "40",
+																		"width": "52"
 																	}
 																},
 																"span": {
@@ -2026,11 +2133,16 @@
 												}
 											]
 										],
-										"styles": [],
+										"styles": [
+											"av-docking-errors"
+										],
 										"type": "docking-errors"
 									}
 								]
 							],
+							"rules": {
+								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+							},
 							"styles": [
 								"bs-fixed-header-40325"
 							],
@@ -2046,10 +2158,8 @@
 		[
 			{
 				"exclude": false,
-				"htmlLabel": "Content",
 				"id": "content",
 				"label": "Content",
-				"path": "",
 				"rows": [
 					[
 						{
@@ -2101,9 +2211,7 @@
 						}
 					]
 				],
-				"rules": {
-					"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
-				},
+				"rules": {},
 				"styles": [
 					"bs-min-height-64689",
 					"bs-max-width-73189"
@@ -2467,12 +2575,6 @@
 										"id": "datePicker",
 										"noData": true,
 										"path": "",
-										"styles": [
-											"mg-datepicker",
-											"date-picker-base",
-											"av-global-layout",
-											"av-form-field"
-										],
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
 										"type": "date-picker"
 									}
@@ -3379,7 +3481,8 @@
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
-				"align-top"
+				"align-top",
+				"radio-basic"
 			],
 			"properties": {}
 		},
@@ -3391,7 +3494,6 @@
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
-				"av-radio",
 				"align-top",
 				"av-global-layout"
 			],

@@ -197,7 +197,9 @@
 																"label": "Logo",
 																"properties": {
 																	"src": {
-																		"fileName": "blue-steel-logo.png"
+																		"fileName": "avoka-logo.png",
+																		"width": "52",
+																		"height": "40"
 																	}
 																},
 																"exclude": false,
@@ -285,7 +287,9 @@
 										},
 										"exclude": false,
 										"path": "",
-										"styles": [],
+										"styles": [
+											"av-docking-errors"
+										],
 										"type": "docking-errors",
 										"id": "dockingErrorBlock"
 									}
@@ -297,7 +301,10 @@
 								"bs-fixed-header-40325"
 							],
 							"type": "sticky-panel",
-							"id": "stickyPanel1"
+							"id": "stickyPanel1",
+							"rules": {
+								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+							}
 						}
 					]
 				],
@@ -364,18 +371,14 @@
 						}
 					]
 				],
-				"exclude": false,
-				"htmlLabel": "Content",
-				"path": "",
-				"rules": {
-					"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
-				},
+				"rules": {},
 				"styles": [
 					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
 				"type": "block",
-				"id": "content"
+				"id": "content",
+				"exclude": false
 			}
 		],
 		[
@@ -774,12 +777,6 @@
 								],
 								[
 									{
-										"styles": [
-											"mg-datepicker",
-											"date-picker-base",
-											"av-global-layout",
-											"av-form-field"
-										],
 										"path": "",
 										"noData": true,
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
@@ -1150,16 +1147,14 @@
 		},
 		"checkbox": {
 			"styles": [
-				"mg-checkbox",
 				"av-global-layout",
-				"bs-checkbox-04598",
+				"av-checkbox",
 				"av-form-field"
 			],
 			"availableStyles": [
-				"mg-checkbox",
 				"av-global-layout",
 				"align-top",
-				"bs-checkbox-04598",
+				"av-checkbox",
 				"av-form-field"
 			],
 			"properties": {}
@@ -1167,12 +1162,12 @@
 		"currency": {
 			"styles": [
 				"av-global-layout",
-				"bs-currency-field-75729",
+				"av-currency",
 				"av-form-field"
 			],
 			"availableStyles": [
 				"align-top",
-				"bs-currency-field-75729",
+				"av-currency",
 				"av-global-layout",
 				"av-text-field",
 				"av-form-field"
@@ -1239,7 +1234,6 @@
 				"av-form-field"
 			],
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-checkbox-group",
 				"av-global-layout",
 				"align-top",
@@ -1264,18 +1258,20 @@
 		"data-radio-group": {
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
-				"av-form-field"
+				"av-radio",
+				"av-form-field",
+				"radio-basic"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-form-field"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {}
 		},
@@ -1298,12 +1294,12 @@
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
-				"bs-date-field-64466",
+				"av-date",
 				"av-form-field"
 			],
 			"availableStyles": [
 				"align-top",
-				"bs-date-field-64466",
+				"av-date",
 				"mg-datepicker",
 				"date-picker-base",
 				"av-global-layout",
@@ -1361,7 +1357,6 @@
 		},
 		"payment-type-selector": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-radio-button-group",
 				"av-global-layout",
 				"mg-checkbox-group",
@@ -1421,50 +1416,53 @@
 			],
 			"availableStyles": [
 				"radio-graphical",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
-				"align-top"
+				"align-top",
+				"radio-basic"
 			],
 			"properties": {}
 		},
 		"radio-button-group": {
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
 				"av-radio",
-				"av-form-field"
+				"av-form-field",
+				"radio-basic"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
-				"av-radio",
 				"align-top",
-				"av-form-field"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {}
 		},
 		"radio-button-repeating": {
 			"styles": [
 				"av-global-layout",
-				"radio-basic",
-				"av-form-field"
+				"av-radio",
+				"av-form-field",
+				"radio-basic"
 			],
 			"availableStyles": [
 				"av-global-layout",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-form-field"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {}
 		},
@@ -1673,7 +1671,7 @@
 		},
 		"docking-errors": {
 			"availableStyles": [
-				"av-block-error",
+				"av-docking-errors",
 				"align-top"
 			],
 			"properties": {}
@@ -1967,75 +1965,33 @@
 		"Default": {
 			"label": "Default",
 			"itemOptions": {
+				"logo": {
+					"properties": {
+						"src": {
+							"fileName": "avoka-logo.png",
+							"width": "52",
+							"height": "40"
+						}
+					},
+					"linkedItems": [
+						{
+							"id": "submit_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "save_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "cancel_success_logo",
+							"path": "properties.src"
+						}
+					]
+				},
 				"functionalMenuFabMenu": {
 					"properties": {}
 				}
 			},
-			"styleVars": {
-				"av-body-background-color": "#FFFFFF",
-				"av-button-font-size": "16px",
-				"av-font-color": "#333333",
-				"av-font-family": "Arial, Helvetica, sans-serif",
-				"av-form-background-color": "#FFFFFF",
-				"av-form-inner-background-color": "#FFFFFF",
-				"av-max-form-width": "1020px",
-				"av-menu-active-text-color": "",
-				"av-menu-color": "",
-				"av-menu-color-active": "",
-				"av-menu-font-size": "13px",
-				"av-menu-height": "57px",
-				"av-menu-hover-color": "",
-				"av-menu-text-color": "",
-				"av-menu-text-hover-color": "",
-				"av-neutral-color": "#F2F2F2",
-				"av-neutral-contrast": "#8C8C8C",
-				"av-popover-help": "#0C384B",
-				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#FF6405",
-				"av-primary-contrast": "#FFFFFF",
-				"av-secondary-color": "#FFFFFF",
-				"av-secondary-contrast": "#0C384B",
-				"av-section-1-header-color": "#202B34",
-				"av-section-1-title-font-size": "30px",
-				"av-section-2-header-color": "#202B34",
-				"av-section-2-title-font-size": "21px",
-				"av-slide-menu-color": "#005280",
-				"av-slide-menu-extra-item-active-color": "",
-				"av-slide-menu-extra-item-color": "",
-				"av-slide-menu-extra-item-hover-color": "",
-				"av-slide-menu-extra-item-pointer-active-color": "",
-				"av-slide-menu-extra-item-pointer-color": "",
-				"av-slide-menu-extra-item-pointer-hover-color": "",
-				"av-slide-menu-extra-item-text-active-color": "",
-				"av-slide-menu-extra-item-text-color": "",
-				"av-slide-menu-extra-item-text-hover-color": "",
-				"av-slide-menu-item-active-color": "",
-				"av-slide-menu-item-color": "",
-				"av-slide-menu-item-hover-color": "",
-				"av-slide-menu-item-pointer-active-color": "#f39900",
-				"av-slide-menu-item-pointer-color": "#f39900",
-				"av-slide-menu-item-pointer-hover-color": "#f39900",
-				"av-slide-menu-item-text-active-color": "",
-				"av-slide-menu-item-text-color": "",
-				"av-slide-menu-item-text-hover-color": "",
-				"av-sub-menu-active-background-color": "#FFFFFF",
-				"av-sub-menu-active-text-color": "#005280",
-				"av-sub-menu-background-color": "#FFFFFF",
-				"av-sub-menu-background-hover-color": "#EEEEEE",
-				"av-sub-menu-text-color": "#005280",
-				"av-sub-menu-text-hover-color": "#005280",
-				"av-touch-button-color": "",
-				"mobile-page-gutters": "15px",
-				"page-gutters": "40px"
-			}
-		},
-		"Blue Sky": {
-			"itemOptions": {
-				"functionalMenuFabMenu": {
-					"properties": {}
-				}
-			},
-			"label": "Blue Sky",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
 				"av-button-font-size": "16px",
@@ -2806,17 +2762,21 @@
 						"rows": [
 							[
 								{
-									"properties": {},
-									"path": "",
+									"properties": {
+										"src": {
+											"fileName": "avoka-logo.png",
+											"width": "52",
+											"height": "40"
+										}
+									},
 									"subId": "05fa1618bac3410cac7208dd0c297403",
-									"id": "logo_1",
+									"id": "cancel_success_logo",
 									"type": "image"
 								}
 							]
 						],
-						"path": "",
 						"subId": "0be6bfdb2cd9477fbfa75947b24ac1a3",
-						"id": "formHeader_1",
+						"id": "form_header_cancel_success",
 						"type": "form-header"
 					}
 				],
@@ -2825,9 +2785,8 @@
 						"rows": [
 							[
 								{
-									"path": "",
 									"subId": "5a07f0b154ba4c479ab3df966e214c62",
-									"id": "textDisplay_2",
+									"id": "cancel_success_message",
 									"type": "text-display"
 								},
 								{
@@ -2839,8 +2798,7 @@
 													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
 												},
 												"subId": "3578bbae676d4f5185886b229eb619d1",
-												"path": "",
-												"id": "startANewForm_1",
+												"id": "start_a_new_form_2",
 												"type": "button"
 											},
 											{
@@ -2849,8 +2807,7 @@
 													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
 												},
 												"subId": "9fd5b384ebc8409aadf1156f5d24417d",
-												"path": "",
-												"id": "returnToPortal",
+												"id": "return_to_portal_2",
 												"type": "button"
 											},
 											{
@@ -2859,14 +2816,13 @@
 													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
 												},
 												"subId": "562eae2e29164872ba074a6e85be7a46",
-												"path": "",
-												"id": "showFormXml",
+												"id": "show_form_xml_2",
 												"type": "button"
 											}
 										]
 									],
 									"subId": "e9db2ecddc77421db5a5a2b4f00a6fb8",
-									"id": "followOnOptionsBlock",
+									"id": "follow_on_options_block_cancel_success",
 									"type": "follow-on-options"
 								}
 							]
@@ -2875,9 +2831,8 @@
 							"sectionHeading": "{{T[item.id].label}}",
 							"formName": "{{T[Form.view.id].label}}"
 						},
-						"path": "",
 						"subId": "1cd690237c3049849df9680d9e8798fa",
-						"id": "applicationCancelled",
+						"id": "application_cancelled",
 						"type": "section"
 					}
 				],
@@ -2896,7 +2851,7 @@
 										]
 									],
 									"subId": "1c81a4fdb80045d49654478a23b0d632",
-									"id": "formFooterText",
+									"id": "form_footer_text_3",
 									"type": "section-2"
 								}
 							]
@@ -2904,11 +2859,114 @@
 						"rules": {
 							"sh": "!Util.isReceipt"
 						},
+						"subId": "92dd87f9aa99469396fd45638c42d9d5",
+						"id": "avoka_footer_cancel_success",
+						"type": "form-footer"
+					}
+				],
+				[],
+				[
+					{
+						"rows": [
+							[
+								{
+									"properties": {},
+									"path": "",
+									"type": "image",
+									"id": "logo_1"
+								}
+							]
+						],
+						"path": "",
+						"type": "form-header",
+						"id": "formHeader_1"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"path": "",
+									"type": "text-display",
+									"id": "textDisplay_2"
+								},
+								{
+									"rows": [
+										[
+											{
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
+												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
+												"id": "startANewForm_6",
+												"type": "button"
+											},
+											{
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
+												"subId": "2f32e2834fd4493280fa83492b6b143c",
+												"id": "returnToPortal_4",
+												"type": "button"
+											},
+											{
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
+												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
+												"id": "showFormXml_4",
+												"type": "button"
+											}
+										]
+									],
+									"type": "follow-on-options",
+									"subId": "e9db2ecddc77421db5a5a2b4f00a6fb8",
+									"id": "followOnOptionsBlock"
+								}
+							]
+						],
+						"properties": {
+							"sectionHeading": "{{T[item.id].label}}",
+							"formName": "{{T[Form.view.id].label}}",
+							"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>"
+						},
+						"path": "",
+						"subId": "1cd690237c3049849df9680d9e8798fa",
+						"type": "section",
+						"id": "applicationCancelled"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "formFooterText_3",
+												"type": "text-display"
+											}
+										]
+									],
+									"id": "footerSection",
+									"type": "section-2"
+								}
+							]
+						],
+						"type": "form-footer",
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"exclude": false,
 						"path": "",
 						"subId": "92dd87f9aa99469396fd45638c42d9d5",
-						"id": "formFooter",
-						"type": "form-footer"
+						"id": "formFooter"
 					}
 				],
 				[]
@@ -3167,9 +3225,9 @@
 											}
 										]
 									],
+									"type": "section-2",
 									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"id": "formFooterText_2",
-									"type": "section-2"
+									"id": "formFooterText_2"
 								}
 							]
 						],
@@ -3515,9 +3573,9 @@
 											}
 										]
 									],
+									"type": "section-2",
 									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"id": "formFooterText_1",
-									"type": "section-2"
+									"id": "formFooterText_1"
 								}
 							]
 						],
@@ -3631,9 +3689,9 @@
 											}
 										]
 									],
+									"type": "section-2",
 									"subId": "082a0f34bab7496ab942025374652910",
-									"id": "formFooterText_4",
-									"type": "section-2"
+									"id": "formFooterText_4"
 								}
 							]
 						],
@@ -3860,6 +3918,27 @@
 	"clearHidden": "no",
 	"path": "AvokaSmartForm",
 	"brandOptions": {
+		"logo": [
+			{
+				"category": "Logo",
+				"label": "Logo",
+				"path": "properties.src",
+				"linkedItems": [
+					{
+						"id": "submit_success_logo",
+						"path": "properties.src"
+					},
+					{
+						"id": "save_success_logo",
+						"path": "properties.src"
+					},
+					{
+						"id": "cancel_success_logo",
+						"path": "properties.src"
+					}
+				]
+			}
+		],
 		"functionalMenuFabMenu": []
 	},
 	"themeOverrides": [
@@ -3888,7 +3967,7 @@
 		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15461",
 		"publishLibraryId": 16680
 	},
-	"selectedBrand": "Blue Sky",
+	"selectedBrand": "Default",
 	"styleMods": {
 		"id-submit2": {
 			"blocks": {
@@ -4056,7 +4135,7 @@
 					},
 					"content": {
 						"label": "Content",
-						"htmlLabel": "Content",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5264,7 +5343,7 @@
 						"htmlLabel": "",
 						"mandatoryMsg": ""
 					},
-					"formHeader_1": {
+					"form_header_cancel_success": {
 						"label": "Form Header",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -5272,7 +5351,7 @@
 							"trackingCodePrefix": "Reference Code: "
 						}
 					},
-					"logo_1": {
+					"cancel_success_logo": {
 						"label": "Logo",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -5282,7 +5361,7 @@
 							"imageLink": ""
 						}
 					},
-					"applicationCancelled": {
+					"application_cancelled": {
 						"label": "Application Cancelled",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -5293,9 +5372,96 @@
 							"helpText": ""
 						}
 					},
-					"textDisplay_2": {
+					"cancel_success_message": {
 						"label": "Text Display",
 						"htmlLabel": "Your application has been cancelled and will not be processed.",
+						"mandatoryMsg": ""
+					},
+					"follow_on_options_block_cancel_success": {
+						"label": "Follow On Options Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"start_a_new_form_2": {
+						"label": "Start a new form",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"return_to_portal_2": {
+						"label": "Return to portal",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"show_form_xml_2": {
+						"label": "Show form XML",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"avoka_footer_cancel_success": {
+						"label": "Form Footer",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"form_footer_text_3": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
+					},
+					"formHeader_1": {
+						"label": "Form Header",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"trackingCodePrefix": "Reference Code: "
+						}
+					},
+					"logo_1": {
+						"label": "Image",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"applicationCancelled": {
+						"label": "Section Level 1",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"sectionHeading": "{{T[item.id].label}}",
+							"formName": "{{T[Form.view.id].label}}",
+							"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>",
+							"helpText": ""
+						}
+					},
+					"textDisplay_2": {
+						"label": "Text Display",
+						"htmlLabel": "Your display text",
 						"mandatoryMsg": ""
 					},
 					"followOnOptionsBlock": {
@@ -5306,7 +5472,7 @@
 							"ariaLabel": ""
 						}
 					},
-					"startANewForm_1": {
+					"startANewForm_6": {
 						"label": "Start a new form",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -5314,7 +5480,7 @@
 							"ariaLabel": ""
 						}
 					},
-					"returnToPortal": {
+					"returnToPortal_4": {
 						"label": "Return to portal",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -5322,7 +5488,7 @@
 							"ariaLabel": ""
 						}
 					},
-					"showFormXml": {
+					"showFormXml_4": {
 						"label": "Show form XML",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -5338,7 +5504,7 @@
 							"ariaLabel": ""
 						}
 					},
-					"formFooterText": {
+					"footerSection": {
 						"label": "Footer Section",
 						"htmlLabel": "Footer Section",
 						"mandatoryMsg": "",
@@ -5346,7 +5512,7 @@
 							"infoText": ""
 						}
 					},
-					"textDisplay": {
+					"formFooterText_3": {
 						"label": "Form Footer Text",
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
