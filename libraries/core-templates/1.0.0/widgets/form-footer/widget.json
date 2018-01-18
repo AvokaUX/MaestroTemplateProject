@@ -18,14 +18,14 @@
 						"type": "text-display",
 						"styles": [
 							"form-footer-text"
-						]
+						],
+						"pubId": "8c9b02742d3841d8a9c30d826878b6af"
 					}
 				]
 			],
 			
 			"styles": [
-				"mg-section-2",
-				"av-section"
+				"mg-section-2"
 			],
 			"type": "section-2"
 			}
@@ -35,9 +35,6 @@
 	"rules": {
 		"sh": "!Util.isReceipt"
 	},
-	"styles": [
-		"bs-max-width-73189"
-	],
 	"animateVisibility": false,
 	"noData": true,
 	"icon": "avoka-power.png",
