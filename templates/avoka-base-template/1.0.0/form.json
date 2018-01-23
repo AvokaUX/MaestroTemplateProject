@@ -168,12 +168,10 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "options_2",
 															"rows": [
 																[
 																	{
-																		"exclude": false,
 																		"id": "help_option_1",
 																		"rows": [
 																			[
@@ -184,7 +182,6 @@
 																					"type": "image"
 																				},
 																				{
-																					"exclude": false,
 																					"id": "container_help_option_1",
 																					"rows": [
 																						[
@@ -203,7 +200,6 @@
 																						],
 																						[
 																							{
-																								"exclude": false,
 																								"id": "get_help_1",
 																								"subId": "ec4a7b4bb428414b8a37d1b857682a1a",
 																								"type": "button"
@@ -269,7 +265,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "feedback_2",
 															"rows": [
 																[
@@ -337,147 +332,6 @@
 				]
 			],
 			"type": "cancel-confirm"
-		},
-		"dialog": {
-			"exclude": false,
-			"id": "dialog",
-			"path": "",
-			"rows": [
-				[
-					{
-						"id": "dialogHeader",
-						"rows": [
-							[
-								{
-									"id": "close_1",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"id": "dialogBody_1",
-						"rows": [
-							[
-								{
-									"id": "dialogContent_1",
-									"rows": [
-										[
-											{
-												"id": "section_3",
-												"rows": [
-													[]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_1",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_3",
-												"rows": [
-													[
-														{
-															"id": "okay_1",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
-									"type": "block"
-								}
-							]
-						],
-						"type": "block"
-					}
-				],
-				[
-					{
-						"exclude": false,
-						"id": "dialogBody",
-						"path": "",
-						"rows": [
-							[
-								{
-									"exclude": false,
-									"id": "dialogContent",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "section_2",
-												"rows": [
-													[]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_1",
-												"path": "",
-												"rows": [
-													[
-														{
-															"id": "okay",
-															"path": "",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
-									"type": "block"
-								}
-							]
-						],
-						"type": "block"
-					}
-				]
-			],
-			"type": "dialog"
 		},
 		"formhelp": {
 			"id": "formhelp",
@@ -1031,8 +885,7 @@
 		"saveconfirm",
 		"savechallenge",
 		"cancelconfirm",
-		"showxml",
-		"dialog"
+		"showxml"
 	],
 	"localModals": [
 		"cancelsuccess",
@@ -1045,11 +898,14 @@
 	"modals": {
 		"cancelsuccess": {
 			"exclude": false,
+			"htmlLabel": "Cancel Success old",
 			"id": "cancelsuccess",
+			"label": "Cancel Success old",
 			"properties": {},
 			"rows": [
 				[
 					{
+						"exclude": false,
 						"id": "modalMobileHeader",
 						"path": "",
 						"subId": "0c14fcab0032461d9c4e5e4648b243af",
@@ -1058,6 +914,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "form_header_cancel_success",
 						"rows": [
 							[
@@ -1234,6 +1091,7 @@
 			"type": "modal-cancel-success"
 		},
 		"savesuccess": {
+			"exclude": false,
 			"htmlLabel": "Save Success",
 			"id": "savesuccess",
 			"label": "Save Success",
@@ -1624,6 +1482,7 @@
 			"type": "modal-save-success"
 		},
 		"submitsuccess": {
+			"exclude": false,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
