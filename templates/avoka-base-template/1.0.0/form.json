@@ -366,12 +366,50 @@
 												"rows": [
 													[
 														{
-															"id": "need_onlineChatBlock_1",
-															"span": {
-																"lg": 6
-															},
-															"subId": "e980bc7790844721b70b990b2f02348c",
-															"type": "text-input"
+															"id": "need_onlineChatBlock_2",
+															"rows": [
+																[
+																	{
+																		"id": "infoBlockImage_5",
+																		"properties": {},
+																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																		"type": "image"
+																	},
+																	{
+																		"id": "block_6",
+																		"rows": [
+																			[
+																				{
+																					"id": "online_chat_header",
+																					"subId": "e349c33a8a244107942968737f085a50",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"id": "online_chat_times",
+																					"subId": "a0f122e70d81447bae6f63fe3b381734",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"exclude": false,
+																					"id": "start_chat",
+																					"styles": [
+																						"form-help-start-chat-button",
+																						"bs-dialog-button-12962"
+																					],
+																					"type": "button"
+																				}
+																			]
+																		],
+																		"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																		"type": "block"
+																	}
+																]
+															],
+															"type": "advice-block-info"
 														},
 														{
 															"id": "need_callUsBlock_1",
@@ -413,9 +451,6 @@
 																	}
 																]
 															],
-															"span": {
-																"lg": 6
-															},
 															"subId": "77e108d25348486b8ea63797c551f722",
 															"type": "advice-block-info"
 														},
@@ -879,7 +914,6 @@
 		"pageController": []
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"formhelp",
 		"saveconfirm",
@@ -1091,7 +1125,6 @@
 			"type": "modal-cancel-success"
 		},
 		"savesuccess": {
-			"exclude": false,
 			"htmlLabel": "Save Success",
 			"id": "savesuccess",
 			"label": "Save Success",
@@ -1482,7 +1515,6 @@
 			"type": "modal-save-success"
 		},
 		"submitsuccess": {
-			"exclude": false,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",

@@ -34,25 +34,88 @@
 											[
 												{
 													"span": {
-														"lg": 4
+														"md": 6,
+														"lg": 6
 													},
 													"label": "Online Chat Block",
+													"rows": [
+														[
+															{
+																"properties": {},
+																"exclude": false,
+																"path": "",
+																"id": "infoBlockImage_4",
+																"type": "image"
+															},
+															{
+																"rows": [
+																	[
+																		{
+																			"label": "Online chat",
+																			"htmlLabel": "Online chat",
+																			"exclude": false,
+																			"path": "",
+																			"id": "online_chat_header",
+																			"type": "text-display"
+																		}
+																	],
+																	[
+																		{
+																			"label": "Online chat times",
+																			"htmlLabel": "(8am - 10pm, Mon - Fri)",
+																			"exclude": false,
+																			"path": "",
+																			"id": "online_chat_times",
+																			"type": "text-display"
+																		}
+																	],
+																	[
+																		{
+																			"span": {
+																				"md": 4,
+																				"lg": 4
+																			},
+																			"offset": {
+																				"md": 4,
+																				"lg": 4
+																			},
+																			"label": "Start chat",
+																			"exclude": false,
+																			"htmlLabel": "Start chat",
+																			"path": "",
+																			"styles": [
+																				"form-help-start-chat-button",
+																				"bs-dialog-button"
+																			],
+																			"type": "button",
+																			"id": "start_chat"
+																		}
+																	]
+																],
+																"exclude": false,
+																"path": "",
+																"id": "block_6",
+																"type": "block"
+															}
+														]
+													],
+													"type": "advice-block-info",
 													"styles": [
-														"bs-online-chat-82522"
+														"av-message-block",
+														"form-help-option-container"
 													],
 													"entityPath": "need",
 													"exclude": false,
 													"htmlLabel": "Online Chat Block",
 													"path": "Need/OnlineChatBlock",
 													"pathContext": "abs",
-													"type": "text-input",
-													"id": "need_onlineChatBlock_1",
-													"pubId": "e980bc7790844721b70b990b2f02348c"
+													"id": "need_onlineChatBlock_1"
+
 												},
 												{
 													"span": {
 														"md": 6,
-														"lg": 4
+														"lg": 6
 													},
 													"label": "Call us block",
 													"rows": [
