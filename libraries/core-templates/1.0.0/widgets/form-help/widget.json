@@ -197,31 +197,8 @@
 												},
 												{
 													"span": {
-														"md": 4,
-														"lg": 4
-													},
-													"label": "Assistant",
-													"properties": {
-														"src": {
-															"fileName": "Assistant.png"
-														}
-													},
-													"entityPath": "need",
-													"exclude": false,
-													"htmlLabel": "Assistant",
-													"path": "",
-													"pathContext": "abs",
-													"styles": [
-														"bs-assistant-image-73027"
-													],
-													"type": "image",
-													"id": "need_assistant_2",
-													"pubId": "b025358609db40e9af2928640aaa2178"
-												},
-												{
-													"span": {
-														"md": 9,
-														"lg": 8
+														"md": 12,
+														"lg": 12
 													},
 													"label": "Visit us",
 													"rows": [

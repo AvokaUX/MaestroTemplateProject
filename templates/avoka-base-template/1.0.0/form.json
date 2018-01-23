@@ -334,15 +334,18 @@
 			"type": "cancel-confirm"
 		},
 		"formhelp": {
+			"exclude": false,
+			"htmlLabel": "Form Help",
 			"id": "formhelp",
+			"label": "Form Help",
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_5",
+						"id": "dialogHeader_3",
 						"rows": [
 							[
 								{
-									"id": "close_5",
+									"id": "close_3",
 									"subId": "9e296fc30de940628ec8b5dbda46ae26",
 									"type": "icon-button"
 								}
@@ -354,48 +357,48 @@
 				],
 				[
 					{
-						"id": "dialogBody_4",
+						"id": "dialogBody_3",
 						"rows": [
 							[
 								{
-									"id": "dialog_content_form_help_1",
+									"id": "dialog_content_form_help",
 									"rows": [
 										[
 											{
-												"id": "need_assistance_1",
+												"id": "need_assistance",
 												"rows": [
 													[
 														{
-															"id": "need_onlineChatBlock_2",
+															"id": "need_onlineChatBlock_3",
+															"path": "",
 															"rows": [
 																[
 																	{
-																		"id": "infoBlockImage_5",
+																		"id": "infoBlockImage_7",
 																		"properties": {},
 																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
 																		"type": "image"
 																	},
 																	{
-																		"id": "block_6",
+																		"id": "block_9",
 																		"rows": [
 																			[
 																				{
-																					"id": "online_chat_header",
+																					"id": "online_chat_header_2",
 																					"subId": "e349c33a8a244107942968737f085a50",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"id": "online_chat_times",
+																					"id": "online_chat_times_2",
 																					"subId": "a0f122e70d81447bae6f63fe3b381734",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"exclude": false,
-																					"id": "start_chat",
+																					"id": "start_chat_2",
 																					"styles": [
 																						"form-help-start-chat-button",
 																						"bs-dialog-button-12962"
@@ -412,35 +415,35 @@
 															"type": "advice-block-info"
 														},
 														{
-															"id": "need_callUsBlock_1",
+															"id": "need_callUsBlock_2",
 															"rows": [
 																[
 																	{
-																		"id": "infoBlockImage_4",
+																		"id": "infoBlockImage_8",
 																		"properties": {},
 																		"subId": "066f9f02c8ed4d3dbe6fbafadb2c168c",
 																		"type": "image"
 																	},
 																	{
-																		"id": "block_7",
+																		"id": "block_10",
 																		"rows": [
 																			[
 																				{
-																					"id": "callUs_2",
+																					"id": "callUs_3",
 																					"subId": "40b0d27a39634b32aa5aae46f63f2878",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"id": "anytimeDayOrNight_2",
+																					"id": "anytimeDayOrNight_3",
 																					"subId": "f65b0de563ec4eb586ada9d3ef28dacd",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"id": "_1800_2",
+																					"id": "_1800_3",
 																					"subId": "103eaa13e6744ec69b8514f232cb918d",
 																					"type": "link"
 																				}
@@ -455,21 +458,10 @@
 															"type": "advice-block-info"
 														},
 														{
-															"exclude": true,
-															"id": "need_assistant_2",
-															"properties": {},
-															"subId": "b025358609db40e9af2928640aaa2178",
-															"type": "image"
-														},
-														{
-															"id": "need_visitUs_1",
+															"id": "need_visitUs_2",
 															"rows": [
 																[]
 															],
-															"span": {
-																"lg": 12,
-																"md": 12
-															},
 															"subId": "ff69444690424238a908235995c16dd5",
 															"type": "section-2"
 														}
@@ -486,15 +478,15 @@
 							],
 							[
 								{
-									"id": "dialogFooter_10",
+									"id": "dialogFooter_1",
 									"rows": [
 										[
 											{
-												"id": "dialogFooterBlock_4",
+												"id": "dialogFooterBlock_3",
 												"rows": [
 													[
 														{
-															"id": "okay_10",
+															"id": "okay_1",
 															"rules": {
 																"sh": ""
 															},
@@ -915,11 +907,11 @@
 	},
 	"id": "AvokaSmartForm",
 	"localDialogs": [
-		"formhelp",
 		"saveconfirm",
 		"savechallenge",
 		"cancelconfirm",
-		"showxml"
+		"showxml",
+		"formhelp"
 	],
 	"localModals": [
 		"cancelsuccess",
