@@ -168,10 +168,12 @@
 													],
 													[
 														{
+															"exclude": false,
 															"id": "options_2",
 															"rows": [
 																[
 																	{
+																		"exclude": false,
 																		"id": "help_option_1",
 																		"rows": [
 																			[
@@ -182,6 +184,7 @@
 																					"type": "image"
 																				},
 																				{
+																					"exclude": false,
 																					"id": "container_help_option_1",
 																					"rows": [
 																						[
@@ -200,6 +203,7 @@
 																						],
 																						[
 																							{
+																								"exclude": false,
 																								"id": "get_help_1",
 																								"subId": "ec4a7b4bb428414b8a37d1b857682a1a",
 																								"type": "button"
@@ -265,6 +269,7 @@
 													],
 													[
 														{
+															"exclude": false,
 															"id": "feedback_2",
 															"rows": [
 																[
@@ -333,6 +338,147 @@
 			],
 			"type": "cancel-confirm"
 		},
+		"dialog": {
+			"exclude": false,
+			"id": "dialog",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader",
+						"rows": [
+							[
+								{
+									"id": "close_1",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_1",
+						"rows": [
+							[
+								{
+									"id": "dialogContent_1",
+									"rows": [
+										[
+											{
+												"id": "section_3",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_1",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_3",
+												"rows": [
+													[
+														{
+															"id": "okay_1",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"id": "dialogBody",
+						"path": "",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"id": "dialogContent",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "section_2",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_1",
+												"path": "",
+												"rows": [
+													[
+														{
+															"id": "okay",
+															"path": "",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				]
+			],
+			"type": "dialog"
+		},
 		"formhelp": {
 			"id": "formhelp",
 			"rows": [
@@ -367,6 +513,9 @@
 													[
 														{
 															"id": "need_onlineChatBlock_1",
+															"span": {
+																"lg": 6
+															},
 															"subId": "e980bc7790844721b70b990b2f02348c",
 															"type": "text-input"
 														},
@@ -410,10 +559,14 @@
 																	}
 																]
 															],
+															"span": {
+																"lg": 6
+															},
 															"subId": "77e108d25348486b8ea63797c551f722",
 															"type": "advice-block-info"
 														},
 														{
+															"exclude": true,
 															"id": "need_assistant_2",
 															"properties": {},
 															"subId": "b025358609db40e9af2928640aaa2178",
@@ -424,6 +577,10 @@
 															"rows": [
 																[]
 															],
+															"span": {
+																"lg": 12,
+																"md": 12
+															},
 															"subId": "ff69444690424238a908235995c16dd5",
 															"type": "section-2"
 														}
@@ -508,6 +665,11 @@
 													[
 														{
 															"id": "save_challenge_message",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "99a462658fab4254b2b4ce80afb34406",
 															"type": "text-display"
 														}
@@ -519,6 +681,10 @@
 																[
 																	{
 																		"id": "save_challenge_reference_code",
+																		"offset": {
+																			"lg": "3",
+																			"md": "3"
+																		},
 																		"subId": "85628c35c7c64f678d83b46721c08e73",
 																		"type": "text-input"
 																	}
@@ -618,6 +784,11 @@
 													[
 														{
 															"id": "save_confirm_message",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "4aa53510219745c392c1b2c184aff183",
 															"type": "text-display"
 														}
@@ -860,7 +1031,8 @@
 		"saveconfirm",
 		"savechallenge",
 		"cancelconfirm",
-		"showxml"
+		"showxml",
+		"dialog"
 	],
 	"localModals": [
 		"cancelsuccess",
