@@ -374,6 +374,9 @@
 													[
 														{
 															"id": "need_onlineChatBlock_1",
+															"span": {
+																"lg": 6
+															},
 															"subId": "e980bc7790844721b70b990b2f02348c",
 															"type": "text-input"
 														},
@@ -417,10 +420,14 @@
 																	}
 																]
 															],
+															"span": {
+																"lg": 6
+															},
 															"subId": "77e108d25348486b8ea63797c551f722",
 															"type": "advice-block-info"
 														},
 														{
+															"exclude": true,
 															"id": "need_assistant_2",
 															"properties": {},
 															"subId": "b025358609db40e9af2928640aaa2178",
@@ -431,6 +438,10 @@
 															"rows": [
 																[]
 															],
+															"span": {
+																"lg": 12,
+																"md": 12
+															},
 															"subId": "ff69444690424238a908235995c16dd5",
 															"type": "section-2"
 														}
@@ -515,6 +526,11 @@
 													[
 														{
 															"id": "save_challenge_message",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "99a462658fab4254b2b4ce80afb34406",
 															"type": "text-display"
 														}
@@ -526,6 +542,10 @@
 																[
 																	{
 																		"id": "save_challenge_reference_code",
+																		"offset": {
+																			"lg": "3",
+																			"md": "3"
+																		},
 																		"subId": "85628c35c7c64f678d83b46721c08e73",
 																		"type": "text-input"
 																	}
@@ -625,6 +645,11 @@
 													[
 														{
 															"id": "save_confirm_message",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "4aa53510219745c392c1b2c184aff183",
 															"type": "text-display"
 														}
@@ -880,11 +905,14 @@
 	"modals": {
 		"cancelsuccess": {
 			"exclude": false,
+			"htmlLabel": "Cancel Success old",
 			"id": "cancelsuccess",
+			"label": "Cancel Success old",
 			"properties": {},
 			"rows": [
 				[
 					{
+						"exclude": false,
 						"id": "modalMobileHeader",
 						"path": "",
 						"subId": "0c14fcab0032461d9c4e5e4648b243af",
@@ -893,6 +921,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "form_header_cancel_success",
 						"rows": [
 							[
@@ -1069,6 +1098,7 @@
 			"type": "modal-cancel-success"
 		},
 		"savesuccess": {
+			"exclude": false,
 			"htmlLabel": "Save Success",
 			"id": "savesuccess",
 			"label": "Save Success",
@@ -1459,6 +1489,7 @@
 			"type": "modal-save-success"
 		},
 		"submitsuccess": {
+			"exclude": false,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",

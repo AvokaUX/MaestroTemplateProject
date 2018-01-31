@@ -297,14 +297,14 @@
 							],
 							"exclude": false,
 							"path": "StickyPanel",
+							"rules": {
+								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+							},
 							"styles": [
 								"bs-fixed-header-40325"
 							],
 							"type": "sticky-panel",
-							"id": "stickyPanel1",
-							"rules": {
-								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
-							}
+							"id": "stickyPanel1"
 						}
 					]
 				],
@@ -371,14 +371,14 @@
 						}
 					]
 				],
+				"exclude": false,
 				"rules": {},
 				"styles": [
 					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
 				"type": "block",
-				"id": "content",
-				"exclude": false
+				"id": "content"
 			}
 		],
 		[
@@ -1965,14 +1965,10 @@
 		"Default": {
 			"label": "Default",
 			"itemOptions": {
+				"functionalMenuFabMenu": {
+					"properties": {}
+				},
 				"logo": {
-					"properties": {
-						"src": {
-							"fileName": "avoka-logo.png",
-							"width": "52",
-							"height": "40"
-						}
-					},
 					"linkedItems": [
 						{
 							"id": "submit_success_logo",
@@ -1986,10 +1982,14 @@
 							"id": "cancel_success_logo",
 							"path": "properties.src"
 						}
-					]
-				},
-				"functionalMenuFabMenu": {
-					"properties": {}
+					],
+					"properties": {
+						"src": {
+							"fileName": "avoka-logo.png",
+							"height": "40",
+							"width": "52"
+						}
+					}
 				}
 			},
 			"styleVars": {
@@ -2098,11 +2098,17 @@
 												"rows": [
 													[
 														{
+															"span": {
+																"lg": 6
+															},
 															"subId": "e980bc7790844721b70b990b2f02348c",
 															"id": "need_onlineChatBlock_1",
 															"type": "text-input"
 														},
 														{
+															"span": {
+																"lg": 6
+															},
 															"rows": [
 																[
 																	{
@@ -2147,11 +2153,16 @@
 														},
 														{
 															"properties": {},
+															"exclude": true,
 															"subId": "b025358609db40e9af2928640aaa2178",
 															"id": "need_assistant_2",
 															"type": "image"
 														},
 														{
+															"span": {
+																"md": 12,
+																"lg": 12
+															},
 															"rows": [
 																[]
 															],
@@ -2246,6 +2257,11 @@
 												"rows": [
 													[
 														{
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "4aa53510219745c392c1b2c184aff183",
 															"id": "save_confirm_message",
 															"type": "text-display"
@@ -2347,6 +2363,11 @@
 												"rows": [
 													[
 														{
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "99a462658fab4254b2b4ce80afb34406",
 															"id": "save_challenge_message",
 															"type": "text-display"
@@ -2357,6 +2378,10 @@
 															"rows": [
 																[
 																	{
+																		"offset": {
+																			"md": "3",
+																			"lg": "3"
+																		},
 																		"rules": {
 																			"eq": "return Util.getUrlQueryParam(\"referenceNumber\") != \"\" && Util.getUrlQueryParam(\"referenceNumber\") ? Util.getUrlQueryParam(\"referenceNumber\") : Form.saveChallengeRequired === true ? Form.getSystemData(\"TrackingCode\") : value;"
 																		},
@@ -2754,7 +2779,8 @@
 						"path": "",
 						"subId": "0c14fcab0032461d9c4e5e4648b243af",
 						"id": "modalMobileHeader",
-						"type": "modal-mobile-header"
+						"type": "modal-mobile-header",
+						"exclude": false
 					}
 				],
 				[
@@ -2777,7 +2803,8 @@
 						],
 						"subId": "0be6bfdb2cd9477fbfa75947b24ac1a3",
 						"id": "form_header_cancel_success",
-						"type": "form-header"
+						"type": "form-header",
+						"exclude": false
 					}
 				],
 				[
@@ -2974,7 +3001,9 @@
 			"properties": {},
 			"type": "modal-cancel-success",
 			"exclude": false,
-			"id": "cancelsuccess"
+			"id": "cancelsuccess",
+			"label": "Cancel Success old",
+			"htmlLabel": "Cancel Success old"
 		},
 		"submitsuccess_1": {
 			"label": "Submit Success old",
@@ -3225,9 +3254,9 @@
 											}
 										]
 									],
-									"type": "section-2",
 									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"id": "formFooterText_2"
+									"id": "formFooterText_2",
+									"type": "section-2"
 								}
 							]
 						],
@@ -3573,9 +3602,9 @@
 											}
 										]
 									],
-									"type": "section-2",
 									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"id": "formFooterText_1"
+									"id": "formFooterText_1",
+									"type": "section-2"
 								}
 							]
 						],
@@ -3689,9 +3718,9 @@
 											}
 										]
 									],
-									"type": "section-2",
 									"subId": "082a0f34bab7496ab942025374652910",
-									"id": "formFooterText_4"
+									"id": "formFooterText_4",
+									"type": "section-2"
 								}
 							]
 						],
@@ -3707,7 +3736,8 @@
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Save Success",
-			"id": "savesuccess"
+			"id": "savesuccess",
+			"exclude": false
 		},
 		"submitsuccess": {
 			"label": "Submit Success",
@@ -3861,7 +3891,8 @@
 			"properties": {},
 			"type": "modal-page-core",
 			"htmlLabel": "Submit Success",
-			"id": "submitsuccess"
+			"id": "submitsuccess",
+			"exclude": false
 		}
 	},
 	"formOptions": {
@@ -3918,11 +3949,11 @@
 	"clearHidden": "no",
 	"path": "AvokaSmartForm",
 	"brandOptions": {
+		"functionalMenuFabMenu": [],
 		"logo": [
 			{
 				"category": "Logo",
 				"label": "Logo",
-				"path": "properties.src",
 				"linkedItems": [
 					{
 						"id": "submit_success_logo",
@@ -3936,10 +3967,10 @@
 						"id": "cancel_success_logo",
 						"path": "properties.src"
 					}
-				]
+				],
+				"path": "properties.src"
 			}
-		],
-		"functionalMenuFabMenu": []
+		]
 	},
 	"themeOverrides": [
 		{
@@ -5327,8 +5358,8 @@
 						}
 					},
 					"cancelsuccess": {
-						"label": "Cancel Success",
-						"htmlLabel": "",
+						"label": "Cancel Success old",
+						"htmlLabel": "Cancel Success old",
 						"mandatoryMsg": "",
 						"properties": {
 							"leavePageWarningMessage": "",
