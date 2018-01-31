@@ -2066,165 +2066,6 @@
 		]
 	},
 	"dialogs": {
-		"formhelp": {
-			"rows": [
-				[
-					{
-						"rows": [
-							[
-								{
-									"rules": {
-										"click": "Form.showDialog();"
-									},
-									"subId": "9e296fc30de940628ec8b5dbda46ae26",
-									"id": "close_5",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "5c9d9ff72c1f42e689d9e5be9b70217b",
-						"id": "dialogHeader_5",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rows": [
-													[
-														{
-															"span": {
-																"lg": 6
-															},
-															"subId": "e980bc7790844721b70b990b2f02348c",
-															"id": "need_onlineChatBlock_1",
-															"type": "text-input"
-														},
-														{
-															"span": {
-																"lg": 6
-															},
-															"rows": [
-																[
-																	{
-																		"properties": {},
-																		"subId": "066f9f02c8ed4d3dbe6fbafadb2c168c",
-																		"id": "infoBlockImage_4",
-																		"type": "image"
-																	},
-																	{
-																		"rows": [
-																			[
-																				{
-																					"subId": "40b0d27a39634b32aa5aae46f63f2878",
-																					"id": "callUs_2",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"subId": "f65b0de563ec4eb586ada9d3ef28dacd",
-																					"id": "anytimeDayOrNight_2",
-																					"type": "text-display"
-																				}
-																			],
-																			[
-																				{
-																					"subId": "103eaa13e6744ec69b8514f232cb918d",
-																					"id": "_1800_2",
-																					"type": "link"
-																				}
-																			]
-																		],
-																		"subId": "c7e09a0bd7c54ffb9ac7ffcc8a59a4e7",
-																		"id": "block_7",
-																		"type": "block"
-																	}
-																]
-															],
-															"subId": "77e108d25348486b8ea63797c551f722",
-															"id": "need_callUsBlock_1",
-															"type": "advice-block-info"
-														},
-														{
-															"properties": {},
-															"exclude": true,
-															"subId": "b025358609db40e9af2928640aaa2178",
-															"id": "need_assistant_2",
-															"type": "image"
-														},
-														{
-															"span": {
-																"md": 12,
-																"lg": 12
-															},
-															"rows": [
-																[]
-															],
-															"properties": {
-																"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
-															},
-															"subId": "ff69444690424238a908235995c16dd5",
-															"id": "need_visitUs_1",
-															"type": "section-2"
-														}
-													]
-												],
-												"subId": "1107cf85ef3843dc91c0824f91ecaf68",
-												"id": "need_assistance_1",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "3cd91d5bc47e4583a3a00652f0d3cc10",
-									"id": "dialog_content_form_help_1",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"rows": [
-										[
-											{
-												"rows": [
-													[
-														{
-															"rules": {
-																"click": "Form.showDialog(\"\");",
-																"sh": ""
-															},
-															"subId": "dc7f4001523f4d2abc3993898559c950",
-															"id": "okay_10",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "4504af28b4034b5b80bd444f5ae4f86e",
-												"id": "dialogFooterBlock_4",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "a8009a0488e04ef6b4962a2f5d0c5e51",
-									"id": "dialogFooter_10",
-									"type": "block"
-								}
-							]
-						],
-						"subId": "113f48f6928a4f5e991def874d02cb4a",
-						"id": "dialogBody_4",
-						"type": "block"
-					}
-				]
-			],
-			"type": "form-help",
-			"id": "formhelp"
-		},
 		"saveconfirm": {
 			"rows": [
 				[
@@ -2634,13 +2475,15 @@
 												],
 												"subId": "4e0da32bfa7f4de99b42910a16e5f34b",
 												"id": "confirm_cancellation_1",
-												"type": "section-2"
+												"type": "section-2",
+												"exclude": false
 											}
 										]
 									],
 									"subId": "c5ad53604b5a45ebb50f466dce69b7e5",
 									"id": "dialog_content_cancel_confirm_1",
-									"type": "dialog-content"
+									"type": "dialog-content",
+									"exclude": false
 								}
 							],
 							[
@@ -2769,18 +2612,202 @@
 			],
 			"type": "show-xml",
 			"id": "showxml"
+		},
+		"formhelp": {
+			"rows": [
+				[
+					{
+						"rows": [
+							[
+								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
+									"subId": "9e296fc30de940628ec8b5dbda46ae26",
+									"id": "close_3",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "5c9d9ff72c1f42e689d9e5be9b70217b",
+						"id": "dialogHeader_3",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"properties": {},
+																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																		"id": "infoBlockImage_7",
+																		"type": "image"
+																	},
+																	{
+																		"rows": [
+																			[
+																				{
+																					"subId": "e349c33a8a244107942968737f085a50",
+																					"id": "online_chat_header_2",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"subId": "a0f122e70d81447bae6f63fe3b381734",
+																					"id": "online_chat_times_2",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"styles": [
+																						"form-help-start-chat-button",
+																						"bs-dialog-button-12962"
+																					],
+																					"id": "start_chat_2",
+																					"type": "button"
+																				}
+																			]
+																		],
+																		"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																		"id": "block_9",
+																		"type": "block"
+																	}
+																]
+															],
+															"path": "",
+															"id": "need_onlineChatBlock_3",
+															"type": "advice-block-info"
+														},
+														{
+															"rows": [
+																[
+																	{
+																		"properties": {},
+																		"subId": "066f9f02c8ed4d3dbe6fbafadb2c168c",
+																		"id": "infoBlockImage_8",
+																		"type": "image"
+																	},
+																	{
+																		"rows": [
+																			[
+																				{
+																					"subId": "40b0d27a39634b32aa5aae46f63f2878",
+																					"id": "callUs_3",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"subId": "f65b0de563ec4eb586ada9d3ef28dacd",
+																					"id": "anytimeDayOrNight_3",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"subId": "103eaa13e6744ec69b8514f232cb918d",
+																					"id": "_1800_3",
+																					"type": "link"
+																				}
+																			]
+																		],
+																		"subId": "c7e09a0bd7c54ffb9ac7ffcc8a59a4e7",
+																		"id": "block_10",
+																		"type": "block"
+																	}
+																]
+															],
+															"subId": "77e108d25348486b8ea63797c551f722",
+															"id": "need_callUsBlock_2",
+															"type": "advice-block-info"
+														},
+														{
+															"rows": [
+																[]
+															],
+															"properties": {
+																"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
+															},
+															"subId": "ff69444690424238a908235995c16dd5",
+															"id": "need_visitUs_2",
+															"type": "section-2"
+														}
+													]
+												],
+												"subId": "1107cf85ef3843dc91c0824f91ecaf68",
+												"id": "need_assistance",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "3cd91d5bc47e4583a3a00652f0d3cc10",
+									"id": "dialog_content_form_help",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rules": {
+																"click": "Form.showDialog(\"\");",
+																"sh": ""
+															},
+															"subId": "dc7f4001523f4d2abc3993898559c950",
+															"id": "okay_1",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "4504af28b4034b5b80bd444f5ae4f86e",
+												"id": "dialogFooterBlock_3",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "a8009a0488e04ef6b4962a2f5d0c5e51",
+									"id": "dialogFooter_1",
+									"type": "block"
+								}
+							]
+						],
+						"subId": "113f48f6928a4f5e991def874d02cb4a",
+						"id": "dialogBody_3",
+						"type": "block"
+					}
+				]
+			],
+			"type": "form-help",
+			"id": "formhelp"
 		}
 	},
 	"modals": {
 		"cancelsuccess": {
+			"label": "Cancel Success old",
 			"rows": [
 				[
 					{
+						"exclude": false,
 						"path": "",
 						"subId": "0c14fcab0032461d9c4e5e4648b243af",
 						"id": "modalMobileHeader",
-						"type": "modal-mobile-header",
-						"exclude": false
+						"type": "modal-mobile-header"
 					}
 				],
 				[
@@ -2801,10 +2828,10 @@
 								}
 							]
 						],
+						"exclude": false,
 						"subId": "0be6bfdb2cd9477fbfa75947b24ac1a3",
 						"id": "form_header_cancel_success",
-						"type": "form-header",
-						"exclude": false
+						"type": "form-header"
 					}
 				],
 				[
@@ -3001,9 +3028,8 @@
 			"properties": {},
 			"type": "modal-cancel-success",
 			"exclude": false,
-			"id": "cancelsuccess",
-			"label": "Cancel Success old",
-			"htmlLabel": "Cancel Success old"
+			"htmlLabel": "Cancel Success old",
+			"id": "cancelsuccess"
 		},
 		"submitsuccess_1": {
 			"label": "Submit Success old",
@@ -3736,8 +3762,7 @@
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Save Success",
-			"id": "savesuccess",
-			"exclude": false
+			"id": "savesuccess"
 		},
 		"submitsuccess": {
 			"label": "Submit Success",
@@ -3891,8 +3916,7 @@
 			"properties": {},
 			"type": "modal-page-core",
 			"htmlLabel": "Submit Success",
-			"id": "submitsuccess",
-			"exclude": false
+			"id": "submitsuccess"
 		}
 	},
 	"formOptions": {
@@ -3937,11 +3961,11 @@
 		"submitsuccess"
 	],
 	"localDialogs": [
-		"formhelp",
 		"saveconfirm",
 		"savechallenge",
 		"cancelconfirm",
-		"showxml"
+		"showxml",
+		"formhelp"
 	],
 	"rules": {
 		"dc": "data.pageChangeAnimation"
@@ -4720,146 +4744,6 @@
 							"ariaLabel": ""
 						}
 					},
-					"formhelp": {
-						"label": "Form Help",
-						"htmlLabel": "Form Help",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"dialogHeader_5": {
-						"label": "Dialog header",
-						"htmlLabel": "Dialog header",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"close_5": {
-						"label": "Close",
-						"htmlLabel": "Close",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"dialogBody_4": {
-						"label": "Dialog Body",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"dialog_content_form_help_1": {
-						"label": "Form Help Content",
-						"htmlLabel": "Form Help Content",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"need_assistance_1": {
-						"label": "Need Assistance?",
-						"htmlLabel": "Need Assistance?",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": ""
-						}
-					},
-					"need_onlineChatBlock_1": {
-						"label": "Online Chat Block",
-						"htmlLabel": "Online Chat Block",
-						"mandatoryMsg": "",
-						"properties": {
-							"placeholder": "",
-							"helpText": ""
-						}
-					},
-					"need_callUsBlock_1": {
-						"label": "Call us block",
-						"htmlLabel": "Call us block",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"infoBlockImage_4": {
-						"label": "Info Block Image",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"alternativeText": "",
-							"toolTip": "",
-							"imageLink": ""
-						}
-					},
-					"block_7": {
-						"label": "Block",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"callUs_2": {
-						"label": "Call us",
-						"htmlLabel": "Call us",
-						"mandatoryMsg": ""
-					},
-					"anytimeDayOrNight_2": {
-						"label": "(Anytime, day or night)",
-						"htmlLabel": "(Anytime, day or night)",
-						"mandatoryMsg": ""
-					},
-					"_1800_2": {
-						"label": "1800",
-						"htmlLabel": "1800",
-						"mandatoryMsg": ""
-					},
-					"need_assistant_2": {
-						"label": "Assistant",
-						"htmlLabel": "Assistant",
-						"mandatoryMsg": "",
-						"properties": {
-							"alternativeText": "",
-							"toolTip": "",
-							"imageLink": ""
-						}
-					},
-					"need_visitUs_1": {
-						"label": "Visit us",
-						"htmlLabel": "Visit us",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
-						}
-					},
-					"dialogFooter_10": {
-						"label": "Dialog Footer",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"dialogFooterBlock_4": {
-						"label": "Block",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"okay_10": {
-						"label": "Button",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
 					"saveconfirm": {
 						"label": "Save Confirm",
 						"htmlLabel": "Save Confirm",
@@ -5350,6 +5234,171 @@
 						}
 					},
 					"okay_8": {
+						"label": "Button",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"formhelp": {
+						"label": "Form Help",
+						"htmlLabel": "Form Help",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogHeader_3": {
+						"label": "Dialog header",
+						"htmlLabel": "Dialog header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"close_3": {
+						"label": "Close",
+						"htmlLabel": "Close",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogBody_3": {
+						"label": "Dialog Body",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialog_content_form_help": {
+						"label": "Form Help Content",
+						"htmlLabel": "Form Help Content",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"need_assistance": {
+						"label": "Need Assistance?",
+						"htmlLabel": "Need Assistance?",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"need_onlineChatBlock_3": {
+						"label": "Online Chat Block",
+						"htmlLabel": "Online Chat Block",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"infoBlockImage_7": {
+						"label": "Info Block Image",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"block_9": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"online_chat_header_2": {
+						"label": "Online chat",
+						"htmlLabel": "Online chat",
+						"mandatoryMsg": ""
+					},
+					"online_chat_times_2": {
+						"label": "Online chat times",
+						"htmlLabel": "(8am - 10pm, Mon - Fri)",
+						"mandatoryMsg": ""
+					},
+					"start_chat_2": {
+						"label": "Start chat",
+						"htmlLabel": "Start chat",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"need_callUsBlock_2": {
+						"label": "Call us block",
+						"htmlLabel": "Call us block",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"infoBlockImage_8": {
+						"label": "Info Block Image",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"block_10": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"callUs_3": {
+						"label": "Call us",
+						"htmlLabel": "Call us",
+						"mandatoryMsg": ""
+					},
+					"anytimeDayOrNight_3": {
+						"label": "(Anytime, day or night)",
+						"htmlLabel": "(Anytime, day or night)",
+						"mandatoryMsg": ""
+					},
+					"_1800_3": {
+						"label": "1800",
+						"htmlLabel": "1800",
+						"mandatoryMsg": ""
+					},
+					"need_visitUs_2": {
+						"label": "Visit us",
+						"htmlLabel": "Visit us",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
+						}
+					},
+					"dialogFooter_1": {
+						"label": "Dialog Footer",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogFooterBlock_3": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"okay_1": {
 						"label": "Button",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -6292,6 +6341,5 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.0",
 	"id": "AvokaSmartForm",
-	"exclude": false,
-	"isPreview": false
+	"exclude": false
 }

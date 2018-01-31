@@ -334,10 +334,7 @@
 			"type": "cancel-confirm"
 		},
 		"formhelp": {
-			"exclude": false,
-			"htmlLabel": "Form Help",
 			"id": "formhelp",
-			"label": "Form Help",
 			"rows": [
 				[
 					{
@@ -906,6 +903,7 @@
 		"pageController": []
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -2881,6 +2879,13 @@
 	},
 	"type": "form",
 	"widgetOverrides": {
+		"accordion": {
+			"availableStyles": [
+				"bs-center-align-19822",
+				"align-top"
+			],
+			"properties": {}
+		},
 		"address-lookup-google": {
 			"availableStyles": [
 				"google-address-lookup",
