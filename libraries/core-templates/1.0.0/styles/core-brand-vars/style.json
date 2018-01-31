@@ -193,6 +193,20 @@
 			"label": "Button Font Size",
 			"category": "Buttons",
 			"defaultValue": "16px"
+		},
+		{
+			"name": "av-header-height",
+			"type": "px",
+			"label": "Header Height",
+			"category": "Form Header",
+			"defaultValue": "75px"
+		},
+		{
+			"name": "av-progress-bar-height",
+			"type": "px",
+			"label": "Progress Bar Height",
+			"category": "Form Header",
+			"defaultValue": "50px"
 		}
 	]
 }

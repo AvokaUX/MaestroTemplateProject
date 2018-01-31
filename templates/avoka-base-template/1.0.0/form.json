@@ -26,7 +26,14 @@
 				],
 				"path": "properties.src"
 			}
-		]
+		],
+        "docking-progress-bar": [
+          {
+            "category": "Form Header",
+            "label": "Progress Bar Height",
+            "path": "properties.progressBarHeight"
+          }
+        ]
 	},
 	"brands": {
 		"Default": {
@@ -56,29 +63,6 @@
 				},
 				"functionalMenuFabMenu": {
 					"properties": {}
-				},
-				"logo": {
-					"linkedItems": [
-						{
-							"id": "submit_success_logo",
-							"path": "properties.src"
-						},
-						{
-							"id": "save_success_logo",
-							"path": "properties.src"
-						},
-						{
-							"id": "cancel_success_logo",
-							"path": "properties.src"
-						}
-					],
-					"properties": {
-						"src": {
-							"fileName": "avoka-logo.png",
-							"height": "40",
-							"width": "52"
-						}
-					}
 				}
 			},
 			"label": "Default",
@@ -2087,7 +2071,7 @@
 												},
 												{
 													"exclude": false,
-													"id": "dockingProgressBar_1",
+													"id": "dockingProgressBar",
 													"path": "DockingProgressBar",
 													"rows": [
 														[

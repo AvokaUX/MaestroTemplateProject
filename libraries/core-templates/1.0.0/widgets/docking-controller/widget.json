@@ -8,7 +8,7 @@
 		"dockPosition": {
 			"label": "Docking scroll position (px)",
 			"type": "integer",
-			"value": "60",
+			"value": 60,
 			"category" : "Docking Controller"
 		}
 	},
