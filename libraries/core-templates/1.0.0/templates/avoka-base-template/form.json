@@ -529,30 +529,7 @@
 				"rows": [
 					[
 						{
-							"rows": [
-								[]
-							],
-							"styles": [
-								"bc-white-background-20804",
-								"bs-fab-menu-background-88907"
-							],
 							"rules": {
-								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}",
-								"sh": "return data.onlyOneVisible !== \"function-items-1\" && data.functionalMenu ",
-								"click": "Form.fireRule(\"click\" ,\"functionalMenu\" , data);"
-							},
-							"animateVisibility": false,
-							"exclude": false,
-							"subId": "9c7b2d04c05c4ccca6c8aff32ff6cfe3",
-							"id": "background_1",
-							"type": "block"
-						}
-					],
-					[
-						{
-							"rules": {
-								"sh": "return data.onlyOneVisible !== \"function-items-1\";",
-								"eq": "if (data.onlyOneVisible !== \"function-items-1\") {\n    return false;\n}\nreturn true;",
 								"click": "data[item.id] = data[item.id] !== true;"
 							},
 							"exclude": false,
@@ -563,8 +540,9 @@
 					],
 					[
 						{
+							"label": "Ex",
+							"htmlLabel": "Ex",
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\")",
 								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
 							},
 							"exclude": false,
@@ -574,7 +552,6 @@
 						},
 						{
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");",
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
 							},
 							"exclude": false,
@@ -584,7 +561,6 @@
 						},
 						{
 							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");",
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
 							},
 							"exclude": false,
@@ -593,51 +569,17 @@
 							"type": "button"
 						},
 						{
-							"label": "Save",
-							"properties": {
-								"icon": "fa fa-floppy-o"
-							},
-							"htmlLabel": "Save",
 							"rules": {
-								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu",
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");"
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
 							},
 							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
-							"id": "save_1",
+							"id": "share",
 							"type": "button"
-						}
-					],
-					[
-						{
-							"rules": {
-								"eq": "var buttonResume = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") ? 1 : 0;\nvar buttonShare = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") ? 1 : 0;\nvar buttonHelp = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") ? 1 : 0;\nvar buttonExit = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\") ? 1 : 0;\n\nvar buttonCount = buttonResume + buttonShare + buttonHelp + buttonExit;\nreturn {\n  0: \"function-items-0\",\n  1: \"function-items-1\",\n  2: \"function-items-2\",\n  3: \"function-items-3\",\n  4: \"function-items-4\"\n\n}[buttonCount]"
-							},
-							"exclude": false,
-							"subId": "9cf017397c5f424a8777239803df5dc6",
-							"id": "onlyOneVisible",
-							"type": "data-field"
-						}
-					],
-					[
-						{
-							"rules": {
-								"eq": "//Provide a value or calculation for this data field\n\nreturn Form.getItemProperty(\"data.functionalMenuFabMenu\",\"menuLayout\");"
-							},
-							"exclude": false,
-							"subId": "cc4063f5d8e346399c7d6affb77f151f",
-							"id": "menuLayout",
-							"type": "data-field"
 						}
 					]
 				],
-				"properties": {
-					"menuLayout": " fab-menu"
-				},
-				"type": "floating-functional-component",
-				"rules": {
-					"dc": "return data.onlyOneVisible + data.menuLayout\n "
-				},
+				"type": "fab-menu",
 				"exclude": false,
 				"id": "functionalMenuFabMenu"
 			}
@@ -1632,6 +1574,13 @@
 			],
 			"properties": {}
 		},
+		"accordion": {
+			"availableStyles": [
+				"bs-center-align-19822",
+				"align-top"
+			],
+			"properties": {}
+		},
 		"advice-block-info": {
 			"availableStyles": [
 				"av-message-block",
@@ -2475,15 +2424,13 @@
 												],
 												"subId": "4e0da32bfa7f4de99b42910a16e5f34b",
 												"id": "confirm_cancellation_1",
-												"type": "section-2",
-												"exclude": false
+												"type": "section-2"
 											}
 										]
 									],
 									"subId": "c5ad53604b5a45ebb50f466dce69b7e5",
 									"id": "dialog_content_cancel_confirm_1",
-									"type": "dialog-content",
-									"exclude": false
+									"type": "dialog-content"
 								}
 							],
 							[
@@ -3937,13 +3884,6 @@
 				"path": "properties.autoSaveInterval"
 			}
 		],
-		"functionalMenuFabMenu": [
-			{
-				"category": "Functional Menu - FAB menu",
-				"label": "Menu Layout",
-				"path": "properties.menuLayout"
-			}
-		],
 		"pageController": []
 	},
 	"childExtensions": [
@@ -4279,14 +4219,6 @@
 							"ariaLabel": ""
 						}
 					},
-					"background_1": {
-						"label": "Background",
-						"htmlLabel": "Background",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
 					"functionalMenu": {
 						"label": "Functional Menu",
 						"htmlLabel": "Functional Menu",
@@ -4296,8 +4228,8 @@
 						}
 					},
 					"exit": {
-						"label": "Exit",
-						"htmlLabel": "Exit",
+						"label": "Ex",
+						"htmlLabel": "Ex",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -4319,23 +4251,13 @@
 							"ariaLabel": ""
 						}
 					},
-					"save_1": {
-						"label": "Save",
-						"htmlLabel": "Save",
+					"share": {
+						"label": "Share",
+						"htmlLabel": "Share",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
 						}
-					},
-					"onlyOneVisible": {
-						"label": "Only one visible",
-						"htmlLabel": "Only one visible",
-						"mandatoryMsg": ""
-					},
-					"menuLayout": {
-						"label": "Menu Layout",
-						"htmlLabel": "Menu Layout",
-						"mandatoryMsg": ""
 					},
 					"styleMasterBlock": {
 						"label": "Style Master Block",
@@ -6341,5 +6263,6 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.0",
 	"id": "AvokaSmartForm",
-	"exclude": false
+	"exclude": false,
+	"isPreview": false
 }

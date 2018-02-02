@@ -1,0 +1,51 @@
+form[name='form'] {
+  .av-fab-menu-container {
+    position:fixed;
+    z-index:900;
+    bottom:0px;
+    right:0px;
+    .av-fab-menu-background {
+      background-color:rgba(255,255,255,0.9);
+      bottom: 0;
+      right: 0;
+      position:fixed;
+      z-index:1;
+    }
+    &.vertical-menu {
+      .av-fab-menu-background {
+        width:125px;
+        height:250px;
+        border-top-left-radius: 25px;
+        &.ng-enter, &.ng-leave.ng-leave-active {
+          transition: 0.5s all ease-in-out 0.5s;
+          opacity:0;
+          transform: translate(0%,100%);
+        }
+        &.ng-leave, &.ng-enter.ng-enter-active {
+          transition: 0.5s all ease-in-out;
+          opacity:0.8;
+          transform: translate(0%,0%);
+        }
+      }
+
+    }
+    &.fab-menu {
+      .av-fab-menu-background {
+        width:400px;
+        height:400px;
+        border-radius: 50%;
+        transform: translate(50%, 50%);
+        &.ng-enter, &.ng-leave.ng-leave-active {
+          transition: 0.8s all ease-in-out 0.3s;
+          opacity:0;
+          transform: translate(100%,100%);
+        }
+        &.ng-leave, &.ng-enter.ng-enter-active {
+          transition: 0.6s all ease-in-out;
+          opacity:0.8;
+          transform: translate(50%,50%);
+        }
+      }
+    }
+  }
+}

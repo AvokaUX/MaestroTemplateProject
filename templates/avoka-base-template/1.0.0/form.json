@@ -893,13 +893,6 @@
 				"path": "properties.autoSaveInterval"
 			}
 		],
-		"functionalMenuFabMenu": [
-			{
-				"category": "Functional Menu - FAB menu",
-				"label": "Menu Layout",
-				"path": "properties.menuLayout"
-			}
-		],
 		"pageController": []
 	},
 	"id": "AvokaSmartForm",
@@ -2396,29 +2389,7 @@
 			{
 				"exclude": false,
 				"id": "functionalMenuFabMenu",
-				"properties": {
-					"menuLayout": " fab-menu"
-				},
 				"rows": [
-					[
-						{
-							"animateVisibility": false,
-							"exclude": false,
-							"id": "background_1",
-							"rows": [
-								[]
-							],
-							"rules": {
-								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}"
-							},
-							"styles": [
-								"bc-white-background-20804",
-								"bs-fab-menu-background-88907"
-							],
-							"subId": "9c7b2d04c05c4ccca6c8aff32ff6cfe3",
-							"type": "block"
-						}
-					],
 					[
 						{
 							"exclude": false,
@@ -2430,64 +2401,33 @@
 					[
 						{
 							"exclude": false,
+							"htmlLabel": "Ex",
 							"id": "exit",
-							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\")"
-							},
+							"label": "Ex",
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"type": "button"
 						},
 						{
 							"exclude": false,
 							"id": "resume",
-							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");"
-							},
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"type": "button"
 						},
 						{
 							"exclude": false,
 							"id": "help",
-							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");"
-							},
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"type": "button"
 						},
 						{
 							"exclude": false,
-							"htmlLabel": "Save",
-							"id": "save_1",
-							"label": "Save",
-							"properties": {
-								"icon": "fa fa-floppy-o"
-							},
+							"id": "share",
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"type": "button"
 						}
-					],
-					[
-						{
-							"exclude": false,
-							"id": "onlyOneVisible",
-							"rules": {
-								"eq": "var buttonResume = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") ? 1 : 0;\nvar buttonShare = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") ? 1 : 0;\nvar buttonHelp = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") ? 1 : 0;\nvar buttonExit = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\") ? 1 : 0;\n\nvar buttonCount = buttonResume + buttonShare + buttonHelp + buttonExit;\nreturn {\n  0: \"function-items-0\",\n  1: \"function-items-1\",\n  2: \"function-items-2\",\n  3: \"function-items-3\",\n  4: \"function-items-4\"\n\n}[buttonCount]"
-							},
-							"subId": "9cf017397c5f424a8777239803df5dc6",
-							"type": "data-field"
-						}
-					],
-					[
-						{
-							"exclude": false,
-							"id": "menuLayout",
-							"subId": "cc4063f5d8e346399c7d6affb77f151f",
-							"type": "data-field"
-						}
 					]
 				],
-				"type": "floating-functional-component"
+				"type": "fab-menu"
 			}
 		],
 		[
