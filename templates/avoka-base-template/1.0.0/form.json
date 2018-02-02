@@ -2389,40 +2389,39 @@
 			{
 				"exclude": false,
 				"id": "functionalMenuFabMenu",
+				"path": "",
+				"properties": {
+					"menuLayout": " fab-menu"
+				},
 				"rows": [
 					[
 						{
 							"exclude": false,
 							"id": "functionalMenu",
-							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
+							"path": "FunctionalMenu",
 							"type": "button-toggle-icon"
 						}
 					],
 					[
 						{
 							"exclude": false,
-							"htmlLabel": "Ex",
 							"id": "exit",
-							"label": "Ex",
-							"subId": "618724928da14126a1ea9dda71f4b9b6",
+							"path": "",
 							"type": "button"
 						},
 						{
-							"exclude": false,
 							"id": "resume",
-							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
+							"path": "",
 							"type": "button"
 						},
 						{
-							"exclude": false,
 							"id": "help",
-							"subId": "97601a07e3304ceab704b6152d1174b9",
+							"path": "",
 							"type": "button"
 						},
 						{
-							"exclude": false,
 							"id": "share",
-							"subId": "b5002e83c936475d81cabdae77a20513",
+							"path": "",
 							"type": "button"
 						}
 					]

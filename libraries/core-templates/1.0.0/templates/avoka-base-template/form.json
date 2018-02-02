@@ -532,56 +532,55 @@
 							"rules": {
 								"click": "data[item.id] = data[item.id] !== true;"
 							},
-							"exclude": false,
-							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"id": "functionalMenu",
-							"type": "button-toggle-icon"
+							"type": "button-toggle-icon",
+							"path": "FunctionalMenu",
+							"exclude": false
 						}
 					],
 					[
 						{
-							"label": "Ex",
-							"htmlLabel": "Ex",
 							"rules": {
 								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
 							},
-							"exclude": false,
-							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"id": "exit",
-							"type": "button"
+							"type": "button",
+							"path": "",
+							"exclude": false
 						},
 						{
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
 							},
-							"exclude": false,
-							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"id": "resume",
-							"type": "button"
+							"type": "button",
+							"path": ""
 						},
 						{
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
 							},
-							"exclude": false,
-							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"id": "help",
-							"type": "button"
+							"type": "button",
+							"path": ""
 						},
 						{
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
 							},
-							"exclude": false,
-							"subId": "b5002e83c936475d81cabdae77a20513",
 							"id": "share",
-							"type": "button"
+							"type": "button",
+							"path": ""
 						}
 					]
 				],
+				"properties": {
+					"menuLayout": " fab-menu"
+				},
 				"type": "fab-menu",
-				"exclude": false,
-				"id": "functionalMenuFabMenu"
+				"id": "functionalMenuFabMenu",
+				"path": "",
+				"exclude": false
 			}
 		],
 		[
@@ -4228,8 +4227,8 @@
 						}
 					},
 					"exit": {
-						"label": "Ex",
-						"htmlLabel": "Ex",
+						"label": "Exit",
+						"htmlLabel": "Exit",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""

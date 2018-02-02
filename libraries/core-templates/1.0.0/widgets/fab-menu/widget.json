@@ -22,9 +22,7 @@
 				},
 				"label": "Functional Menu",
 				"styles": [
-					"av-button-navigation",
-					"bs-functional-button-bottom-18795",
-					"bs-float-right-04479"
+					"av-button-navigation"
 				],
 				"properties": {
 					"icon": "fa fa-times",
