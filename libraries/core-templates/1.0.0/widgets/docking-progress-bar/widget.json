@@ -7,7 +7,7 @@
 	"js":	"docking-progress-bar.js",
 	"propDefs" : {
 		"progressBarHeight": {
-			"label": "Undocked progress bar height (px)",
+			"label": "Progress bar height (px)",
 			"type": "integer",
 			"value": 50,
 			"helpText": "Height of the progress bar when it displays undocked below the form header"

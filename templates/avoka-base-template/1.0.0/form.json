@@ -5,6 +5,13 @@
 		"publishLibraryId": 10988
 	},
 	"brandOptions": {
+		"dockingProgressBar": [
+			{
+				"category": "Form Header",
+				"label": "Progress bar height (px)",
+				"path": "properties.progressBarHeight"
+			}
+		],
 		"functionalMenuFabMenu": [],
 		"logo": [
 			{
@@ -27,52 +34,77 @@
 				"path": "properties.src"
 			}
 		],
-        "docking-progress-bar": [
-          {
-            "category": "Form Header",
-            "label": "Progress Bar Height",
-            "path": "properties.progressBarHeight"
-          }
-        ]
+		"pageController": [
+			{
+				"category": "Page Controller",
+				"label": "Page Transition",
+				"path": "properties.pageTransition"
+			}
+		],
+		"pageController_1": [
+			{
+				"category": "Page Controller",
+				"label": "Page Transition",
+				"path": "properties.pageTransition"
+			}
+		]
 	},
 	"brands": {
 		"Default": {
 			"itemOptions": {
+				"dockingProgressBar": {
+					"properties": {
+						"progressBarHeight": 75
+					}
+				},
+				"functionalMenuFabMenu": {
+					"properties": {}
+				},
 				"logo": {
+					"linkedItems": [
+						{
+							"id": "submit_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "save_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "cancel_success_logo",
+							"path": "properties.src"
+						}
+					],
 					"properties": {
 						"src": {
 							"fileName": "avoka-logo.png",
-							"width": "52",
-							"height": "40"
+							"height": "40",
+							"width": "52"
 						}
-					},
-                    "linkedItems": [
-                      {
-                        "id" : "submit_success_logo",
-                        "path" : "properties.src"
-                      },
-                      {
-                        "id" : "save_success_logo",
-                        "path" : "properties.src"
-                      },
-                      {
-                        "id" : "cancel_success_logo",
-                        "path" : "properties.src"
-                      }
-                    ]
+					}
 				},
-				"functionalMenuFabMenu": {
+				"pageController_1": {
 					"properties": {}
 				}
 			},
 			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
+				"av-button-contrast": "",
+				"av-button-docking-color": "",
+				"av-button-docking-contrast": "",
+				"av-button-docking-font-color": "",
 				"av-button-font-size": "16px",
+				"av-button-primary-color": "",
+				"av-button-secondary-color": "",
+				"av-dialog-background": "#000",
+				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
+				"av-header-height": "75px",
+				"av-hover-color": "",
 				"av-max-form-width": "999999px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
@@ -882,8 +914,7 @@
 				"label": "Menu Layout",
 				"path": "properties.menuLayout"
 			}
-		],
-		"pageController": []
+		]
 	},
 	"id": "AvokaSmartForm",
 	"isPreview": false,
@@ -1098,7 +1129,6 @@
 			"type": "modal-cancel-success"
 		},
 		"savesuccess": {
-			"exclude": false,
 			"htmlLabel": "Save Success",
 			"id": "savesuccess",
 			"label": "Save Success",
@@ -1489,7 +1519,6 @@
 			"type": "modal-save-success"
 		},
 		"submitsuccess": {
-			"exclude": false,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
@@ -2104,6 +2133,9 @@
 													"exclude": false,
 													"id": "dockingProgressBar",
 													"path": "DockingProgressBar",
+													"properties": {
+														"progressBarHeight": 75
+													},
 													"rows": [
 														[
 															{
@@ -2179,10 +2211,10 @@
 					[
 						{
 							"exclude": false,
-							"id": "pageController",
+							"id": "pageController_1",
 							"path": "",
 							"properties": {
-								"transitionDelay": 600
+								"pageTransition": "Slide"
 							},
 							"rows": [
 								[
@@ -2215,12 +2247,42 @@
 										],
 										"type": "nav-page"
 									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page",
+										"id": "page_1",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section_1",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"rules": {
+											"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
+										},
+										"styles": [
+											"mg-section-1"
+										],
+										"type": "nav-page"
+									}
 								]
 							],
 							"rules": {
-								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n   }",
-								"dc": "data.pageChangeAnimation",
-								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");\n"
+								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
+								"dc": "data.pageChangeAnimation;",
+								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = Form.getItemProperty(\"data.pageController_1\",\"pageTransition\");\nif (pageTransition == \"Fade\"){\n   data.pageChangeAnimation = \"transition-fade\";\n}\nelse if (pageTransition == \"Slide\"){\n  var navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\n  data.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\n}\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
 							},
 							"type": "page-controller"
 						}
@@ -2972,12 +3034,12 @@
 				"bs-dialog-button-12962",
 				"bs-dialog-link-button-09809",
 				"bs-next-error-36745",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"button-group": {
@@ -2985,13 +3047,13 @@
 				"av-global-layout",
 				"av-button-group",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-button-group",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"checkbox": {
@@ -2999,13 +3061,13 @@
 				"av-global-layout",
 				"align-top",
 				"av-checkbox",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-checkbox",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"currency": {
@@ -3014,13 +3076,13 @@
 				"av-currency",
 				"av-global-layout",
 				"av-text-field",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-currency",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"data-checkbox-group": {
@@ -3028,12 +3090,12 @@
 				"mg-checkbox-group",
 				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"data-dropdown": {
@@ -3041,13 +3103,13 @@
 				"align-top",
 				"av-global-layout",
 				"av-drop-down",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"data-radio-group": {
@@ -3059,13 +3121,15 @@
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-global-layout"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-radio",
-				"av-global-layout"
+				"av-form-field",
+				"radio-basic"
 			]
 		},
 		"data-typeahead": {
@@ -3073,13 +3137,13 @@
 				"align-top",
 				"av-global-layout",
 				"av-text-field",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-text-field",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"date-picker": {
@@ -3090,7 +3154,7 @@
 				"date-picker-base",
 				"av-global-layout",
 				"av-text-field",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
@@ -3098,7 +3162,7 @@
 				"date-picker-base",
 				"av-global-layout",
 				"av-date",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"decimal": {
@@ -3106,12 +3170,12 @@
 				"align-top",
 				"av-global-layout",
 				"av-text-field",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"dialog-content": {
@@ -3155,7 +3219,7 @@
 				"av-global-layout",
 				"align-top",
 				"av-drop-down",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {
 				"icon": "fa fa-angle-down"
@@ -3163,7 +3227,7 @@
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"dropdown-dob-block": {
@@ -3178,13 +3242,13 @@
 				"av-global-layout",
 				"dropdown-multi-select",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"dropdown-multi-select",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"dropdown-years": {
@@ -3192,13 +3256,13 @@
 				"align-top",
 				"av-global-layout",
 				"av-drop-down",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-drop-down",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"floating-functional-component": {
@@ -3272,12 +3336,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"image": {
@@ -3311,12 +3375,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"mitek-license-prefill": {
@@ -3463,7 +3527,7 @@
 				"av-global-layout",
 				"mg-checkbox-group",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -3510,13 +3574,15 @@
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-global-layout"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-radio",
-				"av-global-layout"
+				"av-form-field",
+				"radio-basic"
 			]
 		},
 		"radio-button-group-graphical": {
@@ -3524,13 +3590,13 @@
 				"av-global-layout",
 				"radio-graphical-group",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"radio-graphical-group",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"radio-button-repeating": {
@@ -3542,13 +3608,15 @@
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-global-layout"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"av-radio",
-				"av-global-layout"
+				"av-form-field",
+				"radio-basic"
 			]
 		},
 		"repeat": {
@@ -3563,13 +3631,13 @@
 				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"repeat-button",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"repeat-block-template": {
@@ -3584,13 +3652,13 @@
 				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
 				"repeat-button",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"repeat-index-text": {
@@ -3604,12 +3672,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"section": {
@@ -3645,24 +3713,24 @@
 				"av-global-layout",
 				"align-top",
 				"signature-dialog-15537",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"slider": {
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"step-name": {
@@ -3695,12 +3763,12 @@
 			"availableStyles": [
 				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"text-display": {
@@ -3727,12 +3795,12 @@
 				"submit-success-message",
 				"bs-center-align-19822",
 				"bs-docked-error-63227",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {},
 			"styles": [
 				"av-global-layout",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"text-display-popover": {
@@ -3751,7 +3819,7 @@
 				"av-text-field",
 				"bs-dialog-text-field-14963",
 				"bs-online-chat-82522",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {
 				"helpText": ""
@@ -3759,7 +3827,7 @@
 			"styles": [
 				"av-global-layout",
 				"av-text-field",
-				"av-global-layout"
+				"av-form-field"
 			]
 		},
 		"time": {
