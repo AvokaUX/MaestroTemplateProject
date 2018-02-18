@@ -911,7 +911,7 @@
 		"savesuccess",
 		"submitsuccess"
 	],
-	"maestroReleaseVersion": "17.10.0",
+	"maestroReleaseVersion": "17.10.1",
 	"modals": {
 		"cancelsuccess": {
 			"exclude": false,
@@ -2197,10 +2197,11 @@
 									{
 										"exclude": false,
 										"hasCustomId": true,
-										"htmlLabel": "Page",
+										"htmlLabel": "Page 1",
 										"id": "page",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
+										"label": "Page 1",
 										"path": "",
 										"rows": [
 											[
@@ -2220,6 +2221,31 @@
 										},
 										"styles": [
 											"mg-section-1"
+										],
+										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page 2",
+										"id": "page_1",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Page 2",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section_1",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "section-2"
+												}
+											]
 										],
 										"type": "nav-page"
 									}
@@ -2389,7 +2415,6 @@
 			{
 				"exclude": false,
 				"id": "functionalMenuFabMenu",
-				"path": "",
 				"properties": {
 					"menuLayout": " fab-menu"
 				},
@@ -2398,7 +2423,7 @@
 						{
 							"exclude": false,
 							"id": "functionalMenu",
-							"path": "FunctionalMenu",
+							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"type": "button-toggle-icon"
 						}
 					],
@@ -2406,22 +2431,22 @@
 						{
 							"exclude": false,
 							"id": "exit",
-							"path": "",
+							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"type": "button"
 						},
 						{
 							"id": "resume",
-							"path": "",
+							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"type": "button"
 						},
 						{
 							"id": "help",
-							"path": "",
+							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"type": "button"
 						},
 						{
 							"id": "share",
-							"path": "",
+							"subId": "b5002e83c936475d81cabdae77a20513",
 							"type": "button"
 						}
 					]
