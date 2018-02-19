@@ -19,7 +19,6 @@ form[name='form'] .wdg-progress-bar-heading-docked {
   width: 36px;
   position: absolute;
   right: 100%;
-  height: 100%;
 }
 form[name='form'] .progress-bar-wrapper {
   display: table-cell;

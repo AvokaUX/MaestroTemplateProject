@@ -1,10 +1,17 @@
 {
 	"blockInfo": {
-		"designVersion": "1.0.0",
-		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15461",
-		"publishLibraryId": 16680
+		"designVersion": "46.0.1",
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/14974",
+		"publishLibraryId": 10988
 	},
 	"brandOptions": {
+		"dockingProgressBar": [
+			{
+				"category": "Form Header",
+				"label": "Progress bar height (px)",
+				"path": "properties.progressBarHeight"
+			}
+		],
 		"functionalMenuFabMenu": [],
 		"logo": [
 			{
@@ -26,11 +33,30 @@
 				],
 				"path": "properties.src"
 			}
+		],
+		"pageController": [
+			{
+				"category": "Page Controller",
+				"label": "Page Transition",
+				"path": "properties.pageTransition"
+			}
+		],
+		"pageController_1": [
+			{
+				"category": "Page Controller",
+				"label": "Page Transition",
+				"path": "properties.pageTransition"
+			}
 		]
 	},
 	"brands": {
 		"Default": {
 			"itemOptions": {
+				"dockingProgressBar": {
+					"properties": {
+						"progressBarHeight": 75
+					}
+				},
 				"functionalMenuFabMenu": {
 					"properties": {}
 				},
@@ -56,16 +82,29 @@
 							"width": "52"
 						}
 					}
+				},
+				"pageController_1": {
+					"properties": {}
 				}
 			},
 			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
+				"av-button-contrast": "",
+				"av-button-docking-color": "",
+				"av-button-docking-contrast": "",
+				"av-button-docking-font-color": "",
 				"av-button-font-size": "16px",
+				"av-button-primary-color": "",
+				"av-button-secondary-color": "",
+				"av-dialog-background": "#000",
+				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
+				"av-header-height": "75px",
+				"av-hover-color": "",
 				"av-max-form-width": "999999px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
@@ -2110,8 +2149,11 @@
 												},
 												{
 													"exclude": false,
-													"id": "dockingProgressBar_1",
+													"id": "dockingProgressBar",
 													"path": "DockingProgressBar",
+													"properties": {
+														"progressBarHeight": 75
+													},
 													"rows": [
 														[
 															{
@@ -2187,10 +2229,10 @@
 					[
 						{
 							"exclude": false,
-							"id": "pageController",
+							"id": "pageController_1",
 							"path": "",
 							"properties": {
-								"transitionDelay": 600
+								"pageTransition": "Slide"
 							},
 							"rows": [
 								[
@@ -2208,6 +2250,36 @@
 												{
 													"exclude": false,
 													"id": "section",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"rules": {
+											"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
+										},
+										"styles": [
+											"mg-section-1"
+										],
+										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page",
+										"id": "page_1",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section_1",
 													"path": "",
 													"rows": [
 														[]
@@ -2252,9 +2324,9 @@
 								]
 							],
 							"rules": {
-								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n   }",
-								"dc": "data.pageChangeAnimation",
-								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");\n"
+								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
+								"dc": "data.pageChangeAnimation;",
+								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = Form.getItemProperty(\"data.pageController_1\",\"pageTransition\");\nif (pageTransition == \"Fade\"){\n   data.pageChangeAnimation = \"transition-fade\";\n}\nelse if (pageTransition == \"Slide\"){\n  var navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\n  data.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\n}\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
 							},
 							"type": "page-controller"
 						}
