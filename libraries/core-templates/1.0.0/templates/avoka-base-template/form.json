@@ -343,11 +343,6 @@
 												}
 											]
 										],
-										"properties": {
-											"sectionHeading": "{{T[item.id].label}}",
-											"formName": "{{T[Form.view.id].label}}",
-											"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>"
-										},
 										"type": "nav-page",
 										"styles": [
 											"mg-section-1"
@@ -379,11 +374,6 @@
 												}
 											]
 										],
-										"properties": {
-											"sectionHeading": "{{T[item.id].label}}",
-											"formName": "{{T[Form.view.id].label}}",
-											"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>"
-										},
 										"type": "nav-page",
 										"styles": [
 											"mg-section-1"
@@ -415,11 +405,6 @@
 												}
 											]
 										],
-										"properties": {
-											"sectionHeading": "{{T[item.id].label}}",
-											"formName": "{{T[Form.view.id].label}}",
-											"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>"
-										},
 										"type": "nav-page",
 										"exclude": false,
 										"htmlLabel": "Page 2",
@@ -485,8 +470,8 @@
 							},
 							"type": "submit",
 							"rules": {
-								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}",
+								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});"
 							},
 							"animateVisibility": true,
 							"exclude": false,
@@ -570,9 +555,6 @@
 					[
 						{
 							"label": "Block Next",
-							"rules": {
-								"eq": "//Provide a value or calculation for this data field"
-							},
 							"exclude": false,
 							"htmlLabel": "Block Next",
 							"path": "",
@@ -583,9 +565,6 @@
 					[
 						{
 							"label": "Page Change Animation",
-							"rules": {
-								"eq": "//Provide a value or calculation for this data field"
-							},
 							"exclude": false,
 							"htmlLabel": "Page Change Animation",
 							"path": "",
@@ -1099,6 +1078,12 @@
 				"bs-dialog-button-12962",
 				"bs-dialog-link-button-09809",
 				"bs-next-error-36745",
+				"av-form-field"
+			],
+			"styles": [
+				"av-button-primary",
+				"av-button",
+				"av-global-layout",
 				"av-form-field"
 			],
 			"properties": {}
@@ -2900,35 +2885,35 @@
 						"rows": [
 							[
 								{
-									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
-									"id": "startANewForm_4",
-									"type": "button",
-									"exclude": false,
+									"animateVisibility": true,
 									"rules": {
 										"click": "if(!Resource.preview && !Resource.design) {\n  console.log(\"if\");\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode).window.location.replace(url))\n} else if(Resource.preview) {console.log(\"elseif\");Form.showModal(\"\");}",
 										"sh": "return item['$$parent'].properties.includeStartAgain;"
 									},
-									"animateVisibility": true
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"id": "startANewForm_4",
+									"type": "button",
+									"exclude": false
 								}
 							],
 							[
 								{
+									"label": "Return to portal",
 									"styles": [
 										"av-global-layout",
 										"av-button",
 										"av-button-primary"
 									],
-									"type": "button",
-									"id": "button",
-									"path": "",
+									"animateVisibility": true,
 									"exclude": false,
-									"label": "Return to portal",
 									"htmlLabel": "Return to portal",
+									"path": "",
 									"rules": {
 										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\")), window.location.replace(url)\n}",
 										"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
 									},
-									"animateVisibility": true
+									"type": "button",
+									"id": "button"
 								}
 							],
 							[
@@ -2939,13 +2924,13 @@
 										"av-button",
 										"av-global-layout"
 									],
-									"rules": {
-										"sh": "Resource.preview || Resource.design",
-										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
-									},
-									"path": "",
-									"type": "button",
 									"exclude": false,
+									"path": "",
+									"rules": {
+										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+										"sh": "Resource.preview || Resource.design"
+									},
+									"type": "button",
 									"id": "showFormXml_5"
 								}
 							]
@@ -2956,8 +2941,7 @@
 						"htmlLabel": "<h1>Save Modal Content</h1>",
 						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"id": "saveModalContent",
-						"type": "section-2",
-						"exclude": false
+						"type": "section-2"
 					}
 				],
 				[
@@ -2970,13 +2954,15 @@
 											{
 												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"id": "textDisplay_4",
-												"type": "text-display"
+												"type": "text-display",
+												"exclude": false
 											}
 										]
 									],
 									"subId": "082a0f34bab7496ab942025374652910",
 									"id": "formFooterText_4",
-									"type": "section-2"
+									"type": "section-2",
+									"exclude": false
 								}
 							]
 						],
@@ -2985,7 +2971,8 @@
 						},
 						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"id": "modalFooter_1",
-						"type": "form-footer"
+						"type": "form-footer",
+						"exclude": false
 					}
 				]
 			],
@@ -2995,16 +2982,16 @@
 			"id": "savesuccess",
 			"exclude": false
 		},
-		"submitsuccess": {
-			"label": "Submit Success",
+		"cancelsuccess": {
+			"label": "Cancel Success",
 			"rows": [
 				[
 					{
 						"rows": [
 							[]
 						],
-						"subId": "fb2710bf445348a0b3348c277ae25d53",
-						"id": "modalBackground_2",
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
+						"id": "modalBackground",
 						"type": "modal-background"
 					}
 				],
@@ -3023,94 +3010,105 @@
 																[
 																	{
 																		"properties": {},
-																		"subId": "e16044b6f54649b29f8fc0217e584b77",
-																		"id": "modalLogoImage_2",
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
+																		"id": "modalLogoImage",
 																		"type": "image"
 																	}
 																]
 															],
-															"subId": "6fc01299872445448b85622c2188b494",
-															"id": "modalLogo_2",
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
+															"id": "modalLogo",
 															"type": "block"
 														}
 													]
 												],
-												"subId": "89fb5406cfe4459b86fa72fcc4cf81fe",
-												"id": "modalHeader_5",
+												"subId": "10cd185db8f44312a2d007cce8c61074",
+												"id": "modalHeader_1",
 												"type": "form-header"
 											}
 										]
 									],
-									"subId": "0556f32929054ae994a65aebdedc76ac",
-									"id": "stickyPanelModal_2",
+									"subId": "f85f23c17b944a399f2368733020e9ad",
+									"id": "stickyPanelModal",
 									"type": "sticky-panel"
 								}
 							]
 						],
-						"subId": "9dff6f6d9f3e40299733766ce093bda7",
-						"id": "modalHeader_4",
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
+						"id": "modalHeader",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"label": "Application Received",
 						"rows": [
 							[
 								{
-									"subId": "664e44d55e00407d9d4d24d4e1426fae",
-									"id": "startANewForm_5",
-									"type": "button"
+									"animateVisibility": true,
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode)),window.location.replace(url)\n} else if(Resource.preview) {Form.showModal(\"\");}",
+										"sh": "return item['$$parent'].properties.includeStartAgain;"
+									},
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"id": "startANewForm_1",
+									"type": "button",
+									"exclude": false
 								}
 							],
 							[
 								{
-									"rows": [
-										[
-											{
-												"rules": {
-													"sh": "return item['$$parent'].properties.includeStartAgain;",
-													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
-												},
-												"exclude": false,
-												"path": "",
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
-												"id": "startANewForm",
-												"type": "button"
-											},
-											{
-												"rules": {
-													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
-													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
-												},
-												"path": "",
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
-												"id": "returnToPortal_3",
-												"type": "button"
-											},
-											{
-												"rules": {
-													"sh": "Resource.preview || Resource.design",
-													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
-												},
-												"path": "",
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
-												"id": "showFormXml_3",
-												"type": "button"
-											}
-										]
+									"label": "Show form XML",
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
 									],
-									"type": "follow-on-options",
-									"id": "followOnOptionsBlock_3"
+									"exclude": false,
+									"path": "",
+									"rules": {
+										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+										"sh": "Resource.preview || Resource.design"
+									},
+									"type": "button",
+									"id": "show_form_xml_3"
+								}
+							],
+							[
+								{
+									"label": "Return to portal",
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
+									],
+									"exclude": false,
+									"path": "",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+										"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+									},
+									"type": "button",
+									"id": "return_to_portal_3"
+								}
+							],
+							[
+								{
+									"htmlLabel": "Your application has been cancelled and will not be processed.",
+									"styles": [
+										"submit-success-message"
+									],
+									"exclude": false,
+									"path": "",
+									"type": "text-display",
+									"id": "cancel_success_message_1"
 								}
 							]
 						],
 						"properties": {
-							"infoText": "Thank you, your submission has been received."
+							"infoText": "Your Application has been received"
 						},
-						"htmlLabel": "<h1>Application Received</h1>",
-						"subId": "ea5b9f4077a24d2b93f412748bbf4bf9",
-						"id": "saveModalContent_1",
+						"subId": "d4a0cd71666b429898edfba3b748599d",
+						"id": "modalContent",
 						"type": "section-2"
 					}
 				],
@@ -3122,15 +3120,15 @@
 									"rows": [
 										[
 											{
-												"subId": "46f9f22172c44180a9cc84ada4a4aead",
 												"path": "",
-												"id": "textDisplay_5",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "formFooterText",
 												"type": "text-display"
 											}
 										]
 									],
-									"subId": "321156c132f54510ad5c0f0d9040cc05",
-									"id": "formFooterText_5",
+									"subId": "082a0f34bab7496ab942025374652910",
+									"id": "formFooterText_6",
 									"type": "section-2"
 								}
 							]
@@ -3138,29 +3136,27 @@
 						"rules": {
 							"sh": "!Util.isReceipt"
 						},
-						"subId": "105c8613ddd44fd580970e2f3d22ba7f",
-						"id": "modalFooter_2",
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
+						"id": "modalFooter",
 						"type": "form-footer"
 					}
 				]
 			],
 			"properties": {},
-			"type": "modal-page-core",
-			"htmlLabel": "Submit Success",
-			"id": "submitsuccess",
-			"exclude": false
+			"type": "bs-modal-page",
+			"htmlLabel": "Cancel Success",
+			"id": "cancelsuccess"
 		},
-		"cancelsuccess": {
+		"submitsuccess": {
 			"rows": [
 				[
 					{
 						"rows": [
 							[]
 						],
-						"id": "modalBackground",
+						"id": "modalBackground_2",
 						"type": "modal-background",
-						"path": "",
-						"exclude": false
+						"path": ""
 					}
 				],
 				[
@@ -3178,34 +3174,33 @@
 																[
 																	{
 																		"properties": {},
-																		"id": "modalLogoImage",
+																		"id": "modalLogoImage_2",
 																		"type": "image",
 																		"path": ""
 																	}
 																]
 															],
-															"id": "modalLogo",
+															"id": "modalLogo_2",
 															"type": "block",
 															"path": ""
 														}
 													]
 												],
-												"id": "modalHeader_1",
+												"id": "modalHeader_5",
 												"type": "form-header",
 												"path": ""
 											}
 										]
 									],
-									"id": "stickyPanelModal",
+									"id": "stickyPanelModal_2",
 									"type": "sticky-panel",
 									"path": "StickyPanelmodal"
 								}
 							]
 						],
-						"id": "modalHeader",
+						"id": "modalHeader_4",
 						"type": "block",
-						"path": "",
-						"exclude": false
+						"path": ""
 					}
 				],
 				[
@@ -3213,7 +3208,7 @@
 						"rows": [
 							[
 								{
-									"id": "startANewForm_1",
+									"id": "startANewForm",
 									"type": "button",
 									"path": "",
 									"exclude": false,
@@ -3232,51 +3227,21 @@
 										"av-button",
 										"av-global-layout"
 									],
+									"exclude": false,
+									"path": "",
 									"rules": {
-										"sh": "Resource.preview || Resource.design",
-										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+										"sh": "Resource.preview || Resource.design"
 									},
 									"type": "button",
-									"exclude": false,
-									"id": "show_form_xml_3",
-									"path": ""
-								}
-							],
-							[
-								{
-									"label": "Return to portal",
-									"styles": [
-										"av-button-primary",
-										"av-button",
-										"av-global-layout"
-									],
-									"rules": {
-										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
-										"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
-									},
-									"type": "button",
-									"exclude": false,
-									"id": "return_to_portal_3",
-									"path": ""
-								}
-							],
-							[
-								{
-									"htmlLabel": "Your application has been cancelled and will not be processed.",
-									"styles": [
-										"submit-success-message"
-									],
-									"type": "text-display",
-									"exclude": false,
-									"id": "cancel_success_message_1",
-									"path": ""
+									"id": "show_form_xml_4"
 								}
 							]
 						],
 						"properties": {
 							"infoText": "Your Application has been received"
 						},
-						"id": "modalContent",
+						"id": "modalContent_1",
 						"type": "section-2",
 						"path": "",
 						"exclude": false
@@ -3291,12 +3256,12 @@
 										[
 											{
 												"type": "text-display",
-												"id": "formFooterText",
+												"id": "formFooterText_1",
 												"path": ""
 											}
 										]
 									],
-									"id": "formFooterText_6",
+									"id": "formFooterText_3",
 									"type": "section-2",
 									"path": ""
 								}
@@ -3305,7 +3270,7 @@
 						"rules": {
 							"sh": "!Util.isReceipt"
 						},
-						"id": "modalFooter",
+						"id": "modalFooter_2",
 						"type": "form-footer",
 						"path": ""
 					}
@@ -3313,12 +3278,11 @@
 			],
 			"properties": {},
 			"type": "bs-modal-page",
-			"id": "cancelsuccess",
+			"id": "submitsuccess",
 			"path": "",
 			"exclude": false,
-			"label": "Cancel Success",
-			"htmlLabel": "Cancel Success",
-			"hasCustomId": true
+			"label": "Submit Success",
+			"htmlLabel": "Submit Success"
 		}
 	},
 	"formOptions": {
@@ -3349,8 +3313,8 @@
 	],
 	"localModals": [
 		"savesuccess",
-		"submitsuccess",
-		"cancelsuccess"
+		"cancelsuccess",
+		"submitsuccess"
 	],
 	"localDialogs": [
 		"saveconfirm",
@@ -4958,134 +4922,6 @@
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
 					},
-					"submitsuccess": {
-						"label": "Submit Success",
-						"htmlLabel": "Submit Success",
-						"mandatoryMsg": "",
-						"properties": {
-							"leavePageWarningMessage": "",
-							"mandatoryMsgSuffix": "is required",
-							"progressMsg": "Please wait...",
-							"linkWarningMsg": "opens in a new window",
-							"alertMsg": ""
-						}
-					},
-					"modalBackground_2": {
-						"label": "Modal background",
-						"htmlLabel": "Modal background",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalHeader_4": {
-						"label": "Modal header",
-						"htmlLabel": "Modal header",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"stickyPanelModal_2": {
-						"label": "Sticky Panel-modal",
-						"htmlLabel": "Sticky Panel-modal",
-						"mandatoryMsg": ""
-					},
-					"modalHeader_5": {
-						"label": "Modal Header",
-						"htmlLabel": "Modal Header",
-						"mandatoryMsg": "",
-						"properties": {
-							"trackingCodePrefix": "Reference Code: "
-						}
-					},
-					"modalLogo_2": {
-						"label": "Modal logo",
-						"htmlLabel": "Modal logo",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalLogoImage_2": {
-						"label": "Modal logo image",
-						"htmlLabel": "Modal logo image",
-						"mandatoryMsg": "",
-						"properties": {
-							"alternativeText": "",
-							"toolTip": "",
-							"imageLink": ""
-						}
-					},
-					"saveModalContent_1": {
-						"label": "Application Received",
-						"htmlLabel": "<h1>Application Received</h1>",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "Thank you, your submission has been received."
-						}
-					},
-					"startANewForm_5": {
-						"label": "Action button",
-						"htmlLabel": "Action button",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"followOnOptionsBlock_3": {
-						"label": "Follow On Options Block",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"startANewForm": {
-						"label": "Start a new form",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"returnToPortal_3": {
-						"label": "Return to portal",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"showFormXml_3": {
-						"label": "Show form XML",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalFooter_2": {
-						"label": "Modal Footer",
-						"htmlLabel": "Modal Footer",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"formFooterText_5": {
-						"label": "Footer Section",
-						"htmlLabel": "Footer Section",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": ""
-						}
-					},
-					"textDisplay_5": {
-						"label": "Form Footer Text",
-						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
-						"mandatoryMsg": ""
-					},
 					"cancelsuccess": {
 						"label": "Cancel Success",
 						"htmlLabel": "Cancel Success",
@@ -5202,6 +5038,110 @@
 						"label": "Form Footer Text",
 						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
 						"mandatoryMsg": ""
+					},
+					"submitsuccess": {
+						"label": "Submit Success",
+						"htmlLabel": "Submit Success",
+						"mandatoryMsg": "",
+						"properties": {
+							"leavePageWarningMessage": "",
+							"mandatoryMsgSuffix": "is required",
+							"progressMsg": "Please wait...",
+							"linkWarningMsg": "opens in a new window",
+							"alertMsg": ""
+						}
+					},
+					"modalBackground_2": {
+						"label": "Modal background",
+						"htmlLabel": "Modal background",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalHeader_4": {
+						"label": "Modal header",
+						"htmlLabel": "Modal header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"stickyPanelModal_2": {
+						"label": "Sticky Panel-modal",
+						"htmlLabel": "Sticky Panel-modal",
+						"mandatoryMsg": ""
+					},
+					"modalHeader_5": {
+						"label": "Modal Header",
+						"htmlLabel": "Modal Header",
+						"mandatoryMsg": "",
+						"properties": {
+							"trackingCodePrefix": "Reference Code: "
+						}
+					},
+					"modalLogo_2": {
+						"label": "Modal logo",
+						"htmlLabel": "Modal logo",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalLogoImage_2": {
+						"label": "Modal logo image",
+						"htmlLabel": "Modal logo image",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"modalContent_1": {
+						"label": "Modal Content",
+						"htmlLabel": "<h1>Modal Content</h1>",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Your Application has been received"
+						}
+					},
+					"startANewForm": {
+						"label": "Start a new form",
+						"htmlLabel": "Start a new form",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"show_form_xml_4": {
+						"label": "Show form XML",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalFooter_2": {
+						"label": "Modal Footer",
+						"htmlLabel": "Modal Footer",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"formFooterText_3": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"formFooterText_1": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
 					}
 				}
 			}
@@ -5273,5 +5213,6 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.1",
 	"id": "AvokaSmartForm",
-	"exclude": false
+	"exclude": false,
+	"isPreview": false
 }

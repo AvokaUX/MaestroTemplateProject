@@ -934,6 +934,7 @@
 		]
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -943,92 +944,85 @@
 	],
 	"localModals": [
 		"savesuccess",
-		"submitsuccess",
-		"cancelsuccess"
+		"cancelsuccess",
+		"submitsuccess"
 	],
 	"maestroReleaseVersion": "17.10.1",
 	"modals": {
 		"cancelsuccess": {
-			"exclude": false,
-			"hasCustomId": true,
 			"htmlLabel": "Cancel Success",
 			"id": "cancelsuccess",
 			"label": "Cancel Success",
-			"path": "",
 			"properties": {},
 			"rows": [
 				[
 					{
-						"exclude": false,
 						"id": "modalBackground",
-						"path": "",
 						"rows": [
 							[]
 						],
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
-						"exclude": false,
 						"id": "modalHeader",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "stickyPanelModal",
-									"path": "StickyPanelmodal",
 									"rows": [
 										[
 											{
 												"id": "modalHeader_1",
-												"path": "",
 												"rows": [
 													[
 														{
 															"id": "modalLogo",
-															"path": "",
 															"rows": [
 																[
 																	{
 																		"id": "modalLogoImage",
-																		"path": "",
 																		"properties": {},
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
 																		"type": "image"
 																	}
 																]
 															],
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
 															"type": "block"
 														}
 													]
 												],
+												"subId": "10cd185db8f44312a2d007cce8c61074",
 												"type": "form-header"
 											}
 										]
 									],
+									"subId": "f85f23c17b944a399f2368733020e9ad",
 									"type": "sticky-panel"
 								}
 							]
 						],
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"exclude": false,
 						"id": "modalContent",
-						"path": "",
 						"rows": [
 							[
 								{
 									"animateVisibility": true,
 									"exclude": false,
 									"id": "startANewForm_1",
-									"path": "",
 									"rules": {
 										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode)),window.location.replace(url)\n} else if(Resource.preview) {Form.showModal(\"\");}",
 										"sh": "return item['$$parent'].properties.includeStartAgain;"
 									},
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
 									"type": "button"
 								}
 							],
@@ -1081,31 +1075,33 @@
 								}
 							]
 						],
+						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"type": "section-2"
 					}
 				],
 				[
 					{
 						"id": "modalFooter",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "formFooterText_6",
-									"path": "",
 									"rows": [
 										[
 											{
 												"id": "formFooterText",
 												"path": "",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"type": "text-display"
 											}
 										]
 									],
+									"subId": "082a0f34bab7496ab942025374652910",
 									"type": "section-2"
 								}
 							]
 						],
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"type": "form-footer"
 					}
 				]
@@ -1175,7 +1171,6 @@
 				],
 				[
 					{
-						"exclude": false,
 						"htmlLabel": "<h1>Save Modal Content</h1>",
 						"id": "saveModalContent",
 						"label": "Save Modal Content",
@@ -1241,14 +1236,17 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "modalFooter_1",
 						"rows": [
 							[
 								{
+									"exclude": false,
 									"id": "formFooterText_4",
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "textDisplay_4",
 												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"type": "text-display"
@@ -1272,140 +1270,131 @@
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
+			"path": "",
 			"properties": {},
 			"rows": [
 				[
 					{
 						"id": "modalBackground_2",
+						"path": "",
 						"rows": [
 							[]
 						],
-						"subId": "fb2710bf445348a0b3348c277ae25d53",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
 						"id": "modalHeader_4",
+						"path": "",
 						"rows": [
 							[
 								{
 									"id": "stickyPanelModal_2",
+									"path": "StickyPanelmodal",
 									"rows": [
 										[
 											{
 												"id": "modalHeader_5",
+												"path": "",
 												"rows": [
 													[
 														{
 															"id": "modalLogo_2",
+															"path": "",
 															"rows": [
 																[
 																	{
 																		"id": "modalLogoImage_2",
+																		"path": "",
 																		"properties": {},
-																		"subId": "e16044b6f54649b29f8fc0217e584b77",
 																		"type": "image"
 																	}
 																]
 															],
-															"subId": "6fc01299872445448b85622c2188b494",
 															"type": "block"
 														}
 													]
 												],
-												"subId": "89fb5406cfe4459b86fa72fcc4cf81fe",
 												"type": "form-header"
 											}
 										]
 									],
-									"subId": "0556f32929054ae994a65aebdedc76ac",
 									"type": "sticky-panel"
 								}
 							]
 						],
-						"subId": "9dff6f6d9f3e40299733766ce093bda7",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"htmlLabel": "<h1>Application Received</h1>",
-						"id": "saveModalContent_1",
-						"label": "Application Received",
-						"properties": {
-							"infoText": "Thank you, your submission has been received."
-						},
+						"exclude": false,
+						"id": "modalContent_1",
+						"path": "",
 						"rows": [
 							[
 								{
-									"id": "startANewForm_5",
-									"subId": "664e44d55e00407d9d4d24d4e1426fae",
+									"animateVisibility": true,
+									"exclude": false,
+									"id": "startANewForm",
+									"path": "",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode)),window.location.replace(url)\n} else if(Resource.preview) {Form.showModal(\"\");}",
+										"sh": "return item['$$parent'].properties.includeStartAgain;"
+									},
 									"type": "button"
 								}
 							],
 							[
 								{
-									"id": "followOnOptionsBlock_3",
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "startANewForm",
-												"path": "",
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
-												"type": "button"
-											},
-											{
-												"id": "returnToPortal_3",
-												"path": "",
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
-												"type": "button"
-											},
-											{
-												"id": "showFormXml_3",
-												"path": "",
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
-												"type": "button"
-											}
-										]
+									"exclude": false,
+									"id": "show_form_xml_4",
+									"label": "Show form XML",
+									"path": "",
+									"rules": {
+										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+										"sh": "Resource.preview || Resource.design"
+									},
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
 									],
-									"type": "follow-on-options"
+									"type": "button"
 								}
 							]
 						],
-						"subId": "ea5b9f4077a24d2b93f412748bbf4bf9",
 						"type": "section-2"
 					}
 				],
 				[
 					{
 						"id": "modalFooter_2",
+						"path": "",
 						"rows": [
 							[
 								{
-									"id": "formFooterText_5",
+									"id": "formFooterText_3",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "textDisplay_5",
+												"id": "formFooterText_1",
 												"path": "",
-												"subId": "46f9f22172c44180a9cc84ada4a4aead",
 												"type": "text-display"
 											}
 										]
 									],
-									"subId": "321156c132f54510ad5c0f0d9040cc05",
 									"type": "section-2"
 								}
 							]
 						],
-						"subId": "105c8613ddd44fd580970e2f3d22ba7f",
 						"type": "form-footer"
 					}
 				]
 			],
-			"type": "modal-page-core"
+			"type": "bs-modal-page"
 		}
 	},
 	"paletteExclusions": {
@@ -1628,7 +1617,7 @@
 																"properties": {
 																	"src": {
 																		"fileName": "avoka-logo.png",
-																		"height": "40",
+																		"height": "42",
 																		"width": "52"
 																	}
 																},
@@ -1875,7 +1864,7 @@
 								"legacyMethod": false
 							},
 							"rules": {
-								"click": "//Form.showModal(\"submitsuccess_999\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
 								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
 							"span": {
@@ -2539,7 +2528,13 @@
 				"bs-next-error-36745",
 				"av-form-field"
 			],
-			"properties": {}
+			"properties": {},
+			"styles": [
+				"av-button-primary",
+				"av-button",
+				"av-global-layout",
+				"av-form-field"
+			]
 		},
 		"button-group": {
 			"availableStyles": [
