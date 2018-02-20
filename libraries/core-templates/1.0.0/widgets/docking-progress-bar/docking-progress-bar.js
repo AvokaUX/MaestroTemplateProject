@@ -14,7 +14,6 @@ define(["app"], function(app) {
                     var hh = $scope.$header.outerHeight();
                     var sp = newValue;
                     var dp = Form.getItemProperty("data.dockingController","dockPosition");
-                   //var ds = (hh - 10) * (1 - sp/dp);
                     var ds = (hh + item.properties.progressBarHeight)/2 * (1 - sp/dp);
                     var relativeMargin = ($(window).width() * 0.01) + 36;
 					if(Form.$Pages.visiblePageCount > 1) {

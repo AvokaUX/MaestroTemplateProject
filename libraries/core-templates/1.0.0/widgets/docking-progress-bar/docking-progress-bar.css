@@ -11,7 +11,7 @@ form[name='form'] .av-progress-bar-banner {
     background: rgba(100, 118, 127, 0.67); 
     margin: 0 -9999px;
     width: 99999px;
-    z-index: 10; 
+    z-index: 10;
 }
 form[name='form'] .av-docking-block {
     position:relative;    

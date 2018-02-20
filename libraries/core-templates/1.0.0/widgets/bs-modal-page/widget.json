@@ -32,9 +32,9 @@
 																},
 																"properties": {
 																	"src": {
-																		"fileName": "bs-logo.png",
-																		"width": "",
-																		"height": ""
+																		"fileName": "avoka-logo.png",
+																		"width": "50",
+																		"height": "42"
 																	}
 																},
 																"type": "image",
