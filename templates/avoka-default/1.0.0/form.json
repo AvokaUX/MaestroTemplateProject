@@ -2549,7 +2549,7 @@
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n   }",
 								"dc": "data.pageChangeAnimation",
-								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");\n"
+								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");\n"
 							},
 							"type": "page-controller"
 						}
@@ -3630,7 +3630,7 @@
 		},
 		"nav-content": {
 			"availableStyles": [
-				"page-fade-transition",
+				"av-page-transition",
 				"align-top"
 			],
 			"properties": {}
@@ -3647,8 +3647,7 @@
 		"nav-page": {
 			"availableStyles": [
 				"bs-max-width-73189",
-				"align-top",
-				"bs-page-transition-20212"
+				"align-top"
 			],
 			"properties": {}
 		},
@@ -3708,7 +3707,7 @@
 		},
 		"page-controller": {
 			"availableStyles": [
-				"page-fade-transition",
+				"av-page-transition",
 				"align-top"
 			],
 			"properties": {}

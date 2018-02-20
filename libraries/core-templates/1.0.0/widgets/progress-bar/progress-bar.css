@@ -41,7 +41,7 @@ form[name='form'] .progress-container .wdg-page-segment-container {
   top: 0;
   vertical-align: middle;
 }
-form[name='form'] .progress-container .wdg-page-segment-container.show-page-icon:before {
+form[name='form'] .progress-container .wdg-page-segment-container.show-page-icon:after {
   content: "";
   position: absolute;
   height: 6px;
@@ -49,8 +49,12 @@ form[name='form'] .progress-container .wdg-page-segment-container.show-page-icon
   top: 1px;
   right: 0;
 }
-form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-page-icon:before {
+form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-page-icon:after {
   content: none;
+}
+form[name='form'].Nav-To-Right .show-page-icon:after, form[name='form'].Nav-To-Left .show-group-icon:before {
+  transition: background 0s;
+  transition-delay: 0.7s;
 }
 form[name='form'] .progress-container .wdg-page-segment-container.show-group-icon:before {
   content: "";

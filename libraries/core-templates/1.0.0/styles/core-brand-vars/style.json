@@ -152,7 +152,7 @@
 			"defaultValue": ""
 		},
 		{
-			"name": "av-hover-color",
+			"name": "av-selected-color",
 			"type": "color",
 			"label": "Hover Color",
 			"category": "Action colors",
@@ -179,7 +179,6 @@
 			"category": "Buttons",
 			"defaultValue": ""
 		},
-
 		{
 			"name": "av-dialog-background",
 			"type": "color",
@@ -187,6 +186,13 @@
 			"category": "Dialogs",
 			"defaultValue": "#000"
 		},
+        {
+          "name": "av-dialog-background-opacity",
+          "type": "text",
+          "label": "Dialog Background Opacity (0-100%)",
+          "category": "Dialogs",
+          "defaultValue": "70%"
+        },
 		{
 			"name": "av-button-font-size",
 			"type": "px",
