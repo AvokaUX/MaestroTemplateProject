@@ -401,10 +401,11 @@
 										"htmlLabel": "Confirm",
 										"path": "",
 										"rules": {},
-										"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+										"properties": {
+											"dialogNavButtons": "abandon"
+										},
 										"id": "dialogFooterBlock_4",
-										"type": "block",
-										"pubId": "7314fa1adde847e3a442130e7580de3a"
+										"type": "block"
 									}
 								]
 							],

@@ -342,10 +342,12 @@
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "dialogFooterBlock_5",
 												"rows": [
 													[
 														{
+															"exclude": false,
 															"id": "confirm_3",
 															"rules": {
 																"sh": ""
@@ -950,6 +952,7 @@
 	"maestroReleaseVersion": "17.10.1",
 	"modals": {
 		"cancelsuccess": {
+			"exclude": false,
 			"htmlLabel": "Cancel Success",
 			"id": "cancelsuccess",
 			"label": "Cancel Success",
@@ -1011,12 +1014,17 @@
 				],
 				[
 					{
+						"exclude": false,
+						"htmlLabel": "<h1>Application Cancelled</h1>",
 						"id": "modalContent",
+						"label": "Application Cancelled",
+						"properties": {
+							"infoText": "Your application has been cancelled and will not be processed."
+						},
 						"rows": [
 							[
 								{
 									"animateVisibility": true,
-									"exclude": false,
 									"id": "startANewForm_1",
 									"rules": {
 										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode)),window.location.replace(url)\n} else if(Resource.preview) {Form.showModal(\"\");}",
@@ -1060,18 +1068,6 @@
 										"av-global-layout"
 									],
 									"type": "button"
-								}
-							],
-							[
-								{
-									"exclude": false,
-									"htmlLabel": "Your application has been cancelled and will not be processed.",
-									"id": "cancel_success_message_1",
-									"path": "",
-									"styles": [
-										"submit-success-message"
-									],
-									"type": "text-display"
 								}
 							]
 						],
@@ -1181,7 +1177,6 @@
 							[
 								{
 									"animateVisibility": true,
-									"exclude": false,
 									"id": "startANewForm_4",
 									"rules": {
 										"click": "if(!Resource.preview && !Resource.design) {\n  console.log(\"if\");\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode).window.location.replace(url))\n} else if(Resource.preview) {console.log(\"elseif\");Form.showModal(\"\");}",
@@ -1236,12 +1231,10 @@
 				],
 				[
 					{
-						"exclude": false,
 						"id": "modalFooter_1",
 						"rows": [
 							[
 								{
-									"exclude": false,
 									"id": "formFooterText_4",
 									"rows": [
 										[
@@ -1270,79 +1263,81 @@
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
-			"path": "",
 			"properties": {},
 			"rows": [
 				[
 					{
 						"id": "modalBackground_2",
-						"path": "",
 						"rows": [
 							[]
 						],
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
 						"id": "modalHeader_4",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "stickyPanelModal_2",
-									"path": "StickyPanelmodal",
 									"rows": [
 										[
 											{
 												"id": "modalHeader_5",
-												"path": "",
 												"rows": [
 													[
 														{
 															"id": "modalLogo_2",
-															"path": "",
 															"rows": [
 																[
 																	{
 																		"id": "modalLogoImage_2",
-																		"path": "",
 																		"properties": {},
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
 																		"type": "image"
 																	}
 																]
 															],
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
 															"type": "block"
 														}
 													]
 												],
+												"subId": "10cd185db8f44312a2d007cce8c61074",
 												"type": "form-header"
 											}
 										]
 									],
+									"subId": "f85f23c17b944a399f2368733020e9ad",
 									"type": "sticky-panel"
 								}
 							]
 						],
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
 						"type": "block"
 					}
 				],
 				[
 					{
 						"exclude": false,
+						"htmlLabel": "<h1>Appliction Received</h1>",
 						"id": "modalContent_1",
-						"path": "",
+						"label": "Appliction Received",
+						"properties": {
+							"infoText": "Thank you, your submission has been received."
+						},
 						"rows": [
 							[
 								{
 									"animateVisibility": true,
-									"exclude": false,
 									"id": "startANewForm",
-									"path": "",
 									"rules": {
 										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode)),window.location.replace(url)\n} else if(Resource.preview) {Form.showModal(\"\");}",
 										"sh": "return item['$$parent'].properties.includeStartAgain;"
 									},
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
 									"type": "button"
 								}
 							],
@@ -1363,33 +1358,53 @@
 									],
 									"type": "button"
 								}
+							],
+							[
+								{
+									"exclude": false,
+									"id": "return_to_portal_4",
+									"label": "Return to portal",
+									"path": "",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+										"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+									},
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
+									],
+									"type": "button"
+								}
 							]
 						],
+						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"type": "section-2"
 					}
 				],
 				[
 					{
 						"id": "modalFooter_2",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "formFooterText_3",
-									"path": "",
 									"rows": [
 										[
 											{
 												"id": "formFooterText_1",
 												"path": "",
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"type": "text-display"
 											}
 										]
 									],
+									"subId": "082a0f34bab7496ab942025374652910",
 									"type": "section-2"
 								}
 							]
 						],
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"type": "form-footer"
 					}
 				]

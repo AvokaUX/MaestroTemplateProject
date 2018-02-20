@@ -104,7 +104,7 @@
 												{
 													"rules": {
 														"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
-														"sh": ""
+														"sh": "item.$$parent.properties.dialogNavButtons == 'save'"
 													},
 													"subId": "6471b7e4d063409483e51ff9138ed85e",
 													"label": "Save",
@@ -118,10 +118,11 @@
 											]
 										],
 										"path": "",
-										"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+										"properties": {
+											"dialogNavButtons": "save"
+										},
 										"id": "dialogFooterBlock_12",
-										"type": "block",
-										"pubId": "e62f57c6400f47a6b1f5fdcbcae4b38e"
+										"type": "block"
 									}
 								]
 							],
