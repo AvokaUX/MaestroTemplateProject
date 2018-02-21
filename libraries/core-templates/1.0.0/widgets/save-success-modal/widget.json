@@ -1,0 +1,174 @@
+{
+	"label": "Save Success Modal",
+	"rows": [
+		[
+			{
+				"rows": [
+					[]
+				],
+				"id": "modalBackground_1",
+				"type": "modal-background"
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"rows": [
+											[
+												{
+													"rows": [
+														[
+															{
+																"properties": {},
+																"id": "modalLogoImage_1",
+																"type": "image"
+															}
+														]
+													],
+													"id": "modalLogo_1",
+													"type": "block"
+												}
+											]
+										],
+										"id": "modalHeader_3",
+										"type": "form-header"
+									}
+								]
+							],
+							"id": "stickyPanelModal_1",
+							"type": "sticky-panel"
+						}
+					]
+				],
+				"id": "modalHeader_2",
+				"type": "block"
+			}
+		],
+		[
+			{
+				"label": "Save Modal Content",
+				"rows": [
+					[
+						{
+							"animateVisibility": true,
+							"rules": {
+								"click": "if(!Resource.preview && !Resource.design) {\n  console.log(\"if\");\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode).window.location.replace(url))\n} else if(Resource.preview) {console.log(\"elseif\");Form.showModal(\"\");}",
+								"sh": "return item['$$parent'].properties.includeStartAgain;"
+							},
+							"id": "startANewForm_4",
+							"type": "button",
+							"exclude": false
+						}
+					],
+					[
+						{
+							"label": "Return to portal",
+							"styles": [
+								"av-global-layout",
+								"av-button",
+								"av-button-primary"
+							],
+							"animateVisibility": true,
+							"exclude": false,
+							"htmlLabel": "Return to portal",
+							"path": "",
+							"rules": {
+								"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\")), window.location.replace(url)\n}",
+								"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+							},
+							"type": "button",
+							"id": "button"
+						}
+					],
+					[
+						{
+							"label": "Show form XML",
+							"styles": [
+								"av-button-primary",
+								"av-button",
+								"av-global-layout"
+							],
+							"exclude": false,
+							"path": "",
+							"rules": {
+								"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+								"sh": "Resource.preview || Resource.design"
+							},
+							"type": "button",
+							"id": "showFormXml_5"
+						}
+					]
+				],
+				"properties": {
+					"infoText": "Your form has been saved",
+				},
+				"propDefs": {
+					"includeStartAgain": {
+						"label": "Include Start Again Link",
+						"type": "boolean",
+						"value": true,
+						"helpText": "Include Start Again Link."
+					},
+					"includePortalLink": {
+						"label": "Include Portal Link (Auth Only)",
+						"type": "boolean",
+						"value": true,
+						"helpText": "Include User Portal Link (Auth Only)."
+					}
+				},
+				"htmlLabel": "<h1>Save Modal Content</h1>",
+				"id": "saveModalContent",
+				"type": "block",
+				"exclude": false
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"subId": "8c9b02742d3841d8a9c30d826878b6af",
+										"id": "textDisplay_4",
+										"type": "text-display",
+										"pubId": "41823e15ae9147acbb33be9d8c34c3ff"
+									}
+								]
+							],
+							"subId": "082a0f34bab7496ab942025374652910",
+							"id": "formFooterText_4",
+							"type": "section-2",
+							"pubId": "aef4acd5eba1437aa7968f0ca40b15b8"
+						}
+					]
+				],
+				"rules": {
+					"sh": "!Util.isReceipt"
+				},
+				"subId": "b4eb8296a924482c880d6c3abca4bb61",
+				"id": "modalFooter_1",
+				"type": "form-footer",
+				"pubId": "759a541e3b8947f2b896b10cdc073951"
+			}
+		]
+	],
+	"properties": {},
+	"type": "bs-modal-page",
+	"htmlLabel": "Save Success",
+	"id": "savesuccess",
+	"exclude": false,
+	"category": "Custom Components",
+	"blockInfo": {
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16413",
+		"publishLibraryId": 16680,
+		"blockCode": "save-success-modal"
+	}
+}
