@@ -1,0 +1,25 @@
+form[name='form'] .wdg-accordion-section-container {
+  padding: 0;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+form[name='form'] .wdg-accordion-section-container .wdg-accordion-collapse-text {
+  float: right;
+  margin-right: 5px;
+}
+form[name='form'] .wdg-accordion-section-container .wdg-accordion-collapse-icon {
+  float: right;
+}
+form[name='form'] .wdg-accordion-section-container .wdg-accordion-panel {
+  overflow: visible;
+}
+form[name='form'] .wdg-accordion-section-container .panel-heading {
+  cursor: pointer;
+}
+form[name='form'] .wdg-accordion-section-container .panel-collapse {
+  margin: 0 18px 0px 18px;
+}
+form[name='form'] .wdg-accordion-section-container .panel-collapse .av-accordion-body {
+  padding: 15px;
+  margin-bottom: 20px;
+}

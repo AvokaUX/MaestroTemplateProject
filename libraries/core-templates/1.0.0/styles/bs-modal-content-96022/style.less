@@ -1,6 +1,17 @@
 form[name='form'] {
 	.bs-modal-content-96022 {
 		margin-top: 20px;
+		max-height: 700px;
+		overflow-y: auto;
+		@media (max-width: 1200px) {
+			max-height: 615px;
+		}
+		@media (max-width: 560px) {
+			max-height: 230px;
+		}
+		@media (max-width: 480px) {
+			max-height: 500px;
+		}
 	
 		.wdg-section-2 {		// Section 2
 		
