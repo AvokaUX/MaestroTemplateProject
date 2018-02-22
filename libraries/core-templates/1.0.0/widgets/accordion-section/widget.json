@@ -1,0 +1,29 @@
+{
+  "category": "Containers",
+  "label": "Accordion Section",
+  "html": "accordion-section.html",
+  "css": "accordion-section.css",
+  "js": "accordion-section.js",
+  "icon": "accordion-section.png",
+  "propDefs" : {
+    "ariaLabel": {
+      "label": "Aria Label",
+      "type": "text",
+      "value": "",
+      "category" : "Accessibility",
+      "helpText": "Enter the Aria Label for this accordion section."
+    },
+    "defaultCollapse": {
+			"label": "Default to open",
+			"type": "boolean",
+			"value": false,
+      "category" : "Display Options",
+      "helpText": "Set initial accordion section open status."
+    }    
+  },
+  "rows": [[]],
+  "styles": ["accordion-section-style"],
+  "validParents": ["accordion"],  
+  "exMandatory": true,
+  "noData": true
+}

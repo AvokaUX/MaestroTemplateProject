@@ -1,0 +1,22 @@
+form[name='form'] .wdg-accordion-section-container .wdg-error-icon {
+  color: #CC1814;
+  margin-left: 5px;
+}
+form[name='form'] .wdg-accordion-section-container .wdg-error-icon:after {
+  content: "Error(s)";
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+form[name='form'] .wdg-accordion-section-container .wdg-accordion-panel {
+  background-color: #f5f5f5;
+}
+form[name='form'] .wdg-accordion-section-container .panel-title span:first-of-type {
+  font-weight: bold;
+}
+form[name='form'] .wdg-accordion-section-container .panel-collapse {
+  background-color: #fff;
+}
+form[name='form'] .wdg-accordion-section-container .av-accordion-body {
+  border: 1px solid #ddd;
+}
