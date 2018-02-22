@@ -5,23 +5,101 @@
 		"publishLibraryId": 16680
 	},
 	"brandOptions": {
-		"functionalMenuFabMenu": []
+		"dockingProgressBar": [
+			{
+				"category": "Form Header",
+				"label": "Progress bar height (px)",
+				"path": "properties.progressBarHeight"
+			}
+		],
+		"functionalMenuFabMenu": [],
+		"logo": [
+			{
+				"category": "Logo",
+				"label": "Logo",
+				"linkedItems": [
+					{
+						"id": "submit_success_logo",
+						"path": "properties.src"
+					},
+					{
+						"id": "save_success_logo",
+						"path": "properties.src"
+					},
+					{
+						"id": "cancel_success_logo",
+						"path": "properties.src"
+					}
+				],
+				"path": "properties.src"
+			}
+		],
+		"pageController": [
+			{
+				"category": "Page Controller",
+				"label": "Page Transition",
+				"path": "properties.pageTransition"
+			}
+		],
+		"pageController_1": [
+			{
+				"category": "Page Controller",
+				"label": "Page Transition",
+				"path": "properties.pageTransition"
+			}
+		]
 	},
 	"brands": {
 		"Blue Sky": {
 			"itemOptions": {
 				"functionalMenuFabMenu": {
 					"properties": {}
+				},
+				"logo": {
+					"linkedItems": [
+						{
+							"id": "submit_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "save_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "cancel_success_logo",
+							"path": "properties.src"
+						}
+					],
+					"properties": {
+						"src": {
+							"fileName": "avoka-logo.png"
+						}
+					}
+				},
+				"pageController": {
+					"properties": {
+						"pageTransition": "Fade"
+					}
 				}
 			},
 			"label": "Blue Sky",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
+				"av-button-contrast": "",
+				"av-button-docking-color": "",
+				"av-button-docking-contrast": "",
+				"av-button-docking-font-color": "",
 				"av-button-font-size": "16px",
+				"av-button-primary-color": "",
+				"av-button-secondary-color": "",
+				"av-dialog-background": "#000",
+				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
+				"av-header-height": "75px",
+				"av-hover-color": "",
 				"av-max-form-width": "999999px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
@@ -77,16 +155,52 @@
 			"itemOptions": {
 				"functionalMenuFabMenu": {
 					"properties": {}
+				},
+				"logo": {
+					"linkedItems": [
+						{
+							"id": "submit_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "save_success_logo",
+							"path": "properties.src"
+						},
+						{
+							"id": "cancel_success_logo",
+							"path": "properties.src"
+						}
+					],
+					"properties": {
+						"src": {
+							"fileName": "avoka-logo.png"
+						}
+					}
+				},
+				"pageController": {
+					"properties": {
+						"pageTransition": "Fade"
+					}
 				}
 			},
 			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
+				"av-button-contrast": "",
+				"av-button-docking-color": "",
+				"av-button-docking-contrast": "",
+				"av-button-docking-font-color": "",
 				"av-button-font-size": "16px",
+				"av-button-primary-color": "",
+				"av-button-secondary-color": "",
+				"av-dialog-background": "#000",
+				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "Arial, Helvetica, sans-serif",
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
+				"av-header-height": "75px",
+				"av-hover-color": "",
 				"av-max-form-width": "1020px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
@@ -535,8 +649,7 @@
 															"label": "Confirm",
 															"path": "",
 															"rules": {
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
-																"sh": ""
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);"
 															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
@@ -561,130 +674,75 @@
 			"type": "dialog"
 		},
 		"formhelp": {
-			"exclude": false,
-			"hasCustomId": true,
-			"htmlLabel": "Form Help",
+			"htmlLabel": "Formhelp",
 			"id": "formhelp",
-			"label": "Form Help",
-			"path": "",
+			"label": "Formhelp",
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_3",
+						"id": "dialogHeader_6",
 						"rows": [
 							[
 								{
-									"id": "close_3",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"id": "close_6",
+									"subId": "9e296fc30de940628ec8b5dbda46ae26",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"subId": "5c9d9ff72c1f42e689d9e5be9b70217b",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_3",
-						"path": "",
+						"id": "dialogBody_5",
 						"rows": [
 							[
 								{
-									"entityPath": "dialog_content_form",
-									"exclude": false,
-									"hasCustomId": true,
-									"htmlLabel": "Form Help Content",
-									"id": "dialog_content_form_help",
-									"label": "Form Help Content",
-									"path": "",
-									"pathContext": "abs",
+									"id": "dialog_content_form_help_1",
 									"rows": [
 										[
 											{
-												"entityPath": "need",
-												"hasCustomId": true,
-												"htmlLabel": "Need Assistance?",
-												"id": "need_assistance",
-												"label": "Need Assistance?",
-												"pathContext": "abs",
+												"id": "need_assistance_1",
 												"rows": [
 													[
 														{
-															"entityPath": "need",
-															"exclude": false,
-															"htmlLabel": "Online Chat Block",
-															"id": "need_onlineChatBlock_1",
-															"label": "Online Chat Block",
-															"path": "Need/OnlineChatBlock",
-															"pathContext": "abs",
-															"span": {
-																"lg": 4
-															},
-															"styles": [
-																"bs-online-chat-82522"
-															],
-															"type": "text-input"
-														},
-														{
-															"entityPath": "need",
-															"exclude": false,
-															"htmlLabel": "Call us block",
-															"id": "need_callUsBlock_1",
-															"label": "Call us block",
+															"id": "need_onlineChatBlock_2",
 															"path": "",
-															"pathContext": "abs",
 															"rows": [
 																[
 																	{
-																		"exclude": false,
-																		"id": "infoBlockImage_4",
-																		"path": "",
+																		"id": "infoBlockImage_5",
 																		"properties": {},
 																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
 																		"type": "image"
 																	},
 																	{
-																		"exclude": false,
-																		"id": "block_6",
-																		"path": "",
+																		"id": "block_7",
 																		"rows": [
 																			[
 																				{
-																					"exclude": false,
-																					"htmlLabel": "Call us",
-																					"id": "callUs_2",
-																					"label": "Call us",
-																					"path": "",
+																					"id": "online_chat_header",
 																					"subId": "e349c33a8a244107942968737f085a50",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"exclude": false,
-																					"htmlLabel": "(Anytime, day or night)",
-																					"id": "anytimeDayOrNight_2",
-																					"label": "(Anytime, day or night)",
-																					"path": "",
+																					"id": "online_chat_times",
 																					"subId": "a0f122e70d81447bae6f63fe3b381734",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"exclude": false,
-																					"htmlLabel": "1800",
-																					"id": "_1800_2",
-																					"label": "1800",
-																					"path": "_1800",
-																					"properties": {
-																						"linkUrl": "tel:1800"
-																					},
+																					"id": "start_chat",
 																					"styles": [
-																						"form-help-hotline"
+																						"form-help-start-chat-button",
+																						"bs-dialog-button-12962"
 																					],
-																					"type": "link"
+																					"type": "button"
 																				}
 																			]
 																		],
@@ -693,111 +751,103 @@
 																	}
 																]
 															],
-															"span": {
-																"lg": 4,
-																"md": 6
-															},
-															"styles": [
-																"av-message-block",
-																"form-help-option-container"
-															],
 															"type": "advice-block-info"
 														},
 														{
-															"entityPath": "need",
-															"exclude": false,
-															"htmlLabel": "Assistant",
-															"id": "need_assistant_2",
-															"label": "Assistant",
-															"path": "",
-															"pathContext": "abs",
-															"properties": {
-																"src": {
-																	"fileName": "Assistant.png"
-																}
-															},
-															"span": {
-																"lg": 4,
-																"md": 4
-															},
-															"styles": [
-																"bs-assistant-image-73027"
+															"id": "need_callUsBlock_2",
+															"rows": [
+																[
+																	{
+																		"id": "infoBlockImage_6",
+																		"properties": {},
+																		"subId": "066f9f02c8ed4d3dbe6fbafadb2c168c",
+																		"type": "image"
+																	},
+																	{
+																		"id": "block_8",
+																		"rows": [
+																			[
+																				{
+																					"id": "callUs_3",
+																					"subId": "40b0d27a39634b32aa5aae46f63f2878",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"id": "anytimeDayOrNight_3",
+																					"subId": "f65b0de563ec4eb586ada9d3ef28dacd",
+																					"type": "text-display"
+																				}
+																			],
+																			[
+																				{
+																					"id": "_1800_3",
+																					"path": "_1800_3",
+																					"subId": "103eaa13e6744ec69b8514f232cb918d",
+																					"type": "link"
+																				}
+																			]
+																		],
+																		"subId": "c7e09a0bd7c54ffb9ac7ffcc8a59a4e7",
+																		"type": "block"
+																	}
+																]
 															],
-															"type": "image"
+															"subId": "77e108d25348486b8ea63797c551f722",
+															"type": "advice-block-info"
 														},
 														{
-															"entityPath": "need",
-															"exclude": false,
-															"htmlLabel": "Visit us",
-															"id": "need_visitUs_1",
-															"label": "Visit us",
-															"path": "",
-															"pathContext": "abs",
-															"properties": {
-																"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
-															},
+															"id": "need_visitUs_2",
 															"rows": [
 																[]
 															],
-															"span": {
-																"lg": 8,
-																"md": 9
-															},
-															"styles": [
-																"mg-section-2",
-																"form-help-visit-us"
-															],
+															"subId": "ff69444690424238a908235995c16dd5",
 															"type": "section-2"
 														}
 													]
 												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"subId": "1107cf85ef3843dc91c0824f91ecaf68",
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"subId": "3cd91d5bc47e4583a3a00652f0d3cc10",
 									"type": "dialog-content"
 								}
 							],
 							[
 								{
-									"exclude": true,
-									"id": "dialogFooter_1",
-									"path": "",
+									"id": "dialogFooter_2",
 									"rows": [
 										[
 											{
-												"id": "dialogFooterBlock_3",
-												"path": "",
+												"id": "dialogFooterBlock_5",
 												"rows": [
 													[
 														{
-															"id": "okay_1",
-															"path": "",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"id": "okay_2",
+															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"type": "button"
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"subId": "4504af28b4034b5b80bd444f5ae4f86e",
 												"type": "block"
 											}
 										]
 									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"subId": "a8009a0488e04ef6b4962a2f5d0c5e51",
 									"type": "block"
 								}
 							]
 						],
+						"subId": "113f48f6928a4f5e991def874d02cb4a",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog"
+			"type": "form-help"
 		},
 		"savechallenge": {
 			"exclude": false,
@@ -951,8 +1001,7 @@
 															"label": "Open",
 															"path": "",
 															"rules": {
-																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
-																"sh": ""
+																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});"
 															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
@@ -1087,8 +1136,7 @@
 															"label": "Save",
 															"path": "",
 															"rules": {
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
-																"sh": ""
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);"
 															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
@@ -1192,9 +1240,6 @@
 														{
 															"id": "okay_8",
 															"path": "",
-															"rules": {
-																"sh": ""
-															},
 															"subId": "6471b7e4d063409483e51ff9138ed85e",
 															"type": "button"
 														}
@@ -1298,13 +1343,6 @@
 				"path": "properties.autoSaveInterval"
 			}
 		],
-		"functionalMenuFabMenu": [
-			{
-				"category": "Functional Menu - FAB menu",
-				"label": "Menu Layout",
-				"path": "properties.menuLayout"
-			}
-		],
 		"pageController": []
 	},
 	"id": "AvokaSmartForm",
@@ -1313,881 +1351,12 @@
 		"saveconfirm",
 		"savechallenge",
 		"cancelconfirm",
-		"formhelp",
-		"showxml"
+		"showxml",
+		"formhelp"
 	],
-	"localModals": [
-		"cancelsuccess",
-		"submitsuccess_1",
-		"savesuccessoriginal",
-		"savesuccess",
-		"submitsuccess"
-	],
-	"maestroReleaseVersion": "17.10.0",
-	"modals": {
-		"cancelsuccess": {
-			"exclude": false,
-			"id": "cancelsuccess",
-			"properties": {},
-			"rows": [
-				[
-					{
-						"id": "modalMobileHeader",
-						"path": "",
-						"subId": "0c14fcab0032461d9c4e5e4648b243af",
-						"type": "modal-mobile-header"
-					}
-				],
-				[
-					{
-						"id": "formHeader_1",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "logo_1",
-									"path": "",
-									"properties": {},
-									"subId": "05fa1618bac3410cac7208dd0c297403",
-									"type": "image"
-								}
-							]
-						],
-						"subId": "0be6bfdb2cd9477fbfa75947b24ac1a3",
-						"type": "form-header"
-					}
-				],
-				[
-					{
-						"id": "applicationCancelled",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "textDisplay_2",
-									"path": "",
-									"subId": "5a07f0b154ba4c479ab3df966e214c62",
-									"type": "text-display"
-								},
-								{
-									"id": "followOnOptionsBlock",
-									"rows": [
-										[
-											{
-												"id": "startANewForm_1",
-												"path": "",
-												"subId": "3578bbae676d4f5185886b229eb619d1",
-												"type": "button"
-											},
-											{
-												"id": "returnToPortal",
-												"path": "",
-												"subId": "9fd5b384ebc8409aadf1156f5d24417d",
-												"type": "button"
-											},
-											{
-												"id": "showFormXml",
-												"path": "",
-												"subId": "562eae2e29164872ba074a6e85be7a46",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "e9db2ecddc77421db5a5a2b4f00a6fb8",
-									"type": "follow-on-options"
-								}
-							]
-						],
-						"subId": "1cd690237c3049849df9680d9e8798fa",
-						"type": "section"
-					}
-				],
-				[
-					{
-						"exclude": false,
-						"id": "formFooter",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "formFooterText",
-									"rows": [
-										[
-											{
-												"id": "textDisplay",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "1c81a4fdb80045d49654478a23b0d632",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "92dd87f9aa99469396fd45638c42d9d5",
-						"type": "form-footer"
-					}
-				],
-				[]
-			],
-			"type": "modal-cancel-success"
-		},
-		"savesuccess": {
-			"htmlLabel": "Save Success",
-			"id": "savesuccess",
-			"label": "Save Success",
-			"properties": {},
-			"rows": [
-				[
-					{
-						"id": "modalBackground_1",
-						"rows": [
-							[]
-						],
-						"subId": "2f5c018e42eb4132b71ba6445983da7a",
-						"type": "modal-background"
-					}
-				],
-				[
-					{
-						"id": "modalHeader_2",
-						"rows": [
-							[
-								{
-									"id": "stickyPanelModal_1",
-									"rows": [
-										[
-											{
-												"id": "modalHeader_3",
-												"rows": [
-													[
-														{
-															"id": "modalLogo_1",
-															"rows": [
-																[
-																	{
-																		"id": "modalLogoImage_1",
-																		"properties": {},
-																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
-																		"type": "image"
-																	}
-																]
-															],
-															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
-															"type": "block"
-														}
-													]
-												],
-												"subId": "10cd185db8f44312a2d007cce8c61074",
-												"type": "form-header"
-											}
-										]
-									],
-									"subId": "f85f23c17b944a399f2368733020e9ad",
-									"type": "sticky-panel"
-								}
-							]
-						],
-						"subId": "8f9a2f46878a40938967fa6fbdcea360",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"htmlLabel": "<h1>Save Modal Content</h1>",
-						"id": "saveModalContent",
-						"label": "Save Modal Content",
-						"properties": {
-							"infoText": "Your form has been saved"
-						},
-						"rows": [
-							[
-								{
-									"id": "startANewForm_4",
-									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
-									"type": "button"
-								}
-							]
-						],
-						"subId": "d4a0cd71666b429898edfba3b748599d",
-						"type": "section-2"
-					}
-				],
-				[
-					{
-						"id": "modalFooter_1",
-						"rows": [
-							[
-								{
-									"id": "formFooterText_4",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_4",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "082a0f34bab7496ab942025374652910",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "b4eb8296a924482c880d6c3abca4bb61",
-						"type": "form-footer"
-					}
-				]
-			],
-			"type": "bs-modal-page"
-		},
-		"savesuccessoriginal": {
-			"exclude": false,
-			"htmlLabel": "Save Success old",
-			"id": "savesuccessoriginal",
-			"label": "Save Success old",
-			"properties": {},
-			"rows": [
-				[
-					{
-						"exclude": false,
-						"id": "modalMobileHeader_1",
-						"path": "",
-						"subId": "28bda9d360004a68be5a7fd8c4d70119",
-						"type": "modal-mobile-header"
-					}
-				],
-				[
-					{
-						"exclude": false,
-						"id": "formHeader_2",
-						"path": "",
-						"rows": [
-							[
-								{
-									"exclude": false,
-									"id": "logo_2",
-									"path": "",
-									"properties": {},
-									"subId": "87e0fbb72b804462be322b1e31f4e2ff",
-									"type": "image"
-								}
-							]
-						],
-						"subId": "3bb44cb13bfa4d6a994dcbb2c54fa8bc",
-						"type": "form-header"
-					}
-				],
-				[
-					{
-						"exclude": false,
-						"id": "applicationSaved",
-						"path": "",
-						"rows": [
-							[
-								{
-									"exclude": false,
-									"id": "successMessage",
-									"path": "",
-									"subId": "2df582046a3f492d8c9e544d862dff28",
-									"type": "text-display"
-								}
-							],
-							[
-								{
-									"exclude": false,
-									"id": "referenceCodeBlockSave",
-									"path": "",
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "referenceCodePreText",
-												"path": "",
-												"subId": "5ec17a221a9840178469b33569cda8e2",
-												"type": "text-display"
-											}
-										],
-										[
-											{
-												"exclude": false,
-												"id": "referenceCode",
-												"path": "",
-												"subId": "ed9cb65cd4bb4e42a598277382d8bd65",
-												"type": "text-display"
-											}
-										],
-										[
-											{
-												"exclude": false,
-												"id": "clickHereToReturnToYour",
-												"path": "",
-												"subId": "efc4631be2a44f608e0193f9bdf70009",
-												"type": "button"
-											},
-											{
-												"id": "expiryMessage",
-												"path": "",
-												"subId": "4b0aac48338246f1b9fe67ffa2b2aee6",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "bb5814bedb0d4dbba07b45add19f5b3d",
-									"type": "block"
-								}
-							],
-							[
-								{
-									"id": "sendYourselfAReminderEmail",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "send_reminder_email",
-												"path": "SendReminderEmail",
-												"subId": "0f73b18db5304c8da23b57283565a063",
-												"type": "email"
-											}
-										],
-										[
-											{
-												"id": "save_success_send_reminder",
-												"path": "",
-												"subId": "c7ea25d8b626461ba1651a4075619826",
-												"type": "button-email-saved-form"
-											}
-										]
-									],
-									"subId": "95e6073a96be4f8a8cf99d4ea72aa1e8",
-									"type": "section-2"
-								}
-							],
-							[
-								{
-									"id": "checkYourEmail",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "saveEmailCompleteMessage",
-												"path": "",
-												"subId": "b5a70fe27f2b4efa82312c449f78b346",
-												"type": "text-display"
-											}
-										],
-										[
-											{
-												"id": "sendAnotherReminderEmail",
-												"path": "",
-												"subId": "7b57ce4d4cbe4ab1922ce52a8b348fd7",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "2854d38542444110b289383a9f96c1b0",
-									"type": "section-2"
-								}
-							],
-							[
-								{
-									"id": "share_form_initial",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "save_success_recipient_email_address",
-												"path": "SaveSuccessRecipientEmail",
-												"subId": "092106055eb24af39d677ccd197a20db",
-												"type": "email"
-											},
-											{
-												"id": "save_success_sender_name",
-												"path": "SaveSuccessSenderName",
-												"subId": "97ae51a585464a55b7d7abd149e61a75",
-												"type": "text-input"
-											}
-										],
-										[
-											{
-												"id": "save_success_email_body",
-												"path": "SaveSuccessEmailBody",
-												"subId": "84aa23b65fb44ea7b5043755185ab48f",
-												"type": "text-area"
-											}
-										],
-										[
-											{
-												"id": "save_success_share_form",
-												"path": "",
-												"subId": "324d2d3a0cc24e68a1164f2f2dafc091",
-												"type": "button-email-share-form"
-											}
-										]
-									],
-									"subId": "148ca5d8e8804a1aa7ebed894f7452f4",
-									"type": "section-2"
-								},
-								{
-									"id": "share_form_complete",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "sentShareInstructionsText",
-												"path": "",
-												"subId": "069583a0959b40ca8881610f9326c350",
-												"type": "text-display"
-											}
-										],
-										[
-											{
-												"id": "shareMyFormWithOthers",
-												"path": "",
-												"subId": "7aaa736a220d4ac78d42a68256da34a0",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "be1f0a4aaf784914a2bb83022f2ac2dc",
-									"type": "section-2"
-								}
-							],
-							[
-								{
-									"id": "followOnOptionsBlock_1",
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "startANewForm_2",
-												"path": "",
-												"rules": {
-													"click": "if(!Resource.preview && !Resource.design) {\n  console.log(\"if\");\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode).window.location.replace(url))\n} else if(Resource.preview) {console.log(\"elseif\");Form.showModal(\"\");}"
-												},
-												"subId": "ce43c73549b9426faf6db8ffc3086e1b",
-												"type": "button"
-											},
-											{
-												"id": "returnToPortal_1",
-												"path": "",
-												"subId": "22339adc3a3340c4a6f44157342fdb20",
-												"type": "button"
-											},
-											{
-												"id": "showFormXml_1",
-												"path": "",
-												"subId": "a0836dab580746c5b6916d2e11a1aae6",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "774672a59c074e7caed5d6b011981bd5",
-									"type": "follow-on-options"
-								}
-							]
-						],
-						"subId": "df5b1084a03a407da849b15ceb8231e9",
-						"type": "section"
-					}
-				],
-				[
-					{
-						"exclude": false,
-						"id": "formFooter_1",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "formFooterText_1",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_3",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "ee55f078b04f443b8dbf1f02f277a2cf",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "a94b411334214aca906e4185fad91921",
-						"type": "form-footer"
-					}
-				],
-				[]
-			],
-			"type": "modal-save-success"
-		},
-		"submitsuccess": {
-			"htmlLabel": "Submit Success",
-			"id": "submitsuccess",
-			"label": "Submit Success",
-			"properties": {},
-			"rows": [
-				[
-					{
-						"id": "modalBackground_2",
-						"rows": [
-							[]
-						],
-						"subId": "fb2710bf445348a0b3348c277ae25d53",
-						"type": "modal-background"
-					}
-				],
-				[
-					{
-						"id": "modalHeader_4",
-						"rows": [
-							[
-								{
-									"id": "stickyPanelModal_2",
-									"rows": [
-										[
-											{
-												"id": "modalHeader_5",
-												"rows": [
-													[
-														{
-															"id": "modalLogo_2",
-															"rows": [
-																[
-																	{
-																		"id": "modalLogoImage_2",
-																		"properties": {},
-																		"subId": "e16044b6f54649b29f8fc0217e584b77",
-																		"type": "image"
-																	}
-																]
-															],
-															"subId": "6fc01299872445448b85622c2188b494",
-															"type": "block"
-														}
-													]
-												],
-												"subId": "89fb5406cfe4459b86fa72fcc4cf81fe",
-												"type": "form-header"
-											}
-										]
-									],
-									"subId": "0556f32929054ae994a65aebdedc76ac",
-									"type": "sticky-panel"
-								}
-							]
-						],
-						"subId": "9dff6f6d9f3e40299733766ce093bda7",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"htmlLabel": "<h1>Application Received</h1>",
-						"id": "saveModalContent_1",
-						"label": "Application Received",
-						"properties": {
-							"infoText": "Thank you, your submission has been received."
-						},
-						"rows": [
-							[
-								{
-									"id": "startANewForm_5",
-									"subId": "664e44d55e00407d9d4d24d4e1426fae",
-									"type": "button"
-								}
-							],
-							[
-								{
-									"id": "followOnOptionsBlock_3",
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "startANewForm",
-												"path": "",
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
-												"type": "button"
-											},
-											{
-												"id": "returnToPortal_3",
-												"path": "",
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
-												"type": "button"
-											},
-											{
-												"id": "showFormXml_3",
-												"path": "",
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
-												"type": "button"
-											}
-										]
-									],
-									"type": "follow-on-options"
-								}
-							]
-						],
-						"subId": "ea5b9f4077a24d2b93f412748bbf4bf9",
-						"type": "section-2"
-					}
-				],
-				[
-					{
-						"id": "modalFooter_2",
-						"rows": [
-							[
-								{
-									"id": "formFooterText_5",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_5",
-												"path": "",
-												"subId": "46f9f22172c44180a9cc84ada4a4aead",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "321156c132f54510ad5c0f0d9040cc05",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "105c8613ddd44fd580970e2f3d22ba7f",
-						"type": "form-footer"
-					}
-				]
-			],
-			"type": "modal-page-core"
-		},
-		"submitsuccess_1": {
-			"exclude": false,
-			"htmlLabel": "Submit Success old",
-			"id": "submitsuccess_1",
-			"label": "Submit Success old",
-			"properties": {},
-			"rows": [
-				[
-					{
-						"id": "modalMobileHeader_2",
-						"path": "",
-						"subId": "53cc9f56297841af86a356d992a7542d",
-						"type": "modal-mobile-header"
-					}
-				],
-				[
-					{
-						"id": "formHeader_3",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "logo_3",
-									"path": "",
-									"properties": {},
-									"subId": "0d0e2041944842bb92e22e6c53b605c2",
-									"type": "image"
-								}
-							]
-						],
-						"subId": "97714947aa0547be98a5d438cad74a41",
-						"type": "form-header"
-					}
-				],
-				[
-					{
-						"id": "applicationReceived",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "successMessage_1",
-									"path": "",
-									"subId": "f3241251453640ed896bda715f3868ac",
-									"type": "text-display"
-								},
-								{
-									"id": "nextSteps",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "formBundleJobTasks",
-												"path": "",
-												"properties": {},
-												"subId": "5fda532667544e5993ce37dab6c1f863",
-												"type": "form-bundle-job-tasks"
-											}
-										]
-									],
-									"subId": "3c1025296a064640afa5549010eff111",
-									"type": "section-2"
-								},
-								{
-									"id": "referenceCodeBlock",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "referenceCodeTopText",
-												"path": "",
-												"subId": "f7178870b3564ee9b978cb6f1b971f6c",
-												"type": "text-display"
-											},
-											{
-												"id": "referenceCode_1",
-												"path": "",
-												"subId": "ec79f0a4e54a4c02a92bff7667c5ff25",
-												"type": "text-display"
-											},
-											{
-												"id": "referenceCodeBottomText",
-												"path": "",
-												"subId": "2ca210869aaf4dab9a1ecc86e370dd77",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "b7e3720c646a4ad1a2c32557b064b083",
-									"type": "block"
-								}
-							],
-							[
-								{
-									"id": "forYourRecords",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "sendReceiptBlock",
-												"path": "",
-												"rows": [
-													[
-														{
-															"id": "send_receipt_email",
-															"path": "SendReceiptEmail",
-															"subId": "944c2d73e88d4d3793616204f08ff3a0",
-															"type": "email"
-														},
-														{
-															"id": "submit_success_send_receipt",
-															"path": "",
-															"subId": "70012670dee648bda0f739c644952c17",
-															"type": "button-email-receipt"
-														}
-													]
-												],
-												"subId": "2d07cb7e714a4acebf65e2f5cb105300",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "79e1963c8c234129adcb0d9e88fd2184",
-									"type": "section-2"
-								}
-							],
-							[
-								{
-									"id": "checkYourEmail_1",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "sendCompleteBlock",
-												"path": "",
-												"rows": [
-													[
-														{
-															"id": "emailCompleteMessage",
-															"path": "",
-															"subId": "79ce2bde4570443e86c37b31babdaa8e",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"id": "emailAnotherCopy",
-															"path": "",
-															"subId": "b9f1a3c640d64bbca2d3f43a0a789396",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "9673f77bebcc440da6680caed513b1b3",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "3a0307353e674a3cbcc4047df35190c5",
-									"type": "section-2"
-								}
-							],
-							[
-								{
-									"id": "followOnOptionsBlock_2",
-									"rows": [
-										[
-											{
-												"id": "startANewForm_3",
-												"path": "",
-												"subId": "c76591ea7d134b4b8cccbce3b7df9ba3",
-												"type": "button"
-											},
-											{
-												"id": "returnToPortal_2",
-												"path": "",
-												"subId": "fb7e407bdb2747aa93b6e4a2346fc1fd",
-												"type": "button"
-											},
-											{
-												"id": "showFormXml_2",
-												"path": "",
-												"subId": "0ba99072686a4ae286f70b9f0288308a",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "a013685ebea147039ee61fa6d4e2098f",
-									"type": "follow-on-options"
-								}
-							]
-						],
-						"subId": "cfe68ed53d804769b48c08c43c2cfb0b",
-						"type": "section"
-					}
-				],
-				[
-					{
-						"id": "formFooter_2",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "formFooterText_2",
-									"rows": [
-										[
-											{
-												"id": "textDisplay_1",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "cfefc20e7ce342f2b9221b977ee1ac75",
-									"type": "section-2"
-								}
-							]
-						],
-						"subId": "38138bbe4c1b470eba0f86afad71109c",
-						"type": "form-footer"
-					}
-				]
-			],
-			"type": "modal-submit-success"
-		}
-	},
+	"localModals": [],
+	"maestroReleaseVersion": "17.10.2",
+	"modals": {},
 	"paletteExclusions": {
 		"categories": [
 			"hidden",
@@ -2407,7 +1576,9 @@
 																"path": "",
 																"properties": {
 																	"src": {
-																		"fileName": "blue-steel-logo.png"
+																		"fileName": "avoka-logo.png",
+																		"height": "42",
+																		"width": "52px"
 																	}
 																},
 																"span": {
@@ -2710,29 +1881,7 @@
 			{
 				"exclude": false,
 				"id": "functionalMenuFabMenu",
-				"properties": {
-					"menuLayout": " fab-menu"
-				},
 				"rows": [
-					[
-						{
-							"animateVisibility": false,
-							"exclude": false,
-							"id": "background_1",
-							"rows": [
-								[]
-							],
-							"rules": {
-								"dc": "if (data.menuLayout.indexOf('fab') !== -1) {\n\treturn \"circle\";\n} else if (data.menuLayout.indexOf('vertical') !== -1) {\n\treturn \"vertical\";\n}"
-							},
-							"styles": [
-								"bc-white-background-20804",
-								"bs-fab-menu-background-88907"
-							],
-							"subId": "9c7b2d04c05c4ccca6c8aff32ff6cfe3",
-							"type": "block"
-						}
-					],
 					[
 						{
 							"exclude": false,
@@ -2743,69 +1892,28 @@
 					],
 					[
 						{
-							"exclude": false,
 							"id": "exit",
-							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"cancelconfirm\");"
-							},
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"type": "button"
 						},
 						{
-							"exclude": false,
 							"id": "resume",
-							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"savechallenge\");"
-							},
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"type": "button"
 						},
 						{
-							"exclude": false,
 							"id": "help",
-							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"formhelp\");"
-							},
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"type": "button"
 						},
 						{
-							"exclude": false,
-							"hasCustomId": true,
-							"htmlLabel": "Save",
-							"id": "save",
-							"label": "Save",
-							"properties": {
-								"icon": "fa fa-floppy-o"
-							},
-							"rules": {
-								"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");\n"
-							},
+							"id": "share",
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"type": "button"
 						}
-					],
-					[
-						{
-							"exclude": false,
-							"id": "onlyOneVisible",
-							"rules": {
-								"eq": "var buttonResume = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") ? 1 : 0;\nvar buttonShare = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") ? 1 : 0;\nvar buttonHelp = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") ? 1 : 0;\nvar buttonExit = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\") ? 1 : 0;\n\nvar buttonCount = buttonResume + buttonShare + buttonHelp + buttonExit;\nreturn {\n  0: \"function-items-0\",\n  1: \"function-items-1\",\n  2: \"function-items-2\",\n  3: \"function-items-3\",\n  4: \"function-items-4\"\n\n}[buttonCount]"
-							},
-							"subId": "9cf017397c5f424a8777239803df5dc6",
-							"type": "data-field"
-						}
-					],
-					[
-						{
-							"exclude": false,
-							"id": "menuLayout",
-							"subId": "cc4063f5d8e346399c7d6affb77f151f",
-							"type": "data-field"
-						}
 					]
 				],
-				"type": "floating-functional-component"
+				"type": "fab-menu"
 			}
 		],
 		[
@@ -3190,6 +2298,13 @@
 	},
 	"type": "form",
 	"widgetOverrides": {
+		"accordion": {
+			"availableStyles": [
+				"bs-center-align-19822",
+				"align-top"
+			],
+			"properties": {}
+		},
 		"address-lookup-google": {
 			"availableStyles": [
 				"google-address-lookup",
@@ -3318,7 +2433,8 @@
 				"av-form-field",
 				"align-top",
 				"bs-checkbox-04598",
-				"av-global-layout"
+				"av-global-layout",
+				"av-checkbox"
 			],
 			"properties": {}
 		},
@@ -3329,7 +2445,8 @@
 				"av-form-field",
 				"bs-text-field-71719",
 				"av-global-layout",
-				"av-text-field"
+				"av-text-field",
+				"av-currency"
 			],
 			"properties": {}
 		},
@@ -3362,7 +2479,8 @@
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-global-layout"
+				"av-global-layout",
+				"av-radio"
 			],
 			"properties": {}
 		},
@@ -3385,7 +2503,8 @@
 				"av-form-field",
 				"bs-text-field-71719",
 				"av-global-layout",
-				"av-text-field"
+				"av-text-field",
+				"av-date"
 			],
 			"properties": {}
 		},
@@ -3424,7 +2543,8 @@
 		"docking-errors": {
 			"availableStyles": [
 				"av-block-error",
-				"align-top"
+				"align-top",
+				"av-docking-errors"
 			],
 			"properties": {}
 		},
@@ -3753,7 +2873,8 @@
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
-				"align-top"
+				"align-top",
+				"av-radio"
 			],
 			"properties": {}
 		},
@@ -3790,7 +2911,8 @@
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-global-layout"
+				"av-global-layout",
+				"av-radio"
 			],
 			"properties": {}
 		},
