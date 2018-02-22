@@ -934,6 +934,7 @@
 		]
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -946,10 +947,9 @@
 		"savesuccess",
 		"cancelsuccess"
 	],
-	"maestroReleaseVersion": "17.10.1",
+	"maestroReleaseVersion": "17.10.2",
 	"modals": {
 		"cancelsuccess": {
-			"exclude": false,
 			"htmlLabel": "Cancel Success",
 			"id": "cancelsuccess",
 			"label": "Cancel Success",
@@ -1005,7 +1005,6 @@
 				],
 				[
 					{
-						"exclude": false,
 						"htmlLabel": "<h1>Application Cancelled</h1>",
 						"id": "modalContent_1",
 						"label": "Application Cancelled",
@@ -1025,7 +1024,6 @@
 							],
 							[
 								{
-									"exclude": false,
 									"id": "followOnOptions_1",
 									"offset": {
 										"lg": "4",
@@ -1103,6 +1101,7 @@
 			"type": "bs-modal-page"
 		},
 		"savesuccess": {
+			"exclude": false,
 			"htmlLabel": "Save Success",
 			"id": "savesuccess",
 			"label": "Save Success",
@@ -1454,8 +1453,7 @@
 															},
 															"styles": [
 																"message-banner",
-																"av-button-primary",
-																"av-button"
+																"av-button-primary"
 															],
 															"type": "button-email-share-form"
 														}
@@ -1531,7 +1529,6 @@
 							],
 							[
 								{
-									"exclude": false,
 									"id": "followOnOptions",
 									"offset": {
 										"lg": "4",
@@ -1589,7 +1586,6 @@
 				],
 				[
 					{
-						"exclude": false,
 						"id": "modalFooter",
 						"rows": [
 							[
@@ -1918,7 +1914,6 @@
 							],
 							[
 								{
-									"exclude": false,
 									"id": "followOnOptions_3",
 									"offset": {
 										"lg": "4",
@@ -2226,7 +2221,7 @@
 																"properties": {
 																	"src": {
 																		"fileName": "avoka-logo.png",
-																		"height": "40",
+																		"height": "42",
 																		"width": "52"
 																	}
 																},

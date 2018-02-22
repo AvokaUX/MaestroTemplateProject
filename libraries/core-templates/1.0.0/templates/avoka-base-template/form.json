@@ -199,7 +199,7 @@
 																	"src": {
 																		"fileName": "avoka-logo.png",
 																		"width": "52",
-																		"height": "40"
+																		"height": "42"
 																	}
 																},
 																"exclude": false,
@@ -3174,8 +3174,7 @@
 										]
 									],
 									"id": "followOnOptions_3",
-									"type": "follow-on-options",
-									"exclude": false
+									"type": "follow-on-options"
 								}
 							]
 						],
@@ -3564,8 +3563,7 @@
 															"label": "Share Now",
 															"styles": [
 																"message-banner",
-																"av-button-primary",
-																"av-button"
+																"av-button-primary"
 															],
 															"properties": {
 																"emailFieldRef": "data.emailAddress_3",
@@ -3717,8 +3715,7 @@
 										]
 									],
 									"id": "followOnOptions",
-									"type": "follow-on-options",
-									"exclude": false
+									"type": "follow-on-options"
 								}
 							]
 						],
@@ -3763,15 +3760,15 @@
 							"sh": "!Util.isReceipt"
 						},
 						"id": "modalFooter",
-						"type": "form-footer",
-						"exclude": false
+						"type": "form-footer"
 					}
 				]
 			],
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Save Success",
-			"id": "savesuccess"
+			"id": "savesuccess",
+			"exclude": false
 		},
 		"cancelsuccess": {
 			"label": "Cancel Success",
@@ -3855,11 +3852,11 @@
 													"sh": "return item['$$parent'].properties.includeStartAgain;",
 													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
 												},
+												"exclude": false,
 												"path": "",
 												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
 												"id": "startANewForm_2",
-												"type": "button",
-												"exclude": false
+												"type": "button"
 											},
 											{
 												"styles": [
@@ -3870,11 +3867,11 @@
 													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
 													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
 												},
+												"exclude": false,
 												"path": "",
 												"subId": "2f32e2834fd4493280fa83492b6b143c",
 												"id": "returnToPortal_1",
-												"type": "button",
-												"exclude": false
+												"type": "button"
 											},
 											{
 												"styles": [
@@ -3885,17 +3882,16 @@
 													"sh": "Resource.preview || Resource.design",
 													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
 												},
+												"exclude": false,
 												"path": "",
 												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
 												"id": "showFormXml_1",
-												"type": "button",
-												"exclude": false
+												"type": "button"
 											}
 										]
 									],
 									"id": "followOnOptions_1",
-									"type": "follow-on-options",
-									"exclude": false
+									"type": "follow-on-options"
 								}
 							]
 						],
@@ -3904,8 +3900,7 @@
 						},
 						"htmlLabel": "<h1>Application Cancelled</h1>",
 						"id": "modalContent_1",
-						"type": "section-2",
-						"exclude": false
+						"type": "section-2"
 					}
 				],
 				[
@@ -3939,8 +3934,7 @@
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Cancel Success",
-			"id": "cancelsuccess",
-			"exclude": false
+			"id": "cancelsuccess"
 		}
 	},
 	"formOptions": {
@@ -6170,7 +6164,8 @@
 		"xml": {}
 	},
 	"transact": {},
-	"maestroReleaseVersion": "17.10.1",
+	"maestroReleaseVersion": "17.10.2",
 	"id": "AvokaSmartForm",
-	"exclude": false
+	"exclude": false,
+	"isPreview": false
 }
