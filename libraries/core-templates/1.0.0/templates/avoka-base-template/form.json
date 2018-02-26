@@ -610,7 +610,8 @@
 							},
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"id": "resume",
-							"type": "button"
+							"type": "button",
+							"exclude": false
 						},
 						{
 							"rules": {
@@ -618,7 +619,8 @@
 							},
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"id": "help",
-							"type": "button"
+							"type": "button",
+							"exclude": false
 						},
 						{
 							"rules": {
@@ -626,7 +628,8 @@
 							},
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"id": "share",
-							"type": "button"
+							"type": "button",
+							"exclude": false
 						}
 					]
 				],
@@ -3763,8 +3766,7 @@
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Save Success",
-			"id": "savesuccess",
-			"exclude": false
+			"id": "savesuccess"
 		},
 		"cancelsuccess": {
 			"label": "Cancel Success",
