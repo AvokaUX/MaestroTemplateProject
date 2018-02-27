@@ -199,7 +199,7 @@
 																	"src": {
 																		"fileName": "avoka-logo.png",
 																		"width": "52",
-																		"height": "42"
+																		"height": "40"
 																	}
 																},
 																"exclude": false,
@@ -340,6 +340,11 @@
 												}
 											]
 										],
+										"properties": {
+											"sectionHeading": "{{T[item.id].label}}",
+											"formName": "{{T[Form.view.id].label}}",
+											"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>"
+										},
 										"type": "nav-page",
 										"styles": [
 											"mg-section-1"
@@ -364,11 +369,14 @@
 							"path": "",
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
-								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController_1\",\"pageTransition\")];",
+								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];",
 								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
 							},
 							"type": "page-controller",
-							"id": "pageController_1"
+							"id": "pageController",
+							"hasCustomId": true,
+							"label": "Page Controller",
+							"htmlLabel": "Page Controller"
 						}
 					]
 				],
@@ -497,6 +505,9 @@
 					[
 						{
 							"label": "Block Next",
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
 							"exclude": false,
 							"htmlLabel": "Block Next",
 							"path": "",
@@ -507,6 +518,9 @@
 					[
 						{
 							"label": "Page Change Animation",
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
 							"exclude": false,
 							"htmlLabel": "Page Change Animation",
 							"path": "",
@@ -556,28 +570,28 @@
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"id": "resume",
-							"type": "button",
-							"exclude": false
+							"type": "button"
 						},
 						{
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"id": "help",
-							"type": "button",
-							"exclude": false
+							"type": "button"
 						},
 						{
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"id": "share",
-							"type": "button",
-							"exclude": false
+							"type": "button"
 						}
 					]
 				],
@@ -1053,7 +1067,7 @@
 		"block": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"av-background-image",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
@@ -1592,7 +1606,7 @@
 		},
 		"advice-block-info": {
 			"availableStyles": [
-				"av-message-block",
+				"av-message-section",
 				"form-help-option-container",
 				"align-top"
 			],
@@ -1858,11 +1872,11 @@
 		"section-2": {
 			"styles": [
 				"mg-section-2",
-				"bc-white-background-20804"
+				"av-section"
 			],
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",
@@ -1973,7 +1987,6 @@
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
 				"av-header-height": "75px",
-				"av-selected-color": "",
 				"av-max-form-width": "999999px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
@@ -1995,6 +2008,7 @@
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
+				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
 				"av-slide-menu-extra-item-color": "",
@@ -2145,8 +2159,7 @@
 				]
 			],
 			"type": "save-confirm",
-			"id": "saveconfirm",
-			"exclude": false
+			"id": "saveconfirm"
 		},
 		"savechallenge": {
 			"rows": [
@@ -2279,8 +2292,7 @@
 				]
 			],
 			"type": "save-challenge",
-			"id": "savechallenge",
-			"exclude": false
+			"id": "savechallenge"
 		},
 		"cancelconfirm": {
 			"rows": [
@@ -2586,8 +2598,7 @@
 				]
 			],
 			"type": "show-xml",
-			"id": "showxml",
-			"exclude": false
+			"id": "showxml"
 		},
 		"formhelp": {
 			"rows": [
@@ -2770,8 +2781,7 @@
 				]
 			],
 			"type": "form-help",
-			"id": "formhelp",
-			"exclude": false
+			"id": "formhelp"
 		}
 	},
 	"modals": {
@@ -2929,8 +2939,7 @@
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Save Success",
-			"id": "savesuccess",
-			"exclude": false
+			"id": "savesuccess"
 		},
 		"cancelsuccess": {
 			"label": "Cancel Success",
@@ -3094,8 +3103,7 @@
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Cancel Success",
-			"id": "cancelsuccess",
-			"exclude": false
+			"id": "cancelsuccess"
 		},
 		"submitsuccess": {
 			"label": "Submit Success",
@@ -3229,8 +3237,7 @@
 			"properties": {},
 			"type": "bs-modal-page",
 			"htmlLabel": "Submit Success",
-			"id": "submitsuccess",
-			"exclude": false
+			"id": "submitsuccess"
 		}
 	},
 	"formOptions": {
@@ -3272,7 +3279,7 @@
 		"formhelp"
 	],
 	"rules": {
-		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController_1\",\"pageTransition\")];"
+		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];"
 	},
 	"clearHidden": "no",
 	"path": "AvokaSmartForm",
@@ -3307,13 +3314,6 @@
 			}
 		],
 		"pageController": [
-			{
-				"category": "Page Controller",
-				"label": "Page Transition",
-				"path": "properties.pageTransition"
-			}
-		],
-		"pageController_1": [
 			{
 				"category": "Page Controller",
 				"label": "Page Transition",
@@ -3526,9 +3526,9 @@
 							"ariaLabel": ""
 						}
 					},
-					"pageController_1": {
+					"pageController": {
 						"label": "Page Controller",
-						"htmlLabel": "",
+						"htmlLabel": "Page Controller",
 						"mandatoryMsg": ""
 					},
 					"page": {
@@ -5126,6 +5126,5 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.2",
 	"id": "AvokaSmartForm",
-	"exclude": false,
-	"isPreview": false
+	"exclude": false
 }

@@ -39,13 +39,6 @@
 				"category": "Page Controller",
 				"label": "Page Transition",
 				"path": "properties.pageTransition"
-			}
-		],
-		"pageController_1": [
-			{
-				"category": "Page Controller",
-				"label": "Page Transition",
-				"path": "properties.pageTransition"
 			},
 			{
 				"category": "Page Controller",
@@ -88,7 +81,7 @@
 						}
 					}
 				},
-				"pageController_1": {
+				"pageController": {
 					"properties": {}
 				}
 			},
@@ -378,7 +371,6 @@
 			"type": "cancel-confirm"
 		},
 		"formhelp": {
-			"exclude": false,
 			"id": "formhelp",
 			"rows": [
 				[
@@ -555,7 +547,6 @@
 			"type": "form-help"
 		},
 		"savechallenge": {
-			"exclude": false,
 			"id": "savechallenge",
 			"rows": [
 				[
@@ -675,7 +666,6 @@
 			"type": "save-challenge"
 		},
 		"saveconfirm": {
-			"exclude": false,
 			"id": "saveconfirm",
 			"rows": [
 				[
@@ -775,7 +765,6 @@
 			"type": "save-confirm"
 		},
 		"showxml": {
-			"exclude": false,
 			"id": "showxml",
 			"rows": [
 				[
@@ -943,7 +932,6 @@
 		]
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -959,7 +947,6 @@
 	"maestroReleaseVersion": "17.10.2",
 	"modals": {
 		"cancelsuccess": {
-			"exclude": false,
 			"htmlLabel": "Cancel Success",
 			"id": "cancelsuccess",
 			"label": "Cancel Success",
@@ -1118,7 +1105,6 @@
 			"type": "bs-modal-page"
 		},
 		"savesuccess": {
-			"exclude": false,
 			"htmlLabel": "Save Success",
 			"id": "savesuccess",
 			"label": "Save Success",
@@ -1272,7 +1258,6 @@
 			"type": "bs-modal-page"
 		},
 		"submitsuccess": {
-			"exclude": false,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
@@ -1621,7 +1606,7 @@
 																"properties": {
 																	"src": {
 																		"fileName": "avoka-logo.png",
-																		"height": "42",
+																		"height": "40",
 																		"width": "52"
 																	}
 																},
@@ -1726,7 +1711,9 @@
 					[
 						{
 							"exclude": false,
-							"id": "pageController_1",
+							"hasCustomId": true,
+							"htmlLabel": "Page Controller",
+							"id": "pageController",
 							"path": "",
 							"rows": [
 								[
@@ -1764,7 +1751,7 @@
 							],
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
-								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController_1\",\"pageTransition\")];",
+								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];",
 								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
 							},
 							"styles": [
@@ -2303,7 +2290,7 @@
 		]
 	],
 	"rules": {
-		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController_1\",\"pageTransition\")];"
+		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];"
 	},
 	"selectedBrand": "Default",
 	"styleMods": {
@@ -2379,7 +2366,7 @@
 		},
 		"advice-block-info": {
 			"availableStyles": [
-				"av-message-block",
+				"av-message-section",
 				"form-help-option-container",
 				"align-top"
 			],
@@ -2402,7 +2389,7 @@
 		"block": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"av-background-image",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
@@ -3137,7 +3124,7 @@
 		"section-2": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",
@@ -3152,7 +3139,7 @@
 			},
 			"styles": [
 				"mg-section-2",
-				"bc-white-background-20804"
+				"av-section"
 			]
 		},
 		"signature": {

@@ -101,7 +101,7 @@
 													],
 													"type": "advice-block-info",
 													"styles": [
-														"av-message-block",
+														"av-message-section",
 														"form-help-option-container"
 													],
 													"entityPath": "need",
@@ -184,7 +184,7 @@
 													],
 													"type": "advice-block-info",
 													"styles": [
-														"av-message-block",
+														"av-message-section",
 														"form-help-option-container"
 													],
 													"entityPath": "need",

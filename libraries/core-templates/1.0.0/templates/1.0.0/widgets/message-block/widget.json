@@ -4,7 +4,7 @@
 	"category": "User Information",
 	"type": "block",
 	"styles": [
-		"av-message-block"
+		"av-message-section"
 	],
 	"rows": [
 		[

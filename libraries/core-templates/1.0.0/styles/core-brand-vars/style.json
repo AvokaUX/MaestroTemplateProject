@@ -73,6 +73,20 @@
 			"order": 8
 		},
 		{
+			"name": "av-msg-heading-font-color",
+			"type": "color",
+			"label": "Message Heading Font Color",
+			"category": "Font",
+			"order": 7
+		},
+		{
+			"name": "av-msg-font-color",
+			"type": "color",
+			"label": "Message Font Color",
+			"category": "Font",
+			"order": 7
+		},
+		{
 			"name": "av-popover-help",
 			"type": "color",
 			"label": "Popover Help Button Icon Color",
@@ -180,18 +194,60 @@
 			"defaultValue": ""
 		},
 		{
+			"name": "av-section-background",
+			"type": "color",
+			"label": "Section Background Color",
+			"category": "Panels",
+			"defaultValue": "#fff"
+		},
+		{
+			"name": "av-section-background-opacity",
+			"type": "text",
+			"label": "Section Background Opacity (0-100%)",
+			"category": "Panels",
+			"defaultValue": "90%"
+		},
+		{
+			"name": "av-msg-section-background",
+			"type": "color",
+			"label": "Message Section Background Color",
+			"category": "Panels",
+			"defaultValue": "#64767F"
+		},
+		{
+			"name": "av-msg-section-background-opacity",
+			"type": "text",
+			"label": "Message Section Background Opacity (0-100%)",
+			"category": "Panels",
+			"defaultValue": "70%"
+		},
+		{
+			"name": "av-progressbar-background",
+			"type": "color",
+			"label": "Progress Bar Background Color",
+			"category": "Panels",
+			"defaultValue": "#64767F"
+		},
+		{
+			"name": "av-progressbar-background-opacity",
+			"type": "text",
+			"label": "Progress Bar Opacity (0-100%)",
+			"category": "Panels",
+			"defaultValue": "70%"
+		},
+		{
 			"name": "av-dialog-background",
 			"type": "color",
 			"label": "Dialog Background Color",
-			"category": "Dialogs",
+			"category": "Panels",
 			"defaultValue": "#000"
 		},
         {
-          "name": "av-dialog-background-opacity",
-          "type": "text",
-          "label": "Dialog Background Opacity (0-100%)",
-          "category": "Dialogs",
-          "defaultValue": "70%"
+            "name": "av-dialog-background-opacity",
+            "type": "text",
+            "label": "Dialog Background Opacity (0-100%)",
+            "category": "Panels",
+            "defaultValue": "70%"
         },
 		{
 			"name": "av-button-font-size",

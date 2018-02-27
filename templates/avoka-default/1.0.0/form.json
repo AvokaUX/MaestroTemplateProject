@@ -1,7 +1,7 @@
 {
 	"blockInfo": {
 		"designVersion": "1.0.0",
-		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16654",
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16655",
 		"publishLibraryId": 16569
 	},
 	"brandOptions": {
@@ -35,13 +35,6 @@
 			}
 		],
 		"pageController": [
-			{
-				"category": "Page Controller",
-				"label": "Page Transition",
-				"path": "properties.pageTransition"
-			}
-		],
-		"pageController_1": [
 			{
 				"category": "Page Controller",
 				"label": "Page Transition",
@@ -168,7 +161,7 @@
 		"1280"
 	],
 	"childExtensions": [
-		"pageController_1",
+		"pageController",
 		"background"
 	],
 	"clearHidden": "no",
@@ -353,6 +346,9 @@
 													[
 														{
 															"id": "confirm_3",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
 															"type": "button"
 														}
@@ -526,6 +522,9 @@
 													[
 														{
 															"id": "okay_1",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"type": "button"
 														}
@@ -642,6 +641,9 @@
 													[
 														{
 															"id": "open_6",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"type": "button"
 														}
@@ -738,6 +740,9 @@
 													[
 														{
 															"id": "okay_18",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
 														}
@@ -819,6 +824,9 @@
 													[
 														{
 															"id": "okay_8",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"type": "button"
 														}
@@ -903,6 +911,7 @@
 		},
 		"xml": {}
 	},
+	"exclude": false,
 	"extractMap": {},
 	"formOptions": {
 		"AvokaSmartForm": [
@@ -1703,7 +1712,9 @@
 					[
 						{
 							"exclude": false,
-							"id": "pageController_1",
+							"hasCustomId": true,
+							"htmlLabel": "Page Controller",
+							"id": "pageController",
 							"path": "",
 							"rows": [
 								[
@@ -1741,7 +1752,7 @@
 							],
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
-								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController_1\",\"pageTransition\")];",
+								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];",
 								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
 							},
 							"styles": [
@@ -2280,7 +2291,7 @@
 		]
 	],
 	"rules": {
-		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController_1\",\"pageTransition\")];"
+		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];"
 	},
 	"selectedBrand": "Default",
 	"styleMods": {},
@@ -2343,7 +2354,7 @@
 		},
 		"advice-block-info": {
 			"availableStyles": [
-				"av-message-block",
+				"av-message-section",
 				"form-help-option-container",
 				"align-top"
 			],
@@ -2366,7 +2377,7 @@
 		"block": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"av-background-image",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
@@ -2987,7 +2998,7 @@
 		"section-2": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",

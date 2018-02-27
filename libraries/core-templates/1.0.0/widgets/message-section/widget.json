@@ -1,0 +1,18 @@
+{
+	"label": "Message Section",
+	"description": "A message block for displaying information to the user",
+	"category": "User Information",
+	"type": "block",
+	"html": "messageSection.html",
+	"css": "message-section.css",
+	"propDefs" : {
+		"messageIcon": {
+			"label": "Message icon",
+			"type": "icon",
+			"value": "fa fa-info-circle"
+		}
+	},
+	"styles": [
+		"av-message-section"
+	]
+}
