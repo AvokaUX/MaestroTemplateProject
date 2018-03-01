@@ -1,0 +1,16 @@
+@transition: transform 1s, visibility 1s, opacity 0.5s ease-in-out;
+
+form[name='form'] {
+
+  .av-page-transition {
+    &[data-view-stack], &[view-stack], [data-view-stack], [view-stack] {
+      & > * {
+        -webkit-transition: @transition;
+        -moz-transition: @transition;
+        -ms-transition: @transition;
+        -o-transition: @transition;
+        transition: @transition;
+      }
+    }
+  }
+}

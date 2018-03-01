@@ -1,0 +1,47 @@
+form[name='form'] {
+  overflow-x: hidden;
+}
+form[name='form'] .av-page-transition .av-menu-page {
+  min-height: 100vh;
+}
+
+form[name='form'] .av-page-transition[data-view-stack].stack-active,
+form[name='form'] .av-page-transition[view-stack].stack-active,
+form[name='form'] .av-page-transition [data-view-stack].stack-active,
+form[name='form'] .av-page-transition [view-stack].stack-active {
+   overflow-y: hidden;
+}
+
+form[name='form'] .av-page-transition .vstk-in.ng-enter {
+  transform: none;
+}
+
+form[name='form'] .av-page-transition.Fade .vstk-in {
+  opacity: 1;
+}
+
+form[name='form'] .av-page-transition.Fade .vstk-out {
+  visibility: hidden;
+  opacity: 0;
+  transform: none;
+}
+
+form[name='form'] .av-page-transition.Slide .vstk-up {
+  -webkit-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  transform: translateX(200%);
+}
+
+form[name='form'] .av-page-transition.Slide .vstk-down {
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+form[name='form'].Slide.Nav-To-Right .vstk-out.ng-enter {
+  transform: translateX(200%);
+}
+
+form[name='form'].Slide.Nav-To-Left .vstk-out.ng-enter {
+  transform: translateX(-200%);
+}

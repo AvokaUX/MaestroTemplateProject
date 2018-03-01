@@ -8,7 +8,8 @@
 				"type": "modal-background",
 				"id": "modalBackground",
 				"path": "",
-				"exclude": false
+				"exclude": false,
+				"pubId": "2f5c018e42eb4132b71ba6445983da7a"
 			}
 		],
 		[
@@ -41,7 +42,8 @@
 																"path": "",
 																"exclude": false,
 																"label": "Modal logo image",
-																"htmlLabel": "Modal logo image"
+																"htmlLabel": "Modal logo image",
+																"pubId": "759cc4ed2a9240aca14456c79f50aa2c"
 															}
 														]
 													],
@@ -53,12 +55,13 @@
 													"htmlLabel": "Modal logo",
 													"styles": [
 														"bs-logo-container-86033"
-													]
+													],
+													"pubId": "81604a78df3b4507ba1efa2e349ef3f6"
 												}
 											]
 										],
 										"type": "form-header",
-										"id": "modalHeader",
+										"id": "modalHeader_1",
 										"path": "",
 										"exclude": false,
 										"label": "Modal Header",
@@ -66,7 +69,8 @@
 										"styles": [
 											"mg-header",
 											"bs-max-width-73189"
-										]
+										],
+										"pubId": "10cd185db8f44312a2d007cce8c61074"
 									}
 								]
 							],
@@ -78,7 +82,8 @@
 							"htmlLabel": "Sticky Panel-modal",
 							"styles": [
 								"bs-fixed-header-40325"
-							]
+							],
+							"pubId": "f85f23c17b944a399f2368733020e9ad"
 						}
 					]
 				],
@@ -87,50 +92,30 @@
 				"path": "",
 				"exclude": false,
 				"label": "Modal header",
-				"htmlLabel": "Modal header"
+				"htmlLabel": "Modal header",
+				"pubId": "8f9a2f46878a40938967fa6fbdcea360"
 			}
 		],
 		[
 			{
 				"label": "Modal Content",
-				"rows": [[
-					{
-						"label": "Extra Information",
-						"span": {},
-						"path": "",
-						"hasCustomPath": true,
-						"pathContext": "not",
-						"rows": [
-							[
-
-							]
-						],
-						"type": "block",
-						"styles": [
-
-						],
-						"hideOnReceipt": true,
-						"hideOnSummary": true,
-						"category": "Post Submission"
-					}
-				],[
-					{
-						"label": "Follow on options",
-						"styles": [
-							"follow-on-options-block"
-
-						],
-						"animateVisibility": true,
-						"rules": {
-
-						},
-						"span": {"xs": 12, "sm": 12, "md": 4, "lg": 4},
-						"id": "followOnOptions",
-						"htmlLabel": "Follow on options",
-						"type": "follow-on-options",
-						"exclude": false
-					}
-				]
+				"rows": [
+					[
+						{
+							"label": "Start a new form",
+							"styles": [
+								"av-global-layout",
+								"av-button",
+								"av-button-primary"
+							],
+							"type": "button",
+							"path": "",
+							"htmlLabel": "Start a new form",
+							"exclude": false,
+							"id": "startANewForm",
+							"pubId": "b9752e41b4f24a4a9e5059d0704210e7"
+						}
+					]
 				],
 				"styles": [
 					"mg-section-2",
@@ -140,14 +125,14 @@
 					"bs-modal-content-96022"
 				],
 				"properties": {
-					"infoText": "Thanks for your visit."
+					"infoText": "Your Application has been received"
 				},
-
 				"type": "section-2",
 				"path": "",
 				"htmlLabel": "<h1>Modal Content</h1>",
 				"exclude": false,
-				"id": "modalContent"
+				"id": "modalContent",
+				"pubId": "d4a0cd71666b429898edfba3b748599d"
 			}
 		],
 		[
@@ -156,9 +141,10 @@
 					[
 						{
 							"type": "text-display",
-							"id": "formFooterText",
+							"id": "formFooterText_3",
 							"path": "",
-							"exclude": false
+							"exclude": false,
+							"pubId": "082a0f34bab7496ab942025374652910"
 						}
 					]
 				],
@@ -174,7 +160,8 @@
 				"styles": [
 					"bc-white-background-20804",
 					"bs-modal-footer-03990"
-				]
+				],
+				"pubId": "b4eb8296a924482c880d6c3abca4bb61"
 			}
 		]
 	],
@@ -183,7 +170,12 @@
 	"path": "",
 	"hasCustomId": true,
 	"exclude": false,
-	"id": "bsModalPage",
+	"id": "submitsuccess",
 	"label": "BS Modal Page",
-	"category": "Custom Components"
+	"category": "Custom Components",
+	"blockInfo": {
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/14256",
+		"publishLibraryId": 10988,
+		"blockCode": "bs-modal-page"
+	}
 }

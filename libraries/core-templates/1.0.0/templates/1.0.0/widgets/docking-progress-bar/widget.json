@@ -1,0 +1,25 @@
+{
+	"category": "Navigation",
+	"label": "Docking Progress Bar",
+	"icon": "progressBar.png",
+	"html": "dockingProgressBar.html",
+	"css": "docking-progress-bar.css",
+	"js":	"docking-progress-bar.js",
+	"rows": [
+		[
+			{
+				"span": {
+					"xs": 12,
+					"sm": 12,
+					"md": 12,
+					"lg": 12
+				},				
+				"label": "Progress Bar",
+				"type": "progress-bar",
+				"htmlLabel": "Progress Bar",
+				"id": "progress_bar"
+			}
+		]		
+	],
+	"styles": ["av-docking-progress-bar-banner"]
+}

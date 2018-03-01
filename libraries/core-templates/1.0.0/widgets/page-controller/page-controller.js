@@ -42,7 +42,7 @@ define(["app"], function(app) {
                             }
                             else if (pageTransition == "Slide"){
                                 var navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);
-                                data.pageChangeAnimation = navigateForwards ? "slide-Out-To-Left" : "slide-Out-To-Right";
+                                data.pageChangeAnimation = navigateForwards ? "Nav-To-Right" : "Nav-To-Left";
                             }
                             var _scroll = $(window).scrollTop();
                             var dp = Form.getItemProperty("data.dockingController","dockPosition");

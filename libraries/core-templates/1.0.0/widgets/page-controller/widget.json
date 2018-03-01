@@ -2,6 +2,7 @@
   "category": "Navigation",
   "label": "Page Controller",
   "html": "page-controller.html",
+  "css": "page-controller.css",
   "icon": "page-controller.png",
   "js": "page-controller.js",
   "noData": true,

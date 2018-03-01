@@ -21,11 +21,11 @@ form[name='form'] {
 	    
 	    .wdg-page-segment-container {
 	      &.show-page-icon{
-	      	&:before {
+	      	&:after {
   			  background: rgb(170, 170, 170);
 	        }
 	        &.page-visited {
-	          &:before {
+	          &:after {
   			    background: rgb(204, 204, 204);
 	          }
 	        }
@@ -48,16 +48,4 @@ form[name='form'] {
 	      }
        }
    }
-
-
-   &.slide-Out-To-Right {
-   	.av-progress-bar {
-   	  .show-group-icon {
-		  &:before {
-	  	    transition: background 0s;
-	  		transition-delay: 0.7s;
-	      }
-	    }
-   	}
-  }
 } 

@@ -10,7 +10,7 @@
 					<div class="av-menu-errors-guide" data-av-compile data-ng-bind-html="sanitize(item.properties.subHeader)"></div>
 					<ul>
 			            <li data-ng-repeat="err in Form.validation.errors">
-						<a href="" class="av-menu-error" data-av-compile data-ng-bind-html="sanitize(err.msg)" data-ng-click="Form.gotoError(err)"></a>
+						<a href="" class="av-menu-error" data-av-compile data-ng-bind-html="sanitize(err.msg)" data-ng-click="data.dockErrors = true; Form.gotoError(err)"></a>
 			            </li>
 			        </ul>
 	        	</div>
