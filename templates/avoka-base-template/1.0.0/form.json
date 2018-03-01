@@ -2019,7 +2019,7 @@
 	],
 	"path": "AvokaSmartForm",
 	"properties": {
-		"popoverHelpIcon": "fa fa-question"
+		"popoverHelpIcon": "fa fa-info-circle"
 	},
 	"rows": [
 		[
@@ -2259,9 +2259,6 @@
 																"exclude": false,
 																"id": "progressBar_1",
 																"path": "ProgressBar",
-																"properties": {
-																	"displayGroupIcon": false
-																},
 																"type": "progress-bar"
 															}
 														]
@@ -2369,6 +2366,31 @@
 								[
 									{
 										"exclude": false,
+										"htmlLabel": "Page Group 1",
+										"id": "pageGroup",
+										"label": "Page Group 1",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"htmlLabel": "Page 4",
+													"id": "page_3",
+													"label": "Page 4",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "nav-page"
+												}
+											]
+										],
+										"type": "nav-group"
+									}
+								],
+								[
+									{
+										"exclude": false,
 										"htmlLabel": "Page",
 										"id": "page_1",
 										"isFirstInGroup": false,
@@ -2394,6 +2416,44 @@
 											"mg-section-1"
 										],
 										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page Group 2",
+										"id": "pageGroup_1",
+										"label": "Page Group 2",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"htmlLabel": "Page 5",
+													"id": "page_4",
+													"label": "Page 5",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "nav-page"
+												}
+											],
+											[
+												{
+													"exclude": false,
+													"htmlLabel": "Page 11",
+													"id": "page_5",
+													"label": "Page 11",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "nav-page"
+												}
+											]
+										],
+										"type": "nav-group"
 									}
 								],
 								[

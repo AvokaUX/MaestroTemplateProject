@@ -1376,7 +1376,7 @@
 	],
 	"path": "AvokaSmartForm",
 	"properties": {
-		"popoverHelpIcon": "fa fa-question"
+		"popoverHelpIcon": "fa fa-info-circle"
 	},
 	"rows": [
 		[

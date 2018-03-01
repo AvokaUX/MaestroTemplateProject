@@ -104,7 +104,7 @@
 					"bs-functional-button-items-64706"
 				],
 				"properties": {
-					"icon": "fa fa-question"
+					"icon": "fa fa-info-circle"
 				},
 				"type": "button",
 				"path": "",

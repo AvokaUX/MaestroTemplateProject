@@ -880,7 +880,7 @@
 		"bs-hide-in-design-83044"
 	],
 	"properties": {
-		"popoverHelpIcon": "fa fa-question"
+		"popoverHelpIcon": "fa fa-info-circle"
 	},
 	"type": "form",
 	"breakpoints": [
