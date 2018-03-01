@@ -361,36 +361,6 @@
 								],
 								[
 									{
-										"rows": [
-											[
-												{
-													"rows": [
-														[]
-													],
-													"exclude": false,
-													"path": "",
-													"type": "section-2",
-													"id": "section_1"
-												}
-											]
-										],
-										"type": "nav-page",
-										"styles": [
-											"mg-section-1"
-										],
-										"exclude": false,
-										"htmlLabel": "Page",
-										"isFirstInGroup": false,
-										"isLastInGroup": false,
-										"path": "",
-										"rules": {
-											"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
-										},
-										"id": "page_1"
-									}
-								],
-								[
-									{
 										"label": "Page 2",
 										"rows": [
 											[
@@ -611,28 +581,28 @@
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"id": "resume",
-							"type": "button",
-							"exclude": false
+							"type": "button"
 						},
 						{
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"id": "help",
-							"type": "button",
-							"exclude": false
+							"type": "button"
 						},
 						{
 							"rules": {
 								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
 							},
+							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"id": "share",
-							"type": "button",
-							"exclude": false
+							"type": "button"
 						}
 					]
 				],
@@ -1010,9 +980,7 @@
 		"bs-fonts-79473",
 		"bs-hide-in-design-83044"
 	],
-	"properties": {
-		"popoverHelpIcon": "fa fa-info-circle"
-	},
+	"properties": {},
 	"type": "form",
 	"breakpoints": [
 		400,
@@ -4245,26 +4213,6 @@
 						}
 					},
 					"section": {
-						"label": "Section",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": ""
-						}
-					},
-					"page_1": {
-						"label": "Page",
-						"htmlLabel": "Page",
-						"mandatoryMsg": "",
-						"properties": {
-							"sectionHeading": "{{T[item.id].label}}",
-							"formName": "{{T[Form.view.id].label}}",
-							"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>",
-							"helpText": "",
-							"menuText": ""
-						}
-					},
-					"section_1": {
 						"label": "Section",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
