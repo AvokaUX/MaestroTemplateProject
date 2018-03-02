@@ -35,6 +35,9 @@ define(["app"], function (app) {
                         });
                     }
                 }
+                $scope.$on('new tooltip pinning', function (evt, data) {
+                    $scope.$broadcast('some pinning', data);
+                });
                 $scope.visiblePageFilter = function (p) {
                     return p.$navVisible && !p.properties.offMenu;
                 };
@@ -55,9 +58,11 @@ define(["app"], function (app) {
                 Form.getItem(scope, $el).then(function (item) {
                     scope.tooltipClickedOn = false;
 
+                    /**
+                     * clean tooltip attached to the element
+                     */
                     function cleanTooltip() {
                         if (!$el.find('.av-popover-help').length) return;
-                        console.log('cleaning  ');
                         $el.find('.av-popover-help').removeClass('ready active');
                         $timeout(function () {
                             $el.find('.av-popover-help').remove();
@@ -117,11 +122,18 @@ define(["app"], function (app) {
                     var toggleTooltip = function (e) {
                         scope.tooltipClickedOn = !scope.tooltipClickedOn;
                         if (scope.tooltipClickedOn) {
+                            scope.$emit('new tooltip pinning', scope.tooltipContent);
                             addTooltip(e);
                         } else {
                             removeTooltip(e);
                         }
                     };
+                    scope.$on('some pinning', function (evt,data) {
+                        if(data !== scope.tooltipContent) {
+                            scope.tooltipClickedOn = false;
+                            cleanTooltip();
+                        }
+                    });
 
                     $el.on('click', toggleTooltip);
                     $el.on('mouseover', addTooltip);
