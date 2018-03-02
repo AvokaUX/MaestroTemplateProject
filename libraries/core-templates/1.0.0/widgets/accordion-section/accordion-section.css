@@ -1,6 +1,6 @@
 form[name='form'] .wdg-accordion-section-container {
   padding: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   margin-top: 0;
 }
 form[name='form'] .wdg-accordion-section-container .wdg-accordion-collapse-text {
@@ -17,7 +17,7 @@ form[name='form'] .wdg-accordion-section-container .panel-heading {
   cursor: pointer;
 }
 form[name='form'] .wdg-accordion-section-container .panel-collapse {
-  margin: 0 18px 0px 18px;
+  margin: 0 18px -20px 18px;
 }
 form[name='form'] .wdg-accordion-section-container .panel-collapse .av-accordion-body {
   padding: 15px;
