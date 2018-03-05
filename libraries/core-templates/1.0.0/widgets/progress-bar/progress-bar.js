@@ -49,7 +49,7 @@ define(["app"], function (app) {
         }
     ]);
 
-    app.ng.directive("avTooltip", ["$timeout", "Form", "$compile", function ($timeout, Form, $compile) {
+    app.ng.directive("avTooltip", ["$timeout", "Form", "$compile", "Resource", function ($timeout, Form, $compile, Resource) {
         return {
             scope: {
                 tooltipContent: "@avTooltip"
@@ -68,6 +68,10 @@ define(["app"], function (app) {
                             $el.find('.av-popover-help').remove();
                         }, 250);
                     }
+
+                    /**
+                     * adjust tooltip position if it is out of view
+                     */
                     function adjustTooltipPos() {
                         var viewWidth = $(window).innerWidth();
                         var spaceRequired = 0.5 * $el.find('.popover-tooltip').innerWidth();
@@ -155,8 +159,6 @@ define(["app"], function (app) {
                     $el.on('mouseleave', removeTooltip);
                     $(document).on('click', clickAnywhereHandler);
                     $(window).on('resize', cleanTooltip);
-                });
-
                     scope.$on('$destroy', function () {
                         $(window).off('resize', cleanTooltip);
                         $(document).off('click', clickAnywhereHandler);
@@ -164,7 +166,7 @@ define(["app"], function (app) {
                         $el.off('mouseover', addTooltip);
                         $el.off('mouseleave', removeTooltip);
                     });
-
+                });
             }
         }
     }]);
