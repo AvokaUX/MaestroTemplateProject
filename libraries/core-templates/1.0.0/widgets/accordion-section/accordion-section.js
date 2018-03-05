@@ -36,6 +36,9 @@ define(["app"], function (app) {
                     accordionTransition = "all " + transDuration + "s" + " ease-in-out " + transDuration + "s";
                     td = 2 * transDuration * 1000;
                 }
+                $element.parent().css({
+                    'margin-bottom': '-5px'
+                });
                 $thisAccordion.css({
                     "max-height": "0px",
                     "opacity": 0,
@@ -54,6 +57,9 @@ define(["app"], function (app) {
                             "opacity": "",
                             "overflow": "",
                             "transition": ""
+                        });
+                        $element.parent().css({
+                            'margin-bottom': ''
                         });
                     }, td, false)
                         .then(function () {
@@ -76,6 +82,9 @@ define(["app"], function (app) {
                     accordionTransition = "all " + transDuration + "s" + " ease-in-out " + transDuration + "s";
                     td = 2 * transDuration * 1000;
                 }
+                $element.parent().css({
+                    'margin-bottom': '-5px'
+                });
                 $thisAccordion.css({
                     "max-height": bodyHeight,
                     "opacity": 1,
@@ -93,6 +102,9 @@ define(["app"], function (app) {
                             "opacity": "",
                             "overflow": "",
                             "transition": ""
+                        });
+                        $element.parent().css({
+                            'margin-bottom': ''
                         });
                     }, td, false).then(function () {
                         $thisAccordion.addClass("av-hidden");

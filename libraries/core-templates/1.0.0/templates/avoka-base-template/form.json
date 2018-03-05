@@ -2139,8 +2139,8 @@
 													[
 														{
 															"rules": {
-																"sh": "",
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);"
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
 															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"id": "okay_18",
@@ -2148,8 +2148,8 @@
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"id": "dialogFooterBlock_13",
+												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
+												"id": "dialogFooterBlock_12",
 												"type": "block"
 											}
 										]
@@ -2499,8 +2499,8 @@
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"id": "dialogFooterBlock_4",
+												"subId": "7314fa1adde847e3a442130e7580de3a",
+												"id": "dialogFooterBlock_5",
 												"type": "block"
 											}
 										]
@@ -2801,7 +2801,8 @@
 						"rows": [
 							[]
 						],
-						"id": "modalBackground_6",
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
+						"id": "modalBackground_2",
 						"type": "modal-background"
 					}
 				],
@@ -2820,28 +2821,128 @@
 																[
 																	{
 																		"properties": {},
-																		"id": "modalLogoImage_6",
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
+																		"id": "modalLogoImage_2",
 																		"type": "image"
 																	}
 																]
 															],
-															"id": "modalLogo_6",
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
+															"id": "modalLogo_2",
 															"type": "block"
 														}
 													]
 												],
-												"id": "modalHeader_13",
+												"subId": "10cd185db8f44312a2d007cce8c61074",
+												"id": "modalHeader_5",
 												"type": "form-header"
 											}
 										]
 									],
-									"id": "stickyPanelModal_6",
+									"subId": "f85f23c17b944a399f2368733020e9ad",
+									"id": "stickyPanelModal_2",
 									"type": "sticky-panel"
 								}
 							]
 						],
-						"id": "modalHeader_12",
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
+						"id": "modalHeader_4",
 						"type": "block"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"id": "startANewForm_3",
+									"type": "button"
+								}
+							]
+						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
+						"subId": "d4a0cd71666b429898edfba3b748599d",
+						"id": "modalContent_2",
+						"type": "section-2"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay_9",
+												"type": "text-display"
+											}
+										]
+									],
+									"subId": "082a0f34bab7496ab942025374652910",
+									"id": "formFooterText_4",
+									"type": "section-2"
+								}
+							]
+						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
+						"id": "modalFooter_2",
+						"type": "form-footer"
+					}
+				],
+				[
+					{
+						"rows": [
+							[]
+						],
+						"type": "modal-background",
+						"id": "modalBackground_6"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"properties": {},
+																		"type": "image",
+																		"id": "modalLogoImage_6"
+																	}
+																]
+															],
+															"type": "block",
+															"id": "modalLogo_6"
+														}
+													]
+												],
+												"type": "form-header",
+												"id": "modalHeader_13"
+											}
+										]
+									],
+									"type": "sticky-panel",
+									"id": "stickyPanelModal_6"
+								}
+							]
+						],
+						"type": "block",
+						"id": "modalHeader_12"
 					}
 				],
 				[
@@ -3085,8 +3186,8 @@
 										]
 									],
 									"exclude": false,
-									"id": "extraInformation_6",
-									"type": "block"
+									"type": "block",
+									"id": "extraInformation_6"
 								}
 							],
 							[
@@ -3144,8 +3245,8 @@
 											}
 										]
 									],
-									"id": "followOnOptions_3",
-									"type": "follow-on-options"
+									"type": "follow-on-options",
+									"id": "followOnOptions_3"
 								}
 							]
 						],
@@ -3159,8 +3260,8 @@
 							"infoText": "Thank you, your submission has been received."
 						},
 						"htmlLabel": "<h1>Application Received</h1>",
-						"id": "modalContent_6",
-						"type": "section-2"
+						"type": "section-2",
+						"id": "modalContent_6"
 					}
 				],
 				[
@@ -3168,6 +3269,7 @@
 						"rows": [
 							[
 								{
+									"label": "",
 									"rows": [
 										[
 											{
@@ -3180,18 +3282,17 @@
 										]
 									],
 									"styles": [],
-									"label": "",
 									"htmlLabel": "",
 									"id": "formFooterText_8",
 									"type": "section-2"
 								}
 							]
 						],
+						"type": "form-footer",
 						"rules": {
 							"sh": "!Util.isReceipt"
 						},
-						"id": "modalFooter_6",
-						"type": "form-footer"
+						"id": "modalFooter_6"
 					}
 				]
 			],
@@ -3208,7 +3309,8 @@
 						"rows": [
 							[]
 						],
-						"id": "modalBackground",
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
+						"id": "modalBackground_4",
 						"type": "modal-background"
 					}
 				],
@@ -3227,28 +3329,128 @@
 																[
 																	{
 																		"properties": {},
-																		"id": "modalLogoImage",
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
+																		"id": "modalLogoImage_4",
 																		"type": "image"
 																	}
 																]
 															],
-															"id": "modalLogo",
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
+															"id": "modalLogo_4",
 															"type": "block"
 														}
 													]
 												],
-												"id": "modalHeader_1",
+												"subId": "10cd185db8f44312a2d007cce8c61074",
+												"id": "modalHeader_9",
 												"type": "form-header"
 											}
 										]
 									],
-									"id": "stickyPanelModal",
+									"subId": "f85f23c17b944a399f2368733020e9ad",
+									"id": "stickyPanelModal_4",
 									"type": "sticky-panel"
 								}
 							]
 						],
-						"id": "modalHeader",
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
+						"id": "modalHeader_8",
 						"type": "block"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"id": "startANewForm_5",
+									"type": "button"
+								}
+							]
+						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
+						"subId": "d4a0cd71666b429898edfba3b748599d",
+						"id": "modalContent_4",
+						"type": "section-2"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay_11",
+												"type": "text-display"
+											}
+										]
+									],
+									"subId": "082a0f34bab7496ab942025374652910",
+									"id": "formFooterText_6",
+									"type": "section-2"
+								}
+							]
+						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
+						"id": "modalFooter_4",
+						"type": "form-footer"
+					}
+				],
+				[
+					{
+						"rows": [
+							[]
+						],
+						"type": "modal-background",
+						"id": "modalBackground"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"properties": {},
+																		"type": "image",
+																		"id": "modalLogoImage"
+																	}
+																]
+															],
+															"type": "block",
+															"id": "modalLogo"
+														}
+													]
+												],
+												"type": "form-header",
+												"id": "modalHeader_1"
+											}
+										]
+									],
+									"type": "sticky-panel",
+									"id": "stickyPanelModal"
+								}
+							]
+						],
+						"type": "block",
+						"id": "modalHeader"
 					}
 				],
 				[
@@ -3626,8 +3828,8 @@
 										]
 									],
 									"exclude": false,
-									"id": "extraInformation",
-									"type": "block"
+									"type": "block",
+									"id": "extraInformation"
 								}
 							],
 							[
@@ -3685,8 +3887,8 @@
 											}
 										]
 									],
-									"id": "followOnOptions",
-									"type": "follow-on-options"
+									"type": "follow-on-options",
+									"id": "followOnOptions"
 								}
 							]
 						],
@@ -3700,8 +3902,8 @@
 							"infoText": "Your form has been saved and may be re-opened later."
 						},
 						"htmlLabel": "<h1>Application Saved</h1>",
-						"id": "modalContent",
-						"type": "section-2"
+						"type": "section-2",
+						"id": "modalContent"
 					}
 				],
 				[
@@ -3709,6 +3911,7 @@
 						"rows": [
 							[
 								{
+									"label": "",
 									"rows": [
 										[
 											{
@@ -3720,18 +3923,17 @@
 										]
 									],
 									"styles": [],
-									"label": "",
 									"htmlLabel": "",
 									"id": "formFooterText",
 									"type": "section-2"
 								}
 							]
 						],
+						"type": "form-footer",
 						"rules": {
 							"sh": "!Util.isReceipt"
 						},
-						"id": "modalFooter",
-						"type": "form-footer"
+						"id": "modalFooter"
 					}
 				]
 			],
@@ -3748,7 +3950,8 @@
 						"rows": [
 							[]
 						],
-						"id": "modalBackground_1",
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
+						"id": "modalBackground_3",
 						"type": "modal-background"
 					}
 				],
@@ -3767,28 +3970,128 @@
 																[
 																	{
 																		"properties": {},
-																		"id": "modalLogoImage_1",
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
+																		"id": "modalLogoImage_3",
 																		"type": "image"
 																	}
 																]
 															],
-															"id": "modalLogo_1",
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
+															"id": "modalLogo_3",
 															"type": "block"
 														}
 													]
 												],
-												"id": "modalHeader_3",
+												"subId": "10cd185db8f44312a2d007cce8c61074",
+												"id": "modalHeader_7",
 												"type": "form-header"
 											}
 										]
 									],
-									"id": "stickyPanelModal_1",
+									"subId": "f85f23c17b944a399f2368733020e9ad",
+									"id": "stickyPanelModal_3",
 									"type": "sticky-panel"
 								}
 							]
 						],
-						"id": "modalHeader_2",
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
+						"id": "modalHeader_6",
 						"type": "block"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"id": "startANewForm_4",
+									"type": "button"
+								}
+							]
+						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
+						"subId": "d4a0cd71666b429898edfba3b748599d",
+						"id": "modalContent_3",
+						"type": "section-2"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay_10",
+												"type": "text-display"
+											}
+										]
+									],
+									"subId": "082a0f34bab7496ab942025374652910",
+									"id": "formFooterText_5",
+									"type": "section-2"
+								}
+							]
+						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
+						"id": "modalFooter_3",
+						"type": "form-footer"
+					}
+				],
+				[
+					{
+						"rows": [
+							[]
+						],
+						"type": "modal-background",
+						"id": "modalBackground_1"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"properties": {},
+																		"type": "image",
+																		"id": "modalLogoImage_1"
+																	}
+																]
+															],
+															"type": "block",
+															"id": "modalLogo_1"
+														}
+													]
+												],
+												"type": "form-header",
+												"id": "modalHeader_3"
+											}
+										]
+									],
+									"type": "sticky-panel",
+									"id": "stickyPanelModal_1"
+								}
+							]
+						],
+						"type": "block",
+						"id": "modalHeader_2"
 					}
 				],
 				[
@@ -3801,8 +4104,8 @@
 										[]
 									],
 									"exclude": false,
-									"id": "extraInformation_1",
-									"type": "block"
+									"type": "block",
+									"id": "extraInformation_1"
 								}
 							],
 							[
@@ -3860,8 +4163,8 @@
 											}
 										]
 									],
-									"id": "followOnOptions_1",
-									"type": "follow-on-options"
+									"type": "follow-on-options",
+									"id": "followOnOptions_1"
 								}
 							]
 						],
@@ -3869,8 +4172,8 @@
 							"infoText": "Your application has been cancelled and will not be processed."
 						},
 						"htmlLabel": "<h1>Application Cancelled</h1>",
-						"id": "modalContent_1",
-						"type": "section-2"
+						"type": "section-2",
+						"id": "modalContent_1"
 					}
 				],
 				[
@@ -3893,11 +4196,11 @@
 								}
 							]
 						],
+						"type": "form-footer",
 						"rules": {
 							"sh": "!Util.isReceipt"
 						},
-						"id": "modalFooter_1",
-						"type": "form-footer"
+						"id": "modalFooter_1"
 					}
 				]
 			],
@@ -4819,7 +5122,7 @@
 							"ariaLabel": ""
 						}
 					},
-					"dialogFooterBlock_13": {
+					"dialogFooterBlock_12": {
 						"label": "Block",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -5154,7 +5457,7 @@
 							"ariaLabel": ""
 						}
 					},
-					"dialogFooterBlock_4": {
+					"dialogFooterBlock_5": {
 						"label": "Confirm",
 						"htmlLabel": "Confirm",
 						"mandatoryMsg": "",
@@ -5424,6 +5727,90 @@
 							"alertMsg": ""
 						}
 					},
+					"modalBackground_2": {
+						"label": "Modal background",
+						"htmlLabel": "Modal background",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalHeader_4": {
+						"label": "Modal header",
+						"htmlLabel": "Modal header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"stickyPanelModal_2": {
+						"label": "Sticky Panel-modal",
+						"htmlLabel": "Sticky Panel-modal",
+						"mandatoryMsg": ""
+					},
+					"modalHeader_5": {
+						"label": "Modal Header",
+						"htmlLabel": "Modal Header",
+						"mandatoryMsg": "",
+						"properties": {
+							"trackingCodePrefix": "Reference Code: "
+						}
+					},
+					"modalLogo_2": {
+						"label": "Modal logo",
+						"htmlLabel": "Modal logo",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalLogoImage_2": {
+						"label": "Modal logo image",
+						"htmlLabel": "Modal logo image",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"modalContent_2": {
+						"label": "Modal Content",
+						"htmlLabel": "<h1>Modal Content</h1>",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Your Application has been received"
+						}
+					},
+					"startANewForm_3": {
+						"label": "Start a new form",
+						"htmlLabel": "Start a new form",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalFooter_2": {
+						"label": "Modal Footer",
+						"htmlLabel": "Modal Footer",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"formFooterText_4": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_9": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
+					},
 					"modalBackground_6": {
 						"label": "Modal background",
 						"htmlLabel": "Modal background",
@@ -5433,37 +5820,37 @@
 						}
 					},
 					"modalHeader_12": {
-						"label": "Modal header",
-						"htmlLabel": "Modal header",
+						"label": "Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
 						}
 					},
 					"stickyPanelModal_6": {
-						"label": "Sticky Panel-modal",
-						"htmlLabel": "Sticky Panel-modal",
+						"label": "Sticky Panel",
+						"htmlLabel": "",
 						"mandatoryMsg": ""
 					},
 					"modalHeader_13": {
-						"label": "Modal Header",
-						"htmlLabel": "Modal Header",
+						"label": "Form Header",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"trackingCodePrefix": "Reference Code: "
 						}
 					},
 					"modalLogo_6": {
-						"label": "Modal logo",
-						"htmlLabel": "Modal logo",
+						"label": "Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
 						}
 					},
 					"modalLogoImage_6": {
-						"label": "Modal logo image",
-						"htmlLabel": "Modal logo image",
+						"label": "Image",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"alternativeText": "",
@@ -5480,7 +5867,7 @@
 						}
 					},
 					"extraInformation_6": {
-						"label": "Extra Information",
+						"label": "Block",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
@@ -5587,8 +5974,8 @@
 						}
 					},
 					"followOnOptions_3": {
-						"label": "Follow on options",
-						"htmlLabel": "Follow on options",
+						"label": "Follow On Options Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5619,8 +6006,8 @@
 						}
 					},
 					"modalFooter_6": {
-						"label": "Modal Footer",
-						"htmlLabel": "Modal Footer",
+						"label": "Form Footer",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5651,6 +6038,90 @@
 							"alertMsg": ""
 						}
 					},
+					"modalBackground_4": {
+						"label": "Modal background",
+						"htmlLabel": "Modal background",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalHeader_8": {
+						"label": "Modal header",
+						"htmlLabel": "Modal header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"stickyPanelModal_4": {
+						"label": "Sticky Panel-modal",
+						"htmlLabel": "Sticky Panel-modal",
+						"mandatoryMsg": ""
+					},
+					"modalHeader_9": {
+						"label": "Modal Header",
+						"htmlLabel": "Modal Header",
+						"mandatoryMsg": "",
+						"properties": {
+							"trackingCodePrefix": "Reference Code: "
+						}
+					},
+					"modalLogo_4": {
+						"label": "Modal logo",
+						"htmlLabel": "Modal logo",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalLogoImage_4": {
+						"label": "Modal logo image",
+						"htmlLabel": "Modal logo image",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"modalContent_4": {
+						"label": "Modal Content",
+						"htmlLabel": "<h1>Modal Content</h1>",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Your Application has been received"
+						}
+					},
+					"startANewForm_5": {
+						"label": "Start a new form",
+						"htmlLabel": "Start a new form",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalFooter_4": {
+						"label": "Modal Footer",
+						"htmlLabel": "Modal Footer",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"formFooterText_6": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_11": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
+					},
 					"modalBackground": {
 						"label": "Modal background",
 						"htmlLabel": "Modal background",
@@ -5660,37 +6131,37 @@
 						}
 					},
 					"modalHeader": {
-						"label": "Modal header",
-						"htmlLabel": "Modal header",
+						"label": "Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
 						}
 					},
 					"stickyPanelModal": {
-						"label": "Sticky Panel-modal",
-						"htmlLabel": "Sticky Panel-modal",
+						"label": "Sticky Panel",
+						"htmlLabel": "",
 						"mandatoryMsg": ""
 					},
 					"modalHeader_1": {
-						"label": "Modal Header",
-						"htmlLabel": "Modal Header",
+						"label": "Form Header",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"trackingCodePrefix": "Reference Code: "
 						}
 					},
 					"modalLogo": {
-						"label": "Modal logo",
-						"htmlLabel": "Modal logo",
+						"label": "Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
 						}
 					},
 					"modalLogoImage": {
-						"label": "Modal logo image",
-						"htmlLabel": "Modal logo image",
+						"label": "Image",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"alternativeText": "",
@@ -5707,7 +6178,7 @@
 						}
 					},
 					"extraInformation": {
-						"label": "Extra Information",
+						"label": "Block",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
@@ -5866,8 +6337,8 @@
 						}
 					},
 					"followOnOptions": {
-						"label": "Follow on options",
-						"htmlLabel": "Follow on options",
+						"label": "Follow On Options Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5898,8 +6369,8 @@
 						}
 					},
 					"modalFooter": {
-						"label": "Modal Footer",
-						"htmlLabel": "Modal Footer",
+						"label": "Form Footer",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5930,6 +6401,90 @@
 							"alertMsg": ""
 						}
 					},
+					"modalBackground_3": {
+						"label": "Modal background",
+						"htmlLabel": "Modal background",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalHeader_6": {
+						"label": "Modal header",
+						"htmlLabel": "Modal header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"stickyPanelModal_3": {
+						"label": "Sticky Panel-modal",
+						"htmlLabel": "Sticky Panel-modal",
+						"mandatoryMsg": ""
+					},
+					"modalHeader_7": {
+						"label": "Modal Header",
+						"htmlLabel": "Modal Header",
+						"mandatoryMsg": "",
+						"properties": {
+							"trackingCodePrefix": "Reference Code: "
+						}
+					},
+					"modalLogo_3": {
+						"label": "Modal logo",
+						"htmlLabel": "Modal logo",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalLogoImage_3": {
+						"label": "Modal logo image",
+						"htmlLabel": "Modal logo image",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"modalContent_3": {
+						"label": "Modal Content",
+						"htmlLabel": "<h1>Modal Content</h1>",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Your Application has been received"
+						}
+					},
+					"startANewForm_4": {
+						"label": "Start a new form",
+						"htmlLabel": "Start a new form",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalFooter_3": {
+						"label": "Modal Footer",
+						"htmlLabel": "Modal Footer",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"formFooterText_5": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_10": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
+					},
 					"modalBackground_1": {
 						"label": "Modal background",
 						"htmlLabel": "Modal background",
@@ -5939,37 +6494,37 @@
 						}
 					},
 					"modalHeader_2": {
-						"label": "Modal header",
-						"htmlLabel": "Modal header",
+						"label": "Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
 						}
 					},
 					"stickyPanelModal_1": {
-						"label": "Sticky Panel-modal",
-						"htmlLabel": "Sticky Panel-modal",
+						"label": "Sticky Panel",
+						"htmlLabel": "",
 						"mandatoryMsg": ""
 					},
 					"modalHeader_3": {
-						"label": "Modal Header",
-						"htmlLabel": "Modal Header",
+						"label": "Form Header",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"trackingCodePrefix": "Reference Code: "
 						}
 					},
 					"modalLogo_1": {
-						"label": "Modal logo",
-						"htmlLabel": "Modal logo",
+						"label": "Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
 						}
 					},
 					"modalLogoImage_1": {
-						"label": "Modal logo image",
-						"htmlLabel": "Modal logo image",
+						"label": "Image",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"alternativeText": "",
@@ -5986,7 +6541,7 @@
 						}
 					},
 					"extraInformation_1": {
-						"label": "Extra Information",
+						"label": "Block",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
@@ -5994,8 +6549,8 @@
 						}
 					},
 					"followOnOptions_1": {
-						"label": "Follow on options",
-						"htmlLabel": "Follow on options",
+						"label": "Follow On Options Block",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -6026,8 +6581,8 @@
 						}
 					},
 					"modalFooter_1": {
-						"label": "Modal Footer",
-						"htmlLabel": "Modal Footer",
+						"label": "Form Footer",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""

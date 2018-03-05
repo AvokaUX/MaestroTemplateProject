@@ -68,6 +68,28 @@ define(["app"], function (app) {
                             $el.find('.av-popover-help').remove();
                         }, 250);
                     }
+                    function adjustTooltipPos() {
+                        var viewWidth = $(window).innerWidth();
+                        var spaceRequired = 0.5 * $el.find('.popover-tooltip').innerWidth();
+                        var elementWidth = $el.innerWidth();
+                        var availableWidthR = viewWidth - $el.offset().left - 0.5 * elementWidth;
+                        var availableWidthL = 0.5 * elementWidth + $el.offset().left;
+                        if (availableWidthR < spaceRequired) {
+                            $el.find('.av-popover-help').css({
+                                        'margin-left':  availableWidthR - spaceRequired + 'px'
+                                    });
+                            $el.find('.av-popover-help .arrow').css({
+                                'margin-left':  spaceRequired - availableWidthR - 8 + 'px'
+                            });
+                        } else if (availableWidthL < spaceRequired) {
+                            $el.find('.av-popover-help').css({
+                                'margin-left': spaceRequired - availableWidthL + 'px'
+                            });
+                            $el.find('.av-popover-help .arrow').css({
+                                'margin-left':  availableWidthL - spaceRequired - 8 + 'px'
+                            });
+                        }
+                    }
                     /**
                      * remove tooltip when click anywhere else
                      * @param event
@@ -85,8 +107,6 @@ define(["app"], function (app) {
                      * @param e
                      */
                     var addTooltip = function (e) {
-                        var viewWidth = $(window).innerWidth();
-                        var availableWidth = viewWidth - $el.offset().left;
                         e.preventDefault();
                         e.stopPropagation();
                         if ($el.find('.popover-tooltip').length > 0) return;
@@ -99,12 +119,7 @@ define(["app"], function (app) {
                         tooltipHtml += "</span>";
                         $el.append($compile(tooltipHtml)(scope));
                         $el.find('.av-popover-help').addClass('ready active');
-                        var tooltipWidth = $el.find('.popover-tooltip').innerWidth();
-                        if (availableWidth - tooltipWidth < 25) {
-                            $el.find('.av-popover-help').css({
-                                'left': availableWidth - tooltipWidth - 25 + 'px'
-                            });
-                        }
+                        adjustTooltipPos();
                     };
                     /**
                      * mouse leave event handler - remove tooltip

@@ -31,7 +31,19 @@ form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper 
 }
 
 form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help {
-  top: 30px;
+   top: 35px;
+   left: 50%;
+   margin-left: 0;
+   transform: translateX(-125px);
+ }
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help .popover-tooltip {
+  max-width: 250px;
+}
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help .arrow {
+  display: block;
+  border-top: none;
+  border-bottom: 10px solid white;
+  top: -12px;
 }
 
 form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .wdg-progress-bar {
