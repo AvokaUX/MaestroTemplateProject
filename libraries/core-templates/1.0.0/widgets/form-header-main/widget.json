@@ -1,0 +1,155 @@
+{
+	"category": "Custom Components",
+	"label": "Form Header",
+	"html": "form-header-main.html",
+	"css": "form-header-main.css",
+	"rows": [
+		[
+			{
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"span": {
+											"xs": 3,
+											"sm": 3,
+											"md": 3,
+											"lg": 3
+										},
+										"label": "Brand logo",
+										"rows": [
+											[
+												{
+													"span": {
+														"md": 4,
+														"lg": 4,
+														"xs": 3,
+														"sm": 3
+													},
+													"label": "Logo",
+													"properties": {
+														"src": {
+															"fileName": "avoka-logo.png",
+															"width": "52",
+															"height": "40"
+														}
+													},
+													"exclude": false,
+													"htmlLabel": "Logo",
+													"path": "",
+													"styles": [],
+													"type": "image",
+													"id": "logo"
+												}
+											]
+										],
+										"exclude": false,
+										"htmlLabel": "Brand logo",
+										"path": "",
+										"styles": [
+											"bs-logo-container-86033"
+										],
+										"type": "block",
+										"id": "brandLogo"
+									},
+									{
+										"rows": [
+											[
+												{
+													"properties": {
+														"displayGroupIcon": false
+													},
+													"exclude": false,
+													"path": "ProgressBar",
+													"id": "progressBar_1",
+													"type": "progress-bar"
+												}
+											]
+										],
+										"styles": [
+											"av-docking-progress-bar"
+										],
+										"exclude": false,
+										"path": "DockingProgressBar",
+										"type": "docking-progress-bar",
+										"id": "dockingProgressBar"
+									}
+								]
+							],
+							"properties": {
+								"showTrackingCode": false
+							},
+							"exclude": false,
+							"path": "",
+							"styles": [
+								"mg-header",
+								"bs-max-width-73189"
+							],
+							"type": "form-header",
+							"id": "formHeader"
+						}
+					],
+					[
+						{
+							"rows": [
+								[
+									{
+										"rules": {
+											"eq": "//Provide a value or calculation for this data field"
+										},
+										"id": "dockErrors",
+										"type": "data-field"
+									},
+									{
+										"rules": {
+											"eq": "//Provide a value or calculation for this data field"
+										},
+										"id": "errorsDockLock",
+										"type": "data-field"
+									}
+								]
+							],
+							"properties": {
+								"header": "Please resolve the following issues before proceeding",
+								"subHeader": "Click on an issue to go directly to the related section of the form.",
+								"dockedHeader": "{{Form.validation.errors.length}} error(s) found",
+								"dockedSubHeader": "Please touch here to resolve the next error.",
+								"mobileA11yMessageBefore": "The following {{Form.validation.errors.length + (Form.validation.errors.length == 1 && ' issue was' || ' issues were')}} found.",
+								"mobileA11yMessageAfter": "Please select the screen to go to the first error."
+							},
+							"exclude": false,
+							"path": "",
+							"styles": [
+								"av-docking-errors"
+							],
+							"type": "docking-errors",
+							"id": "dockingErrorBlock"
+						}
+					]
+				],
+				"exclude": false,
+				"path": "StickyPanel",
+				"rules": {
+					"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+				},
+				"styles": [
+					"bs-fixed-header-40325"
+				],
+				"type": "sticky-panel",
+				"id": "stickyPanel1"
+			}
+		]
+	],
+	"type": "block",
+	"path": "",
+	"htmlLabel": "Form Header",
+	"blockInfo": {
+		"editLink": "https://tm.maestro.avoka.com/maestro/secure/design/5407",
+		"publishLibraryId": 5704,
+		"blockCode": "floating-functional-component"
+	},
+	"description": "",
+	"id": "formHeaderMain"
+}

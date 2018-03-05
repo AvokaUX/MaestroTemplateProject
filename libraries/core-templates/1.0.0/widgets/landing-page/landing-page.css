@@ -1,0 +1,6 @@
+form[name='form'] .av-landing-page .wdg-section-1-body {
+  height: 100vh;
+}
+form[name='form'] .av-landing-page .wdg-section-1-body > .row {
+  height: 100%;
+}

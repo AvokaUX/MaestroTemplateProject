@@ -9,7 +9,20 @@
 		"messageIcon": {
 			"label": "Message icon",
 			"type": "icon",
-			"value": "fa fa-info-circle"
+			"value": "fa fa-info-circle",
+			"order": 1
+		},
+		"hideIcon": {
+			"label": "Hide Icon",
+			"type": "boolean",
+			"value": false,
+			"order": 2
+		},
+		"hideHeader": {
+			"label": "Hide Section Header",
+			"type": "boolean",
+			"value": false,
+			"order": 3
 		}
 	},
 	"styles": [

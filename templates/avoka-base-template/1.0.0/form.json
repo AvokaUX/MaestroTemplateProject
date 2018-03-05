@@ -82,7 +82,10 @@
 					}
 				},
 				"pageController": {
-					"properties": {}
+					"properties": {
+						"pageTransition": "slide",
+						"transitionDelay": 500
+					}
 				}
 			},
 			"label": "Default",
@@ -96,6 +99,7 @@
 				"av-button-primary-color": "",
 				"av-button-secondary-color": "",
 				"av-dialog-background": "#000",
+				"av-dialog-background-opacity": "70%",
 				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
@@ -111,18 +115,24 @@
 				"av-menu-hover-color": "",
 				"av-menu-text-color": "",
 				"av-menu-text-hover-color": "",
+				"av-msg-section-background": "#64767F",
+				"av-msg-section-background-opacity": "70%",
 				"av-neutral-color": "#EEEEEE",
 				"av-neutral-contrast": "#333333",
 				"av-popover-help": "#fff",
 				"av-popover-help-btn-focus": "#2a7ab0",
 				"av-primary-color": "#7bd5ff",
 				"av-primary-contrast": "#64767f",
+				"av-progressbar-background": "#64767F",
+				"av-progressbar-background-opacity": "70%",
 				"av-secondary-color": "#454753",
 				"av-secondary-contrast": "#64767f",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
+				"av-section-background": "#fff",
+				"av-section-background-opacity": "90%",
 				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
@@ -369,6 +379,90 @@
 				]
 			],
 			"type": "cancel-confirm"
+		},
+		"dialogInterpage": {
+			"exclude": false,
+			"id": "dialogInterpage",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader_2",
+						"rows": [
+							[
+								{
+									"id": "close_2",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_1",
+						"rows": [
+							[
+								{
+									"exclude": false,
+									"id": "dialogContent_1",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"id": "section_3",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_2",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_4",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"id": "okay_2",
+															"rules": {
+																"click": "Form.$Pages.move(true).then(function() {setTimeout(function(){ Form.showDialog(\"\"); }, 700);});",
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				]
+			],
+			"rules": {},
+			"type": "dialog-interpage"
 		},
 		"formhelp": {
 			"id": "formhelp",
@@ -686,6 +780,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "dialogBody_8",
 						"rows": [
 							[
@@ -730,6 +825,7 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "dialogFooter_18",
 									"rows": [
 										[
@@ -932,12 +1028,14 @@
 		]
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
 		"cancelconfirm",
 		"showxml",
-		"formhelp"
+		"formhelp",
+		"dialogInterpage"
 	],
 	"localModals": [
 		"savesuccess",
@@ -1568,41 +1666,23 @@
 		[
 			{
 				"exclude": false,
-				"htmlLabel": "Form Header",
 				"id": "formHeader1",
-				"label": "Form Header",
-				"path": "",
 				"rows": [
 					[
 						{
-							"exclude": false,
 							"id": "stickyPanel1",
-							"path": "StickyPanel",
 							"rows": [
 								[
 									{
-										"exclude": false,
 										"id": "formHeader",
-										"path": "",
-										"properties": {
-											"showTrackingCode": false
-										},
 										"rows": [
 											[
 												{
-													"exclude": false,
-													"htmlLabel": "Brand logo",
 													"id": "brandLogo",
-													"label": "Brand logo",
-													"path": "",
 													"rows": [
 														[
 															{
-																"exclude": false,
-																"htmlLabel": "Logo",
 																"id": "logo",
-																"label": "Logo",
-																"path": "",
 																"properties": {
 																	"src": {
 																		"fileName": "avoka-logo.png",
@@ -1610,64 +1690,32 @@
 																		"width": "52"
 																	}
 																},
-																"span": {
-																	"lg": 4,
-																	"md": 4,
-																	"sm": 3,
-																	"xs": 3
-																},
-																"styles": [],
 																"type": "image"
 															}
 														]
 													],
-													"span": {
-														"lg": 3,
-														"md": 3,
-														"sm": 3,
-														"xs": 3
-													},
-													"styles": [
-														"bs-logo-container-86033"
-													],
 													"type": "block"
 												},
 												{
-													"exclude": false,
 													"id": "dockingProgressBar",
-													"path": "DockingProgressBar",
 													"rows": [
 														[
 															{
-																"exclude": false,
 																"id": "progressBar_1",
-																"path": "ProgressBar",
-																"properties": {
-																	"displayGroupIcon": false
-																},
 																"type": "progress-bar"
 															}
 														]
 													],
-													"styles": [
-														"av-docking-progress-bar"
-													],
 													"type": "docking-progress-bar"
 												}
 											]
-										],
-										"styles": [
-											"mg-header",
-											"bs-max-width-73189"
 										],
 										"type": "form-header"
 									}
 								],
 								[
 									{
-										"exclude": false,
 										"id": "dockingErrorBlock",
-										"path": "",
 										"rows": [
 											[
 												{
@@ -1680,18 +1728,9 @@
 												}
 											]
 										],
-										"styles": [
-											"av-docking-errors"
-										],
 										"type": "docking-errors"
 									}
 								]
-							],
-							"rules": {
-								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
-							},
-							"styles": [
-								"bs-fixed-header-40325"
 							],
 							"type": "sticky-panel"
 						}
@@ -1699,7 +1738,7 @@
 				],
 				"rules": {},
 				"styles": [],
-				"type": "block"
+				"type": "form-header-main"
 			}
 		],
 		[
@@ -1715,35 +1754,139 @@
 							"htmlLabel": "Page Controller",
 							"id": "pageController",
 							"path": "",
+							"properties": {
+								"pageTransition": "slide"
+							},
 							"rows": [
 								[
 									{
+										"id": "landingPage",
+										"rows": [
+											[
+												{
+													"id": "section",
+													"rows": [
+														[
+															{
+																"exclude": false,
+																"id": "openDialog",
+																"path": "",
+																"properties": {
+																	"dialogRef": "data.dialogInterpage"
+																},
+																"type": "button-dialog-open"
+															}
+														]
+													],
+													"styles": [
+														"mg-section-2",
+														"av-section"
+													],
+													"type": "section-fullpage"
+												}
+											]
+										],
+										"type": "landing-page"
+									}
+								],
+								[
+									{
 										"exclude": false,
-										"hasCustomId": true,
-										"htmlLabel": "Page 1",
 										"id": "page",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
-										"label": "Page 1",
 										"path": "",
 										"rows": [
 											[
 												{
 													"exclude": false,
-													"id": "section",
+													"id": "section_1",
 													"path": "",
 													"rows": [
-														[]
+														[
+															{
+																"exclude": false,
+																"id": "textField_3",
+																"path": "TextField_3",
+																"type": "text-input"
+															}
+														],
+														[
+															{
+																"exclude": false,
+																"id": "textField_4",
+																"path": "TextField_4",
+																"type": "text-input"
+															}
+														]
 													],
 													"type": "section-2"
 												}
+											],
+											[
+												{
+													"exclude": false,
+													"id": "accordion",
+													"path": "",
+													"rows": [
+														[
+															{
+																"exclude": false,
+																"id": "accordionSection",
+																"path": "",
+																"rows": [
+																	[
+																		{
+																			"exclude": false,
+																			"id": "textField",
+																			"path": "TextField",
+																			"type": "text-input"
+																		}
+																	]
+																],
+																"type": "accordion-section"
+															}
+														],
+														[
+															{
+																"exclude": false,
+																"id": "accordionSection_1",
+																"path": "",
+																"rows": [
+																	[
+																		{
+																			"exclude": false,
+																			"id": "textField_1",
+																			"path": "TextField_1",
+																			"type": "text-input"
+																		}
+																	]
+																],
+																"type": "accordion-section"
+															}
+														],
+														[
+															{
+																"exclude": false,
+																"id": "accordionSection_2",
+																"path": "",
+																"rows": [
+																	[
+																		{
+																			"exclude": false,
+																			"id": "textField_2",
+																			"path": "TextField_2",
+																			"type": "text-input"
+																		}
+																	]
+																],
+																"type": "accordion-section"
+															}
+														]
+													],
+													"type": "accordion"
+												}
 											]
-										],
-										"rules": {
-											"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
-										},
-										"styles": [
-											"mg-section-1"
 										],
 										"type": "nav-page"
 									}
@@ -1772,144 +1915,32 @@
 		[
 			{
 				"exclude": false,
-				"htmlLabel": "Bottom Nav",
-				"id": "bottomNav",
-				"label": "Bottom Nav",
-				"offset": {
-					"lg": "0",
-					"md": "0"
-				},
-				"path": "",
-				"rows": [
-					[
-						{
-							"animateVisibility": true,
-							"exclude": false,
-							"id": "submit2",
-							"offset": {
-								"lg": "0",
-								"md": "0",
-								"sm": "0",
-								"xs": "0"
-							},
-							"path": "",
-							"properties": {
-								"legacyMethod": false
-							},
-							"rules": {
-								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
-							"span": {
-								"sm": 6,
-								"xs": 6
-							},
-							"styles": [
-								"av-button",
-								"bs-submit-button-65937",
-								"av-global-layout"
-							],
-							"type": "submit"
-						}
-					]
-				],
-				"styles": [
-					"bs-bottom-nav-15636"
-				],
-				"type": "block"
-			}
-		],
-		[
-			{
-				"exclude": false,
-				"htmlLabel": "Navigation Bar",
 				"id": "navigationBar",
 				"label": "Navigation Bar",
-				"path": "",
 				"rows": [
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Next",
 							"id": "next",
-							"label": "Next",
-							"labelPlacementLeft": false,
-							"path": "",
-							"properties": {
-								"icon": "fa fa-angle-right"
-							},
-							"rules": {
-								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\nForm.$Pages.move(true);\n$timeout(function() {\t\n  data.blockNext = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockNext = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n",
-								"dc": "return data.blockNext  ? \"error\" : \"\";",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
-							"span": {
-								"lg": 2,
-								"md": 2,
-								"sm": 2,
-								"xs": 2
-							},
-							"styles": [
-								"av-button-navigation-next",
-								"av-button-navigation"
-							],
 							"type": "button-docking-right"
 						}
 					],
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Back",
 							"id": "back",
-							"label": "Back",
-							"path": "",
-							"properties": {
-								"icon": "fa fa-angle-left"
-							},
-							"rules": {
-								"click": "Form.$Pages.move(false);",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst;\n} else {\n\treturn true;\n}\n"
-							},
-							"span": {
-								"lg": 2,
-								"md": 2,
-								"sm": 2,
-								"xs": 2
-							},
-							"styles": [
-								"av-button-navigation-back",
-								"av-button-navigation"
-							],
 							"type": "button-docking-left"
 						}
 					],
 					[
 						{
-							"exclude": false,
-							"htmlLabel": "Block Next",
-							"id": "blockNext",
-							"label": "Block Next",
-							"path": "",
-							"type": "data-field"
-						}
-					],
-					[
-						{
-							"exclude": false,
-							"htmlLabel": "Page Change Animation",
-							"id": "pageChangeAnimation",
-							"label": "Page Change Animation",
-							"path": "",
-							"type": "data-field"
+							"id": "submit2",
+							"type": "submit"
 						}
 					]
 				],
 				"styles": [
 					"nav-bar-73803"
 				],
-				"type": "block"
+				"type": "nav-buttons"
 			}
 		],
 		[
@@ -2290,7 +2321,7 @@
 		]
 	],
 	"rules": {
-		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];"
+		"dc": "var pageTransition = \"\";\nif (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage ) {\n  pageTransition = \"page-transition-none\";\n} else {\n  pageTransition = 'page-transition-' + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n}\nreturn [data.pageChangeAnimation, pageTransition];"
 	},
 	"selectedBrand": "Default",
 	"styleMods": {
@@ -3132,7 +3163,8 @@
 				"bs-center-align-19822",
 				"bs-save-dialog-text-82753",
 				"bs-modal-content-96022",
-				"bs-dialog-content-scroll-92184"
+				"bs-dialog-content-scroll-92184",
+				"fullpage-section-36560"
 			],
 			"properties": {
 				"topToBottom": true
