@@ -106,10 +106,9 @@ define(["app"], function (app) {
                         $element.parent().css({
                             'margin-bottom': ''
                         });
-                    }, td, false).then(function () {
                         $thisAccordion.addClass("av-hidden");
                         $scope.$apply();
-                    });
+                    }, td, false);
                 }, 25, false);
             }
 
