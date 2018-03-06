@@ -258,6 +258,24 @@
               <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
               <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="avoka-base-template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="avoka-base-template" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -359,14 +377,7 @@
       <workItem from="1520295698897" duration="3235000" />
       <workItem from="1520302632793" duration="343000" />
       <workItem from="1520302978824" duration="757000" />
-      <workItem from="1520303757973" duration="135000" />
-    </task>
-    <task id="LOCAL-00018" summary="handle single page : progress bar and form heading">
-      <created>1516055348724</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1516055348724</updated>
+      <workItem from="1520303757973" duration="162000" />
     </task>
     <task id="LOCAL-00019" summary="handle single page : gap between form head and content">
       <created>1516056684273</created>
@@ -704,11 +715,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520303843208</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="remove testing items in the template">
+      <created>1520303896265</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1520303896265</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370392000" />
+    <option name="totallyTimeSpent" value="370419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2869" y="-11" width="2902" height="1582" extended-state="6" />
