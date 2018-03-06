@@ -3,7 +3,7 @@
 		{{Form.getCurrentPageNumber()}}&nbsp/&nbsp{{Form.getNavPageCount()}}&nbsp&nbsp
 	</div>
 	<div class="progress-wrapper-outer">
-		<div class="progress-page-title-container" data-ng-if="true">
+		<div class="progress-page-title-container" data-ng-if="false">
 			<div class="wdg-progress-page-title" data-ng-repeat="page in Form.$Pages.flatPages | filter : visiblePageFilter" data-ng-bind-html="page.label"></div>
 		</div>
 		<div class="progress-wrapper">
