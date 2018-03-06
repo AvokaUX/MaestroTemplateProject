@@ -258,24 +258,6 @@
               <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
               <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="avoka-base-template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="avoka-base-template" type="462c0819:PsiDirectoryNode" />
-              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -377,14 +359,7 @@
       <workItem from="1520295698897" duration="3235000" />
       <workItem from="1520302632793" duration="343000" />
       <workItem from="1520302978824" duration="757000" />
-      <workItem from="1520303757973" duration="44000" />
-    </task>
-    <task id="LOCAL-00016" summary="dialog name change on base template">
-      <created>1515971208336</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1515971208336</updated>
+      <workItem from="1520303757973" duration="79000" />
     </task>
     <task id="LOCAL-00017" summary="modal component created">
       <created>1515989513248</created>
@@ -722,11 +697,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520297993902</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="remove testing items in the template">
+      <created>1520303804740</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1520303804740</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370301000" />
+    <option name="totallyTimeSpent" value="370336000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2869" y="-11" width="2902" height="1582" extended-state="6" />
