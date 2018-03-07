@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93f70c84-d13d-4cfb-ad40-e4add914b0c0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="93f70c84-d13d-4cfb-ad40-e4add914b0c0" name="Default" comment="remove testing items in the template">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/libraries/core-templates/1.0.0/templates/avoka-base-template/form.json" afterPath="$PROJECT_DIR$/libraries/core-templates/1.0.0/templates/avoka-base-template/form.json" />
       <change beforePath="$PROJECT_DIR$/libraries/core-templates/1.0.0/templates/avoka-default/form.json" afterPath="$PROJECT_DIR$/libraries/core-templates/1.0.0/templates/avoka-default/form.json" />
+      <change beforePath="$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.less" afterPath="$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.less" />
       <change beforePath="$PROJECT_DIR$/templates/avoka-base-template/1.0.0/form.json" afterPath="$PROJECT_DIR$/templates/avoka-base-template/1.0.0/form.json" />
       <change beforePath="$PROJECT_DIR$/templates/avoka-default/1.0.0/form.json" afterPath="$PROJECT_DIR$/templates/avoka-default/1.0.0/form.json" />
     </list>
@@ -20,71 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="525">
-      <file leaf-file-name="progress-bar.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.html">
+      <file leaf-file-name="accordion-section.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progress-bar.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3567">
-              <caret line="123" column="0" lean-forward="false" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progress-bar.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1450">
-              <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.less" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/styles/av-progress-bar/style.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="29" column="15" lean-forward="false" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="progress-bar.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2262">
-              <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accordion-section.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widget.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/save-success-modal/widget.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="348">
+              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -95,16 +36,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="406">
               <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="accordion-section.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -220,18 +151,25 @@
         <option value="$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.css" />
         <option value="$PROJECT_DIR$/libraries/core-templates/1.0.0/styles/av-progress-bar/style.less" />
         <option value="$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.html" />
+        <option value="$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.less" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="3102" />
-    <option name="y" value="141" />
+    <option name="x" value="2869" />
+    <option name="y" value="-11" />
     <option name="width" value="2902" />
     <option name="height" value="1582" />
   </component>
@@ -251,12 +189,58 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
               <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="core-templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="core-templates" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="core-templates" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="core-templates" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="accordion-section" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="core-templates" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="widgets" type="462c0819:PsiDirectoryNode" />
+              <item name="accordion-section" type="462c0819:PsiDirectoryNode" />
+              <item name="accordion-section.less" type="620a8d5e:NestingTreeNode" />
             </path>
             <path>
               <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
@@ -276,18 +260,30 @@
               <item name="avoka-base-template" type="462c0819:PsiDirectoryNode" />
               <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="avoka-default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jun-sun-avoka-template" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jun-sun-avoka-template" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="avoka-default" type="462c0819:PsiDirectoryNode" />
+              <item name="1.0.0" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.HTML" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/Downloads/widgets/accordion-section/accordion-section.js" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
@@ -377,14 +373,9 @@
       <workItem from="1520295698897" duration="3235000" />
       <workItem from="1520302632793" duration="343000" />
       <workItem from="1520302978824" duration="757000" />
-      <workItem from="1520303757973" duration="162000" />
-    </task>
-    <task id="LOCAL-00019" summary="handle single page : gap between form head and content">
-      <created>1516056684273</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1516056684273</updated>
+      <workItem from="1520303757973" duration="1084000" />
+      <workItem from="1520305150093" duration="1676000" />
+      <workItem from="1520378053656" duration="1427000" />
     </task>
     <task id="LOCAL-00020" summary="handle single page : gap between form head and content-default template">
       <created>1516057438365</created>
@@ -722,25 +713,32 @@
       <option name="project" value="LOCAL" />
       <updated>1520303896265</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="remove testing items in the template">
+      <created>1520303927738</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1520303927738</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="370419000" />
+    <option name="totallyTimeSpent" value="374444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2869" y="-11" width="2902" height="1582" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22140092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18901795" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2178899" sideWeight="0.33016545" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2178899" sideWeight="0.66983455" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2178899" sideWeight="0.3336853" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2178899" sideWeight="0.66631466" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32418" sideWeight="0.45300952" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3524465" sideWeight="0.4470257" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -823,7 +821,6 @@
     <find-history />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/fab-menu---dev/widget.json" />
     <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/styles/bs-functional-button-bottom-18795/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
@@ -1105,30 +1102,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/save-success-modal/widget.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/styles/av-progress-bar/style.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="841">
@@ -1153,8 +1126,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="70" lean-forward="false" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
+        <state relative-caret-position="290">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/progress-bar/progress-bar.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/save-success-modal/widget.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libraries/core-templates/1.0.0/widgets/accordion-section/accordion-section.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding />
         </state>
       </provider>
