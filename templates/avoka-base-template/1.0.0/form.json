@@ -381,90 +381,6 @@
 			],
 			"type": "cancel-confirm"
 		},
-		"dialogInterpage": {
-			"exclude": false,
-			"id": "dialogInterpage",
-			"path": "",
-			"rows": [
-				[
-					{
-						"id": "dialogHeader_2",
-						"rows": [
-							[
-								{
-									"id": "close_2",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
-									"type": "icon-button"
-								}
-							]
-						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"id": "dialogBody_1",
-						"rows": [
-							[
-								{
-									"exclude": false,
-									"id": "dialogContent_1",
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "section_3",
-												"rows": [
-													[]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_2",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_4",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"id": "okay_2",
-															"rules": {
-																"click": "Form.$Pages.move(true).then(function() {setTimeout(function(){ Form.showDialog(\"\"); }, 700);});",
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
-									"type": "block"
-								}
-							]
-						],
-						"type": "block"
-					}
-				]
-			],
-			"rules": {},
-			"type": "dialog-interpage"
-		},
 		"formhelp": {
 			"id": "formhelp",
 			"rows": [
@@ -1029,14 +945,12 @@
 		]
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
 		"cancelconfirm",
 		"showxml",
-		"formhelp",
-		"dialogInterpage"
+		"formhelp"
 	],
 	"localModals": [
 		"submitsuccess",
@@ -1697,7 +1611,7 @@
 														{
 															"exclude": false,
 															"htmlLabel": "Your Full Name",
-															"id": "textField",
+															"id": "textField_5",
 															"label": "Your Full Name",
 															"mandatory": true,
 															"path": "TextField",
@@ -2150,7 +2064,7 @@
 												"animateVisibility": true,
 												"exclude": false,
 												"htmlLabel": "Next Steps",
-												"id": "section_3",
+												"id": "section_10",
 												"label": "Next Steps",
 												"path": "",
 												"properties": {
@@ -2578,13 +2492,7 @@
 														[
 															{
 																"id": "logo",
-																"properties": {
-																	"src": {
-																		"fileName": "avoka-logo.png",
-																		"height": "40",
-																		"width": "52"
-																	}
-																},
+																"properties": {},
 																"type": "image"
 															}
 														]
@@ -2593,6 +2501,9 @@
 												},
 												{
 													"id": "dockingProgressBar",
+													"properties": {
+														"progressBarHeight": 75
+													},
 													"rows": [
 														[
 															{
@@ -2655,10 +2566,23 @@
 							"rows": [
 								[
 									{
+										"exclude": false,
+										"htmlLabel": "Landing Page",
 										"id": "landingPage",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Landing Page",
+										"properties": {
+											"fullPage": true,
+											"hideFormHeader": true,
+											"hideMenuButton": true,
+											"hideNavButtons": true,
+											"offMenu": true
+										},
 										"rows": [
 											[
 												{
+													"exclude": false,
 													"id": "section",
 													"rows": [
 														[
@@ -2681,7 +2605,7 @@
 												}
 											]
 										],
-										"type": "landing-page"
+										"type": "nav-page"
 									}
 								],
 								[
@@ -2696,110 +2620,6 @@
 												{
 													"exclude": false,
 													"id": "section_1",
-													"path": "",
-													"rows": [
-														[
-															{
-																"exclude": false,
-																"id": "textField_3",
-																"path": "TextField_3",
-																"type": "text-input"
-															}
-														],
-														[
-															{
-																"exclude": false,
-																"id": "textField_4",
-																"path": "TextField_4",
-																"type": "text-input"
-															}
-														]
-													],
-													"type": "section-2"
-												}
-											],
-											[
-												{
-													"exclude": false,
-													"id": "accordion",
-													"path": "",
-													"rows": [
-														[
-															{
-																"exclude": false,
-																"id": "accordionSection",
-																"path": "",
-																"rows": [
-																	[
-																		{
-																			"exclude": false,
-																			"id": "textField",
-																			"path": "TextField",
-																			"type": "text-input"
-																		}
-																	]
-																],
-																"type": "accordion-section"
-															}
-														],
-														[
-															{
-																"exclude": false,
-																"id": "accordionSection_1",
-																"path": "",
-																"rows": [
-																	[
-																		{
-																			"exclude": false,
-																			"id": "textField_1",
-																			"path": "TextField_1",
-																			"type": "text-input"
-																		}
-																	]
-																],
-																"type": "accordion-section"
-															}
-														],
-														[
-															{
-																"exclude": false,
-																"id": "accordionSection_2",
-																"path": "",
-																"rows": [
-																	[
-																		{
-																			"exclude": false,
-																			"id": "textField_2",
-																			"path": "TextField_2",
-																			"type": "text-input"
-																		}
-																	]
-																],
-																"type": "accordion-section"
-															}
-														]
-													],
-													"type": "accordion"
-												}
-											]
-										],
-										"type": "nav-page"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"htmlLabel": "Page 2",
-										"id": "page_2",
-										"isFirstInGroup": false,
-										"isLastInGroup": false,
-										"label": "Page 2",
-										"path": "",
-										"rows": [
-											[
-												{
-													"exclude": false,
-													"id": "section_2",
 													"path": "",
 													"rows": [
 														[]
@@ -3300,7 +3120,8 @@
 				"bs-center-align-19822",
 				"align-top"
 			],
-			"properties": {}
+			"properties": {},
+			"styles": []
 		},
 		"address-lookup-google": {
 			"availableStyles": [

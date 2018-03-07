@@ -2,6 +2,8 @@
 	"label": "Page",
 	"category": "Navigation",
 	"type": "section",
+	"html": "nav-page.html",
+	"css": "nav-page.css",
 	"rows": [[]],
 	"propDefs": {
 		"offMenu": {
@@ -41,13 +43,21 @@
 			"value": "",
 			"order": 5
 		},
+		"fullPage": {
+			"label": "Full Page",
+			"category": "Options",
+			"type": "boolean",
+			"helpText": "Page spans full width and height of browser window",
+			"value": "",
+			"order": 6
+		},
 		"menuText": {
 			"label": "Menu Text",
 			"category": "Display Text",
 			"type": "richText",
 			"helpText": "This Text will be used in the Navigator Menu instead of Page label",
 			"value": "",
-			"order": 6
+			"order": 7
 		}
 	},
 	"ruleTemplates": [

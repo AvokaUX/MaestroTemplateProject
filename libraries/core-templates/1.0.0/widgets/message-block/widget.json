@@ -1,10 +1,10 @@
 {
-	"label": "Message Section",
-	"description": "A message block for displaying information to the user",
+	"label": "Message Block",
+	"description": "An in-section message block for displaying information to the user",
 	"category": "User Information",
 	"type": "block",
-	"html": "messageSection.html",
-	"css": "message-section.css",
+	"html": "messageBlock.html",
+	"css": "message-block.css",
 	"propDefs" : {
 		"messageIcon": {
 			"label": "Message icon",
@@ -26,6 +26,6 @@
 		}
 	},
 	"styles": [
-		"av-message-section"
+		"av-message-block"
 	]
 }

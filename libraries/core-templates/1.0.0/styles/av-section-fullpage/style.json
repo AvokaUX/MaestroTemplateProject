@@ -1,7 +1,7 @@
 {
+	"label": "AV section fullpage",
 	"block": {},
 	"file": "style.less",
-	"label": "Fullpage Section",
 	"widgets": [
 		"section-fullpage"
 	]
