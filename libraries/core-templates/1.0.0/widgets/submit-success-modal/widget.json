@@ -1,0 +1,443 @@
+{
+	"label": "Submit Success Modal",
+	"rows": [
+		[
+			{
+				"rows": [
+					[]
+				],
+				"id": "modalBackground_6",
+				"type": "modal-background",
+				"pubId": "e7de8a6603ce4cfc9f5b14c0ba6449ce"
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"rows": [
+											[
+												{
+													"rows": [
+														[
+															{
+																"properties": {},
+																"id": "modalLogoImage_6",
+																"type": "image",
+																"pubId": "67907d16d3304881b30a7b0c39c40f2d"
+															}
+														]
+													],
+													"id": "modalLogo_6",
+													"type": "block",
+													"pubId": "fe1c084b72ab40eab4890d3a09b1ef91"
+												}
+											]
+										],
+										"id": "modalHeader_13",
+										"type": "form-header",
+										"pubId": "177efcee44ff4358bb7ce74c8f992e54"
+									}
+								]
+							],
+							"id": "stickyPanelModal_6",
+							"type": "sticky-panel",
+							"pubId": "c39f41f0fc174e3aa88571337bce1886"
+						}
+					]
+				],
+				"id": "modalHeader_12",
+				"type": "block",
+				"pubId": "09d9c7ec3e404a83bbd8514be7f93ff2"
+			}
+		],
+		[
+			{
+				"label": "Application Received",
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"label": "For your records",
+										"rows": [
+											[
+												{
+													"span": {
+														"md": 6,
+														"lg": 6
+													},
+													"offset": {
+														"md": "3",
+														"lg": "3"
+													},
+													"label": "Send Receipt Block",
+													"rows": [
+														[
+															{
+																"span": {
+																	"md": 12,
+																	"lg": 12
+																},
+																"offset": {
+																	"md": "0",
+																	"lg": "0"
+																},
+																"label": "Your email address",
+																"styles": [],
+																"type": "email",
+																"rules": {
+																	"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+																},
+																"exclude": false,
+																"htmlLabel": "Your email address",
+																"mandatory": true,
+																"path": "EmailAddress",
+																"id": "emailAddress_1",
+																"pubId": "a9166129608642a59e32d08953a94f59"
+															}
+														],
+														[
+															{
+																"offset": {
+																	"md": "4",
+																	"lg": "4"
+																},
+																"label": "Send now",
+																"styles": [
+																	"message-banner",
+																	"av-button-primary"
+																],
+																"properties": {
+																	"emailFieldRef": "data.emailAddress_1"
+																},
+																"type": "button-email-receipt",
+																"rules": {
+																	"click": "Form.emailOperation('emailReceipt', item.id, item.properties.emailFieldRef)"
+																},
+																"exclude": false,
+																"htmlLabel": "Send now",
+																"path": "",
+																"id": "emailPdfReceiptButton",
+																"pubId": "fd5b89b6c936485a967f3e7ddb764b15"
+															}
+														]
+													],
+													"exclude": false,
+													"htmlLabel": "Send Receipt Block",
+													"path": "",
+													"type": "block",
+													"id": "block_2",
+													"pubId": "682a2217f1dd45dd87aa822be04e9503"
+												}
+											]
+										],
+										"styles": [
+											"bc-white-background-20804"
+										],
+										"properties": {
+											"infoText": "Would like a copy of this submission for your personal records?"
+										},
+										"animateVisibility": true,
+										"exclude": false,
+										"htmlLabel": "For your records",
+										"path": "",
+										"rules": {
+											"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus != \"success\" : true)"
+										},
+										"type": "section-2",
+										"id": "section_4",
+										"pubId": "0e3c0f413c9242549cd247f26dda2e1f"
+									}
+								],
+								[
+									{
+										"label": "Next Steps",
+										"rows": [
+											[
+												{
+													"properties": {},
+													"exclude": false,
+													"path": "",
+													"type": "form-bundle-job-tasks",
+													"id": "formBundleJobTasks",
+													"pubId": "e82ecd31030f474995afefadca19084d"
+												}
+											]
+										],
+										"styles": [
+											"bc-white-background-20804"
+										],
+										"properties": {
+											"infoText": "You are required to complete these additional forms to finalize your request."
+										},
+										"animateVisibility": true,
+										"exclude": false,
+										"htmlLabel": "Next Steps",
+										"path": "",
+										"rules": {
+											"sh": "Form.data.SFMData.SystemProfile.hasOwnProperty('Job') && Form.data.SFMData.SystemProfile.Job.hasOwnProperty('StepTasks') && Form.data.SFMData.SystemProfile.Job.StepTasks.Task.length > 0"
+										},
+										"type": "section-2",
+										"id": "section_3",
+										"pubId": "6e65490966bc4e8b827c2b51dfef55eb"
+									}
+								],
+								[
+									{
+										"label": "Reference Code Block",
+										"rows": [
+											[
+												{
+													"label": "Your Reference Code is:",
+													"htmlLabel": "Your Reference Code is:",
+													"styles": [],
+													"exclude": false,
+													"path": "",
+													"type": "text-display",
+													"id": "textDisplay",
+													"pubId": "a836c5d452a44d57b3e0d36396f03981"
+												}
+											],
+											[
+												{
+													"label": "",
+													"htmlLabel": "{{Form.data.SFMData.SystemProfile.TrackingCode}}",
+													"styles": [
+														"reference-code-text"
+													],
+													"exclude": false,
+													"path": "",
+													"type": "text-display",
+													"id": "textDisplay_1",
+													"pubId": "555d718829a64692b4a044a3b8cfb518"
+												}
+											],
+											[
+												{
+													"label": "Please quote your reference code when enquiring about your submission.",
+													"htmlLabel": "Please quote your reference code when enquiring about your submission.",
+													"styles": [],
+													"exclude": false,
+													"path": "",
+													"type": "text-display",
+													"id": "textDisplay_2",
+													"pubId": "70f170a1d4ce4b91871e0b878a4a57a4"
+												}
+											]
+										],
+										"exclude": false,
+										"htmlLabel": "Reference Code Block",
+										"path": "",
+										"styles": [
+											"reference-code-block"
+										],
+										"type": "block",
+										"id": "block_1",
+										"pubId": "23af4388f6ce4645a3496e873201fa8a"
+									}
+								],
+								[
+									{
+										"label": "Check your email",
+										"rows": [
+											[
+												{
+													"label": "Send Complete Block",
+													"rows": [
+														[
+															{
+																"label": "Weve sent a copy of your submission to your email address ().If you didnt receive it or would like another copy, just select the option below.",
+																"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_receipt_email}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
+																"styles": [],
+																"exclude": false,
+																"path": "",
+																"type": "text-display",
+																"id": "textDisplay_3",
+																"pubId": "58b0535a714e4ab1b543621627047927"
+															}
+														],
+														[
+															{
+																"offset": {
+																	"md": "4",
+																	"lg": "4"
+																},
+																"label": "Email another copy",
+																"styles": [
+																	"link-button-style"
+																],
+																"exclude": false,
+																"htmlLabel": "Email another copy",
+																"path": "",
+																"rules": {
+																	"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"submit_success_send_receipt\")) {\nForm.data.submit_success_send_receipt.$responseStatus = \"\";\n}\nForm.data.send_receipt_email = \"\";"
+																},
+																"type": "button",
+																"id": "button",
+																"pubId": "e0984bd42802402b98091c7da29d15a9"
+															}
+														]
+													],
+													"exclude": false,
+													"htmlLabel": "Send Complete Block",
+													"path": "",
+													"type": "block",
+													"id": "block_3",
+													"pubId": "ef79caa8974d424aa9237245b44fa01a"
+												}
+											]
+										],
+										"styles": [
+											"bc-white-background-20804"
+										],
+										"animateVisibility": true,
+										"exclude": false,
+										"htmlLabel": "Check your email",
+										"path": "",
+										"rules": {
+											"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
+										},
+										"type": "section-2",
+										"id": "section_5",
+										"pubId": "7d7e4b4084584064985837f791f94625"
+									}
+								]
+							],
+							"exclude": false,
+							"id": "extraInformation_6",
+							"type": "block",
+							"pubId": "93e099ab48ff477da33dc02e73f34fbb"
+						}
+					],
+					[
+						{
+							"offset": {
+								"md": "4",
+								"lg": "4"
+							},
+							"rows": [
+								[
+									{
+										"styles": [
+											"message-banner",
+											"av-button-primary"
+										],
+										"rules": {
+											"sh": "return item['$$parent'].properties.includeStartAgain;",
+											"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+										},
+										"exclude": false,
+										"path": "",
+										"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
+										"id": "startANewForm",
+										"type": "button",
+										"pubId": "b8fe532db1a548f18964e23e348141d3"
+									},
+									{
+										"styles": [
+											"message-banner",
+											"av-button-primary"
+										],
+										"rules": {
+											"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+											"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+										},
+										"exclude": false,
+										"path": "",
+										"subId": "2f32e2834fd4493280fa83492b6b143c",
+										"id": "returnToPortal_3",
+										"type": "button",
+										"pubId": "57ace160b0ae48f89b475d83363937b1"
+									},
+									{
+										"styles": [
+											"message-banner",
+											"av-button-primary"
+										],
+										"rules": {
+											"sh": "Resource.preview || Resource.design",
+											"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+										},
+										"exclude": false,
+										"path": "",
+										"subId": "a2498025348b4969b1ee7b3135ee6c9c",
+										"id": "showFormXml_3",
+										"type": "button",
+										"pubId": "a3c4d8edca31484888d4052c19df56e0"
+									}
+								]
+							],
+							"id": "followOnOptions_3",
+							"type": "follow-on-options",
+							"pubId": "8bd004be350a4b76bb778e36f2014e4d"
+						}
+					]
+				],
+				"styles": [
+					"bc-white-background-20804",
+					"bs-center-align-19822",
+					"bs-max-width-73189",
+					"bs-modal-content-96022"
+				],
+				"properties": {
+					"infoText": "Thank you, your submission has been received."
+				},
+				"htmlLabel": "<h1>Application Received</h1>",
+				"id": "modalContent_6",
+				"type": "section-2",
+				"pubId": "e18379a0fa314afa9b89da64d9ba1819"
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"path": "",
+										"subId": "8c9b02742d3841d8a9c30d826878b6af",
+										"id": "formFooterText_9",
+										"type": "text-display",
+										"pubId": "f3473cc1dad34c19a3744e21e37b8f1e"
+									}
+								]
+							],
+							"styles": [],
+							"label": "",
+							"htmlLabel": "",
+							"id": "formFooterText_8",
+							"type": "section-2",
+							"pubId": "e526ab379bc149fdacfc0a0a2f52e46b"
+						}
+					]
+				],
+				"rules": {
+					"sh": "!Util.isReceipt"
+				},
+				"id": "modalFooter_6",
+				"type": "form-footer",
+				"pubId": "caac689662f34f5cb98ab1d07b262e2e"
+			}
+		]
+	],
+	"properties": {},
+	"type": "bs-modal-page",
+	"htmlLabel": "Submit Success",
+	"id": "submitsuccess",
+	"exclude": false,
+	"category": "Custom Components",
+	"blockInfo": {
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16604",
+		"publishLibraryId": 16680,
+		"blockCode": "submit-success-modal"
+	}
+}

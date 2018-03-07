@@ -8,7 +8,7 @@ define(["app"], function (app) {
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
             var firstAccordionId = $element.parent().parent().find('.panel-group')[0].id;
-            var transDuration = 0.3, transDelay = 0.3;
+            var transDuration = 0.3;
 
             function validateAccordion(errors) {
                 $scope.validationErrors = errors;
@@ -33,14 +33,18 @@ define(["app"], function (app) {
                     accordionTransition = "all " + transDuration + "s" + " ease-in-out";
                     td = transDuration * 1000;
                 } else {
-                    accordionTransition = "all " + transDuration + "s" + " ease-in-out " ;
-                    td = (transDuration + transDelay) * 1000;
+                    accordionTransition = "all " + transDuration + "s" + " ease-in-out " + transDuration + "s";
+                    td = 2 * transDuration * 1000;
                 }
+                $element.parent().css({
+                    'margin-bottom': '-5px'
+                });
                 $thisAccordion.css({
                     "max-height": "0px",
                     "opacity": 0,
                     "overflow": "hidden"
                 });
+
                 $timeout(function () {
                     $thisAccordion.css({
                         "max-height": bodyHeight,
@@ -53,6 +57,9 @@ define(["app"], function (app) {
                             "opacity": "",
                             "overflow": "",
                             "transition": ""
+                        });
+                        $element.parent().css({
+                            'margin-bottom': ''
                         });
                     }, td, false)
                         .then(function () {
@@ -72,9 +79,12 @@ define(["app"], function (app) {
                     accordionTransition = "all " + transDuration + "s" + " ease-in-out";
                     td = transDuration * 1000;
                 } else {
-                    accordionTransition = "all " + transDuration + "s" + " ease-in-out " ;
-                    td = (transDuration + transDelay) * 1000;
+                    accordionTransition = "all " + transDuration + "s" + " ease-in-out " + transDuration + "s";
+                    td = 2 * transDuration * 1000;
                 }
+                $element.parent().css({
+                    'margin-bottom': '-5px'
+                });
                 $thisAccordion.css({
                     "max-height": bodyHeight,
                     "opacity": 1,
@@ -92,6 +102,9 @@ define(["app"], function (app) {
                             "opacity": "",
                             "overflow": "",
                             "transition": ""
+                        });
+                        $element.parent().css({
+                            'margin-bottom': ''
                         });
                     }, td, false).then(function () {
                         $thisAccordion.addClass("av-hidden");

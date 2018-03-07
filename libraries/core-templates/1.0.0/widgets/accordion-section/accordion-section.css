@@ -1,6 +1,6 @@
 form[name='form'] .wdg-accordion-section-container {
   padding: 0;
-  margin-bottom: 5px;
+  margin-bottom: 0;
   margin-top: 0;
 }
 form[name='form'] .wdg-accordion-section-container .wdg-accordion-collapse-text {
