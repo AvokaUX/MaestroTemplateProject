@@ -1,0 +1,138 @@
+{
+	"label": "BS general dialog",
+	"rows": [
+		[
+			{
+				"label": "Dialog header",
+				"rows": [
+					[
+						{
+							"label": "Close",
+							"styles": [
+								"av-form-field",
+								"bs-general-dialog-close-85088"
+							],
+							"type": "icon-button",
+							"path": "",
+							"exclude": false,
+							"hideLabel": true,
+							"pubId": "1056a8426290467db5649e4a3e08ea47",
+							"htmlLabel": "Close",
+							"rules": {
+								"click": "Form.showDialog();"
+							},
+							"id": "close"
+						}
+					]
+				],
+				"type": "block",
+				"path": "",
+				"exclude": false,
+				"htmlLabel": "Dialog header",
+				"pubId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+				"id": "dialogHeader"
+			}
+		],
+		[
+			{
+				"rows": [
+					[]
+				],
+				"type": "dialog-content",
+				"pubId": "c67d616b1ece48abaeab4eec3f70710c",
+				"id": "dialogContent"
+			}
+		],
+		[
+			{
+				"label": "Dialog Footer",
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"rules": {
+											"click": "Form.showDialog(\"\");",
+											"sh": "item.$$parent.properties.dialogNavButtons != 'okay' && !Form.saveChallengeOnInit"
+										},
+										"pubId": "284bef0efc7e469ebe7e6ce3c801adff",
+										"subId": "fad2a15bdc304560a68f9afe23cbafe3",
+										"id": "cancel",
+										"type": "button"
+									},
+									{
+										"rules": {
+											"sh": "item.$$parent.properties.dialogNavButtons == 'open'",
+											"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});"
+										},
+										"pubId": "a76ba45636c445f58641f1f65256cf74",
+										"subId": "fef8893fe6d94ccfb597bbc16a095522",
+										"id": "confirm",
+										"type": "button-resume-form"
+									},
+									{
+										"rules": {
+											"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+											"sh": "item.$$parent.properties.dialogNavButtons == 'save' || item.$$parent.properties.dialogNavButtons == 'abandon'"
+										},
+										"pubId": "b302d9b1e90240828356190cda328fb0",
+										"subId": "d13d9442de724ebb9db6dc29ef3a6b78",
+										"id": "confirm_1",
+										"type": "button"
+									},
+									{
+										"rules": {
+											"click": "Form.showDialog(\"\");",
+											"sh": "item.$$parent.properties.dialogNavButtons == 'okay' || item.$$parent.properties.dialogNavButtons == 'okay-cancel'"
+										},
+										"pubId": "6471b7e4d063409483e51ff9138ed85e",
+										"subId": "fe2f5e305ba14cc989ec6e19e3d0b551",
+										"id": "okay",
+										"type": "button"
+									},
+									{
+										"rules": {
+											"click": "Form.showDialog(\"\");",
+											"sh": "item.$$parent.properties.dialogNavButtons != 'okay' && !Form.saveChallengeOnInit"
+										},
+										"pubId": "263ce51171ce44ce9a4d4c9837d50384",
+										"subId": "19bced4d359e481b832a8f5c939e0298",
+										"id": "cancel_1",
+										"type": "button"
+									}
+								]
+							],
+							"type": "dialog-navigation-bar",
+							"pubId": "5e49ce4ad21c4dbb96b865b096c67eea",
+							"id": "dialogNavigationBar"
+						}
+					]
+				],
+				"type": "block",
+				"pubId": "50ead585f74e4a198aa3f799c7663b9c",
+				"id": "dialogFooter"
+			}
+		]
+	],
+	"isDialog": true,
+	"type": "block",
+	"blockInfo": {
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/13916",
+		"publishLibraryId": 10988,
+		"designVersion": "1",
+		"blockCode": "bs-general-dialog"
+	},
+	"description": "",
+	"id": "bsGeneralDialog",
+	"category": "Containers",
+	"ruleTemplates": [
+		{
+			"type": "load",
+			"name": "Load",
+			"editor": "script",
+			"isAction": true,
+			"msg": "a script to run when the dialog loads"
+		}
+	]
+}
