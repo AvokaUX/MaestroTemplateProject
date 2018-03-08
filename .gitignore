@@ -36,10 +36,4 @@
 ehthumbs.db
 Thumbs.db
 
-# maestro scm file #
-/.scm
-/.idea
-/forms
-.project
-
 
