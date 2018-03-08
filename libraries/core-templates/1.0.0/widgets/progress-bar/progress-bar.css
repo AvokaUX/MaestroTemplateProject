@@ -72,10 +72,10 @@ form[name='form'] .progress-container .wdg-page-group-icon-container {
 }
 
 form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-page-icon:before {
-  content: none;
+  /*content: none;*/
 }
 form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-group-icon:before {
-  left: 7px;
+  /*left: 7px;*/
 }
 form[name='form'] .progress-container .wdg-page-segment-container {
   position: relative;
