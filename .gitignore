@@ -36,4 +36,8 @@
 ehthumbs.db
 Thumbs.db
 
+# others #
+.idea
+.scm
+.project
 
