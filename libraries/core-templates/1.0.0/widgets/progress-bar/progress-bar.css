@@ -40,7 +40,6 @@ form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper 
   max-width: 250px;
 }
 form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help .arrow {
-  display: block;
   border-top: none;
   border-bottom: 10px solid white;
   top: -12px;
@@ -121,21 +120,8 @@ form[name='form'] .progress-container .wdg-page-segment-container.show-group-ico
   border-radius: 50%;
   transform: translate(-50%,-50%);
 }
-form[name='form'] .progress-container .wdg-page-group-icon-container .wdg-progress-group-icon {
-  position: relative;
-  z-index: 1;
-  left: -7px;
-  top: -16px;
-  transition: all 0.7s ease-in-out;
-}
-form[name='form'] .progress-container .wdg-page-group-icon-container .wdg-progress-page-icon {
-  position: relative;
-  z-index: 1;
-  float: right;
-  top: 2px;
-  left: 1px;
-  transition: all 0.7s ease-in-out;
-}
+
+
 form[name='form'] .progress-container .wdg-progress-visited-icon {
   position: relative;
   height: 100%;

@@ -1,7 +1,0 @@
-{
-  "label": "AV tertiary button",
-  "file": "style.less",
-  "widgets": [
-    "av-button"
-  ]
-}

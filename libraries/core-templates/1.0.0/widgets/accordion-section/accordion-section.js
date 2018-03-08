@@ -3,7 +3,6 @@ define(["app"], function (app) {
         Form.getItem($scope, $element).then(function (item) {
             $scope.accordionIsValid = true;
             $scope.accordionOpen = false;
-            var children = Util.children(item);
             var $thisAccordion = $element.find(".panel-collapse");
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
@@ -106,10 +105,9 @@ define(["app"], function (app) {
                         $element.parent().css({
                             'margin-bottom': ''
                         });
-                    }, td, false).then(function () {
                         $thisAccordion.addClass("av-hidden");
                         $scope.$apply();
-                    });
+                    }, td, false);
                 }, 25, false);
             }
 
@@ -119,12 +117,10 @@ define(["app"], function (app) {
                 } else {
                     $scope.accordionOpen = true;
                 }
-                children.forEach(function (child) {
-                    $("#" + child.id).parent().find("input, textarea, select").focus(function () {
-                        if ((!$scope.accordionOpen)) {
-                            $scope.toggleCollapse();
-                        }
-                    })
+                $element.find("input, textarea, select").focus(function () {
+                    if ((!$scope.accordionOpen)) {
+                        $scope.toggleCollapse();
+                    }
                 });
                 setAccordionHeadIcon(!item.properties.defaultCollapse);
                 $scope.$watch("accordionOpen", function (val) {

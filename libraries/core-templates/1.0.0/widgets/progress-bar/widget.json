@@ -1,8 +1,8 @@
 {
 	"category": "Navigation",
 	"label": "Progress Bar",
-	"icon": "progressBar.png",
-	"html": "progressBar.html",
+	"icon": "progress-bar.png",
+	"html": "progress-bar.html",
 	"css": "progress-bar.css",
 	"js":	"progress-bar.js",
 	"propDefs": {		

@@ -10,6 +10,16 @@ form[name='form'] {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+      .progress-page-title-container {
+        display: table;
+        width: 100%;
+        .wdg-progress-page-title{
+          display: table-cell;
+          text-align: center;
+          color: beige;
+          max-width: 0;
+        }
+      }
       .progress-wrapper {
         display: table;
         width: 100%;
@@ -18,7 +28,19 @@ form[name='form'] {
           position: relative;
           height: 8px;
           .av-popover-help {
-                top: 30px;
+            top: 35px;
+            left: 50%;
+            margin-left: 0;
+            transform: translateX(-125px);
+            .popover-tooltip {
+              max-width: 250px;
+            }
+            .arrow {
+              border-top: none;
+              border-bottom: 10px solid white;
+              top: -12px;
+            }
+
           }
           .wdg-progress-bar {
             position: absolute;
@@ -70,7 +92,7 @@ form[name='form'] {
       vertical-align: middle;
       .wdg-progress-page-bar {
         width: 100%;
-        height: 8px;
+        height: @progress-height;
       }
       .wdg-progress-pagegroup-bar {
         content: "";
@@ -106,28 +128,11 @@ form[name='form'] {
 
       }
     }
-    .wdg-page-group-icon-container {
-      .wdg-progress-group-icon {	
-        position: relative;
-        z-index: 1;
-        left: -7px;	
-        top: -16px;        
-        transition: all 0.7s ease-in-out; 		
-      }
-      .wdg-progress-page-icon {	
-        position: relative;
-        z-index: 1;
-        float: right;
-        top: 2px;
-        left: 1px;        
-        transition: all 0.7s ease-in-out;	
-      }
-    }
+
     .wdg-progress-visited-icon {
       position: relative;
       height: 100%;
     }
-
 
     .progress-subtext-wrapper {
       display: block;
