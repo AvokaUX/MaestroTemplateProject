@@ -38,6 +38,6 @@ Thumbs.db
 
 # others #
 .idea
-.scm
+.scm/project-manifest.json
 .project
 

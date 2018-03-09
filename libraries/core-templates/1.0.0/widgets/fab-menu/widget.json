@@ -157,7 +157,7 @@
 		"blockCode": "floating-functional-component"
 	},
 	"description": "",
-
+	"styles": ["av-fab-menu"],
 	"id": "functionalMenuFabMenu",
 	"propDefs": {
 		"functionalButtonResume": {

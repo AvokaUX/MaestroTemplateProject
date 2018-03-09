@@ -346,6 +346,9 @@
 													[
 														{
 															"id": "confirm_3",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
 															"type": "button"
 														}
@@ -519,6 +522,9 @@
 													[
 														{
 															"id": "okay_1",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"type": "button"
 														}
@@ -635,6 +641,9 @@
 													[
 														{
 															"id": "open_6",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"type": "button"
 														}
@@ -731,6 +740,9 @@
 													[
 														{
 															"id": "okay_18",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
 														}
@@ -812,6 +824,9 @@
 													[
 														{
 															"id": "okay_8",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"type": "button"
 														}
@@ -896,6 +911,7 @@
 		},
 		"xml": {}
 	},
+	"exclude": false,
 	"extractMap": {},
 	"formOptions": {
 		"AvokaSmartForm": [
@@ -2486,8 +2502,8 @@
 																"properties": {
 																	"src": {
 																		"fileName": "moolah_logo.png",
-																		"width": "250",
-																		"height": "auto"
+																		"height": "auto",
+																		"width": "250"
 																	}
 																},
 																"span": {
@@ -2514,6 +2530,28 @@
 												},
 												{
 													"exclude": false,
+													"htmlLabel": "Fixed progress bar",
+													"id": "block_6",
+													"label": "Fixed progress bar",
+													"path": "",
+													"rows": [
+														[
+															{
+																"exclude": false,
+																"id": "progressBar",
+																"path": "ProgressBar",
+																"type": "progress-bar"
+															}
+														]
+													],
+													"styles": [
+														"bc-white-background-20804",
+														"bs-tramline-container-62540"
+													],
+													"type": "block"
+												},
+												{
+													"exclude": true,
 													"id": "dockingProgressBar",
 													"path": "DockingProgressBar",
 													"properties": {
@@ -2544,7 +2582,7 @@
 								],
 								[
 									{
-										"exclude": false,
+										"exclude": true,
 										"id": "dockingErrorBlock",
 										"path": "",
 										"rows": [
@@ -2609,7 +2647,7 @@
 													"htmlLabel": "Eligibility 1-1",
 													"id": "page",
 													"isFirstInGroup": true,
-													"isLastInGroup": true,
+													"isLastInGroup": false,
 													"label": "Eligibility 1-1",
 													"path": "",
 													"rows": [
@@ -2639,7 +2677,7 @@
 													"exclude": false,
 													"htmlLabel": "Personal Info 2-1",
 													"id": "page_2",
-													"isFirstInGroup": true,
+													"isFirstInGroup": false,
 													"isLastInGroup": true,
 													"label": "Personal Info 2-1",
 													"path": "",
@@ -2880,6 +2918,38 @@
 		],
 		[
 			{
+				"id": "formFooter",
+				"path": "",
+				"rows": [
+					[
+						{
+							"exclude": false,
+							"htmlLabel": "",
+							"id": "footerSection",
+							"label": "",
+							"path": "",
+							"rows": [
+								[
+									{
+										"id": "formFooterText_7",
+										"path": "",
+										"type": "text-display"
+									}
+								]
+							],
+							"styles": [
+								"mg-section-2",
+								"bs-max-width-73189"
+							],
+							"type": "section-2"
+						}
+					]
+				],
+				"type": "form-footer"
+			}
+		],
+		[
+			{
 				"exclude": false,
 				"id": "functionalMenuFabMenu",
 				"properties": {
@@ -2890,6 +2960,9 @@
 						{
 							"exclude": false,
 							"id": "functionalMenu",
+							"properties": {
+								"offIcon": "fa fa-ellipsis-v"
+							},
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"type": "button-toggle-icon"
 						}
