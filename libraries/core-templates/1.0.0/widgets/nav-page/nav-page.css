@@ -1,3 +1,7 @@
+form[name='form'] [data-view-stack] > *, form[name='form'] [view-stack] > * {
+  position: absolute;
+  width: 100%;
+}
 form[name='form'] .av-landing-page .wdg-section-1-body {
   height: 100vh;
 }

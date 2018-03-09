@@ -945,6 +945,7 @@
 		]
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -2492,7 +2493,13 @@
 														[
 															{
 																"id": "logo",
-																"properties": {},
+																"properties": {
+																	"src": {
+																		"fileName": "avoka-logo.png",
+																		"height": "42",
+																		"width": "52"
+																	}
+																},
 																"type": "image"
 															}
 														]
@@ -2585,21 +2592,12 @@
 													"exclude": false,
 													"id": "section",
 													"rows": [
-														[
-															{
-																"exclude": false,
-																"id": "openDialog",
-																"path": "",
-																"properties": {
-																	"dialogRef": "data.dialogInterpage"
-																},
-																"type": "button-dialog-open"
-															}
-														]
+														[]
 													],
 													"styles": [
 														"mg-section-2",
-														"av-section"
+														"av-section",
+														"fullpage-section-36560"
 													],
 													"type": "section-fullpage"
 												}
@@ -2669,7 +2667,12 @@
 					],
 					[
 						{
+							"exclude": false,
 							"id": "submit2",
+							"span": {
+								"lg": 2,
+								"md": 2
+							},
 							"type": "submit"
 						}
 					]
@@ -3058,20 +3061,7 @@
 		"dc": "var pageTransition = \"\";\nif (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage ) {\n  pageTransition = \"page-transition-none\";\n} else {\n  pageTransition = 'page-transition-' + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n}\nreturn [data.pageChangeAnimation, pageTransition];"
 	},
 	"selectedBrand": "Default",
-	"styleMods": {
-		"id-submit2": {
-			"blocks": {
-				"wdg-button": {
-					"blocks": {},
-					"decs": {
-						"max-width": "200px",
-						"min-width": "200px"
-					}
-				}
-			},
-			"decs": {}
-		}
-	},
+	"styleMods": {},
 	"styles": [
 		"mg-base",
 		"mg-form",

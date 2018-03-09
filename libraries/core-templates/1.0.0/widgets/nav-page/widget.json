@@ -5,6 +5,9 @@
 	"html": "nav-page.html",
 	"css": "nav-page.css",
 	"rows": [[]],
+	"rules": {
+		"pagescroll": "return false;"
+	},
 	"propDefs": {
 		"offMenu": {
 			"label": "Hide Navigator",

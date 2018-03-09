@@ -1,8 +1,7 @@
 form[name='form'] .btn-docking {	
     position:fixed;
     transform: translate(-50%, -50%);
-    //transition: left 0.5s ease, right 0.5s ease;
-    transition: left 30s ease, right 30s ease;
+    transition: left 0.5s ease, right 0.5s ease;
 }
 form[name='form'] .btn-docking .wdg-button {
 	width: 100%;
