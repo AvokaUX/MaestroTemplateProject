@@ -1,0 +1,7 @@
+{
+  "label": "AV fab menu",
+  "file": "style.less",
+  "widgets": [
+    "fab-menu"
+  ]
+}

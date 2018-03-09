@@ -118,9 +118,9 @@ define(["app"], function (app) {
                     $scope.accordionOpen = true;
                 }
                 $element.find("input, textarea, select").focus(function () {
-                    if ((!$scope.accordionOpen)) {
-                        $scope.toggleCollapse();
-                    }
+                        if ((!$scope.accordionOpen)) {
+                            $scope.toggleCollapse();
+                        }
                 });
                 setAccordionHeadIcon(!item.properties.defaultCollapse);
                 $scope.$watch("accordionOpen", function (val) {

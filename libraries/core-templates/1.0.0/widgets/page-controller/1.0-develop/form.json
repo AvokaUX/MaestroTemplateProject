@@ -1,0 +1,376 @@
+{
+	"breakpoints": [
+		"400",
+		"560",
+		"780"
+	],
+	"childExtensions": [
+		"AvokaSmartForm"
+	],
+	"clearHidden": "no",
+	"dialogs": {},
+	"entities": {},
+	"exclude": false,
+	"extractMap": {},
+	"id": "AvokaSmartForm",
+	"localDialogs": [],
+	"localModals": [],
+	"maestroReleaseVersion": "17.10.0",
+	"modals": {},
+	"paletteExclusions": {
+		"widgets": [
+			"page-controller"
+		]
+	},
+	"parentExtensions": [
+		"AvokaSmartForm"
+	],
+	"path": "AvokaSmartForm",
+	"properties": {},
+	"rows": [
+		[
+			{
+				"blockInfo": {
+					"blockCode": "page-controller",
+					"designVersion": "1.0-develop",
+					"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16309",
+					"publishLibraryId": 16569
+				},
+				"blockPropDefs": {
+					"focusMode": {
+						"category": "Accessibility",
+						"helpText": "Smart focus sets focus to navigator if present. If not, find first heading.",
+						"label": "Focus After Page Change Mode",
+						"options": [
+							{
+								"label": "Smart Focus",
+								"value": "smart"
+							},
+							{
+								"label": "Do Nothing",
+								"value": "none"
+							}
+						],
+						"type": "option",
+						"value": "smart"
+					},
+					"pageTransition": {
+						"category": "",
+						"helpText": "The transition for page change",
+						"label": "Page Transition",
+						"options": [
+							{
+								"label": "Fade",
+								"value": "Fade"
+							},
+							{
+								"label": "Slide",
+								"value": "Slide"
+							}
+						],
+						"type": "option",
+						"value": "Fade"
+					},
+					"restartAtLastSavedPage": {
+						"helpText": "If checked, the form will return to the page it was on after save and resume.",
+						"label": "Restart At Last Saved Page",
+						"type": "boolean",
+						"value": false
+					},
+					"saveOnPageChange": {
+						"helpText": "Form will save on page change",
+						"label": "Background Save On Page Change",
+						"type": "boolean",
+						"value": false
+					},
+					"transitionDelay": {
+						"helpText": "Provide how long the duration of the page transition will be",
+						"label": "Page Transition Delay",
+						"type": "integer",
+						"value": 500
+					},
+					"validationMode": {
+						"helpText": "Select the page validation mode",
+						"label": "Validation Mode",
+						"options": [
+							{
+								"label": "Unconstrained, validate on submit",
+								"value": "unconstrained"
+							},
+							{
+								"label": "Sequential, validate on page change",
+								"value": "sequential"
+							}
+						],
+						"type": "option",
+						"value": "sequential"
+					}
+				},
+				"category": "Navigation",
+				"componentRuleTemplateDefs": [
+					{
+						"editor": "script",
+						"isAction": true,
+						"msg": "a script to run when the user navigates between pages. Use the info parameter to access the id of the page navigated to and from.",
+						"name": "Page change",
+						"type": "pagechange"
+					}
+				],
+				"description": "",
+				"icon": "page-controller.png",
+				"id": "pageController",
+				"label": "Page Controller",
+				"rows": [
+					[]
+				],
+				"styles": [],
+				"type": "block"
+			}
+		]
+	],
+	"selectedBrand": "Default",
+	"styleMods": {},
+	"systemValues": {},
+	"templateName": "Core - Empty Form",
+	"transact": {},
+	"translation": {
+		"defaultLanguageCode": "en",
+		"languages": [
+			{
+				"code": "en",
+				"label": "English"
+			}
+		]
+	},
+	"type": "form",
+	"widgetOverrides": {
+		"address-lookup-google": {
+			"availableStyles": [
+				"google-address-lookup"
+			]
+		},
+		"block": {
+			"availableStyles": [
+				"pull-right"
+			]
+		},
+		"button": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"button-group": {
+			"availableStyles": [
+				"av-form-field",
+				"av-button-group"
+			]
+		},
+		"checkbox": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"currency": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"data-checkbox-group": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"data-dropdown": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"data-radio-group": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon"
+			]
+		},
+		"data-typeahead": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"date-picker": {
+			"availableStyles": [
+				"av-form-field",
+				"date-picker-base"
+			]
+		},
+		"decimal": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"dialog-content": {
+			"availableStyles": [
+				"dialog-content"
+			]
+		},
+		"dropdown": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"dropdown-dob-block": {
+			"availableStyles": [
+				"date-of-birth-dropdown"
+			]
+		},
+		"dropdown-multi-select": {
+			"availableStyles": [
+				"av-form-field",
+				"dropdown-multi-select"
+			]
+		},
+		"dropdown-years": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"form": {
+			"availableStyles": [
+				"av-focus-styling"
+			]
+		},
+		"iframe": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"linkedin-prefill": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"mitek-license-prefill": {
+			"availableStyles": [
+				"mitek-license-prefill"
+			]
+		},
+		"nav-content": {
+			"availableStyles": [
+				"av-page-transition"
+			]
+		},
+		"nav-errors": {
+			"availableStyles": [
+				"error-block"
+			]
+		},
+		"navigator": {
+			"availableStyles": [
+				"nav-base"
+			]
+		},
+		"navigator-tramline": {
+			"availableStyles": [
+				"tramline"
+			]
+		},
+		"page-controller": {
+			"availableStyles": [
+				"av-page-transition"
+			]
+		},
+		"payment-type-selector": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"percentage-indicator": {
+			"availableStyles": [
+				"percentage-indicator"
+			]
+		},
+		"radio-button-graphical": {
+			"availableStyles": [
+				"radio-graphical",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon"
+			]
+		},
+		"radio-button-group": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon"
+			]
+		},
+		"radio-button-group-graphical": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-graphical-group"
+			]
+		},
+		"radio-button-repeating": {
+			"availableStyles": [
+				"av-form-field",
+				"radio-basic",
+				"radio-border",
+				"radio-icon-top",
+				"av-button-group",
+				"av-button-group-icon"
+			]
+		},
+		"repeat-add-button": {
+			"availableStyles": [
+				"av-form-field",
+				"repeat-button"
+			]
+		},
+		"repeat-delete-button": {
+			"availableStyles": [
+				"av-form-field",
+				"repeat-button"
+			]
+		},
+		"route-select": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"signature": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"slider": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"text-area": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		},
+		"text-display": {
+			"availableStyles": [
+				"av-form-field",
+				"no-bullet-indent",
+				"scrollable-text-box"
+			]
+		},
+		"text-input": {
+			"availableStyles": [
+				"av-form-field"
+			]
+		}
+	}
+}
