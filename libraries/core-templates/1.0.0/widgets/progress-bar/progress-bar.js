@@ -141,14 +141,14 @@ define(["app"], function (app) {
                     var toggleTooltip = function (e) {
                         scope.tooltipClickedOn = !scope.tooltipClickedOn;
                         if (scope.tooltipClickedOn) {
-                            scope.$emit('new tooltip pinning', scope.tooltipContent);
+                            scope.$emit('new tooltip pinning', $el);
                             addTooltip(e);
                         } else {
                             removeTooltip(e);
                         }
                     };
                     scope.$on('some pinning', function (evt,data) {
-                        if(data !== scope.tooltipContent) {
+                        if(data !== $el) {
                             scope.tooltipClickedOn = false;
                             cleanTooltip();
                         }
