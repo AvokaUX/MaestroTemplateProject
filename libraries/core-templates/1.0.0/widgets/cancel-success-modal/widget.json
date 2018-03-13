@@ -201,6 +201,12 @@
 				"properties": {
 					"infoText": "Your application has been cancelled and will not be processed."
 				},
+				"styles": [
+					"bc-white-background-20804",
+					"bs-center-align-19822",
+					"bs-max-width-73189",
+					"bs-modal-content-96022"
+				],
 				"exclude": false,
 				"htmlLabel": "<h1>Application Cancelled</h1>",
 				"type": "section-2",

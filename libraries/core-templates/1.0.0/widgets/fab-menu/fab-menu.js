@@ -48,7 +48,7 @@ define(["app"], function (app) {
                             if (notOneButton) {
                                 Form.fireRule("click", children[0].id, data);
                             }
-                            Form.showDialog("saveconfirm");
+                            Form.showDialog("cancelconfirm");
                         });
                     }
 

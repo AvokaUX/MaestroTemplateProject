@@ -950,185 +950,160 @@
 	"maestroReleaseVersion": "17.10.2",
 	"modals": {
 		"cancelsuccess": {
-			"htmlLabel": "Cancel Success",
 			"id": "cancelsuccess",
 			"label": "Cancel Success",
 			"properties": {},
 			"rows": [
 				[
 					{
-						"id": "modalBackground_3",
+						"id": "modalBackground_5",
 						"rows": [
 							[]
 						],
-						"subId": "2f5c018e42eb4132b71ba6445983da7a",
+						"subId": "7bfe4e20293f46708f87d76d9d0892f7",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
-						"id": "modalHeader_6",
+						"id": "modalHeader_10",
 						"rows": [
 							[
 								{
-									"id": "stickyPanelModal_3",
+									"id": "stickyPanelModal_5",
+									"path": "StickyPanelModal_5",
 									"rows": [
 										[
 											{
-												"id": "modalHeader_7",
+												"id": "modalHeader_11",
 												"rows": [
 													[
 														{
-															"id": "modalLogo_3",
+															"id": "modalLogo_5",
 															"rows": [
 																[
 																	{
-																		"id": "modalLogoImage_3",
+																		"id": "modalLogoImage_5",
 																		"properties": {},
-																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
+																		"subId": "c83ba1c55bca402cb89c4df6af553f62",
 																		"type": "image"
 																	}
 																]
 															],
-															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
+															"subId": "5a887ec3dbbe4dc9a0691604b17a37e7",
 															"type": "block"
 														}
 													]
 												],
-												"subId": "10cd185db8f44312a2d007cce8c61074",
+												"subId": "a066a1581bd6452b80c13445d4ee5173",
 												"type": "form-header"
 											}
 										]
 									],
-									"subId": "f85f23c17b944a399f2368733020e9ad",
+									"subId": "711f4c57f7494f388157b5392cbb9558",
 									"type": "sticky-panel"
 								}
 							]
 						],
-						"subId": "8f9a2f46878a40938967fa6fbdcea360",
+						"subId": "565faeda575b465eb9a6fb1e30bf7f0d",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"exclude": true,
-						"id": "modalContent_3",
+						"id": "modalContent_5",
 						"rows": [
 							[
 								{
-									"id": "startANewForm_4",
-									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"id": "startANewForm_6",
+									"subId": "fe10638ddaeb40509df4b7cc19a64722",
 									"type": "button"
 								}
 							]
 						],
-						"subId": "d4a0cd71666b429898edfba3b748599d",
+						"subId": "d65bc74d9f4043f9833adb73ecf163dd",
 						"type": "section-2"
 					}
 				],
 				[
 					{
-						"id": "modalFooter_3",
+						"id": "modalFooter_5",
 						"rows": [
 							[
 								{
-									"id": "formFooterText_5",
+									"exclude": false,
+									"htmlLabel": "",
+									"id": "formFooterText_7",
+									"label": "",
 									"rows": [
 										[
 											{
-												"id": "textDisplay_10",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
+												"id": "textDisplay_12",
+												"path": "",
+												"subId": "a3bbf8226e634e89bd683a2f32481642",
 												"type": "text-display"
 											}
 										]
 									],
-									"subId": "082a0f34bab7496ab942025374652910",
+									"styles": [],
+									"subId": "259c9c77a01e4eb9a414bf02a9aebfe8",
 									"type": "section-2"
 								}
 							]
 						],
-						"subId": "b4eb8296a924482c880d6c3abca4bb61",
+						"subId": "80cea6ec78c549eab568a8a54dea2372",
 						"type": "form-footer"
 					}
 				],
 				[
 					{
-						"exclude": false,
-						"htmlLabel": "<h1>Application Cancelled</h1>",
-						"id": "modalContent_1",
-						"label": "Application Cancelled",
-						"properties": {
-							"infoText": "Your application has been cancelled and will not be processed."
-						},
+						"id": "modalContent_7",
+						"path": "",
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"id": "extraInformation_1",
+									"id": "extraInformation_2",
+									"path": "",
 									"rows": [
 										[]
 									],
+									"subId": "b1b4559f71dd4141a374743eb57b28f3",
 									"type": "block"
 								}
 							],
 							[
 								{
-									"exclude": false,
-									"id": "followOnOptions_1",
-									"offset": {
-										"lg": "4",
-										"md": "4"
-									},
+									"id": "followOnOptions_2",
 									"rows": [
 										[
 											{
-												"exclude": false,
-												"id": "startANewForm_2",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
+												"id": "startANewForm_7",
+												"subId": "3318fcfd2f244dd5b45e96c85cc2a45a",
 												"type": "button"
 											},
 											{
-												"exclude": false,
-												"id": "returnToPortal_1",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
+												"id": "returnToPortal_2",
+												"subId": "77fa59715a74441b930f9c8d3c33789f",
 												"type": "button"
 											},
 											{
-												"exclude": false,
-												"id": "showFormXml_1",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
+												"id": "showFormXml_2",
+												"subId": "c25c21e127554887858115ea909ae325",
 												"type": "button"
 											}
 										]
 									],
-									"span": {
-										"lg": 4,
-										"md": 4
-									},
+									"subId": "dadacda2d59d41d19960d7fe4537d3dd",
 									"type": "follow-on-options"
 								}
 							]
 						],
+						"subId": "c2d1af6c016b436cba10655d1e408d9d",
 						"type": "section-2"
 					}
 				]
 			],
-			"type": "bs-modal-page"
+			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
 			"htmlLabel": "Save Success",
@@ -1209,11 +1184,15 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "modalFooter_4",
 						"rows": [
 							[
 								{
+									"exclude": false,
+									"htmlLabel": "",
 									"id": "formFooterText_6",
+									"label": "",
 									"rows": [
 										[
 											{
@@ -1223,6 +1202,7 @@
 											}
 										]
 									],
+									"styles": [],
 									"subId": "082a0f34bab7496ab942025374652910",
 									"type": "section-2"
 								}
@@ -1751,11 +1731,15 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "modalFooter_2",
 						"rows": [
 							[
 								{
+									"exclude": false,
+									"htmlLabel": "",
 									"id": "formFooterText_4",
+									"label": "",
 									"rows": [
 										[
 											{
@@ -1765,6 +1749,7 @@
 											}
 										]
 									],
+									"styles": [],
 									"subId": "082a0f34bab7496ab942025374652910",
 									"type": "section-2"
 								}

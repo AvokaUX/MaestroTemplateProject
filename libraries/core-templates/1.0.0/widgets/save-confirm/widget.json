@@ -120,6 +120,19 @@
 										"path": "",
 										"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
 										"id": "dialogFooterBlock_12",
+										"propDefs": {
+											"dialogNavButtons": {
+												"label": "Dialog Nav Buttons",
+												"type": "option",
+												"value": "save",
+												"options": [
+													{
+														"label": "Save Form",
+														"value": "save"
+													}
+												]
+											}
+										},
 										"type": "block",
 										"pubId": "e62f57c6400f47a6b1f5fdcbcae4b38e"
 									}
