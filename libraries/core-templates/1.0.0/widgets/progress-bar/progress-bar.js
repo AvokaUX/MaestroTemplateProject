@@ -149,8 +149,8 @@ define(["app"], function (app) {
                     };
                     scope.$on('some pinning', function (evt,data) {
                         if(data !== $el) {
-                            scope.tooltipClickedOn = false;
-                            cleanTooltip();
+                                scope.tooltipClickedOn = false;
+                                cleanTooltip();
                         }
                     });
 

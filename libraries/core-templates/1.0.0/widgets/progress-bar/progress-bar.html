@@ -1,5 +1,5 @@
 <div class="progress-container" data-ng-controller="ProgressBarController" data-ng-if="Form.$Pages.currentPage.$navVisible && !Form.$Pages.currentPage.properties.offMenu && Form.$Pages.visiblePageCount > 1 && !avReceipt">
-	<div role="presentation" class="wdg-progress-bar-heading-docked animate-height-if" data-ng-if="data.docked">
+	<div role="presentation" class="wdg-progress-bar-heading-docked animate-height-if" data-ng-if="data.docked && item.properties.willDock">
 		{{Form.getCurrentPageNumber()}}&nbsp/&nbsp{{Form.getNavPageCount()}}&nbsp&nbsp
 	</div>
 	<div class="progress-wrapper-outer">

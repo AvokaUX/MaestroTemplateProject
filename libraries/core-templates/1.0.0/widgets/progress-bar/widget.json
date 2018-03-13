@@ -23,6 +23,12 @@
 			"type": "boolean",
 			"value": true,
 			"category" : "Display Options"
+		},
+		"willDock": {
+			"label": "Show dock type page name",
+			"type": "boolean",
+			"value": true,
+			"category" : "Display Options"
 		}
 	},
 	"styles": ["av-progress-bar"],

@@ -6,9 +6,10 @@
 				"rows": [
 					[]
 				],
-				"id": "modalBackground_6",
+				"subId": "2f5c018e42eb4132b71ba6445983da7a",
+				"id": "modalBackground_2",
 				"type": "modal-background",
-				"pubId": "e7de8a6603ce4cfc9f5b14c0ba6449ce"
+				"pubId": "483bb8006ce24c2a8d74081f9262b51e"
 			}
 		],
 		[
@@ -26,33 +27,93 @@
 														[
 															{
 																"properties": {},
-																"id": "modalLogoImage_6",
+																"subId": "759cc4ed2a9240aca14456c79f50aa2c",
+																"id": "modalLogoImage_2",
 																"type": "image",
-																"pubId": "67907d16d3304881b30a7b0c39c40f2d"
+																"pubId": "724e247db5114b44a22dcb3205507094"
 															}
 														]
 													],
-													"id": "modalLogo_6",
+													"subId": "81604a78df3b4507ba1efa2e349ef3f6",
+													"id": "modalLogo_2",
 													"type": "block",
-													"pubId": "fe1c084b72ab40eab4890d3a09b1ef91"
+													"pubId": "2a4efaeb993b4cf995061dd482be9ff0"
 												}
 											]
 										],
-										"id": "modalHeader_13",
+										"subId": "10cd185db8f44312a2d007cce8c61074",
+										"id": "modalHeader_5",
 										"type": "form-header",
-										"pubId": "177efcee44ff4358bb7ce74c8f992e54"
+										"pubId": "971f60be58524ea69c290e566d5a7c46"
 									}
 								]
 							],
-							"id": "stickyPanelModal_6",
+							"subId": "f85f23c17b944a399f2368733020e9ad",
+							"id": "stickyPanelModal_2",
 							"type": "sticky-panel",
-							"pubId": "c39f41f0fc174e3aa88571337bce1886"
+							"pubId": "0e2a597d36274cb596e89df320cd441d"
 						}
 					]
 				],
-				"id": "modalHeader_12",
+				"subId": "8f9a2f46878a40938967fa6fbdcea360",
+				"id": "modalHeader_4",
 				"type": "block",
-				"pubId": "09d9c7ec3e404a83bbd8514be7f93ff2"
+				"pubId": "d596a96afddb425891376459360ea96d"
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"exclude": true,
+							"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+							"id": "startANewForm_3",
+							"type": "button",
+							"pubId": "58ccd21cf39b4d529d1125ff601a2d69"
+						}
+					]
+				],
+				"properties": {
+					"infoText": "Your Application has been received"
+				},
+				"exclude": true,
+				"hideLabel": true,
+				"subId": "d4a0cd71666b429898edfba3b748599d",
+				"id": "modalContent_2",
+				"type": "section-2",
+				"pubId": "2c5d13e15f004cf7a5c7af15cb1ab410"
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"subId": "8c9b02742d3841d8a9c30d826878b6af",
+										"id": "textDisplay_9",
+										"type": "text-display",
+										"pubId": "09c5ab9b973c45fdbe01fa7f67d0bba8"
+									}
+								]
+							],
+							"subId": "082a0f34bab7496ab942025374652910",
+							"id": "formFooterText_4",
+							"type": "section-2",
+							"pubId": "91976227c26442ca863025dbb3e8e95b"
+						}
+					]
+				],
+				"rules": {
+					"sh": "!Util.isReceipt"
+				},
+				"subId": "b4eb8296a924482c880d6c3abca4bb61",
+				"id": "modalFooter_2",
+				"type": "form-footer",
+				"pubId": "7cb367a06483449b829503acf6398e7f"
 			}
 		],
 		[
@@ -99,7 +160,7 @@
 																"mandatory": true,
 																"path": "EmailAddress",
 																"id": "emailAddress_1",
-																"pubId": "a9166129608642a59e32d08953a94f59"
+																"pubId": "832ab4f37a6f44c1bf06b4df1f57dc94"
 															}
 														],
 														[
@@ -124,7 +185,7 @@
 																"htmlLabel": "Send now",
 																"path": "",
 																"id": "emailPdfReceiptButton",
-																"pubId": "fd5b89b6c936485a967f3e7ddb764b15"
+																"pubId": "687dec7421454ef2a4a768b9b0f4cb86"
 															}
 														]
 													],
@@ -133,7 +194,7 @@
 													"path": "",
 													"type": "block",
 													"id": "block_2",
-													"pubId": "682a2217f1dd45dd87aa822be04e9503"
+													"pubId": "5b0a23f8a9cf4d1e870cbf2b3fe9a69a"
 												}
 											]
 										],
@@ -152,7 +213,7 @@
 										},
 										"type": "section-2",
 										"id": "section_4",
-										"pubId": "0e3c0f413c9242549cd247f26dda2e1f"
+										"pubId": "37f4edbc8ab4491590c497f4d666a4f6"
 									}
 								],
 								[
@@ -166,7 +227,7 @@
 													"path": "",
 													"type": "form-bundle-job-tasks",
 													"id": "formBundleJobTasks",
-													"pubId": "e82ecd31030f474995afefadca19084d"
+													"pubId": "cf796101e7714621a1cf67c820711b07"
 												}
 											]
 										],
@@ -185,7 +246,7 @@
 										},
 										"type": "section-2",
 										"id": "section_3",
-										"pubId": "6e65490966bc4e8b827c2b51dfef55eb"
+										"pubId": "0db60ac2ec5443ba9186291c368ea50f"
 									}
 								],
 								[
@@ -201,7 +262,7 @@
 													"path": "",
 													"type": "text-display",
 													"id": "textDisplay",
-													"pubId": "a836c5d452a44d57b3e0d36396f03981"
+													"pubId": "390c2eafea564e93b9a08c9cb31696f1"
 												}
 											],
 											[
@@ -215,7 +276,7 @@
 													"path": "",
 													"type": "text-display",
 													"id": "textDisplay_1",
-													"pubId": "555d718829a64692b4a044a3b8cfb518"
+													"pubId": "140acbabb42840cdbf276b0d34bc21fb"
 												}
 											],
 											[
@@ -227,7 +288,7 @@
 													"path": "",
 													"type": "text-display",
 													"id": "textDisplay_2",
-													"pubId": "70f170a1d4ce4b91871e0b878a4a57a4"
+													"pubId": "17d9481a14274783a2db9dbb34bde41b"
 												}
 											]
 										],
@@ -239,7 +300,7 @@
 										],
 										"type": "block",
 										"id": "block_1",
-										"pubId": "23af4388f6ce4645a3496e873201fa8a"
+										"pubId": "e2a49dc86e8248ad880fc76f6346e56f"
 									}
 								],
 								[
@@ -259,7 +320,7 @@
 																"path": "",
 																"type": "text-display",
 																"id": "textDisplay_3",
-																"pubId": "58b0535a714e4ab1b543621627047927"
+																"pubId": "714e6460e28a464cafc130fc3b4b8bb2"
 															}
 														],
 														[
@@ -280,7 +341,7 @@
 																},
 																"type": "button",
 																"id": "button",
-																"pubId": "e0984bd42802402b98091c7da29d15a9"
+																"pubId": "6f9319a7b2ab4377bb9de43ec572300d"
 															}
 														]
 													],
@@ -289,7 +350,7 @@
 													"path": "",
 													"type": "block",
 													"id": "block_3",
-													"pubId": "ef79caa8974d424aa9237245b44fa01a"
+													"pubId": "899f5d29aad4409a88a7adaf475d8d6a"
 												}
 											]
 										],
@@ -305,18 +366,22 @@
 										},
 										"type": "section-2",
 										"id": "section_5",
-										"pubId": "7d7e4b4084584064985837f791f94625"
+										"pubId": "e67bbb466d394a2b92e29073118ff55e"
 									}
 								]
 							],
 							"exclude": false,
-							"id": "extraInformation_6",
 							"type": "block",
-							"pubId": "93e099ab48ff477da33dc02e73f34fbb"
+							"id": "extraInformation_6",
+							"pubId": "8f80b51de9c746318e3b95f8a4e01f69"
 						}
 					],
 					[
 						{
+							"span": {
+								"md": 4,
+								"lg": 4
+							},
 							"offset": {
 								"md": "4",
 								"lg": "4"
@@ -337,7 +402,7 @@
 										"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
 										"id": "startANewForm",
 										"type": "button",
-										"pubId": "b8fe532db1a548f18964e23e348141d3"
+										"pubId": "c4fac36661024bd294673f0015696355"
 									},
 									{
 										"styles": [
@@ -353,7 +418,7 @@
 										"subId": "2f32e2834fd4493280fa83492b6b143c",
 										"id": "returnToPortal_3",
 										"type": "button",
-										"pubId": "57ace160b0ae48f89b475d83363937b1"
+										"pubId": "f34b73d43b014330a6e6a864c7112471"
 									},
 									{
 										"styles": [
@@ -369,13 +434,14 @@
 										"subId": "a2498025348b4969b1ee7b3135ee6c9c",
 										"id": "showFormXml_3",
 										"type": "button",
-										"pubId": "a3c4d8edca31484888d4052c19df56e0"
+										"pubId": "54a02d31e19a45949cdfc4d8b3156e73"
 									}
 								]
 							],
-							"id": "followOnOptions_3",
 							"type": "follow-on-options",
-							"pubId": "8bd004be350a4b76bb778e36f2014e4d"
+							"exclude": false,
+							"id": "followOnOptions_3",
+							"pubId": "13341c503a444ae9a443071591f19d9f"
 						}
 					]
 				],
@@ -388,44 +454,11 @@
 				"properties": {
 					"infoText": "Thank you, your submission has been received."
 				},
+				"exclude": false,
 				"htmlLabel": "<h1>Application Received</h1>",
-				"id": "modalContent_6",
 				"type": "section-2",
-				"pubId": "e18379a0fa314afa9b89da64d9ba1819"
-			}
-		],
-		[
-			{
-				"rows": [
-					[
-						{
-							"rows": [
-								[
-									{
-										"exclude": false,
-										"path": "",
-										"subId": "8c9b02742d3841d8a9c30d826878b6af",
-										"id": "formFooterText_9",
-										"type": "text-display",
-										"pubId": "f3473cc1dad34c19a3744e21e37b8f1e"
-									}
-								]
-							],
-							"styles": [],
-							"label": "",
-							"htmlLabel": "",
-							"id": "formFooterText_8",
-							"type": "section-2",
-							"pubId": "e526ab379bc149fdacfc0a0a2f52e46b"
-						}
-					]
-				],
-				"rules": {
-					"sh": "!Util.isReceipt"
-				},
-				"id": "modalFooter_6",
-				"type": "form-footer",
-				"pubId": "caac689662f34f5cb98ab1d07b262e2e"
+				"id": "modalContent_6",
+				"pubId": "1c318e924a194bbd8ccaec3ad22e4295"
 			}
 		]
 	],
@@ -436,7 +469,7 @@
 	"exclude": false,
 	"category": "Custom Components",
 	"blockInfo": {
-		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16604",
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/17031",
 		"publishLibraryId": 16680,
 		"blockCode": "submit-success-modal"
 	}

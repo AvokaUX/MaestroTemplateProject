@@ -1011,6 +1011,7 @@
 				],
 				[
 					{
+						"exclude": true,
 						"id": "modalContent_3",
 						"rows": [
 							[
@@ -1052,54 +1053,7 @@
 				],
 				[
 					{
-						"id": "modalBackground_1",
-						"rows": [
-							[]
-						],
-						"type": "modal-background"
-					}
-				],
-				[
-					{
-						"id": "modalHeader_2",
-						"rows": [
-							[
-								{
-									"id": "stickyPanelModal_1",
-									"rows": [
-										[
-											{
-												"id": "modalHeader_3",
-												"rows": [
-													[
-														{
-															"id": "modalLogo_1",
-															"rows": [
-																[
-																	{
-																		"id": "modalLogoImage_1",
-																		"properties": {},
-																		"type": "image"
-																	}
-																]
-															],
-															"type": "block"
-														}
-													]
-												],
-												"type": "form-header"
-											}
-										]
-									],
-									"type": "sticky-panel"
-								}
-							]
-						],
-						"type": "block"
-					}
-				],
-				[
-					{
+						"exclude": false,
 						"htmlLabel": "<h1>Application Cancelled</h1>",
 						"id": "modalContent_1",
 						"label": "Application Cancelled",
@@ -1119,6 +1073,7 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "followOnOptions_1",
 									"offset": {
 										"lg": "4",
@@ -1161,35 +1116,15 @@
 											}
 										]
 									],
+									"span": {
+										"lg": 4,
+										"md": 4
+									},
 									"type": "follow-on-options"
 								}
 							]
 						],
 						"type": "section-2"
-					}
-				],
-				[
-					{
-						"id": "modalFooter_1",
-						"rows": [
-							[
-								{
-									"id": "formFooterText_2",
-									"rows": [
-										[
-											{
-												"id": "formFooterText_3",
-												"path": "",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
-									"type": "section-2"
-								}
-							]
-						],
-						"type": "form-footer"
 					}
 				]
 			],
@@ -1257,6 +1192,7 @@
 				],
 				[
 					{
+						"exclude": true,
 						"id": "modalContent_4",
 						"rows": [
 							[
@@ -1298,54 +1234,7 @@
 				],
 				[
 					{
-						"id": "modalBackground",
-						"rows": [
-							[]
-						],
-						"type": "modal-background"
-					}
-				],
-				[
-					{
-						"id": "modalHeader",
-						"rows": [
-							[
-								{
-									"id": "stickyPanelModal",
-									"rows": [
-										[
-											{
-												"id": "modalHeader_1",
-												"rows": [
-													[
-														{
-															"id": "modalLogo",
-															"rows": [
-																[
-																	{
-																		"id": "modalLogoImage",
-																		"properties": {},
-																		"type": "image"
-																	}
-																]
-															],
-															"type": "block"
-														}
-													]
-												],
-												"type": "form-header"
-											}
-										]
-									],
-									"type": "sticky-panel"
-								}
-							]
-						],
-						"type": "block"
-					}
-				],
-				[
-					{
+						"exclude": false,
 						"htmlLabel": "<h1>Application Saved</h1>",
 						"id": "modalContent",
 						"label": "Application Saved",
@@ -1718,10 +1607,11 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "followOnOptions",
 									"offset": {
 										"lg": "4",
-										"md": "4"
+										"md": 4
 									},
 									"rows": [
 										[
@@ -1760,6 +1650,10 @@
 											}
 										]
 									],
+									"span": {
+										"lg": 4,
+										"md": 4
+									},
 									"type": "follow-on-options"
 								}
 							]
@@ -1771,33 +1665,6 @@
 							"bs-modal-content-96022"
 						],
 						"type": "section-2"
-					}
-				],
-				[
-					{
-						"id": "modalFooter",
-						"rows": [
-							[
-								{
-									"htmlLabel": "",
-									"id": "formFooterText",
-									"label": "",
-									"rows": [
-										[
-											{
-												"id": "formFooterText_1",
-												"path": "",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
-									"styles": [],
-									"type": "section-2"
-								}
-							]
-						],
-						"type": "form-footer"
 					}
 				]
 			],
@@ -1865,10 +1732,13 @@
 				],
 				[
 					{
+						"exclude": true,
+						"hideLabel": true,
 						"id": "modalContent_2",
 						"rows": [
 							[
 								{
+									"exclude": true,
 									"id": "startANewForm_3",
 									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
 									"type": "button"
@@ -1906,54 +1776,7 @@
 				],
 				[
 					{
-						"id": "modalBackground_6",
-						"rows": [
-							[]
-						],
-						"type": "modal-background"
-					}
-				],
-				[
-					{
-						"id": "modalHeader_12",
-						"rows": [
-							[
-								{
-									"id": "stickyPanelModal_6",
-									"rows": [
-										[
-											{
-												"id": "modalHeader_13",
-												"rows": [
-													[
-														{
-															"id": "modalLogo_6",
-															"rows": [
-																[
-																	{
-																		"id": "modalLogoImage_6",
-																		"properties": {},
-																		"type": "image"
-																	}
-																]
-															],
-															"type": "block"
-														}
-													]
-												],
-												"type": "form-header"
-											}
-										]
-									],
-									"type": "sticky-panel"
-								}
-							]
-						],
-						"type": "block"
-					}
-				],
-				[
-					{
+						"exclude": false,
 						"htmlLabel": "<h1>Application Received</h1>",
 						"id": "modalContent_6",
 						"label": "Application Received",
@@ -2198,6 +2021,7 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "followOnOptions_3",
 									"offset": {
 										"lg": "4",
@@ -2240,6 +2064,10 @@
 											}
 										]
 									],
+									"span": {
+										"lg": 4,
+										"md": 4
+									},
 									"type": "follow-on-options"
 								}
 							]
@@ -2251,34 +2079,6 @@
 							"bs-modal-content-96022"
 						],
 						"type": "section-2"
-					}
-				],
-				[
-					{
-						"id": "modalFooter_6",
-						"rows": [
-							[
-								{
-									"htmlLabel": "",
-									"id": "formFooterText_8",
-									"label": "",
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "formFooterText_9",
-												"path": "",
-												"subId": "8c9b02742d3841d8a9c30d826878b6af",
-												"type": "text-display"
-											}
-										]
-									],
-									"styles": [],
-									"type": "section-2"
-								}
-							]
-						],
-						"type": "form-footer"
 					}
 				]
 			],
