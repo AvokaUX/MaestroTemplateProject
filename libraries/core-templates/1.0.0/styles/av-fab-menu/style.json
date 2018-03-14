@@ -1,7 +1,7 @@
 {
-  "label": "AV fab menu",
-  "file": "style.less",
-  "widgets": [
-    "fab-menu"
-  ]
+	"file": "style.less",
+	"label": "AV fab menu",
+	"widgets": [
+		"fab-menu"
+	]
 }

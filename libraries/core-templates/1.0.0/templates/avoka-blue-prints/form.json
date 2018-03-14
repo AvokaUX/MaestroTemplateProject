@@ -115,17 +115,27 @@
 				"rows": [
 					[
 						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
 							"exclude": false,
 							"path": "",
 							"id": "scrollPosition",
 							"type": "data-field"
 						},
 						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
+							"exclude": false,
 							"path": "",
 							"id": "docked",
 							"type": "data-field"
 						},
 						{
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field"
+							},
 							"path": "",
 							"id": "undocked",
 							"type": "data-field"
@@ -189,7 +199,8 @@
 																"properties": {
 																	"src": {
 																		"fileName": "moolah_logo.png",
-																		"width": "250"
+																		"width": "250",
+																		"height": "auto"
 																	}
 																},
 																"exclude": false,
@@ -209,28 +220,6 @@
 													],
 													"type": "block",
 													"id": "brandLogo"
-												},
-												{
-													"rows": [
-														[
-															{
-																"exclude": false,
-																"path": "ProgressBar",
-																"id": "progressBar_1",
-																"type": "progress-bar"
-															}
-														]
-													],
-													"styles": [
-														"av-docking-progress-bar"
-													],
-													"properties": {
-														"progressBarHeight": 75
-													},
-													"exclude": false,
-													"path": "DockingProgressBar",
-													"type": "docking-progress-bar",
-													"id": "dockingProgressBar"
 												}
 											]
 										],
@@ -251,16 +240,30 @@
 										"rows": [
 											[
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "dockErrors",
 													"type": "data-field"
 												},
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "errorsDockLock",
 													"type": "data-field"
 												}
 											]
 										],
-										"exclude": false,
+										"properties": {
+											"header": "Please resolve the following issues before proceeding",
+											"subHeader": "Click on an issue to go directly to the related section of the form.",
+											"dockedHeader": "{{Form.validation.errors.length}} error(s) found",
+											"dockedSubHeader": "Please touch here to resolve the next error.",
+											"mobileA11yMessageBefore": "The following {{Form.validation.errors.length + (Form.validation.errors.length == 1 && ' issue was' || ' issues were')}} found.",
+											"mobileA11yMessageAfter": "Please select the screen to go to the first error."
+										},
+										"exclude": true,
 										"path": "",
 										"styles": [
 											"av-docking-errors"
@@ -273,9 +276,11 @@
 							"exclude": false,
 							"path": "StickyPanel",
 							"rules": {
-								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+								"dc": "//if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
 							},
-							"styles": [],
+							"styles": [
+								"av-blue-prints-header-53442"
+							],
 							"type": "sticky-panel",
 							"id": "stickyPanel1"
 						}
@@ -288,6 +293,94 @@
 				"styles": [],
 				"type": "block",
 				"id": "formHeader1"
+			}
+		],
+		[
+			{
+				"label": "Step title",
+				"rows": [
+					[
+						{
+							"span": {
+								"xs": 6,
+								"sm": 6,
+								"md": 6,
+								"lg": 6
+							},
+							"label": "",
+							"htmlLabel": "{{data.progressBar}}",
+							"styles": [
+								"av-form-field",
+								"av-moolah-step-title-43505"
+							],
+							"exclude": false,
+							"path": "",
+							"type": "text-display",
+							"id": "textDisplay_12"
+						},
+						{
+							"span": {
+								"xs": 6,
+								"sm": 6,
+								"md": 6,
+								"lg": 6
+							},
+							"label": "deposit account",
+							"htmlLabel": "deposit account",
+							"styles": [
+								"av-form-field",
+								"av-moolah-account-type-15664"
+							],
+							"exclude": false,
+							"path": "",
+							"type": "text-display",
+							"id": "textDisplay_13"
+						}
+					]
+				],
+				"exclude": false,
+				"htmlLabel": "Step title",
+				"path": "",
+				"styles": [
+					"bs-max-width-73189"
+				],
+				"type": "block",
+				"id": "block_7"
+			}
+		],
+		[
+			{
+				"label": "Progress bar",
+				"rows": [
+					[
+						{
+							"styles": [
+								"av-progress-bar",
+								"av-blueprints-progress-bar-49390"
+							],
+							"properties": {
+								"willDock": false
+							},
+							"exclude": false,
+							"path": "ProgressBar",
+							"rules": {
+								"eq": "var groups = $('Form').scope().Form.$Pages.groups;\nvar currentStep;\nfor (var i=0; i<groups.length; i++) {\n\tif(groups[i].$navSelected) currentStep = i+1;\n}\nconsole.log(currentStep);\nreturn \"Step \" + currentStep + \": \" + $('Form').scope().Form.$Pages.currentPage.$navGroup.label;"
+							},
+							"type": "progress-bar",
+							"id": "progressBar"
+						}
+					]
+				],
+				"exclude": false,
+				"htmlLabel": "Progress bar",
+				"path": "",
+				"styles": [
+					"bc-white-background-20804",
+					"bs-tramline-container-62540",
+					"bs-max-width-73189"
+				],
+				"type": "block",
+				"id": "block_6"
 			}
 		],
 		[
@@ -325,7 +418,7 @@
 													"hasCustomId": true,
 													"htmlLabel": "Eligibility 1-1",
 													"isFirstInGroup": true,
-													"isLastInGroup": true,
+													"isLastInGroup": false,
 													"path": "",
 													"rules": {
 														"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
@@ -352,7 +445,7 @@
 													"type": "nav-page",
 													"exclude": false,
 													"htmlLabel": "Personal Info 2-1",
-													"isFirstInGroup": true,
+													"isFirstInGroup": false,
 													"isLastInGroup": true,
 													"path": "",
 													"id": "page_2"
@@ -434,6 +527,93 @@
 							"type": "page-controller",
 							"id": "pageController_1"
 						}
+					],
+					[
+						{
+							"offset": {
+								"md": "0",
+								"lg": "0"
+							},
+							"label": "Bottom Nav",
+							"rows": [
+								[
+									{
+										"span": {
+											"xs": 6,
+											"sm": 6
+										},
+										"offset": {
+											"xs": "3",
+											"sm": "3",
+											"md": "4",
+											"lg": "4"
+										},
+										"styles": [
+											"av-button",
+											"bs-submit-button-65937",
+											"av-global-layout"
+										],
+										"properties": {
+											"legacyMethod": false
+										},
+										"type": "submit",
+										"rules": {
+											"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});"
+										},
+										"exclude": false,
+										"path": "",
+										"id": "submit2"
+									}
+								]
+							],
+							"animateVisibility": true,
+							"exclude": false,
+							"htmlLabel": "Bottom Nav",
+							"path": "",
+							"rules": {
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+							},
+							"styles": [
+								"bs-bottom-nav-15636"
+							],
+							"type": "block",
+							"id": "bottomNav"
+						}
+					],
+					[
+						{
+							"rows": [
+								[
+									{
+										"label": "",
+										"rows": [
+											[
+												{
+													"path": "",
+													"subId": "8c9b02742d3841d8a9c30d826878b6af",
+													"id": "formFooterText_7",
+													"type": "text-display"
+												}
+											]
+										],
+										"styles": [
+											"mg-section-2",
+											"bs-max-width-73189"
+										],
+										"htmlLabel": "",
+										"id": "footerSection",
+										"type": "section-2"
+									}
+								]
+							],
+							"type": "form-footer",
+							"rules": {
+								"sh": "!Util.isReceipt"
+							},
+							"exclude": false,
+							"path": "",
+							"id": "formFooter"
+						}
 					]
 				],
 				"exclude": false,
@@ -444,56 +624,6 @@
 				],
 				"type": "block",
 				"id": "content"
-			}
-		],
-		[
-			{
-				"offset": {
-					"md": "0",
-					"lg": "0"
-				},
-				"label": "Bottom Nav",
-				"rows": [
-					[
-						{
-							"span": {
-								"xs": 6,
-								"sm": 6
-							},
-							"offset": {
-								"xs": "0",
-								"sm": "0",
-								"md": "0",
-								"lg": "0"
-							},
-							"styles": [
-								"av-button",
-								"bs-submit-button-65937",
-								"av-global-layout"
-							],
-							"properties": {
-								"legacyMethod": false
-							},
-							"type": "submit",
-							"rules": {
-								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
-							"animateVisibility": true,
-							"exclude": false,
-							"path": "",
-							"id": "submit2"
-						}
-					]
-				],
-				"exclude": false,
-				"htmlLabel": "Bottom Nav",
-				"path": "",
-				"styles": [
-					"bs-bottom-nav-15636"
-				],
-				"type": "block",
-				"id": "bottomNav"
 			}
 		],
 		[
@@ -594,6 +724,12 @@
 				"rows": [
 					[
 						{
+							"properties": {
+								"offIcon": "fa fa-ellipsis-v"
+							},
+							"rules": {
+								"click": "data[item.id] = data[item.id] !== true;"
+							},
 							"exclude": false,
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"id": "functionalMenu",
@@ -602,24 +738,36 @@
 					],
 					[
 						{
+							"rules": {
+								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
+							},
 							"exclude": false,
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"id": "exit",
 							"type": "button"
 						},
 						{
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
+							},
 							"exclude": false,
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"id": "resume",
 							"type": "button"
 						},
 						{
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
+							},
 							"exclude": false,
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"id": "help",
 							"type": "button"
 						},
 						{
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
+							},
 							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"id": "share",
@@ -680,6 +828,13 @@
 										"rows": [
 											[
 												{
+													"properties": {
+														"dataPath": "data.daysData"
+													},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "var day = !Util.isBlank(data.date) && data.date.split(\"-\")[2]; \n return day && typeof day === \"string\" ? day.replace(/^[0]/,\"\") : value;"
+													},
 													"subId": "76182bfd13724884b4288cd928247150",
 													"path": "",
 													"noData": true,
@@ -688,6 +843,10 @@
 												},
 												{
 													"properties": {},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : value;"
+													},
 													"subId": "d08f3ac71df4450094742607de9e92f4",
 													"path": "",
 													"noData": true,
@@ -695,6 +854,10 @@
 													"type": "dropdown"
 												},
 												{
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[0] : value;"
+													},
 													"subId": "4d099b1664374469a28d935e5f39fe25",
 													"path": "",
 													"noData": true,
@@ -704,6 +867,9 @@
 											],
 											[
 												{
+													"rules": {
+														"eq": "// Since we cannot remove this cal rule, return self value\nvalue"
+													},
 													"subId": "fb68b0fdefc64e8192c84c1aacf492dc",
 													"id": "date",
 													"type": "data-field"
@@ -711,12 +877,18 @@
 											],
 											[
 												{
+													"rules": {
+														"eq": "var month = !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : \"\",\n\tday = data.day,\n    range,\n    selectionArr,\n    max = 31;\n\nif (month == \"02\") max = Util.isLeapYear(data.year) ? 29 : 28;\n\nelse if(Util.contains([\"04\",\"06\",\"09\",\"11\"],month)) max = 30;\n\nif(+day > max) data.day = max.toString();\n\nrange = Util.range(1, max).map(function(day){\n  return day.toString(); \n});\n\n// Convert to comma delimited and then convert to delimited selection array\nreturn Calc.delimitedSelection(range.join(\",\"));"
+													},
 													"subId": "53b69d508a60404db8b3ef75b4aa4556",
 													"id": "daysData",
 													"type": "data-field"
 												}
 											]
 										],
+										"rules": {
+											"ok": "if(Util.isBlank(data.date) || (!item.properties.minAge && !item.properties.maxAge && !item.properties.pastDate)) {\n  return true;\n}\nvar currentTime = new Date().getTime(),\n    minAge = item.properties.minAge,\n    maxAge = item.properties.maxAge,\n    pastDate = item.properties.pastDate,\n    dobDate = Calc.date(data.date);\n\nif(pastDate && Calc.daysBetween(dobDate, new Date()) < 0) {\n    return \"Must be a date in the past\";\n}\n\nif(!Util.isBlank(minAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+minAge);\n\tif (currentTime <= dobDate.getTime()) {\n\t\treturn \"You must be at least \"+minAge+\" years old\";\n\t}\n}\n\nif(!Util.isBlank(maxAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+maxAge);\n\tif (currentTime >= dobDate.getTime()) {\n\t\treturn \"You must be under \"+maxAge+\" years old\";\n\t}\n}\n\nreturn true;"
+										},
 										"subId": "eb2a794cd58c42af94471c18973dc8aa",
 										"id": "dateOfBirthDropdown",
 										"type": "dropdown-dob-block"
@@ -734,6 +906,9 @@
 							"rows": [
 								[
 									{
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
 										"path": "",
 										"noData": true,
 										"subId": "82537d43d5a541c78ae556a6a5f33098",
@@ -770,6 +945,9 @@
 								],
 								[
 									{
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
 										"path": "",
 										"mandatory": true,
 										"noData": true,
@@ -1535,7 +1713,9 @@
 				"submit-success-message",
 				"bs-center-align-19822",
 				"bs-docked-error-63227",
-				"av-form-field"
+				"av-form-field",
+				"av-moolah-account-type-15664",
+				"av-moolah-step-title-43505"
 			],
 			"properties": {}
 		},
@@ -1837,6 +2017,7 @@
 		"progress-bar": {
 			"availableStyles": [
 				"align-top",
+				"av-blueprints-progress-bar-49390",
 				"progress-bar-ben"
 			],
 			"properties": {}
@@ -1899,11 +2080,11 @@
 		},
 		"sticky-panel": {
 			"availableStyles": [
-				"bs-header-20084",
-				"bs-primary-background-02324",
 				"align-top",
 				"bs-error-banner-14443",
-				"bs-fixed-header-40325"
+				"bs-fixed-header-40325",
+				"bs-header-20084",
+				"av-blue-prints-header-53442"
 			],
 			"properties": {}
 		},
@@ -1967,7 +2148,9 @@
 					}
 				},
 				"pageController_1": {
-					"properties": {}
+					"properties": {
+						"pageTransition": "Slide"
+					}
 				}
 			},
 			"styleVars": {
@@ -1980,6 +2163,7 @@
 				"av-button-primary-color": "",
 				"av-button-secondary-color": "",
 				"av-dialog-background": "#000",
+				"av-dialog-background-opacity": "70%",
 				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
@@ -2008,6 +2192,7 @@
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
+				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
 				"av-slide-menu-extra-item-color": "",
@@ -2061,6 +2246,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
 									"id": "close_9",
 									"type": "icon-button"
@@ -2098,6 +2286,9 @@
 															"rows": [
 																[]
 															],
+															"properties": {
+																"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
+															},
 															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
 															"id": "security_question_save_confirm",
 															"type": "section-2"
@@ -2123,6 +2314,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"id": "okay_18",
 															"type": "button"
@@ -2157,6 +2352,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "5b00e0bbb7da47fcbd5ca16369a6e6af",
 									"id": "close_6",
 									"type": "icon-button"
@@ -2198,6 +2396,9 @@
 																			"md": "3",
 																			"lg": "3"
 																		},
+																		"rules": {
+																			"eq": "return Util.getUrlQueryParam(\"referenceNumber\") != \"\" && Util.getUrlQueryParam(\"referenceNumber\") ? Util.getUrlQueryParam(\"referenceNumber\") : Form.saveChallengeRequired === true ? Form.getSystemData(\"TrackingCode\") : value;"
+																		},
 																		"subId": "85628c35c7c64f678d83b46721c08e73",
 																		"id": "save_challenge_reference_code",
 																		"type": "text-input"
@@ -2214,6 +2415,13 @@
 															"rows": [
 																[]
 															],
+															"properties": {
+																"infoText": "Your answer to this question must match the information you previously provided."
+															},
+															"rules": {
+																"eq": "return item.rows[0].length > 0 ? Form.data[item.rows[0][0].id] : \"\";",
+																"sh": "return item.rows[0].length > 0;"
+															},
 															"subId": "bf60f3af33fa4fc1b16450de3b351b70",
 															"id": "save_challenge_question_section",
 															"type": "section-2"
@@ -2239,6 +2447,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
+																"sh": ""
+															},
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"id": "open_6",
 															"type": "button"
@@ -2273,6 +2485,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "d85962d96d4b42bcb517de498e25ed4d",
 									"id": "close_4",
 									"type": "icon-button"
@@ -2331,6 +2546,9 @@
 																						],
 																						[
 																							{
+																								"rules": {
+																									"click": "Form.showDialog(\"formh\");"
+																								},
 																								"subId": "ec4a7b4bb428414b8a37d1b857682a1a",
 																								"id": "get_help_1",
 																								"type": "button"
@@ -2374,6 +2592,9 @@
 																						],
 																						[
 																							{
+																								"rules": {
+																									"click": "Form.showDialog(\"saveconfirm\");"
+																								},
 																								"subId": "ecef8243838a44999ee2062343270b0a",
 																								"id": "save_for_later_1",
 																								"type": "button"
@@ -2416,6 +2637,9 @@
 																	}
 																]
 															],
+															"properties": {
+																"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
+															},
 															"subId": "66800abae2f84be5953bd85d3488a708",
 															"id": "feedback_2",
 															"type": "section-2"
@@ -2441,6 +2665,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
 															"id": "confirm_3",
 															"type": "button"
@@ -2475,6 +2703,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "dbfbfa08cfd0446da064233de0d20684",
 									"id": "close",
 									"type": "icon-button"
@@ -2522,6 +2753,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.showDialog(\"\");",
+																"sh": ""
+															},
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"id": "okay_8",
 															"type": "button"
@@ -2556,6 +2791,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "9e296fc30de940628ec8b5dbda46ae26",
 									"id": "close_3",
 									"type": "icon-button"
@@ -2670,6 +2908,9 @@
 															"rows": [
 																[]
 															],
+															"properties": {
+																"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
+															},
 															"subId": "ff69444690424238a908235995c16dd5",
 															"id": "need_visitUs_2",
 															"type": "section-2"
@@ -2695,6 +2936,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.showDialog(\"\");",
+																"sh": ""
+															},
 															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"id": "okay_1",
 															"type": "button"
@@ -2792,6 +3037,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
 						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"id": "modalContent_2",
 						"type": "section-2"
@@ -2817,6 +3065,9 @@
 								}
 							]
 						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"id": "modalFooter_2",
 						"type": "form-footer"
@@ -2906,6 +3157,9 @@
 																		"label": "Your email address",
 																		"styles": [],
 																		"type": "email",
+																		"rules": {
+																			"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+																		},
 																		"exclude": false,
 																		"htmlLabel": "Your email address",
 																		"mandatory": true,
@@ -2928,6 +3182,9 @@
 																			"emailFieldRef": "data.emailAddress_1"
 																		},
 																		"type": "button-email-receipt",
+																		"rules": {
+																			"click": "Form.emailOperation('emailReceipt', item.id, item.properties.emailFieldRef)"
+																		},
 																		"exclude": false,
 																		"htmlLabel": "Send now",
 																		"path": "",
@@ -3122,6 +3379,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
@@ -3133,6 +3394,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "2f32e2834fd4493280fa83492b6b143c",
@@ -3144,6 +3409,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
@@ -3196,6 +3465,9 @@
 							]
 						],
 						"type": "form-footer",
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"id": "modalFooter_6"
 					}
 				]
@@ -3273,6 +3545,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
 						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"id": "modalContent_4",
 						"type": "section-2"
@@ -3298,6 +3573,9 @@
 								}
 							]
 						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"id": "modalFooter_4",
 						"type": "form-footer"
@@ -3466,6 +3744,9 @@
 																		"label": "Your email address",
 																		"styles": [],
 																		"type": "email",
+																		"rules": {
+																			"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+																		},
 																		"exclude": false,
 																		"htmlLabel": "Your email address",
 																		"mandatory": true,
@@ -3485,6 +3766,9 @@
 																			"av-button-primary"
 																		],
 																		"type": "button-email-saved-form",
+																		"rules": {
+																			"click": "Form.emailOperation('emailSavedForm', item.id, item.properties.emailFieldRef)"
+																		},
 																		"exclude": false,
 																		"htmlLabel": "Send now",
 																		"path": "",
@@ -3584,6 +3868,9 @@
 																"av-global-layout"
 															],
 															"type": "email",
+															"rules": {
+																"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+															},
 															"exclude": false,
 															"htmlLabel": "Recipient Email Address",
 															"mandatory": true,
@@ -3633,6 +3920,9 @@
 																"emailBodyRef": "data.multilineTextArea"
 															},
 															"type": "button-email-share-form",
+															"rules": {
+																"click": "Form.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)"
+															},
 															"exclude": false,
 															"htmlLabel": "Share Now",
 															"path": "",
@@ -3731,6 +4021,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
@@ -3742,6 +4036,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "2f32e2834fd4493280fa83492b6b143c",
@@ -3753,6 +4051,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
@@ -3804,6 +4106,9 @@
 							]
 						],
 						"type": "form-footer",
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"id": "modalFooter"
 					}
 				]
@@ -3881,6 +4186,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
 						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"id": "modalContent_3",
 						"type": "section-2"
@@ -3906,6 +4214,9 @@
 								}
 							]
 						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"id": "modalFooter_3",
 						"type": "form-footer"
@@ -3986,6 +4297,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
@@ -3997,6 +4312,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "2f32e2834fd4493280fa83492b6b143c",
@@ -4008,6 +4327,10 @@
 													"message-banner",
 													"av-button-primary"
 												],
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
 												"exclude": false,
 												"path": "",
 												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
@@ -4050,6 +4373,9 @@
 							]
 						],
 						"type": "form-footer",
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"id": "modalFooter_1"
 					}
 				]
@@ -4307,16 +4633,6 @@
 							"imageLink": ""
 						}
 					},
-					"dockingProgressBar": {
-						"label": "Docking Progress Bar",
-						"htmlLabel": "",
-						"mandatoryMsg": ""
-					},
-					"progressBar_1": {
-						"label": "Progress Bar",
-						"htmlLabel": "Progress Bar",
-						"mandatoryMsg": ""
-					},
 					"dockingErrorBlock": {
 						"label": "Docking Error Block",
 						"htmlLabel": "",
@@ -4338,6 +4654,37 @@
 					"errorsDockLock": {
 						"label": "Errors Dock Lock",
 						"htmlLabel": "Errors Dock Lock",
+						"mandatoryMsg": ""
+					},
+					"block_7": {
+						"label": "Step title",
+						"htmlLabel": "Step title",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"textDisplay_12": {
+						"label": "",
+						"htmlLabel": "{{data.progressBar}}",
+						"mandatoryMsg": ""
+					},
+					"textDisplay_13": {
+						"label": "deposit account",
+						"htmlLabel": "deposit account",
+						"mandatoryMsg": ""
+					},
+					"block_6": {
+						"label": "Progress bar",
+						"htmlLabel": "Progress bar",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"progressBar": {
+						"label": "Progress Bar",
+						"htmlLabel": "",
 						"mandatoryMsg": ""
 					},
 					"content": {
@@ -4459,6 +4806,27 @@
 						"properties": {
 							"ariaLabel": ""
 						}
+					},
+					"formFooter": {
+						"label": "Form Footer",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"footerSection": {
+						"label": "",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"formFooterText_7": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
 					},
 					"navigationBar": {
 						"label": "Navigation Bar",
@@ -5130,7 +5498,8 @@
 						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
-							"ariaLabel": ""
+							"ariaLabel": "",
+							"validationRef": ""
 						}
 					},
 					"open_6": {
@@ -6570,7 +6939,8 @@
 		"xml": {}
 	},
 	"transact": {},
-	"maestroReleaseVersion": "17.10.2",
+	"maestroReleaseVersion": "17.10.3",
 	"id": "AvokaSmartForm",
+	"exclude": false,
 	"isPreview": false
 }

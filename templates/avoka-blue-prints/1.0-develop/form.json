@@ -950,7 +950,7 @@
 		"savesuccess",
 		"cancelsuccess"
 	],
-	"maestroReleaseVersion": "17.10.2",
+	"maestroReleaseVersion": "17.10.3",
 	"modals": {
 		"cancelsuccess": {
 			"htmlLabel": "Cancel Success",
@@ -2568,7 +2568,9 @@
 							"rules": {
 								"dc": "//if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
 							},
-							"styles": [],
+							"styles": [
+								"av-blue-prints-header-53442"
+							],
 							"type": "sticky-panel"
 						}
 					]
@@ -4123,11 +4125,11 @@
 		},
 		"sticky-panel": {
 			"availableStyles": [
-				"bs-header-20084",
-				"bs-primary-background-02324",
 				"align-top",
 				"bs-error-banner-14443",
-				"bs-fixed-header-40325"
+				"bs-fixed-header-40325",
+				"bs-header-20084",
+				"av-blue-prints-header-53442"
 			],
 			"properties": {}
 		},

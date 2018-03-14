@@ -1,11 +1,12 @@
 @transition: transform 1s, visibility 1s ease-in-out;
-
+@page-padding: 300px;
 form[name='form'] {
 
   overflow-x: hidden;
   .page-fade-transition {
     .av-menu-page {
       min-height: 100vh;
+      min-height: ~"calc(100vh - @{page-padding})";
     }
 
     &[data-view-stack], &[view-stack], [data-view-stack], [view-stack] {
