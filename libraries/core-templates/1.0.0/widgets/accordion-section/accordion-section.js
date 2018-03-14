@@ -8,7 +8,7 @@ define(["app"], function (app) {
             var allAccordionClosed = true;
             var firstAccordionId = $element.parent().parent().find('.panel-group')[0].id;
             var transDuration = 0.3;
-
+            $scope.lastAccordion = item.id === $element.parent().parent().find('.panel-group')[$allAccordions.length - 1].id;
             function validateAccordion(errors) {
                 $scope.validationErrors = errors;
                 $scope.accordionIsValid = false;
@@ -164,6 +164,14 @@ define(["app"], function (app) {
                         animateSlideOut(false);
                     }
                 });
+                $scope.$on("openThisOne", function (evt, data) {
+                    if (item.id == data) {
+                        $scope.toggleCollapse();
+                    }
+                });
+                $scope.openNext = function () {
+                    $scope.$emit('openNext', item.id);
+                };
 
                 $scope.toggleCollapse = function () {
                     if (!$scope.accordionOpen && !item.$$parent.properties.allowMultipleOpen) {

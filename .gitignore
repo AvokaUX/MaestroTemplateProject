@@ -37,6 +37,7 @@ ehthumbs.db
 Thumbs.db
 
 # others #
+######################
 .idea
 .scm/project-manifest.json
 .project

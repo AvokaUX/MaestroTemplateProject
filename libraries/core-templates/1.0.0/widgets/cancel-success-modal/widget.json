@@ -6,9 +6,10 @@
 				"rows": [
 					[]
 				],
-				"id": "modalBackground_1",
+				"subId": "2f5c018e42eb4132b71ba6445983da7a",
+				"id": "modalBackground_3",
 				"type": "modal-background",
-				"pubId": "cc27f63d92ca4d558d825d7b04e3ce52"
+				"pubId": "7bfe4e20293f46708f87d76d9d0892f7"
 			}
 		],
 		[
@@ -26,33 +27,91 @@
 														[
 															{
 																"properties": {},
-																"id": "modalLogoImage_1",
+																"subId": "759cc4ed2a9240aca14456c79f50aa2c",
+																"id": "modalLogoImage_3",
 																"type": "image",
-																"pubId": "d5c90a94dd3c4db9805963fcc326db48"
+																"pubId": "c83ba1c55bca402cb89c4df6af553f62"
 															}
 														]
 													],
-													"id": "modalLogo_1",
+													"subId": "81604a78df3b4507ba1efa2e349ef3f6",
+													"id": "modalLogo_3",
 													"type": "block",
-													"pubId": "ac0800326c034098b6a333267d77c7bb"
+													"pubId": "5a887ec3dbbe4dc9a0691604b17a37e7"
 												}
 											]
 										],
-										"id": "modalHeader_3",
+										"subId": "10cd185db8f44312a2d007cce8c61074",
+										"id": "modalHeader_7",
 										"type": "form-header",
-										"pubId": "9936d368bdec478ea384b9785c6faceb"
+										"pubId": "a066a1581bd6452b80c13445d4ee5173"
 									}
 								]
 							],
-							"id": "stickyPanelModal_1",
+							"subId": "f85f23c17b944a399f2368733020e9ad",
+							"id": "stickyPanelModal_3",
 							"type": "sticky-panel",
-							"pubId": "588f0d0fe42343309e141b093632d814"
+							"pubId": "711f4c57f7494f388157b5392cbb9558"
 						}
 					]
 				],
-				"id": "modalHeader_2",
+				"subId": "8f9a2f46878a40938967fa6fbdcea360",
+				"id": "modalHeader_6",
 				"type": "block",
-				"pubId": "0ccf4baba9b44aa695120035a164d3a6"
+				"pubId": "565faeda575b465eb9a6fb1e30bf7f0d"
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+							"id": "startANewForm_4",
+							"type": "button",
+							"pubId": "fe10638ddaeb40509df4b7cc19a64722"
+						}
+					]
+				],
+				"properties": {
+					"infoText": "Your Application has been received"
+				},
+				"exclude": true,
+				"subId": "d4a0cd71666b429898edfba3b748599d",
+				"id": "modalContent_3",
+				"type": "section-2",
+				"pubId": "d65bc74d9f4043f9833adb73ecf163dd"
+			}
+		],
+		[
+			{
+				"rows": [
+					[
+						{
+							"rows": [
+								[
+									{
+										"subId": "8c9b02742d3841d8a9c30d826878b6af",
+										"id": "textDisplay_10",
+										"type": "text-display",
+										"pubId": "a3bbf8226e634e89bd683a2f32481642"
+									}
+								]
+							],
+							"subId": "082a0f34bab7496ab942025374652910",
+							"id": "formFooterText_5",
+							"type": "section-2",
+							"pubId": "259c9c77a01e4eb9a414bf02a9aebfe8"
+						}
+					]
+				],
+				"rules": {
+					"sh": "!Util.isReceipt"
+				},
+				"subId": "b4eb8296a924482c880d6c3abca4bb61",
+				"id": "modalFooter_3",
+				"type": "form-footer",
+				"pubId": "80cea6ec78c549eab568a8a54dea2372"
 			}
 		],
 		[
@@ -65,13 +124,17 @@
 								[]
 							],
 							"exclude": false,
-							"id": "extraInformation_1",
 							"type": "block",
-							"pubId": "8e6a4049fcbc4f8882ea9357beb86e92"
+							"id": "extraInformation_1",
+							"pubId": "b1b4559f71dd4141a374743eb57b28f3"
 						}
 					],
 					[
 						{
+							"span": {
+								"md": 4,
+								"lg": 4
+							},
 							"offset": {
 								"md": "4",
 								"lg": "4"
@@ -92,7 +155,7 @@
 										"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
 										"id": "startANewForm_2",
 										"type": "button",
-										"pubId": "b51877edf61b45f58b61fb9df7966120"
+										"pubId": "3318fcfd2f244dd5b45e96c85cc2a45a"
 									},
 									{
 										"styles": [
@@ -108,7 +171,7 @@
 										"subId": "2f32e2834fd4493280fa83492b6b143c",
 										"id": "returnToPortal_1",
 										"type": "button",
-										"pubId": "665ed43d256c42a2b6ca233cede70469"
+										"pubId": "77fa59715a74441b930f9c8d3c33789f"
 									},
 									{
 										"styles": [
@@ -124,53 +187,31 @@
 										"subId": "a2498025348b4969b1ee7b3135ee6c9c",
 										"id": "showFormXml_1",
 										"type": "button",
-										"pubId": "b177e3fad8124e9e8d7c2ee3551dd630"
+										"pubId": "c25c21e127554887858115ea909ae325"
 									}
 								]
 							],
-							"id": "followOnOptions_1",
 							"type": "follow-on-options",
-							"pubId": "9d830f61281144bd9a4398512e00d25d"
+							"exclude": false,
+							"id": "followOnOptions_1",
+							"pubId": "dadacda2d59d41d19960d7fe4537d3dd"
 						}
 					]
 				],
 				"properties": {
 					"infoText": "Your application has been cancelled and will not be processed."
 				},
-				"htmlLabel": "<h1>Application Cancelled</h1>",
-				"id": "modalContent_1",
-				"type": "section-2",
-				"pubId": "a6de1d9af9f04b5eb7f4a18e50e2246e"
-			}
-		],
-		[
-			{
-				"rows": [
-					[
-						{
-							"rows": [
-								[
-									{
-										"path": "",
-										"subId": "8c9b02742d3841d8a9c30d826878b6af",
-										"id": "formFooterText_3",
-										"type": "text-display",
-										"pubId": "d83e9f33fc074681bbbf1b4962941a77"
-									}
-								]
-							],
-							"id": "formFooterText_2",
-							"type": "section-2",
-							"pubId": "7b518d1240674d44b532ccc0f0c8fc56"
-						}
-					]
+				"styles": [
+					"bc-white-background-20804",
+					"bs-center-align-19822",
+					"bs-max-width-73189",
+					"bs-modal-content-96022"
 				],
-				"rules": {
-					"sh": "!Util.isReceipt"
-				},
-				"id": "modalFooter_1",
-				"type": "form-footer",
-				"pubId": "7fe4e869fba34b888829ae078e4bc3fb"
+				"exclude": false,
+				"htmlLabel": "<h1>Application Cancelled</h1>",
+				"type": "section-2",
+				"id": "modalContent_1",
+				"pubId": "c2d1af6c016b436cba10655d1e408d9d"
 			}
 		]
 	],
@@ -181,7 +222,7 @@
 	"exclude": false,
 	"category": "Custom Components",
 	"blockInfo": {
-		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16606",
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/17030",
 		"publishLibraryId": 16680,
 		"blockCode": "cancel-success-modal"
 	}

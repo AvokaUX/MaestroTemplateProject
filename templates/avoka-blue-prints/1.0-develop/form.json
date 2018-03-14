@@ -83,7 +83,9 @@
 					}
 				},
 				"pageController_1": {
-					"properties": {}
+					"properties": {
+						"pageTransition": "Slide"
+					}
 				}
 			},
 			"label": "Default",
@@ -97,6 +99,7 @@
 				"av-button-primary-color": "",
 				"av-button-secondary-color": "",
 				"av-dialog-background": "#000",
+				"av-dialog-background-opacity": "70%",
 				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
@@ -125,6 +128,7 @@
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
+				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
 				"av-slide-menu-extra-item-color": "",
@@ -2431,6 +2435,7 @@
 							"type": "data-field"
 						},
 						{
+							"exclude": false,
 							"id": "docked",
 							"path": "",
 							"type": "data-field"
@@ -2527,50 +2532,6 @@
 														"bs-logo-container-86033"
 													],
 													"type": "block"
-												},
-												{
-													"exclude": false,
-													"htmlLabel": "Fixed progress bar",
-													"id": "block_6",
-													"label": "Fixed progress bar",
-													"path": "",
-													"rows": [
-														[
-															{
-																"exclude": false,
-																"id": "progressBar",
-																"path": "ProgressBar",
-																"type": "progress-bar"
-															}
-														]
-													],
-													"styles": [
-														"bc-white-background-20804",
-														"bs-tramline-container-62540"
-													],
-													"type": "block"
-												},
-												{
-													"exclude": true,
-													"id": "dockingProgressBar",
-													"path": "DockingProgressBar",
-													"properties": {
-														"progressBarHeight": 50
-													},
-													"rows": [
-														[
-															{
-																"exclude": false,
-																"id": "progressBar_1",
-																"path": "ProgressBar",
-																"type": "progress-bar"
-															}
-														]
-													],
-													"styles": [
-														"av-docking-progress-bar"
-													],
-													"type": "docking-progress-bar"
 												}
 											]
 										],
@@ -2605,7 +2566,7 @@
 								]
 							],
 							"rules": {
-								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+								"dc": "//if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
 							},
 							"styles": [],
 							"type": "sticky-panel"
@@ -2614,6 +2575,94 @@
 				],
 				"rules": {},
 				"styles": [],
+				"type": "block"
+			}
+		],
+		[
+			{
+				"exclude": false,
+				"htmlLabel": "Step title",
+				"id": "block_7",
+				"label": "Step title",
+				"path": "",
+				"rows": [
+					[
+						{
+							"exclude": false,
+							"htmlLabel": "{{data.progressBar}}",
+							"id": "textDisplay_12",
+							"label": "",
+							"path": "",
+							"span": {
+								"lg": 6,
+								"md": 6,
+								"sm": 6,
+								"xs": 6
+							},
+							"styles": [
+								"av-form-field",
+								"av-moolah-step-title-43505"
+							],
+							"type": "text-display"
+						},
+						{
+							"exclude": false,
+							"htmlLabel": "deposit account",
+							"id": "textDisplay_13",
+							"label": "deposit account",
+							"path": "",
+							"span": {
+								"lg": 6,
+								"md": 6,
+								"sm": 6,
+								"xs": 6
+							},
+							"styles": [
+								"av-form-field",
+								"av-moolah-account-type-15664"
+							],
+							"type": "text-display"
+						}
+					]
+				],
+				"styles": [
+					"bs-max-width-73189"
+				],
+				"type": "block"
+			}
+		],
+		[
+			{
+				"exclude": false,
+				"htmlLabel": "Progress bar",
+				"id": "block_6",
+				"label": "Progress bar",
+				"path": "",
+				"rows": [
+					[
+						{
+							"exclude": false,
+							"id": "progressBar",
+							"path": "ProgressBar",
+							"properties": {
+								"willDock": false
+							},
+							"rules": {
+								"eq": "var groups = $('Form').scope().Form.$Pages.groups;\nvar currentStep;\nfor (var i=0; i<groups.length; i++) {\n\tif(groups[i].$navSelected) currentStep = i+1;\n}\nconsole.log(currentStep);\nreturn \"Step \" + currentStep + \": \" + $('Form').scope().Form.$Pages.currentPage.$navGroup.label;"
+							},
+							"styles": [
+								"av-progress-bar",
+								"av-blueprints-progress-bar-49390"
+							],
+							"type": "progress-bar"
+						}
+					]
+				],
+				"styles": [
+					"bc-white-background-20804",
+					"bs-tramline-container-62540",
+					"bs-max-width-73189"
+				],
 				"type": "block"
 			}
 		],
@@ -2819,6 +2868,11 @@
 				"styles": [
 					"bs-bottom-nav-15636"
 				],
+				"rules": {},
+				"styles": [
+					"bs-min-height-64689",
+					"bs-max-width-73189"
+				],
 				"type": "block"
 			}
 		],
@@ -2913,38 +2967,6 @@
 					"nav-bar-73803"
 				],
 				"type": "block"
-			}
-		],
-		[
-			{
-				"id": "formFooter",
-				"path": "",
-				"rows": [
-					[
-						{
-							"exclude": false,
-							"htmlLabel": "",
-							"id": "footerSection",
-							"label": "",
-							"path": "",
-							"rows": [
-								[
-									{
-										"id": "formFooterText_7",
-										"path": "",
-										"type": "text-display"
-									}
-								]
-							],
-							"styles": [
-								"mg-section-2",
-								"bs-max-width-73189"
-							],
-							"type": "section-2"
-						}
-					]
-				],
-				"type": "form-footer"
 			}
 		],
 		[
@@ -3919,6 +3941,7 @@
 		"progress-bar": {
 			"availableStyles": [
 				"align-top",
+				"av-blueprints-progress-bar-49390",
 				"progress-bar-ben"
 			],
 			"properties": {}
@@ -4117,7 +4140,9 @@
 				"submit-success-message",
 				"bs-center-align-19822",
 				"bs-docked-error-63227",
-				"av-form-field"
+				"av-form-field",
+				"av-moolah-account-type-15664",
+				"av-moolah-step-title-43505"
 			],
 			"properties": {}
 		},

@@ -1,8 +1,8 @@
 {
 	"block": {},
 	"file": "style.less",
-	"label": "AV-blue-prints-background",
+	"label": "av-blueprints-progress-bar",
 	"widgets": [
-		"block"
+		"progress-bar"
 	]
 }
