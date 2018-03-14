@@ -151,5 +151,6 @@
 		"blockCode": "floating-functional-component"
 	},
 	"description": "",
-	"id": "formHeaderMain"
+	"id": "formHeaderMain",
+	"styles": ["av-form-header"]
 }

@@ -11,7 +11,7 @@
 	"propDefs": {
 		"offMenu": {
 			"label": "Hide Navigator",
-			"category": "Options",
+			"category": "Page View",
 			"type": "boolean",
 			"helpText": "A page that is in the flow of the form but not displayed in the menu",
 			"value": false,
@@ -19,28 +19,28 @@
 		},
 		"hideFormHeader": {
 			"label": "Hide Header",
-			"category": "Options",
+			"category": "Page View",
 			"type": "boolean",
 			"value": false,
 			"order": 2
 		},
 		"hideNavButtons": {
 			"label": "Hide Navigation Buttons",
-			"category": "Options",
+			"category": "Page View",
 			"type": "boolean",
 			"value": false,
 			"order": 3
 		},
 		"hideMenuButton": {
 			"label": "Hide Menu Button",
-			"category": "Options",
+			"category": "Page View",
 			"type": "boolean",
 			"value": false,
 			"order": 4
 		},
 		"pageOfNoReturn": {
 			"label": "Page of no return",
-			"category": "Options",
+			"category": "Page View",
 			"type": "boolean",
 			"helpText": "The user will not be able to navigate back past this page",
 			"value": "",
@@ -48,7 +48,7 @@
 		},
 		"fullPage": {
 			"label": "Full Page",
-			"category": "Options",
+			"category": "Page View",
 			"type": "boolean",
 			"helpText": "Page spans full width and height of browser window",
 			"value": "",
@@ -56,7 +56,7 @@
 		},
 		"menuText": {
 			"label": "Menu Text",
-			"category": "Display Text",
+			"category": "Page View",
 			"type": "richText",
 			"helpText": "This Text will be used in the Navigator Menu instead of Page label",
 			"value": "",

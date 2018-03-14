@@ -3,7 +3,8 @@ define(["app"], function(app) {
             function($scope, $element, Form, Resource, Validation, Util, $timeout) {    
               Form.getItem($scope, $element).then(function (item) {
 				var data = $scope.data;
-				var dockPosition = item.properties.dockPosition;
+				var dockPosition = Form.view.brands[Form.view.selectedBrand].styleVars['av-docking-point'];
+				dockPosition = parseInt(dockPosition.substr(0, dockPosition.length-2));
 				$(window).scroll(function(event){
 				  var st = $(this).scrollTop();
 				  if (st > dockPosition) st = dockPosition; 

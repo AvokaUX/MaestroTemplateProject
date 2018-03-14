@@ -6,8 +6,8 @@
 		<div class="progress-page-title-container" data-ng-if="false">
 			<div class="wdg-progress-page-title" data-ng-repeat="page in Form.$Pages.flatPages | filter : visiblePageFilter" data-ng-bind-html="page.label"></div>
 		</div>
-		<div class="progress-wrapper">
-			<div class="progress-bar-wrapper">
+        <div class="progress-wrapper">
+            <div class="progress-bar-wrapper">
 				<div class="wdg-progress-bar-background"></div>
 				<div data-ng-style="{'width': ((100 / Form.getNavPageCount()) * Form.getCurrentPageNumber()) + '%'}" class="wdg-progress-bar"></div>
 				<ol class="wdg-page-group-icon-container">

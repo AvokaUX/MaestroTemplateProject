@@ -3,7 +3,6 @@ define(["app"], function (app) {
         Form.getItem($scope, $element).then(function (item) {
             var data = $scope.data;
             data.blockNext = "";
-            data.pageChangeAnimation = "";
         });
     }]);
 });

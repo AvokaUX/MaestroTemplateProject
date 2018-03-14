@@ -3,13 +3,14 @@ define(["app"], function(app) {
             function($scope, $element, Form, Resource, Validation, Util, $timeout) {    
               Form.getItem($scope, $element).then(function (item) {
 				var data = $scope.data;
-				$scope.dp = Form.getItemProperty("data.dockingController","dockPosition");
-				$scope.pbh = Form.getItemProperty("data.dockingProgressBar","progressBarHeight");
+				var dockPosition = Form.view.brands[Form.view.selectedBrand].styleVars['av-docking-point'];
+				var progressBarHeight = Form.view.brands[Form.view.selectedBrand].styleVars['av-progressbar-height'];
+				$scope.dp = parseInt(dockPosition.substr(0, dockPosition.length-2));
+				$scope.pbh = parseInt(progressBarHeight.substr(0, progressBarHeight.length-2));
 				$scope.$watch("data.scrollPosition", function(newValue, oldValue) {
 					if (!data.errorsDockLock) {
                         data.dockErrors = (!($(".av-menu-errors:visible").length > 0) || !data.undocked);
                     }
-					//$element.css({"top": item.properties.progressBarHeight * (1 - newValue/$scope.dp) + "px"});
                     $element.css({"top": $scope.pbh * (1 - newValue/$scope.dp) + "px"});
 				 });
 			  });

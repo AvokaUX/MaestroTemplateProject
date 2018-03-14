@@ -1,5 +1,5 @@
 form[name='form'] {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 form[name='form'] [data-view-stack] .av-menu-page {
   min-height: 100vh;
@@ -16,36 +16,43 @@ form[name='form'] [data-view-stack] > *, form[name='form'] [view-stack] > * {
   transform: none;
 }
 
-form[name='form'].page-transition-fade [data-view-stack] .vstk-in, form[name='form'].page-transition-none [data-view-stack] .vstk-in {
+form[name='form'] .page-transition-fade [data-view-stack] .vstk-in, form[name='form'] .page-transition-none [data-view-stack] .vstk-in {
   opacity: 1;
 }
 
-form[name='form'].page-transition-fade [data-view-stack] .vstk-out, form[name='form'].page-transition-none [data-view-stack] .vstk-out {
+form[name='form'] .page-transition-fade [data-view-stack] .vstk-out, form[name='form'] .page-transition-none [data-view-stack] .vstk-out {
   visibility: hidden;
   opacity: 0;
   transform: none;
 }
 
-form[name='form'].page-transition-slide [data-view-stack] .vstk-up {
-  -webkit-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  transform: translateX(200%);
+form[name='form'] .page-transition-slide [data-view-stack] .vstk-up, form[name='form'] .page-transition-slide.Nav-To-Right .vstk-out.ng-enter {
+  -webkit-transform: translateX(150%);
+  -ms-transform: translateX(150%);
+  transform: translateX(150%);
 }
 
-form[name='form'].page-transition-slide [data-view-stack] .vstk-down {
-  -webkit-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
-  transform: translateX(-200%);
+form[name='form'] .page-transition-slide [data-view-stack] .vstk-down, form[name='form'] .page-transition-slide.Nav-To-Left .vstk-out.ng-enter {
+  -webkit-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  transform: translateX(-150%);
 }
 
-form[name='form'].page-transition-slide.Nav-To-Right .vstk-out.ng-enter {
-  transform: translateX(200%);
+@media only screen and (max-width: 1280px) {
+  form[name='form'] .page-transition-slide [data-view-stack] .vstk-up, form[name='form'] .page-transition-slide.Nav-To-Right .vstk-out.ng-enter {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  form[name='form'] .page-transition-slide [data-view-stack] .vstk-down, form[name='form'] .page-transition-slide.Nav-To-Left .vstk-out.ng-enter {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }
 
-form[name='form'].page-transition-slide.Nav-To-Left .vstk-out.ng-enter {
-  transform: translateX(-200%);
-}
-form[name='form'].page-transition-none [data-view-stack] > *, form[name='form'].page-transition-none [view-stack] > * {
+form[name='form'] .page-transition-none [data-view-stack] > *, form[name='form'] .page-transition-none [view-stack] > * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;

@@ -225,7 +225,7 @@
 														"av-docking-progress-bar"
 													],
 													"properties": {
-														"progressBarHeight": 75
+														"progressBarHeight": 50
 													},
 													"exclude": false,
 													"path": "DockingProgressBar",
@@ -439,7 +439,6 @@
 				"exclude": false,
 				"rules": {},
 				"styles": [
-					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
 				"type": "block",
@@ -1075,7 +1074,6 @@
 				"bs-floating-right-29171",
 				"bs-functional-menu-10498",
 				"bs-max-width-73189",
-				"bs-min-height-64689",
 				"bs-primary-background-02324",
 				"bs-text-align-right-83697",
 				"bs-tramline-container-62540",
@@ -1938,7 +1936,7 @@
 			"itemOptions": {
 				"dockingProgressBar": {
 					"properties": {
-						"progressBarHeight": 75
+						"progressBarHeight": 50
 					}
 				},
 				"functionalMenuFabMenu": {

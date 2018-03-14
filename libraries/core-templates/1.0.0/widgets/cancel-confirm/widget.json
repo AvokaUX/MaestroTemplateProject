@@ -399,6 +399,19 @@
 										"label": "Confirm",
 										"exclude": false,
 										"htmlLabel": "Confirm",
+										"propDefs": {
+											"dialogNavButtons": {
+												"label": "Dialog Nav Buttons",
+												"type": "option",
+												"value": "abandon",
+												"options": [
+													{
+														"label": "Abandon Form",
+														"value": "abandon"
+													}
+												]
+											}
+										},
 										"path": "",
 										"rules": {},
 										"subId": "5e49ce4ad21c4dbb96b865b096c67eea",

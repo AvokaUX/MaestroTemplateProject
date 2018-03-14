@@ -1,14 +1,25 @@
 form[name='form'] {
-	.av-background-image {
-		position: fixed;
-        width: 100vw;
-        height: 100vh;
-      	top: 0;
-      	left: 0;       
-        
-      /* Extra Small Devices, Phones */ 
-      @media (max-width : @screen-sm) {
-        display: none;
+  .av-background-image {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    /* Extra Small Devices, Phones */
+    @media (max-width : @screen-md) {
+      &.av-minimise-background {
+        top: @av-header-height;
+        height: @av-progressbar-height;
+        position: absolute;
+        &:before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(100, 118, 127, 0.67);
+        }
       }
-	}
+    }
+  }
 }

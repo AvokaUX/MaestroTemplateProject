@@ -1,8 +1,8 @@
 {
-	"label": "AV section fullpage",
 	"block": {},
 	"file": "style.less",
+	"label": "AV Stepper Text",
 	"widgets": [
-		"section-fullpage"
+		"text-display"
 	]
 }

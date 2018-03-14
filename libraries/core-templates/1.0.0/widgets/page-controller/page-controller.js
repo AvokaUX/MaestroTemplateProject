@@ -10,6 +10,10 @@ define(["app"], function(app) {
 					Form.getItem($scope, $element).then(function(item) {
 						$scope.item = item;
 
+                        var data = $scope.data;
+                        data.pageChangeDirection = "";
+                        data.pageChangeAnimation = "";
+
 						if(Resource.design && Form.dialog) return;
 
                         // if for example the user goes to a modal page and then back to form, preserve state.

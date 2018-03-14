@@ -162,6 +162,42 @@
 										],
 										"pubId": "fd74176fc1154642871b572034d297fb",
 										"path": "",
+										"propDefs": {
+											"dialogNavButtons": {
+												"label": "Dialog Nav Buttons",
+												"type": "option",
+												"helpText": "Select the buttons to include in nav bar.",
+												"value": "open",
+												"options": [
+													{
+														"label": "Open Form",
+														"value": "open"
+													}
+												],
+												"order": 1
+											},
+											"trackingCodeField": {
+												"label": "Tracking Code Field",
+												"category": "Configuration",
+												"type": "fieldRef",
+												"helpText": "The tracking code field to link to.",
+												"value": ""
+											},
+											"challengeAnswerField": {
+												"label": "Challenge Answer Field",
+												"category": "Configuration",
+												"type": "fieldRef",
+												"helpText": "The challenge answer field to link to.",
+												"value": ""
+											},
+											"validationRef": {
+												"label": "Block Or Field To Validate",
+												"type": "text",
+												"value": "",
+												"helpText": "Block Or Field To Validate.",
+												"order": 3
+											}
+										},
 										"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
 										"id": "dialogFooterBlock",
 										"type": "block"

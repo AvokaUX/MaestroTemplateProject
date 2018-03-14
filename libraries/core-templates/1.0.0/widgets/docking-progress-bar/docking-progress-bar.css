@@ -13,6 +13,11 @@ form[name='form'] .av-progress-bar-banner {
     width: 99999px;
     z-index: 10;
 }
+@media (max-width : 400px) {
+    form[name='form'] div.av-progress-bar-banner {
+        background-color: transparent;
+    }
+ }
 form[name='form'] .av-docking-block {
     position:relative;    
     float: right;

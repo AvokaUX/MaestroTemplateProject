@@ -1,10 +1,14 @@
 form[name='form'] [data-view-stack] > *, form[name='form'] [view-stack] > * {
-  position: absolute;
+  //position: absolute;
   width: 100%;
 }
 form[name='form'] .av-landing-page .wdg-section-1-body {
+  display: table;
   height: 100vh;
+  width: calc(100% - 40px);
 }
 form[name='form'] .av-landing-page .wdg-section-1-body > .row {
+  display: table-cell;
   height: 100%;
+  vertical-align: middle;
 }

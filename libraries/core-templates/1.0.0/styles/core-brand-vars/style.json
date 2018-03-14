@@ -262,6 +262,20 @@
 			"label": "Header Height",
 			"category": "Form Header",
 			"defaultValue": "75px"
+		},
+		{
+			"name": "av-stepperav-progressbar-height",
+			"type": "px",
+			"label": "Progress Bar Height",
+			"category": "Form Header",
+			"defaultValue": "50px"
+		},
+		{
+			"name": "av-docking-point",
+			"type": "px",
+			"label": "Dock when user scrolls this far",
+			"category": "Other",
+			"defaultValue": "50px"
 		}
 	]
 }

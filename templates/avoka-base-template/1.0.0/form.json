@@ -52,7 +52,7 @@
 			"itemOptions": {
 				"dockingProgressBar": {
 					"properties": {
-						"progressBarHeight": 75
+						"progressBarHeight": 50
 					}
 				},
 				"functionalMenuFabMenu": {
@@ -100,6 +100,7 @@
 				"av-button-secondary-color": "",
 				"av-dialog-background": "#000",
 				"av-dialog-background-opacity": "70%",
+				"av-docking-point": "50px",
 				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
@@ -126,8 +127,9 @@
 				"av-primary-contrast": "#64767f",
 				"av-progressbar-background": "#64767F",
 				"av-progressbar-background-opacity": "70%",
+				"av-progressbar-height": "50px",
 				"av-secondary-color": "#454753",
-				"av-secondary-contrast": "#64767f",
+				"av-secondary-contrast": "#ffffff",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
@@ -945,7 +947,6 @@
 		]
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -1076,11 +1077,16 @@
 						"rows": [
 							[
 								{
+									"exclude": false,
 									"id": "stickyPanelModal_1",
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "modalHeader_3",
+												"properties": {
+													"showTrackingCode": false
+												},
 												"rows": [
 													[
 														{
@@ -1111,6 +1117,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"htmlLabel": "<h1>Application Cancelled</h1>",
 						"id": "modalContent_1",
 						"label": "Application Cancelled",
@@ -1130,6 +1137,7 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "followOnOptions_1",
 									"offset": {
 										"lg": "4",
@@ -1172,6 +1180,10 @@
 											}
 										]
 									],
+									"span": {
+										"lg": 4,
+										"md": 4
+									},
 									"type": "follow-on-options"
 								}
 							]
@@ -1181,6 +1193,7 @@
 				],
 				[
 					{
+						"exclude": true,
 						"id": "modalFooter_1",
 						"rows": [
 							[
@@ -1326,7 +1339,11 @@
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "modalHeader_1",
+												"properties": {
+													"showTrackingCode": false
+												},
 												"rows": [
 													[
 														{
@@ -1522,9 +1539,7 @@
 												"rules": {
 													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus != \"success\" : true)"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1574,9 +1589,7 @@
 												"rules": {
 													"sh": "((Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1662,9 +1675,7 @@
 												"rules": {
 													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus != \"success\": true;"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1717,9 +1728,7 @@
 												"rules": {
 													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus == \"success\": false;"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										]
@@ -1729,6 +1738,7 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "followOnOptions",
 									"offset": {
 										"lg": "4",
@@ -1771,6 +1781,10 @@
 											}
 										]
 									],
+									"span": {
+										"lg": 4,
+										"md": 4
+									},
 									"type": "follow-on-options"
 								}
 							]
@@ -1786,6 +1800,7 @@
 				],
 				[
 					{
+						"exclude": true,
 						"id": "modalFooter",
 						"rows": [
 							[
@@ -1815,6 +1830,7 @@
 			"type": "bs-modal-page"
 		},
 		"submitsuccess": {
+			"exclude": false,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
@@ -1917,6 +1933,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "modalBackground_6",
 						"rows": [
 							[]
@@ -1934,7 +1951,11 @@
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "modalHeader_13",
+												"properties": {
+													"showTrackingCode": false
+												},
 												"rows": [
 													[
 														{
@@ -1965,6 +1986,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"htmlLabel": "<h1>Application Received</h1>",
 						"id": "modalContent_6",
 						"label": "Application Received",
@@ -2054,9 +2076,7 @@
 												"rules": {
 													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus != \"success\" : true)"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -2085,9 +2105,7 @@
 												"rules": {
 													"sh": "Form.data.SFMData.SystemProfile.hasOwnProperty('Job') && Form.data.SFMData.SystemProfile.Job.hasOwnProperty('StepTasks') && Form.data.SFMData.SystemProfile.Job.StepTasks.Task.length > 0"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -2136,7 +2154,8 @@
 													]
 												],
 												"styles": [
-													"reference-code-block"
+													"reference-code-block",
+													"av-message-block"
 												],
 												"type": "block"
 											}
@@ -2197,9 +2216,7 @@
 												"rules": {
 													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										]
@@ -2209,6 +2226,7 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "followOnOptions_3",
 									"offset": {
 										"lg": "4",
@@ -2251,6 +2269,10 @@
 											}
 										]
 									],
+									"span": {
+										"lg": 4,
+										"md": 4
+									},
 									"type": "follow-on-options"
 								}
 							]
@@ -2266,6 +2288,7 @@
 				],
 				[
 					{
+						"exclude": true,
 						"id": "modalFooter_6",
 						"rows": [
 							[
@@ -2467,6 +2490,9 @@
 				"rows": [
 					[]
 				],
+				"rules": {
+					"dc": "return Form.$Pages && Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.fullPage ? \"av-minimise-background\" : \"\";"
+				},
 				"styles": [
 					"av-background-image"
 				],
@@ -2475,12 +2501,16 @@
 		],
 		[
 			{
+				"animateVisibility": false,
 				"exclude": false,
 				"id": "formHeader1",
 				"rows": [
 					[
 						{
 							"id": "stickyPanel1",
+							"properties": {
+								"floatOver": true
+							},
 							"rows": [
 								[
 									{
@@ -2496,7 +2526,7 @@
 																"properties": {
 																	"src": {
 																		"fileName": "avoka-logo.png",
-																		"height": "42",
+																		"height": "40",
 																		"width": "52"
 																	}
 																},
@@ -2508,9 +2538,6 @@
 												},
 												{
 													"id": "dockingProgressBar",
-													"properties": {
-														"progressBarHeight": 75
-													},
 													"rows": [
 														[
 															{
@@ -2549,8 +2576,9 @@
 						}
 					]
 				],
-				"rules": {},
-				"styles": [],
+				"rules": {
+					"sh": "Form.$Pages && Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.hideFormHeader;"
+				},
 				"type": "form-header-main"
 			}
 		],
@@ -2590,16 +2618,25 @@
 											[
 												{
 													"exclude": false,
-													"id": "section",
+													"id": "section_2",
+													"path": "",
+													"properties": {
+														"fullPage": true
+													},
 													"rows": [
-														[]
+														[
+															{
+																"exclude": false,
+																"id": "button_4",
+																"path": "",
+																"rules": {
+																	"click": "Form.$Pages.move(true);"
+																},
+																"type": "button"
+															}
+														]
 													],
-													"styles": [
-														"mg-section-2",
-														"av-section",
-														"fullpage-section-36560"
-													],
-													"type": "section-fullpage"
+													"type": "section-2"
 												}
 											]
 										],
@@ -2632,16 +2669,18 @@
 							],
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
-								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];",
-								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
+								"dc": "return [data.pageChangeAnimation, data.pageChangeDirection];",
+								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = \"page-transition-\" + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n\nif (Form.getItemProperty(info.from, \"fullPage\") || Form.getItemProperty(info.to, \"fullPage\") || (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage)) {\n  pageTransition = \"page-transition-fade\";\n}\ndata.pageChangeAnimation = pageTransition;\n\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeDirection = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\n\nif (pageTransition == \"page-transition-slide\") {\n  var _scroll = $(window).scrollTop();\n  var dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\n  if (data.docked){\n    $(window).scrollTop(dp);\n    $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n  }\n  $(\"#\" + pageTo.id).css(\"top\", \"0\");\n}"
 							},
+							"styles": [
+								"av-page-transition"
+							],
 							"type": "page-controller"
 						}
 					]
 				],
 				"rules": {},
 				"styles": [
-					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
 				"type": "block"
@@ -2667,7 +2706,6 @@
 					],
 					[
 						{
-							"exclude": false,
 							"id": "submit2",
 							"span": {
 								"lg": 2,
@@ -3057,11 +3095,22 @@
 			}
 		]
 	],
-	"rules": {
-		"dc": "var pageTransition = \"\";\nif (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage ) {\n  pageTransition = \"page-transition-none\";\n} else {\n  pageTransition = 'page-transition-' + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n}\nreturn [data.pageChangeAnimation, pageTransition];"
-	},
+	"rules": {},
 	"selectedBrand": "Default",
-	"styleMods": {},
+	"styleMods": {
+		"id-followOnOptions_3": {
+			"blocks": {},
+			"decs": {
+				"padding-top": "42px"
+			}
+		},
+		"id-section_4": {
+			"blocks": {},
+			"decs": {
+				"padding-bottom": "42px"
+			}
+		}
+	},
 	"styles": [
 		"mg-base",
 		"mg-form",
@@ -3144,45 +3193,43 @@
 		},
 		"block": {
 			"availableStyles": [
-				"align-top",
-				"av-section",
 				"av-background-image",
+				"av-section",
+				"align-top",
+				"bs-ben-test-63099",
+				"bs-bottom-nav-15636",
+				"bs-dialog-navigation-56885",
+				"bs-fab-menu-background-88907",
+				"bs-fade-transition-50987",
+				"bs-fan-menu-mask-86056",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
 				"bs-floating-layer-60091",
 				"bs-floating-right-29171",
+				"bs-form-header-34876",
+				"bs-form-name-03674",
+				"bs-full-screen-layer-18272",
+				"bs-functional-bar-background-56524",
 				"bs-functional-menu-10498",
 				"bs-max-width-73189",
-				"bs-min-height-64689",
-				"bs-primary-background-02324",
+				"bs-progress-banner-76461",
 				"bs-text-align-right-83697",
+				"bs-top-navigation-bar-05168",
+				"bs-top-navigation-container-95011",
 				"bs-tramline-container-62540",
 				"bs-transparent-background-93141",
+				"bs-dialog-footer-10282",
+				"bs-header-background-58145",
+				"bs-logo-container-86033",
+				"bs-test-progress-container-15954",
+				"bs-top-nav-container-18605",
 				"dialog-content",
 				"follow-on-options-block",
+				"nav-bar-73803",
 				"pull-right",
 				"reference-code-block",
 				"mg-selector-block",
-				"bs-form-name-03674",
-				"bs-functional-bar-background-56524",
-				"bs-full-screen-layer-18272",
-				"bs-fade-transition-50987",
-				"bs-bottom-nav-15636",
-				"bs-dialog-navigation-56885",
-				"bs-navigator-background-70332",
-				"bs-top-navigation-bar-05168",
-				"bs-top-navigation-container-95011",
-				"bs-fan-menu-mask-86056",
-				"nav-bar-73803",
-				"bs-fab-menu-background-88907",
-				"bs-dialog-footer-10282",
-				"bs-ben-test-63099",
-				"bs-test-progress-container-15954",
-				"bs-top-nav-container-18605",
-				"bs-logo-container-86033",
-				"bs-header-background-58145",
-				"bs-progress-banner-76461",
-				"bs-form-header-34876"
+				"av-message-block"
 			],
 			"properties": {}
 		},
@@ -3506,6 +3553,13 @@
 			],
 			"properties": {}
 		},
+		"form-header-main": {
+			"availableStyles": [
+				"av-form-header",
+				"align-top"
+			],
+			"properties": {}
+		},
 		"icon-button": {
 			"availableStyles": [
 				"align-top",
@@ -3705,8 +3759,9 @@
 		},
 		"page-controller": {
 			"availableStyles": [
+				"align-top",
 				"page-fade-transition",
-				"align-top"
+				"av-page-transition"
 			],
 			"properties": {}
 		},
@@ -3878,17 +3933,17 @@
 		},
 		"section-2": {
 			"availableStyles": [
-				"align-top",
 				"av-section",
-				"bs-transparent-background-93141",
-				"form-help-visit-us",
-				"mg-section-2",
-				"bs-max-width-73189",
+				"align-top",
 				"bs-center-align-19822",
-				"bs-save-dialog-text-82753",
-				"bs-modal-content-96022",
+				"bs-max-width-73189",
+				"bs-transparent-background-93141",
 				"bs-dialog-content-scroll-92184",
-				"fullpage-section-36560"
+				"bs-modal-content-96022",
+				"bs-save-dialog-text-82753",
+				"form-help-visit-us",
+				"fullpage-section-36560",
+				"mg-section-2"
 			],
 			"properties": {
 				"topToBottom": true

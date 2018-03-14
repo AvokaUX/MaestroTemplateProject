@@ -31,11 +31,11 @@ form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper 
 }
 
 form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help {
-   top: 35px;
-   left: 50%;
-   margin-left: 0;
-   transform: translateX(-125px);
- }
+  top: 35px;
+  left: 50%;
+  margin-left: 0;
+  transform: translateX(-125px);
+}
 form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help .popover-tooltip {
   max-width: 250px;
 }
@@ -71,8 +71,8 @@ form[name='form'] .progress-container .wdg-page-group-icon-container {
   padding: 0;
 }
 
-form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-page-icon:before {
-  /*content: none;*/
+form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-page-icon:after {
+  content: none;
 }
 form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-group-icon:before {
   /*left: 7px;*/
@@ -102,7 +102,7 @@ form[name='form'] .progress-container .wdg-page-segment-container .wdg-progress-
 }
 
 
-form[name='form'] .progress-container .wdg-page-segment-container.show-page-icon:before {
+form[name='form'] .progress-container .wdg-page-segment-container.show-page-icon:after {
   content: "";
   position: absolute;
   height: 6px;

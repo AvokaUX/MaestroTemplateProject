@@ -2,5 +2,14 @@ form[name='form'] {
 	.av-message-block {
 		padding: 16px 32px 32px 32px;
 		margin-bottom: 15px;
+		.override-color(background-color, @av-neutral-contrast, fade(@av-msg-section-background, @av-msg-section-background-opacity));
+		.override-color(color, @av-neutral-color, @av-msg-font-color);
+
+		.message-heading, .message-icon {
+			.override-color(color, @av-primary-color, @av-msg-heading-font-color);
+		}
+		.message {
+			.override-color(color, @av-neutral-color, @av-msg-font-color);
+		}
 	}
 }

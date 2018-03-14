@@ -1,4 +1,4 @@
-<section role="region" class="av-section-fullpage wdg-section-2 row">
+<section role="region" class="wdg-section-2 row" data-ng-class="{'av-section-fullpage': item.properties.fullPage}">
     <button data-ng-if="item.properties.collapsibleSection && !avReceipt"
             class="wdg-section-2-collapse-button" type="button"
             data-ng-init="$parent.isCollapsed[item.id] = Resource.design ? false : item.properties.collapsedOnInit"

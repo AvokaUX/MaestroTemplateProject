@@ -2,6 +2,9 @@
 
 form[name="form"] {
   .wdg-section-1-container {
+    &.av-progressbar-showing {
+      min-height: ~"calc(100vh + @{av-docking-point})";
+    }
     &.panel{
     	background-color:transparent;
     }
