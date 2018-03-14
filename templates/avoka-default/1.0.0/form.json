@@ -1,8 +1,8 @@
 {
 	"blockInfo": {
 		"designVersion": "1.0.0",
-		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/15460",
-		"publishLibraryId": 16680
+		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/16655",
+		"publishLibraryId": 16569
 	},
 	"brandOptions": {
 		"dockingProgressBar": [
@@ -39,19 +39,22 @@
 				"category": "Page Controller",
 				"label": "Page Transition",
 				"path": "properties.pageTransition"
-			}
-		],
-		"pageController_1": [
+			},
 			{
 				"category": "Page Controller",
-				"label": "Page Transition",
-				"path": "properties.pageTransition"
+				"label": "Page Transition Delay",
+				"path": "properties.transitionDelay"
 			}
 		]
 	},
 	"brands": {
-		"Blue Sky": {
+		"Default": {
 			"itemOptions": {
+				"dockingProgressBar": {
+					"properties": {
+						"progressBarHeight": 50
+					}
+				},
 				"functionalMenuFabMenu": {
 					"properties": {}
 				},
@@ -72,17 +75,17 @@
 					],
 					"properties": {
 						"src": {
-							"fileName": "avoka-logo.png"
+							"fileName": "avoka-logo.png",
+							"height": "40",
+							"width": "52"
 						}
 					}
 				},
-				"pageController": {
-					"properties": {
-						"pageTransition": "Fade"
-					}
+				"pageController_1": {
+					"properties": {}
 				}
 			},
-			"label": "Blue Sky",
+			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
 				"av-button-contrast": "",
@@ -99,7 +102,6 @@
 				"av-form-background-color": "#FFFFFF",
 				"av-form-inner-background-color": "#FFFFFF",
 				"av-header-height": "75px",
-				"av-hover-color": "",
 				"av-max-form-width": "999999px",
 				"av-menu-active-text-color": "",
 				"av-menu-color": "",
@@ -121,107 +123,7 @@
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
-				"av-slide-menu-color": "#005280",
-				"av-slide-menu-extra-item-active-color": "",
-				"av-slide-menu-extra-item-color": "",
-				"av-slide-menu-extra-item-hover-color": "",
-				"av-slide-menu-extra-item-pointer-active-color": "",
-				"av-slide-menu-extra-item-pointer-color": "",
-				"av-slide-menu-extra-item-pointer-hover-color": "",
-				"av-slide-menu-extra-item-text-active-color": "",
-				"av-slide-menu-extra-item-text-color": "",
-				"av-slide-menu-extra-item-text-hover-color": "",
-				"av-slide-menu-item-active-color": "",
-				"av-slide-menu-item-color": "",
-				"av-slide-menu-item-hover-color": "",
-				"av-slide-menu-item-pointer-active-color": "#f39900",
-				"av-slide-menu-item-pointer-color": "#f39900",
-				"av-slide-menu-item-pointer-hover-color": "#f39900",
-				"av-slide-menu-item-text-active-color": "",
-				"av-slide-menu-item-text-color": "",
-				"av-slide-menu-item-text-hover-color": "",
-				"av-sub-menu-active-background-color": "#FFFFFF",
-				"av-sub-menu-active-text-color": "#005280",
-				"av-sub-menu-background-color": "#FFFFFF",
-				"av-sub-menu-background-hover-color": "#EEEEEE",
-				"av-sub-menu-text-color": "#005280",
-				"av-sub-menu-text-hover-color": "#005280",
-				"av-touch-button-color": "",
-				"mobile-page-gutters": "15px",
-				"page-gutters": "40px"
-			}
-		},
-		"Default": {
-			"itemOptions": {
-				"functionalMenuFabMenu": {
-					"properties": {}
-				},
-				"logo": {
-					"linkedItems": [
-						{
-							"id": "submit_success_logo",
-							"path": "properties.src"
-						},
-						{
-							"id": "save_success_logo",
-							"path": "properties.src"
-						},
-						{
-							"id": "cancel_success_logo",
-							"path": "properties.src"
-						}
-					],
-					"properties": {
-						"src": {
-							"fileName": "avoka-logo.png"
-						}
-					}
-				},
-				"pageController": {
-					"properties": {
-						"pageTransition": "Fade"
-					}
-				}
-			},
-			"label": "Default",
-			"styleVars": {
-				"av-body-background-color": "#FFFFFF",
-				"av-button-contrast": "",
-				"av-button-docking-color": "",
-				"av-button-docking-contrast": "",
-				"av-button-docking-font-color": "",
-				"av-button-font-size": "16px",
-				"av-button-primary-color": "",
-				"av-button-secondary-color": "",
-				"av-dialog-background": "#000",
-				"av-focus-color": "",
-				"av-font-color": "#333333",
-				"av-font-family": "Arial, Helvetica, sans-serif",
-				"av-form-background-color": "#FFFFFF",
-				"av-form-inner-background-color": "#FFFFFF",
-				"av-header-height": "75px",
-				"av-hover-color": "",
-				"av-max-form-width": "1020px",
-				"av-menu-active-text-color": "",
-				"av-menu-color": "",
-				"av-menu-color-active": "",
-				"av-menu-font-size": "13px",
-				"av-menu-height": "57px",
-				"av-menu-hover-color": "",
-				"av-menu-text-color": "",
-				"av-menu-text-hover-color": "",
-				"av-neutral-color": "#F2F2F2",
-				"av-neutral-contrast": "#8C8C8C",
-				"av-popover-help": "#0C384B",
-				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#FF6405",
-				"av-primary-contrast": "#FFFFFF",
-				"av-secondary-color": "#FFFFFF",
-				"av-secondary-contrast": "#0C384B",
-				"av-section-1-header-color": "#202B34",
-				"av-section-1-title-font-size": "30px",
-				"av-section-2-header-color": "#202B34",
-				"av-section-2-title-font-size": "21px",
+				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
 				"av-slide-menu-extra-item-color": "",
@@ -259,19 +161,13 @@
 		"1280"
 	],
 	"childExtensions": [
-		"background",
-		"logo",
-		"pageController"
+		"pageController",
+		"background"
 	],
 	"clearHidden": "no",
 	"dialogs": {
 		"cancelconfirm": {
-			"exclude": false,
-			"hasCustomId": true,
-			"htmlLabel": "Cancel Confirm",
 			"id": "cancelconfirm",
-			"label": "Cancel Confirm",
-			"path": "",
 			"rows": [
 				[
 					{
@@ -280,412 +176,211 @@
 							[
 								{
 									"id": "close_4",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"subId": "d85962d96d4b42bcb517de498e25ed4d",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"subId": "a658d5aa6767473fa2b1cf4c29fb820a",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_4",
-						"path": "",
+						"id": "dialogBody_6",
 						"rows": [
 							[
 								{
-									"entityPath": "dialog_content_cancel",
-									"exclude": false,
-									"hasCustomId": true,
-									"htmlLabel": "Cancel Confirm Content",
-									"id": "dialog_content_cancel_confirm",
-									"label": "Cancel Confirm Content",
-									"path": "",
-									"pathContext": "abs",
+									"id": "dialog_content_cancel_confirm_1",
 									"rows": [
 										[
 											{
-												"entityPath": "confirm",
-												"hasCustomId": true,
-												"htmlLabel": "Confirm Cancellation",
-												"id": "confirm_cancellation",
-												"label": "Confirm Cancellation",
-												"pathContext": "abs",
+												"id": "confirm_cancellation_1",
 												"rows": [
 													[
 														{
-															"entityPath": "cancel_confirm",
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
 															"id": "cancel_confirm_text",
-															"label": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
-															"path": "Cancel/Confirm/Text",
-															"pathContext": "abs",
-															"span": {
-																"lg": 12,
-																"md": 12
-															},
+															"subId": "01580dd2461f46b1adcd5d798f9c9022",
 															"type": "text-input"
 														}
 													],
 													[
 														{
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Options",
-															"id": "options",
-															"label": "Options",
-															"path": "",
-															"pathContext": "abs",
+															"id": "options_2",
 															"rows": [
 																[
 																	{
-																		"entityPath": "help",
-																		"exclude": false,
-																		"hasCustomId": true,
-																		"htmlLabel": "Help Option",
-																		"id": "help_option",
-																		"label": "Help Option",
-																		"path": "",
-																		"pathContext": "abs",
+																		"id": "help_option_1",
 																		"rows": [
 																			[
 																				{
-																					"entityPath": "info_block",
-																					"exclude": false,
-																					"hasCustomId": true,
-																					"htmlLabel": "Info Block Image",
-																					"id": "info_block_image_1",
-																					"path": "",
-																					"pathContext": "abs",
+																					"id": "info_block_image_3",
 																					"properties": {},
-																					"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																					"subId": "e466b3e73d3c461e89942221d615e515",
 																					"type": "image"
 																				},
 																				{
-																					"entityPath": "container_help",
-																					"exclude": false,
-																					"hasCustomId": true,
-																					"htmlLabel": "Container",
-																					"id": "container_help_option",
-																					"label": "Container",
-																					"path": "",
-																					"pathContext": "abs",
+																					"id": "container_help_option_1",
 																					"rows": [
 																						[
 																							{
-																								"exclude": false,
-																								"hasCustomId": true,
-																								"hideLabel": true,
-																								"id": "header_5",
-																								"label": "OK, Lets Get Started!",
-																								"path": "",
-																								"subId": "e349c33a8a244107942968737f085a50",
+																								"id": "header_7",
+																								"subId": "6d0c4bed56fa4cdb8efd19bb5d61a67e",
 																								"type": "text-display"
 																							}
 																						],
 																						[
 																							{
-																								"entityPath": "content_help",
-																								"exclude": false,
-																								"hasCustomId": true,
-																								"htmlLabel": "If you need any assistance completing your form, let us help you.",
-																								"id": "content_help_option",
-																								"label": "If you need any assistance completing your form, let us help you.",
-																								"path": "",
-																								"pathContext": "abs",
-																								"subId": "a0f122e70d81447bae6f63fe3b381734",
+																								"id": "content_help_option_1",
+																								"subId": "b7da4cef81d34255876152b8a7b1308c",
 																								"type": "text-display"
 																							}
 																						],
 																						[
 																							{
-																								"entityPath": "get",
-																								"exclude": false,
-																								"hasCustomId": true,
-																								"htmlLabel": "Get help",
-																								"id": "get_help",
-																								"label": "Get help",
-																								"path": "",
-																								"pathContext": "abs",
-																								"rules": {
-																									"click": "Form.showDialog(\"formh\");"
-																								},
-																								"span": {
-																									"lg": 12,
-																									"md": 12
-																								},
-																								"styles": [
-																									"link-button-style"
-																								],
+																								"id": "get_help_1",
+																								"subId": "ec4a7b4bb428414b8a37d1b857682a1a",
 																								"type": "button"
 																							}
 																						]
 																					],
-																					"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																					"subId": "56548e048d444443a4d35cfcf2572f21",
 																					"type": "block"
 																				}
 																			]
 																		],
-																		"span": {
-																			"lg": 6,
-																			"md": 6
-																		},
+																		"subId": "9c448bc2598642feaed9f29d9f6a626a",
 																		"type": "advice-block-info"
 																	},
 																	{
-																		"entityPath": "save",
-																		"exclude": false,
-																		"hasCustomId": true,
-																		"htmlLabel": "Save Option",
-																		"id": "save_option",
-																		"label": "Save Option",
-																		"path": "",
-																		"pathContext": "abs",
+																		"id": "save_option_1",
 																		"rows": [
 																			[
 																				{
-																					"entityPath": "info_block",
-																					"exclude": false,
-																					"hasCustomId": true,
-																					"htmlLabel": "Info Block Image",
-																					"id": "info_block_image_2",
-																					"path": "",
-																					"pathContext": "abs",
+																					"id": "info_block_image_4",
 																					"properties": {},
-																					"subId": "b1318f7593d14e64a914fb7274e32b1b",
+																					"subId": "11e68a8a73254b9c9fe680e1a482917f",
 																					"type": "image"
 																				},
 																				{
-																					"entityPath": "container_save",
-																					"exclude": false,
-																					"hasCustomId": true,
-																					"htmlLabel": "Container",
-																					"id": "container_save_option",
-																					"label": "Container",
-																					"path": "",
-																					"pathContext": "abs",
+																					"id": "container_save_option_1",
 																					"rows": [
 																						[
 																							{
-																								"exclude": false,
-																								"hasCustomId": true,
-																								"id": "header_6",
-																								"label": "OK, Lets Get Started!",
-																								"path": "",
-																								"subId": "e349c33a8a244107942968737f085a50",
+																								"id": "header_8",
+																								"subId": "9f562319b7984ac49d69a38e7e827f51",
 																								"type": "text-display"
 																							}
 																						],
 																						[
 																							{
-																								"exclude": false,
-																								"hasCustomId": true,
-																								"htmlLabel": "Did you know you can securely save your progress and resume at a later time?",
 																								"id": "conyent_2",
-																								"label": "Did you know you can securely save your progress and resume at a later time?",
-																								"path": "",
-																								"subId": "a0f122e70d81447bae6f63fe3b381734",
+																								"subId": "7da56928272c4000a5e128427b11c489",
 																								"type": "text-display"
 																							}
 																						],
 																						[
 																							{
-																								"entityPath": "save_for",
-																								"exclude": false,
-																								"hasCustomId": true,
-																								"htmlLabel": "Save for later",
-																								"id": "save_for_later",
-																								"label": "Save for later",
-																								"path": "",
-																								"pathContext": "abs",
-																								"rules": {
-																									"click": "Form.showDialog(\"saveconfirm\");"
-																								},
-																								"span": {
-																									"lg": 12,
-																									"md": 12
-																								},
-																								"styles": [
-																									"link-button-style"
-																								],
+																								"id": "save_for_later_1",
+																								"subId": "ecef8243838a44999ee2062343270b0a",
 																								"type": "button"
 																							}
 																						]
 																					],
-																					"subId": "3d8afb72dfec47f3a61a08907884c96c",
+																					"subId": "fe30dc8aff2042a58bbb92cdab55e607",
 																					"type": "block"
 																				}
 																			]
 																		],
-																		"span": {
-																			"lg": 6,
-																			"md": 6
-																		},
+																		"subId": "277254ff674746c0bb1db55752b6759c",
 																		"type": "advice-block-info"
 																	}
 																]
 															],
+															"subId": "b96cac978be14864b0c639319cf871ea",
 															"type": "block"
 														}
 													],
 													[
 														{
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Feedback",
-															"id": "feedback",
-															"label": "Feedback",
-															"path": "",
-															"pathContext": "abs",
-															"properties": {
-																"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
-															},
+															"id": "feedback_2",
 															"rows": [
 																[
 																	{
-																		"entityPath": "what_is_the_main",
-																		"exclude": false,
-																		"hasCustomId": true,
-																		"htmlLabel": "What is the main reason for your cancellation?",
 																		"id": "what_is_the_main_reason",
-																		"label": "What is the main reason for your cancellation?",
-																		"path": "What/Is/The/Main/Reason",
-																		"pathContext": "abs",
-																		"properties": {
-																			"options": [
-																				{
-																					"label": "I don't have all the information required",
-																					"value": "Lacking Information"
-																				},
-																				{
-																					"label": "I don't understand the questions",
-																					"value": "Don't Understand"
-																				},
-																				{
-																					"label": "I don't have the time to complete it now",
-																					"value": "Out of Time"
-																				},
-																				{
-																					"label": "I don't know why you need this information",
-																					"value": "Relevance Unclear"
-																				},
-																				{
-																					"label": "I am experiencing technical difficulties",
-																					"value": "Technical Issue"
-																				},
-																				{
-																					"label": "I just changed my mind",
-																					"value": "Changed Mind"
-																				},
-																				{
-																					"label": "Other",
-																					"value": "Other"
-																				}
-																			]
-																		},
-																		"span": {
-																			"lg": 12,
-																			"md": 12
-																		},
+																		"properties": {},
+																		"subId": "86b0113180ed4b10b882f69c81c29dc8",
 																		"type": "dropdown"
 																	}
 																],
 																[
 																	{
-																		"exclude": false,
-																		"hasCustomId": true,
-																		"htmlLabel": "Comments",
-																		"id": "comments",
-																		"label": "Comments",
-																		"path": "Comments",
+																		"id": "comments_2",
+																		"subId": "dde09b0b91bd4249929ecde1cbec14de",
 																		"type": "text-area"
 																	}
 																]
 															],
-															"styles": [
-																"mg-section-2"
-															],
+															"subId": "66800abae2f84be5953bd85d3488a708",
 															"type": "section-2"
 														}
 													]
 												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"subId": "4e0da32bfa7f4de99b42910a16e5f34b",
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"subId": "c5ad53604b5a45ebb50f466dce69b7e5",
 									"type": "dialog-content"
 								}
 							],
 							[
 								{
-									"entityPath": "dialog_footer_cancel",
-									"exclude": false,
-									"hasCustomId": true,
-									"htmlLabel": "Dialog Footer",
 									"id": "dialog_footer_cancel_confirm",
-									"path": "",
-									"pathContext": "abs",
 									"rows": [
 										[
 											{
-												"exclude": false,
-												"htmlLabel": "Confirm",
-												"id": "dialogFooterBlock_4",
-												"label": "Confirm",
-												"path": "",
+												"id": "dialogFooterBlock_5",
 												"rows": [
 													[
 														{
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Confirm",
-															"id": "confirm_2",
-															"label": "Confirm",
-															"path": "",
+															"id": "confirm_3",
 															"rules": {
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
 																"sh": ""
 															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
 															"type": "button"
 														}
 													]
 												],
-												"rules": {},
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"subId": "7314fa1adde847e3a442130e7580de3a",
 												"type": "block"
 											}
 										]
 									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"subId": "175796f975994f1e9a438e9e025d1fa0",
 									"type": "block"
 								}
 							]
 						],
+						"subId": "a49a77d639a3429da9811bd1afbf0914",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog"
+			"type": "cancel-confirm"
 		},
 		"formhelp": {
-			"htmlLabel": "Formhelp",
 			"id": "formhelp",
-			"label": "Formhelp",
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_6",
+						"id": "dialogHeader_3",
 						"rows": [
 							[
 								{
-									"id": "close_6",
+									"id": "close_3",
 									"subId": "9e296fc30de940628ec8b5dbda46ae26",
 									"type": "icon-button"
 								}
@@ -697,48 +392,48 @@
 				],
 				[
 					{
-						"id": "dialogBody_5",
+						"id": "dialogBody_3",
 						"rows": [
 							[
 								{
-									"id": "dialog_content_form_help_1",
+									"id": "dialog_content_form_help",
 									"rows": [
 										[
 											{
-												"id": "need_assistance_1",
+												"id": "need_assistance",
 												"rows": [
 													[
 														{
-															"id": "need_onlineChatBlock_2",
+															"id": "need_onlineChatBlock_3",
 															"path": "",
 															"rows": [
 																[
 																	{
-																		"id": "infoBlockImage_5",
+																		"id": "infoBlockImage_7",
 																		"properties": {},
 																		"subId": "b1318f7593d14e64a914fb7274e32b1b",
 																		"type": "image"
 																	},
 																	{
-																		"id": "block_7",
+																		"id": "block_9",
 																		"rows": [
 																			[
 																				{
-																					"id": "online_chat_header",
+																					"id": "online_chat_header_2",
 																					"subId": "e349c33a8a244107942968737f085a50",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"id": "online_chat_times",
+																					"id": "online_chat_times_2",
 																					"subId": "a0f122e70d81447bae6f63fe3b381734",
 																					"type": "text-display"
 																				}
 																			],
 																			[
 																				{
-																					"id": "start_chat",
+																					"id": "start_chat_2",
 																					"styles": [
 																						"form-help-start-chat-button",
 																						"bs-dialog-button-12962"
@@ -759,13 +454,13 @@
 															"rows": [
 																[
 																	{
-																		"id": "infoBlockImage_6",
+																		"id": "infoBlockImage_8",
 																		"properties": {},
 																		"subId": "066f9f02c8ed4d3dbe6fbafadb2c168c",
 																		"type": "image"
 																	},
 																	{
-																		"id": "block_8",
+																		"id": "block_10",
 																		"rows": [
 																			[
 																				{
@@ -784,7 +479,6 @@
 																			[
 																				{
 																					"id": "_1800_3",
-																					"path": "_1800_3",
 																					"subId": "103eaa13e6744ec69b8514f232cb918d",
 																					"type": "link"
 																				}
@@ -819,15 +513,15 @@
 							],
 							[
 								{
-									"id": "dialogFooter_2",
+									"id": "dialogFooter_1",
 									"rows": [
 										[
 											{
-												"id": "dialogFooterBlock_5",
+												"id": "dialogFooterBlock_3",
 												"rows": [
 													[
 														{
-															"id": "okay_2",
+															"id": "okay_1",
 															"rules": {
 																"sh": ""
 															},
@@ -854,188 +548,126 @@
 			"type": "form-help"
 		},
 		"savechallenge": {
-			"exclude": false,
-			"hasCustomId": true,
-			"htmlLabel": "Save Challenge",
 			"id": "savechallenge",
-			"label": "Save Challenge",
-			"path": "",
 			"rows": [
 				[
 					{
-						"id": "dialogHeader_5",
+						"id": "dialogHeader_6",
 						"rows": [
 							[
 								{
-									"id": "close_5",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"id": "close_6",
+									"subId": "5b00e0bbb7da47fcbd5ca16369a6e6af",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"subId": "04b32c294db74c8aafac241d2f157a65",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_2",
-						"path": "",
+						"id": "dialogBody_5",
 						"rows": [
 							[
 								{
-									"entityPath": "dialog_content_save",
-									"exclude": false,
-									"hasCustomId": true,
-									"htmlLabel": "Save Challenge Content",
 									"id": "dialog_content_save_challenge",
-									"label": "Save Challenge Content",
-									"path": "",
-									"pathContext": "abs",
 									"rows": [
 										[
 											{
-												"entityPath": "open_your_saved",
-												"hasCustomId": true,
-												"htmlLabel": "Open Your Saved Form",
 												"id": "open_your_saved_form",
-												"label": "Open Your Saved Form",
-												"pathContext": "abs",
 												"rows": [
 													[
 														{
-															"entityPath": "save_challenge",
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "To resume your form please complete the following details.",
 															"id": "save_challenge_message",
-															"label": "To resume your form please complete the following details.",
-															"path": "",
-															"pathContext": "abs",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
+															"subId": "99a462658fab4254b2b4ce80afb34406",
 															"type": "text-display"
 														}
 													],
 													[
 														{
-															"entityPath": "save_challenge_reference_code",
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Reference Code",
 															"id": "save_challenge_reference_code_section",
-															"label": "Reference Code",
-															"path": "",
-															"pathContext": "abs",
 															"rows": [
 																[
 																	{
-																		"entityPath": "save_challenge_reference",
-																		"exclude": false,
-																		"hasCustomId": true,
-																		"htmlLabel": "Reference Code",
 																		"id": "save_challenge_reference_code",
-																		"label": "Reference Code",
-																		"mandatory": true,
-																		"path": "Save/Challenge/Reference/Code",
-																		"pathContext": "abs",
-																		"rules": {
-																			"eq": "return Util.getUrlQueryParam(\"referenceNumber\") != \"\" && Util.getUrlQueryParam(\"referenceNumber\") ? Util.getUrlQueryParam(\"referenceNumber\") : Form.saveChallengeRequired === true ? Form.getSystemData(\"TrackingCode\") : value;"
+																		"offset": {
+																			"lg": "3",
+																			"md": "3"
 																		},
+																		"subId": "85628c35c7c64f678d83b46721c08e73",
 																		"type": "text-input"
 																	}
 																]
 															],
-															"styles": [
-																"mg-section-2"
-															],
+															"subId": "9d91c3f3db0d42ccaa56296cb16ce906",
 															"type": "section-2"
 														}
 													],
 													[
 														{
-															"animateVisibility": true,
-															"entityPath": "save_challenge_question",
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Security Question",
 															"id": "save_challenge_question_section",
-															"label": "Security Question",
-															"path": "",
-															"pathContext": "abs",
-															"properties": {
-																"infoText": "Your answer to this question must match the information you previously provided."
-															},
 															"rows": [
 																[]
 															],
-															"rules": {
-																"eq": "return item.rows[0].length > 0 ? Form.data[item.rows[0][0].id] : \"\";",
-																"sh": "return item.rows[0].length > 0;"
-															},
-															"styles": [
-																"mg-section-2"
-															],
+															"subId": "bf60f3af33fa4fc1b16450de3b351b70",
 															"type": "section-2"
 														}
 													]
 												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"subId": "ae14d3a46a3e4437b4a86f4ee460da83",
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"subId": "c85b168aeca949219fc6b80703db8480",
 									"type": "dialog-content"
 								}
 							],
 							[
 								{
-									"id": "dialogFooter_7",
-									"path": "",
+									"id": "dialogFooter_9",
 									"rows": [
 										[
 											{
 												"id": "dialogFooterBlock",
-												"path": "",
 												"rows": [
 													[
 														{
-															"exclude": false,
-															"htmlLabel": "Open",
-															"id": "okay_6",
-															"label": "Open",
-															"path": "",
+															"id": "open_6",
 															"rules": {
-																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
 																"sh": ""
 															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"type": "button"
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"subId": "fd74176fc1154642871b572034d297fb",
 												"type": "block"
 											}
 										]
 									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"subId": "37791d13d93240f884ed597d039da865",
 									"type": "block"
 								}
 							]
 						],
+						"subId": "be31e6d5451642c28ed57b817cd621a8",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog"
+			"type": "save-challenge"
 		},
 		"saveconfirm": {
-			"exclude": false,
-			"hasCustomId": true,
-			"htmlLabel": "Save Confirm",
 			"id": "saveconfirm",
-			"label": "Save Confirm",
-			"path": "",
 			"rows": [
 				[
 					{
@@ -1044,134 +676,97 @@
 							[
 								{
 									"id": "close_9",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"subId": "92a58e3bd4c94da895bad4b6f1b10f66",
 						"type": "block"
 					}
 				],
 				[
 					{
 						"id": "dialogBody_8",
-						"path": "",
 						"rows": [
 							[
 								{
-									"entityPath": "dialog_content_save",
-									"exclude": false,
-									"hasCustomId": true,
-									"htmlLabel": "Save Confirm Content",
-									"id": "dialog_content_save_confirm",
-									"label": "Save Confirm Content",
-									"path": "",
-									"pathContext": "abs",
+									"id": "dialog_content_save_confirm_1",
 									"rows": [
 										[
 											{
-												"entityPath": "save_your",
-												"hasCustomId": true,
-												"htmlLabel": "Save Your Form",
 												"id": "save_your_form",
-												"label": "Save Your Form",
-												"pathContext": "abs",
 												"rows": [
 													[
 														{
-															"entityPath": "save_confirm",
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Save confirm message",
 															"id": "save_confirm_message",
-															"label": "Save confirm message",
-															"path": "",
-															"pathContext": "abs",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
+															"subId": "4aa53510219745c392c1b2c184aff183",
 															"type": "text-display"
 														}
 													],
 													[
 														{
-															"entityPath": "security_question_save",
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "Security Question",
 															"id": "security_question_save_confirm",
-															"label": "Security Question",
-															"path": "",
-															"pathContext": "abs",
-															"properties": {
-																"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
-															},
 															"rows": [
 																[]
 															],
-															"styles": [
-																"mg-section-2"
-															],
+															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
 															"type": "section-2"
 														}
 													]
 												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"subId": "f95da043f0bf4debb102897946a959d8",
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"subId": "00d88526276f4719ba460d7a9baede85",
 									"type": "dialog-content"
 								}
 							],
 							[
 								{
 									"id": "dialogFooter_18",
-									"path": "",
 									"rows": [
 										[
 											{
 												"id": "dialogFooterBlock_12",
-												"path": "",
 												"rows": [
 													[
 														{
-															"exclude": false,
-															"htmlLabel": "Save",
 															"id": "okay_18",
-															"label": "Save",
-															"path": "",
 															"rules": {
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
 																"sh": ""
 															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
 												"type": "block"
 											}
 										]
 									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"subId": "2cd134f2d6f84810a8770240d8f4acc7",
 									"type": "block"
 								}
 							]
 						],
+						"subId": "1ea05f9f06654a3abe01133ecdc0782d",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog"
+			"type": "save-confirm"
 		},
 		"showxml": {
-			"exclude": false,
-			"hasCustomId": true,
-			"htmlLabel": "Show XML",
 			"id": "showxml",
-			"label": "Show XML",
-			"path": "",
 			"rows": [
 				[
 					{
@@ -1180,95 +775,79 @@
 							[
 								{
 									"id": "close",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"subId": "dbfbfa08cfd0446da064233de0d20684",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"subId": "5afbc9d2c55d491686da20cbd937af4a",
 						"type": "block"
 					}
 				],
 				[
 					{
 						"id": "dialogBody_7",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "dialogContent_3",
-									"path": "",
 									"rows": [
 										[
 											{
-												"entityPath": "show_xml",
-												"hasCustomId": true,
-												"htmlLabel": "Show XML Content",
 												"id": "show_xml_content",
-												"label": "Show XML Content",
-												"pathContext": "abs",
 												"rows": [
 													[
 														{
-															"entityPath": "xml",
-															"exclude": false,
-															"hasCustomId": true,
-															"htmlLabel": "{{Form.getDataXml(true)}}",
 															"id": "xml_display",
-															"label": "",
-															"path": "",
-															"pathContext": "abs",
+															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
 															"type": "text-display"
 														}
 													]
 												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"subId": "79e5d5cac3914789865650272a1b8f0e",
 												"type": "section-2"
 											}
 										]
 									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"subId": "c0303162902c41669857d1f7683dca48",
 									"type": "dialog-content"
 								}
 							],
 							[
 								{
-									"exclude": true,
 									"id": "dialogFooter_8",
-									"path": "",
 									"rows": [
 										[
 											{
 												"id": "dialogFooterBlock_2",
-												"path": "",
 												"rows": [
 													[
 														{
 															"id": "okay_8",
-															"path": "",
 															"rules": {
 																"sh": ""
 															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"type": "button"
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"subId": "9cd0823d0cd341cb86bf35e712f4b5d3",
 												"type": "block"
 											}
 										]
 									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"subId": "b185f47ec7c042c3a9dbcfdde93052cf",
 									"type": "block"
 								}
 							]
 						],
+						"subId": "f220c8df9c284490b3f507a489e0fe4a",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog"
+			"type": "show-xml"
 		}
 	},
 	"entities": {
@@ -1351,8 +930,7 @@
 				"label": "Auto Background Save Interval",
 				"path": "properties.autoSaveInterval"
 			}
-		],
-		"pageController": []
+		]
 	},
 	"id": "AvokaSmartForm",
 	"isPreview": false,
@@ -1364,9 +942,9 @@
 		"formhelp"
 	],
 	"localModals": [
-		"submitsuccess",
 		"savesuccess",
-		"cancelsuccess"
+		"cancelsuccess",
+		"submitsuccess"
 	],
 	"maestroReleaseVersion": "17.10.2",
 	"modals": {
@@ -1477,139 +1055,146 @@
 						"rows": [
 							[]
 						],
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
-						"id": "modalHeader_2",
+						"id": "modalHeader",
 						"rows": [
 							[
 								{
-									"id": "stickyPanelModal_1",
+									"id": "stickyPanelModal",
 									"rows": [
 										[
 											{
-												"id": "modalHeader_3",
+												"id": "modalHeader_1",
 												"rows": [
 													[
 														{
-															"id": "modalLogo_1",
+															"id": "modalLogo",
 															"rows": [
 																[
 																	{
-																		"id": "modalLogoImage_1",
+																		"id": "modalLogoImage",
 																		"properties": {},
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
 																		"type": "image"
 																	}
 																]
 															],
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
 															"type": "block"
 														}
 													]
 												],
+												"subId": "10cd185db8f44312a2d007cce8c61074",
 												"type": "form-header"
 											}
 										]
 									],
+									"subId": "f85f23c17b944a399f2368733020e9ad",
 									"type": "sticky-panel"
 								}
 							]
 						],
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"htmlLabel": "<h1>Application Cancelled</h1>",
-						"id": "modalContent_1",
-						"label": "Application Cancelled",
-						"properties": {
-							"infoText": "Your application has been cancelled and will not be processed."
-						},
+						"id": "modalContent",
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"id": "extraInformation_1",
-									"rows": [
-										[]
-									],
-									"type": "block"
+									"animateVisibility": true,
+									"id": "startANewForm_1",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode)),window.location.replace(url)\n} else if(Resource.preview) {Form.showModal(\"\");}",
+										"sh": "return item['$$parent'].properties.includeStartAgain;"
+									},
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"type": "button"
 								}
 							],
 							[
 								{
-									"id": "followOnOptions_1",
-									"offset": {
-										"lg": "4",
-										"md": "4"
+									"exclude": false,
+									"id": "show_form_xml_3",
+									"label": "Show form XML",
+									"path": "",
+									"rules": {
+										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+										"sh": "Resource.preview || Resource.design"
 									},
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "startANewForm_2",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "returnToPortal_1",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "showFormXml_1",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
-												"type": "button"
-											}
-										]
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
 									],
-									"type": "follow-on-options"
+									"type": "button"
+								}
+							],
+							[
+								{
+									"exclude": false,
+									"id": "return_to_portal_3",
+									"label": "Return to portal",
+									"path": "",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+										"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+									},
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
+									],
+									"type": "button"
+								}
+							],
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Your application has been cancelled and will not be processed.",
+									"id": "cancel_success_message_1",
+									"path": "",
+									"styles": [
+										"submit-success-message"
+									],
+									"type": "text-display"
 								}
 							]
 						],
+						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"type": "section-2"
 					}
 				],
 				[
 					{
-						"id": "modalFooter_1",
+						"id": "modalFooter",
 						"rows": [
 							[
 								{
-									"id": "formFooterText_2",
+									"id": "formFooterText_6",
 									"rows": [
 										[
 											{
-												"id": "formFooterText_3",
+												"id": "formFooterText",
 												"path": "",
 												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"type": "text-display"
 											}
 										]
 									],
+									"subId": "082a0f34bab7496ab942025374652910",
 									"type": "section-2"
 								}
 							]
 						],
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"type": "form-footer"
 					}
 				]
@@ -1723,501 +1308,141 @@
 						"rows": [
 							[]
 						],
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
-						"id": "modalHeader",
+						"id": "modalHeader_2",
 						"rows": [
 							[
 								{
-									"id": "stickyPanelModal",
+									"id": "stickyPanelModal_1",
 									"rows": [
 										[
 											{
-												"id": "modalHeader_1",
+												"id": "modalHeader_3",
 												"rows": [
 													[
 														{
-															"id": "modalLogo",
+															"id": "modalLogo_1",
 															"rows": [
 																[
 																	{
-																		"id": "modalLogoImage",
+																		"id": "modalLogoImage_1",
 																		"properties": {},
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
 																		"type": "image"
 																	}
 																]
 															],
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
 															"type": "block"
 														}
 													]
 												],
+												"subId": "10cd185db8f44312a2d007cce8c61074",
 												"type": "form-header"
 											}
 										]
 									],
+									"subId": "f85f23c17b944a399f2368733020e9ad",
 									"type": "sticky-panel"
 								}
 							]
 						],
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"htmlLabel": "<h1>Application Saved</h1>",
-						"id": "modalContent",
-						"label": "Application Saved",
+						"htmlLabel": "<h1>Save Modal Content</h1>",
+						"id": "saveModalContent",
+						"label": "Save Modal Content",
 						"properties": {
-							"infoText": "Your form has been saved and may be re-opened later."
+							"infoText": "Your form has been saved"
 						},
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"id": "extraInformation",
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"htmlLabel": "Reference Code Block Save",
-												"id": "block_4",
-												"label": "Reference Code Block Save",
-												"path": "",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Your Reference Code is:",
-															"id": "textDisplay_4",
-															"label": "Your Reference Code is:",
-															"path": "",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "{{Form.data.SFMData.SystemProfile.TrackingCode}}",
-															"id": "textDisplay_5",
-															"label": "",
-															"path": "",
-															"styles": [
-																"reference-code-text"
-															],
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Click here to return to your form",
-															"id": "button_1",
-															"label": "Click here to return to your form",
-															"path": "",
-															"rules": {
-																"click": "if (Resource.preview || Resource.design) {\n    return;\n}\nForm.showProgress(\"Please wait\");\nForm.redirect(Form.data.$submitResponse.redirectTarget, Form.data.$submitResponse.redirectParent);"
-															},
-															"span": {
-																"lg": 12,
-																"md": 12
-															},
-															"styles": [
-																"link-button-style"
-															],
-															"type": "button"
-														}
-													],
-													[
-														{
-															"animateVisibility": true,
-															"exclude": false,
-															"htmlLabel": "Please note that your form will expire on {{Form.getSystemData(&quot;SubmissionExpiryDate&quot;) | date: &#39;d MMM yyyy&#39; }}.",
-															"id": "textDisplay_6",
-															"label": "Please note that your form will expire on .",
-															"path": "",
-															"rules": {
-																"sh": "Form.getSystemData(\"SubmissionExpiryDate\") && !Util.isBlank(Form.getSystemData(\"SubmissionExpiryDate\"))"
-															},
-															"styles": [
-																"submission-expiry-text"
-															],
-															"type": "text-display"
-														}
-													]
-												],
-												"styles": [
-													"reference-code-block"
-												],
-												"type": "block"
-											}
-										],
-										[
-											{
-												"animateVisibility": true,
-												"exclude": false,
-												"htmlLabel": "Send yourself a reminder email",
-												"id": "section_6",
-												"label": "Send yourself a reminder email",
-												"offset": {
-													"lg": "0",
-													"md": "0"
-												},
-												"path": "",
-												"properties": {
-													"infoText": "Enter your email address and we'll send you you instructions on how to return to your form."
-												},
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Send Reminder Block",
-															"id": "block_5",
-															"label": "Send Reminder Block",
-															"offset": {
-																"lg": "3",
-																"md": "3"
-															},
-															"path": "",
-															"rows": [
-																[
-																	{
-																		"exclude": false,
-																		"htmlLabel": "Your email address",
-																		"id": "emailAddress_2",
-																		"label": "Your email address",
-																		"mandatory": true,
-																		"offset": {
-																			"lg": "0",
-																			"md": "0"
-																		},
-																		"path": "YourEmailAddress",
-																		"span": {
-																			"lg": 12,
-																			"md": 12
-																		},
-																		"styles": [],
-																		"type": "email"
-																	}
-																],
-																[
-																	{
-																		"exclude": false,
-																		"htmlLabel": "Send now",
-																		"id": "emailSavedFormButton",
-																		"label": "Send now",
-																		"offset": {
-																			"lg": "4",
-																			"md": "4"
-																		},
-																		"path": "",
-																		"styles": [
-																			"message-banner",
-																			"av-button-primary"
-																		],
-																		"type": "button-email-saved-form"
-																	}
-																]
-															],
-															"span": {
-																"lg": 6,
-																"md": 6
-															},
-															"type": "block"
-														}
-													]
-												],
-												"rules": {
-													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus != \"success\" : true)"
-												},
-												"styles": [
-													"bc-white-background-20804"
-												],
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"animateVisibility": true,
-												"exclude": false,
-												"htmlLabel": "Check your email",
-												"id": "section_7",
-												"label": "Check your email",
-												"path": "",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_reminder_email}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
-															"id": "textDisplay_7",
-															"label": "Weve sent instructions to your email address () on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
-															"path": "",
-															"styles": [
-																"email-complete-message"
-															],
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Send another reminder email",
-															"id": "button_2",
-															"label": "Send another reminder email",
-															"offset": {
-																"lg": "4",
-																"md": "4"
-															},
-															"path": "",
-															"rules": {
-																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"save_success_send_reminder\")) {\nForm.data.save_success_send_reminder.$responseStatus = \"\";\n}\nForm.data.send_reminder_email = \"\";"
-															},
-															"styles": [
-																"link-button-style"
-															],
-															"type": "button"
-														}
-													]
-												],
-												"rules": {
-													"sh": "((Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
-												},
-												"styles": [
-													"bc-white-background-20804"
-												],
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"animateVisibility": true,
-												"exclude": false,
-												"htmlLabel": "Share form",
-												"id": "section_8",
-												"label": "Share form",
-												"path": "",
-												"properties": {
-													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
-												},
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Recipient Email Address",
-															"id": "emailAddress_3",
-															"label": "Recipient Email Address",
-															"mandatory": true,
-															"offset": {
-																"lg": "0",
-																"md": "0"
-															},
-															"path": "EmailAddress",
-															"styles": [
-																"av-global-layout"
-															],
-															"type": "email"
-														},
-														{
-															"exclude": false,
-															"htmlLabel": "Your Full Name",
-															"id": "textField",
-															"label": "Your Full Name",
-															"mandatory": true,
-															"path": "TextField",
-															"styles": [
-																"av-global-layout"
-															],
-															"type": "text-input"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Personal Message (optional)",
-															"id": "multilineTextArea",
-															"label": "Personal Message (optional)",
-															"path": "MultilineTextArea",
-															"styles": [
-																"av-global-layout"
-															],
-															"type": "text-area"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Share Now",
-															"id": "shareFormButton",
-															"label": "Share Now",
-															"offset": {
-																"lg": "4",
-																"md": "4"
-															},
-															"path": "",
-															"properties": {
-																"emailBodyRef": "data.multilineTextArea",
-																"emailFieldRef": "data.emailAddress_3",
-																"senderNameRef": "data.textField"
-															},
-															"styles": [
-																"message-banner",
-																"av-button-primary"
-															],
-															"type": "button-email-share-form"
-														}
-													]
-												],
-												"rules": {
-													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus != \"success\": true;"
-												},
-												"styles": [
-													"bc-white-background-20804"
-												],
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"animateVisibility": true,
-												"exclude": false,
-												"htmlLabel": "Share form",
-												"id": "section_9",
-												"label": "Share form",
-												"path": "",
-												"properties": {
-													"infoText": "Do you want to allow other people to access your form?"
-												},
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "<p>We&#39;ve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.</p><p>If you would like share your form again, just click the link below.</p>",
-															"id": "textDisplay_8",
-															"label": "Weve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.If you would like share your form again, just click the link below.",
-															"path": "",
-															"styles": [
-																"email-complete-message"
-															],
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Share my form with others",
-															"id": "button_3",
-															"label": "Share my form with others",
-															"offset": {
-																"lg": "4",
-																"md": "4"
-															},
-															"path": "",
-															"rules": {
-																"click": "if(Form.data.hasOwnProperty(\"save_success_share_form\") ){\nForm.data.save_success_share_form = \"\";\nForm.data.save_success_recipient_email_address = \"\";\nForm.data.save_success_sender_name = \"\";\nForm.data.save_success_email_body = \"\";\n}"
-															},
-															"styles": [
-																"link-button-style"
-															],
-															"type": "button"
-														}
-													]
-												],
-												"rules": {
-													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus == \"success\": false;"
-												},
-												"styles": [
-													"bc-white-background-20804"
-												],
-												"type": "section-2"
-											}
-										]
-									],
-									"type": "block"
+									"animateVisibility": true,
+									"id": "startANewForm_4",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\n  console.log(\"if\");\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode).window.location.replace(url))\n} else if(Resource.preview) {console.log(\"elseif\");Form.showModal(\"\");}",
+										"sh": "return item['$$parent'].properties.includeStartAgain;"
+									},
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"type": "button"
 								}
 							],
 							[
 								{
-									"id": "followOnOptions",
-									"offset": {
-										"lg": "4",
-										"md": "4"
+									"animateVisibility": true,
+									"exclude": false,
+									"htmlLabel": "Return to portal",
+									"id": "button",
+									"label": "Return to portal",
+									"path": "",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\")), window.location.replace(url)\n}",
+										"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
 									},
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "startANewForm_1",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "returnToPortal",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "showFormXml",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
-												"type": "button"
-											}
-										]
+									"styles": [
+										"av-global-layout",
+										"av-button",
+										"av-button-primary"
 									],
-									"type": "follow-on-options"
+									"type": "button"
+								}
+							],
+							[
+								{
+									"exclude": false,
+									"id": "showFormXml_5",
+									"label": "Show form XML",
+									"path": "",
+									"rules": {
+										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+										"sh": "Resource.preview || Resource.design"
+									},
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
+									],
+									"type": "button"
 								}
 							]
 						],
-						"styles": [
-							"bc-white-background-20804",
-							"bs-center-align-19822",
-							"bs-max-width-73189",
-							"bs-modal-content-96022"
-						],
+						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"type": "section-2"
 					}
 				],
 				[
 					{
-						"id": "modalFooter",
+						"id": "modalFooter_1",
 						"rows": [
 							[
 								{
-									"htmlLabel": "",
-									"id": "formFooterText",
-									"label": "",
+									"id": "formFooterText_4",
 									"rows": [
 										[
 											{
-												"id": "formFooterText_1",
-												"path": "",
+												"exclude": false,
+												"id": "textDisplay_4",
 												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"type": "text-display"
 											}
 										]
 									],
-									"styles": [],
+									"subId": "082a0f34bab7496ab942025374652910",
 									"type": "section-2"
 								}
 							]
 						],
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"type": "form-footer"
 					}
 				]
@@ -2331,374 +1556,116 @@
 						"rows": [
 							[]
 						],
+						"subId": "2f5c018e42eb4132b71ba6445983da7a",
 						"type": "modal-background"
 					}
 				],
 				[
 					{
-						"id": "modalHeader_12",
+						"id": "modalHeader_4",
 						"rows": [
 							[
 								{
-									"id": "stickyPanelModal_6",
+									"id": "stickyPanelModal_2",
 									"rows": [
 										[
 											{
-												"id": "modalHeader_13",
+												"id": "modalHeader_5",
 												"rows": [
 													[
 														{
-															"id": "modalLogo_6",
+															"id": "modalLogo_2",
 															"rows": [
 																[
 																	{
-																		"id": "modalLogoImage_6",
+																		"id": "modalLogoImage_2",
 																		"properties": {},
+																		"subId": "759cc4ed2a9240aca14456c79f50aa2c",
 																		"type": "image"
 																	}
 																]
 															],
+															"subId": "81604a78df3b4507ba1efa2e349ef3f6",
 															"type": "block"
 														}
 													]
 												],
+												"subId": "10cd185db8f44312a2d007cce8c61074",
 												"type": "form-header"
 											}
 										]
 									],
+									"subId": "f85f23c17b944a399f2368733020e9ad",
 									"type": "sticky-panel"
 								}
 							]
 						],
+						"subId": "8f9a2f46878a40938967fa6fbdcea360",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"htmlLabel": "<h1>Application Received</h1>",
-						"id": "modalContent_6",
-						"label": "Application Received",
-						"properties": {
-							"infoText": "Thank you, your submission has been received."
-						},
+						"id": "modalContent_1",
 						"rows": [
 							[
 								{
-									"exclude": false,
-									"id": "extraInformation_6",
-									"rows": [
-										[
-											{
-												"animateVisibility": true,
-												"exclude": false,
-												"htmlLabel": "For your records",
-												"id": "section_4",
-												"label": "For your records",
-												"path": "",
-												"properties": {
-													"infoText": "Would like a copy of this submission for your personal records?"
-												},
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Send Receipt Block",
-															"id": "block_2",
-															"label": "Send Receipt Block",
-															"offset": {
-																"lg": "3",
-																"md": "3"
-															},
-															"path": "",
-															"rows": [
-																[
-																	{
-																		"exclude": false,
-																		"htmlLabel": "Your email address",
-																		"id": "emailAddress_1",
-																		"label": "Your email address",
-																		"mandatory": true,
-																		"offset": {
-																			"lg": "0",
-																			"md": "0"
-																		},
-																		"path": "EmailAddress",
-																		"span": {
-																			"lg": 12,
-																			"md": 12
-																		},
-																		"styles": [],
-																		"type": "email"
-																	}
-																],
-																[
-																	{
-																		"exclude": false,
-																		"htmlLabel": "Send now",
-																		"id": "emailPdfReceiptButton",
-																		"label": "Send now",
-																		"offset": {
-																			"lg": "4",
-																			"md": "4"
-																		},
-																		"path": "",
-																		"properties": {
-																			"emailFieldRef": "data.emailAddress_1"
-																		},
-																		"styles": [
-																			"message-banner",
-																			"av-button-primary"
-																		],
-																		"type": "button-email-receipt"
-																	}
-																]
-															],
-															"span": {
-																"lg": 6,
-																"md": 6
-															},
-															"type": "block"
-														}
-													]
-												],
-												"rules": {
-													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus != \"success\" : true)"
-												},
-												"styles": [
-													"bc-white-background-20804"
-												],
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"animateVisibility": true,
-												"exclude": false,
-												"htmlLabel": "Next Steps",
-												"id": "section_3",
-												"label": "Next Steps",
-												"path": "",
-												"properties": {
-													"infoText": "You are required to complete these additional forms to finalize your request."
-												},
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"id": "formBundleJobTasks",
-															"path": "",
-															"properties": {},
-															"type": "form-bundle-job-tasks"
-														}
-													]
-												],
-												"rules": {
-													"sh": "Form.data.SFMData.SystemProfile.hasOwnProperty('Job') && Form.data.SFMData.SystemProfile.Job.hasOwnProperty('StepTasks') && Form.data.SFMData.SystemProfile.Job.StepTasks.Task.length > 0"
-												},
-												"styles": [
-													"bc-white-background-20804"
-												],
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"exclude": false,
-												"htmlLabel": "Reference Code Block",
-												"id": "block_1",
-												"label": "Reference Code Block",
-												"path": "",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Your Reference Code is:",
-															"id": "textDisplay",
-															"label": "Your Reference Code is:",
-															"path": "",
-															"styles": [],
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "{{Form.data.SFMData.SystemProfile.TrackingCode}}",
-															"id": "textDisplay_1",
-															"label": "",
-															"path": "",
-															"styles": [
-																"reference-code-text"
-															],
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Please quote your reference code when enquiring about your submission.",
-															"id": "textDisplay_2",
-															"label": "Please quote your reference code when enquiring about your submission.",
-															"path": "",
-															"styles": [],
-															"type": "text-display"
-														}
-													]
-												],
-												"styles": [
-													"reference-code-block"
-												],
-												"type": "block"
-											}
-										],
-										[
-											{
-												"animateVisibility": true,
-												"exclude": false,
-												"htmlLabel": "Check your email",
-												"id": "section_5",
-												"label": "Check your email",
-												"path": "",
-												"rows": [
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Send Complete Block",
-															"id": "block_3",
-															"label": "Send Complete Block",
-															"path": "",
-															"rows": [
-																[
-																	{
-																		"exclude": false,
-																		"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_receipt_email}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
-																		"id": "textDisplay_3",
-																		"label": "Weve sent a copy of your submission to your email address ().If you didnt receive it or would like another copy, just select the option below.",
-																		"path": "",
-																		"styles": [],
-																		"type": "text-display"
-																	}
-																],
-																[
-																	{
-																		"exclude": false,
-																		"htmlLabel": "Email another copy",
-																		"id": "button",
-																		"label": "Email another copy",
-																		"offset": {
-																			"lg": "4",
-																			"md": "4"
-																		},
-																		"path": "",
-																		"rules": {
-																			"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"submit_success_send_receipt\")) {\nForm.data.submit_success_send_receipt.$responseStatus = \"\";\n}\nForm.data.send_receipt_email = \"\";"
-																		},
-																		"styles": [
-																			"link-button-style"
-																		],
-																		"type": "button"
-																	}
-																]
-															],
-															"type": "block"
-														}
-													]
-												],
-												"rules": {
-													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
-												},
-												"styles": [
-													"bc-white-background-20804"
-												],
-												"type": "section-2"
-											}
-										]
-									],
-									"type": "block"
+									"animateVisibility": true,
+									"id": "startANewForm",
+									"rules": {
+										"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode)),window.location.replace(url)\n} else if(Resource.preview) {Form.showModal(\"\");}",
+										"sh": "return item['$$parent'].properties.includeStartAgain;"
+									},
+									"subId": "b9752e41b4f24a4a9e5059d0704210e7",
+									"type": "button"
 								}
 							],
 							[
 								{
-									"id": "followOnOptions_3",
-									"offset": {
-										"lg": "4",
-										"md": "4"
+									"exclude": false,
+									"id": "show_form_xml_4",
+									"label": "Show form XML",
+									"path": "",
+									"rules": {
+										"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}",
+										"sh": "Resource.preview || Resource.design"
 									},
-									"rows": [
-										[
-											{
-												"exclude": false,
-												"id": "startANewForm",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "52bb34d6a2634f84bb2b4e34ed89173c",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "returnToPortal_3",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "2f32e2834fd4493280fa83492b6b143c",
-												"type": "button"
-											},
-											{
-												"exclude": false,
-												"id": "showFormXml_3",
-												"path": "",
-												"styles": [
-													"message-banner",
-													"av-button-primary"
-												],
-												"subId": "a2498025348b4969b1ee7b3135ee6c9c",
-												"type": "button"
-											}
-										]
+									"styles": [
+										"av-button-primary",
+										"av-button",
+										"av-global-layout"
 									],
-									"type": "follow-on-options"
+									"type": "button"
 								}
 							]
 						],
-						"styles": [
-							"bc-white-background-20804",
-							"bs-center-align-19822",
-							"bs-max-width-73189",
-							"bs-modal-content-96022"
-						],
+						"subId": "d4a0cd71666b429898edfba3b748599d",
 						"type": "section-2"
 					}
 				],
 				[
 					{
-						"id": "modalFooter_6",
+						"id": "modalFooter_2",
 						"rows": [
 							[
 								{
-									"htmlLabel": "",
-									"id": "formFooterText_8",
-									"label": "",
+									"id": "formFooterText_3",
 									"rows": [
 										[
 											{
-												"exclude": false,
-												"id": "formFooterText_9",
+												"id": "formFooterText_1",
 												"path": "",
 												"subId": "8c9b02742d3841d8a9c30d826878b6af",
 												"type": "text-display"
 											}
 										]
 									],
-									"styles": [],
+									"subId": "082a0f34bab7496ab942025374652910",
 									"type": "section-2"
 								}
 							]
 						],
+						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"type": "form-footer"
 					}
 				]
@@ -2724,7 +1691,9 @@
 		"AvokaSmartForm"
 	],
 	"path": "AvokaSmartForm",
-	"properties": {},
+	"properties": {
+		"popoverHelpIcon": "fa fa-question"
+	},
 	"rows": [
 		[
 			{
@@ -2924,8 +1893,8 @@
 																"properties": {
 																	"src": {
 																		"fileName": "avoka-logo.png",
-																		"height": "42",
-																		"width": "52px"
+																		"height": "40",
+																		"width": "52"
 																	}
 																},
 																"span": {
@@ -2952,7 +1921,7 @@
 												},
 												{
 													"exclude": false,
-													"id": "dockingProgressBar_1",
+													"id": "dockingProgressBar",
 													"path": "DockingProgressBar",
 													"rows": [
 														[
@@ -2998,11 +1967,16 @@
 												}
 											]
 										],
-										"styles": [],
+										"styles": [
+											"av-docking-errors"
+										],
 										"type": "docking-errors"
 									}
 								]
 							],
+							"rules": {
+								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
+							},
 							"styles": [
 								"bs-fixed-header-40325"
 							],
@@ -3018,28 +1992,26 @@
 		[
 			{
 				"exclude": false,
-				"htmlLabel": "Content",
 				"id": "content",
 				"label": "Content",
-				"path": "",
 				"rows": [
 					[
 						{
 							"exclude": false,
+							"hasCustomId": true,
+							"htmlLabel": "Page Controller",
 							"id": "pageController",
 							"path": "",
-							"properties": {
-								"transitionDelay": 600
-							},
 							"rows": [
 								[
 									{
 										"exclude": false,
 										"hasCustomId": true,
-										"htmlLabel": "Page",
+										"htmlLabel": "Page 1",
 										"id": "page",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
+										"label": "Page 1",
 										"path": "",
 										"rows": [
 											[
@@ -3065,19 +2037,19 @@
 								]
 							],
 							"rules": {
-								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n   }",
-								"dc": "data.pageChangeAnimation",
-								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");\n"
+								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
+								"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];",
+								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeAnimation = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
 							},
+							"styles": [
+								"av-page-transition"
+							],
 							"type": "page-controller"
 						}
 					]
 				],
-				"rules": {
-					"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
-				},
+				"rules": {},
 				"styles": [
-					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
 				"type": "block"
@@ -3121,7 +2093,7 @@
 							"styles": [
 								"av-button",
 								"bs-submit-button-65937",
-								"av-form-field"
+								"av-global-layout"
 							],
 							"type": "submit"
 						}
@@ -3165,9 +2137,10 @@
 								"xs": 2
 							},
 							"styles": [
+								"av-button-navigation-next",
 								"av-button-navigation"
 							],
-							"type": "button"
+							"type": "button-docking-right"
 						}
 					],
 					[
@@ -3192,9 +2165,10 @@
 								"xs": 2
 							},
 							"styles": [
+								"av-button-navigation-back",
 								"av-button-navigation"
 							],
-							"type": "button"
+							"type": "button-docking-left"
 						}
 					],
 					[
@@ -3228,32 +2202,42 @@
 			{
 				"exclude": false,
 				"id": "functionalMenuFabMenu",
+				"properties": {
+					"menuLayout": " fab-menu"
+				},
 				"rows": [
 					[
 						{
 							"exclude": false,
 							"id": "functionalMenu",
+							"properties": {
+								"offIcon": "fa fa-bars"
+							},
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"type": "button-toggle-icon"
 						}
 					],
 					[
 						{
+							"exclude": false,
 							"id": "exit",
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"type": "button"
 						},
 						{
+							"exclude": false,
 							"id": "resume",
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"type": "button"
 						},
 						{
+							"exclude": false,
 							"id": "help",
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"type": "button"
 						},
 						{
+							"exclude": false,
 							"id": "share",
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"type": "button"
@@ -3378,12 +2362,6 @@
 										"id": "datePicker",
 										"noData": true,
 										"path": "",
-										"styles": [
-											"mg-datepicker",
-											"date-picker-base",
-											"av-global-layout",
-											"av-form-field"
-										],
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
 										"type": "date-picker"
 									}
@@ -3598,9 +2576,9 @@
 		]
 	],
 	"rules": {
-		"dc": "data.pageChangeAnimation"
+		"dc": "return [data.pageChangeAnimation, Form.getItemProperty(\"data.pageController\",\"pageTransition\")];"
 	},
-	"selectedBrand": "Blue Sky",
+	"selectedBrand": "Default",
 	"styleMods": {},
 	"styles": [
 		"mg-base",
@@ -3661,7 +2639,7 @@
 		},
 		"advice-block-info": {
 			"availableStyles": [
-				"av-message-block",
+				"av-message-section",
 				"form-help-option-container",
 				"align-top"
 			],
@@ -3676,16 +2654,15 @@
 		},
 		"attachment-field": {
 			"availableStyles": [
-				"av-form-field",
-				"align-top",
-				"av-global-layout"
+				"av-global-layout",
+				"align-top"
 			],
 			"properties": {}
 		},
 		"block": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"av-background-image",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
@@ -3693,7 +2670,6 @@
 				"bs-floating-right-29171",
 				"bs-functional-menu-10498",
 				"bs-max-width-73189",
-				"bs-min-height-64689",
 				"bs-primary-background-02324",
 				"bs-text-align-right-83697",
 				"bs-tramline-container-62540",
@@ -3751,7 +2727,7 @@
 				"dialog-cancel-hide-desktop",
 				"dialog-cancel-hide-mobile",
 				"dialog-confirm-button",
-				"av-form-field",
+				"av-global-layout",
 				"form-help-start-chat-button",
 				"link-button-style",
 				"mg-button",
@@ -3761,107 +2737,97 @@
 				"bs-dialog-button-12962",
 				"bs-dialog-link-button-09809",
 				"bs-next-error-36745",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"button-group": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"av-button-group",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"checkbox": {
 			"availableStyles": [
-				"mg-checkbox",
-				"av-form-field",
-				"align-top",
-				"bs-checkbox-04598",
 				"av-global-layout",
-				"av-checkbox"
+				"align-top",
+				"av-checkbox",
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"currency": {
 			"availableStyles": [
 				"align-top",
-				"bs-currency-field-75729",
-				"av-form-field",
-				"bs-text-field-71719",
+				"av-currency",
 				"av-global-layout",
 				"av-text-field",
-				"av-currency"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"data-checkbox-group": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-checkbox-group",
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"data-dropdown": {
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-drop-down-33719",
 				"av-global-layout",
-				"av-drop-down"
+				"av-drop-down",
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"data-radio-group": {
 			"availableStyles": [
-				"av-form-field",
-				"radio-basic",
+				"av-global-layout",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-global-layout",
-				"av-radio"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {}
 		},
 		"data-typeahead": {
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-text-field-71719",
 				"av-global-layout",
-				"av-text-field"
+				"av-text-field",
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"date-picker": {
 			"availableStyles": [
 				"align-top",
-				"bs-date-field-64466",
+				"av-date",
 				"mg-datepicker",
 				"date-picker-base",
-				"av-form-field",
-				"bs-text-field-71719",
 				"av-global-layout",
 				"av-text-field",
-				"av-date"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"decimal": {
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-text-field-71719",
 				"av-global-layout",
-				"av-text-field"
+				"av-text-field",
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -3889,9 +2855,8 @@
 		},
 		"docking-errors": {
 			"availableStyles": [
-				"av-block-error",
-				"align-top",
-				"av-docking-errors"
+				"av-docking-errors",
+				"align-top"
 			],
 			"properties": {}
 		},
@@ -3904,11 +2869,10 @@
 		},
 		"dropdown": {
 			"availableStyles": [
-				"av-form-field",
-				"align-top",
-				"bs-drop-down-33719",
 				"av-global-layout",
-				"av-drop-down"
+				"align-top",
+				"av-drop-down",
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -3921,20 +2885,19 @@
 		},
 		"dropdown-multi-select": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"dropdown-multi-select",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"dropdown-years": {
 			"availableStyles": [
 				"align-top",
-				"av-form-field",
-				"bs-drop-down-33719",
 				"av-global-layout",
-				"av-drop-down"
+				"av-drop-down",
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4007,9 +2970,9 @@
 		},
 		"iframe": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4042,9 +3005,9 @@
 		},
 		"linkedin-prefill": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4097,8 +3060,9 @@
 		},
 		"nav-content": {
 			"availableStyles": [
-				"page-fade-transition",
-				"align-top"
+				"av-page-transition",
+				"align-top",
+				"page-fade-transition"
 			],
 			"properties": {}
 		},
@@ -4114,8 +3078,7 @@
 		"nav-page": {
 			"availableStyles": [
 				"bs-max-width-73189",
-				"align-top",
-				"bs-page-transition-20212"
+				"align-top"
 			],
 			"properties": {}
 		},
@@ -4175,19 +3138,19 @@
 		},
 		"page-controller": {
 			"availableStyles": [
-				"page-fade-transition",
-				"align-top"
+				"av-page-transition",
+				"align-top",
+				"page-fade-transition"
 			],
 			"properties": {}
 		},
 		"payment-type-selector": {
 			"availableStyles": [
-				"mg-checkbox",
 				"mg-radio-button-group",
-				"av-form-field",
+				"av-global-layout",
 				"mg-checkbox-group",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4215,51 +3178,50 @@
 		"radio-button-graphical": {
 			"availableStyles": [
 				"radio-graphical",
-				"radio-basic",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-radio"
+				"radio-basic"
 			],
 			"properties": {}
 		},
 		"radio-button-group": {
 			"availableStyles": [
-				"av-form-field",
-				"radio-basic",
+				"av-global-layout",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
-				"bs-radio-57278",
 				"align-top",
-				"av-global-layout",
-				"av-radio"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {}
 		},
 		"radio-button-group-graphical": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"radio-graphical-group",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"radio-button-repeating": {
 			"availableStyles": [
-				"av-form-field",
-				"radio-basic",
+				"av-global-layout",
+				"av-radio",
 				"radio-border",
 				"radio-icon-top",
 				"av-button-group",
 				"av-button-group-icon",
 				"align-top",
-				"av-global-layout",
-				"av-radio"
+				"av-form-field",
+				"radio-basic"
 			],
 			"properties": {}
 		},
@@ -4272,10 +3234,10 @@
 		},
 		"repeat-add-button": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4288,10 +3250,10 @@
 		},
 		"repeat-delete-button": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"repeat-button",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4304,9 +3266,9 @@
 		},
 		"route-select": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4320,7 +3282,7 @@
 		"section-2": {
 			"availableStyles": [
 				"align-top",
-				"bc-white-background-20804",
+				"av-section",
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",
@@ -4334,18 +3296,18 @@
 		},
 		"signature": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
 				"signature-dialog-15537",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"slider": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4377,9 +3339,9 @@
 		},
 		"text-area": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4392,7 +3354,7 @@
 				"bs-form-name-03674",
 				"mg-bold",
 				"email-complete-message",
-				"av-form-field",
+				"av-global-layout",
 				"form-footer-text",
 				"mg-row-header",
 				"job-details-text",
@@ -4407,7 +3369,7 @@
 				"submit-success-message",
 				"bs-center-align-19822",
 				"bs-docked-error-63227",
-				"av-global-layout"
+				"av-form-field"
 			],
 			"properties": {}
 		},
@@ -4421,22 +3383,20 @@
 		},
 		"text-input": {
 			"availableStyles": [
-				"av-form-field",
+				"av-global-layout",
 				"align-top",
 				"bs-form-text-field-32514",
-				"bs-text-field-71719",
+				"av-text-field",
 				"bs-dialog-text-field-14963",
 				"bs-online-chat-82522",
-				"av-global-layout",
-				"av-text-field"
+				"av-form-field"
 			],
 			"properties": {}
 		},
 		"time": {
 			"availableStyles": [
-				"av-form-field",
-				"align-top",
-				"av-global-layout"
+				"av-global-layout",
+				"align-top"
 			],
 			"properties": {}
 		}

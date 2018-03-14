@@ -1,0 +1,7 @@
+form[name='form'] .message-outer {
+  position: relative;
+}
+form[name='form'] .message-icon {
+  position: absolute;
+  left: 0;
+}

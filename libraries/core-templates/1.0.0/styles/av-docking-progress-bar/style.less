@@ -10,7 +10,7 @@ form[name='form'] {
     }
     
     .av-progress-bar-banner {
-	    background: rgba(100, 118, 127, 0.67); 
+        .override-color(background-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
     } 
     
     .av-form-heading h1 {
@@ -23,7 +23,8 @@ form[name='form'] {
        padding: 0 @mobile-page-gutters ! important;
      }
      .wdg-sticky-panel-content {
-   	   border-bottom: solid 1px rgba(100, 118, 127, 0.67);
+   	   border-bottom: solid 1px;
+       .override-color(border-bottom-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
      }
    }
 }

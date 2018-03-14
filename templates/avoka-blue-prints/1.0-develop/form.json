@@ -54,7 +54,7 @@
 			"itemOptions": {
 				"dockingProgressBar": {
 					"properties": {
-						"progressBarHeight": 75
+						"progressBarHeight": 50
 					}
 				},
 				"functionalMenuFabMenu": {
@@ -2814,91 +2814,61 @@
 							},
 							"type": "page-controller"
 						}
-					],
+					]
+				],
+				"rules": {},
+				"styles": [
+					"bs-max-width-73189"
+				],
+				"type": "block"
+			}
+		],
+		[
+			{
+				"exclude": false,
+				"htmlLabel": "Bottom Nav",
+				"id": "bottomNav",
+				"label": "Bottom Nav",
+				"offset": {
+					"lg": "0",
+					"md": "0"
+				},
+				"path": "",
+				"rows": [
 					[
 						{
 							"animateVisibility": true,
 							"exclude": false,
-							"htmlLabel": "Bottom Nav",
-							"id": "bottomNav",
-							"label": "Bottom Nav",
+							"id": "submit2",
 							"offset": {
 								"lg": "0",
-								"md": "0"
+								"md": "0",
+								"sm": "0",
+								"xs": "0"
 							},
 							"path": "",
-							"rows": [
-								[
-									{
-										"exclude": false,
-										"id": "submit2",
-										"offset": {
-											"lg": "4",
-											"md": "4",
-											"sm": "3",
-											"xs": "3"
-										},
-										"path": "",
-										"properties": {
-											"legacyMethod": false
-										},
-										"rules": {
-											"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});"
-										},
-										"span": {
-											"sm": 6,
-											"xs": 6
-										},
-										"styles": [
-											"av-button",
-											"bs-submit-button-65937",
-											"av-global-layout"
-										],
-										"type": "submit"
-									}
-								]
-							],
+							"properties": {
+								"legacyMethod": false
+							},
 							"rules": {
+								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
 								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
+							"span": {
+								"sm": 6,
+								"xs": 6
+							},
 							"styles": [
-								"bs-bottom-nav-15636"
+								"av-button",
+								"bs-submit-button-65937",
+								"av-global-layout"
 							],
-							"type": "block"
-						}
-					],
-					[
-						{
-							"exclude": false,
-							"id": "formFooter",
-							"path": "",
-							"rows": [
-								[
-									{
-										"htmlLabel": "",
-										"id": "footerSection",
-										"label": "",
-										"rows": [
-											[
-												{
-													"id": "formFooterText_7",
-													"path": "",
-													"subId": "8c9b02742d3841d8a9c30d826878b6af",
-													"type": "text-display"
-												}
-											]
-										],
-										"styles": [
-											"mg-section-2",
-											"bs-max-width-73189"
-										],
-										"type": "section-2"
-									}
-								]
-							],
-							"type": "form-footer"
+							"type": "submit"
 						}
 					]
+				],
+				"styles": [
+					"bs-bottom-nav-15636"
 				],
 				"rules": {},
 				"styles": [
@@ -3473,7 +3443,6 @@
 				"bs-floating-right-29171",
 				"bs-functional-menu-10498",
 				"bs-max-width-73189",
-				"bs-min-height-64689",
 				"bs-primary-background-02324",
 				"bs-text-align-right-83697",
 				"bs-tramline-container-62540",
@@ -3882,8 +3851,7 @@
 		"nav-page": {
 			"availableStyles": [
 				"bs-max-width-73189",
-				"align-top",
-				"bs-page-transition-20212"
+				"align-top"
 			],
 			"properties": {}
 		},

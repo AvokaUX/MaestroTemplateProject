@@ -1,0 +1,107 @@
+{
+	"category": "Custom Components",
+	"label": "Navigation Buttons",
+	"html": "nav-buttons.html",
+	"js":	"nav-buttons.js",
+	"rows": [
+		[
+			{
+				"span": {
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xs": 2
+				},
+				"label": "Next",
+				"styles": [
+					"av-button-navigation-next",
+					"av-button-navigation"
+				],
+				"properties": {
+					"icon": "fa fa-angle-right"
+				},
+				"type": "button-docking-right",
+				"animateVisibility": true,
+				"exclude": false,
+				"htmlLabel": "Next",
+				"labelPlacementLeft": false,
+				"path": "",
+				"rules": {
+					"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\nForm.$Pages.move(true);\n$timeout(function() {\t\n  data.blockNext = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockNext = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n",
+					"dc": "return data.blockNext  ? \"error\" : \"\";",
+					"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+				},
+				"id": "next"
+			}
+		],
+		[
+			{
+				"span": {
+					"sm": 2,
+					"md": 2,
+					"lg": 2,
+					"xs": 2
+				},
+				"label": "Back",
+				"styles": [
+					"av-button-navigation-back",
+					"av-button-navigation"
+				],
+				"properties": {
+					"icon": "fa fa-angle-left"
+				},
+				"type": "button-docking-left",
+				"animateVisibility": true,
+				"exclude": false,
+				"htmlLabel": "Back",
+				"path": "",
+				"rules": {
+					"click": "Form.$Pages.move(false);",
+					"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst && !Form.$Pages.currentPage.properties.pageOfNoReturn;\n} else {\n\treturn true;\n}\n"
+				},
+				"id": "back"
+			}
+		],
+		[
+			{
+				"animateVisibility": true,
+				"exclude": false,
+				"id": "submit2",
+				"offset": {
+					"lg": "0",
+					"md": "0",
+					"sm": "0",
+					"xs": "0"
+				},
+				"path": "",
+				"properties": {
+					"legacyMethod": false
+				},
+				"rules": {
+					"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+					"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+				},
+				"span": {
+					"sm": 6,
+					"xs": 6
+				},
+				"styles": [
+					"av-button",
+					"bs-submit-button-65937",
+					"av-global-layout"
+				],
+				"type": "submit"
+			}
+		]
+	],
+	"type": "block",
+	"path": "",
+	"htmlLabel": "Navigation Buttons",
+	"blockInfo": {
+		"editLink": "https://tm.maestro.avoka.com/maestro/secure/design/5407",
+		"publishLibraryId": 5704,
+		"blockCode": "floating-functional-component"
+	},
+	"description": "",
+	"id": "NavigationButtons"
+}

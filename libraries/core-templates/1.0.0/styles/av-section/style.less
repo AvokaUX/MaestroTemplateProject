@@ -1,5 +1,16 @@
 form[name='form'] {
-	.av-section {
-	  background-color: @av-section-background;
-	}
+  .av-section {
+	.override-color(background-color, @av-neutral-contrast, fade(@av-section-background, @av-section-background-opacity));
+
+    &.av-section-fullpage {
+        min-height: ~"calc(100% - 160px)";
+     }
+
+    @media (max-width : @screen-md) {
+      border-bottom: solid 1px #d3d7d9;
+      &.av-section-fullpage {
+        min-height: ~"calc(100% - 80px)";
+      }
+    }
+  }
 }

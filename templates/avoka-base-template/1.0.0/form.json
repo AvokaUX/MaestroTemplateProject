@@ -39,13 +39,11 @@
 				"category": "Page Controller",
 				"label": "Page Transition",
 				"path": "properties.pageTransition"
-			}
-		],
-		"pageController_1": [
+			},
 			{
 				"category": "Page Controller",
-				"label": "Page Transition",
-				"path": "properties.pageTransition"
+				"label": "Page Transition Delay",
+				"path": "properties.transitionDelay"
 			}
 		]
 	},
@@ -54,7 +52,7 @@
 			"itemOptions": {
 				"dockingProgressBar": {
 					"properties": {
-						"progressBarHeight": 75
+						"progressBarHeight": 50
 					}
 				},
 				"functionalMenuFabMenu": {
@@ -83,8 +81,11 @@
 						}
 					}
 				},
-				"pageController_1": {
-					"properties": {}
+				"pageController": {
+					"properties": {
+						"pageTransition": "slide",
+						"transitionDelay": 500
+					}
 				}
 			},
 			"label": "Default",
@@ -98,6 +99,8 @@
 				"av-button-primary-color": "",
 				"av-button-secondary-color": "",
 				"av-dialog-background": "#000",
+				"av-dialog-background-opacity": "70%",
+				"av-docking-point": "50px",
 				"av-focus-color": "",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
@@ -114,18 +117,26 @@
 				"av-menu-hover-color": "",
 				"av-menu-text-color": "",
 				"av-menu-text-hover-color": "",
+				"av-msg-section-background": "#64767F",
+				"av-msg-section-background-opacity": "70%",
 				"av-neutral-color": "#EEEEEE",
 				"av-neutral-contrast": "#333333",
 				"av-popover-help": "#fff",
 				"av-popover-help-btn-focus": "#2a7ab0",
 				"av-primary-color": "#7bd5ff",
 				"av-primary-contrast": "#64767f",
+				"av-progressbar-background": "#64767F",
+				"av-progressbar-background-opacity": "70%",
+				"av-progressbar-height": "50px",
 				"av-secondary-color": "#454753",
-				"av-secondary-contrast": "#64767f",
+				"av-secondary-contrast": "#ffffff",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
+				"av-section-background": "#fff",
+				"av-section-background-opacity": "90%",
+				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
 				"av-slide-menu-extra-item-color": "",
@@ -688,6 +699,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "dialogBody_8",
 						"rows": [
 							[
@@ -732,6 +744,7 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "dialogFooter_18",
 									"rows": [
 										[
@@ -934,7 +947,6 @@
 		]
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -1377,9 +1389,7 @@
 												"rules": {
 													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus != \"success\" : true)"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1429,9 +1439,7 @@
 												"rules": {
 													"sh": "((Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1467,7 +1475,7 @@
 														{
 															"exclude": false,
 															"htmlLabel": "Your Full Name",
-															"id": "textField",
+															"id": "textField_5",
 															"label": "Your Full Name",
 															"mandatory": true,
 															"path": "TextField",
@@ -1517,9 +1525,7 @@
 												"rules": {
 													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus != \"success\": true;"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1572,9 +1578,7 @@
 												"rules": {
 													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus == \"success\": false;"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										]
@@ -1648,6 +1652,7 @@
 			"type": "bs-modal-page"
 		},
 		"submitsuccess": {
+			"exclude": false,
 			"htmlLabel": "Submit Success",
 			"id": "submitsuccess",
 			"label": "Submit Success",
@@ -1846,9 +1851,7 @@
 												"rules": {
 													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus != \"success\" : true)"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1857,7 +1860,7 @@
 												"animateVisibility": true,
 												"exclude": false,
 												"htmlLabel": "Next Steps",
-												"id": "section_3",
+												"id": "section_10",
 												"label": "Next Steps",
 												"path": "",
 												"properties": {
@@ -1877,9 +1880,7 @@
 												"rules": {
 													"sh": "Form.data.SFMData.SystemProfile.hasOwnProperty('Job') && Form.data.SFMData.SystemProfile.Job.hasOwnProperty('StepTasks') && Form.data.SFMData.SystemProfile.Job.StepTasks.Task.length > 0"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										],
@@ -1928,7 +1929,8 @@
 													]
 												],
 												"styles": [
-													"reference-code-block"
+													"reference-code-block",
+													"av-message-block"
 												],
 												"type": "block"
 											}
@@ -1989,9 +1991,7 @@
 												"rules": {
 													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
 												},
-												"styles": [
-													"bc-white-background-20804"
-												],
+												"styles": [],
 												"type": "section-2"
 											}
 										]
@@ -2236,6 +2236,9 @@
 				"rows": [
 					[]
 				],
+				"rules": {
+					"dc": "return Form.$Pages && Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.fullPage ? \"av-minimise-background\" : \"\";"
+				},
 				"styles": [
 					"av-background-image"
 				],
@@ -2244,110 +2247,61 @@
 		],
 		[
 			{
+				"animateVisibility": false,
 				"exclude": false,
-				"htmlLabel": "Form Header",
 				"id": "formHeader1",
-				"label": "Form Header",
-				"path": "",
 				"rows": [
 					[
 						{
-							"exclude": false,
 							"id": "stickyPanel1",
-							"path": "StickyPanel",
+							"properties": {
+								"floatOver": true
+							},
 							"rows": [
 								[
 									{
-										"exclude": false,
 										"id": "formHeader",
-										"path": "",
-										"properties": {
-											"showTrackingCode": false
-										},
 										"rows": [
 											[
 												{
-													"exclude": false,
-													"htmlLabel": "Brand logo",
 													"id": "brandLogo",
-													"label": "Brand logo",
-													"path": "",
 													"rows": [
 														[
 															{
-																"exclude": false,
-																"htmlLabel": "Logo",
 																"id": "logo",
-																"label": "Logo",
-																"path": "",
 																"properties": {
 																	"src": {
 																		"fileName": "avoka-logo.png",
-																		"height": "42",
+																		"height": "40",
 																		"width": "52"
 																	}
 																},
-																"span": {
-																	"lg": 4,
-																	"md": 4,
-																	"sm": 3,
-																	"xs": 3
-																},
-																"styles": [],
 																"type": "image"
 															}
 														]
 													],
-													"span": {
-														"lg": 3,
-														"md": 3,
-														"sm": 3,
-														"xs": 3
-													},
-													"styles": [
-														"bs-logo-container-86033"
-													],
 													"type": "block"
 												},
 												{
-													"exclude": false,
 													"id": "dockingProgressBar",
-													"path": "DockingProgressBar",
-													"properties": {
-														"progressBarHeight": 75
-													},
 													"rows": [
 														[
 															{
-																"exclude": false,
 																"id": "progressBar_1",
-																"path": "ProgressBar",
-																"properties": {
-																	"displayGroupIcon": false
-																},
 																"type": "progress-bar"
 															}
 														]
 													],
-													"styles": [
-														"av-docking-progress-bar"
-													],
 													"type": "docking-progress-bar"
 												}
 											]
-										],
-										"styles": [
-											"mg-header",
-											"bs-max-width-73189"
 										],
 										"type": "form-header"
 									}
 								],
 								[
 									{
-										"exclude": false,
 										"id": "dockingErrorBlock",
-										"path": "",
 										"rows": [
 											[
 												{
@@ -2360,26 +2314,18 @@
 												}
 											]
 										],
-										"styles": [
-											"av-docking-errors"
-										],
 										"type": "docking-errors"
 									}
 								]
-							],
-							"rules": {
-								"dc": "if (Form.$Pages && Form.$Pages.visiblePageCount > 1) return \"progress-bar-space\";"
-							},
-							"styles": [
-								"bs-fixed-header-40325"
 							],
 							"type": "sticky-panel"
 						}
 					]
 				],
-				"rules": {},
-				"styles": [],
-				"type": "block"
+				"rules": {
+					"sh": "Form.$Pages && Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.hideFormHeader;"
+				},
+				"type": "form-header-main"
 			}
 		],
 		[
@@ -2391,40 +2337,54 @@
 					[
 						{
 							"exclude": false,
-							"id": "pageController_1",
+							"hasCustomId": true,
+							"htmlLabel": "Page Controller",
+							"id": "pageController",
 							"path": "",
 							"properties": {
-								"pageTransition": "Slide"
+								"pageTransition": "slide"
 							},
 							"rows": [
 								[
 									{
 										"exclude": false,
-										"hasCustomId": true,
-										"htmlLabel": "Page 1",
-										"id": "page",
+										"htmlLabel": "Landing Page",
+										"id": "landingPage",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
-										"label": "Page 1",
-										"path": "",
+										"label": "Landing Page",
+										"properties": {
+											"fullPage": true,
+											"hideFormHeader": true,
+											"hideMenuButton": true,
+											"hideNavButtons": true,
+											"offMenu": true
+										},
 										"rows": [
 											[
 												{
 													"exclude": false,
-													"id": "section",
+													"id": "section_2",
 													"path": "",
+													"properties": {
+														"fullPage": true
+													},
 													"rows": [
-														[]
+														[
+															{
+																"exclude": false,
+																"id": "button_4",
+																"path": "",
+																"rules": {
+																	"click": "Form.$Pages.move(true);"
+																},
+																"type": "button"
+															}
+														]
 													],
 													"type": "section-2"
 												}
 											]
-										],
-										"rules": {
-											"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
-										},
-										"styles": [
-											"mg-section-1"
 										],
 										"type": "nav-page"
 									}
@@ -2432,17 +2392,15 @@
 								[
 									{
 										"exclude": false,
-										"htmlLabel": "Page 2",
-										"id": "page_2",
+										"id": "page",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
-										"label": "Page 2",
 										"path": "",
 										"rows": [
 											[
 												{
 													"exclude": false,
-													"id": "section_2",
+													"id": "section_1",
 													"path": "",
 													"rows": [
 														[]
@@ -2457,16 +2415,18 @@
 							],
 							"rules": {
 								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
-								"dc": "data.pageChangeAnimation;",
-								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = Form.getItemProperty(\"data.pageController_1\",\"pageTransition\");\nif (pageTransition == \"Fade\"){\n   data.pageChangeAnimation = \"transition-fade\";\n}\nelse if (pageTransition == \"Slide\"){\n  var navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\n  data.pageChangeAnimation = navigateForwards ? \"slide-Out-To-Left\" : \"slide-Out-To-Right\";\n}\nvar _scroll = $(window).scrollTop();\nvar dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\nif (data.docked){\n  $(window).scrollTop(dp);\n  $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n}\n$(\"#\" + pageTo.id).css(\"top\", \"0\");"
+								"dc": "return [data.pageChangeAnimation, data.pageChangeDirection];",
+								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = \"page-transition-\" + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n\nif (Form.getItemProperty(info.from, \"fullPage\") || Form.getItemProperty(info.to, \"fullPage\") || (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage)) {\n  pageTransition = \"page-transition-fade\";\n}\ndata.pageChangeAnimation = pageTransition;\n\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeDirection = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\n\nif (pageTransition == \"page-transition-slide\") {\n  var _scroll = $(window).scrollTop();\n  var dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\n  if (data.docked){\n    $(window).scrollTop(dp);\n    $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n  }\n  $(\"#\" + pageTo.id).css(\"top\", \"0\");\n}"
 							},
+							"styles": [
+								"av-page-transition"
+							],
 							"type": "page-controller"
 						}
 					]
 				],
 				"rules": {},
 				"styles": [
-					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
 				"type": "block"
@@ -2475,144 +2435,36 @@
 		[
 			{
 				"exclude": false,
-				"htmlLabel": "Bottom Nav",
-				"id": "bottomNav",
-				"label": "Bottom Nav",
-				"offset": {
-					"lg": "0",
-					"md": "0"
-				},
-				"path": "",
-				"rows": [
-					[
-						{
-							"animateVisibility": true,
-							"exclude": false,
-							"id": "submit2",
-							"offset": {
-								"lg": "0",
-								"md": "0",
-								"sm": "0",
-								"xs": "0"
-							},
-							"path": "",
-							"properties": {
-								"legacyMethod": false
-							},
-							"rules": {
-								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
-							"span": {
-								"sm": 6,
-								"xs": 6
-							},
-							"styles": [
-								"av-button",
-								"bs-submit-button-65937",
-								"av-global-layout"
-							],
-							"type": "submit"
-						}
-					]
-				],
-				"styles": [
-					"bs-bottom-nav-15636"
-				],
-				"type": "block"
-			}
-		],
-		[
-			{
-				"exclude": false,
-				"htmlLabel": "Navigation Bar",
 				"id": "navigationBar",
 				"label": "Navigation Bar",
-				"path": "",
 				"rows": [
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Next",
 							"id": "next",
-							"label": "Next",
-							"labelPlacementLeft": false,
-							"path": "",
-							"properties": {
-								"icon": "fa fa-angle-right"
-							},
-							"rules": {
-								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\nForm.$Pages.move(true);\n$timeout(function() {\t\n  data.blockNext = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockNext = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n",
-								"dc": "return data.blockNext  ? \"error\" : \"\";",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
-							"span": {
-								"lg": 2,
-								"md": 2,
-								"sm": 2,
-								"xs": 2
-							},
-							"styles": [
-								"av-button-navigation-next",
-								"av-button-navigation"
-							],
 							"type": "button-docking-right"
 						}
 					],
 					[
 						{
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Back",
 							"id": "back",
-							"label": "Back",
-							"path": "",
-							"properties": {
-								"icon": "fa fa-angle-left"
-							},
-							"rules": {
-								"click": "Form.$Pages.move(false);",
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst;\n} else {\n\treturn true;\n}\n"
-							},
-							"span": {
-								"lg": 2,
-								"md": 2,
-								"sm": 2,
-								"xs": 2
-							},
-							"styles": [
-								"av-button-navigation-back",
-								"av-button-navigation"
-							],
 							"type": "button-docking-left"
 						}
 					],
 					[
 						{
-							"exclude": false,
-							"htmlLabel": "Block Next",
-							"id": "blockNext",
-							"label": "Block Next",
-							"path": "",
-							"type": "data-field"
-						}
-					],
-					[
-						{
-							"exclude": false,
-							"htmlLabel": "Page Change Animation",
-							"id": "pageChangeAnimation",
-							"label": "Page Change Animation",
-							"path": "",
-							"type": "data-field"
+							"id": "submit2",
+							"span": {
+								"lg": 2,
+								"md": 2
+							},
+							"type": "submit"
 						}
 					]
 				],
 				"styles": [
 					"nav-bar-73803"
 				],
-				"type": "block"
+				"type": "nav-buttons"
 			}
 		],
 		[
@@ -2989,22 +2841,20 @@
 			}
 		]
 	],
-	"rules": {
-		"dc": "data.pageChangeAnimation"
-	},
+	"rules": {},
 	"selectedBrand": "Default",
 	"styleMods": {
-		"id-submit2": {
-			"blocks": {
-				"wdg-button": {
-					"blocks": {},
-					"decs": {
-						"max-width": "200px",
-						"min-width": "200px"
-					}
-				}
-			},
-			"decs": {}
+		"id-followOnOptions_3": {
+			"blocks": {},
+			"decs": {
+				"padding-top": "42px"
+			}
+		},
+		"id-section_4": {
+			"blocks": {},
+			"decs": {
+				"padding-bottom": "42px"
+			}
 		}
 	},
 	"styles": [
@@ -3055,7 +2905,8 @@
 				"bs-center-align-19822",
 				"align-top"
 			],
-			"properties": {}
+			"properties": {},
+			"styles": []
 		},
 		"address-lookup-google": {
 			"availableStyles": [
@@ -3066,7 +2917,7 @@
 		},
 		"advice-block-info": {
 			"availableStyles": [
-				"av-message-block",
+				"av-message-section",
 				"form-help-option-container",
 				"align-top"
 			],
@@ -3088,45 +2939,43 @@
 		},
 		"block": {
 			"availableStyles": [
-				"align-top",
-				"bc-white-background-20804",
 				"av-background-image",
+				"av-section",
+				"align-top",
+				"bs-ben-test-63099",
+				"bs-bottom-nav-15636",
+				"bs-dialog-navigation-56885",
+				"bs-fab-menu-background-88907",
+				"bs-fade-transition-50987",
+				"bs-fan-menu-mask-86056",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
 				"bs-floating-layer-60091",
 				"bs-floating-right-29171",
+				"bs-form-header-34876",
+				"bs-form-name-03674",
+				"bs-full-screen-layer-18272",
+				"bs-functional-bar-background-56524",
 				"bs-functional-menu-10498",
 				"bs-max-width-73189",
-				"bs-min-height-64689",
-				"bs-primary-background-02324",
+				"bs-progress-banner-76461",
 				"bs-text-align-right-83697",
+				"bs-top-navigation-bar-05168",
+				"bs-top-navigation-container-95011",
 				"bs-tramline-container-62540",
 				"bs-transparent-background-93141",
+				"bs-dialog-footer-10282",
+				"bs-header-background-58145",
+				"bs-logo-container-86033",
+				"bs-test-progress-container-15954",
+				"bs-top-nav-container-18605",
 				"dialog-content",
 				"follow-on-options-block",
+				"nav-bar-73803",
 				"pull-right",
 				"reference-code-block",
 				"mg-selector-block",
-				"bs-form-name-03674",
-				"bs-functional-bar-background-56524",
-				"bs-full-screen-layer-18272",
-				"bs-fade-transition-50987",
-				"bs-bottom-nav-15636",
-				"bs-dialog-navigation-56885",
-				"bs-navigator-background-70332",
-				"bs-top-navigation-bar-05168",
-				"bs-top-navigation-container-95011",
-				"bs-fan-menu-mask-86056",
-				"nav-bar-73803",
-				"bs-fab-menu-background-88907",
-				"bs-dialog-footer-10282",
-				"bs-ben-test-63099",
-				"bs-test-progress-container-15954",
-				"bs-top-nav-container-18605",
-				"bs-logo-container-86033",
-				"bs-header-background-58145",
-				"bs-progress-banner-76461",
-				"bs-form-header-34876"
+				"av-message-block"
 			],
 			"properties": {}
 		},
@@ -3450,6 +3299,13 @@
 			],
 			"properties": {}
 		},
+		"form-header-main": {
+			"availableStyles": [
+				"av-form-header",
+				"align-top"
+			],
+			"properties": {}
+		},
 		"icon-button": {
 			"availableStyles": [
 				"align-top",
@@ -3582,8 +3438,7 @@
 		"nav-page": {
 			"availableStyles": [
 				"bs-max-width-73189",
-				"align-top",
-				"bs-page-transition-20212"
+				"align-top"
 			],
 			"properties": {
 				"hideHeader": true
@@ -3649,8 +3504,9 @@
 		},
 		"page-controller": {
 			"availableStyles": [
+				"align-top",
 				"page-fade-transition",
-				"align-top"
+				"av-page-transition"
 			],
 			"properties": {}
 		},
@@ -3822,23 +3678,24 @@
 		},
 		"section-2": {
 			"availableStyles": [
+				"av-section",
 				"align-top",
-				"bc-white-background-20804",
-				"bs-transparent-background-93141",
-				"form-help-visit-us",
-				"mg-section-2",
-				"bs-max-width-73189",
 				"bs-center-align-19822",
-				"bs-save-dialog-text-82753",
+				"bs-max-width-73189",
+				"bs-transparent-background-93141",
+				"bs-dialog-content-scroll-92184",
 				"bs-modal-content-96022",
-				"bs-dialog-content-scroll-92184"
+				"bs-save-dialog-text-82753",
+				"form-help-visit-us",
+				"fullpage-section-36560",
+				"mg-section-2"
 			],
 			"properties": {
 				"topToBottom": true
 			},
 			"styles": [
 				"mg-section-2",
-				"bc-white-background-20804"
+				"av-section"
 			]
 		},
 		"signature": {

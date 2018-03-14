@@ -527,103 +527,65 @@
 							"type": "page-controller",
 							"id": "pageController_1"
 						}
-					],
-					[
-						{
-							"offset": {
-								"md": "0",
-								"lg": "0"
-							},
-							"label": "Bottom Nav",
-							"rows": [
-								[
-									{
-										"span": {
-											"xs": 6,
-											"sm": 6
-										},
-										"offset": {
-											"xs": "3",
-											"sm": "3",
-											"md": "4",
-											"lg": "4"
-										},
-										"styles": [
-											"av-button",
-											"bs-submit-button-65937",
-											"av-global-layout"
-										],
-										"properties": {
-											"legacyMethod": false
-										},
-										"type": "submit",
-										"rules": {
-											"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});"
-										},
-										"exclude": false,
-										"path": "",
-										"id": "submit2"
-									}
-								]
-							],
-							"animateVisibility": true,
-							"exclude": false,
-							"htmlLabel": "Bottom Nav",
-							"path": "",
-							"rules": {
-								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
-							},
-							"styles": [
-								"bs-bottom-nav-15636"
-							],
-							"type": "block",
-							"id": "bottomNav"
-						}
-					],
-					[
-						{
-							"rows": [
-								[
-									{
-										"label": "",
-										"rows": [
-											[
-												{
-													"path": "",
-													"subId": "8c9b02742d3841d8a9c30d826878b6af",
-													"id": "formFooterText_7",
-													"type": "text-display"
-												}
-											]
-										],
-										"styles": [
-											"mg-section-2",
-											"bs-max-width-73189"
-										],
-										"htmlLabel": "",
-										"id": "footerSection",
-										"type": "section-2"
-									}
-								]
-							],
-							"type": "form-footer",
-							"rules": {
-								"sh": "!Util.isReceipt"
-							},
-							"exclude": false,
-							"path": "",
-							"id": "formFooter"
-						}
 					]
 				],
 				"exclude": false,
 				"rules": {},
 				"styles": [
-					"bs-min-height-64689",
 					"bs-max-width-73189"
 				],
 				"type": "block",
 				"id": "content"
+			}
+		],
+		[
+			{
+				"offset": {
+					"md": "0",
+					"lg": "0"
+				},
+				"label": "Bottom Nav",
+				"rows": [
+					[
+						{
+							"span": {
+								"xs": 6,
+								"sm": 6
+							},
+							"offset": {
+								"xs": "0",
+								"sm": "0",
+								"md": "0",
+								"lg": "0"
+							},
+							"styles": [
+								"av-button",
+								"bs-submit-button-65937",
+								"av-global-layout"
+							],
+							"properties": {
+								"legacyMethod": false
+							},
+							"type": "submit",
+							"rules": {
+								"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+							},
+							"animateVisibility": true,
+							"exclude": false,
+							"path": "",
+							"id": "submit2"
+						}
+					]
+				],
+				"exclude": false,
+				"htmlLabel": "Bottom Nav",
+				"path": "",
+				"styles": [
+					"bs-bottom-nav-15636"
+				],
+				"type": "block",
+				"id": "bottomNav"
 			}
 		],
 		[
@@ -1253,7 +1215,6 @@
 				"bs-floating-right-29171",
 				"bs-functional-menu-10498",
 				"bs-max-width-73189",
-				"bs-min-height-64689",
 				"bs-primary-background-02324",
 				"bs-text-align-right-83697",
 				"bs-tramline-container-62540",
@@ -1962,8 +1923,7 @@
 			],
 			"availableStyles": [
 				"bs-max-width-73189",
-				"align-top",
-				"bs-page-transition-20212"
+				"align-top"
 			],
 			"properties": {
 				"hideHeader": true
@@ -2119,7 +2079,7 @@
 			"itemOptions": {
 				"dockingProgressBar": {
 					"properties": {
-						"progressBarHeight": 75
+						"progressBarHeight": 50
 					}
 				},
 				"functionalMenuFabMenu": {

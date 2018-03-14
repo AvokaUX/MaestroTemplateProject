@@ -90,7 +90,7 @@
 										],
 										"type": "advice-block-info",
 										"styles": [
-											"av-message-block",
+											"av-message-section",
 											"form-help-option-container"
 										],
 										"pubId": "0fc00e13886f4ee487e471ec71c22c9b",
@@ -162,7 +162,7 @@
 										],
 										"type": "advice-block-info",
 										"styles": [
-											"av-message-block",
+											"av-message-section",
 											"form-help-option-container"
 										],
 										"pubId": "5614be50ffc749a395d3748f91172519",

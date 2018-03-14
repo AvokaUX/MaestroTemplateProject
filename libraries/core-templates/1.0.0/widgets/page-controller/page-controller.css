@@ -1,47 +1,61 @@
 form[name='form'] {
-  overflow-x: hidden;
+  overflow: hidden;
 }
-form[name='form'] .av-page-transition .av-menu-page {
+form[name='form'] [data-view-stack] .av-menu-page {
   min-height: 100vh;
 }
 
-form[name='form'] .av-page-transition[data-view-stack].stack-active,
-form[name='form'] .av-page-transition[view-stack].stack-active,
-form[name='form'] .av-page-transition [data-view-stack].stack-active,
-form[name='form'] .av-page-transition [view-stack].stack-active {
-   overflow-y: hidden;
+form[name='form'] [data-view-stack].stack-active,
+form[name='form'] [view-stack].stack-active{
+  overflow-y: hidden;
 }
 
-form[name='form'] .av-page-transition .vstk-in.ng-enter {
+form[name='form'] [data-view-stack] > *, form[name='form'] [view-stack] > * {
+  -webkit-transform: none;
+  -ms-transform: none;
   transform: none;
 }
 
-form[name='form'] .av-page-transition.Fade .vstk-in {
+form[name='form'] .page-transition-fade [data-view-stack] .vstk-in, form[name='form'] .page-transition-none [data-view-stack] .vstk-in {
   opacity: 1;
 }
 
-form[name='form'] .av-page-transition.Fade .vstk-out {
+form[name='form'] .page-transition-fade [data-view-stack] .vstk-out, form[name='form'] .page-transition-none [data-view-stack] .vstk-out {
   visibility: hidden;
   opacity: 0;
   transform: none;
 }
 
-form[name='form'] .av-page-transition.Slide .vstk-up {
-  -webkit-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  transform: translateX(200%);
+form[name='form'] .page-transition-slide [data-view-stack] .vstk-up, form[name='form'] .page-transition-slide.Nav-To-Right .vstk-out.ng-enter {
+  -webkit-transform: translateX(150%);
+  -ms-transform: translateX(150%);
+  transform: translateX(150%);
 }
 
-form[name='form'] .av-page-transition.Slide .vstk-down {
-  -webkit-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
-  transform: translateX(-200%);
+form[name='form'] .page-transition-slide [data-view-stack] .vstk-down, form[name='form'] .page-transition-slide.Nav-To-Left .vstk-out.ng-enter {
+  -webkit-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  transform: translateX(-150%);
 }
 
-form[name='form'].Slide.Nav-To-Right .vstk-out.ng-enter {
-  transform: translateX(200%);
+@media only screen and (max-width: 1280px) {
+  form[name='form'] .page-transition-slide [data-view-stack] .vstk-up, form[name='form'] .page-transition-slide.Nav-To-Right .vstk-out.ng-enter {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  form[name='form'] .page-transition-slide [data-view-stack] .vstk-down, form[name='form'] .page-transition-slide.Nav-To-Left .vstk-out.ng-enter {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }
 
-form[name='form'].Slide.Nav-To-Left .vstk-out.ng-enter {
-  transform: translateX(-200%);
+form[name='form'] .page-transition-none [data-view-stack] > *, form[name='form'] .page-transition-none [view-stack] > * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }

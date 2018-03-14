@@ -50,11 +50,11 @@
       "options": [
         {
           "label": "Fade",
-          "value": "Fade"
+          "value": "fade"
         },
         {
           "label": "Slide",
-          "value": "Slide"
+          "value": "slide"
         }
       ]
     }
