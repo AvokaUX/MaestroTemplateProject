@@ -2887,12 +2887,11 @@
 										]
 									],
 									"styles": [],
+									"label": "",
+									"htmlLabel": "",
 									"subId": "082a0f34bab7496ab942025374652910",
 									"id": "formFooterText_4",
-									"type": "section-2",
-									"exclude": false,
-									"label": "",
-									"htmlLabel": ""
+									"type": "section-2"
 								}
 							]
 						],
@@ -2901,8 +2900,7 @@
 						},
 						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"id": "modalFooter_2",
-						"type": "form-footer",
-						"exclude": false
+						"type": "form-footer"
 					}
 				],
 				[
@@ -3328,12 +3326,11 @@
 										]
 									],
 									"styles": [],
+									"label": "",
+									"htmlLabel": "",
 									"subId": "082a0f34bab7496ab942025374652910",
 									"id": "formFooterText_6",
-									"type": "section-2",
-									"exclude": false,
-									"label": "",
-									"htmlLabel": ""
+									"type": "section-2"
 								}
 							]
 						],
@@ -3342,8 +3339,7 @@
 						},
 						"subId": "b4eb8296a924482c880d6c3abca4bb61",
 						"id": "modalFooter_4",
-						"type": "form-footer",
-						"exclude": false
+						"type": "form-footer"
 					}
 				],
 				[
@@ -3905,11 +3901,10 @@
 									],
 									"styles": [],
 									"subId": "259c9c77a01e4eb9a414bf02a9aebfe8",
-									"id": "formFooterText_7",
-									"type": "section-2",
-									"exclude": false,
 									"label": "",
-									"htmlLabel": ""
+									"htmlLabel": "",
+									"id": "formFooterText_7",
+									"type": "section-2"
 								}
 							]
 						],
@@ -6245,7 +6240,7 @@
 		"xml": {}
 	},
 	"transact": {},
-	"maestroReleaseVersion": "17.10.2",
+	"maestroReleaseVersion": "17.10.3",
 	"id": "AvokaSmartForm",
 	"exclude": false,
 	"isPreview": false
