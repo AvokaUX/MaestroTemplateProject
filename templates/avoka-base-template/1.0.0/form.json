@@ -3692,8 +3692,7 @@
 		"nav-page": {
 			"availableStyles": [
 				"bs-max-width-73189",
-				"align-top",
-				"bs-page-transition-20212"
+				"align-top"
 			],
 			"properties": {
 				"hideHeader": true
