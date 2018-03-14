@@ -23,3 +23,9 @@ form[name='form'] .wdg-accordion-section-container .panel-collapse .av-accordion
   padding: 15px;
   margin-bottom: 20px;
 }
+form[name='form'] .wdg-accordion-section-container .panel-collapse .av-accordion-body .wdg-accordion-button{
+  border: 1px solid #7bd5ff;
+  background: #7bd5ff;
+  color: #64767f;
+}
+

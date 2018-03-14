@@ -25,6 +25,12 @@
       "value": false,      
       "helpText": "Tick if you want multiple accordion sections openning while user interacts."
     },
+    "showNextButton": {
+      "label": "Show next button in accordion",
+      "type": "boolean",
+      "value": true,
+      "helpText": "Tick if you want open next button showing in accordion sections."
+    },
     "openText": {
       "label": "Toggle button label when closed",
       "type": "richText",      
