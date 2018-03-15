@@ -22,6 +22,11 @@ form[name='form'] {
           }
         
 		}
+      &.error {
+        .wdg-button {
+          animation: glowing 600ms 1;
+        }
+      }
 
 		.wdg-button-icon {		// Button icon
 		
@@ -61,4 +66,10 @@ form[name='form'] {
       }
 
 	}
+}
+@keyframes glowing {
+  0% { background-color: transparent; }
+  10% { background-color:rgba(255, 0, 0, 0.8); }
+  60% { background-color:rgba(255, 0, 0, 0.8); }
+  100% { background-color: transparent; }
 }
