@@ -1,0 +1,30 @@
+form[name='form'] {
+	.av-docking-progress-bar {
+		.av-docking-block {
+	    	height: @av-header-height;
+	    	.wdg-progress-bar-heading-docked {
+              top: 50%;
+              transform: translateY(-50%);
+	    	}
+	    }
+    }
+    
+    .av-progress-bar-banner {
+        .override-color(background-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
+    } 
+    
+    .av-form-heading h1 {
+	     font-size: 20px;
+	     color: @av-primary-contrast;
+   }
+   
+   @media(max-width: @screen-lg) {
+     .mg-header {
+       padding: 0 @mobile-page-gutters ! important;
+     }
+     .wdg-sticky-panel-content {
+   	   border-bottom: solid 1px;
+       .override-color(border-bottom-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
+     }
+   }
+}

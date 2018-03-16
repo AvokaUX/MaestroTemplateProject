@@ -1,0 +1,224 @@
+{
+	"category": "Custom Components",
+	"label": "Stepper Sequential",
+	"rows": [
+		[
+			{
+				"label": "Spinner with increment counter",
+				"rows": [
+					[
+						{
+							"span": {
+								"md": 2,
+								"lg": 2,
+								"xs": 2,
+								"sm": 2
+							},
+							"label": "Minus",
+							"styles": [
+								"mg-button",
+								"av-stepper-down"
+							],
+							"properties": {
+								"icon": "fa fa-minus"
+							},
+							"type": "button",
+							"path": "",
+							"exclude": false,
+							"htmlLabel": "Minus",
+							"pubId": "07be4812a3a94a84b096df707404fb33",
+							"rules": {
+								"click": "var tempData = data.currentValue - Form.getItemProperty(\"data.block\",\"incrementBy\");\nif(tempData >= Form.getItemProperty(\"data.block\",\"lowerLimit\") && tempData <= Form.getItemProperty(\"data.block\",\"upperLimit\")) {\n  data.currentValue = tempData;\n}\n\n",
+								"dc": "var incrementCounter = Form.getItemProperty(\"data.block\",\"incrementBy\");\nvar lowerLimit = Form.getItemProperty(\"data.block\",\"lowerLimit\");\nvar upperLimit = Form.getItemProperty(\"data.block\",\"upperLimit\");\nvar tempData = data.currentValue - incrementCounter;\nreturn tempData >= lowerLimit && tempData <= upperLimit  ? \"\" : \"disableCounterButton\";"
+							},
+							"hideLabel": true,
+							"id": "minus"
+						},
+						{
+							"span": {
+								"xs": 2,
+								"sm": 2,
+								"md": 2,
+								"lg": 2
+							},
+							"label": "",
+							"htmlLabel": "{{data.currentValue}}",
+							"styles": [
+								"av-stepper-text"
+							],
+							"type": "text-display",
+							"path": "",
+							"exclude": false,
+							"pubId": "1a8e2fbf5cfb4a05961649962a597fa5",
+							"id": "textDisplay"
+						},
+						{
+							"span": {
+								"md": 2,
+								"lg": 2,
+								"xs": 2,
+								"sm": 2
+							},
+							"label": "Plus",
+							"styles": [
+								"mg-button",
+								"av-stepper-up"
+							],
+							"properties": {
+								"icon": "fa fa-plus"
+							},
+							"type": "button",
+							"path": "",
+							"exclude": false,
+							"htmlLabel": "Plus",
+							"pubId": "258c5add5f304abd8c993dafd6cbfec1",
+							"rules": {
+								"click": "var tempData = data.currentValue + Form.getItemProperty(\"data.block\",\"incrementBy\");\nif(tempData <= Form.getItemProperty(\"data.block\",\"upperLimit\") && tempData >= Form.getItemProperty(\"data.block\",\"lowerLimit\")) {\n  data.currentValue = tempData;\n}",
+								"dc": "var incrementCounter = Form.getItemProperty(\"data.block\",\"incrementBy\");\nvar lowerLimit = Form.getItemProperty(\"data.block\",\"lowerLimit\");\nvar upperLimit = Form.getItemProperty(\"data.block\",\"upperLimit\");\nvar tempData = data.currentValue + incrementCounter;\nreturn tempData >= lowerLimit && tempData <= upperLimit  ? \"\" : \"disableCounterButton\";"
+							},
+							"hideLabel": true,
+							"id": "plus"
+						}
+					],
+					[
+						{
+							"label": "Available value is  to  in increment of",
+							"htmlLabel": "Available value is {{data.lowerLimit}} to {{data.upperLimit}} in increment of {{data.incrementBy}}",
+							"styles": [
+								"av-stepper-hint-text"
+							],
+							"type": "text-display",
+							"path": "",
+							"exclude": false,
+							"pubId": "c92b04c8663f4634bf495e795cc3c1e1",
+							"id": "availableValueIsToInIncrement"
+						}
+					],
+					[
+						{
+							"label": "Custom Series",
+							"rules": {
+								"eq": "Form.getItemProperty(\"data.block\",\"customSeries\")\n//Provide a value or calculation for this data field"
+							},
+							"type": "data-field",
+							"path": "",
+							"exclude": false,
+							"htmlLabel": "Custom Series",
+							"pubId": "cdf70079de0246f98d7e7f83dfd1f0b7",
+							"id": "customSeries"
+						}
+					],
+					[
+						{
+							"label": "Current Value",
+							"noData": false,
+							"rules": {
+								"eq": "//Provide a value or calculation for this data field\nif(Util.isBlank(data.currentValue)){\n  var startCounter = Form.getItemProperty(\"data.block\",\"startCounter\");\n  startCounter = startCounter === \"\" ? 0 : startCounter; \n  if(startCounter < Form.getItemProperty(\"data.block\",\"lowerLimit\") || startCounter > Form.getItemProperty(\"data.block\",\"upperLimit\")){\n    startCounter = Form.getItemProperty(\"data.block\",\"lowerLimit\");\n  }\n  return startCounter;\n}"
+							},
+							"type": "data-field",
+							"path": "CurrentValue",
+							"exclude": false,
+							"htmlLabel": "Current Value",
+							"pubId": "67c54b721a00402782ce1e205bf1062d",
+							"id": "currentValue"
+						}
+					],
+					[
+						{
+							"label": "Lower Limit",
+							"rules": {
+								"eq": "Form.getItemProperty(\"data.block\",\"lowerLimit\")\n//Provide a value or calculation for this data field"
+							},
+							"type": "data-field",
+							"path": "",
+							"exclude": false,
+							"htmlLabel": "Lower Limit",
+							"pubId": "cafa81afd0de4b1eb9b8228e11d089e9",
+							"id": "lowerLimit"
+						}
+					],
+					[
+						{
+							"label": "Upper Limit",
+							"rules": {
+								"eq": "Form.getItemProperty(\"data.block\",\"upperLimit\")\n//Provide a value or calculation for this data field"
+							},
+							"type": "data-field",
+							"path": "",
+							"exclude": false,
+							"htmlLabel": "Upper Limit",
+							"pubId": "57c5611ae9aa446297d65b0b0c7e6bcb",
+							"id": "upperLimit"
+						}
+					],
+					[
+						{
+							"label": "Increment by",
+							"rules": {
+								"eq": "Form.getItemProperty(\"data.block\",\"incrementBy\")\n//Provide a value or calculation for this data field"
+							},
+							"type": "data-field",
+							"path": "",
+							"exclude": false,
+							"htmlLabel": "Increment by",
+							"pubId": "1a47ebc116ff47969f11ab3698bc39d2",
+							"id": "incrementBy"
+						}
+					]
+				],
+				"type": "block-fieldset",
+				"path": "",
+				"exclude": false,
+				"pubId": "37dd7ca515314878a7d68e668b62304e",
+				"htmlLabel": "Spinner with increment counter",
+				"id": "spinnerWithIncrementCounter"
+			}
+		]
+	],
+	"type": "block",
+	"path": "",
+	"exclude": false,
+	"blockInfo": {
+		"editLink": "https://maestro.avoka.com/maestro/secure/design/40330",
+		"publishLibraryId": 22317,
+		"designVersion": "2",
+		"blockCode": "ft-stepper-sequencial"
+	},
+	"description": "",
+	"styles": [
+		"av-form-field",
+		"av-stepper"
+	],
+	"id": "block",
+	"propDefs": {
+		"lowerLimit": {
+			"label": "lower limit",
+			"category": "",
+			"type": "integer",
+			"value": 1,
+			"helpText": ""
+		},
+		"upperLimit": {
+			"label": "Upper Limit",
+			"category": "",
+			"type": "integer",
+			"value": 10,
+			"helpText": ""
+		},
+		"startCounter": {
+			"label": "Start Counter",
+			"category": "",
+			"type": "integer",
+			"value": 1,
+			"helpText": "Start Counter should be between lower and upper limit",
+			"subText": "Start Counter should be between lower and upper limit"
+		},
+		"incrementBy": {
+			"label": "Increment By",
+			"category": "",
+			"type": "integer",
+			"value": 1,
+			"helpText": ""
+		}
+	}
+}

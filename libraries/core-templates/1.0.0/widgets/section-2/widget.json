@@ -1,0 +1,63 @@
+{
+  "category": "Containers",
+  "label": "Section",
+  "html": "section-2.html",
+  "css": "section-2.css",
+  "icon": "section.png",
+  "propDefs": {
+    "infoText": {
+      "label": "Additional Text",
+      "type": "richText",
+      "value": ""
+    },
+    "topToBottom": {
+      "label": "Top To Bottom Layout",
+      "type": "boolean",
+      "value": false,
+      "category" : "Additional Layout"
+    },
+    "hideTitle": {
+      "label": "Hide Section Title",
+      "type": "boolean",
+      "value": false,
+      "category" : "Additional Layout"
+    },
+    "collapsibleSection": {
+      "label": "Collapsible",
+      "type": "boolean",
+      "value": false,
+      "category" : "Additional Layout"
+    },
+    "collapsedOnInit": {
+      "label": "Collapsed On Init",
+      "type": "boolean",
+      "value": false,
+      "category" : "Additional Layout"
+    },
+    "hideIcon": {
+      "label": "Collapsed Icon",
+      "type": "icon",
+      "value": "fa fa-chevron-down",
+      "category" : "Additional Layout"
+    },
+    "showIcon": {
+      "label": "Not Collapsed Icon",
+      "type": "icon",
+      "value": "fa fa-chevron-up",
+      "category" : "Additional Layout"
+    },
+    "fullPage": {
+      "label": "Full page",
+      "type": "boolean",
+      "value": false,
+      "category" : "Additional Layout"
+    }
+  },
+  "rows": [[]],
+  "styles": [
+    "mg-section-2",
+    "av-section"
+  ],
+  "exMandatory": true,
+  "noData": true
+}

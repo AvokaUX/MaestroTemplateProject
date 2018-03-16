@@ -1,0 +1,9 @@
+form[name='form'] {
+  .av-form-field {
+    float: none;
+    display: inline-block;
+    &.has-error input[type="checkbox"]:not(:checked):focus + label i:after {
+      border-color: #fff;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"block": {
+		"blocks": {
+			"wdg-button": {
+				"blocks": {},
+				"decs": {}
+			}
+		},
+		"decs": {}
+	},
+	"file": "style.less",
+	"label": "BS Submit Button",
+	"widgets": [
+		"button"
+	]
+}

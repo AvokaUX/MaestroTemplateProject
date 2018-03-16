@@ -1,0 +1,8 @@
+{
+  "label": "AV Stepper Hint Text",
+  "block": {},
+  "file": "style.less",
+  "widgets": [
+    "text-display"
+  ]
+}
