@@ -1,0 +1,18 @@
+<div class="av-section-1 av-page panel panel-default wdg-section-1-container" data-ng-class="{'av-landing-page': item.properties.fullPage, 'av-progressbar-showing': !item.properties.hideFormHeader && !item.properties.offMenu}" data-av-section>
+    <span class="av-hidden" role="alert" data-ng-show="!Form.dialogName">{{item.label}} page loaded</span>
+    <div data-ng-if="Resource.generated || Pages.currentPage == page">
+        <div class="av-heading-padding" data-ng-if="!item.properties.hideFormHeader"/>
+        <div class="av-progress-bar-padding" data-ng-if="!item.properties.offMenu"/>
+        <div class="wdg-section-1-header" data-ng-if="!item.properties.hideHeader">
+            <h2	tabindex="-1" class="wdg-section-1-title" data-av-compile data-ng-if="item.properties.sectionHeading" data-ng-bind-html="item.properties.sectionHeading | trustHtml" data-ng-cloak></h2>
+            <h1 tabindex="-1" class="wdg-section-1-form-name" data-av-compile data-ng-if="item.properties.formName" data-ng-bind-html="item.properties.formName | trustHtml" data-ng-cloak></h1>
+            <div class="container-fluid" data-ng-if="!!item.properties.additionalText && !avReceipt">
+                <div class="row">
+                    <span class="wdg-section-1-additional-text" data-ng-bind-html="sanitize(item.properties.additionalText)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="wdg-section-1-help-text" data-ng-if="item.properties.helpText" data-ng-bind-html="sanitize(item.properties.helpText)"></div>
+        <div class="wdg-section-1-body vertical-bottom" data-widget-children></div>
+    </div>
+</div>

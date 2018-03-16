@@ -1,0 +1,83 @@
+{
+	"label": "Page",
+	"category": "Navigation",
+	"type": "section",
+	"html": "nav-page.html",
+	"css": "nav-page.css",
+	"rows": [[]],
+	"rules": {
+		"pagescroll": "return false;"
+	},
+	"propDefs": {
+		"offMenu": {
+			"label": "Hide Navigator",
+			"category": "Page View",
+			"type": "boolean",
+			"helpText": "A page that is in the flow of the form but not displayed in the menu",
+			"value": false,
+			"order": 1
+		},
+		"hideFormHeader": {
+			"label": "Hide Header",
+			"category": "Page View",
+			"type": "boolean",
+			"value": false,
+			"order": 2
+		},
+		"hideNavButtons": {
+			"label": "Hide Navigation Buttons",
+			"category": "Page View",
+			"type": "boolean",
+			"value": false,
+			"order": 3
+		},
+		"hideMenuButton": {
+			"label": "Hide Menu Button",
+			"category": "Page View",
+			"type": "boolean",
+			"value": false,
+			"order": 4
+		},
+		"pageOfNoReturn": {
+			"label": "Page of no return",
+			"category": "Page View",
+			"type": "boolean",
+			"helpText": "The user will not be able to navigate back past this page",
+			"value": "",
+			"order": 5
+		},
+		"fullPage": {
+			"label": "Full Page",
+			"category": "Page View",
+			"type": "boolean",
+			"helpText": "Page spans full width and height of browser window",
+			"value": "",
+			"order": 6
+		},
+		"menuText": {
+			"label": "Menu Text",
+			"category": "Page View",
+			"type": "richText",
+			"helpText": "This Text will be used in the Navigator Menu instead of Page label",
+			"value": "",
+			"order": 7
+		}
+	},
+	"ruleTemplates": [
+		{
+			"type": "pageload",
+			"name": "Page load",
+			"editor": "script",
+			"isAction": true,
+			"msg": "a script to run when this page is loaded within a navigator context.  Use the info parameter to access the id of the page navigated to and from."
+		},
+		{
+			"type": "pagescroll",
+			"name": "Page load scroll",
+			"editor": "script",
+			"isAction": true,
+			"msg": "a script to run when this page is loaded, this will override the default scroll and focus functionality for this page."
+		}
+	],
+	"validParents": ["nav-content", "nav-group", "page-controller", "dialog-content"]
+}

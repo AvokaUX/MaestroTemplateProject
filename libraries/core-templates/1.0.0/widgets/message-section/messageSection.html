@@ -1,0 +1,13 @@
+<div class="message-section">
+	<div class="message-outer">
+	  <div class="message-icon" ng-class="item.properties.messageIcon" ng-if="item.properties.messageIcon && !item.properties.hideIcon">
+	  </div>
+	  <div class="message" ng-class="item.properties.messageIcon && !item.properties.hideIcon ? 'message-icon-show' : ''">
+	    <div class="message-heading text-display col-xs-12 col-sm-12 col-md-12 col-lg-12" data-ng-if="item.label && !item.properties.hideHeader">
+		  <h3>{{item.label}}</h3>
+	    </div>
+	  <div data-widget-children></div>
+    </div>
+  </div>
+</div>
+

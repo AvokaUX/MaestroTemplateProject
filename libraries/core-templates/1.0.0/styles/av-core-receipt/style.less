@@ -1,0 +1,110 @@
+@screen-sm: 400px;
+@screen-md: 560px;
+@screen-lg: 780px;
+
+form[name="form"].av-receipt {
+  max-width: 800px !important;
+
+  .form-footer-text {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  /* Field styles */
+  .av-form-field {
+    page-break-inside: avoid;
+
+    select,
+    input:not([type='checkbox']),
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      padding: 0px 7px 0px 7px;
+    }
+    textarea {
+      overflow: hidden;
+    }
+    .av-checkbox {
+      .touch-icon {
+        border: 1px solid #000000;
+        color: #000000;
+      }
+    }
+    .attachment-inline-container {
+      display: none;
+    }
+  }
+
+  /* Header Styles */
+  .wdg-header-tracking-code {
+    margin: 20px 0px 0px 0px;
+    background: #FFFFFF;
+    .wdg-header-tracking-code-text {
+      color: #000000;
+    }
+  }
+
+  .mg-header {
+    border-color: #D3D6E2;
+    border-width: 0 0 3px 0;
+  }
+
+  /* Section Styles */
+  .mg-section-1 .wdg-section-1-header {
+    border-style: none !important;
+    background: none;
+    padding: 8px 0px 0px 8px !important;
+    .wdg-section-1-title {
+      font-size: 16pt !important;
+    }
+    .wdg-section-1-form-name {
+      display: none;
+    }
+    .container-fluid {
+      display: none;
+    }
+  }
+
+  .wdg-section-1-container .wdg-section-1-body {
+    padding-top: 5px;
+  }
+
+  .mg-section-2 {
+    padding: 5px 10px;
+    .wdg-section-2-title {
+      page-break-inside: avoid;
+      display: block !important;
+    }
+  }
+  .mg-section-2-title {
+    font-size: 12pt !important;
+  }
+
+  .wdg-section-2-info-text {
+    font-size: 11px !important;
+  }
+
+  .repeat-template-item-header,
+  .repeat-template .wdg-repeated-item {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .advice-block-info-container {
+    margin-bottom: 5px;
+  }
+
+  /* Hide HTML footer */
+  .form-footer-container {
+    display: none;
+  }
+
+  /* Buttons */
+  .wdg-button {
+    display: none;
+  }
+
+}

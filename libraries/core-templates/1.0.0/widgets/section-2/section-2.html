@@ -1,0 +1,19 @@
+<section role="region" class="wdg-section-2 row" data-ng-class="{'av-section-fullpage': item.properties.fullPage}">
+    <button data-ng-if="item.properties.collapsibleSection && !avReceipt"
+            class="wdg-section-2-collapse-button" type="button"
+            data-ng-init="$parent.isCollapsed[item.id] = Resource.design ? false : item.properties.collapsedOnInit"
+            data-ng-click="!$parent.isCollapsed[item.id] && !Resource.design ? $parent.isCollapsed[item.id] = true : $parent.isCollapsed[item.id] = false">
+        <i class="wdg-collapse-button-icon" data-ng-class="!$parent.isCollapsed[item.id] ? item.properties.showIcon : item.properties.hideIcon"></i>
+    </button>
+    <div class="wdg-section-2-header col-sm-12 col-xs-12" data-ng-class="item.properties.topToBottom ? 'col-sm-12' : 'col-md-3'">
+        <h3 class="wdg-section-2-title"
+            data-ng-class="{ 'av-hidden': item.properties.hideTitle }" data-av-compile
+            data-ng-bind-html="sanitize(item.htmlLabel ? item.htmlLabel : item.label)"></h3>
+        <div class="wdg-section-2-info-text"
+             data-av-compile
+             data-ng-bind-html="sanitize(item.properties.infoText)"></div>
+    </div>
+    <div class="wdg-section-2-content col-sm-12 col-xs-12 animate-hide" data-ng-hide="isCollapsed[item.id] == true" data-ng-class="item.properties.topToBottom ? 'col-sm-12' : 'col-md-9'">
+        <div data-widget-children></div>
+    </div>
+</section>
