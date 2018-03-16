@@ -1,8 +1,0 @@
-{
-  "label": "BS Checkbox",
-  "block": {},
-  "file": "style.less",
-  "widgets": [
-    "checkbox"
-  ]
-}

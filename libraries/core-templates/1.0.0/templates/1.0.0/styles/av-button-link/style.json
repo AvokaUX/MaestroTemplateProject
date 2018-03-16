@@ -1,8 +1,0 @@
-{
-  "label": "AV link button",
-  "file": "style.less",
-  "widgets": [
-    "av-button",
-    "av-button-link"
-  ]
-}
