@@ -63,7 +63,11 @@ define(["app"], function (app) {
                     }, td, false)
                         .then(function () {
                             if(!item.$$parent.properties.allowMultipleOpen && someOpen && item.id !== firstAccordionId) {
-                                Scroll.scrollTo(firstAccordionId, false);
+                                Scroll.scrollTo(firstAccordionId, false).then(function (value) {
+                                    if (($element.parent().parent().find('#'+item.id).offset().top - $(window).scrollTop()) < 80) {
+                                        Scroll.scrollTo(80,false);
+                                    }
+                                });
                             }
                             $scope.$apply();
                         });
