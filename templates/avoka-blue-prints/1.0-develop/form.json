@@ -355,6 +355,9 @@
 													[
 														{
 															"id": "confirm_3",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
 															"type": "button"
 														}
@@ -528,6 +531,9 @@
 													[
 														{
 															"id": "okay_1",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"type": "button"
 														}
@@ -644,6 +650,9 @@
 													[
 														{
 															"id": "open_6",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"type": "button"
 														}
@@ -740,6 +749,9 @@
 													[
 														{
 															"id": "okay_18",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
 														}
@@ -821,6 +833,9 @@
 													[
 														{
 															"id": "okay_8",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"type": "button"
 														}
@@ -927,6 +942,7 @@
 		]
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -1796,38 +1812,6 @@
 		[
 			{
 				"exclude": false,
-				"id": "dockingController",
-				"path": "DockingController",
-				"properties": {
-					"dockPosition": 50
-				},
-				"rows": [
-					[
-						{
-							"exclude": false,
-							"id": "scrollPosition",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"exclude": false,
-							"id": "docked",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"id": "undocked",
-							"path": "",
-							"type": "data-field"
-						}
-					]
-				],
-				"type": "docking-controller"
-			}
-		],
-		[
-			{
-				"exclude": false,
 				"htmlLabel": "Background",
 				"id": "background",
 				"label": "Background",
@@ -2025,7 +2009,7 @@
 								"willDock": false
 							},
 							"rules": {
-								"eq": "var groups = $('Form').scope().Form.$Pages.groups;\nvar currentStep;\nfor (var i=0; i<groups.length; i++) {\n\tif(groups[i].$navSelected) currentStep = i+1;\n}\nconsole.log(currentStep);\nreturn \"Step \" + currentStep + \": \" + $('Form').scope().Form.$Pages.currentPage.$navGroup.label;"
+								"eq": "var groups = $('Form').scope().Form.$Pages.groups;\nvar currentStep;\nfor (var i=0; i<groups.length; i++) {\n\tif(groups[i].$navSelected) currentStep = i+1;\n}\nreturn \"Step \" + currentStep + \": \" + $('Form').scope().Form.$Pages.currentPage.$navGroup.label;"
 							},
 							"styles": [
 								"av-progress-bar",

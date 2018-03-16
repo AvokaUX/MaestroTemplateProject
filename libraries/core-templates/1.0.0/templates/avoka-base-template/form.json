@@ -415,8 +415,7 @@
 								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
 							"id": "submit2",
-							"type": "submit",
-							"exclude": false
+							"type": "submit"
 						}
 					]
 				],
@@ -616,6 +615,7 @@
 											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
 										},
 										"path": "",
+										"exclude": false,
 										"noData": true,
 										"subId": "82537d43d5a541c78ae556a6a5f33098",
 										"id": "emailAddress",
@@ -625,6 +625,7 @@
 								[
 									{
 										"path": "",
+										"exclude": false,
 										"noData": true,
 										"subId": "9be4a2834e44441e818c98083d7c94d6",
 										"id": "datePicker",
@@ -634,6 +635,7 @@
 								[
 									{
 										"path": "",
+										"exclude": false,
 										"noData": true,
 										"subId": "3d4acf7191404c30a5619f5a4d4f5c2f",
 										"id": "currencyField",
@@ -643,6 +645,7 @@
 								[
 									{
 										"path": "",
+										"exclude": false,
 										"noData": true,
 										"subId": "1e7af05e0367400587f197c82eb6ce92",
 										"id": "decimalField",
@@ -655,6 +658,7 @@
 											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
 										},
 										"path": "",
+										"exclude": false,
 										"mandatory": true,
 										"noData": true,
 										"subId": "d591a940ed7d4260b99e8adb7a67a47e",
@@ -666,6 +670,7 @@
 									{
 										"properties": {},
 										"path": "",
+										"exclude": false,
 										"noData": true,
 										"subId": "16d7bc4912da4460a374f51a484d9228",
 										"id": "radioButtonGroup",
@@ -675,6 +680,7 @@
 								[
 									{
 										"path": "",
+										"exclude": false,
 										"noData": true,
 										"subId": "98ba81dcb4cb47e8a63ee89ee04412a6",
 										"id": "checkbox",
@@ -730,6 +736,7 @@
 												}
 											]
 										],
+										"exclude": false,
 										"subId": "c245e3914ce44d36a8dab5fa4c067db9",
 										"id": "block",
 										"type": "block"
@@ -828,6 +835,7 @@
 										"rows": [
 											[]
 										],
+										"exclude": false,
 										"path": "",
 										"type": "block",
 										"id": "block3"
@@ -853,7 +861,8 @@
 		"bs-overrides-87851",
 		"bs-tooltip-39326",
 		"bs-fonts-79473",
-		"bs-hide-in-design-83044"
+		"bs-hide-in-design-83044",
+		"av-core-receipt"
 	],
 	"properties": {},
 	"type": "form",
@@ -868,14 +877,15 @@
 				"av-focus-styling"
 			],
 			"availableStyles": [
+				"align-top",
+				"bs-fonts-79473",
+				"bs-hide-in-design-83044",
+				"bs-tooltip-39326",
+				"bs-overrides-87851",
+				"av-focus-styling",
 				"mg-base",
 				"mg-form",
-				"align-top",
-				"bs-overrides-87851",
-				"bs-tooltip-39326",
-				"bs-fonts-79473",
-				"av-focus-styling",
-				"bs-hide-in-design-83044"
+				"av-core-receipt"
 			],
 			"properties": {}
 		},

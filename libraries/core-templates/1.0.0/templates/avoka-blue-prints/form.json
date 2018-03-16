@@ -112,38 +112,6 @@
 		],
 		[
 			{
-				"rows": [
-					[
-						{
-							"exclude": false,
-							"path": "",
-							"id": "scrollPosition",
-							"type": "data-field"
-						},
-						{
-							"exclude": false,
-							"path": "",
-							"id": "docked",
-							"type": "data-field"
-						},
-						{
-							"path": "",
-							"id": "undocked",
-							"type": "data-field"
-						}
-					]
-				],
-				"properties": {
-					"dockPosition": 50
-				},
-				"exclude": false,
-				"path": "DockingController",
-				"type": "docking-controller",
-				"id": "dockingController"
-			}
-		],
-		[
-			{
 				"label": "Background",
 				"rows": [
 					[]
@@ -231,15 +199,29 @@
 										"rows": [
 											[
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "dockErrors",
 													"type": "data-field"
 												},
 												{
+													"rules": {
+														"eq": "//Provide a value or calculation for this data field"
+													},
 													"id": "errorsDockLock",
 													"type": "data-field"
 												}
 											]
 										],
+										"properties": {
+											"header": "Please resolve the following issues before proceeding",
+											"subHeader": "Click on an issue to go directly to the related section of the form.",
+											"dockedHeader": "{{Form.validation.errors.length}} error(s) found",
+											"dockedSubHeader": "Please touch here to resolve the next error.",
+											"mobileA11yMessageBefore": "The following {{Form.validation.errors.length + (Form.validation.errors.length == 1 && ' issue was' || ' issues were')}} found.",
+											"mobileA11yMessageAfter": "Please select the screen to go to the first error."
+										},
 										"exclude": true,
 										"path": "",
 										"styles": [
@@ -341,7 +323,7 @@
 							"exclude": false,
 							"path": "ProgressBar",
 							"rules": {
-								"eq": "var groups = $('Form').scope().Form.$Pages.groups;\nvar currentStep;\nfor (var i=0; i<groups.length; i++) {\n\tif(groups[i].$navSelected) currentStep = i+1;\n}\nconsole.log(currentStep);\nreturn \"Step \" + currentStep + \": \" + $('Form').scope().Form.$Pages.currentPage.$navGroup.label;"
+								"eq": "var groups = $('Form').scope().Form.$Pages.groups;\nvar currentStep;\nfor (var i=0; i<groups.length; i++) {\n\tif(groups[i].$navSelected) currentStep = i+1;\n}\nreturn \"Step \" + currentStep + \": \" + $('Form').scope().Form.$Pages.currentPage.$navGroup.label;"
 							},
 							"type": "progress-bar",
 							"id": "progressBar"
@@ -520,12 +502,21 @@
 				"rows": [
 					[
 						{
+							"rules": {
+								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\nForm.$Pages.move(true);\n$timeout(function() {\t\n  data.blockNext = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockNext = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n",
+								"dc": "return data.blockNext  ? \"error\" : \"\";",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+							},
 							"id": "next_1",
 							"type": "button-docking-right"
 						}
 					],
 					[
 						{
+							"rules": {
+								"click": "Form.$Pages.move(false);",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst && !Form.$Pages.currentPage.properties.pageOfNoReturn;\n} else {\n\treturn true;\n}\n"
+							},
 							"id": "back_1",
 							"type": "button-docking-left"
 						}
@@ -540,7 +531,8 @@
 							},
 							"rules": {
 								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\ndata.blockSubmit = false;\n$timeout(function() {\t\n  data.blockSubmit = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockSubmit = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"dc": "return data.blockSubmit  ? \"error\" : \"\";"
+								"dc": "return data.blockSubmit  ? \"error\" : \"\";",
+								"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
 							},
 							"id": "submit2_1",
 							"type": "submit"
@@ -559,6 +551,9 @@
 							"properties": {
 								"offIcon": "fa fa-ellipsis-v"
 							},
+							"rules": {
+								"click": "data[item.id] = data[item.id] !== true;"
+							},
 							"exclude": false,
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"id": "functionalMenu",
@@ -567,24 +562,36 @@
 					],
 					[
 						{
+							"rules": {
+								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
+							},
 							"exclude": false,
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
 							"id": "exit",
 							"type": "button"
 						},
 						{
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
+							},
 							"exclude": false,
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
 							"id": "resume",
 							"type": "button"
 						},
 						{
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
+							},
 							"exclude": false,
 							"subId": "97601a07e3304ceab704b6152d1174b9",
 							"id": "help",
 							"type": "button"
 						},
 						{
+							"rules": {
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
+							},
 							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
 							"id": "share",
@@ -645,6 +652,13 @@
 										"rows": [
 											[
 												{
+													"properties": {
+														"dataPath": "data.daysData"
+													},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "var day = !Util.isBlank(data.date) && data.date.split(\"-\")[2]; \n return day && typeof day === \"string\" ? day.replace(/^[0]/,\"\") : value;"
+													},
 													"subId": "76182bfd13724884b4288cd928247150",
 													"path": "",
 													"noData": true,
@@ -653,6 +667,10 @@
 												},
 												{
 													"properties": {},
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : value;"
+													},
 													"subId": "d08f3ac71df4450094742607de9e92f4",
 													"path": "",
 													"noData": true,
@@ -660,6 +678,10 @@
 													"type": "dropdown"
 												},
 												{
+													"rules": {
+														"change": "if(Util.isBlank(data.day) || Util.isBlank(data.month) || Util.isBlank(data.year)) {\n\tdata.date = \"\";\n    return;\n}\n\nvar day = data.day && data.day.length == 1 ? \"0\"+data.day : data.day;\n\ndata.date = [data.year, data.month, day].join(\"-\")",
+														"eq": "return !Util.isBlank(data.date) ? data.date.split(\"-\")[0] : value;"
+													},
 													"subId": "4d099b1664374469a28d935e5f39fe25",
 													"path": "",
 													"noData": true,
@@ -669,6 +691,9 @@
 											],
 											[
 												{
+													"rules": {
+														"eq": "// Since we cannot remove this cal rule, return self value\nvalue"
+													},
 													"subId": "fb68b0fdefc64e8192c84c1aacf492dc",
 													"id": "date",
 													"type": "data-field"
@@ -676,12 +701,18 @@
 											],
 											[
 												{
+													"rules": {
+														"eq": "var month = !Util.isBlank(data.date) ? data.date.split(\"-\")[1] : \"\",\n\tday = data.day,\n    range,\n    selectionArr,\n    max = 31;\n\nif (month == \"02\") max = Util.isLeapYear(data.year) ? 29 : 28;\n\nelse if(Util.contains([\"04\",\"06\",\"09\",\"11\"],month)) max = 30;\n\nif(+day > max) data.day = max.toString();\n\nrange = Util.range(1, max).map(function(day){\n  return day.toString(); \n});\n\n// Convert to comma delimited and then convert to delimited selection array\nreturn Calc.delimitedSelection(range.join(\",\"));"
+													},
 													"subId": "53b69d508a60404db8b3ef75b4aa4556",
 													"id": "daysData",
 													"type": "data-field"
 												}
 											]
 										],
+										"rules": {
+											"ok": "if(Util.isBlank(data.date) || (!item.properties.minAge && !item.properties.maxAge && !item.properties.pastDate)) {\n  return true;\n}\nvar currentTime = new Date().getTime(),\n    minAge = item.properties.minAge,\n    maxAge = item.properties.maxAge,\n    pastDate = item.properties.pastDate,\n    dobDate = Calc.date(data.date);\n\nif(pastDate && Calc.daysBetween(dobDate, new Date()) < 0) {\n    return \"Must be a date in the past\";\n}\n\nif(!Util.isBlank(minAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+minAge);\n\tif (currentTime <= dobDate.getTime()) {\n\t\treturn \"You must be at least \"+minAge+\" years old\";\n\t}\n}\n\nif(!Util.isBlank(maxAge)) {\n\tdobDate.setFullYear(dobDate.getFullYear()+maxAge);\n\tif (currentTime >= dobDate.getTime()) {\n\t\treturn \"You must be under \"+maxAge+\" years old\";\n\t}\n}\n\nreturn true;"
+										},
 										"subId": "eb2a794cd58c42af94471c18973dc8aa",
 										"id": "dateOfBirthDropdown",
 										"type": "dropdown-dob-block"
@@ -699,6 +730,9 @@
 							"rows": [
 								[
 									{
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
 										"path": "",
 										"noData": true,
 										"subId": "82537d43d5a541c78ae556a6a5f33098",
@@ -735,6 +769,9 @@
 								],
 								[
 									{
+										"rules": {
+											"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+										},
 										"path": "",
 										"mandatory": true,
 										"noData": true,
@@ -2046,6 +2083,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
 									"id": "close_9",
 									"type": "icon-button"
@@ -2083,6 +2123,9 @@
 															"rows": [
 																[]
 															],
+															"properties": {
+																"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
+															},
 															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
 															"id": "security_question_save_confirm",
 															"type": "section-2"
@@ -2108,6 +2151,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"id": "okay_18",
 															"type": "button"
@@ -2142,6 +2189,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "5b00e0bbb7da47fcbd5ca16369a6e6af",
 									"id": "close_6",
 									"type": "icon-button"
@@ -2183,6 +2233,9 @@
 																			"md": "3",
 																			"lg": "3"
 																		},
+																		"rules": {
+																			"eq": "return Util.getUrlQueryParam(\"referenceNumber\") != \"\" && Util.getUrlQueryParam(\"referenceNumber\") ? Util.getUrlQueryParam(\"referenceNumber\") : Form.saveChallengeRequired === true ? Form.getSystemData(\"TrackingCode\") : value;"
+																		},
 																		"subId": "85628c35c7c64f678d83b46721c08e73",
 																		"id": "save_challenge_reference_code",
 																		"type": "text-input"
@@ -2199,6 +2252,13 @@
 															"rows": [
 																[]
 															],
+															"properties": {
+																"infoText": "Your answer to this question must match the information you previously provided."
+															},
+															"rules": {
+																"eq": "return item.rows[0].length > 0 ? Form.data[item.rows[0][0].id] : \"\";",
+																"sh": "return item.rows[0].length > 0;"
+															},
 															"subId": "bf60f3af33fa4fc1b16450de3b351b70",
 															"id": "save_challenge_question_section",
 															"type": "section-2"
@@ -2224,6 +2284,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
+																"sh": ""
+															},
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"id": "open_6",
 															"type": "button"
@@ -2258,6 +2322,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "d85962d96d4b42bcb517de498e25ed4d",
 									"id": "close_4",
 									"type": "icon-button"
@@ -2316,6 +2383,9 @@
 																						],
 																						[
 																							{
+																								"rules": {
+																									"click": "Form.showDialog(\"formh\");"
+																								},
 																								"subId": "ec4a7b4bb428414b8a37d1b857682a1a",
 																								"id": "get_help_1",
 																								"type": "button"
@@ -2359,6 +2429,9 @@
 																						],
 																						[
 																							{
+																								"rules": {
+																									"click": "Form.showDialog(\"saveconfirm\");"
+																								},
 																								"subId": "ecef8243838a44999ee2062343270b0a",
 																								"id": "save_for_later_1",
 																								"type": "button"
@@ -2401,6 +2474,9 @@
 																	}
 																]
 															],
+															"properties": {
+																"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
+															},
 															"subId": "66800abae2f84be5953bd85d3488a708",
 															"id": "feedback_2",
 															"type": "section-2"
@@ -2426,6 +2502,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
 															"id": "confirm_3",
 															"type": "button"
@@ -2460,6 +2540,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "dbfbfa08cfd0446da064233de0d20684",
 									"id": "close",
 									"type": "icon-button"
@@ -2507,6 +2590,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.showDialog(\"\");",
+																"sh": ""
+															},
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"id": "okay_8",
 															"type": "button"
@@ -2541,6 +2628,9 @@
 						"rows": [
 							[
 								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
 									"subId": "9e296fc30de940628ec8b5dbda46ae26",
 									"id": "close_3",
 									"type": "icon-button"
@@ -2655,6 +2745,9 @@
 															"rows": [
 																[]
 															],
+															"properties": {
+																"infoText": "<p>You are always welcome to visit us in branch for a face-to-face appointment.</p><p><a target=\"_blank\" href=\"http://www.avoka.com\">Find your nearest branch</a></p>"
+															},
 															"subId": "ff69444690424238a908235995c16dd5",
 															"id": "need_visitUs_2",
 															"type": "section-2"
@@ -2680,6 +2773,10 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"click": "Form.showDialog(\"\");",
+																"sh": ""
+															},
 															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"id": "okay_1",
 															"type": "button"
@@ -2778,6 +2875,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
 						"subId": "2c5d13e15f004cf7a5c7af15cb1ab410",
 						"id": "modalContent_2",
 						"type": "section-2"
@@ -2804,6 +2904,9 @@
 								}
 							]
 						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"subId": "7cb367a06483449b829503acf6398e7f",
 						"exclude": true,
 						"id": "modalFooter_2",
@@ -2824,6 +2927,9 @@
 															"rows": [
 																[
 																	{
+																		"rules": {
+																			"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+																		},
 																		"path": "EmailAddress_1",
 																		"subId": "832ab4f37a6f44c1bf06b4df1f57dc94",
 																		"id": "emailAddress_1",
@@ -2832,6 +2938,12 @@
 																],
 																[
 																	{
+																		"properties": {
+																			"emailFieldRef": "data.emailAddress_1"
+																		},
+																		"rules": {
+																			"click": "Form.emailOperation('emailReceipt', item.id, item.properties.emailFieldRef)"
+																		},
 																		"subId": "687dec7421454ef2a4a768b9b0f4cb86",
 																		"id": "emailPdfReceiptButton",
 																		"type": "button-email-receipt"
@@ -2844,6 +2956,12 @@
 														}
 													]
 												],
+												"properties": {
+													"infoText": "Would like a copy of this submission for your personal records?"
+												},
+												"rules": {
+													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus != \"success\" : true)"
+												},
 												"subId": "37f4edbc8ab4491590c497f4d666a4f6",
 												"id": "section_4",
 												"type": "section-2"
@@ -2861,6 +2979,12 @@
 														}
 													]
 												],
+												"properties": {
+													"infoText": "You are required to complete these additional forms to finalize your request."
+												},
+												"rules": {
+													"sh": "Form.data.SFMData.SystemProfile.hasOwnProperty('Job') && Form.data.SFMData.SystemProfile.Job.hasOwnProperty('StepTasks') && Form.data.SFMData.SystemProfile.Job.StepTasks.Task.length > 0"
+												},
 												"subId": "0db60ac2ec5443ba9186291c368ea50f",
 												"id": "section_3",
 												"type": "section-2"
@@ -2911,6 +3035,9 @@
 																],
 																[
 																	{
+																		"rules": {
+																			"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"submit_success_send_receipt\")) {\nForm.data.submit_success_send_receipt.$responseStatus = \"\";\n}\nForm.data.send_receipt_email = \"\";"
+																		},
 																		"subId": "6f9319a7b2ab4377bb9de43ec572300d",
 																		"id": "button",
 																		"type": "button"
@@ -2923,6 +3050,9 @@
 														}
 													]
 												],
+												"rules": {
+													"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
+												},
 												"subId": "e67bbb466d394a2b92e29073118ff55e",
 												"id": "section_5",
 												"type": "section-2"
@@ -2940,16 +3070,28 @@
 									"rows": [
 										[
 											{
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
 												"subId": "c4fac36661024bd294673f0015696355",
 												"id": "startANewForm",
 												"type": "button"
 											},
 											{
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
 												"subId": "f34b73d43b014330a6e6a864c7112471",
 												"id": "returnToPortal_3",
 												"type": "button"
 											},
 											{
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
 												"subId": "54a02d31e19a45949cdfc4d8b3156e73",
 												"id": "showFormXml_3",
 												"type": "button"
@@ -2962,6 +3104,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Thank you, your submission has been received."
+						},
 						"path": "",
 						"subId": "1c318e924a194bbd8ccaec3ad22e4295",
 						"id": "modalContent_6",
@@ -3042,6 +3187,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
 						"subId": "10e237c285f9418da41b60b370238bfc",
 						"id": "modalContent_4",
 						"type": "section-2"
@@ -3068,6 +3216,9 @@
 								}
 							]
 						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"subId": "0be795c1d72f4ae2a4f58fb5a3234438",
 						"exclude": true,
 						"id": "modalFooter_4",
@@ -3099,6 +3250,9 @@
 													],
 													[
 														{
+															"rules": {
+																"click": "if (Resource.preview || Resource.design) {\n    return;\n}\nForm.showProgress(\"Please wait\");\nForm.redirect(Form.data.$submitResponse.redirectTarget, Form.data.$submitResponse.redirectParent);"
+															},
 															"subId": "81858aae177f48428df2be70a02b1c40",
 															"id": "button_1",
 															"type": "button"
@@ -3106,6 +3260,9 @@
 													],
 													[
 														{
+															"rules": {
+																"sh": "Form.getSystemData(\"SubmissionExpiryDate\") && !Util.isBlank(Form.getSystemData(\"SubmissionExpiryDate\"))"
+															},
 															"subId": "440b40ec2e4647e89753d88271fbc6ea",
 															"id": "textDisplay_6",
 															"type": "text-display"
@@ -3125,6 +3282,9 @@
 															"rows": [
 																[
 																	{
+																		"rules": {
+																			"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+																		},
 																		"path": "EmailAddress_2",
 																		"subId": "b13fb61cc547468eb4f4ad948670b0f9",
 																		"id": "emailAddress_2",
@@ -3133,6 +3293,9 @@
 																],
 																[
 																	{
+																		"rules": {
+																			"click": "Form.emailOperation('emailSavedForm', item.id, item.properties.emailFieldRef)"
+																		},
 																		"subId": "12230fde7ef048229e26bd7e266d42ef",
 																		"id": "emailSavedFormButton",
 																		"type": "button-email-saved-form"
@@ -3145,6 +3308,12 @@
 														}
 													]
 												],
+												"properties": {
+													"infoText": "Enter your email address and we'll send you you instructions on how to return to your form."
+												},
+												"rules": {
+													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus != \"success\" : true)"
+												},
 												"subId": "39f81a0bd55242a5829cf25715d4b815",
 												"id": "section_6",
 												"type": "section-2"
@@ -3162,12 +3331,18 @@
 													],
 													[
 														{
+															"rules": {
+																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"save_success_send_reminder\")) {\nForm.data.save_success_send_reminder.$responseStatus = \"\";\n}\nForm.data.send_reminder_email = \"\";"
+															},
 															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
 															"id": "button_2",
 															"type": "button"
 														}
 													]
 												],
+												"rules": {
+													"sh": "((Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
+												},
 												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
 												"id": "section_7",
 												"type": "section-2"
@@ -3178,6 +3353,9 @@
 												"rows": [
 													[
 														{
+															"rules": {
+																"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+															},
 															"path": "EmailAddress_3",
 															"subId": "ea72110b798b4186be8e71d39c7206e1",
 															"id": "emailAddress_3",
@@ -3198,12 +3376,26 @@
 													],
 													[
 														{
+															"properties": {
+																"emailFieldRef": "data.emailAddress_3",
+																"senderNameRef": "data.textField",
+																"emailBodyRef": "data.multilineTextArea"
+															},
+															"rules": {
+																"click": "Form.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)"
+															},
 															"subId": "4190d5a9a613410288c94ef8d968e01d",
 															"id": "shareFormButton",
 															"type": "button-email-share-form"
 														}
 													]
 												],
+												"properties": {
+													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+												},
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus != \"success\": true;"
+												},
 												"subId": "61839116f7ec43688bcfe12801469d1a",
 												"id": "section_8",
 												"type": "section-2"
@@ -3221,12 +3413,21 @@
 													],
 													[
 														{
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"save_success_share_form\") ){\nForm.data.save_success_share_form = \"\";\nForm.data.save_success_recipient_email_address = \"\";\nForm.data.save_success_sender_name = \"\";\nForm.data.save_success_email_body = \"\";\n}"
+															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"id": "button_3",
 															"type": "button"
 														}
 													]
 												],
+												"properties": {
+													"infoText": "Do you want to allow other people to access your form?"
+												},
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus == \"success\": false;"
+												},
 												"subId": "aa9991c952134393abcae5d9f9a5eb27",
 												"id": "section_9",
 												"type": "section-2"
@@ -3244,16 +3445,28 @@
 									"rows": [
 										[
 											{
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
 												"subId": "f5d3a71e81244605b97d33064ec7ea04",
 												"id": "startANewForm_1",
 												"type": "button"
 											},
 											{
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
 												"subId": "438498f8cfc04be294f4d4b11ada089c",
 												"id": "returnToPortal",
 												"type": "button"
 											},
 											{
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
 												"subId": "6c6e2a6b68224f2b92492432657e985c",
 												"id": "showFormXml",
 												"type": "button"
@@ -3266,6 +3479,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your form has been saved and may be re-opened later."
+						},
 						"path": "",
 						"subId": "2333d120d1b74667a8d32d0935672f5e",
 						"id": "modalContent",
@@ -3346,6 +3562,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
 						"subId": "d65bc74d9f4043f9833adb73ecf163dd",
 						"id": "modalContent_3",
 						"type": "section-2"
@@ -3372,6 +3591,9 @@
 								}
 							]
 						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
 						"subId": "80cea6ec78c549eab568a8a54dea2372",
 						"exclude": true,
 						"id": "modalFooter_3",
@@ -3397,16 +3619,28 @@
 									"rows": [
 										[
 											{
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
 												"subId": "3318fcfd2f244dd5b45e96c85cc2a45a",
 												"id": "startANewForm_2",
 												"type": "button"
 											},
 											{
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
 												"subId": "77fa59715a74441b930f9c8d3c33789f",
 												"id": "returnToPortal_1",
 												"type": "button"
 											},
 											{
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
 												"subId": "c25c21e127554887858115ea909ae325",
 												"id": "showFormXml_1",
 												"type": "button"
@@ -3419,6 +3653,9 @@
 								}
 							]
 						],
+						"properties": {
+							"infoText": "Your application has been cancelled and will not be processed."
+						},
 						"path": "",
 						"subId": "c2d1af6c016b436cba10655d1e408d9d",
 						"id": "modalContent_1",
@@ -3601,26 +3838,6 @@
 					"latoregular": {
 						"label": "Lato-Regular",
 						"htmlLabel": "Lato-Regular",
-						"mandatoryMsg": ""
-					},
-					"dockingController": {
-						"label": "Docking Controller",
-						"htmlLabel": "",
-						"mandatoryMsg": ""
-					},
-					"scrollPosition": {
-						"label": "Scroll Position",
-						"htmlLabel": "Scroll Position",
-						"mandatoryMsg": ""
-					},
-					"docked": {
-						"label": "Docked",
-						"htmlLabel": "Docked",
-						"mandatoryMsg": ""
-					},
-					"undocked": {
-						"label": "Undocked",
-						"htmlLabel": "Undocked",
 						"mandatoryMsg": ""
 					},
 					"background": {
@@ -5734,6 +5951,7 @@
 	},
 	"transact": {},
 	"maestroReleaseVersion": "17.10.3",
+	"id": "AvokaSmartForm",
 	"exclude": false,
-	"id": "AvokaSmartForm"
+	"isPreview": false
 }

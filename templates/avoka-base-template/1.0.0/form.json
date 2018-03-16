@@ -2065,7 +2065,6 @@
 					],
 					[
 						{
-							"exclude": false,
 							"id": "submit2",
 							"offset": {
 								"lg": "5",
@@ -2245,6 +2244,7 @@
 							"rows": [
 								[
 									{
+										"exclude": false,
 										"id": "emailAddress",
 										"noData": true,
 										"path": "",
@@ -2254,6 +2254,7 @@
 								],
 								[
 									{
+										"exclude": false,
 										"id": "datePicker",
 										"noData": true,
 										"path": "",
@@ -2263,6 +2264,7 @@
 								],
 								[
 									{
+										"exclude": false,
 										"id": "currencyField",
 										"noData": true,
 										"path": "",
@@ -2272,6 +2274,7 @@
 								],
 								[
 									{
+										"exclude": false,
 										"id": "decimalField",
 										"noData": true,
 										"path": "",
@@ -2281,6 +2284,7 @@
 								],
 								[
 									{
+										"exclude": false,
 										"id": "emailAddress2",
 										"mandatory": true,
 										"noData": true,
@@ -2291,6 +2295,7 @@
 								],
 								[
 									{
+										"exclude": false,
 										"id": "radioButtonGroup",
 										"noData": true,
 										"path": "",
@@ -2301,6 +2306,7 @@
 								],
 								[
 									{
+										"exclude": false,
 										"id": "checkbox",
 										"noData": true,
 										"path": "",
@@ -2320,6 +2326,7 @@
 							"rows": [
 								[
 									{
+										"exclude": false,
 										"id": "block",
 										"rows": [
 											[
@@ -2453,6 +2460,7 @@
 							"rows": [
 								[
 									{
+										"exclude": false,
 										"id": "block3",
 										"path": "",
 										"rows": [
@@ -2479,7 +2487,8 @@
 		"bs-overrides-87851",
 		"bs-tooltip-39326",
 		"bs-fonts-79473",
-		"bs-hide-in-design-83044"
+		"bs-hide-in-design-83044",
+		"av-core-receipt"
 	],
 	"systemValues": {},
 	"templateName": "Core - Empty Form",
@@ -2879,14 +2888,15 @@
 		},
 		"form": {
 			"availableStyles": [
+				"align-top",
+				"bs-fonts-79473",
+				"bs-hide-in-design-83044",
+				"bs-tooltip-39326",
+				"bs-overrides-87851",
+				"av-focus-styling",
 				"mg-base",
 				"mg-form",
-				"align-top",
-				"bs-overrides-87851",
-				"bs-tooltip-39326",
-				"bs-fonts-79473",
-				"av-focus-styling",
-				"bs-hide-in-design-83044"
+				"av-core-receipt"
 			],
 			"properties": {}
 		},
