@@ -98,7 +98,20 @@ define(["app"], function (app) {
                         });
                     }
                 });
-
+            var clickAnywhereHandler = function (event) {
+                var inside = ($element[0] === event.target) ||
+                    $(event.target).parents().index($element) !== -1;
+                if (!inside) {
+                    if(data[children[0].id]) {
+                        data[children[0].id] = false;
+                        $scope.$apply();
+                    }
+                }
+            };
+            $(document).on('click', clickAnywhereHandler);
+            $scope.$on('$destroy', function () {
+                $(document).off('click', clickAnywhereHandler);
+            });
         });
     }]);
 });
