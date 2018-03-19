@@ -864,7 +864,9 @@
 		"bs-hide-in-design-83044",
 		"av-core-receipt"
 	],
-	"properties": {},
+	"properties": {
+		"checkboxRadioAutoScroll": false
+	},
 	"type": "form",
 	"breakpoints": [
 		400,

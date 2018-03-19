@@ -1702,7 +1702,9 @@
 		"AvokaSmartForm"
 	],
 	"path": "AvokaSmartForm",
-	"properties": {},
+	"properties": {
+		"checkboxRadioAutoScroll": false
+	},
 	"rows": [
 		[
 			{

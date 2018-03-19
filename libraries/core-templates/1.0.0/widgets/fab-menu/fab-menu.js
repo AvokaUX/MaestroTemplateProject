@@ -7,10 +7,10 @@ define(["app"], function (app) {
 
             function checkOnlyOneVisible() {
                 var resume = +item.properties.functionalButtonResume;
-                var share = +item.properties.functionalButtonShare;
+                var save = +item.properties.functionalButtonSave;
                 var help = +item.properties.functionalButtonHelp;
                 var exit = +item.properties.functionalButtonExit;
-                var buttonCount = resume + share + help + exit;
+                var buttonCount = resume + save + help + exit;
                 return {
                     0: "function-items-0",
                     1: "function-items-1",
@@ -87,8 +87,8 @@ define(["app"], function (app) {
                 function () {
                     return $element.find('.id-' + children[4].id + ' button').length;
                 },
-                function (share) {
-                    if (share) {
+                function (save) {
+                    if (save) {
                         $element.find('.id-' + children[4].id + ' button').click(function () {
 
                             if (notOneButton) {
@@ -98,7 +98,20 @@ define(["app"], function (app) {
                         });
                     }
                 });
-
+            var clickAnywhereHandler = function (event) {
+                var inside = ($element[0] === event.target) ||
+                    $(event.target).parents().index($element) !== -1;
+                if (!inside) {
+                    if(data[children[0].id]) {
+                        data[children[0].id] = false;
+                        $scope.$apply();
+                    }
+                }
+            };
+            $(document).on('click', clickAnywhereHandler);
+            $scope.$on('$destroy', function () {
+                $(document).off('click', clickAnywhereHandler);
+            });
         });
     }]);
 });
