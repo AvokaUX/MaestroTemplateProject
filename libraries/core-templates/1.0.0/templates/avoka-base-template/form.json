@@ -196,6 +196,9 @@
 													"rows": [
 														[
 															{
+																"properties": {
+																	"displayGroupIcon": true
+																},
 																"id": "progressBar_1",
 																"type": "progress-bar"
 															}
@@ -316,6 +319,7 @@
 								],
 								[
 									{
+										"label": "Page 1",
 										"rows": [
 											[
 												{
@@ -331,10 +335,44 @@
 										],
 										"type": "nav-page",
 										"exclude": false,
+										"htmlLabel": "Page 1",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
 										"path": "",
 										"id": "page"
+									}
+								],
+								[
+									{
+										"rows": [
+											[
+												{
+													"rows": [
+														[]
+													],
+													"type": "section-2",
+													"id": "section",
+													"path": "",
+													"exclude": false
+												}
+											]
+										],
+										"properties": {
+											"sectionHeading": "{{T[item.id].label}}",
+											"formName": "{{T[Form.view.id].label}}",
+											"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>"
+										},
+										"type": "nav-page",
+										"rules": {
+											"pagescroll": "return false;"
+										},
+										"id": "page_1",
+										"path": "",
+										"exclude": false,
+										"isLastInGroup": false,
+										"isFirstInGroup": false,
+										"label": "Page 2",
+										"htmlLabel": "Page 2"
 									}
 								]
 							],
@@ -471,7 +509,7 @@
 						},
 						{
 							"rules": {
-								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonSave\") && data.functionalMenu"
 							},
 							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
@@ -3869,8 +3907,8 @@
 						}
 					},
 					"page": {
-						"label": "Page",
-						"htmlLabel": "",
+						"label": "Page 1",
+						"htmlLabel": "Page 1",
 						"mandatoryMsg": "",
 						"properties": {
 							"sectionHeading": "{{T[item.id].label}}",
@@ -3881,6 +3919,26 @@
 						}
 					},
 					"section_1": {
+						"label": "Section",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"page_1": {
+						"label": "Page 2",
+						"htmlLabel": "Page 2",
+						"mandatoryMsg": "",
+						"properties": {
+							"sectionHeading": "{{T[item.id].label}}",
+							"formName": "{{T[Form.view.id].label}}",
+							"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>",
+							"helpText": "",
+							"menuText": ""
+						}
+					},
+					"section": {
 						"label": "Section",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -3961,8 +4019,8 @@
 						}
 					},
 					"share": {
-						"label": "Share",
-						"htmlLabel": "Share",
+						"label": "Save",
+						"htmlLabel": "Save",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""

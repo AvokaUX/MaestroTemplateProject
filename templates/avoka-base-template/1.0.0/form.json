@@ -1903,6 +1903,9 @@
 														[
 															{
 																"id": "progressBar_1",
+																"properties": {
+																	"displayGroupIcon": true
+																},
 																"type": "progress-bar"
 															}
 														]
@@ -2007,15 +2010,42 @@
 								[
 									{
 										"exclude": false,
+										"htmlLabel": "Page 1",
 										"id": "page",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
+										"label": "Page 1",
 										"path": "",
 										"rows": [
 											[
 												{
 													"exclude": false,
 													"id": "section_1",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page 2",
+										"id": "page_1",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Page 2",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section",
 													"path": "",
 													"rows": [
 														[]
