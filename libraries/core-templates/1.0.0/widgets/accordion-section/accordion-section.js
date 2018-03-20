@@ -1,8 +1,9 @@
 define(["app"], function (app) {
-    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll) {
+    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", "$anchorScroll", "$location", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll, $anchorScroll, $location) {
         Form.getItem($scope, $element).then(function (item) {
             $scope.accordionIsValid = true;
             $scope.accordionOpen = false;
+            $anchorScroll.yOffset = 80;
             var $thisAccordion = $element.find(".panel-collapse");
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
@@ -62,12 +63,12 @@ define(["app"], function (app) {
                         });
                     }, td, false)
                         .then(function () {
-                            var accPos = $element.parent().parent().find('#'+item.id).offset().top - $(window).scrollTop();
-                            var windowHeight = window.innerHeight;
                             if(!item.$$parent.properties.allowMultipleOpen && someOpen && item.id !== firstAccordionId) {
-                                if (accPos < 80 || accPos > windowHeight * 0.6) Scroll.scrollTo(80,false);
+                                $timeout(function () {
+                                    $location.hash(firstAccordionId);
+                                    $anchorScroll();
+                                }, transDuration * 1000);
                             }
-                            $scope.$apply();
                         });
                 }, 25, false);
             }
