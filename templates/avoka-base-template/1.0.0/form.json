@@ -384,6 +384,7 @@
 			"type": "cancel-confirm"
 		},
 		"formhelp": {
+			"exclude": false,
 			"id": "formhelp",
 			"rows": [
 				[
@@ -780,6 +781,7 @@
 			"type": "save-confirm"
 		},
 		"showxml": {
+			"exclude": false,
 			"id": "showxml",
 			"rows": [
 				[
@@ -812,7 +814,13 @@
 												"rows": [
 													[
 														{
+															"exclude": false,
 															"id": "xml_display",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"show-xml-display-text"
+															],
 															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
 															"type": "text-display"
 														}

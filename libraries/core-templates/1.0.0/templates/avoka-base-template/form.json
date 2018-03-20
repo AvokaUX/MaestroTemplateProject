@@ -344,35 +344,27 @@
 								],
 								[
 									{
+										"label": "Page 2",
 										"rows": [
 											[
 												{
 													"rows": [
 														[]
 													],
-													"type": "section-2",
-													"id": "section",
+													"exclude": false,
 													"path": "",
-													"exclude": false
+													"type": "section-2",
+													"id": "section"
 												}
 											]
 										],
-										"properties": {
-											"sectionHeading": "{{T[item.id].label}}",
-											"formName": "{{T[Form.view.id].label}}",
-											"additionalText": "<em>Fields marked with <span style='color: red; !important'>*</span> are required</em>"
-										},
 										"type": "nav-page",
-										"rules": {
-											"pagescroll": "return false;"
-										},
-										"id": "page_1",
-										"path": "",
 										"exclude": false,
-										"isLastInGroup": false,
+										"htmlLabel": "Page 2",
 										"isFirstInGroup": false,
-										"label": "Page 2",
-										"htmlLabel": "Page 2"
+										"isLastInGroup": false,
+										"path": "",
+										"id": "page_1"
 									}
 								]
 							],
@@ -2499,9 +2491,15 @@
 												"rows": [
 													[
 														{
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"show-xml-display-text"
+															],
 															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
 															"id": "xml_display",
-															"type": "text-display"
+															"type": "text-display",
+															"exclude": false
 														}
 													]
 												],
@@ -2553,7 +2551,8 @@
 				]
 			],
 			"type": "show-xml",
-			"id": "showxml"
+			"id": "showxml",
+			"exclude": false
 		},
 		"formhelp": {
 			"rows": [
@@ -2736,7 +2735,8 @@
 				]
 			],
 			"type": "form-help",
-			"id": "formhelp"
+			"id": "formhelp",
+			"exclude": false
 		}
 	},
 	"modals": {

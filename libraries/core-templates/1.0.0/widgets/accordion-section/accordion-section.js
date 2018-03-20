@@ -62,12 +62,10 @@ define(["app"], function (app) {
                         });
                     }, td, false)
                         .then(function () {
+                            var accPos = $element.parent().parent().find('#'+item.id).offset().top - $(window).scrollTop();
+                            var windowHeight = window.innerHeight;
                             if(!item.$$parent.properties.allowMultipleOpen && someOpen && item.id !== firstAccordionId) {
-                                Scroll.scrollTo(firstAccordionId, false).then(function (value) {
-                                    if (($element.parent().parent().find('#'+item.id).offset().top - $(window).scrollTop()) < 80) {
-                                        Scroll.scrollTo(80,false);
-                                    }
-                                });
+                                if (accPos < 80 || accPos > windowHeight * 0.6) Scroll.scrollTo(80,false);
                             }
                             $scope.$apply();
                         });
