@@ -1,0 +1,96 @@
+form[name='form'] {
+  
+	.av-blueprints-progress-bar-49390 {
+		padding: 0 30px !important;
+      	z-index: 0 !important;
+		.wdg-progress-bar-heading-docked {		// Progress bar heading docked
+		
+		}
+
+		.wdg-progress-page-title {		// Progress page title
+		
+		}
+
+		.wdg-progress-bar-background {		// Progress bar background
+			height: 40px !important;
+          	border-radius: 20px !important;
+		}
+
+		.wdg-progress-bar {		// Progress bar
+			height: 40px !important;
+          	background: repeating-linear-gradient(
+              45deg,
+              #E23B89,
+              #E23B89 10px,
+              #D10064 10px,
+              #D10064 20px
+			) !important;
+          border-top-left-radius: 20px !important;
+          border-bottom-left-radius: 20px !important;
+          	
+		}
+
+		.wdg-page-group-icon-container {		// Page group icon container
+          counter-reset: page-group;
+          li:first-of-type {
+            .wdg-progress-pagegroup-bar{
+            left: 19px;
+            }
+      		&.wdg-page-segment-container {        
+        	&.show-group-icon {
+          	&:before {
+            left: 19px !important;
+          	}
+        	}
+      		}
+    		}
+		}
+
+		.wdg-page-segment-container {		// Page segment container
+          &.show-page-icon:after {
+          	height: 40px !important;    		
+          }
+          &.show-group-icon:before {    
+            height: 30px;
+            width: 30px;
+            top: 20px;            
+            background: white;
+            counter-increment: page-group;
+    		content: counter(page-group);
+            font-size: 18px;
+    		line-height: 1.7;
+            color: #D7D7D7;
+            text-align: center;
+            }
+          &.show-group-icon.page-visited:before {
+            color: black;            
+            }
+		}
+
+		.wdg-progress-page-bar {		// Progress page bar
+			height: 40px !important;
+		}
+
+		.wdg-progress-pagegroup-bar {		// Progress pagegroup bar
+			height: 40px;
+          	width: 40px;
+          	top: 20px;          
+		}
+
+		.wdg-progress-bar-heading {		// Progress bar heading
+			display: none;
+		}
+
+		.wdg-progress-group-icon {		// Progress group icon
+		
+		}
+
+		.wdg-progress-page-icon {		// Progress page icon
+		
+		}
+      .av-popover-help {
+      	top: 55px !important;
+      }
+
+	}
+}

@@ -1,0 +1,146 @@
+form[name='form'] .progress-container {
+  padding: 0 !important;
+  z-index: 10;
+  height: 100%;
+}
+
+form[name='form'] .progress-container .progress-wrapper-outer {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+form[name='form'] .progress-container .progress-wrapper-outer .progress-page-title-container {
+  display: table;
+  width: 100%;
+}
+form[name='form'] .progress-container .progress-wrapper-outer .progress-page-title-container .wdg-progress-page-title{
+  display: table-cell;
+  text-align: center;
+  color: beige;
+  max-width: 0;
+}
+
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper {
+  display: table;
+  width: 100%;
+}
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper {
+  display: table-cell;
+  position: relative;
+  height: 8px;
+}
+
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help {
+  top: 35px;
+  left: 50%;
+  margin-left: 0;
+  transform: translateX(-125px);
+}
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help .popover-tooltip {
+  max-width: 250px;
+}
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .av-popover-help .arrow {
+  border-top: none;
+  border-bottom: 10px solid white;
+  top: -12px;
+}
+
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .wdg-progress-bar {
+  position: absolute;
+  display: table-cell;
+  left: 0px;
+  height: 8px;
+  border-radius: 5px;
+  -moz-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+form[name='form'] .progress-container .progress-wrapper-outer .progress-wrapper .progress-bar-wrapper .wdg-progress-bar-background {
+  position: absolute;
+  display: table-cell;
+  width: 100%;
+  left: 0px;
+  height: 8px;
+  border-radius: 5px;
+}
+form[name='form'] .progress-container .wdg-page-group-icon-container {
+  position: relative;
+  margin: 0 auto;
+  display: table;
+  width: 100%;
+  padding: 0;
+}
+
+form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-page-icon:after {
+  content: none;
+}
+form[name='form'] .progress-container li:last-of-type.wdg-page-segment-container.show-group-icon:before {
+  /*left: 7px;*/
+}
+form[name='form'] .progress-container .wdg-page-segment-container {
+  position: relative;
+  display: table-cell;
+  box-sizing: border-box;
+  right: 0px;
+  top: 0px;
+  vertical-align: middle;
+}
+
+form[name='form'] .progress-container .wdg-page-segment-container .wdg-progress-page-bar {
+  width: 100%;
+  height: 8px;
+}
+form[name='form'] .progress-container .wdg-page-segment-container .wdg-progress-pagegroup-bar {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 4px;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  -moz-transition: all 0.0s ease-in-out 0.7s;
+  -webkit-transition: all 0.0s ease-in-out 0.7s;
+  transition: all 0.0s ease-in-out 0.7s;
+}
+
+
+form[name='form'] .progress-container .wdg-page-segment-container.show-page-icon:after {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 2px;
+  top: 1px;
+  right: 0;
+}
+form[name='form'] .progress-container .wdg-page-segment-container.show-group-icon:before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 4px;
+  left: 0;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+form[name='form'] .progress-container .wdg-progress-visited-icon {
+  position: relative;
+  height: 100%;
+}
+form[name='form'] .progress-container .progress-subtext-wrapper {
+  display: block;
+  width: 100%;
+}
+form[name='form'] .progress-container .progress-subtext-wrapper span {
+  display: inline-block;
+}
+form[name='form'] .progress-container .wdg-progress-bar-heading {
+  position: absolute;
+}
+form[name='form'] .progress-container .wdg-progress-bar-heading-docked {
+  width: 36px;
+  position: absolute;
+  right: 100%;
+}
