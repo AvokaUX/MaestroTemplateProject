@@ -7,7 +7,10 @@
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
-    <ignored path="../.idea/" />
+    <ignored path=".idea/" />
+    <manually-removed-from-ignored>
+      <directory path="../.idea/" />
+    </manually-removed-from-ignored>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +110,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.idea" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunDashboard">
@@ -136,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1521598613156</updated>
       <workItem from="1521598615722" duration="271000" />
-      <workItem from="1521598897166" duration="76000" />
+      <workItem from="1521598897166" duration="121000" />
     </task>
     <task id="LOCAL-00001" summary="add .idea">
       <created>1521598667718</created>
@@ -145,11 +148,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521598667718</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add .idea">
+      <created>1521598977788</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1521598977788</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="347000" />
+    <option name="totallyTimeSpent" value="392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
