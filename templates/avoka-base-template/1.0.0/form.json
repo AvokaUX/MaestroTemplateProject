@@ -779,6 +779,260 @@
 			],
 			"type": "save-confirm"
 		},
+		"shareconfirm": {
+			"exclude": false,
+			"hasCustomId": true,
+			"id": "shareconfirm",
+			"label": "Share Confirm",
+			"path": "",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader",
+						"rows": [
+							[
+								{
+									"id": "close_1",
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_4",
+						"rows": [
+							[
+								{
+									"id": "dialogContent_4",
+									"rows": [
+										[
+											{
+												"id": "section_13",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_4",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_7",
+												"rows": [
+													[
+														{
+															"id": "okay_4",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_2",
+						"rows": [
+							[
+								{
+									"id": "dialogContent_2",
+									"rows": [
+										[
+											{
+												"id": "section_12",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_3",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_6",
+												"rows": [
+													[
+														{
+															"id": "okay_3",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody_1",
+						"rows": [
+							[
+								{
+									"id": "dialogContent_1",
+									"rows": [
+										[
+											{
+												"id": "section_11",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_2",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_4",
+												"rows": [
+													[
+														{
+															"id": "okay_2",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "dialogBody",
+						"path": "",
+						"rows": [
+							[
+								{
+									"id": "dialogContent",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "section_10",
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_1",
+												"path": "",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "share",
+															"id": "okay",
+															"label": "share",
+															"path": "",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block"
+								}
+							]
+						],
+						"type": "block"
+					}
+				]
+			],
+			"type": "dialog"
+		},
 		"showxml": {
 			"id": "showxml",
 			"rows": [
@@ -813,6 +1067,11 @@
 													[
 														{
 															"id": "xml_display",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"show-xml-display-text"
+															],
 															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
 															"type": "text-display"
 														}
@@ -953,7 +1212,8 @@
 		"savechallenge",
 		"cancelconfirm",
 		"showxml",
-		"formhelp"
+		"formhelp",
+		"shareconfirm"
 	],
 	"localModals": [
 		"submitsuccess",
@@ -1622,6 +1882,7 @@
 															"rows": [
 																[
 																	{
+																		"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.emailAddress_1}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
 																		"id": "textDisplay_3",
 																		"subId": "714e6460e28a464cafc130fc3b4b8bb2",
 																		"type": "text-display"
@@ -1903,6 +2164,9 @@
 														[
 															{
 																"id": "progressBar_1",
+																"properties": {
+																	"displayGroupIcon": true
+																},
 																"type": "progress-bar"
 															}
 														]
@@ -1937,10 +2201,39 @@
 						}
 					]
 				],
-				"rules": {
-					"sh": "Form.$Pages && Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.hideFormHeader;"
-				},
+				"rules": {},
 				"type": "form-header-main"
+			}
+		],
+		[
+			{
+				"animateVisibility": true,
+				"exclude": false,
+				"hasCustomId": true,
+				"htmlLabel": "Tracking Code",
+				"id": "trackingcode",
+				"label": "Tracking Code",
+				"path": "",
+				"rows": [
+					[
+						{
+							"exclude": false,
+							"hasCustomId": true,
+							"htmlLabel": "Tracking code:&nbsp;<strong>{{Form.data.SFMData.SystemProfile.TrackingCode}}</strong>",
+							"id": "trackingcodetext",
+							"label": "Tracking code:",
+							"path": "",
+							"type": "text-display"
+						}
+					]
+				],
+				"rules": {
+					"sh": "Util.isReceipt"
+				},
+				"styles": [
+					"av-tracking-code-70060"
+				],
+				"type": "block"
 			}
 		],
 		[
@@ -1962,6 +2255,7 @@
 							"rows": [
 								[
 									{
+										"animateVisibility": true,
 										"exclude": false,
 										"htmlLabel": "Landing Page",
 										"id": "landingPage",
@@ -2001,21 +2295,51 @@
 												}
 											]
 										],
+										"rules": {
+											"sh": "!Util.isReceipt"
+										},
 										"type": "nav-page"
 									}
 								],
 								[
 									{
 										"exclude": false,
+										"htmlLabel": "Page 1",
 										"id": "page",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
+										"label": "Page 1",
 										"path": "",
 										"rows": [
 											[
 												{
 													"exclude": false,
 													"id": "section_1",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page 2",
+										"id": "page_1",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Page 2",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section",
 													"path": "",
 													"rows": [
 														[]
@@ -2569,9 +2893,10 @@
 		},
 		"block": {
 			"availableStyles": [
-				"av-background-image",
+				"av-message-block",
 				"av-section",
 				"align-top",
+				"av-background-image",
 				"bs-ben-test-63099",
 				"bs-bottom-nav-15636",
 				"bs-dialog-navigation-56885",
@@ -2605,7 +2930,7 @@
 				"pull-right",
 				"reference-code-block",
 				"mg-selector-block",
-				"av-message-block"
+				"av-tracking-code-70060"
 			],
 			"properties": {}
 		},

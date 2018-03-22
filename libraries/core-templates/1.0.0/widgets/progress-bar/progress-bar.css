@@ -99,6 +99,9 @@ form[name='form'] .progress-container .wdg-page-segment-container .wdg-progress-
   left: 0;
   border-radius: 50%;
   transform: translate(-50%,-50%);
+  -moz-transition: all 0.0s ease-in-out 0.7s;
+  -webkit-transition: all 0.0s ease-in-out 0.7s;
+  transition: all 0.0s ease-in-out 0.7s;
 }
 
 

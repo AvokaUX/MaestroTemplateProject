@@ -14,49 +14,46 @@ form[name="form"].av-receipt {
   .av-form-field {
     page-break-inside: avoid;
 
-    select,
-    input:not([type='checkbox']),
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      text-indent: 1px;
-      text-overflow: '';
-      padding: 0px 7px 0px 7px;
-    }
+
     textarea {
       overflow: hidden;
     }
-    .av-checkbox {
-      .touch-icon {
-        border: 1px solid #000000;
-        color: #000000;
-      }
+    select, .input-group, .av-select-overlay,
+    input:not([type='checkbox']) {
+      height: 30px !important;
+      border: 1px solid #D3D3D4 !important;
+      border-radius: 0 !important;
     }
+
     .attachment-inline-container {
       display: none;
     }
   }
+  .av-checkbox .wdg-button-icon {
+    border: 1px solid #D3D3D4 !important;
+  }
 
   /* Header Styles */
-  .wdg-header-tracking-code {
-    margin: 20px 0px 0px 0px;
-    background: #FFFFFF;
-    .wdg-header-tracking-code-text {
-      color: #000000;
+  .av-tracking-code-70060 {
+    top: 60px;
+    text-align: right;
+  }
+  .mg-header {
+    border-bottom: 3px solid #EEEEEE;
+    height: 55px;
+    .av-form-heading-container {
+      top: -120px !important;
+      left: 250px;
+      right: auto !important;
     }
   }
 
-  .mg-header {
-    border-color: #D3D6E2;
-    border-width: 0 0 3px 0;
+  .bs-logo-container-86033 {
+    padding-bottom: 15px;
   }
 
   /* Section Styles */
   .mg-section-1 .wdg-section-1-header {
-    border-style: none !important;
-    background: none;
-    padding: 8px 0px 0px 8px !important;
     .wdg-section-1-title {
       font-size: 16pt !important;
     }
@@ -73,22 +70,25 @@ form[name="form"].av-receipt {
   }
 
   .mg-section-2 {
-    padding: 5px 10px;
+    padding: 5px 0;
     .wdg-section-2-title {
       page-break-inside: avoid;
       display: block !important;
+      border-bottom: 1px solid;
     }
-  }
-  .mg-section-2-title {
-    font-size: 12pt !important;
+    .wdg-section-2-content {
+      padding-left: 0;
+    }
+    .wdg-section-2-header {
+      padding-right: 0;
+    }
   }
 
   .wdg-section-2-info-text {
     font-size: 11px !important;
   }
 
-  .repeat-template-item-header,
-  .repeat-template .wdg-repeated-item {
+  .wdg-repeated-item {
     padding-top: 5px;
     padding-bottom: 5px;
   }
@@ -103,8 +103,20 @@ form[name="form"].av-receipt {
   }
 
   /* Buttons */
-  .wdg-button {
+  .wdg-button, button {
+    display: none;
+  }
+  /* Accordion */
+  .wdg-accordion-section-container {
+    page-break-before: always;
+  }
+  /* Landing page */
+  .av-landing-page {
     display: none;
   }
 
+  /* Signatur pad */
+  .wdg-signature-box {
+    display: block;
+  }
 }

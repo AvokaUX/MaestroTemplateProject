@@ -159,7 +159,7 @@
 																"htmlLabel": "Your email address",
 																"mandatory": true,
 																"path": "EmailAddress",
-																"id": "emailAddress_1",
+																"id": "send_receipt_email",
 																"pubId": "832ab4f37a6f44c1bf06b4df1f57dc94"
 															}
 														],
@@ -175,7 +175,7 @@
 																	"av-button-primary"
 																],
 																"properties": {
-																	"emailFieldRef": "data.emailAddress_1"
+																	"emailFieldRef": "send_receipt_email"
 																},
 																"type": "button-email-receipt",
 																"rules": {

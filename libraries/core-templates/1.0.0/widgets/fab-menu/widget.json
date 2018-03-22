@@ -125,19 +125,19 @@
 					"xs": 1,
 					"sm": 1
 				},
-				"label": "Save",
+				"label": "Share",
 				"styles": [
 					"av-button-navigation",
 					"bs-functional-button-items-64706"
 				],
 				"properties": {
-					"icon": "fa fa-save"
+					"icon": "fa fa-share"
 				},
 				"type": "button",
 				"path": "",
-				"htmlLabel": "Save",
+				"htmlLabel": "Share",
 				"rules": {
-					"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonSave\") && data.functionalMenu"
+					"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
 
 				},
 				"animateVisibility": false,
@@ -167,12 +167,12 @@
 			"value": true,
 			"helpText": "Hide Resume Button"
 		},
-		"functionalButtonSave": {
-			"label": "Functional Button Save",
+		"functionalButtonShare": {
+			"label": "Functional Button Share",
 			"category": "Functional Buttons",
 			"type": "boolean",
 			"value": true,
-			"helpText": "Hide Save Button"
+			"helpText": "Hide Share Button"
 		},
 		"functionalButtonHelp": {
 			"label": "Functional Button Help",
