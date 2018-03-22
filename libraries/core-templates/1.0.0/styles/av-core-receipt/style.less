@@ -14,25 +14,15 @@ form[name="form"].av-receipt {
   .av-form-field {
     page-break-inside: avoid;
 
-    select,
-    input:not([type='checkbox']),
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      text-indent: 1px;
-      text-overflow: '';
-      padding: 0px 7px 0px 7px;
 
-    }
     textarea {
       overflow: hidden;
     }
-    select,
+    select, .input-group, .av-select-overlay,
     input:not([type='checkbox']) {
-      height: 40px;
-      border: 1px solid black;
-      border-radius: 0;
+      height: 30px !important;
+      border: 1px solid #D3D3D4 !important;
+      border-radius: 0 !important;
     }
 
     .av-checkbox {
@@ -47,17 +37,18 @@ form[name="form"].av-receipt {
   }
 
   /* Header Styles */
-  .wdg-header-tracking-code {
-    margin: 20px 0px 0px 0px;
-    background: #FFFFFF;
-    .wdg-header-tracking-code-text {
-      color: #000000;
-    }
+  .av-tracking-code-70060 {
+    top: 60px;
+    text-align: right;
   }
-
   .mg-header {
-    border-color: #D3D6E2;
-    border-width: 0 0 3px 0;
+    border-bottom: 3px solid #EEEEEE;
+    height: 55px;
+    .av-form-heading-container {
+      top: -120px !important;
+      left: 250px;
+      right: auto !important;
+    }
   }
 
   .bs-logo-container-86033 {
@@ -66,9 +57,6 @@ form[name="form"].av-receipt {
 
   /* Section Styles */
   .mg-section-1 .wdg-section-1-header {
-    border-style: none !important;
-    background: none;
-    padding: 8px 0px 0px 8px !important;
     .wdg-section-1-title {
       font-size: 16pt !important;
     }

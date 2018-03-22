@@ -64,10 +64,10 @@ define(["app"], function (app) {
                     }, td, false)
                         .then(function () {
                             if(!item.$$parent.properties.allowMultipleOpen && someOpen && item.id !== firstAccordionId) {
-                                $timeout(function () {
-                                    $location.hash(firstAccordionId);
-                                    $anchorScroll();
-                                }, transDuration * 1000);
+                                Scroll.scrollTo(firstAccordionId, false, 10);
+                                // $timeout(function () {
+                                //     Scroll.scrollTo(firstAccordionId, false, 10);
+                                // }, transDuration * 1000);
                             }
                         });
                 }, 25, false);
@@ -164,7 +164,8 @@ define(["app"], function (app) {
 
                 $scope.$on("siblingOpening", function (evt, data) {
                     if (item.id !== data.id && $scope.accordionOpen) {
-                        animateSlideOut(false);
+                        //animateSlideOut(false);
+                        animateSlideOut(true);
                     }
                 });
                 $scope.$on("openThisOne", function (evt, data) {

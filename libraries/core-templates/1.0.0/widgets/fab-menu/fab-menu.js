@@ -7,10 +7,10 @@ define(["app"], function (app) {
 
             function checkOnlyOneVisible() {
                 var resume = +item.properties.functionalButtonResume;
-                var save = +item.properties.functionalButtonSave;
+                var share = +item.properties.functionalButtonShare;
                 var help = +item.properties.functionalButtonHelp;
                 var exit = +item.properties.functionalButtonExit;
-                var buttonCount = resume + save + help + exit;
+                var buttonCount = resume + share + help + exit;
                 return {
                     0: "function-items-0",
                     1: "function-items-1",
@@ -87,18 +87,19 @@ define(["app"], function (app) {
                 function () {
                     return $element.find('.id-' + children[4].id + ' button').length;
                 },
-                function (save) {
-                    if (save) {
+                function (share) {
+                    if (share) {
                         $element.find('.id-' + children[4].id + ' button').click(function () {
 
                             if (notOneButton) {
                                 Form.fireRule("click", children[0].id, data);
                             }
-                            Form.showDialog("saveconfirm");
+                            Form.showDialog("shareconfirm");
                         });
                     }
                 });
             var clickAnywhereHandler = function (event) {
+                if (!notOneButton) return;
                 var inside = ($element[0] === event.target) ||
                     $(event.target).parents().index($element) !== -1;
                 if (!inside) {

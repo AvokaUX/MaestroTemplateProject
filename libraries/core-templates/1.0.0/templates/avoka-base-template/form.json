@@ -260,10 +260,39 @@
 				"type": "form-header-main",
 				"animateVisibility": false,
 				"exclude": false,
-				"rules": {
-					"sh": "Form.$Pages && Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.hideFormHeader;"
-				},
+				"rules": {},
 				"id": "formHeader1"
+			}
+		],
+		[
+			{
+				"label": "Tracking Code",
+				"rows": [
+					[
+						{
+							"label": "Tracking code:",
+							"htmlLabel": "Tracking code:&nbsp;<strong>{{Form.data.SFMData.SystemProfile.TrackingCode}}</strong>",
+							"exclude": false,
+							"hasCustomId": true,
+							"path": "",
+							"type": "text-display",
+							"id": "trackingcodetext"
+						}
+					]
+				],
+				"exclude": false,
+				"hasCustomId": true,
+				"htmlLabel": "Tracking Code",
+				"path": "",
+				"type": "block",
+				"id": "trackingcode",
+				"rules": {
+					"sh": "Util.isReceipt"
+				},
+				"animateVisibility": true,
+				"styles": [
+					"av-tracking-code-70060"
+				]
 			}
 		],
 		[
@@ -310,6 +339,10 @@
 											"fullPage": true
 										},
 										"type": "nav-page",
+										"rules": {
+											"sh": "!Util.isReceipt"
+										},
+										"animateVisibility": true,
 										"exclude": false,
 										"htmlLabel": "Landing Page",
 										"isFirstInGroup": false,
@@ -501,7 +534,7 @@
 						},
 						{
 							"rules": {
-								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonSave\") && data.functionalMenu"
+								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
 							},
 							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
@@ -992,9 +1025,10 @@
 		},
 		"block": {
 			"availableStyles": [
-				"av-background-image",
+				"av-message-block",
 				"av-section",
 				"align-top",
+				"av-background-image",
 				"bs-ben-test-63099",
 				"bs-bottom-nav-15636",
 				"bs-dialog-navigation-56885",
@@ -1028,7 +1062,7 @@
 				"pull-right",
 				"reference-code-block",
 				"mg-selector-block",
-				"av-message-block"
+				"av-tracking-code-70060"
 			],
 			"properties": {}
 		},
@@ -2498,8 +2532,7 @@
 															],
 															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
 															"id": "xml_display",
-															"type": "text-display",
-															"exclude": false
+															"type": "text-display"
 														}
 													]
 												],
@@ -2551,8 +2584,7 @@
 				]
 			],
 			"type": "show-xml",
-			"id": "showxml",
-			"exclude": false
+			"id": "showxml"
 		},
 		"formhelp": {
 			"rows": [
@@ -2735,8 +2767,265 @@
 				]
 			],
 			"type": "form-help",
-			"id": "formhelp",
-			"exclude": false
+			"id": "formhelp"
+		},
+		"shareconfirm": {
+			"label": "Share Confirm",
+			"rows": [
+				[
+					{
+						"rows": [
+							[
+								{
+									"rules": {
+										"click": "Form.showDialog();"
+									},
+									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"id": "close_1",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"id": "dialogHeader",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"id": "section_13",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"id": "dialogContent_4",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rules": {
+																"click": "Form.showDialog(\"\");",
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"id": "okay_4",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"id": "dialogFooterBlock_7",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"id": "dialogFooter_4",
+									"type": "block"
+								}
+							]
+						],
+						"id": "dialogBody_4",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2",
+												"id": "section_12"
+											}
+										]
+									],
+									"type": "dialog-content",
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"id": "dialogContent_2"
+								}
+							],
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button",
+															"id": "okay_3"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block",
+												"id": "dialogFooterBlock_6"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block",
+									"id": "dialogFooter_3"
+								}
+							]
+						],
+						"type": "block",
+						"id": "dialogBody_2"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2",
+												"id": "section_11"
+											}
+										]
+									],
+									"type": "dialog-content",
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"id": "dialogContent_1"
+								}
+							],
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button",
+															"id": "okay_2"
+														}
+													]
+												],
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block",
+												"id": "dialogFooterBlock_4"
+											}
+										]
+									],
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block",
+									"id": "dialogFooter_2"
+								}
+							]
+						],
+						"type": "block",
+						"id": "dialogBody_1"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[]
+												],
+												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"type": "section-2",
+												"id": "section_10"
+											}
+										]
+									],
+									"type": "dialog-content",
+									"path": "",
+									"subId": "c67d616b1ece48abaeab4eec3f70710c",
+									"id": "dialogContent"
+								}
+							],
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"label": "share",
+															"exclude": false,
+															"htmlLabel": "share",
+															"path": "",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"type": "button",
+															"id": "okay"
+														}
+													]
+												],
+												"path": "",
+												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"type": "block",
+												"id": "dialogFooterBlock_1"
+											}
+										]
+									],
+									"path": "",
+									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"type": "block",
+									"id": "dialogFooter"
+								}
+							]
+						],
+						"path": "",
+						"type": "block",
+						"id": "dialogBody"
+					}
+				]
+			],
+			"type": "dialog",
+			"exclude": false,
+			"hasCustomId": true,
+			"path": "",
+			"id": "shareconfirm"
 		}
 	},
 	"modals": {
@@ -2873,7 +3162,7 @@
 																[
 																	{
 																		"properties": {
-																			"emailFieldRef": "data.emailAddress_1"
+																			"emailFieldRef": "send_receipt_email"
 																		},
 																		"rules": {
 																			"click": "Form.emailOperation('emailReceipt', item.id, item.properties.emailFieldRef)"
@@ -2962,6 +3251,7 @@
 															"rows": [
 																[
 																	{
+																		"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.emailAddress_1}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
 																		"subId": "714e6460e28a464cafc130fc3b4b8bb2",
 																		"id": "textDisplay_3",
 																		"type": "text-display"
@@ -2970,7 +3260,7 @@
 																[
 																	{
 																		"rules": {
-																			"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"submit_success_send_receipt\")) {\nForm.data.submit_success_send_receipt.$responseStatus = \"\";\n}\nForm.data.send_receipt_email = \"\";"
+																			"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"submit_success_send_receipt\")) {\nForm.data.submit_success_send_receipt.$responseStatus = \"\";\n}\nForm.data.emailAddress_1 = \"\";"
 																		},
 																		"subId": "6f9319a7b2ab4377bb9de43ec572300d",
 																		"id": "button",
@@ -3638,7 +3928,8 @@
 		"savechallenge",
 		"cancelconfirm",
 		"showxml",
-		"formhelp"
+		"formhelp",
+		"shareconfirm"
 	],
 	"rules": {},
 	"clearHidden": "no",
@@ -3865,6 +4156,19 @@
 						"htmlLabel": "Errors Dock Lock",
 						"mandatoryMsg": ""
 					},
+					"trackingcode": {
+						"label": "Tracking Code",
+						"htmlLabel": "Tracking Code",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"trackingcodetext": {
+						"label": "Tracking code:",
+						"htmlLabel": "Tracking code:&nbsp;<strong>{{Form.data.SFMData.SystemProfile.TrackingCode}}</strong>",
+						"mandatoryMsg": ""
+					},
 					"content": {
 						"label": "Content",
 						"htmlLabel": "",
@@ -4019,8 +4323,8 @@
 						}
 					},
 					"share": {
-						"label": "Save",
-						"htmlLabel": "Save",
+						"label": "Share",
+						"htmlLabel": "Share",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5101,6 +5405,222 @@
 							"ariaLabel": ""
 						}
 					},
+					"shareconfirm": {
+						"label": "Share Confirm",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogHeader": {
+						"label": "Dialog header",
+						"htmlLabel": "Dialog header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"close_1": {
+						"label": "Close",
+						"htmlLabel": "Close",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogBody_4": {
+						"label": "Dialog Body",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogContent_4": {
+						"label": "Dialog Content",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"section_13": {
+						"label": "Section",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"dialogFooter_4": {
+						"label": "Dialog Footer",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogFooterBlock_7": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"okay_4": {
+						"label": "Button",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogBody_2": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogContent_2": {
+						"label": "Dialog Content",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"section_12": {
+						"label": "Section",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"dialogFooter_3": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogFooterBlock_6": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"okay_3": {
+						"label": "Button",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogBody_1": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogContent_1": {
+						"label": "Dialog Content",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"section_11": {
+						"label": "Section",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"dialogFooter_2": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogFooterBlock_4": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"okay_2": {
+						"label": "Button",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogBody": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogContent": {
+						"label": "Dialog Content",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"section_10": {
+						"label": "Section",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"dialogFooter": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"dialogFooterBlock_1": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"okay": {
+						"label": "share",
+						"htmlLabel": "share",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
 					"submitsuccess": {
 						"label": "Submit Success Modal",
 						"htmlLabel": "Submit Success",
@@ -5301,7 +5821,7 @@
 					},
 					"textDisplay_3": {
 						"label": "Weve sent a copy of your submission to your email address ().If you didnt receive it or would like another copy, just select the option below.",
-						"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_receipt_email}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
+						"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.emailAddress_1}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
 						"mandatoryMsg": ""
 					},
 					"button": {
