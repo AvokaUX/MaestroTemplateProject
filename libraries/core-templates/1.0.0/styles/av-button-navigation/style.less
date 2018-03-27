@@ -1,30 +1,46 @@
 form[name='form'] {
   .av-button-navigation {  	
-    width:80px;
-    height:80px; 
-    .override-color(color, @av-button-docking-font-color, @av-neutral-color);  
+    width: 100px;
+    height: 100px;
+    z-index: 900;
+
+    .override-color(color, @av-button-docking-font-color, @av-font-color);
 	
 	.wdg-button {		// Button
-      .override-color(background-color, @av-button-docking-color, @av-primary-contrast);
+      padding: 0;
+      .override-color(background-color, @av-primary-color, @av-button-docking-color);
       border-radius:50%;
       outline:0;
+      pointer-events: initial;
 
       &:hover, &:focus{
-      	.override-color(background-color, @av-primary-color, @av-button-docking-contrast);             
+        border: solid 1px;
+        .override-color(background-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
+        .override-color(border-color, @av-primary-color, @av-button-docking-color);
+        .override-color(color, @av-primary-color, @av-button-docking-color);
       }
       
       &:active{
-        opacity:1;
+        opacity: 1;
+      }
+      @media only screen and (max-width: (@screen-md)) {
+        .override-color(background-color, fade(@av-primary-color, 70%), @av-button-docking-color);
       }
 	}
 
 	.wdg-button-icon {		// Button icon
-      font-size:30px;
+      font-size: 80px;
+      height: 45px;
+      width: 100%;
+      line-height: 34px;
 	}
 
 	.wdg-button-label {		// Button label
-      padding:0;
-      font-size: 12px;    		
+      padding: 0;
+      font-size: 16px;
+      @media only screen and (max-width: (@av-max-form-width + 240)) {
+        display: none;
+      }
 	}
   }
 }

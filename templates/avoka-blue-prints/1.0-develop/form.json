@@ -1770,7 +1770,7 @@
 						"styles": [
 							"bc-white-background-20804",
 							"bs-center-align-19822",
-							"bs-max-width-73189",
+							"av-max-width",
 							"bs-modal-content-96022"
 						],
 						"type": "section-2"
@@ -2250,7 +2250,7 @@
 						"styles": [
 							"bc-white-background-20804",
 							"bs-center-align-19822",
-							"bs-max-width-73189",
+							"av-max-width",
 							"bs-modal-content-96022"
 						],
 						"type": "section-2"
@@ -2536,7 +2536,7 @@
 											]
 										],
 										"styles": [
-											"bs-max-width-73189"
+											"av-max-width"
 										],
 										"type": "form-header"
 									}
@@ -2626,7 +2626,7 @@
 					]
 				],
 				"styles": [
-					"bs-max-width-73189"
+					"av-max-width"
 				],
 				"type": "block"
 			}
@@ -2661,7 +2661,7 @@
 				"styles": [
 					"bc-white-background-20804",
 					"bs-tramline-container-62540",
-					"bs-max-width-73189"
+					"av-max-width"
 				],
 				"type": "block"
 			}
@@ -2816,7 +2816,7 @@
 				],
 				"rules": {},
 				"styles": [
-					"bs-max-width-73189"
+					"av-max-width"
 				],
 				"type": "block"
 			}
@@ -2871,7 +2871,7 @@
 				"rules": {},
 				"styles": [
 					"bs-min-height-64689",
-					"bs-max-width-73189"
+					"av-max-width"
 				],
 				"type": "block"
 			}
@@ -2964,7 +2964,7 @@
 					]
 				],
 				"styles": [
-					"nav-bar-73803"
+					"av-nav-bar"
 				],
 				"type": "block"
 			}
@@ -3353,10 +3353,10 @@
 	"styleMods": {},
 	"styles": [
 		"mg-base",
-		"mg-form",
+		"av-global-form",
 		"bs-overrides-87851",
 		"bs-tooltip-39326",
-		"bs-fonts-79473",
+		"av-global-fonts",
 		"bs-hide-in-design-83044"
 	],
 	"systemValues": {},
@@ -3440,7 +3440,7 @@
 				"bs-floating-layer-60091",
 				"bs-floating-right-29171",
 				"bs-functional-menu-10498",
-				"bs-max-width-73189",
+				"av-max-width",
 				"bs-primary-background-02324",
 				"bs-text-align-right-83697",
 				"bs-tramline-container-62540",
@@ -3460,7 +3460,7 @@
 				"bs-top-navigation-bar-05168",
 				"bs-top-navigation-container-95011",
 				"bs-fan-menu-mask-86056",
-				"nav-bar-73803",
+				"av-nav-bar",
 				"bs-fab-menu-background-88907",
 				"bs-dialog-footer-10282",
 				"bs-ben-test-63099",
@@ -3690,11 +3690,11 @@
 		"form": {
 			"availableStyles": [
 				"mg-base",
-				"mg-form",
+				"av-global-form",
 				"align-top",
 				"bs-overrides-87851",
 				"bs-tooltip-39326",
-				"bs-fonts-79473",
+				"av-global-fonts",
 				"av-focus-styling",
 				"bs-hide-in-design-83044"
 			],
@@ -3720,7 +3720,7 @@
 				"mg-header",
 				"mg-header-tracking-code",
 				"align-top",
-				"bs-max-width-73189",
+				"av-max-width",
 				"bs-test-table-27269"
 			],
 			"properties": {}
@@ -3840,7 +3840,7 @@
 		"nav-errors": {
 			"availableStyles": [
 				"error-block",
-				"bs-max-width-73189",
+				"av-max-width",
 				"align-top",
 				"small-error-block-48902"
 			],
@@ -3848,7 +3848,7 @@
 		},
 		"nav-page": {
 			"availableStyles": [
-				"bs-max-width-73189",
+				"av-max-width",
 				"align-top"
 			],
 			"properties": {}
@@ -4057,7 +4057,7 @@
 				"bs-transparent-background-93141",
 				"form-help-visit-us",
 				"mg-section-2",
-				"bs-max-width-73189",
+				"av-max-width",
 				"bs-center-align-19822",
 				"bs-save-dialog-text-82753",
 				"bs-modal-content-96022",

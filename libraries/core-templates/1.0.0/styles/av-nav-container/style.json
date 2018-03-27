@@ -1,0 +1,7 @@
+{
+  "label": "AV Nav Container",
+  "file": "style.less",
+  "widgets": [
+    "block"
+  ]
+}

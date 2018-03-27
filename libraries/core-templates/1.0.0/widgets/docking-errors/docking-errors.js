@@ -4,7 +4,7 @@ define(["app"], function(app) {
               Form.getItem($scope, $element).then(function (item) {
 				var data = $scope.data;
 				var dockPosition = Form.view.brands[Form.view.selectedBrand].styleVars['av-docking-point'];
-				var progressBarHeight = Form.view.brands[Form.view.selectedBrand].styleVars['av-progressbar-height'];
+				var progressBarHeight = Form.view.brands[Form.view.selectedBrand].styleVars['av-progressbar-banner-height'];
 				$scope.dp = parseInt(dockPosition.substr(0, dockPosition.length-2));
 				$scope.pbh = parseInt(progressBarHeight.substr(0, progressBarHeight.length-2));
 				$scope.$watch("data.scrollPosition", function(newValue, oldValue) {

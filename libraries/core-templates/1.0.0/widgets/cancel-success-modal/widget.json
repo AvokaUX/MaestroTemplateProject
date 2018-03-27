@@ -204,7 +204,7 @@
 				"styles": [
 					"bc-white-background-20804",
 					"bs-center-align-19822",
-					"bs-max-width-73189",
+					"av-max-width",
 					"bs-modal-content-96022"
 				],
 				"exclude": false,
@@ -221,6 +221,9 @@
 	"id": "cancelsuccess",
 	"exclude": false,
 	"category": "Custom Components",
+	"styles": [
+		"av-vertical-center"
+	],
 	"blockInfo": {
 		"editLink": "https://maestro.avoka.com.au/maestro/secure/design/17030",
 		"publishLibraryId": 16680,

@@ -6,9 +6,9 @@
         <i class="wdg-collapse-button-icon" data-ng-class="!$parent.isCollapsed[item.id] ? item.properties.showIcon : item.properties.hideIcon"></i>
     </button>
     <div class="wdg-section-2-header col-sm-12 col-xs-12" data-ng-class="item.properties.topToBottom ? 'col-sm-12' : 'col-md-3'">
-        <h3 class="wdg-section-2-title"
+        <h2 class="wdg-section-2-title"
             data-ng-class="{ 'av-hidden': item.properties.hideTitle }" data-av-compile
-            data-ng-bind-html="sanitize(item.htmlLabel ? item.htmlLabel : item.label)"></h3>
+            data-ng-bind-html="sanitize(item.htmlLabel ? item.htmlLabel : item.label)"></h2>
         <div class="wdg-section-2-info-text"
              data-av-compile
              data-ng-bind-html="sanitize(item.properties.infoText)"></div>

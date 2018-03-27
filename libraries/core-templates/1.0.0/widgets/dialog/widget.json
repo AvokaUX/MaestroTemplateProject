@@ -107,7 +107,7 @@
 						}
 					]
 				],
-				"styles": ["bs-max-width-73189"],
+				"styles": ["av-max-width"],
 				"id": "dialogBody",
 				"type": "block"				
 			}

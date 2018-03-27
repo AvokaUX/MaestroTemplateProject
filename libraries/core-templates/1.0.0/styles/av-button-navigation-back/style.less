@@ -1,6 +1,24 @@
 form[name='form'] {
   .av-button-navigation-back { 
   	top: 50%;
-  	left: 136px;
+  	left: 30px;
+
+    .wdg-button-icon {
+      text-align: left;
+      padding-left: 22px;
+      transform: scale(0.7,1);
+    }
+
+    @media only screen and (max-width: (@av-max-form-width + 240)) {
+      left: -8px;
+      transform: translateX(-50%);
+      .wdg-button {
+        padding-left: 50%;
+        padding-right: 0;
+      }
+      .wdg-button-icon {
+        text-align: right;
+      }
+    }
   }
 }

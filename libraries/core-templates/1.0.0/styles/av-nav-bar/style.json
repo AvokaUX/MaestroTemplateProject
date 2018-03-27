@@ -1,0 +1,7 @@
+{
+  "label": "AV Nav Bar",
+  "file": "style.less",
+  "widgets": [
+    "block"
+  ]
+}

@@ -1,10 +1,16 @@
 form[name='form'] {
 	.av-progress-bar {
 	    float: right;
-	
 
-		.wdg-progress-bar {
-			background: @av-primary-color;
+		.progress-bar-wrapper {
+			height: @av-progressbar-height;
+			.wdg-progress-bar {
+				background: @av-primary-color;
+				height: @av-progressbar-height;
+			}
+			.wdg-progress-bar-background {
+				height: @av-progressbar-height;
+			}
 		}
 		.wdg-progress-bar-background {
 			background: rgb(204, 204, 204);
@@ -13,14 +19,19 @@ form[name='form'] {
 	      color: @av-primary-color;
 	      top: -2px;
 	    }
-	    .progress-subtext-wrapper, .wdg-progress-bar-heading-docked {	
-	      color: @av-primary-color;
+	    .progress-subtext-wrapper, .wdg-progress-bar-heading-docked {
 	      @media (max-width: @screen-sm) {
 	        font-size: 12px;
 	      }
 	    }
-	    
+		.progress-subtext-wrapper {
+		  color: @av-primary-color;
+		}
+
 	    .wdg-page-segment-container {
+			.wdg-progress-page-bar {
+				height: @av-progressbar-height;
+			}
 	      &.show-page-icon{
 	      	&:after {
   			  background: rgb(170, 170, 170);
@@ -49,4 +60,4 @@ form[name='form'] {
 	      }
        }
    }
-} 
+}

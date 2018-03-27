@@ -261,21 +261,35 @@
 			"type": "px",
 			"label": "Header Height",
 			"category": "Form Header",
-			"defaultValue": "75px"
+			"defaultValue": "100px"
 		},
 		{
-			"name": "av-stepperav-progressbar-height",
+			"name": "av-progressbar-height",
 			"type": "px",
 			"label": "Progress Bar Height",
 			"category": "Form Header",
-			"defaultValue": "50px"
+			"defaultValue": "12px"
+		},
+		{
+			"name": "av-progressbar-banner-height",
+			"type": "px",
+			"label": "Progress Bar Banner Height",
+			"category": "Form Header",
+			"defaultValue": "75px"
 		},
 		{
 			"name": "av-docking-point",
 			"type": "px",
 			"label": "Dock when user scrolls this far",
-			"category": "Other",
+			"category": "Docking",
 			"defaultValue": "50px"
+		},
+		{
+			"name": "av-disable-docking-progressbar",
+			"type": "text",
+			"label": "Disable progress bar docking",
+			"category": "Docking",
+			"defaultValue": "false"
 		}
 	]
 }

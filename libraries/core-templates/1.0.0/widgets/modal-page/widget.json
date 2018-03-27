@@ -65,7 +65,7 @@
 										"htmlLabel": "Modal Header",
 										"styles": [
 											"mg-header",
-											"bs-max-width-73189"
+											"av-max-width"
 										],
 										"id": "modalHeader_1",
 										"pubId": "a10f1aa994044906b0ed82b5ddef53e5"
@@ -117,7 +117,7 @@
 					"mg-section-2",
 					"av-section",
 					"bs-center-align-19822",
-					"bs-max-width-73189",
+					"av-max-width",
 					"bs-modal-content-96022"
 				],
 				"properties": {

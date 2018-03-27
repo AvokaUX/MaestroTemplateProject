@@ -85,7 +85,7 @@
 							"path": "",
 							"styles": [
 								"mg-header",
-								"bs-max-width-73189"
+								"av-max-width"
 							],
 							"type": "form-header",
 							"id": "formHeader"
@@ -145,6 +145,13 @@
 	"type": "block",
 	"path": "",
 	"htmlLabel": "Form Header",
+	"propDefs" : {
+		"fixedHeader": {
+			"label": "Fixed header",
+			"type": "boolean",
+			"value": true
+		}
+	},
 	"blockInfo": {
 		"editLink": "https://tm.maestro.avoka.com/maestro/secure/design/5407",
 		"publishLibraryId": 5704,
