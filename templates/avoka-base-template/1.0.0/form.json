@@ -754,7 +754,6 @@
 												"rows": [
 													[
 														{
-															"exclude": false,
 															"id": "okay_18",
 															"rules": {
 																"sh": ""
@@ -782,7 +781,6 @@
 			"type": "save-confirm"
 		},
 		"shareconfirm": {
-			"exclude": false,
 			"htmlLabel": "Share Confirm",
 			"id": "shareconfirm",
 			"label": "Share Confirm",
@@ -1552,12 +1550,14 @@
 												"rows": [
 													[
 														{
+															"exclude": false,
 															"id": "sharerecipientemail",
 															"path": "Sharerecipientemail",
 															"subId": "ea72110b798b4186be8e71d39c7206e1",
 															"type": "email"
 														},
 														{
+															"exclude": false,
 															"id": "sendername",
 															"path": "Sendername",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
@@ -1566,6 +1566,7 @@
 													],
 													[
 														{
+															"exclude": false,
 															"id": "personalmessage",
 															"path": "Personalmessage",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
@@ -1574,6 +1575,7 @@
 													],
 													[
 														{
+															"exclude": false,
 															"id": "shareFormButton",
 															"subId": "4190d5a9a613410288c94ef8d968e01d",
 															"type": "button-email-share-form"
@@ -1597,7 +1599,11 @@
 													],
 													[
 														{
+															"exclude": false,
 															"id": "button_3",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
+															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
@@ -1648,20 +1654,18 @@
 		},
 		"sharesuccess": {
 			"exclude": false,
-			"hasCustomId": true,
 			"htmlLabel": "Share Success Modal",
 			"id": "sharesuccess",
 			"label": "Share Success Modal",
-			"path": "",
 			"properties": {},
 			"rows": [
 				[
 					{
 						"id": "modalBackground_5",
-						"path": "",
 						"rows": [
 							[]
 						],
+						"subId": "f732f7ce92d343778d33422d566bccac",
 						"type": "modal-background"
 					}
 				],
@@ -1669,7 +1673,6 @@
 					{
 						"exclude": true,
 						"id": "modalHeader_10",
-						"path": "",
 						"rows": [
 							[
 								{
@@ -1679,50 +1682,52 @@
 										[
 											{
 												"id": "modalHeader_11",
-												"path": "",
 												"rows": [
 													[
 														{
 															"id": "modalLogo_5",
-															"path": "",
 															"rows": [
 																[
 																	{
 																		"id": "modalLogoImage_5",
-																		"path": "",
 																		"properties": {},
+																		"subId": "753800ee88cf4fb5828cef5ff2d42942",
 																		"type": "image"
 																	}
 																]
 															],
+															"subId": "0da239b6d6dd4425b826c37bde2ed9be",
 															"type": "block"
 														}
 													]
 												],
+												"subId": "3211480eea7d45a4902f4096307e86e3",
 												"type": "form-header"
 											}
 										]
 									],
+									"subId": "9ff89a8968cf4669a2f0cfde2be17c63",
 									"type": "sticky-panel"
 								}
 							]
 						],
+						"subId": "239b00ef9f9c40ca81392d95bcbe9395",
 						"type": "block"
 					}
 				],
 				[
 					{
 						"id": "modalContent_5",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "startANewForm_6",
-									"path": "",
+									"subId": "b424508c76b04541b46e1f5d5363b90a",
 									"type": "button"
 								}
 							]
 						],
+						"subId": "10e237c285f9418da41b60b370238bfc",
 						"type": "section-2"
 					}
 				],
@@ -1730,25 +1735,26 @@
 					{
 						"exclude": true,
 						"id": "modalFooter_5",
-						"path": "",
 						"rows": [
 							[
 								{
 									"id": "formFooterText_7",
-									"path": "",
 									"rows": [
 										[
 											{
 												"id": "textDisplay_12",
 												"path": "",
+												"subId": "58032c1494f04a78bf3cb8aae1c09afd",
 												"type": "text-display"
 											}
 										]
 									],
+									"subId": "0d94d9490724411199cd5164d7700297",
 									"type": "section-2"
 								}
 							]
 						],
+						"subId": "0be795c1d72f4ae2a4f58fb5a3234438",
 						"type": "form-footer"
 					}
 				],
@@ -1759,6 +1765,9 @@
 						"id": "modalContent_7",
 						"label": "Form Shared",
 						"path": "",
+						"properties": {
+							"infoText": ""
+						},
 						"rows": [
 							[
 								{
@@ -1769,37 +1778,37 @@
 											{
 												"exclude": true,
 												"id": "block_6",
-												"path": "",
 												"rows": [
 													[
 														{
 															"id": "textDisplay_13",
-															"path": "",
+															"subId": "21bd73fdb35241b08ab18b8701b25496",
 															"type": "text-display"
 														}
 													],
 													[
 														{
 															"id": "textDisplay_14",
-															"path": "",
+															"subId": "52b663ec1a88494e912364c3bef72ca7",
 															"type": "text-display"
 														}
 													],
 													[
 														{
 															"id": "button_5",
-															"path": "",
+															"subId": "81858aae177f48428df2be70a02b1c40",
 															"type": "button"
 														}
 													],
 													[
 														{
 															"id": "textDisplay_15",
-															"path": "",
+															"subId": "440b40ec2e4647e89753d88271fbc6ea",
 															"type": "text-display"
 														}
 													]
 												],
+												"subId": "d36ce219a6fc4184b5f9206b30767329",
 												"type": "block"
 											}
 										],
@@ -1807,32 +1816,33 @@
 											{
 												"exclude": true,
 												"id": "section_10",
-												"path": "",
 												"rows": [
 													[
 														{
 															"id": "block_7",
-															"path": "",
 															"rows": [
 																[
 																	{
 																		"id": "emailAddress_3",
 																		"path": "EmailAddress_3",
+																		"subId": "b13fb61cc547468eb4f4ad948670b0f9",
 																		"type": "email"
 																	}
 																],
 																[
 																	{
 																		"id": "emailSavedFormButton_1",
-																		"path": "",
+																		"subId": "12230fde7ef048229e26bd7e266d42ef",
 																		"type": "button-email-saved-form"
 																	}
 																]
 															],
+															"subId": "587211bc2f294535989e84d58a5fc39d",
 															"type": "block"
 														}
 													]
 												],
+												"subId": "39f81a0bd55242a5829cf25715d4b815",
 												"type": "section-2"
 											}
 										],
@@ -1840,23 +1850,23 @@
 											{
 												"exclude": true,
 												"id": "section_11",
-												"path": "",
 												"rows": [
 													[
 														{
 															"id": "textDisplay_16",
-															"path": "",
+															"subId": "671deba5ac7a4c4eafe625624203bb1a",
 															"type": "text-display"
 														}
 													],
 													[
 														{
 															"id": "button_6",
-															"path": "",
+															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
 															"type": "button"
 														}
 													]
 												],
+												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
 												"type": "section-2"
 											}
 										],
@@ -1864,19 +1874,21 @@
 											{
 												"exclude": false,
 												"id": "section_12",
-												"path": "",
+												"properties": {
+													"hideTitle": true
+												},
 												"rows": [
 													[
 														{
-															"exclude": false,
 															"id": "sharerecipientemail_2",
 															"path": "Sharerecipientemail_2",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
 															"type": "email"
 														},
 														{
-															"exclude": false,
 															"id": "sendername_2",
 															"path": "Sendername_2",
+															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
 														}
 													],
@@ -1885,23 +1897,24 @@
 															"exclude": false,
 															"id": "personalmessage_2",
 															"path": "Personalmessage_2",
+															"subId": "1cc7b7cdb2b1421291056edc52e43525",
 															"type": "text-area"
 														}
 													],
 													[
 														{
-															"exclude": false,
 															"id": "shareFormButton_2",
-															"path": "",
 															"properties": {
 																"emailBodyRef": "personalmessage_2",
 																"emailFieldRef": "sharerecipientemail_2",
 																"senderNameRef": "sendername_2"
 															},
+															"subId": "4190d5a9a613410288c94ef8d968e01d",
 															"type": "button-email-share-form"
 														}
 													]
 												],
+												"subId": "61839116f7ec43688bcfe12801469d1a",
 												"type": "section-2"
 											}
 										],
@@ -1911,16 +1924,14 @@
 												"htmlLabel": "More share",
 												"id": "section_13",
 												"label": "More share",
-												"path": "",
 												"properties": {
 													"infoText": ""
 												},
 												"rows": [
 													[
 														{
-															"exclude": false,
 															"id": "textDisplay_17",
-															"path": "",
+															"subId": "925a5c310b2847508048d33806aca3cb",
 															"type": "text-display"
 														}
 													],
@@ -1928,50 +1939,51 @@
 														{
 															"exclude": false,
 															"id": "button_7",
-															"path": "",
 															"rules": {
-																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.personalmessage_2 = \"\";\n}"
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
 															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
 													]
 												],
+												"subId": "aa9991c952134393abcae5d9f9a5eb27",
 												"type": "section-2"
 											}
 										]
 									],
+									"subId": "de99337db1f2469589104ceb5ccb8c33",
 									"type": "block"
 								}
 							],
 							[
 								{
 									"id": "followOnOptions_2",
-									"path": "",
 									"rows": [
 										[
 											{
 												"id": "startANewForm_7",
-												"path": "",
+												"subId": "f5d3a71e81244605b97d33064ec7ea04",
 												"type": "button"
 											},
 											{
-												"exclude": false,
 												"id": "returnToPortal_2",
-												"path": "",
+												"subId": "438498f8cfc04be294f4d4b11ada089c",
 												"type": "button"
 											},
 											{
-												"exclude": false,
 												"id": "showFormXml_2",
-												"path": "",
+												"subId": "6c6e2a6b68224f2b92492432657e985c",
 												"type": "button"
 											}
 										]
 									],
+									"subId": "690cb1870beb4928bff2d61e08c57ef3",
 									"type": "follow-on-options"
 								}
 							]
 						],
+						"subId": "2333d120d1b74667a8d32d0935672f5e",
 						"type": "section-2"
 					}
 				]
