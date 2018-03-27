@@ -49,90 +49,135 @@ form[name='form'] {
       display: none;
     }
   }
+
+  /* --------------------------------------------------------------
+  //                       Fab Menu Starts                       //
+  ---------------------------------------------------------------*/
   .fab-menu {
-    .bs-functional-button-items-64706 {
-      transition: 0.2s bottom ease-in-out, 0.2s right ease-in-out, 0.2s opacity ease-in-out;
-      opacity: 1;
-      .wdg-button-label { // Button label
-        top: 38px;
-        left: 50%;
+    &.function-items-4,
+    &.function-items-3,
+    &.function-items-2,
+    &.function-items-1 {
+      .bs-functional-button-items-64706 {
+        opacity: 0.8;
+        &.ng-enter { /* All leave start */
+          &:nth-child(1) {
+            transition: 0.1s bottom ease-in-out, 0.1s right ease-in-out, 0.1s opacity ease-in-out;
+          }
+          &:nth-child(2) {
+            transition: 0.2s bottom ease-in-out, 0.2s right ease-in-out, 0.2s opacity ease-in-out;
+          }
+          &:nth-child(3) {
+            transition: 0.3s bottom ease-in-out, 0.3s right ease-in-out, 0.3s opacity ease-in-out;
+          }
+          &:nth-child(4) {
+            transition: 0.4s bottom ease-in-out, 0.4s right ease-in-out, 0.4s opacity ease-in-out;
+          }
+        }
+        &.ng-leave { /* All leave start */
+          &:nth-child(1) {
+            transition: 0.4s bottom ease-in-out, 0.4s right ease-in-out, 0.4s opacity ease-in-out;
+          }
+          &:nth-child(2) {
+            transition: 0.3s bottom ease-in-out, 0.3s right ease-in-out, 0.3s opacity ease-in-out;
+          }
+          &:nth-child(3) {
+            transition: 0.2s bottom ease-in-out, 0.2s right ease-in-out, 0.2s opacity ease-in-out;
+          }
+          &:nth-child(4) {
+            transition: 0.1s bottom ease-in-out, 0.1s right ease-in-out, 0.1s opacity ease-in-out;
+          }
+        }
+        &.ng-enter, /* All enter start */
+        &.ng-enter-prepare, /* Safari enter start */
+        &.ng-leave.ng-leave-active { /* All leave end */
+          opacity: 0;
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4) {
+            bottom: 20px;
+            right: 40px;
+          }
+        }
+        &.ng-enter.ng-enter-active, /* All enter end */
+        &.ng-leave { /* All leave start */
+          opacity: 0.8;
+        }
+        .wdg-button-label { // Button label
+          top: 38px;
+          left: 50%;
+        }
       }
     }
     &.function-items-4 {
       .bs-functional-button-items-64706 {
-        &:nth-child(1) {
-          bottom: 128px;
-          right: 30px;
-        }
-        &:nth-child(2) {
-          bottom: 105px;
-          right: 72px;
-        }
-        &:nth-child(3) {
-          bottom: 70px;
-          right: 108px;
-        }
-        &:nth-child(4) {
-          bottom: 21px;
-          right: 130px;
+        &,
+        &.ng-enter.ng-enter-active, /* All enter end */
+        &.ng-leave { /* All leave start */
+          &:nth-child(1) {
+            bottom: 128px;
+            right: 30px;
+          }
+          &:nth-child(2) {
+            bottom: 105px;
+            right: 72px;
+          }
+          &:nth-child(3) {
+            bottom: 70px;
+            right: 108px;
+          }
+          &:nth-child(4) {
+            bottom: 21px;
+            right: 130px;
+          }
         }
       }
     }
     &.function-items-3 {
       .bs-functional-button-items-64706 {
-        &:nth-child(1) {
-          bottom: 116px;
-          right: 28px;
-        }
-        &:nth-child(2) {
-          bottom: 80px;
-          right: 80px;
-        }
-        &:nth-child(3) {
-          bottom: 25px;
-          right: 110px;
+        &,
+        &.ng-enter.ng-enter-active, /* All enter end */
+        &.ng-leave { /* All leave start */
+          &:nth-child(1) {
+            bottom: 116px;
+            right: 28px;
+          }
+          &:nth-child(2) {
+            bottom: 80px;
+            right: 80px;
+          }
+          &:nth-child(3) {
+            bottom: 25px;
+            right: 110px;
+          }
         }
       }
     }
     &.function-items-2 {
       .bs-functional-button-items-64706 {
-        &:nth-child(1) {
-          bottom: 100px;
-          right: 55px;
-        }
-        &:nth-child(2) {
-          bottom: 50px;
-          right: 95px;
-        }
-      }
-    }
-    &.function-items-4,
-    &.function-items-2,
-    &.function-items-3,
-    &.function-items-1 {
-      .bs-functional-button-items-64706 {
-        &.ng-enter,
-        &.ng-leave.ng-leave-prepare,
-        &.ng-leave.ng-leave-active {
-          opacity: 0;
-          bottom: 20px;
-          right: 40px;
+        &,
+        &.ng-enter.ng-enter-active, /* All enter end */
+        &.ng-leave { /* All leave start */
           &:nth-child(1) {
-            transition: 0.2s bottom ease-in-out, 0.2s right ease-in-out, 0.2s opacity ease-in-out;
+            bottom: 100px;
+            right: 55px;
           }
           &:nth-child(2) {
-            transition: 0.4s bottom ease-in-out, 0.4s right ease-in-out, 0.4s opacity ease-in-out;
-          }
-          &:nth-child(3) {
-            transition: 0.6s bottom ease-in-out, 0.6s right ease-in-out, 0.6s opacity ease-in-out;
-          }
-          &:nth-child(4) {
-            transition: 0.8s bottom ease-in-out, 0.8s right ease-in-out, 0.8s opacity ease-in-out;
+            bottom: 50px;
+            right: 95px;
           }
         }
       }
     }
   }
+  /* --------------------------------------------------------------
+  //                        Fab Menu Ends                        //
+  ---------------------------------------------------------------*/
+
+  /* --------------------------------------------------------------
+  //                   Functional Menu Starts                    //
+  ---------------------------------------------------------------*/
   .vertical-menu {
     .bs-functional-button-items-64706 {
       transition: 0.2s bottom ease-in-out, 0.2s right ease-in-out, 0.2s opacity ease-in-out;
@@ -149,13 +194,13 @@ form[name='form'] {
           bottom: 80px;
         }
         &:nth-child(2) {
-          bottom: 120px;
+          bottom: 125px;
         }
         &:nth-child(3) {
-          bottom: 160px;
+          bottom: 170px;
         }
         &:nth-child(4) {
-          bottom: 200px;
+          bottom: 215px;
         }
       }
     }
@@ -194,19 +239,22 @@ form[name='form'] {
           bottom: 20px;
           right: 25px;
           &:nth-child(1) {
-            transition-delay: 0.1s;
+            transition: 0.1s bottom ease-in-out, 0.1s right ease-in-out, 0.1s opacity ease-in-out;
           }
           &:nth-child(2) {
-            transition-delay: 0.2s;
+            transition: 0.2s bottom ease-in-out, 0.2s right ease-in-out, 0.2s opacity ease-in-out;
           }
           &:nth-child(3) {
-            transition-delay: 0.3s;
+            transition: 0.3s bottom ease-in-out, 0.3s right ease-in-out, 0.3s opacity ease-in-out;
           }
           &:nth-child(4) {
-            transition-delay: 0.4s;
+            transition: 0.4s bottom ease-in-out, 0.4s right ease-in-out, 0.4s opacity ease-in-out;
           }
         }
       }
     }
   }
+  /* --------------------------------------------------------------
+  //                     Vertical Menu Ends                      //
+  ---------------------------------------------------------------*/
 }
