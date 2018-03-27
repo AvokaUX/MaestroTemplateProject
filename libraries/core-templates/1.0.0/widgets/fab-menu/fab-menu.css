@@ -1,30 +1,41 @@
 form[name='form'] .av-fab-menu-container {
     position: fixed;
     z-index: 950;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
 }
 form[name='form'] .av-fab-menu-container .av-fab-menu-background {
-    background-color: rgba(255,255,255,0.9);
+    background-color: #fff;
     bottom: 0;
     right: 0;
     position: fixed;
     z-index: 1;
 }
+
+/* --------------------------------------------------------------
+//                    Vertical Menu Starts                     //
+---------------------------------------------------------------*/
 form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background {
-    width: 125px;
-    height: 250px;
     border-top-left-radius: 25px;
+    opacity: 0.8;
+    transform: translate(0%,0%);
+    width: 125px;
+    height: 265px;
 }
-form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-enter,
-form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-leave.ng-leave-active {
-    transition: 0.5s all ease-in-out 0.5s;
+form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-enter{ /* All leave start */
+    transition: 0.3s opacity ease-in-out, 0.3s transform ease-in-out;
+}
+form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-leave { /* All leave start */
+    transition: 0.55s opacity ease-in-out, 0.55s transform ease-in-out;
+}
+form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-enter, /* All enter start */
+form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-enter-prepare, /* Safari enter start */
+form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-leave.ng-leave-active { /* All leave end */
     opacity: 0;
     transform: translate(0%,100%);
 }
-form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-leave,
-form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-enter.ng-enter-active {
-    transition: 0.5s all ease-in-out;
+form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-enter.ng-enter-active, /* All enter end */
+form[name='form'] .av-fab-menu-container.vertical-menu .av-fab-menu-background.ng-leave { /* All leave start */
     opacity: 0.8;
     transform: translate(0%,0%);
 }
@@ -40,27 +51,47 @@ form[name='form'] .av-fab-menu-container.vertical-menu .id-functionalMenu {
 }
 @media (max-width: 1200px) {
     form[name='form'] .av-fab-menu-container.vertical-menu .id-functionalMenu .wdg-button {
-        padding: 0px;
+        padding: 0;
     }
 }
+/* --------------------------------------------------------------
+//                     Vertical Menu Ends                      //
+---------------------------------------------------------------*/
+
+/* --------------------------------------------------------------
+//                       Fab Menu Starts                       //
+---------------------------------------------------------------*/
 form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background {
-    width: 400px;
-    height: 400px;
+    opacity: 0.8;
     border-radius: 50%;
     transform: translate(50%,50%);
+    width: 400px;
+    height: 400px;
 }
-form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-enter,
-form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-leave.ng-leave-active {
-    transition: 0.8s all ease-in-out 0.3s;
+form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-enter { /* All enter start */
+    transition: 0.1s opacity ease-in-out, 0.1s transform ease-in-out;
+}
+form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-leave { /* All leave start */
+    transition: 0.8s opacity ease-in-out, 0.8s transform ease-in-out;
+}
+form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-enter, /* All enter start */
+form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-enter-prepare, /* Safari enter start */
+form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-leave.ng-leave-active { /* All leave end */
     opacity: 0;
     transform: translate(100%,100%);
-}
-form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-leave,
-form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-enter.ng-enter-active {
-    transition: 0.6s all ease-in-out;
+ }
+form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-enter.ng-enter-active, /* All enter end */
+form[name='form'] .av-fab-menu-container.fab-menu .av-fab-menu-background.ng-leave { /* All leave start */
     opacity: 0.8;
     transform: translate(50%,50%);
 }
+/* --------------------------------------------------------------
+//                        Fab Menu Ends                        //
+---------------------------------------------------------------*/
+
+/* --------------------------------------------------------------
+//                   Functional Menu Starts                    //
+---------------------------------------------------------------*/
 form[name='form'] .av-fab-menu-container .id-functionalMenu {
     width: 60px !important;
     height: 60px !important;
@@ -69,21 +100,6 @@ form[name='form'] .av-fab-menu-container .id-functionalMenu {
     right: 10px;
     z-index: 99999;
     float:right!important;
-}
-form[name='form'] .av-fab-menu-container .id-functionalMenu.ng-enter,
-form[name='form'] .av-fab-menu-container .id-functionalMenu.ng-leave {
-    -moz-transition: 0.5s all ease-in-out;
-    -o-transition: 0.5s all ease-in-out;
-    -webkit-transition: 0.5s all ease-in-out;
-    transition: 0.5s all ease-in-out;
-}
-form[name='form'] .av-fab-menu-container .id-functionalMenu.ng-enter,
-form[name='form'] .av-fab-menu-container .id-functionalMenu.ng-leave.ng-leave-active {
-    transform: rotate(80deg);
-}
-form[name='form'] .av-fab-menu-container .id-functionalMenu.ng-leave,
-form[name='form'] .av-fab-menu-container .id-functionalMenu.ng-enter.ng-enter-active {
-    transform: rotate(0deg);
 }
 form[name='form'] .av-fab-menu-container .id-functionalMenu .wdg-button {
     width: 100% !important;
@@ -96,3 +112,6 @@ form[name='form'] .av-fab-menu-container .id-functionalMenu .wdg-button-icon {
 form[name='form'] .av-fab-menu-container .id-functionalMenu .wdg-button-label {
     display: none;
 }
+/* --------------------------------------------------------------
+//                    Functional Menu Ends                     //
+---------------------------------------------------------------*/

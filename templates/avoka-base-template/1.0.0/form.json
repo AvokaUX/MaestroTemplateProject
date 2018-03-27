@@ -2731,6 +2731,9 @@
 						{
 							"exclude": false,
 							"id": "functionalMenu",
+							"rules": {
+								"click": "data[item.id] = data[item.id] !== true;\n$timeout(function(){\nconsole.log('ng-enter-active-----',$('.bs-functional-button-items-64706').hasClass('ng-enter-active'));\n  console.log('ng-leave-active-----',$('.bs-functional-button-items-64706').hasClass('ng-leave-active'))\n}, 1500)"
+							},
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"type": "button-toggle-icon"
 						}
