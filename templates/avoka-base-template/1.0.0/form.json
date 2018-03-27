@@ -749,10 +749,12 @@
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "dialogFooterBlock_12",
 												"rows": [
 													[
 														{
+															"exclude": false,
 															"id": "okay_18",
 															"rules": {
 																"sh": ""
@@ -781,257 +783,215 @@
 		},
 		"shareconfirm": {
 			"exclude": false,
-			"hasCustomId": true,
+			"htmlLabel": "Share Confirm",
 			"id": "shareconfirm",
 			"label": "Share Confirm",
-			"path": "",
 			"rows": [
 				[
 					{
-						"id": "dialogHeader",
+						"id": "dialogHeader_10",
 						"rows": [
 							[
 								{
-									"id": "close_1",
-									"subId": "1056a8426290467db5649e4a3e08ea47",
+									"id": "close_10",
+									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
 									"type": "icon-button"
 								}
 							]
 						],
-						"subId": "0f48f8fb12ee46c8b5dede2e4658f8a1",
+						"subId": "92a58e3bd4c94da895bad4b6f1b10f66",
 						"type": "block"
 					}
 				],
 				[
 					{
-						"id": "dialogBody_4",
+						"exclude": false,
+						"id": "dialogBody_9",
 						"rows": [
 							[
 								{
-									"id": "dialogContent_4",
+									"htmlLabel": "Share Confirm Content",
+									"id": "dialog_content_save_confirm",
+									"label": "Share Confirm Content",
 									"rows": [
 										[
 											{
-												"id": "section_13",
-												"rows": [
-													[]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_4",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_7",
+												"exclude": true,
+												"htmlLabel": "Share it with your friends",
+												"id": "save_your_form_1",
+												"label": "Share it with your friends",
 												"rows": [
 													[
 														{
-															"id": "okay_4",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
-															"type": "button"
+															"htmlLabel": "Please save the form before share with your friends.",
+															"id": "save_confirm_message_1",
+															"label": "Please save the form before share with your friends.",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
+															"subId": "4aa53510219745c392c1b2c184aff183",
+															"type": "text-display"
 														}
-													]
-												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
-									"type": "block"
-								}
-							]
-						],
-						"type": "block"
-					}
-				],
-				[
-					{
-						"id": "dialogBody_2",
-						"rows": [
-							[
-								{
-									"id": "dialogContent_2",
-									"rows": [
-										[
-											{
-												"id": "section_12",
-												"rows": [
-													[]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_3",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_6",
-												"rows": [
+													],
 													[
 														{
-															"id": "okay_3",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
-															"type": "button"
+															"id": "security_question_save_confirm_1",
+															"rows": [
+																[]
+															],
+															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
+															"type": "section-2"
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
-									"type": "block"
-								}
-							]
-						],
-						"type": "block"
-					}
-				],
-				[
-					{
-						"id": "dialogBody_1",
-						"rows": [
-							[
-								{
-									"id": "dialogContent_1",
-									"rows": [
-										[
-											{
-												"id": "section_11",
-												"rows": [
-													[]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
+												"subId": "f95da043f0bf4debb102897946a959d8",
 												"type": "section-2"
 											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_2",
-									"rows": [
+										],
 										[
 											{
-												"id": "dialogFooterBlock_4",
-												"rows": [
-													[
-														{
-															"id": "okay_2",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
-															"type": "button"
-														}
-													]
-												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
-												"type": "block"
-											}
-										]
-									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
-									"type": "block"
-								}
-							]
-						],
-						"type": "block"
-					}
-				],
-				[
-					{
-						"id": "dialogBody",
-						"path": "",
-						"rows": [
-							[
-								{
-									"id": "dialogContent",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "section_10",
-												"rows": [
-													[]
-												],
-												"subId": "eb8bf3360b1f4a3db69b521b51208ccb",
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "c67d616b1ece48abaeab4eec3f70710c",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter",
-									"path": "",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_1",
+												"animateVisibility": true,
+												"entityPath": "dialog_content_save",
+												"exclude": false,
+												"htmlLabel": "Share form",
+												"id": "dialog_content_save_section_8",
+												"label": "Share form",
 												"path": "",
+												"pathContext": "abs",
+												"properties": {
+													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+												},
 												"rows": [
 													[
 														{
 															"exclude": false,
-															"htmlLabel": "share",
-															"id": "okay",
-															"label": "share",
+															"htmlLabel": "Recipient Email Address",
+															"id": "sharerecipientemail_1",
+															"label": "Recipient Email Address",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sharerecipientemail_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "email"
+														},
+														{
+															"exclude": false,
+															"htmlLabel": "Your Full Name",
+															"id": "sendername_1",
+															"label": "Your Full Name",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sendername_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "text-input"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Personal Message (optional)",
+															"id": "personalmessage_1",
+															"label": "Personal Message (optional)",
+															"path": "Personalmessage_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "text-area"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Share Now",
+															"id": "shareFormButton_1",
+															"label": "Share Now",
+															"offset": {
+																"lg": "4",
+																"md": "4"
+															},
 															"path": "",
+															"properties": {
+																"emailBodyRef": "personalmessage_1",
+																"emailFieldRef": "sharerecipientemail_1",
+																"senderNameRef": "sendername_1"
+															},
+															"rules": {
+																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
+															},
+															"styles": [
+																"message-banner",
+																"av-button-primary"
+															],
+															"type": "button-email-share-form"
+														}
+													]
+												],
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton_1\") ? Form.data.shareFormButton_1.$responseStatus != \"success\": true;"
+												},
+												"styles": [
+													"bs-save-dialog-text-82753",
+													"bs-dialog-content-scroll-92184",
+													"mg-section-2"
+												],
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "00d88526276f4719ba460d7a9baede85",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_19",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_13",
+												"rows": [
+													[
+														{
+															"exclude": true,
+															"htmlLabel": "Save & Share",
+															"id": "okay_19",
+															"label": "Save & Share",
 															"rules": {
 																"sh": ""
 															},
-															"subId": "6471b7e4d063409483e51ff9138ed85e",
+															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
 														}
 													]
 												],
-												"subId": "5e49ce4ad21c4dbb96b865b096c67eea",
+												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
 												"type": "block"
 											}
 										]
 									],
-									"subId": "50ead585f74e4a198aa3f799c7663b9c",
+									"subId": "2cd134f2d6f84810a8770240d8f4acc7",
 									"type": "block"
 								}
 							]
 						],
+						"subId": "1ea05f9f06654a3abe01133ecdc0782d",
 						"type": "block"
 					}
 				]
 			],
-			"type": "dialog"
+			"type": "save-confirm"
 		},
 		"showxml": {
 			"id": "showxml",
@@ -1172,6 +1132,9 @@
 				"save": {}
 			}
 		},
+		"share": {
+			"confirm": {}
+		},
 		"show": {
 			"xml": {}
 		},
@@ -1216,9 +1179,10 @@
 		"shareconfirm"
 	],
 	"localModals": [
-		"submitsuccess",
+		"cancelsuccess",
 		"savesuccess",
-		"cancelsuccess"
+		"submitsuccess",
+		"sharesuccess"
 	],
 	"maestroReleaseVersion": "17.10.3",
 	"modals": {
@@ -1376,6 +1340,7 @@
 			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
+			"exclude": false,
 			"id": "savesuccess",
 			"properties": {},
 			"rows": [
@@ -1587,20 +1552,22 @@
 												"rows": [
 													[
 														{
-															"id": "emailAddress_3",
-															"path": "EmailAddress_3",
+															"id": "sharerecipientemail",
+															"path": "Sharerecipientemail",
 															"subId": "ea72110b798b4186be8e71d39c7206e1",
 															"type": "email"
 														},
 														{
-															"id": "textField",
+															"id": "sendername",
+															"path": "Sendername",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
 														}
 													],
 													[
 														{
-															"id": "multilineTextArea",
+															"id": "personalmessage",
+															"path": "Personalmessage",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
 															"type": "text-area"
 														}
@@ -1673,6 +1640,338 @@
 							]
 						],
 						"subId": "2333d120d1b74667a8d32d0935672f5e",
+						"type": "section-2"
+					}
+				]
+			],
+			"type": "save-success-modal"
+		},
+		"sharesuccess": {
+			"exclude": false,
+			"hasCustomId": true,
+			"htmlLabel": "Share Success Modal",
+			"id": "sharesuccess",
+			"label": "Share Success Modal",
+			"path": "",
+			"properties": {},
+			"rows": [
+				[
+					{
+						"id": "modalBackground_5",
+						"path": "",
+						"rows": [
+							[]
+						],
+						"type": "modal-background"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"id": "modalHeader_10",
+						"path": "",
+						"rows": [
+							[
+								{
+									"id": "stickyPanelModal_5",
+									"path": "StickyPanelModal_5",
+									"rows": [
+										[
+											{
+												"id": "modalHeader_11",
+												"path": "",
+												"rows": [
+													[
+														{
+															"id": "modalLogo_5",
+															"path": "",
+															"rows": [
+																[
+																	{
+																		"id": "modalLogoImage_5",
+																		"path": "",
+																		"properties": {},
+																		"type": "image"
+																	}
+																]
+															],
+															"type": "block"
+														}
+													]
+												],
+												"type": "form-header"
+											}
+										]
+									],
+									"type": "sticky-panel"
+								}
+							]
+						],
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "modalContent_5",
+						"path": "",
+						"rows": [
+							[
+								{
+									"id": "startANewForm_6",
+									"path": "",
+									"type": "button"
+								}
+							]
+						],
+						"type": "section-2"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"id": "modalFooter_5",
+						"path": "",
+						"rows": [
+							[
+								{
+									"id": "formFooterText_7",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "textDisplay_12",
+												"path": "",
+												"type": "text-display"
+											}
+										]
+									],
+									"type": "section-2"
+								}
+							]
+						],
+						"type": "form-footer"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"htmlLabel": "<h1>Form Shared</h1>",
+						"id": "modalContent_7",
+						"label": "Form Shared",
+						"path": "",
+						"rows": [
+							[
+								{
+									"id": "extraInformation_2",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": true,
+												"id": "block_6",
+												"path": "",
+												"rows": [
+													[
+														{
+															"id": "textDisplay_13",
+															"path": "",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "textDisplay_14",
+															"path": "",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "button_5",
+															"path": "",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"id": "textDisplay_15",
+															"path": "",
+															"type": "text-display"
+														}
+													]
+												],
+												"type": "block"
+											}
+										],
+										[
+											{
+												"exclude": true,
+												"id": "section_10",
+												"path": "",
+												"rows": [
+													[
+														{
+															"id": "block_7",
+															"path": "",
+															"rows": [
+																[
+																	{
+																		"id": "emailAddress_3",
+																		"path": "EmailAddress_3",
+																		"type": "email"
+																	}
+																],
+																[
+																	{
+																		"id": "emailSavedFormButton_1",
+																		"path": "",
+																		"type": "button-email-saved-form"
+																	}
+																]
+															],
+															"type": "block"
+														}
+													]
+												],
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"exclude": true,
+												"id": "section_11",
+												"path": "",
+												"rows": [
+													[
+														{
+															"id": "textDisplay_16",
+															"path": "",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "button_6",
+															"path": "",
+															"type": "button"
+														}
+													]
+												],
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"id": "section_12",
+												"path": "",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"id": "sharerecipientemail_2",
+															"path": "Sharerecipientemail_2",
+															"type": "email"
+														},
+														{
+															"exclude": false,
+															"id": "sendername_2",
+															"path": "Sendername_2",
+															"type": "text-input"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "personalmessage_2",
+															"path": "Personalmessage_2",
+															"type": "text-area"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "shareFormButton_2",
+															"path": "",
+															"properties": {
+																"emailBodyRef": "personalmessage_2",
+																"emailFieldRef": "sharerecipientemail_2",
+																"senderNameRef": "sendername_2"
+															},
+															"type": "button-email-share-form"
+														}
+													]
+												],
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"exclude": false,
+												"htmlLabel": "More share",
+												"id": "section_13",
+												"label": "More share",
+												"path": "",
+												"properties": {
+													"infoText": ""
+												},
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"id": "textDisplay_17",
+															"path": "",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "button_7",
+															"path": "",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.personalmessage_2 = \"\";\n}"
+															},
+															"type": "button"
+														}
+													]
+												],
+												"type": "section-2"
+											}
+										]
+									],
+									"type": "block"
+								}
+							],
+							[
+								{
+									"id": "followOnOptions_2",
+									"path": "",
+									"rows": [
+										[
+											{
+												"id": "startANewForm_7",
+												"path": "",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "returnToPortal_2",
+												"path": "",
+												"type": "button"
+											},
+											{
+												"exclude": false,
+												"id": "showFormXml_2",
+												"path": "",
+												"type": "button"
+											}
+										]
+									],
+									"type": "follow-on-options"
+								}
+							]
+						],
 						"type": "section-2"
 					}
 				]
@@ -1802,8 +2101,8 @@
 															"rows": [
 																[
 																	{
-																		"id": "emailAddress_1",
-																		"path": "EmailAddress_1",
+																		"id": "send_receipt_email",
+																		"path": "Send/Receipt/Email",
 																		"subId": "832ab4f37a6f44c1bf06b4df1f57dc94",
 																		"type": "email"
 																	}
@@ -1882,7 +2181,6 @@
 															"rows": [
 																[
 																	{
-																		"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.emailAddress_1}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
 																		"id": "textDisplay_3",
 																		"subId": "714e6460e28a464cafc130fc3b4b8bb2",
 																		"type": "text-display"

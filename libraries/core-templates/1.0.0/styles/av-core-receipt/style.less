@@ -4,17 +4,23 @@
 
 form[name="form"].av-receipt {
   max-width: 800px !important;
+  * {
+    page-break-inside: avoid !important;
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+  }
+
 
   .form-footer-text {
     font-weight: bold;
     font-style: italic;
   }
 
+  .av-menu-page {
+    margin-top: 40px !important;
+  }
   /* Field styles */
   .av-form-field {
-    page-break-inside: avoid;
-
-
     textarea {
       overflow: hidden;
     }
@@ -31,6 +37,21 @@ form[name="form"].av-receipt {
   }
   .av-checkbox .wdg-button-icon {
     border: 1px solid #D3D3D4 !important;
+
+  }
+  .av-checkbox {
+    .av-checked {
+      .wdg-button-icon {
+      &:before {
+        background: transparent !important;
+      }
+      &:after {
+        content: '\f00c' !important;
+        -webkit-transform: rotate(0deg) scale(1.5)!important;
+        margin-left: -9px !important;
+        margin-top: -6px !important;
+      }
+    } }
   }
 
   /* Header Styles */
@@ -72,8 +93,6 @@ form[name="form"].av-receipt {
   .mg-section-2 {
     padding: 5px 0;
     .wdg-section-2-title {
-      page-break-inside: avoid;
-      display: block !important;
       border-bottom: 1px solid;
     }
     .wdg-section-2-content {
@@ -108,7 +127,7 @@ form[name="form"].av-receipt {
   }
   /* Accordion */
   .wdg-accordion-section-container {
-    page-break-before: always;
+    //page-break-before: always;
   }
   /* Landing page */
   .av-landing-page {
@@ -118,5 +137,26 @@ form[name="form"].av-receipt {
   /* Signatur pad */
   .wdg-signature-box {
     display: block;
+  }
+
+  .av-radio {
+    i {
+      width: 12px !important;
+      height: 12px !important;
+      border-radius: 50% !important;
+      background: transparent !important;
+      border: 1px solid #8c8c8c;
+    }
+    .fa-circle {
+      border-style: none !important;
+      &:before {
+        content: "\f192" !important;
+        width: 15px !important;
+        height: 15px !important;
+        -webkit-transform: translate(-50%,-50%) scale(1.65) !important;
+        -ms-transform: translate(-50%,-50%) scale(1.65) !important;
+        transform: translate(-50%,-50%) scale(1.65) !important;
+      }
+    }
   }
 }

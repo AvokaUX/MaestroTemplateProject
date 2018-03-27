@@ -55,6 +55,7 @@
 						}
 					]
 				],
+
 				"subId": "8f9a2f46878a40938967fa6fbdcea360",
 				"id": "modalHeader_4",
 				"type": "block",
@@ -209,7 +210,7 @@
 										"htmlLabel": "For your records",
 										"path": "",
 										"rules": {
-											"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus != \"success\" : true)"
+											"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo === \"\" : true) &&\n(Form.data.hasOwnProperty(\"emailPdfReceiptButton\") ? Form.data.emailPdfReceiptButton.$responseStatus !== \"success\" : true)"
 										},
 										"type": "section-2",
 										"id": "section_4",
@@ -362,7 +363,7 @@
 										"htmlLabel": "Check your email",
 										"path": "",
 										"rules": {
-											"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"submit_success_send_receipt\") ? Form.data.submit_success_send_receipt.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
+											"sh": "(Form.data.$submitResponse.receiptEnabledFlag == \"true\" || Resource.preview) &&\n((Form.data.hasOwnProperty(\"emailPdfReceiptButton\") ? Form.data.emailPdfReceiptButton.$responseStatus === \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo !== \"\" : false))"
 										},
 										"type": "section-2",
 										"id": "section_5",
