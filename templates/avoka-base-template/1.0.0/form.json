@@ -1628,7 +1628,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "button_3",
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
@@ -1877,6 +1876,7 @@
 												"rows": [
 													[
 														{
+															"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_3}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
 															"id": "textDisplay_16",
 															"subId": "671deba5ac7a4c4eafe625624203bb1a",
 															"type": "text-display"

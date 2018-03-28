@@ -507,7 +507,7 @@
 					[
 						{
 							"rules": {
-								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
+								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonClose\")"
 							},
 							"exclude": false,
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
@@ -2084,6 +2084,9 @@
 															"properties": {
 																"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
 															},
+															"rules": {
+																"sh": "return item.rows[0].length > 0;"
+															},
 															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
 															"id": "security_question_save_confirm",
 															"type": "section-2"
@@ -2839,6 +2842,9 @@
 															],
 															"properties": {
 																"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
+															},
+															"rules": {
+																"sh": "return item.rows[0].length > 0;"
 															},
 															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
 															"id": "security_question_save_confirm_1",
@@ -3713,13 +3719,14 @@
 														{
 															"subId": "671deba5ac7a4c4eafe625624203bb1a",
 															"id": "textDisplay_16",
-															"type": "text-display"
+															"type": "text-display",
+															"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_3}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>"
 														}
 													],
 													[
 														{
 															"rules": {
-																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"save_success_send_reminder\")) {\nForm.data.save_success_send_reminder.$responseStatus = \"\";\n}\nForm.data.send_reminder_email = \"\";"
+																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"emailSavedFormButton_1\")) {\nForm.data.emailSavedFormButton_1.$responseStatus = \"\";\n}\nForm.data.emailAddress_3 = \"\";"
 															},
 															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
 															"id": "button_6",
@@ -4145,7 +4152,7 @@
 													[
 														{
 															"rules": {
-																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"save_success_send_reminder\")) {\nForm.data.save_success_send_reminder.$responseStatus = \"\";\n}\nForm.data.send_reminder_email = \"\";"
+																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"emailSavedFormButton\")) {\nForm.data.emailSavedFormButton.$responseStatus = \"\";\n}\nForm.data.emailAddress_2 = \"\";"
 															},
 															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
 															"id": "button_2",
@@ -4245,8 +4252,7 @@
 															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"id": "button_3",
-															"type": "button",
-															"exclude": false
+															"type": "button"
 														}
 													]
 												],
@@ -4732,8 +4738,8 @@
 						}
 					},
 					"exit": {
-						"label": "Exit",
-						"htmlLabel": "Exit",
+						"label": "Close",
+						"htmlLabel": "Close",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5225,7 +5231,7 @@
 					},
 					"save_confirm_message": {
 						"label": "Save confirm message",
-						"htmlLabel": "Save confirm message",
+						"htmlLabel": "This will end your current session but your form will be saved and may be re-opened later.",
 						"mandatoryMsg": ""
 					},
 					"security_question_save_confirm": {
@@ -6544,8 +6550,8 @@
 						}
 					},
 					"textDisplay_16": {
-						"label": "Weve sent instructions to your email address () on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
-						"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_reminder_email}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
+						"label": "Weve sent instructions to your email address on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
+						"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_3}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
 						"mandatoryMsg": ""
 					},
 					"button_6": {
@@ -6868,8 +6874,8 @@
 						}
 					},
 					"textDisplay_7": {
-						"label": "Weve sent instructions to your email address () on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
-						"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_reminder_email}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
+						"label": "Weve sent instructions to your email address on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
+						"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_2}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
 						"mandatoryMsg": ""
 					},
 					"button_2": {

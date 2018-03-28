@@ -304,8 +304,8 @@
 										"rows": [
 											[
 												{
-													"label": "Weve sent instructions to your email address () on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
-													"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_reminder_email}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
+													"label": "Weve sent instructions to your email address on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
+													"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_2}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
 													"styles": [
 														"email-complete-message"
 													],
@@ -330,7 +330,7 @@
 													"htmlLabel": "Send another reminder email",
 													"path": "",
 													"rules": {
-														"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"save_success_send_reminder\")) {\nForm.data.save_success_send_reminder.$responseStatus = \"\";\n}\nForm.data.send_reminder_email = \"\";"
+														"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"emailSavedFormButton\")) {\nForm.data.emailSavedFormButton.$responseStatus = \"\";\n}\nForm.data.emailAddress_2 = \"\";"
 													},
 													"type": "button",
 													"id": "button_2",
