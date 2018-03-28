@@ -9,8 +9,8 @@ define(["app"], function (app) {
                 var resume = +item.properties.functionalButtonResume;
                 var share = +item.properties.functionalButtonShare;
                 var help = +item.properties.functionalButtonHelp;
-                var exit = +item.properties.functionalButtonExit;
-                var buttonCount = resume + share + help + exit;
+                var close = +item.properties.functionalButtonClose;
+                var buttonCount = resume + share + help + close;
                 return {
                     0: "function-items-0",
                     1: "function-items-1",

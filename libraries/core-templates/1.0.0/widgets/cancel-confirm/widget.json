@@ -37,14 +37,14 @@
 														"md": 12,
 														"lg": 12
 													},
-													"label": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+													"label": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Also, you can kindly leave feed back below. Thank you!",
 													"entityPath": "cancel_confirm",
 													"exclude": false,
 													"hasCustomId": true,
-													"htmlLabel": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
+													"htmlLabel": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Also, you can kindly leave feed back below. Thank you!",
 													"path": "Cancel/Confirm/Text",
 													"pathContext": "abs",
-													"type": "text-input",
+													"type": "text-display",
 													"id": "cancel_confirm_text",
 													"pubId": "01580dd2461f46b1adcd5d798f9c9022"
 												}
@@ -253,7 +253,7 @@
 															}
 														]
 													],
-													"exclude": false,
+													"exclude": true,
 													"hasCustomId": true,
 													"htmlLabel": "Options",
 													"path": "",
@@ -381,14 +381,53 @@
 											[
 												{
 													"rules": {
+														"click": "Form.showDialog(\"saveconfirm\");",
+														"sh": ""
+													},
+													"span": {
+														"xs": 12,
+														"sm": 12,
+														"md": 3,
+														"lg": 3
+													},
+													"offset": {
+														"xs": 0,
+														"sm": 0,
+														"md": 2,
+														"lg": 2
+													},
+													"subId": "6471b7e4d063409483e51ff9138ed85e",
+													"label": "Save",
+													"exclude": false,
+													"hasCustomId": true,
+													"htmlLabel": "Save",
+													"path": "",
+													"id": "confirm_2",
+													"type": "button",
+													"pubId": "30bcbd69db2b490e8e125e3ddd15e80c"
+												},
+												{
+													"rules": {
 														"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
 														"sh": ""
 													},
+													"span": {
+														"xs": 12,
+														"sm": 12,
+														"md": 3,
+														"lg": 3
+													},
+													"offset": {
+														"xs": 0,
+														"sm": 0,
+														"md": 2,
+														"lg": 2
+													},
 													"subId": "6471b7e4d063409483e51ff9138ed85e",
-													"label": "Confirm",
+													"label": "Cancel",
 													"exclude": false,
 													"hasCustomId": true,
-													"htmlLabel": "Confirm",
+													"htmlLabel": "Cancel",
 													"path": "",
 													"id": "confirm_2",
 													"type": "button",

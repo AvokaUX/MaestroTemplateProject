@@ -1,0 +1,36 @@
+{
+  "category": "Containers",
+  "label": "Sticky Panel",
+  "html": "sticky-panel.html",
+  "icon": "sticky-panel.png",
+  "js": "sticky-panel.js",
+  "css": "sticky-panel.css",
+  "propDefs": {
+	"offset": {
+	  "label": "Offset (px)",
+	  "type": "integer",
+	  "value": 0,
+	  "helpText": "Offset in pixels."
+	},
+    "confine": {
+      "label": "Confine To Parent Height",
+      "type": "boolean",
+      "value": false,
+      "helpText": "Confine To Parent Height."
+    },
+    "disableSticky": {
+      "label": "Disable Sticky",
+      "type": "boolean",
+      "value": false,
+      "helpText": "Disable sticky function"
+    },
+    "floatOver": {
+      "label": "Float over Page",
+      "type": "boolean",
+      "value": false,
+      "helpText": "If Checked Panel will float over page."
+    }
+  },
+  "exMandatory": true,
+  "rows": [[]]
+}

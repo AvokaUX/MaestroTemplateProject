@@ -2310,7 +2310,7 @@
 														{
 															"subId": "01580dd2461f46b1adcd5d798f9c9022",
 															"id": "cancel_confirm_text",
-															"type": "text-input"
+															"type": "text-display"
 														}
 													],
 													[
@@ -2463,12 +2463,29 @@
 												"rows": [
 													[
 														{
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field"
+															],
 															"rules": {
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"click": "Form.showDialog(\"saveconfirm\");",
 																"sh": ""
 															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
 															"id": "confirm_3",
+															"type": "button"
+														},
+														{
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field"
+															],
+															"rules": {
+																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
+																"sh": ""
+															},
+															"subId": "30bcbd69db2b490e8e125e3ddd15e80c_1",
+															"id": "confirm_2",
 															"type": "button"
 														}
 													]
@@ -2847,6 +2864,24 @@
 																"md": "3",
 																"lg": "3"
 															},
+															"label": "Your Full Name",
+															"styles": [
+																"av-global-layout"
+															],
+															"exclude": false,
+															"htmlLabel": "Your Full Name",
+															"mandatory": true,
+															"path": "Sendername_1",
+															"type": "text-input",
+															"id": "sendername_1"
+														}
+													],
+													[
+														{
+															"offset": {
+																"md": "3",
+																"lg": "3"
+															},
 															"label": "Recipient Email Address",
 															"styles": [
 																"av-global-layout"
@@ -2860,22 +2895,6 @@
 															"mandatory": true,
 															"path": "Sharerecipientemail_1",
 															"id": "sharerecipientemail_1"
-														},
-														{
-															"offset": {
-																"md": "3",
-																"lg": "3"
-															},
-															"label": "Your Full Name",
-															"styles": [
-																"av-global-layout"
-															],
-															"exclude": false,
-															"htmlLabel": "Your Full Name",
-															"mandatory": true,
-															"path": "Sendername_1",
-															"type": "text-input",
-															"id": "sendername_1"
 														}
 													],
 													[
@@ -2897,7 +2916,7 @@
 																"md": "4",
 																"lg": "4"
 															},
-															"label": "Share Now",
+															"label": "Email Now",
 															"styles": [
 																"message-banner",
 																"av-button-primary"
@@ -2912,7 +2931,7 @@
 																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
 															},
 															"exclude": false,
-															"htmlLabel": "Share Now",
+															"htmlLabel": "Email Now",
 															"path": "",
 															"id": "shareFormButton_1"
 														}
@@ -2924,7 +2943,7 @@
 													"mg-section-2"
 												],
 												"properties": {
-													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+													"infoText": "Email details of the person you wish to share with below:"
 												},
 												"animateVisibility": true,
 												"entityPath": "dialog_content_save",
@@ -3166,392 +3185,6 @@
 			"properties": {},
 			"type": "cancel-success-modal",
 			"id": "cancelsuccess"
-		},
-		"savesuccess": {
-			"rows": [
-				[
-					{
-						"rows": [
-							[]
-						],
-						"subId": "f732f7ce92d343778d33422d566bccac",
-						"id": "modalBackground_4",
-						"type": "modal-background"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rows": [
-													[
-														{
-															"rows": [
-																[
-																	{
-																		"properties": {},
-																		"subId": "753800ee88cf4fb5828cef5ff2d42942",
-																		"id": "modalLogoImage_4",
-																		"type": "image"
-																	}
-																]
-															],
-															"subId": "0da239b6d6dd4425b826c37bde2ed9be",
-															"id": "modalLogo_4",
-															"type": "block"
-														}
-													]
-												],
-												"subId": "3211480eea7d45a4902f4096307e86e3",
-												"id": "modalHeader_9",
-												"type": "form-header"
-											}
-										]
-									],
-									"subId": "9ff89a8968cf4669a2f0cfde2be17c63",
-									"path": "StickyPanelModal_4",
-									"id": "stickyPanelModal_4",
-									"type": "sticky-panel"
-								}
-							]
-						],
-						"subId": "239b00ef9f9c40ca81392d95bcbe9395",
-						"exclude": true,
-						"id": "modalHeader_8",
-						"type": "block"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"subId": "b424508c76b04541b46e1f5d5363b90a",
-									"id": "startANewForm_5",
-									"type": "button"
-								}
-							]
-						],
-						"properties": {
-							"infoText": "Your Application has been received"
-						},
-						"subId": "10e237c285f9418da41b60b370238bfc",
-						"id": "modalContent_4",
-						"type": "section-2"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"subId": "58032c1494f04a78bf3cb8aae1c09afd",
-												"path": "",
-												"id": "textDisplay_11",
-												"type": "text-display"
-											}
-										]
-									],
-									"subId": "0d94d9490724411199cd5164d7700297",
-									"id": "formFooterText_6",
-									"type": "section-2"
-								}
-							]
-						],
-						"rules": {
-							"sh": "!Util.isReceipt"
-						},
-						"subId": "0be795c1d72f4ae2a4f58fb5a3234438",
-						"exclude": true,
-						"id": "modalFooter_4",
-						"type": "form-footer"
-					}
-				],
-				[
-					{
-						"rows": [
-							[
-								{
-									"rows": [
-										[
-											{
-												"rows": [
-													[
-														{
-															"subId": "21bd73fdb35241b08ab18b8701b25496",
-															"id": "textDisplay_4",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"subId": "52b663ec1a88494e912364c3bef72ca7",
-															"id": "textDisplay_5",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"rules": {
-																"click": "if (Resource.preview || Resource.design) {\n    return;\n}\nForm.showProgress(\"Please wait\");\nForm.redirect(Form.data.$submitResponse.redirectTarget, Form.data.$submitResponse.redirectParent);"
-															},
-															"subId": "81858aae177f48428df2be70a02b1c40",
-															"id": "button_1",
-															"type": "button"
-														}
-													],
-													[
-														{
-															"rules": {
-																"sh": "Form.getSystemData(\"SubmissionExpiryDate\") && !Util.isBlank(Form.getSystemData(\"SubmissionExpiryDate\"))"
-															},
-															"subId": "440b40ec2e4647e89753d88271fbc6ea",
-															"id": "textDisplay_6",
-															"type": "text-display"
-														}
-													]
-												],
-												"subId": "d36ce219a6fc4184b5f9206b30767329",
-												"id": "block_4",
-												"type": "block"
-											}
-										],
-										[
-											{
-												"rows": [
-													[
-														{
-															"rows": [
-																[
-																	{
-																		"rules": {
-																			"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
-																		},
-																		"path": "EmailAddress_2",
-																		"subId": "b13fb61cc547468eb4f4ad948670b0f9",
-																		"id": "emailAddress_2",
-																		"type": "email"
-																	}
-																],
-																[
-																	{
-																		"properties": {
-																			"emailFieldRef": "emailAddress_2"
-																		},
-																		"rules": {
-																			"click": "Form.emailOperation('emailSavedForm', item.id, item.properties.emailFieldRef)"
-																		},
-																		"subId": "12230fde7ef048229e26bd7e266d42ef",
-																		"id": "emailSavedFormButton",
-																		"type": "button-email-saved-form"
-																	}
-																]
-															],
-															"subId": "587211bc2f294535989e84d58a5fc39d",
-															"id": "block_5",
-															"type": "block"
-														}
-													]
-												],
-												"properties": {
-													"infoText": "Enter your email address and we'll send you you instructions on how to return to your form."
-												},
-												"rules": {
-													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo === \"\" : true) &&\n(Form.data.hasOwnProperty(\"emailSavedFormButton\") ? Form.data.emailSavedFormButton.$responseStatus !== \"success\" : true)"
-												},
-												"subId": "39f81a0bd55242a5829cf25715d4b815",
-												"id": "section_6",
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"rows": [
-													[
-														{
-															"subId": "671deba5ac7a4c4eafe625624203bb1a",
-															"id": "textDisplay_7",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"rules": {
-																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"save_success_send_reminder\")) {\nForm.data.save_success_send_reminder.$responseStatus = \"\";\n}\nForm.data.send_reminder_email = \"\";"
-															},
-															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
-															"id": "button_2",
-															"type": "button"
-														}
-													]
-												],
-												"rules": {
-													"sh": "(Form.data.hasOwnProperty(\"emailSavedFormButton\") ? Form.data.emailSavedFormButton.$responseStatus === \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo !== \"\" : false)"
-												},
-												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
-												"id": "section_7",
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"rows": [
-													[
-														{
-															"rules": {
-																"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
-															},
-															"path": "Sharerecipientemail",
-															"subId": "ea72110b798b4186be8e71d39c7206e1",
-															"id": "sharerecipientemail",
-															"type": "email",
-															"exclude": false
-														},
-														{
-															"path": "Sendername",
-															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
-															"id": "sendername",
-															"type": "text-input",
-															"exclude": false
-														}
-													],
-													[
-														{
-															"path": "Personalmessage",
-															"subId": "1cc7b7cdb2b1421291056edc52e43525",
-															"id": "personalmessage",
-															"type": "text-area",
-															"exclude": false
-														}
-													],
-													[
-														{
-															"properties": {
-																"emailFieldRef": "sharerecipientemail",
-																"senderNameRef": "sendername",
-																"emailBodyRef": "personalmessage"
-															},
-															"rules": {
-																"click": "Form.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)"
-															},
-															"subId": "4190d5a9a613410288c94ef8d968e01d",
-															"id": "shareFormButton",
-															"type": "button-email-share-form",
-															"exclude": false
-														}
-													]
-												],
-												"properties": {
-													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
-												},
-												"rules": {
-													"sh": "Form.data.hasOwnProperty(\"shareFormButton\") ? Form.data.shareFormButton.$responseStatus != \"success\": true;"
-												},
-												"subId": "61839116f7ec43688bcfe12801469d1a",
-												"id": "section_8",
-												"type": "section-2"
-											}
-										],
-										[
-											{
-												"rows": [
-													[
-														{
-															"subId": "925a5c310b2847508048d33806aca3cb",
-															"id": "textDisplay_8",
-															"type": "text-display"
-														}
-													],
-													[
-														{
-															"rules": {
-																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
-															},
-															"subId": "ef6111641ce948f2ae60b0cd54f66211",
-															"id": "button_3",
-															"type": "button",
-															"exclude": false
-														}
-													]
-												],
-												"properties": {
-													"infoText": "Do you want to allow other people to access your form?"
-												},
-												"rules": {
-													"sh": "Form.data.hasOwnProperty(\"shareFormButton\") ? Form.data.shareFormButton.$responseStatus == \"success\": false;"
-												},
-												"subId": "aa9991c952134393abcae5d9f9a5eb27",
-												"id": "section_9",
-												"type": "section-2"
-											}
-										]
-									],
-									"path": "",
-									"subId": "de99337db1f2469589104ceb5ccb8c33",
-									"id": "extraInformation",
-									"type": "block"
-								}
-							],
-							[
-								{
-									"rows": [
-										[
-											{
-												"rules": {
-													"sh": "return item['$$parent'].properties.includeStartAgain;",
-													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
-												},
-												"subId": "f5d3a71e81244605b97d33064ec7ea04",
-												"id": "startANewForm_1",
-												"type": "button"
-											},
-											{
-												"rules": {
-													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
-													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
-												},
-												"subId": "438498f8cfc04be294f4d4b11ada089c",
-												"id": "returnToPortal",
-												"type": "button"
-											},
-											{
-												"rules": {
-													"sh": "Resource.preview || Resource.design",
-													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
-												},
-												"subId": "6c6e2a6b68224f2b92492432657e985c",
-												"id": "showFormXml",
-												"type": "button"
-											}
-										]
-									],
-									"subId": "690cb1870beb4928bff2d61e08c57ef3",
-									"id": "followOnOptions",
-									"type": "follow-on-options"
-								}
-							]
-						],
-						"properties": {
-							"infoText": "Your form has been saved and may be re-opened later."
-						},
-						"path": "",
-						"subId": "2333d120d1b74667a8d32d0935672f5e",
-						"id": "modalContent",
-						"type": "section-2"
-					}
-				]
-			],
-			"properties": {},
-			"type": "save-success-modal",
-			"id": "savesuccess",
-			"exclude": false
 		},
 		"submitsuccess": {
 			"rows": [
@@ -4108,6 +3741,12 @@
 												"rows": [
 													[
 														{
+															"path": "Sendername_2",
+															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
+															"id": "sendername_2",
+															"type": "text-input"
+														},
+														{
 															"rules": {
 																"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
 															},
@@ -4115,12 +3754,6 @@
 															"subId": "ea72110b798b4186be8e71d39c7206e1",
 															"id": "sharerecipientemail_2",
 															"type": "email"
-														},
-														{
-															"path": "Sendername_2",
-															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
-															"id": "sendername_2",
-															"type": "text-input"
 														}
 													],
 													[
@@ -4128,8 +3761,7 @@
 															"path": "Personalmessage_2",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
 															"id": "personalmessage_2",
-															"type": "text-area",
-															"exclude": false
+															"type": "text-area"
 														}
 													],
 													[
@@ -4149,16 +3781,15 @@
 													]
 												],
 												"properties": {
-													"infoText": "Enter the email of the person you wish to share with and optionally a personal message.",
-													"hideTitle": true
+													"hideTitle": true,
+													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
 												},
 												"rules": {
 													"sh": "Form.data.hasOwnProperty(\"shareFormButton_2\") ? Form.data.shareFormButton_2.$responseStatus != \"success\": true;"
 												},
 												"subId": "61839116f7ec43688bcfe12801469d1a",
 												"id": "section_12",
-												"type": "section-2",
-												"exclude": false
+												"type": "section-2"
 											}
 										],
 										[
@@ -4167,9 +3798,21 @@
 												"rows": [
 													[
 														{
-															"subId": "925a5c310b2847508048d33806aca3cb",
-															"id": "textDisplay_17",
-															"type": "text-display"
+															"rows": [
+																[
+																	{
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"id": "textDisplay_19",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"properties": {
+																"hideIcon": true,
+																"hideHeader": true
+															},
+															"id": "message_block_4",
+															"type": "message-block"
 														}
 													],
 													[
@@ -4179,13 +3822,40 @@
 															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"id": "button_7",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display",
+																		"id": "textDisplay_17"
+																	}
+																]
+															],
+															"type": "message-block",
+															"exclude": true,
+															"id": "message_block_2"
+														}
+													],
+													[
+														{
+															"exclude": true,
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
+															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button",
-															"exclude": false
+															"id": "button_9"
 														}
 													]
 												],
 												"properties": {
-													"infoText": ""
+													"infoText": "",
+													"hideTitle": true
 												},
 												"htmlLabel": "More share",
 												"rules": {
@@ -4193,8 +3863,7 @@
 												},
 												"subId": "aa9991c952134393abcae5d9f9a5eb27",
 												"id": "section_13",
-												"type": "section-2",
-												"exclude": false
+												"type": "section-2"
 											}
 										]
 									],
@@ -4250,15 +3919,408 @@
 						"path": "",
 						"subId": "2333d120d1b74667a8d32d0935672f5e",
 						"id": "modalContent_7",
-						"type": "section-2",
-						"exclude": false
+						"type": "section-2"
 					}
 				]
 			],
 			"properties": {},
 			"type": "save-success-modal",
 			"htmlLabel": "Share Success Modal",
-			"id": "sharesuccess",
+			"id": "sharesuccess"
+		},
+		"savesuccess": {
+			"rows": [
+				[
+					{
+						"rows": [
+							[]
+						],
+						"subId": "f732f7ce92d343778d33422d566bccac",
+						"id": "modalBackground_4",
+						"type": "modal-background"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"properties": {},
+																		"subId": "753800ee88cf4fb5828cef5ff2d42942",
+																		"id": "modalLogoImage_4",
+																		"type": "image"
+																	}
+																]
+															],
+															"subId": "0da239b6d6dd4425b826c37bde2ed9be",
+															"id": "modalLogo_4",
+															"type": "block"
+														}
+													]
+												],
+												"subId": "3211480eea7d45a4902f4096307e86e3",
+												"id": "modalHeader_9",
+												"type": "form-header"
+											}
+										]
+									],
+									"subId": "9ff89a8968cf4669a2f0cfde2be17c63",
+									"path": "StickyPanelModal_4",
+									"id": "stickyPanelModal_4",
+									"type": "sticky-panel"
+								}
+							]
+						],
+						"subId": "239b00ef9f9c40ca81392d95bcbe9395",
+						"exclude": true,
+						"id": "modalHeader_8",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"subId": "b424508c76b04541b46e1f5d5363b90a",
+									"id": "startANewForm_5",
+									"type": "button"
+								}
+							]
+						],
+						"properties": {
+							"infoText": "Your Application has been received"
+						},
+						"subId": "10e237c285f9418da41b60b370238bfc",
+						"id": "modalContent_4",
+						"type": "section-2"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"subId": "58032c1494f04a78bf3cb8aae1c09afd",
+												"path": "",
+												"id": "textDisplay_11",
+												"type": "text-display"
+											}
+										]
+									],
+									"subId": "0d94d9490724411199cd5164d7700297",
+									"id": "formFooterText_6",
+									"type": "section-2"
+								}
+							]
+						],
+						"rules": {
+							"sh": "!Util.isReceipt"
+						},
+						"subId": "0be795c1d72f4ae2a4f58fb5a3234438",
+						"exclude": true,
+						"id": "modalFooter_4",
+						"type": "form-footer"
+					}
+				],
+				[
+					{
+						"rows": [
+							[
+								{
+									"rows": [
+										[
+											{
+												"rows": [
+													[
+														{
+															"subId": "21bd73fdb35241b08ab18b8701b25496",
+															"id": "textDisplay_4",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"subId": "52b663ec1a88494e912364c3bef72ca7",
+															"id": "textDisplay_5",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"rules": {
+																"click": "if (Resource.preview || Resource.design) {\n    return;\n}\nForm.showProgress(\"Please wait\");\nForm.redirect(Form.data.$submitResponse.redirectTarget, Form.data.$submitResponse.redirectParent);"
+															},
+															"subId": "81858aae177f48428df2be70a02b1c40",
+															"id": "button_1",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"rules": {
+																"sh": "Form.getSystemData(\"SubmissionExpiryDate\") && !Util.isBlank(Form.getSystemData(\"SubmissionExpiryDate\"))"
+															},
+															"subId": "440b40ec2e4647e89753d88271fbc6ea",
+															"id": "textDisplay_6",
+															"type": "text-display"
+														}
+													]
+												],
+												"subId": "d36ce219a6fc4184b5f9206b30767329",
+												"id": "block_4",
+												"type": "block"
+											}
+										],
+										[
+											{
+												"rows": [
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"rules": {
+																			"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+																		},
+																		"path": "EmailAddress_2",
+																		"subId": "b13fb61cc547468eb4f4ad948670b0f9",
+																		"id": "emailAddress_2",
+																		"type": "email"
+																	}
+																],
+																[
+																	{
+																		"properties": {
+																			"emailFieldRef": "emailAddress_2"
+																		},
+																		"rules": {
+																			"click": "Form.emailOperation('emailSavedForm', item.id, item.properties.emailFieldRef)"
+																		},
+																		"subId": "12230fde7ef048229e26bd7e266d42ef",
+																		"id": "emailSavedFormButton",
+																		"type": "button-email-saved-form"
+																	}
+																]
+															],
+															"subId": "587211bc2f294535989e84d58a5fc39d",
+															"id": "block_5",
+															"type": "block"
+														}
+													]
+												],
+												"properties": {
+													"infoText": "Enter your email address and we'll send you you instructions on how to return to your form."
+												},
+												"rules": {
+													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo === \"\" : true) &&\n(Form.data.hasOwnProperty(\"emailSavedFormButton\") ? Form.data.emailSavedFormButton.$responseStatus !== \"success\" : true)"
+												},
+												"subId": "39f81a0bd55242a5829cf25715d4b815",
+												"id": "section_6",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"rows": [
+													[
+														{
+															"subId": "671deba5ac7a4c4eafe625624203bb1a",
+															"id": "textDisplay_7",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"rules": {
+																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"save_success_send_reminder\")) {\nForm.data.save_success_send_reminder.$responseStatus = \"\";\n}\nForm.data.send_reminder_email = \"\";"
+															},
+															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
+															"id": "button_2",
+															"type": "button"
+														}
+													]
+												],
+												"rules": {
+													"sh": "(Form.data.hasOwnProperty(\"emailSavedFormButton\") ? Form.data.emailSavedFormButton.$responseStatus === \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo !== \"\" : false)"
+												},
+												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
+												"id": "section_7",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"rows": [
+													[
+														{
+															"path": "Sendername",
+															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
+															"id": "sendername",
+															"type": "text-input"
+														},
+														{
+															"rules": {
+																"ok": "/^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?/.test(value) || 'Enter a valid email address e.g. name@example.com'"
+															},
+															"path": "Sharerecipientemail",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"id": "sharerecipientemail",
+															"type": "email"
+														}
+													],
+													[
+														{
+															"path": "Personalmessage",
+															"subId": "1cc7b7cdb2b1421291056edc52e43525",
+															"id": "personalmessage",
+															"type": "text-area"
+														}
+													],
+													[
+														{
+															"properties": {
+																"emailFieldRef": "sharerecipientemail",
+																"senderNameRef": "sendername",
+																"emailBodyRef": "personalmessage"
+															},
+															"rules": {
+																"click": "Form.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)"
+															},
+															"subId": "4190d5a9a613410288c94ef8d968e01d",
+															"id": "shareFormButton",
+															"type": "button-email-share-form"
+														}
+													]
+												],
+												"properties": {
+													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+												},
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton\") ? Form.data.shareFormButton.$responseStatus != \"success\": true;"
+												},
+												"subId": "61839116f7ec43688bcfe12801469d1a",
+												"id": "section_8",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"rows": [
+													[
+														{
+															"rows": [
+																[
+																	{
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"id": "textDisplay_8",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"properties": {
+																"hideIcon": true,
+																"hideHeader": true
+															},
+															"id": "message_block_1",
+															"type": "message-block"
+														}
+													],
+													[
+														{
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
+															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
+															"id": "button_3",
+															"type": "button",
+															"exclude": false
+														}
+													]
+												],
+												"properties": {
+													"infoText": "",
+													"hideTitle": true
+												},
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton\") ? Form.data.shareFormButton.$responseStatus == \"success\": false;"
+												},
+												"subId": "aa9991c952134393abcae5d9f9a5eb27",
+												"id": "section_9",
+												"type": "section-2"
+											}
+										]
+									],
+									"path": "",
+									"subId": "de99337db1f2469589104ceb5ccb8c33",
+									"id": "extraInformation",
+									"type": "block"
+								}
+							],
+							[
+								{
+									"rows": [
+										[
+											{
+												"rules": {
+													"sh": "return item['$$parent'].properties.includeStartAgain;",
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar SystemProfile = Form.data.SFMData.SystemProfile;\nvar url = SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"FormDynamicDataServlet\",\"SmartForm.html?formCode=\"+SystemProfile.FormCode),window.location.replace(url))\n} else if(Resource.preview) {Form.showModal(\"\");}"
+												},
+												"subId": "f5d3a71e81244605b97d33064ec7ea04",
+												"id": "startANewForm_1",
+												"type": "button"
+											},
+											{
+												"rules": {
+													"click": "if(!Resource.preview && !Resource.design) {\nForm.showProgress(\"Please wait\");\nvar url = Form.data.SFMData.SystemProfile.FormDataServiceURL;\nurl && (url = url.replace(\"servlet/FormDynamicDataServlet\", \"login.htm\"), window.location.replace(url))\n}",
+													"sh": "var SystemProfile = Form.data.SFMData.SystemProfile;\nreturn SystemProfile.UserName != \"\" && typeof SystemProfile.UserName != \"undefined\" && item['$$parent'].properties.includePortalLink;"
+												},
+												"subId": "438498f8cfc04be294f4d4b11ada089c",
+												"id": "returnToPortal",
+												"type": "button"
+											},
+											{
+												"rules": {
+													"sh": "Resource.preview || Resource.design",
+													"click": "if(Resource.preview){\nForm.showDialog('showxml');\n}"
+												},
+												"subId": "6c6e2a6b68224f2b92492432657e985c",
+												"id": "showFormXml",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "690cb1870beb4928bff2d61e08c57ef3",
+									"id": "followOnOptions",
+									"type": "follow-on-options"
+								}
+							]
+						],
+						"properties": {
+							"infoText": "Your form has been saved and may be re-opened later."
+						},
+						"path": "",
+						"subId": "2333d120d1b74667a8d32d0935672f5e",
+						"id": "modalContent",
+						"type": "section-2"
+					}
+				]
+			],
+			"properties": {},
+			"type": "save-success-modal",
+			"id": "savesuccess",
 			"exclude": false
 		}
 	},
@@ -4290,9 +4352,9 @@
 	],
 	"localModals": [
 		"cancelsuccess",
-		"savesuccess",
 		"submitsuccess",
-		"sharesuccess"
+		"sharesuccess",
+		"savesuccess"
 	],
 	"localDialogs": [
 		"saveconfirm",
@@ -5350,13 +5412,9 @@
 						}
 					},
 					"cancel_confirm_text": {
-						"label": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
-						"htmlLabel": "Are you sure you want to cancel your submission? Caution: all data entered will be lost.",
-						"mandatoryMsg": "",
-						"properties": {
-							"placeholder": "",
-							"helpText": ""
-						}
+						"label": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Also, you can kindly leave feed back below. Thank you!",
+						"htmlLabel": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Also, you can kindly leave feed back below. Thank you!",
+						"mandatoryMsg": ""
 					},
 					"options_2": {
 						"label": "Options",
@@ -5527,8 +5585,16 @@
 						}
 					},
 					"confirm_3": {
-						"label": "Confirm",
-						"htmlLabel": "Confirm",
+						"label": "Save",
+						"htmlLabel": "Save",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"confirm_2": {
+						"label": "Cancel",
+						"htmlLabel": "Cancel",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -5842,21 +5908,21 @@
 						"htmlLabel": "Share form",
 						"mandatoryMsg": "",
 						"properties": {
-							"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+							"infoText": "Email details of the person you wish to share with below:"
 						}
 					},
-					"sharerecipientemail_1": {
-						"label": "Recipient Email Address",
-						"htmlLabel": "Recipient Email Address",
+					"sendername_1": {
+						"label": "Your Full Name",
+						"htmlLabel": "Your Full Name",
 						"mandatoryMsg": "",
 						"properties": {
 							"placeholder": "",
 							"helpText": ""
 						}
 					},
-					"sendername_1": {
-						"label": "Your Full Name",
-						"htmlLabel": "Your Full Name",
+					"sharerecipientemail_1": {
+						"label": "Recipient Email Address",
+						"htmlLabel": "Recipient Email Address",
 						"mandatoryMsg": "",
 						"properties": {
 							"placeholder": "",
@@ -5873,8 +5939,8 @@
 						}
 					},
 					"shareFormButton_1": {
-						"label": "Share Now",
-						"htmlLabel": "Share Now",
+						"label": "Email Now",
+						"htmlLabel": "Email Now",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": "",
@@ -6042,301 +6108,6 @@
 						}
 					},
 					"showFormXml_1": {
-						"label": "Show form XML",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"savesuccess": {
-						"label": "Save Success Modal",
-						"htmlLabel": "Save Success",
-						"mandatoryMsg": "",
-						"properties": {
-							"leavePageWarningMessage": "",
-							"mandatoryMsgSuffix": "is required",
-							"progressMsg": "Please wait...",
-							"linkWarningMsg": "opens in a new window",
-							"alertMsg": ""
-						}
-					},
-					"modalBackground_4": {
-						"label": "Modal background",
-						"htmlLabel": "Modal background",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalHeader_8": {
-						"label": "Modal header",
-						"htmlLabel": "Modal header",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"stickyPanelModal_4": {
-						"label": "Sticky Panel-modal",
-						"htmlLabel": "Sticky Panel-modal",
-						"mandatoryMsg": ""
-					},
-					"modalHeader_9": {
-						"label": "Modal Header",
-						"htmlLabel": "Modal Header",
-						"mandatoryMsg": "",
-						"properties": {
-							"trackingCodePrefix": "Reference Code: "
-						}
-					},
-					"modalLogo_4": {
-						"label": "Modal logo",
-						"htmlLabel": "Modal logo",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalLogoImage_4": {
-						"label": "Modal logo image",
-						"htmlLabel": "Modal logo image",
-						"mandatoryMsg": "",
-						"properties": {
-							"alternativeText": "",
-							"toolTip": "",
-							"imageLink": ""
-						}
-					},
-					"modalContent_4": {
-						"label": "Modal Content",
-						"htmlLabel": "<h1>Modal Content</h1>",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "Your Application has been received"
-						}
-					},
-					"startANewForm_5": {
-						"label": "Start a new form",
-						"htmlLabel": "Start a new form",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"modalFooter_4": {
-						"label": "Modal Footer",
-						"htmlLabel": "Modal Footer",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"formFooterText_6": {
-						"label": "Footer Section",
-						"htmlLabel": "Footer Section",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": ""
-						}
-					},
-					"textDisplay_11": {
-						"label": "Form Footer Text",
-						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
-						"mandatoryMsg": ""
-					},
-					"modalContent": {
-						"label": "Application Saved",
-						"htmlLabel": "<h1>Application Saved</h1>",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "Your form has been saved and may be re-opened later."
-						}
-					},
-					"extraInformation": {
-						"label": "Block",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"block_4": {
-						"label": "Reference Code Block Save",
-						"htmlLabel": "Reference Code Block Save",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"textDisplay_4": {
-						"label": "Your Reference Code is:",
-						"htmlLabel": "Your Reference Code is:",
-						"mandatoryMsg": ""
-					},
-					"textDisplay_5": {
-						"label": "",
-						"htmlLabel": "{{Form.data.SFMData.SystemProfile.TrackingCode}}",
-						"mandatoryMsg": ""
-					},
-					"button_1": {
-						"label": "Click here to return to your form",
-						"htmlLabel": "Click here to return to your form",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"textDisplay_6": {
-						"label": "Please note that your form will expire on .",
-						"htmlLabel": "Please note that your form will expire on {{Form.getSystemData(&quot;SubmissionExpiryDate&quot;) | date: &#39;d MMM yyyy&#39; }}.",
-						"mandatoryMsg": ""
-					},
-					"section_6": {
-						"label": "Send yourself a reminder email",
-						"htmlLabel": "Send yourself a reminder email",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "Enter your email address and we'll send you you instructions on how to return to your form."
-						}
-					},
-					"block_5": {
-						"label": "Send Reminder Block",
-						"htmlLabel": "Send Reminder Block",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"emailAddress_2": {
-						"label": "Your email address",
-						"htmlLabel": "Your email address",
-						"mandatoryMsg": "",
-						"properties": {
-							"placeholder": "",
-							"helpText": ""
-						}
-					},
-					"emailSavedFormButton": {
-						"label": "Send now",
-						"htmlLabel": "Send now",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": "",
-							"backgroundSuccessMessage": "An email with a link to your saved form has been sent to you."
-						}
-					},
-					"section_7": {
-						"label": "Check your email",
-						"htmlLabel": "Check your email",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": ""
-						}
-					},
-					"textDisplay_7": {
-						"label": "Weve sent instructions to your email address () on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
-						"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_reminder_email}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
-						"mandatoryMsg": ""
-					},
-					"button_2": {
-						"label": "Send another reminder email",
-						"htmlLabel": "Send another reminder email",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"section_8": {
-						"label": "Share form",
-						"htmlLabel": "Share form",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
-						}
-					},
-					"sharerecipientemail": {
-						"label": "Recipient Email Address",
-						"htmlLabel": "Recipient Email Address",
-						"mandatoryMsg": "",
-						"properties": {
-							"placeholder": "",
-							"helpText": ""
-						}
-					},
-					"sendername": {
-						"label": "Your Full Name",
-						"htmlLabel": "Your Full Name",
-						"mandatoryMsg": "",
-						"properties": {
-							"placeholder": "",
-							"helpText": ""
-						}
-					},
-					"personalmessage": {
-						"label": "Personal Message (optional)",
-						"htmlLabel": "Personal Message (optional)",
-						"mandatoryMsg": "",
-						"properties": {
-							"helpText": "",
-							"placeholder": ""
-						}
-					},
-					"shareFormButton": {
-						"label": "Share Now",
-						"htmlLabel": "Share Now",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": "",
-							"backgroundSuccessMessage": "An email with a link to your shared form has been sent to the specified recipient."
-						}
-					},
-					"section_9": {
-						"label": "Share form",
-						"htmlLabel": "Share form",
-						"mandatoryMsg": "",
-						"properties": {
-							"infoText": "Do you want to allow other people to access your form?"
-						}
-					},
-					"textDisplay_8": {
-						"label": "Weve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.If you would like share your form again, just click the link below.",
-						"htmlLabel": "<p>We&#39;ve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.</p><p>If you would like share your form again, just click the link below.</p>",
-						"mandatoryMsg": ""
-					},
-					"button_3": {
-						"label": "Share my form with others",
-						"htmlLabel": "Share my form with others",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"followOnOptions": {
-						"label": "Follow On Options Block",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"startANewForm_1": {
-						"label": "Start a new form",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"returnToPortal": {
-						"label": "Return to portal",
-						"htmlLabel": "",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": ""
-						}
-					},
-					"showFormXml": {
 						"label": "Show form XML",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -6793,18 +6564,18 @@
 							"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
 						}
 					},
-					"sharerecipientemail_2": {
-						"label": "Recipient Email Address",
-						"htmlLabel": "Recipient Email Address",
+					"sendername_2": {
+						"label": "Your Full Name",
+						"htmlLabel": "Your Full Name",
 						"mandatoryMsg": "",
 						"properties": {
 							"placeholder": "",
 							"helpText": ""
 						}
 					},
-					"sendername_2": {
-						"label": "Your Full Name",
-						"htmlLabel": "Your Full Name",
+					"sharerecipientemail_2": {
+						"label": "Recipient Email Address",
+						"htmlLabel": "Recipient Email Address",
 						"mandatoryMsg": "",
 						"properties": {
 							"placeholder": "",
@@ -6837,7 +6608,15 @@
 							"infoText": ""
 						}
 					},
-					"textDisplay_17": {
+					"message_block_4": {
+						"label": "Share success message",
+						"htmlLabel": "Share success message",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"textDisplay_19": {
 						"label": "Weve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.If you would like share your form again, just click the link below.",
 						"htmlLabel": "<p>We&#39;ve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.</p><p>If you would like share your form again, just click the link below.</p>",
 						"mandatoryMsg": ""
@@ -6845,6 +6624,27 @@
 					"button_7": {
 						"label": "Share my form with others",
 						"htmlLabel": "Share my form with others",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"message_block_2": {
+						"label": "Message Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"textDisplay_17": {
+						"label": "Text Display",
+						"htmlLabel": "Your display text",
+						"mandatoryMsg": ""
+					},
+					"button_9": {
+						"label": "Button",
+						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
@@ -6875,6 +6675,309 @@
 						}
 					},
 					"showFormXml_2": {
+						"label": "Show form XML",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"savesuccess": {
+						"label": "Save Success Modal",
+						"htmlLabel": "Save Success",
+						"mandatoryMsg": "",
+						"properties": {
+							"leavePageWarningMessage": "",
+							"mandatoryMsgSuffix": "is required",
+							"progressMsg": "Please wait...",
+							"linkWarningMsg": "opens in a new window",
+							"alertMsg": ""
+						}
+					},
+					"modalBackground_4": {
+						"label": "Modal background",
+						"htmlLabel": "Modal background",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalHeader_8": {
+						"label": "Modal header",
+						"htmlLabel": "Modal header",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"stickyPanelModal_4": {
+						"label": "Sticky Panel-modal",
+						"htmlLabel": "Sticky Panel-modal",
+						"mandatoryMsg": ""
+					},
+					"modalHeader_9": {
+						"label": "Modal Header",
+						"htmlLabel": "Modal Header",
+						"mandatoryMsg": "",
+						"properties": {
+							"trackingCodePrefix": "Reference Code: "
+						}
+					},
+					"modalLogo_4": {
+						"label": "Modal logo",
+						"htmlLabel": "Modal logo",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalLogoImage_4": {
+						"label": "Modal logo image",
+						"htmlLabel": "Modal logo image",
+						"mandatoryMsg": "",
+						"properties": {
+							"alternativeText": "",
+							"toolTip": "",
+							"imageLink": ""
+						}
+					},
+					"modalContent_4": {
+						"label": "Modal Content",
+						"htmlLabel": "<h1>Modal Content</h1>",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Your Application has been received"
+						}
+					},
+					"startANewForm_5": {
+						"label": "Start a new form",
+						"htmlLabel": "Start a new form",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"modalFooter_4": {
+						"label": "Modal Footer",
+						"htmlLabel": "Modal Footer",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"formFooterText_6": {
+						"label": "Footer Section",
+						"htmlLabel": "Footer Section",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_11": {
+						"label": "Form Footer Text",
+						"htmlLabel": "<p>&copy; Copyright Avoka Technologies {{Calc.date().getFullYear()}} ~ <a href=\"http://www.avoka.com/about-avoka/privacy-policy\" target = '_blank' >Privacy Policy</a></p>",
+						"mandatoryMsg": ""
+					},
+					"modalContent": {
+						"label": "Application Saved",
+						"htmlLabel": "<h1>Application Saved</h1>",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Your form has been saved and may be re-opened later."
+						}
+					},
+					"extraInformation": {
+						"label": "Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"block_4": {
+						"label": "Reference Code Block Save",
+						"htmlLabel": "Reference Code Block Save",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"textDisplay_4": {
+						"label": "Your Reference Code is:",
+						"htmlLabel": "Your Reference Code is:",
+						"mandatoryMsg": ""
+					},
+					"textDisplay_5": {
+						"label": "",
+						"htmlLabel": "{{Form.data.SFMData.SystemProfile.TrackingCode}}",
+						"mandatoryMsg": ""
+					},
+					"button_1": {
+						"label": "Click here to return to your form",
+						"htmlLabel": "Click here to return to your form",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"textDisplay_6": {
+						"label": "Please note that your form will expire on .",
+						"htmlLabel": "Please note that your form will expire on {{Form.getSystemData(&quot;SubmissionExpiryDate&quot;) | date: &#39;d MMM yyyy&#39; }}.",
+						"mandatoryMsg": ""
+					},
+					"section_6": {
+						"label": "Send yourself a reminder email",
+						"htmlLabel": "Send yourself a reminder email",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Enter your email address and we'll send you you instructions on how to return to your form."
+						}
+					},
+					"block_5": {
+						"label": "Send Reminder Block",
+						"htmlLabel": "Send Reminder Block",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"emailAddress_2": {
+						"label": "Your email address",
+						"htmlLabel": "Your email address",
+						"mandatoryMsg": "",
+						"properties": {
+							"placeholder": "",
+							"helpText": ""
+						}
+					},
+					"emailSavedFormButton": {
+						"label": "Send now",
+						"htmlLabel": "Send now",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": "",
+							"backgroundSuccessMessage": "An email with a link to your saved form has been sent to you."
+						}
+					},
+					"section_7": {
+						"label": "Check your email",
+						"htmlLabel": "Check your email",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"textDisplay_7": {
+						"label": "Weve sent instructions to your email address () on how to return to the application when you are ready.If you didnt receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.",
+						"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.send_reminder_email}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
+						"mandatoryMsg": ""
+					},
+					"button_2": {
+						"label": "Send another reminder email",
+						"htmlLabel": "Send another reminder email",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"section_8": {
+						"label": "Share form",
+						"htmlLabel": "Share form",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+						}
+					},
+					"sendername": {
+						"label": "Your Full Name",
+						"htmlLabel": "Your Full Name",
+						"mandatoryMsg": "",
+						"properties": {
+							"placeholder": "",
+							"helpText": ""
+						}
+					},
+					"sharerecipientemail": {
+						"label": "Recipient Email Address",
+						"htmlLabel": "Recipient Email Address",
+						"mandatoryMsg": "",
+						"properties": {
+							"placeholder": "",
+							"helpText": ""
+						}
+					},
+					"personalmessage": {
+						"label": "Personal Message (optional)",
+						"htmlLabel": "Personal Message (optional)",
+						"mandatoryMsg": "",
+						"properties": {
+							"helpText": "",
+							"placeholder": ""
+						}
+					},
+					"shareFormButton": {
+						"label": "Share Now",
+						"htmlLabel": "Share Now",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": "",
+							"backgroundSuccessMessage": "An email with a link to your shared form has been sent to the specified recipient."
+						}
+					},
+					"section_9": {
+						"label": "Share success",
+						"htmlLabel": "Share form",
+						"mandatoryMsg": "",
+						"properties": {
+							"infoText": ""
+						}
+					},
+					"message_block_1": {
+						"label": "Share success message",
+						"htmlLabel": "Share success message",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"textDisplay_8": {
+						"label": "Weve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.If you would like share your form again, just click the link below.",
+						"htmlLabel": "<p>We&#39;ve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.</p><p>If you would like share your form again, just click the link below.</p>",
+						"mandatoryMsg": ""
+					},
+					"button_3": {
+						"label": "Share my form with others",
+						"htmlLabel": "Share my form with others",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"followOnOptions": {
+						"label": "Follow On Options Block",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"startANewForm_1": {
+						"label": "Start a new form",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"returnToPortal": {
+						"label": "Return to portal",
+						"htmlLabel": "",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": ""
+						}
+					},
+					"showFormXml": {
 						"label": "Show form XML",
 						"htmlLabel": "",
 						"mandatoryMsg": "",
@@ -6955,6 +7058,5 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.3",
 	"id": "AvokaSmartForm",
-	"exclude": false,
-	"isPreview": false
+	"exclude": false
 }

@@ -45,7 +45,7 @@
 					"xs": 1,
 					"sm": 1
 				},
-				"label": "Exit",
+				"label": "Close",
 				"styles": [
 					"av-button-navigation",
 					"bs-functional-button-items-64706"
@@ -55,14 +55,14 @@
 				},
 				"type": "button",
 				"path": "",
-				"htmlLabel": "Exit",
+				"htmlLabel": "Close",
 				"rules": {
-					"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
+					"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonClose\")"
 				},
 				"animateVisibility": false,
 				"pubId": "618724928da14126a1ea9dda71f4b9b6",
 				"hideLabel": false,
-				"id": "exit"
+				"id": "close"
 			},
 			{
 				"span": {
@@ -181,12 +181,12 @@
 			"value": true,
 			"helpText": "Hide Help Button"
 		},
-		"functionalButtonExit": {
-			"label": "Functional Button Exit",
+		"functionalButtonClose": {
+			"label": "Functional Button Close",
 			"category": "Functional Buttons",
 			"type": "boolean",
 			"value": true,
-			"helpText": "Hide Exit Button"
+			"helpText": "Hide Close Button"
 		},
 		"menuLayout": {
 			"label": "Menu Layout",

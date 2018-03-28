@@ -47,8 +47,10 @@ form[name="form"].av-receipt {
       }
       &:after {
         content: '\f00c' !important;
+        border-left: #fff !important;
+        border-bottom: #fff !important;
         -webkit-transform: rotate(0deg) scale(1.5)!important;
-        margin-left: -9px !important;
+        margin-left: -7px !important;
         margin-top: -6px !important;
       }
     } }
@@ -148,14 +150,15 @@ form[name="form"].av-receipt {
       border: 1px solid #8c8c8c;
     }
     .fa-circle {
-      border-style: none !important;
       &:before {
-        content: "\f192" !important;
-        width: 15px !important;
-        height: 15px !important;
-        -webkit-transform: translate(-50%,-50%) scale(1.65) !important;
-        -ms-transform: translate(-50%,-50%) scale(1.65) !important;
-        transform: translate(-50%,-50%) scale(1.65) !important;
+        content: "" !important;
+        width: 9px !important;
+        height: 8px !important;
+        border-radius: 50% !important;
+        background: #000 !important;
+        -webkit-transform: translate(-50%,-50%) !important;
+        -ms-transform: translate(-50%,-50%) !important;
+        transform: translate(-50%,-50%) !important;
       }
     }
   }

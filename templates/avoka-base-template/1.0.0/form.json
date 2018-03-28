@@ -213,7 +213,7 @@
 														{
 															"id": "cancel_confirm_text",
 															"subId": "01580dd2461f46b1adcd5d798f9c9022",
-															"type": "text-input"
+															"type": "text-display"
 														}
 													],
 													[
@@ -361,7 +361,23 @@
 															"rules": {
 																"sh": ""
 															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field"
+															],
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
+															"type": "button"
+														},
+														{
+															"id": "confirm_2",
+															"rules": {
+																"sh": ""
+															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field"
+															],
+															"subId": "30bcbd69db2b490e8e125e3ddd15e80c_1",
 															"type": "button"
 														}
 													]
@@ -859,26 +875,10 @@
 												"path": "",
 												"pathContext": "abs",
 												"properties": {
-													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+													"infoText": "Email details of the person you wish to share with below:"
 												},
 												"rows": [
 													[
-														{
-															"exclude": false,
-															"htmlLabel": "Recipient Email Address",
-															"id": "sharerecipientemail_1",
-															"label": "Recipient Email Address",
-															"mandatory": true,
-															"offset": {
-																"lg": "3",
-																"md": "3"
-															},
-															"path": "Sharerecipientemail_1",
-															"styles": [
-																"av-global-layout"
-															],
-															"type": "email"
-														},
 														{
 															"exclude": false,
 															"htmlLabel": "Your Full Name",
@@ -899,6 +899,24 @@
 													[
 														{
 															"exclude": false,
+															"htmlLabel": "Recipient Email Address",
+															"id": "sharerecipientemail_1",
+															"label": "Recipient Email Address",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sharerecipientemail_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "email"
+														}
+													],
+													[
+														{
+															"exclude": false,
 															"htmlLabel": "Personal Message (optional)",
 															"id": "personalmessage_1",
 															"label": "Personal Message (optional)",
@@ -912,9 +930,9 @@
 													[
 														{
 															"exclude": false,
-															"htmlLabel": "Share Now",
+															"htmlLabel": "Email Now",
 															"id": "shareFormButton_1",
-															"label": "Share Now",
+															"label": "Email Now",
 															"offset": {
 																"lg": "4",
 																"md": "4"
@@ -1167,7 +1185,6 @@
 		]
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -1178,9 +1195,9 @@
 	],
 	"localModals": [
 		"cancelsuccess",
-		"savesuccess",
 		"submitsuccess",
-		"sharesuccess"
+		"sharesuccess",
+		"savesuccess"
 	],
 	"maestroReleaseVersion": "17.10.3",
 	"modals": {
@@ -1550,23 +1567,20 @@
 												"rows": [
 													[
 														{
-															"exclude": false,
-															"id": "sharerecipientemail",
-															"path": "Sharerecipientemail",
-															"subId": "ea72110b798b4186be8e71d39c7206e1",
-															"type": "email"
-														},
-														{
-															"exclude": false,
 															"id": "sendername",
 															"path": "Sendername",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
+														},
+														{
+															"id": "sharerecipientemail",
+															"path": "Sharerecipientemail",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"type": "email"
 														}
 													],
 													[
 														{
-															"exclude": false,
 															"id": "personalmessage",
 															"path": "Personalmessage",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
@@ -1575,7 +1589,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "shareFormButton",
 															"subId": "4190d5a9a613410288c94ef8d968e01d",
 															"type": "button-email-share-form"
@@ -1589,21 +1602,34 @@
 										[
 											{
 												"id": "section_9",
+												"properties": {
+													"hideTitle": true,
+													"infoText": ""
+												},
 												"rows": [
 													[
 														{
-															"id": "textDisplay_8",
-															"subId": "925a5c310b2847508048d33806aca3cb",
-															"type": "text-display"
+															"id": "message_block_1",
+															"properties": {
+																"hideHeader": true,
+																"hideIcon": true
+															},
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_8",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
 														}
 													],
 													[
 														{
 															"exclude": false,
 															"id": "button_3",
-															"rules": {
-																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
-															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
@@ -1653,7 +1679,6 @@
 			"type": "save-success-modal"
 		},
 		"sharesuccess": {
-			"exclude": false,
 			"htmlLabel": "Share Success Modal",
 			"id": "sharesuccess",
 			"label": "Share Success Modal",
@@ -1760,7 +1785,6 @@
 				],
 				[
 					{
-						"exclude": false,
 						"htmlLabel": "<h1>Form Shared</h1>",
 						"id": "modalContent_7",
 						"label": "Form Shared",
@@ -1872,7 +1896,6 @@
 										],
 										[
 											{
-												"exclude": false,
 												"id": "section_12",
 												"properties": {
 													"hideTitle": true
@@ -1880,21 +1903,20 @@
 												"rows": [
 													[
 														{
-															"id": "sharerecipientemail_2",
-															"path": "Sharerecipientemail_2",
-															"subId": "ea72110b798b4186be8e71d39c7206e1",
-															"type": "email"
-														},
-														{
 															"id": "sendername_2",
 															"path": "Sendername_2",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
+														},
+														{
+															"id": "sharerecipientemail_2",
+															"path": "Sharerecipientemail_2",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"type": "email"
 														}
 													],
 													[
 														{
-															"exclude": false,
 															"id": "personalmessage_2",
 															"path": "Personalmessage_2",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
@@ -1920,25 +1942,63 @@
 										],
 										[
 											{
-												"exclude": false,
 												"htmlLabel": "More share",
 												"id": "section_13",
 												"label": "More share",
 												"properties": {
+													"hideTitle": true,
 													"infoText": ""
 												},
 												"rows": [
 													[
 														{
-															"id": "textDisplay_17",
-															"subId": "925a5c310b2847508048d33806aca3cb",
-															"type": "text-display"
+															"id": "message_block_4",
+															"properties": {
+																"hideHeader": true,
+																"hideIcon": true
+															},
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_19",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
 														}
 													],
 													[
 														{
-															"exclude": false,
 															"id": "button_7",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
+															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"exclude": true,
+															"id": "message_block_2",
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_17",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
+														}
+													],
+													[
+														{
+															"exclude": true,
+															"id": "button_9",
 															"rules": {
 																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
 															},

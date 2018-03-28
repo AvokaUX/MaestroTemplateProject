@@ -359,6 +359,23 @@
 										"rows": [
 											[
 												{
+													"label": "Your Full Name",
+													"styles": [
+														"av-global-layout"
+													],
+													"offset": {
+														"md": "3",
+														"lg": "3"
+													},
+													"exclude": false,
+													"htmlLabel": "Your Full Name",
+													"mandatory": true,
+													"path": "TextField",
+													"type": "text-input",
+													"id": "sendername",
+													"pubId": "ada1f01635de4a4eb7eccf6d8ee26220"
+												},
+												{
 													"offset": {
 														"md": "3",
 														"lg": "3"
@@ -377,24 +394,8 @@
 													"path": "EmailAddress",
 													"id": "sharerecipientemail",
 													"pubId": "ea72110b798b4186be8e71d39c7206e1"
-												},
-												{
-													"label": "Your Full Name",
-													"styles": [
-														"av-global-layout"
-													],
-													"offset": {
-														"md": "3",
-														"lg": "3"
-													},
-													"exclude": false,
-													"htmlLabel": "Your Full Name",
-													"mandatory": true,
-													"path": "TextField",
-													"type": "text-input",
-													"id": "sendername",
-													"pubId": "ada1f01635de4a4eb7eccf6d8ee26220"
 												}
+
 											],
 											[
 												{
@@ -458,22 +459,36 @@
 								],
 								[
 									{
-										"label": "Share form",
+										"label": "Share success",
 										"rows": [
 											[
 												{
-													"label": "Weve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.If you would like share your form again, just click the link below.",
-													"htmlLabel": "<p>We&#39;ve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.</p><p>If you would like share your form again, just click the link below.</p>",
-													"styles": [
-														"email-complete-message"
+													"label": "Share success message",
+													"htmlLabel": "Share success message",
+													"rows": [
+														[
+															{
+																"label": "Weve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.If you would like share your form again, just click the link below.",
+																"htmlLabel": "<p>We&#39;ve sent a link to your specified recipient. Note: to access the form the other party must answer your security question accurately.</p><p>If you would like share your form again, just click the link below.</p>",
+																"styles": [
+																	"email-complete-message"
+																],
+																"exclude": false,
+																"path": "",
+																"type": "text-display",
+																"id": "textDisplay_8",
+																"pubId": "925a5c310b2847508048d33806aca3cb"
+															}
+														]
 													],
+
 													"exclude": false,
 													"path": "",
-													"type": "text-display",
-													"id": "textDisplay_8",
-													"pubId": "925a5c310b2847508048d33806aca3cb"
+													"type": "message-block",
+													"id": "message_block_1"
 												}
 											],
+
 											[
 												{
 													"offset": {
@@ -488,7 +503,7 @@
 													"htmlLabel": "Share my form with others",
 													"path": "",
 													"rules": {
-														"click": "if(Form.data.hasOwnProperty(\"save_success_share_form\") ){\nForm.data.save_success_share_form = \"\";\nForm.data.save_success_recipient_email_address = \"\";\nForm.data.save_success_sender_name = \"\";\nForm.data.save_success_email_body = \"\";\n}"
+														"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
 													},
 													"type": "button",
 													"id": "button_3",
