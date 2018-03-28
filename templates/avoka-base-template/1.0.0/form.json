@@ -213,7 +213,10 @@
 												"rows": [
 													[
 														{
+															"exclude": false,
+															"htmlLabel": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
 															"id": "cancel_confirm_text",
+															"label": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
 															"subId": "01580dd2461f46b1adcd5d798f9c9022",
 															"type": "text-display"
 														}
