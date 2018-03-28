@@ -2257,8 +2257,7 @@
 															},
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"id": "open_6",
-															"type": "button",
-															"exclude": false
+															"type": "button"
 														}
 													]
 												],
@@ -2438,7 +2437,8 @@
 																	{
 																		"subId": "dde09b0b91bd4249929ecde1cbec14de",
 																		"id": "comments_2",
-																		"type": "text-area"
+																		"type": "text-area",
+																		"exclude": false
 																	}
 																]
 															],
@@ -2447,7 +2447,12 @@
 															},
 															"subId": "66800abae2f84be5953bd85d3488a708",
 															"id": "feedback_2",
-															"type": "section-2"
+															"type": "section-2",
+															"exclude": false,
+															"rules": {
+																"sh": "data.confirm_2 !== \"Confirm Cancel\";"
+															},
+															"animateVisibility": true
 														}
 													]
 												],
@@ -2459,7 +2464,8 @@
 									],
 									"subId": "c5ad53604b5a45ebb50f466dce69b7e5",
 									"id": "dialog_content_cancel_confirm_1",
-									"type": "dialog-content"
+									"type": "dialog-content",
+									"exclude": false
 								}
 							],
 							[
@@ -2488,12 +2494,15 @@
 																"av-form-field"
 															],
 															"rules": {
-																"click": "Form.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);",
-																"sh": ""
+																"sh": "",
+																"click": "if (data.confirm_2 === \"Confirm Cancel\") { data.confirm_2 = \"Cancel\" ;}\nelse {\nForm.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);\n}\n"
 															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c_1",
 															"id": "confirm_2",
-															"type": "button"
+															"type": "button",
+															"exclude": false,
+															"label": "",
+															"htmlLabel": "{{data.confirm_2}}"
 														}
 													]
 												],
@@ -2516,7 +2525,11 @@
 				]
 			],
 			"type": "cancel-confirm",
-			"id": "cancelconfirm"
+			"id": "cancelconfirm",
+			"exclude": false,
+			"rules": {
+				"load": "data.confirm_2 = \"Confirm Cancel\";"
+			}
 		},
 		"showxml": {
 			"rows": [
@@ -2999,16 +3012,16 @@
 													]
 												],
 												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
+												"exclude": false,
 												"id": "dialogFooterBlock_13",
-												"type": "block",
-												"exclude": false
+												"type": "block"
 											}
 										]
 									],
 									"subId": "2cd134f2d6f84810a8770240d8f4acc7",
+									"exclude": false,
 									"id": "dialogFooter_19",
-									"type": "block",
-									"exclude": false
+									"type": "block"
 								}
 							]
 						],
@@ -3021,8 +3034,7 @@
 			],
 			"type": "save-confirm",
 			"htmlLabel": "Share Confirm",
-			"id": "shareconfirm",
-			"exclude": false
+			"id": "shareconfirm"
 		}
 	},
 	"modals": {
@@ -5606,8 +5618,8 @@
 						}
 					},
 					"confirm_2": {
-						"label": "Cancel",
-						"htmlLabel": "Cancel",
+						"label": "",
+						"htmlLabel": "{{data.confirm_2}}",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
