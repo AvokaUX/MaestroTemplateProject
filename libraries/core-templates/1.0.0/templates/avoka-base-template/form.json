@@ -2248,13 +2248,17 @@
 												"rows": [
 													[
 														{
+															"properties": {
+																"trackingCodeField": "save_challenge_reference_code"
+															},
 															"rules": {
-																"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
+																"click": "Form.resumeForm(item.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
 																"sh": ""
 															},
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"id": "open_6",
-															"type": "button"
+															"type": "button",
+															"exclude": false
 														}
 													]
 												],
@@ -2924,8 +2928,7 @@
 															},
 															"label": "Email Now",
 															"styles": [
-																"message-banner",
-																"av-button-primary"
+																"bs-dialog-button-12962"
 															],
 															"properties": {
 																"emailFieldRef": "sharerecipientemail_1",
@@ -3014,7 +3017,8 @@
 			],
 			"type": "save-confirm",
 			"htmlLabel": "Share Confirm",
-			"id": "shareconfirm"
+			"id": "shareconfirm",
+			"exclude": false
 		}
 	},
 	"modals": {
@@ -3717,10 +3721,10 @@
 												"rows": [
 													[
 														{
+															"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_3}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
 															"subId": "671deba5ac7a4c4eafe625624203bb1a",
 															"id": "textDisplay_16",
-															"type": "text-display",
-															"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_3}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>"
+															"type": "text-display"
 														}
 													],
 													[
@@ -4326,8 +4330,7 @@
 			],
 			"properties": {},
 			"type": "save-success-modal",
-			"id": "savesuccess",
-			"exclude": false
+			"id": "savesuccess"
 		}
 	},
 	"formOptions": {
@@ -5357,8 +5360,7 @@
 						"htmlLabel": "",
 						"mandatoryMsg": "",
 						"properties": {
-							"ariaLabel": "",
-							"validationRef": ""
+							"ariaLabel": ""
 						}
 					},
 					"open_6": {
@@ -5366,7 +5368,8 @@
 						"htmlLabel": "Open",
 						"mandatoryMsg": "",
 						"properties": {
-							"ariaLabel": ""
+							"ariaLabel": "",
+							"validationRef": ""
 						}
 					},
 					"cancelconfirm": {

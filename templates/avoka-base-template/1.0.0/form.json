@@ -668,6 +668,7 @@
 												"rows": [
 													[
 														{
+															"exclude": false,
 															"id": "open_6",
 															"rules": {
 																"sh": ""
@@ -797,6 +798,7 @@
 			"type": "save-confirm"
 		},
 		"shareconfirm": {
+			"exclude": false,
 			"htmlLabel": "Share Confirm",
 			"id": "shareconfirm",
 			"label": "Share Confirm",
@@ -947,8 +949,7 @@
 																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
 															},
 															"styles": [
-																"message-banner",
-																"av-button-primary"
+																"bs-dialog-button-12962"
 															],
 															"type": "button-email-share-form"
 														}
@@ -1355,7 +1356,6 @@
 			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
-			"exclude": false,
 			"id": "savesuccess",
 			"properties": {},
 			"rows": [
