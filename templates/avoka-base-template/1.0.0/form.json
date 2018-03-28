@@ -928,6 +928,46 @@
 															],
 															"type": "text-area"
 														}
+													]
+												],
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton_1\") ? Form.data.shareFormButton_1.$responseStatus != \"success\": true;"
+												},
+												"styles": [
+													"bs-save-dialog-text-82753",
+													"bs-dialog-content-scroll-92184",
+													"mg-section-2"
+												],
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "00d88526276f4719ba460d7a9baede85",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"exclude": false,
+									"id": "dialogFooter_19",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"id": "dialogFooterBlock_13",
+												"rows": [
+													[
+														{
+															"exclude": true,
+															"htmlLabel": "Save & Share",
+															"id": "okay_19",
+															"label": "Save & Share",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
+															"type": "button"
+														}
 													],
 													[
 														{
@@ -949,47 +989,11 @@
 																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
 															},
 															"styles": [
-																"bs-dialog-button-12962"
+																"bs-dialog-button-12962",
+																"av-form-field",
+																"av-global-layout"
 															],
 															"type": "button-email-share-form"
-														}
-													]
-												],
-												"rules": {
-													"sh": "Form.data.hasOwnProperty(\"shareFormButton_1\") ? Form.data.shareFormButton_1.$responseStatus != \"success\": true;"
-												},
-												"styles": [
-													"bs-save-dialog-text-82753",
-													"bs-dialog-content-scroll-92184",
-													"mg-section-2"
-												],
-												"type": "section-2"
-											}
-										]
-									],
-									"subId": "00d88526276f4719ba460d7a9baede85",
-									"type": "dialog-content"
-								}
-							],
-							[
-								{
-									"id": "dialogFooter_19",
-									"rows": [
-										[
-											{
-												"id": "dialogFooterBlock_13",
-												"rows": [
-													[
-														{
-															"exclude": true,
-															"htmlLabel": "Save & Share",
-															"id": "okay_19",
-															"label": "Save & Share",
-															"rules": {
-																"sh": ""
-															},
-															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
-															"type": "button"
 														}
 													]
 												],
@@ -1186,6 +1190,7 @@
 		]
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",

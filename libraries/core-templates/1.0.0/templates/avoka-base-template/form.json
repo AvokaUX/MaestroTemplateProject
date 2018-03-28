@@ -2919,31 +2919,6 @@
 															"type": "text-area",
 															"id": "personalmessage_1"
 														}
-													],
-													[
-														{
-															"offset": {
-																"md": "4",
-																"lg": "4"
-															},
-															"label": "Email Now",
-															"styles": [
-																"bs-dialog-button-12962"
-															],
-															"properties": {
-																"emailFieldRef": "sharerecipientemail_1",
-																"senderNameRef": "sendername_1",
-																"emailBodyRef": "personalmessage_1"
-															},
-															"type": "button-email-share-form",
-															"rules": {
-																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
-															},
-															"exclude": false,
-															"htmlLabel": "Email Now",
-															"path": "",
-															"id": "shareFormButton_1"
-														}
 													]
 												],
 												"styles": [
@@ -2994,17 +2969,46 @@
 															"id": "okay_19",
 															"type": "button"
 														}
+													],
+													[
+														{
+															"offset": {
+																"md": "4",
+																"lg": "4"
+															},
+															"label": "Email Now",
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field",
+																"av-global-layout"
+															],
+															"properties": {
+																"emailFieldRef": "sharerecipientemail_1",
+																"senderNameRef": "sendername_1",
+																"emailBodyRef": "personalmessage_1"
+															},
+															"type": "button-email-share-form",
+															"rules": {
+																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
+															},
+															"exclude": false,
+															"htmlLabel": "Email Now",
+															"path": "",
+															"id": "shareFormButton_1"
+														}
 													]
 												],
 												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
 												"id": "dialogFooterBlock_13",
-												"type": "block"
+												"type": "block",
+												"exclude": false
 											}
 										]
 									],
 									"subId": "2cd134f2d6f84810a8770240d8f4acc7",
 									"id": "dialogFooter_19",
-									"type": "block"
+									"type": "block",
+									"exclude": false
 								}
 							]
 						],
@@ -5947,15 +5951,6 @@
 							"placeholder": ""
 						}
 					},
-					"shareFormButton_1": {
-						"label": "Email Now",
-						"htmlLabel": "Email Now",
-						"mandatoryMsg": "",
-						"properties": {
-							"ariaLabel": "",
-							"backgroundSuccessMessage": "An email with a link to your shared form has been sent to the specified recipient."
-						}
-					},
 					"dialogFooter_19": {
 						"label": "Dialog Footer",
 						"htmlLabel": "",
@@ -5978,6 +5973,15 @@
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
+						}
+					},
+					"shareFormButton_1": {
+						"label": "Email Now",
+						"htmlLabel": "Email Now",
+						"mandatoryMsg": "",
+						"properties": {
+							"ariaLabel": "",
+							"backgroundSuccessMessage": "An email with a link to your shared form has been sent to the specified recipient."
 						}
 					},
 					"cancelsuccess": {
@@ -7067,5 +7071,6 @@
 	"transact": {},
 	"maestroReleaseVersion": "17.10.3",
 	"id": "AvokaSmartForm",
-	"exclude": false
+	"exclude": false,
+	"isPreview": false
 }
