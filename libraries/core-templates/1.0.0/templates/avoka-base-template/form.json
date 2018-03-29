@@ -2314,6 +2314,11 @@
 												"rows": [
 													[
 														{
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "01580dd2461f46b1adcd5d798f9c9022",
 															"id": "cancel_confirm_text",
 															"type": "text-display",
@@ -2505,7 +2510,7 @@
 															"type": "button",
 															"exclude": false,
 															"label": "",
-															"htmlLabel": "{{data.confirm_2}}"
+															"htmlLabel": "{{data.confirm_2 || &quot;Cancel&quot;}}"
 														}
 													]
 												],
@@ -5622,7 +5627,7 @@
 					},
 					"confirm_2": {
 						"label": "",
-						"htmlLabel": "{{data.confirm_2}}",
+						"htmlLabel": "{{data.confirm_2 || &quot;Cancel&quot;}}",
 						"mandatoryMsg": "",
 						"properties": {
 							"ariaLabel": ""
