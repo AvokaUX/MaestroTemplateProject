@@ -409,9 +409,6 @@
 				],
 				"type": "nav-buttons",
 				"exclude": false,
-				"styles": [
-					"av-nav-bar"
-				],
 				"id": "navigationBar"
 			}
 		],

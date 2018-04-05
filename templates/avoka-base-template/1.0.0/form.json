@@ -127,8 +127,8 @@
 				"av-primary-contrast": "#525f66",
 				"av-progressbar-background": "#64767F",
 				"av-progressbar-background-opacity": "70%",
-				"av-progressbar-height": "12px",
 				"av-progressbar-banner-height": "75px",
+				"av-progressbar-height": "12px",
 				"av-secondary-color": "#454753",
 				"av-secondary-contrast": "#ffffff",
 				"av-section-1-header-color": "#202B34",
@@ -1168,7 +1168,6 @@
 		]
 	},
 	"id": "AvokaSmartForm",
-	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -1346,7 +1345,6 @@
 			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
-			"exclude": false,
 			"id": "savesuccess",
 			"properties": {},
 			"rows": [
@@ -1368,7 +1366,6 @@
 							[
 								{
 									"id": "stickyPanelModal_6",
-									"path": "StickyPanelModal_6",
 									"path": "StickyPanelModal_4",
 									"rows": [
 										[
@@ -1436,7 +1433,6 @@
 											{
 												"id": "textDisplay_13",
 												"path": "",
-												"path": "",
 												"subId": "58032c1494f04a78bf3cb8aae1c09afd",
 												"type": "text-display"
 											}
@@ -1453,13 +1449,12 @@
 				],
 				[
 					{
-						"id": "modalContent_1",
+						"id": "modalContent_4",
 						"path": "",
 						"rows": [
 							[
 								{
-									"id": "extraInformation_1",
-									"path": "",
+									"id": "extraInformation_3",
 									"path": "",
 									"rows": [
 										[
@@ -1468,7 +1463,7 @@
 												"rows": [
 													[
 														{
-															"id": "textDisplay_10",
+															"id": "textDisplay_11",
 															"subId": "21bd73fdb35241b08ab18b8701b25496",
 															"type": "text-display"
 														}
@@ -1561,14 +1556,12 @@
 												"rows": [
 													[
 														{
-															"exclude": false,
 															"id": "sharerecipientemail",
 															"path": "Sharerecipientemail",
 															"subId": "ea72110b798b4186be8e71d39c7206e1",
 															"type": "email"
 														},
 														{
-															"exclude": false,
 															"id": "sendername",
 															"path": "Sendername",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
@@ -1577,7 +1570,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "personalmessage",
 															"path": "Personalmessage",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
@@ -1586,7 +1578,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "shareFormButton",
 															"subId": "4190d5a9a613410288c94ef8d968e01d",
 															"type": "button-email-share-form"
@@ -1610,7 +1601,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "button_3",
 															"rules": {
 																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
@@ -1664,7 +1654,6 @@
 			"type": "save-success-modal"
 		},
 		"sharesuccess": {
-			"exclude": false,
 			"htmlLabel": "Share Success Modal",
 			"id": "sharesuccess",
 			"label": "Share Success Modal",
@@ -1771,7 +1760,6 @@
 				],
 				[
 					{
-						"exclude": false,
 						"htmlLabel": "<h1>Form Shared</h1>",
 						"id": "modalContent_7",
 						"label": "Form Shared",
@@ -1792,7 +1780,7 @@
 												"rows": [
 													[
 														{
-															"id": "textDisplay_13",
+															"id": "textDisplay_18",
 															"subId": "21bd73fdb35241b08ab18b8701b25496",
 															"type": "text-display"
 														}
@@ -1883,7 +1871,6 @@
 										],
 										[
 											{
-												"exclude": false,
 												"id": "section_12",
 												"properties": {
 													"hideTitle": true
@@ -1905,7 +1892,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "personalmessage_2",
 															"path": "Personalmessage_2",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
@@ -1931,7 +1917,6 @@
 										],
 										[
 											{
-												"exclude": false,
 												"htmlLabel": "More share",
 												"id": "section_13",
 												"label": "More share",
@@ -1948,7 +1933,6 @@
 													],
 													[
 														{
-															"exclude": false,
 															"id": "button_7",
 															"rules": {
 																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
@@ -2191,7 +2175,6 @@
 													]
 												],
 												"subId": "e2a49dc86e8248ad880fc76f6346e56f",
-												"subId": "e2a49dc86e8248ad880fc76f6346e56f",
 												"type": "block"
 											}
 										],
@@ -2292,116 +2275,130 @@
 		[
 			{
 				"exclude": false,
-				"htmlLabel": "Web Fonts",
-				"id": "webFonts",
-				"label": "Web Fonts",
+				"hasCustomId": true,
+				"htmlLabel": "Nuts & bolts",
+				"id": "nutsBolts",
+				"label": "Nuts & bolts",
 				"path": "",
 				"rows": [
 					[
 						{
 							"exclude": false,
-							"htmlLabel": "Quicksand Regular",
-							"id": "quicksandRegular",
-							"label": "Quicksand Regular",
+							"htmlLabel": "Web Fonts",
+							"id": "webFonts",
+							"label": "Web Fonts",
 							"path": "",
-							"properties": {
-								"font": {
-									"eotFileName": "Quicksand-Regular.eot",
-									"fontFamily": "QuicksandRegular",
-									"svgFileName": "Quicksand-Regular.svg",
-									"ttfFileName": "Quicksand-Regular.ttf",
-									"woffFileName": "Quicksand-Regular.woff",
-									"woff2FileName": "Quicksand-Regular.woff2"
-								}
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Quicksand Regular",
+										"id": "quicksandRegular",
+										"label": "Quicksand Regular",
+										"path": "",
+										"properties": {
+											"font": {
+												"eotFileName": "Quicksand-Regular.eot",
+												"fontFamily": "QuicksandRegular",
+												"svgFileName": "Quicksand-Regular.svg",
+												"ttfFileName": "Quicksand-Regular.ttf",
+												"woff2FileName": "Quicksand-Regular.woff2",
+												"woffFileName": "Quicksand-Regular.woff"
+											}
+										},
+										"type": "resource-font"
+									}
+								],
+								[
+									{
+										"htmlLabel": "Quicksand Bold",
+										"id": "quicksandBold",
+										"label": "Quicksand Bold",
+										"path": "",
+										"properties": {
+											"font": {
+												"eotFileName": "Quicksand-Bold.eot",
+												"fontFamily": "QuicksandBold",
+												"svgFileName": "Quicksand-Bold.svg",
+												"ttfFileName": "Quicksand-Bold.ttf",
+												"woff2FileName": "Quicksand-Bold.woff2",
+												"woffFileName": "Quicksand-Bold.woff"
+											}
+										},
+										"type": "resource-font"
+									}
+								],
+								[
+									{
+										"htmlLabel": "Quicksand Light",
+										"id": "quicksandLight",
+										"label": "Quicksand Light",
+										"path": "",
+										"properties": {
+											"font": {
+												"eotFileName": "Quicksand-Light.eot",
+												"fontFamily": "QuicksandLight",
+												"svgFileName": "Quicksand-Light.svg",
+												"ttfFileName": "Quicksand-Light.ttf",
+												"woff2FileName": "Quicksand-Light.woff2",
+												"woffFileName": "Quicksand-Light.woff"
+											}
+										},
+										"type": "resource-font"
+									}
+								]
+							],
+							"span": {
+								"lg": 0,
+								"md": 0,
+								"sm": 0,
+								"xs": 0
 							},
-							"type": "resource-font"
+							"type": "block"
 						}
 					],
 					[
 						{
-							"htmlLabel": "Quicksand Bold",
-							"id": "quicksandBold",
-							"label": "Quicksand Bold",
-							"path": "",
+							"exclude": false,
+							"id": "dockingController",
+							"path": "DockingController",
 							"properties": {
-								"font": {
-									"eotFileName": "Quicksand-Bold.eot",
-									"fontFamily": "QuicksandBold",
-									"svgFileName": "Quicksand-Bold.svg",
-									"ttfFileName": "Quicksand-Bold.ttf",
-									"woffFileName": "Quicksand-Bold.woff",
-									"woff2FileName": "Quicksand-Bold.woff2"
-								}
+								"dockPosition": 50
 							},
-							"type": "resource-font"
-						}
-					],
-					[
-						{
-							"htmlLabel": "Quicksand Light",
-							"id": "quicksandLight",
-							"label": "Quicksand Light",
-							"path": "",
-							"properties": {
-								"font": {
-									"eotFileName": "Quicksand-Light.eot",
-									"fontFamily": "QuicksandLight",
-									"svgFileName": "Quicksand-Light.svg",
-									"ttfFileName": "Quicksand-Light.ttf",
-									"woffFileName": "Quicksand-Light.woff",
-									"woff2FileName": "Quicksand-Light.woff2"
-								}
-							},
-							"type": "resource-font"
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"id": "scrollPosition",
+										"path": "",
+										"type": "data-field"
+									},
+									{
+										"id": "docked",
+										"path": "",
+										"type": "data-field"
+									},
+									{
+										"id": "undocked",
+										"path": "",
+										"type": "data-field"
+									}
+								]
+							],
+							"type": "docking-controller"
 						}
 					]
 				],
-				"span": {
-					"lg": 0,
-					"md": 0,
-					"sm": 0,
-					"xs": 0
-				},
 				"type": "block"
 			}
 		],
 		[
 			{
 				"exclude": false,
-				"id": "dockingController",
-				"path": "DockingController",
-				"properties": {
-					"dockPosition": 50
-				},
-				"rows": [
-					[
-						{
-							"exclude": false,
-							"id": "scrollPosition",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"id": "docked",
-							"path": "",
-							"type": "data-field"
-						},
-						{
-							"id": "undocked",
-							"path": "",
-							"type": "data-field"
-						}
-					]
-				],
-				"type": "docking-controller"
-			}
-		],
-		[
-			{
-				"exclude": false,
-				"htmlLabel": "Background",
-				"id": "background",
-				"label": "Background",
+				"hasCustomId": true,
+				"htmlLabel": "Background layer",
+				"id": "backgroundlayer",
+				"label": "Background layer",
 				"path": "",
 				"rows": [
 					[]
@@ -2417,119 +2414,127 @@
 		],
 		[
 			{
-				"animateVisibility": false,
-				"exclude": false,
-				"id": "formHeader1",
-				"rows": [
-					[
-						{
-							"id": "stickyPanel1",
-							"properties": {
-								"floatOver": true
-							},
-							"rows": [
-								[
-									{
-										"id": "formHeader",
-										"rows": [
-											[
-												{
-													"id": "brandLogo",
-													"rows": [
-														[
-															{
-																"id": "logo",
-																"properties": {},
-																"type": "image"
-															}
-														]
-													],
-													"type": "block"
-												},
-												{
-													"id": "dockingProgressBar",
-													"rows": [
-														[
-															{
-																"id": "progressBar_1",
-																"properties": {
-																	"displayGroupIcon": true
-																},
-																"type": "progress-bar"
-															}
-														]
-													],
-													"type": "docking-progress-bar"
-												}
-											]
-										],
-										"type": "form-header"
-									}
-								],
-								[
-									{
-										"id": "dockingErrorBlock",
-										"rows": [
-											[
-												{
-													"id": "dockErrors",
-													"type": "data-field"
-												},
-												{
-													"id": "errorsDockLock",
-													"type": "data-field"
-												}
-											]
-										],
-										"type": "docking-errors"
-									}
-								]
-							],
-							"type": "sticky-panel"
-						}
-					]
-				],
-				"rules": {},
-				"type": "form-header-main"
-			}
-		],
-		[
-			{
-				"animateVisibility": true,
 				"exclude": false,
 				"hasCustomId": true,
-				"htmlLabel": "Tracking Code",
-				"id": "trackingcode",
-				"label": "Tracking Code",
+				"htmlLabel": "Form layer",
+				"id": "formLayer",
+				"label": "Form layer",
 				"path": "",
 				"rows": [
 					[
 						{
+							"animateVisibility": false,
+							"exclude": false,
+							"id": "formHeader1",
+							"rows": [
+								[
+									{
+										"id": "stickyPanel1",
+										"properties": {
+											"floatOver": true
+										},
+										"rows": [
+											[
+												{
+													"id": "formHeader",
+													"rows": [
+														[
+															{
+																"id": "brandLogo",
+																"rows": [
+																	[
+																		{
+																			"id": "logo",
+																			"properties": {
+																				"src": {
+																					"height": "60",
+																					"width": "78"
+																				}
+																			},
+																			"type": "image"
+																		}
+																	]
+																],
+																"type": "block"
+															},
+															{
+																"id": "dockingProgressBar",
+																"rows": [
+																	[
+																		{
+																			"id": "progressBar_1",
+																			"properties": {
+																				"displayGroupIcon": true
+																			},
+																			"type": "progress-bar"
+																		}
+																	]
+																],
+																"type": "docking-progress-bar"
+															}
+														]
+													],
+													"type": "form-header"
+												}
+											],
+											[
+												{
+													"id": "dockingErrorBlock",
+													"rows": [
+														[
+															{
+																"id": "dockErrors",
+																"type": "data-field"
+															},
+															{
+																"id": "errorsDockLock",
+																"type": "data-field"
+															}
+														]
+													],
+													"type": "docking-errors"
+												}
+											]
+										],
+										"type": "sticky-panel"
+									}
+								]
+							],
+							"rules": {},
+							"type": "form-header-main"
+						}
+					],
+					[
+						{
+							"animateVisibility": true,
 							"exclude": false,
 							"hasCustomId": true,
-							"htmlLabel": "Tracking code:&nbsp;<strong>{{Form.data.SFMData.SystemProfile.TrackingCode}}</strong>",
-							"id": "trackingcodetext",
-							"label": "Tracking code:",
+							"htmlLabel": "Tracking Code",
+							"id": "trackingcode",
+							"label": "Tracking Code",
 							"path": "",
-							"type": "text-display"
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"hasCustomId": true,
+										"htmlLabel": "Tracking code:&nbsp;<strong>{{Form.data.SFMData.SystemProfile.TrackingCode}}</strong>",
+										"id": "trackingcodetext",
+										"label": "Tracking code:",
+										"path": "",
+										"type": "text-display"
+									}
+								]
+							],
+							"rules": {
+								"sh": "Util.isReceipt"
+							},
+							"styles": [
+								"av-tracking-code-70060"
+							],
+							"type": "block"
 						}
-					]
-				],
-				"rules": {
-					"sh": "Util.isReceipt"
-				},
-				"styles": [
-					"av-tracking-code-70060"
-				],
-				"type": "block"
-			}
-		],
-		[
-			{
-				"exclude": false,
-				"id": "content",
-				"label": "Content",
-				"rows": [
+					],
 					[
 						{
 							"exclude": false,
@@ -2544,7 +2549,7 @@
 								[
 									{
 										"animateVisibility": true,
-										"exclude": false,
+										"exclude": true,
 										"htmlLabel": "Landing Page",
 										"id": "landingPage",
 										"isFirstInGroup": false,
@@ -2613,31 +2618,6 @@
 										],
 										"type": "nav-page"
 									}
-								],
-								[
-									{
-										"exclude": false,
-										"htmlLabel": "Page 2",
-										"id": "page_1",
-										"isFirstInGroup": false,
-										"isLastInGroup": false,
-										"label": "Page 2",
-										"path": "",
-										"rows": [
-											[
-												{
-													"exclude": false,
-													"id": "section",
-													"path": "",
-													"rows": [
-														[]
-													],
-													"type": "section-2"
-												}
-											]
-										],
-										"type": "nav-page"
-									}
 								]
 							],
 							"rules": {
@@ -2646,458 +2626,124 @@
 								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = \"page-transition-\" + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n\nif (Form.getItemProperty(info.from, \"fullPage\") || Form.getItemProperty(info.to, \"fullPage\") || (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage)) {\n  pageTransition = \"page-transition-fade\";\n}\ndata.pageChangeAnimation = pageTransition;\n\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeDirection = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\n\nif (pageTransition == \"page-transition-slide\") {\n  var _scroll = $(window).scrollTop();\n  var dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\n  if (data.docked){\n    $(window).scrollTop(dp);\n    $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n  }\n  $(\"#\" + pageTo.id).css(\"top\", \"0\");\n}"
 							},
 							"styles": [
-								"av-page-transition"
+								"av-page-transition",
+								"av-max-width"
 							],
 							"type": "page-controller"
 						}
 					]
 				],
 				"rules": {},
-				"styles": [
-					"av-max-width"
-				],
+				"styles": [],
 				"type": "block"
 			}
 		],
 		[
 			{
 				"exclude": false,
-				"id": "navigationBar",
-				"label": "Navigation Bar",
+				"hasCustomId": true,
+				"htmlLabel": "Controls layer",
+				"id": "controlsLayer",
+				"path": "",
 				"rows": [
 					[
 						{
-							"label": "Nav Container",
+							"exclude": false,
+							"htmlLabel": "Controls frame",
+							"id": "controlsFrame",
+							"label": "Controls frame",
 							"rows": [
 								[
 									{
-										"id": "back",
-							"type": "button-docking-left"
-					},
-						{
-							"id": "next",
-							"type": "button-docking-right"
-					},
-						{
-							"id": "submit",
-							"offset": {
-								"lg": "5",
-								"md": "5",
-								"sm": "3",
-								"xs": "3"
-							},
-							"rules": {
-								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\ndata.blockSubmit = false;\n$timeout(function() {\t\n  data.blockSubmit = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockSubmit = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
-								"dc": "return data.blockSubmit  ? \"error\" : \"\";"
-							},
-							"span": {
-								"lg": 2,
-								"md": 2},
-							"styles": [
-								"av-button",
-								"av-global-layout",
-								"bs-submit-button-65937"
-							],
-							"type": "submit"}
+										"htmlLabel": "Navigation buttons",
+										"id": "navigationButtons",
+										"label": "Navigation buttons",
+										"rows": [
+											[
+												{
+													"id": "back",
+													"type": "button-docking-left"
+												},
+												{
+													"id": "next",
+													"type": "button-docking-right"
+												},
+												{
+													"id": "submit",
+													"type": "submit"
+												}
+											]
+										],
+										"type": "nav-buttons"
+									},
+									{
+										"exclude": false,
+										"id": "functionalMenuFabMenu",
+										"properties": {
+											"menuLayout": " fab-menu"
+										},
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "functionalMenu",
+													"rules": {
+														"click": "data[item.id] = data[item.id] !== true;\n$timeout(function(){\nconsole.log('ng-enter-active-----',$('.bs-functional-button-items-64706').hasClass('ng-enter-active'));\n  console.log('ng-leave-active-----',$('.bs-functional-button-items-64706').hasClass('ng-leave-active'))\n}, 1500)"
+													},
+													"subId": "6d8349dcfefa43e0b629a07c41b249ce",
+													"type": "button-toggle-icon"
+												}
+											],
+											[
+												{
+													"exclude": false,
+													"id": "exit",
+													"subId": "618724928da14126a1ea9dda71f4b9b6",
+													"type": "button"
+												},
+												{
+													"exclude": false,
+													"id": "resume",
+													"subId": "80892dfc989d43dd9cfa852107d2d1b4",
+													"type": "button"
+												},
+												{
+													"exclude": false,
+													"id": "help",
+													"subId": "97601a07e3304ceab704b6152d1174b9",
+													"type": "button"
+												},
+												{
+													"exclude": false,
+													"id": "share",
+													"subId": "b5002e83c936475d81cabdae77a20513",
+													"type": "button"
+												}
+											]
+										],
+										"type": "fab-menu"
+									}
 								]
 							],
-							"id": "navContainer",
-							"type": "block",
-							"styles": [
-								"av-nav-container"
-							]
+							"type": "block-controls-frame"
 						}
 					]
 				],
-				"styles": [
-					"av-nav-bar"
-				],
-				"type": "nav-buttons"
+				"type": "block-controls-layer"
 			}
 		],
 		[
 			{
 				"exclude": false,
-				"id": "functionalMenuFabMenu",
-				"properties": {
-					"menuLayout": " fab-menu"
-				},
+				"hasCustomId": true,
+				"htmlLabel": "Style master blocks",
+				"id": "stylemasterblocks",
+				"label": "Style master blocks",
+				"path": "",
 				"rows": [
-					[
-						{
-							"exclude": false,
-							"id": "functionalMenu",
-							"rules": {
-								"click": "data[item.id] = data[item.id] !== true;\n$timeout(function(){\nconsole.log('ng-enter-active-----',$('.bs-functional-button-items-64706').hasClass('ng-enter-active'));\n  console.log('ng-leave-active-----',$('.bs-functional-button-items-64706').hasClass('ng-leave-active'))\n}, 1500)"
-							},
-							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
-							"type": "button-toggle-icon"
-						}
-					],
-					[
-						{
-							"exclude": false,
-							"id": "exit",
-							"subId": "618724928da14126a1ea9dda71f4b9b6",
-							"type": "button"
-						},
-						{
-							"exclude": false,
-							"id": "resume",
-							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
-							"type": "button"
-						},
-						{
-							"exclude": false,
-							"id": "help",
-							"subId": "97601a07e3304ceab704b6152d1174b9",
-							"type": "button"
-						},
-						{
-							"exclude": false,
-							"id": "share",
-							"subId": "b5002e83c936475d81cabdae77a20513",
-							"type": "button"
-						}
-					]
+					[]
 				],
-				"type": "fab-menu"
-			}
-		],
-		[
-			{
-				"exclude": true,
-				"id": "styleMasterBlock",
-				"rows": [
-					[
-						{
-							"exclude": false,
-							"id": "personalDetails",
-							"rows": [
-								[
-									{
-										"id": "firstName1",
-										"noData": true,
-										"path": "",
-										"subId": "6aa417b9582d40969acb60350725a52d",
-										"type": "text-input"
-									},
-									{
-										"id": "middleNameOptional",
-										"mandatory": "",
-										"noData": true,
-										"path": "",
-										"subId": "df57af35e318476cb223b379c1a5e01a",
-										"type": "text-input"
-									},
-									{
-										"id": "lastName1",
-										"noData": true,
-										"path": "",
-										"subId": "0382c8ac5f9844c4aeaf827a4780d248",
-										"type": "text-input"
-									}
-								],
-								[
-									{
-										"id": "country",
-										"noData": true,
-										"path": "",
-										"properties": {},
-										"subId": "2bd1d8e014264f38a82f66a931f57b9f",
-										"type": "dropdown"
-									}
-								],
-								[
-									{
-										"id": "dateOfBirthDropdown",
-										"rows": [
-											[
-												{
-													"id": "day",
-													"noData": true,
-													"path": "",
-													"subId": "76182bfd13724884b4288cd928247150",
-													"type": "data-dropdown"
-												},
-												{
-													"id": "month",
-													"noData": true,
-													"path": "",
-													"properties": {},
-													"subId": "d08f3ac71df4450094742607de9e92f4",
-													"type": "dropdown"
-												},
-												{
-													"id": "year",
-													"noData": true,
-													"path": "",
-													"subId": "4d099b1664374469a28d935e5f39fe25",
-													"type": "dropdown-years"
-												}
-											],
-											[
-												{
-													"id": "date",
-													"subId": "fb68b0fdefc64e8192c84c1aacf492dc",
-													"type": "data-field"
-												}
-											],
-											[
-												{
-													"id": "daysData",
-													"subId": "53b69d508a60404db8b3ef75b4aa4556",
-													"type": "data-field"
-												}
-											]
-										],
-										"subId": "eb2a794cd58c42af94471c18973dc8aa",
-										"type": "dropdown-dob-block"
-									}
-								]
-							],
-							"subId": "18bbf754f32a4d6e96b7eca3e68f4e86",
-							"type": "section-2"
-						}
-					],
-					[
-						{
-							"exclude": true,
-							"id": "otherDetails",
-							"rows": [
-								[
-									{
-										"exclude": false,
-										"id": "emailAddress",
-										"noData": true,
-										"path": "",
-										"subId": "82537d43d5a541c78ae556a6a5f33098",
-										"type": "email"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"id": "datePicker",
-										"noData": true,
-										"path": "",
-										"subId": "9be4a2834e44441e818c98083d7c94d6",
-										"type": "date-picker"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"id": "currencyField",
-										"noData": true,
-										"path": "",
-										"subId": "3d4acf7191404c30a5619f5a4d4f5c2f",
-										"type": "currency"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"id": "decimalField",
-										"noData": true,
-										"path": "",
-										"subId": "1e7af05e0367400587f197c82eb6ce92",
-										"type": "decimal"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"id": "emailAddress2",
-										"mandatory": true,
-										"noData": true,
-										"path": "",
-										"subId": "d591a940ed7d4260b99e8adb7a67a47e",
-										"type": "email"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"id": "radioButtonGroup",
-										"noData": true,
-										"path": "",
-										"properties": {},
-										"subId": "16d7bc4912da4460a374f51a484d9228",
-										"type": "radio-button-group"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"id": "checkbox",
-										"noData": true,
-										"path": "",
-										"subId": "98ba81dcb4cb47e8a63ee89ee04412a6",
-										"type": "checkbox"
-									}
-								]
-							],
-							"subId": "0c6f9a0f209a4dfdadab56f9127b97e5",
-							"type": "section-2"
-						}
-					],
-					[
-						{
-							"exclude": true,
-							"id": "buttons",
-							"rows": [
-								[
-									{
-										"exclude": false,
-										"id": "block",
-										"rows": [
-											[
-												{
-													"id": "leftLinkButton",
-													"subId": "f68f5692046d4f028d4569b7ce2d17df",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "primarySmall",
-													"subId": "1797ebe5044f4dd4ba71c19e2ddf5442",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "primarySmall1",
-													"subId": "682349e8c23f410a98982bff55d9a7af",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "primary",
-													"subId": "ae570d801c55486bb3b00e882df5a948",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "primary1",
-													"subId": "7d8c074047df4e37a0ab3b537b696e1a",
-													"type": "button"
-												}
-											]
-										],
-										"subId": "c245e3914ce44d36a8dab5fa4c067db9",
-										"type": "block"
-									},
-									{
-										"id": "block1",
-										"rows": [
-											[
-												{
-													"id": "secondary",
-													"subId": "6275f07e5ecb47dbb955679156197df7",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "secondary1",
-													"subId": "f724bde317d64b2fb927c1620164d50e",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "secondary2",
-													"subId": "9646615088ce475d849dc324140f4ae3",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "secondary3",
-													"subId": "a2068a5825ba48f18e58ab506d7a00dc",
-													"type": "button"
-												}
-											]
-										],
-										"subId": "bf0b1ea6ed8f42debcae7e3ae27e9a13",
-										"type": "block"
-									},
-									{
-										"id": "block2",
-										"rows": [
-											[
-												{
-													"id": "rightLinkButton",
-													"subId": "ff1871ad44dc436189332e0a8f4b23d6",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "tertiary",
-													"subId": "e79ba2d359074c6cac0d0d36dbb60bdb",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "tertiary1",
-													"subId": "23c01cbc4fb64d33beaf0a2dee6addf5",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "tertiary2",
-													"subId": "d03f424680414e3f96dce44bc39988a7",
-													"type": "button"
-												}
-											],
-											[
-												{
-													"id": "tertiary3",
-													"subId": "6096879ca2d44ece859e4e47e89d6f4e",
-													"type": "button"
-												}
-											]
-										],
-										"subId": "2ce4a1382d7a48d3bbc0e1be7192e9b4",
-										"type": "block"
-									}
-								]
-							],
-							"subId": "536df813050644f883b4f0e00cdb1a0f",
-							"type": "section-2"
-						}
-					],
-					[
-						{
-							"htmlLabel": "About You",
-							"id": "aboutYou",
-							"label": "About You",
-							"path": "",
-							"rows": [
-								[
-									{
-										"exclude": false,
-										"id": "block3",
-										"path": "",
-										"rows": [
-											[]
-										],
-										"type": "block"
-									}
-								]
-							],
-							"type": "section-2"
-						}
-					]
-				],
-				"type": "style-master-block"
+				"type": "block"
 			}
 		]
 	],
@@ -3225,8 +2871,7 @@
 				"reference-code-block",
 				"mg-selector-block",
 				"av-tracking-code-70060",
-				"av-nav-bar",
-				"av-nav-container"
+				"av-controls-frame"
 			],
 			"properties": {}
 		},
@@ -3529,7 +3174,6 @@
 				"bs-tooltip-39326",
 				"av-global-fonts",
 				"av-focus-styling",
-				"mg-base",
 				"mg-form",
 				"av-core-receipt"
 			],
@@ -3767,7 +3411,8 @@
 			"availableStyles": [
 				"align-top",
 				"page-fade-transition",
-				"av-page-transition"
+				"av-page-transition",
+				"av-max-width"
 			],
 			"properties": {}
 		},

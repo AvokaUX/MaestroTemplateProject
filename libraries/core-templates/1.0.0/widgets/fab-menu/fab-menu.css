@@ -1,14 +1,14 @@
 form[name='form'] .av-fab-menu-container {
-    position: fixed;
+    position: absolute;
     z-index: 950;
-    bottom: 0;
+    top: 0;
     right: 0;
 }
 form[name='form'] .av-fab-menu-container .av-fab-menu-background {
     background-color: #fff;
     bottom: 0;
     right: 0;
-    position: fixed;
+    position: absolute;
     z-index: 1;
 }
 
@@ -96,7 +96,7 @@ form[name='form'] .av-fab-menu-container .id-functionalMenu {
     width: 60px !important;
     height: 60px !important;
     position: absolute;
-    bottom: 10px;
+    top: 0;
     right: 10px;
     z-index: 99999;
     float:right!important;

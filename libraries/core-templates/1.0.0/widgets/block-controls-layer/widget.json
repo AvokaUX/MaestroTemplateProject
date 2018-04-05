@@ -1,11 +1,11 @@
 {
-	"label": "Docking button",
-	"category": "Buttons",
-	"type": "button",
-	"html": "button-docking.html",
-	"css": "button-docking.css",
-	"span": {"xs": 12, "sm": 6, "md": 4, "lg": 4},
-	"styles": [
-		"av-global-layout"
-	]
+  "category": "Containers",
+  "label": "Controls layer",
+  "icon": "block.png",
+  "type": "block",
+  "css": "block-controls-layer.css",
+  "html": "block-controls-layer.html",
+  "rows": [[]],
+  "exMandatory": true,
+  "noData": true
 }

@@ -1,5 +1,5 @@
 {
-  "label": "AV Nav Container",
+  "label": "AV Controls Frame",
   "file": "style.less",
   "widgets": [
     "block"

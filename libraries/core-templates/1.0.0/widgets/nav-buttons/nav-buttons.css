@@ -1,8 +1,3 @@
-form[name='form'] .av-controls-frame {
+form[name='form'] .av-nav-buttons > .row {
   height: 100vh;
-  float: none;
-  margin: 0 auto;
-}
-form[name='form'] .av-controls-frame > .row {
-  height: 100%;
 }

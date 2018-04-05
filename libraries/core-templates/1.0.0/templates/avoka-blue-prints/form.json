@@ -579,12 +579,9 @@
 					]
 				],
 				"exclude": false,
-				"htmlLabel": "Navigation Bar",
+				"htmlLabel": "Controls layer",
 				"path": "",
-				"styles": [
-					"av-nav-bar"
-				],
-				"type": "block",
+				"type": "block-controls-layer",
 				"id": "navigationBar"
 			}
 		],
@@ -1093,7 +1090,6 @@
 				"bs-top-navigation-bar-05168",
 				"bs-top-navigation-container-95011",
 				"bs-fan-menu-mask-86056",
-				"av-nav-bar",
 				"bs-fab-menu-background-88907",
 				"bs-dialog-footer-10282",
 				"bs-ben-test-63099",

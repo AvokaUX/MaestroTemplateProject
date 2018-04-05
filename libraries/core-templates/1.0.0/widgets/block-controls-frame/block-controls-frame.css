@@ -1,6 +1,5 @@
-form[name='form'] .av-controls-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+form[name='form'] .av-controls-frame {
+  height: 100vh;
+  float: none;
+  margin: 0 auto;
 }
