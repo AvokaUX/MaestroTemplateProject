@@ -96,16 +96,17 @@
 			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
-				"av-button-contrast": "",
+				"av-button-contrast": "#fff",
 				"av-button-docking-color": "",
 				"av-button-docking-contrast": "",
 				"av-button-docking-font-color": "",
 				"av-button-font-size": "16px",
-				"av-button-primary-color": "",
+				"av-button-primary-color": "#60006E",
 				"av-button-secondary-color": "",
-				"av-dialog-background": "#000",
-				"av-dialog-background-opacity": "70%",
-				"av-focus-color": "",
+				"av-dialog-background": "#441775",
+				"av-dialog-background-opacity": "96%",
+				"av-docking-point": "50px",
+				"av-focus-color": "#430B70",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
 				"av-form-background-color": "#FFFFFF",
@@ -121,18 +122,24 @@
 				"av-menu-hover-color": "",
 				"av-menu-text-color": "",
 				"av-menu-text-hover-color": "",
+				"av-msg-section-background": "#64767F",
+				"av-msg-section-background-opacity": "70%",
 				"av-neutral-color": "#EEEEEE",
 				"av-neutral-contrast": "#333333",
 				"av-popover-help": "#fff",
 				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#7bd5ff",
-				"av-primary-contrast": "#64767f",
+				"av-primary-color": "#D00065",
+				"av-primary-contrast": "#86006A",
+				"av-progressbar-background": "#64767F",
+				"av-progressbar-background-opacity": "70%",
 				"av-secondary-color": "#454753",
 				"av-secondary-contrast": "#64767f",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
+				"av-section-background": "#fff",
+				"av-section-background-opacity": "90%",
 				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
@@ -153,6 +160,7 @@
 				"av-slide-menu-item-text-active-color": "",
 				"av-slide-menu-item-text-color": "",
 				"av-slide-menu-item-text-hover-color": "",
+				"av-stepperav-progressbar-height": "50px",
 				"av-sub-menu-active-background-color": "#FFFFFF",
 				"av-sub-menu-active-text-color": "#005280",
 				"av-sub-menu-background-color": "#FFFFFF",
@@ -383,12 +391,10 @@
 									"rows": [
 										[
 											{
-												"exclude": false,
 												"id": "dialogFooterBlock_5",
 												"rows": [
 													[
 														{
-															"exclude": false,
 															"id": "confirm_3",
 															"span": {
 																"md": 2
@@ -397,7 +403,6 @@
 															"type": "button"
 														},
 														{
-															"exclude": false,
 															"id": "confirm_2",
 															"styles": [
 																"bs-dialog-button-12962"
@@ -1357,7 +1362,6 @@
 	"maestroReleaseVersion": "17.10.3",
 	"modals": {
 		"cancelsuccess": {
-			"exclude": false,
 			"id": "cancelsuccess",
 			"properties": {},
 			"rows": [
@@ -1514,13 +1518,11 @@
 			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
-			"exclude": false,
 			"id": "savesuccess",
 			"properties": {},
 			"rows": [
 				[
 					{
-						"exclude": false,
 						"id": "modalBackground_4",
 						"rows": [
 							[]
@@ -1834,7 +1836,6 @@
 			"type": "save-success-modal"
 		},
 		"sharesuccess": {
-			"exclude": false,
 			"htmlLabel": "Share Success Modal",
 			"id": "sharesuccess",
 			"label": "Share Success Modal",
@@ -1842,7 +1843,6 @@
 			"rows": [
 				[
 					{
-						"exclude": false,
 						"id": "modalBackground_5",
 						"rows": [
 							[]
@@ -2227,13 +2227,11 @@
 			"type": "save-success-modal"
 		},
 		"submitsuccess": {
-			"exclude": false,
 			"id": "submitsuccess",
 			"properties": {},
 			"rows": [
 				[
 					{
-						"exclude": false,
 						"id": "modalBackground_2",
 						"rows": [
 							[]

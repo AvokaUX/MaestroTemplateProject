@@ -1,6 +1,6 @@
 <div id="{{item.id}}" class="panel-group wdg-accordion-section-container" data-ng-controller="avAccordionSectionController">
   <div class="panel panel-default wdg-accordion-panel" >
-    <div class="panel-heading" data-ng-click="toggleCollapse()">
+    <div class="panel-heading" data-ng-click="toggleCollapse()" data-ng-class="{'accordionOpen': accordionOpen}">
       <h4 class="panel-title" >
         <span data-ng-bind-html="sanitize(item.htmlLabel ? item.htmlLabel : item.label)"></span>
         <i data-ng-if="!accordionIsValid" class="wdg-error-icon fa fa-times-circle" 
