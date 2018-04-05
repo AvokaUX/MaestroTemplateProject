@@ -1,13 +1,13 @@
 {
-  "label": "AV fullscreen dialog",
-  "block": {
-    "decs": {
-      "color": "#a8a4a4"
-    },
-    "blocks": {}
-  },
-  "file": "style.less",
-  "widgets": [
-    "dialog"
-  ]
+	"block": {
+		"blocks": {},
+		"decs": {
+			"color": "#a8a4a4"
+		}
+	},
+	"file": "style.less",
+	"label": "AV fullscreen dialog",
+	"widgets": [
+		"dialog"
+	]
 }

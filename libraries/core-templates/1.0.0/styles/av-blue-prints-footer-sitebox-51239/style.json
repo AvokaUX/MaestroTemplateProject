@@ -1,0 +1,11 @@
+{
+	"block": {
+		"blocks": {},
+		"decs": {}
+	},
+	"file": "style.less",
+	"label": "av-blue-prints-footer-sitebox",
+	"widgets": [
+		"block"
+	]
+}

@@ -46,11 +46,11 @@
 			"value": "",
 			"order": 5
 		},
-		"fullPage": {
-			"label": "Full Page",
+		"landing": {
+			"label": "Landing Page",
 			"category": "Page View",
 			"type": "boolean",
-			"helpText": "Page spans full width and height of browser window",
+			"helpText": "Set the page to be landing page",
 			"value": "",
 			"order": 6
 		},

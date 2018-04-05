@@ -1,0 +1,32 @@
+@av-bp-dialog-background: #321575;
+@av-bp-dialog-background-opacity: 92;
+.av-dialog-mask {  
+  &.ng-enter, &.ng-leave {
+    transition: 0.5s all ease-in-out;  
+  }
+  &.ng-enter, &.ng-leave.ng-leave-active {
+    top: -100%;
+  }
+  &.ng-leave, &.ng-enter.ng-enter-active {
+    top: 0%;
+  }  
+  .av-dialog { 
+    width: 100% !important;
+    height: 100% !important; 
+    max-width: none !important;
+    max-height: none !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0 !important;
+    border: 0;
+    .override-color(background-color, #000, fade(@av-bp-dialog-background, @av-bp-dialog-background-opacity));
+    padding-top: 64px;
+    > .row:nth-of-type(2) {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}

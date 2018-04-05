@@ -179,7 +179,6 @@
 	"clearHidden": "no",
 	"dialogs": {
 		"cancelconfirm": {
-			"exclude": false,
 			"id": "cancelconfirm",
 			"rows": [
 				[
@@ -204,7 +203,6 @@
 						"rows": [
 							[
 								{
-									"exclude": false,
 									"id": "dialog_content_cancel_confirm_1",
 									"rows": [
 										[
@@ -213,7 +211,6 @@
 												"rows": [
 													[
 														{
-															"exclude": false,
 															"htmlLabel": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
 															"id": "cancel_confirm_text",
 															"label": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
@@ -326,7 +323,6 @@
 													[
 														{
 															"animateVisibility": true,
-															"exclude": false,
 															"id": "feedback_2",
 															"rows": [
 																[
@@ -339,7 +335,6 @@
 																],
 																[
 																	{
-																		"exclude": false,
 																		"id": "comments_2",
 																		"subId": "dde09b0b91bd4249929ecde1cbec14de",
 																		"type": "text-area"
@@ -385,7 +380,6 @@
 															"type": "button"
 														},
 														{
-															"exclude": false,
 															"htmlLabel": "{{data.confirm_2 || &quot;Cancel&quot;}}",
 															"id": "confirm_2",
 															"label": "",
@@ -2663,6 +2657,7 @@
 											"hideFormHeader": true,
 											"hideMenuButton": true,
 											"hideNavButtons": true,
+											"landing": true,
 											"offMenu": true
 										},
 										"rows": [

@@ -1,3 +1,5 @@
+@av-bp-dialog-background: #321575;
+@av-bp-dialog-background-opacity: 92;
 .av-dialog-mask {  
   &.ng-enter, &.ng-leave {
     transition: 0.5s all ease-in-out;  
@@ -19,7 +21,7 @@
     right: 0 !important;
     border-radius: 0 !important;
     border: 0;
-    .override-color(background-color, #000, fade(@av-dialog-background, @av-dialog-background-opacity));
+    .override-color(background-color, #000, fade(@av-bp-dialog-background, @av-bp-dialog-background-opacity));
     padding-top: 64px;
     > .row:nth-of-type(2) {
       position: relative;

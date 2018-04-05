@@ -184,11 +184,40 @@
 						"rows": [
 							[
 								{
+									"exclude": true,
 									"id": "close_4",
 									"subId": "d85962d96d4b42bcb517de498e25ed4d",
 									"type": "icon-button"
 								}
+							],
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Logo",
+									"id": "logo_1",
+									"label": "Logo",
+									"path": "",
+									"properties": {
+										"src": {
+											"fileName": "moolah_logo.png",
+											"height": "auto",
+											"width": "250"
+										}
+									},
+									"span": {
+										"lg": 4,
+										"md": 4,
+										"sm": 6,
+										"xs": 6
+									},
+									"styles": [],
+									"type": "image"
+								}
 							]
+						],
+						"styles": [
+							"bs-max-width-73189",
+							"av-blue-prints-dialog-header-65111"
 						],
 						"subId": "a658d5aa6767473fa2b1cf4c29fb820a",
 						"type": "block"
@@ -210,7 +239,7 @@
 														{
 															"id": "cancel_confirm_text",
 															"subId": "01580dd2461f46b1adcd5d798f9c9022",
-															"type": "text-input"
+															"type": "text-display"
 														}
 													],
 													[
@@ -312,6 +341,7 @@
 													],
 													[
 														{
+															"animateVisibility": true,
 															"id": "feedback_2",
 															"rows": [
 																[
@@ -330,6 +360,9 @@
 																	}
 																]
 															],
+															"rules": {
+																"sh": "data.confirm_2 !== \"Confirm Cancel\";"
+															},
 															"subId": "66800abae2f84be5953bd85d3488a708",
 															"type": "section-2"
 														}
@@ -350,15 +383,26 @@
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "dialogFooterBlock_5",
 												"rows": [
 													[
 														{
+															"exclude": false,
 															"id": "confirm_3",
-															"rules": {
-																"sh": ""
+															"span": {
+																"md": 2
 															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
+															"type": "button"
+														},
+														{
+															"exclude": false,
+															"id": "confirm_2",
+															"styles": [
+																"bs-dialog-button-12962"
+															],
+															"subId": "30bcbd69db2b490e8e125e3ddd15e80c_1",
 															"type": "button"
 														}
 													]
@@ -393,7 +437,35 @@
 									"subId": "9e296fc30de940628ec8b5dbda46ae26",
 									"type": "icon-button"
 								}
+							],
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Logo",
+									"id": "logo_5",
+									"label": "Logo",
+									"path": "",
+									"properties": {
+										"src": {
+											"fileName": "moolah_logo.png",
+											"height": "auto",
+											"width": "250"
+										}
+									},
+									"span": {
+										"lg": 4,
+										"md": 4,
+										"sm": 6,
+										"xs": 6
+									},
+									"styles": [],
+									"type": "image"
+								}
 							]
+						],
+						"styles": [
+							"bs-max-width-73189",
+							"av-blue-prints-dialog-header-65111"
 						],
 						"subId": "5c9d9ff72c1f42e689d9e5be9b70217b",
 						"type": "block"
@@ -530,10 +602,8 @@
 												"rows": [
 													[
 														{
+															"exclude": false,
 															"id": "okay_1",
-															"rules": {
-																"sh": ""
-															},
 															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"type": "button"
 														}
@@ -569,7 +639,35 @@
 									"subId": "5b00e0bbb7da47fcbd5ca16369a6e6af",
 									"type": "icon-button"
 								}
+							],
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Logo",
+									"id": "logo_3",
+									"label": "Logo",
+									"path": "",
+									"properties": {
+										"src": {
+											"fileName": "moolah_logo.png",
+											"height": "auto",
+											"width": "250"
+										}
+									},
+									"span": {
+										"lg": 4,
+										"md": 4,
+										"sm": 6,
+										"xs": 6
+									},
+									"styles": [],
+									"type": "image"
+								}
 							]
+						],
+						"styles": [
+							"bs-max-width-73189",
+							"av-blue-prints-dialog-header-65111"
 						],
 						"subId": "04b32c294db74c8aafac241d2f157a65",
 						"type": "block"
@@ -650,9 +748,10 @@
 													[
 														{
 															"id": "open_6",
-															"rules": {
-																"sh": ""
-															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-global-layout"
+															],
 															"subId": "e73c674fafa146b486eb2c6bd8530cb5",
 															"type": "button"
 														}
@@ -688,7 +787,35 @@
 									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
 									"type": "icon-button"
 								}
+							],
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Logo",
+									"id": "logo_2",
+									"label": "Logo",
+									"path": "",
+									"properties": {
+										"src": {
+											"fileName": "moolah_logo.png",
+											"height": "auto",
+											"width": "250"
+										}
+									},
+									"span": {
+										"lg": 4,
+										"md": 4,
+										"sm": 6,
+										"xs": 6
+									},
+									"styles": [],
+									"type": "image"
+								}
 							]
+						],
+						"styles": [
+							"bs-max-width-73189",
+							"av-blue-prints-dialog-header-65111"
 						],
 						"subId": "92a58e3bd4c94da895bad4b6f1b10f66",
 						"type": "block"
@@ -749,11 +876,252 @@
 													[
 														{
 															"id": "okay_18",
-															"rules": {
-																"sh": ""
-															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-global-layout"
+															],
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
+														}
+													]
+												],
+												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "2cd134f2d6f84810a8770240d8f4acc7",
+									"type": "block"
+								}
+							]
+						],
+						"subId": "1ea05f9f06654a3abe01133ecdc0782d",
+						"type": "block"
+					}
+				]
+			],
+			"type": "save-confirm"
+		},
+		"shareconfirm": {
+			"htmlLabel": "Share Confirm",
+			"id": "shareconfirm",
+			"label": "Share Confirm",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader_10",
+						"rows": [
+							[
+								{
+									"id": "close_10",
+									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
+									"type": "icon-button"
+								}
+							],
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Logo",
+									"id": "logo_6",
+									"label": "Logo",
+									"path": "",
+									"properties": {
+										"src": {
+											"fileName": "moolah_logo.png",
+											"height": "auto",
+											"width": "250"
+										}
+									},
+									"span": {
+										"lg": 4,
+										"md": 4,
+										"sm": 6,
+										"xs": 6
+									},
+									"styles": [],
+									"type": "image"
+								}
+							]
+						],
+						"styles": [
+							"bs-max-width-73189",
+							"av-blue-prints-dialog-header-65111"
+						],
+						"subId": "92a58e3bd4c94da895bad4b6f1b10f66",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"id": "dialogBody_9",
+						"rows": [
+							[
+								{
+									"htmlLabel": "Share Confirm Content",
+									"id": "dialog_content_save_confirm",
+									"label": "Share Confirm Content",
+									"rows": [
+										[
+											{
+												"exclude": true,
+												"htmlLabel": "Share it with your friends",
+												"id": "save_your_form_1",
+												"label": "Share it with your friends",
+												"rows": [
+													[
+														{
+															"htmlLabel": "Please save the form before share with your friends.",
+															"id": "save_confirm_message_1",
+															"label": "Please save the form before share with your friends.",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
+															"subId": "4aa53510219745c392c1b2c184aff183",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "security_question_save_confirm_1",
+															"rows": [
+																[]
+															],
+															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
+															"type": "section-2"
+														}
+													]
+												],
+												"subId": "f95da043f0bf4debb102897946a959d8",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"animateVisibility": true,
+												"entityPath": "dialog_content_save",
+												"exclude": false,
+												"htmlLabel": "Share form",
+												"id": "dialog_content_save_section_8",
+												"label": "Share form",
+												"path": "",
+												"pathContext": "abs",
+												"properties": {
+													"infoText": "Email details of the person you wish to share with below:"
+												},
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Your Full Name",
+															"id": "sendername_1",
+															"label": "Your Full Name",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sendername_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "text-input"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Recipient Email Address",
+															"id": "sharerecipientemail_1",
+															"label": "Recipient Email Address",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sharerecipientemail_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "email"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Personal Message (optional)",
+															"id": "personalmessage_1",
+															"label": "Personal Message (optional)",
+															"path": "Personalmessage_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "text-area"
+														}
+													]
+												],
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton_1\") ? Form.data.shareFormButton_1.$responseStatus != \"success\": true;"
+												},
+												"styles": [
+													"mg-section-2",
+													"bs-dialog-content-scroll-92184",
+													"bs-save-dialog-text-82753"
+												],
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "00d88526276f4719ba460d7a9baede85",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"exclude": false,
+									"id": "dialogFooter_19",
+									"rows": [
+										[
+											{
+												"exclude": false,
+												"id": "dialogFooterBlock_13",
+												"rows": [
+													[
+														{
+															"exclude": true,
+															"htmlLabel": "Save & Share",
+															"id": "okay_19",
+															"label": "Save & Share",
+															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Email Now",
+															"id": "shareFormButton_1",
+															"label": "Email Now",
+															"offset": {
+																"lg": "4",
+																"md": "4"
+															},
+															"path": "",
+															"properties": {
+																"emailBodyRef": "personalmessage_1",
+																"emailFieldRef": "sharerecipientemail_1",
+																"senderNameRef": "sendername_1"
+															},
+															"rules": {
+																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
+															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-global-layout"
+															],
+															"type": "button-email-share-form"
 														}
 													]
 												],
@@ -787,7 +1155,35 @@
 									"subId": "dbfbfa08cfd0446da064233de0d20684",
 									"type": "icon-button"
 								}
+							],
+							[
+								{
+									"exclude": false,
+									"htmlLabel": "Logo",
+									"id": "logo_4",
+									"label": "Logo",
+									"path": "",
+									"properties": {
+										"src": {
+											"fileName": "moolah_logo.png",
+											"height": "auto",
+											"width": "250"
+										}
+									},
+									"span": {
+										"lg": 4,
+										"md": 4,
+										"sm": 6,
+										"xs": 6
+									},
+									"styles": [],
+									"type": "image"
+								}
 							]
+						],
+						"styles": [
+							"bs-max-width-73189",
+							"av-blue-prints-dialog-header-65111"
 						],
 						"subId": "5afbc9d2c55d491686da20cbd937af4a",
 						"type": "block"
@@ -795,6 +1191,7 @@
 				],
 				[
 					{
+						"exclude": false,
 						"id": "dialogBody_7",
 						"rows": [
 							[
@@ -833,9 +1230,6 @@
 													[
 														{
 															"id": "okay_8",
-															"rules": {
-																"sh": ""
-															},
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"type": "button"
 														}
@@ -908,6 +1302,9 @@
 				"save": {}
 			}
 		},
+		"share": {
+			"confirm": {}
+		},
 		"show": {
 			"xml": {}
 		},
@@ -948,16 +1345,19 @@
 		"savechallenge",
 		"cancelconfirm",
 		"showxml",
-		"formhelp"
+		"formhelp",
+		"shareconfirm"
 	],
 	"localModals": [
 		"submitsuccess",
 		"savesuccess",
-		"cancelsuccess"
+		"cancelsuccess",
+		"sharesuccess"
 	],
 	"maestroReleaseVersion": "17.10.3",
 	"modals": {
 		"cancelsuccess": {
+			"exclude": false,
 			"id": "cancelsuccess",
 			"properties": {},
 			"rows": [
@@ -966,6 +1366,9 @@
 						"id": "modalBackground_3",
 						"rows": [
 							[]
+						],
+						"styles": [
+							"av-blueprints-background-98301"
 						],
 						"subId": "7bfe4e20293f46708f87d76d9d0892f7",
 						"type": "modal-background"
@@ -1111,14 +1514,19 @@
 			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
+			"exclude": false,
 			"id": "savesuccess",
 			"properties": {},
 			"rows": [
 				[
 					{
+						"exclude": false,
 						"id": "modalBackground_4",
 						"rows": [
 							[]
+						],
+						"styles": [
+							"av-blueprints-background-98301"
 						],
 						"subId": "f732f7ce92d343778d33422d566bccac",
 						"type": "modal-background"
@@ -1322,15 +1730,15 @@
 												"rows": [
 													[
 														{
-															"id": "emailAddress_3",
-															"path": "EmailAddress_3",
-															"subId": "ea72110b798b4186be8e71d39c7206e1",
-															"type": "email"
-														},
-														{
 															"id": "textField",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
+														},
+														{
+															"id": "emailAddress_4",
+															"path": "EmailAddress_3",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"type": "email"
 														}
 													],
 													[
@@ -1358,14 +1766,25 @@
 												"rows": [
 													[
 														{
-															"id": "textDisplay_8",
-															"subId": "925a5c310b2847508048d33806aca3cb",
-															"type": "text-display"
+															"id": "message_block_1",
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_8",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
 														}
 													],
 													[
 														{
 															"id": "button_3",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.emailAddress_4 = \"\";\nForm.data.textField = \"\";\nForm.data.multilineTextArea = \"\";\n}"
+															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
@@ -1414,15 +1833,413 @@
 			],
 			"type": "save-success-modal"
 		},
+		"sharesuccess": {
+			"exclude": false,
+			"htmlLabel": "Share Success Modal",
+			"id": "sharesuccess",
+			"label": "Share Success Modal",
+			"properties": {},
+			"rows": [
+				[
+					{
+						"exclude": false,
+						"id": "modalBackground_5",
+						"rows": [
+							[]
+						],
+						"styles": [
+							"av-blueprints-background-98301"
+						],
+						"subId": "f732f7ce92d343778d33422d566bccac",
+						"type": "modal-background"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"id": "modalHeader_10",
+						"rows": [
+							[
+								{
+									"id": "stickyPanelModal_5",
+									"path": "StickyPanelModal_5",
+									"rows": [
+										[
+											{
+												"id": "modalHeader_11",
+												"rows": [
+													[
+														{
+															"id": "modalLogo_5",
+															"rows": [
+																[
+																	{
+																		"id": "modalLogoImage_5",
+																		"properties": {},
+																		"subId": "753800ee88cf4fb5828cef5ff2d42942",
+																		"type": "image"
+																	}
+																]
+															],
+															"subId": "0da239b6d6dd4425b826c37bde2ed9be",
+															"type": "block"
+														}
+													]
+												],
+												"subId": "3211480eea7d45a4902f4096307e86e3",
+												"type": "form-header"
+											}
+										]
+									],
+									"subId": "9ff89a8968cf4669a2f0cfde2be17c63",
+									"type": "sticky-panel"
+								}
+							]
+						],
+						"subId": "239b00ef9f9c40ca81392d95bcbe9395",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "modalContent_5",
+						"rows": [
+							[
+								{
+									"id": "startANewForm_6",
+									"subId": "b424508c76b04541b46e1f5d5363b90a",
+									"type": "button"
+								}
+							]
+						],
+						"subId": "10e237c285f9418da41b60b370238bfc",
+						"type": "section-2"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"id": "modalFooter_5",
+						"rows": [
+							[
+								{
+									"id": "formFooterText_7",
+									"rows": [
+										[
+											{
+												"id": "textDisplay_18",
+												"path": "",
+												"subId": "58032c1494f04a78bf3cb8aae1c09afd",
+												"type": "text-display"
+											}
+										]
+									],
+									"subId": "0d94d9490724411199cd5164d7700297",
+									"type": "section-2"
+								}
+							]
+						],
+						"subId": "0be795c1d72f4ae2a4f58fb5a3234438",
+						"type": "form-footer"
+					}
+				],
+				[
+					{
+						"htmlLabel": "<h1>Form Shared</h1>",
+						"id": "modalContent_7",
+						"label": "Form Shared",
+						"path": "",
+						"properties": {
+							"infoText": ""
+						},
+						"rows": [
+							[
+								{
+									"id": "extraInformation_2",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": true,
+												"id": "block_8",
+												"rows": [
+													[
+														{
+															"id": "textDisplay_20",
+															"subId": "21bd73fdb35241b08ab18b8701b25496",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "textDisplay_14",
+															"subId": "52b663ec1a88494e912364c3bef72ca7",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "button_5",
+															"subId": "81858aae177f48428df2be70a02b1c40",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"id": "textDisplay_15",
+															"subId": "440b40ec2e4647e89753d88271fbc6ea",
+															"type": "text-display"
+														}
+													]
+												],
+												"subId": "d36ce219a6fc4184b5f9206b30767329",
+												"type": "block"
+											}
+										],
+										[
+											{
+												"exclude": true,
+												"id": "section_10",
+												"rows": [
+													[
+														{
+															"id": "block_11",
+															"rows": [
+																[
+																	{
+																		"id": "emailAddress_3",
+																		"path": "EmailAddress_3",
+																		"subId": "b13fb61cc547468eb4f4ad948670b0f9",
+																		"type": "email"
+																	}
+																],
+																[
+																	{
+																		"id": "emailSavedFormButton_1",
+																		"subId": "12230fde7ef048229e26bd7e266d42ef",
+																		"type": "button-email-saved-form"
+																	}
+																]
+															],
+															"subId": "587211bc2f294535989e84d58a5fc39d",
+															"type": "block"
+														}
+													]
+												],
+												"rules": {
+													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo === \"\" : true) &&\n(Form.data.hasOwnProperty(\"emailSavedFormButton_1\") ? Form.data.emailSavedFormButton_1.$responseStatus !== \"success\" : true)"
+												},
+												"subId": "39f81a0bd55242a5829cf25715d4b815",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"exclude": true,
+												"id": "section_11",
+												"rows": [
+													[
+														{
+															"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_3}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
+															"id": "textDisplay_16",
+															"subId": "671deba5ac7a4c4eafe625624203bb1a",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "button_6",
+															"rules": {
+																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"emailSavedFormButton_1\")) {\nForm.data.emailSavedFormButton_1.$responseStatus = \"\";\n}\nForm.data.emailAddress_3 = \"\";"
+															},
+															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
+															"type": "button"
+														}
+													]
+												],
+												"rules": {
+													"sh": "(Form.data.hasOwnProperty(\"emailSavedFormButton_1\") ? Form.data.emailSavedFormButton_1.$responseStatus === \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo !== \"\" : false)"
+												},
+												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"id": "section_12",
+												"properties": {
+													"hideTitle": true
+												},
+												"rows": [
+													[
+														{
+															"id": "sendername_2",
+															"path": "Sendername_2",
+															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
+															"type": "text-input"
+														},
+														{
+															"id": "sharerecipientemail_2",
+															"path": "Sharerecipientemail_2",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"type": "email"
+														}
+													],
+													[
+														{
+															"id": "personalmessage_2",
+															"path": "Personalmessage_2",
+															"subId": "1cc7b7cdb2b1421291056edc52e43525",
+															"type": "text-area"
+														}
+													],
+													[
+														{
+															"id": "shareFormButton_2",
+															"properties": {
+																"emailBodyRef": "personalmessage_2",
+																"emailFieldRef": "sharerecipientemail_2",
+																"senderNameRef": "sendername_2"
+															},
+															"subId": "4190d5a9a613410288c94ef8d968e01d",
+															"type": "button-email-share-form"
+														}
+													]
+												],
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton_2\") ? Form.data.shareFormButton_2.$responseStatus != \"success\": true;"
+												},
+												"subId": "61839116f7ec43688bcfe12801469d1a",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"htmlLabel": "More share",
+												"id": "section_13",
+												"label": "More share",
+												"properties": {
+													"hideTitle": true,
+													"infoText": ""
+												},
+												"rows": [
+													[
+														{
+															"id": "message_block_4",
+															"properties": {
+																"hideHeader": true,
+																"hideIcon": true
+															},
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_19",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
+														}
+													],
+													[
+														{
+															"id": "button_7",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
+															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"exclude": true,
+															"id": "message_block_2",
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_17",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
+														}
+													],
+													[
+														{
+															"exclude": true,
+															"id": "button_9",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
+															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
+															"type": "button"
+														}
+													]
+												],
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton_2\") ? Form.data.shareFormButton_2.$responseStatus == \"success\": false;"
+												},
+												"subId": "aa9991c952134393abcae5d9f9a5eb27",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "de99337db1f2469589104ceb5ccb8c33",
+									"type": "block"
+								}
+							],
+							[
+								{
+									"id": "followOnOptions_2",
+									"rows": [
+										[
+											{
+												"id": "startANewForm_7",
+												"subId": "f5d3a71e81244605b97d33064ec7ea04",
+												"type": "button"
+											},
+											{
+												"id": "returnToPortal_2",
+												"subId": "438498f8cfc04be294f4d4b11ada089c",
+												"type": "button"
+											},
+											{
+												"id": "showFormXml_2",
+												"subId": "6c6e2a6b68224f2b92492432657e985c",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "690cb1870beb4928bff2d61e08c57ef3",
+									"type": "follow-on-options"
+								}
+							]
+						],
+						"subId": "2333d120d1b74667a8d32d0935672f5e",
+						"type": "section-2"
+					}
+				]
+			],
+			"type": "save-success-modal"
+		},
 		"submitsuccess": {
+			"exclude": false,
 			"id": "submitsuccess",
 			"properties": {},
 			"rows": [
 				[
 					{
+						"exclude": false,
 						"id": "modalBackground_2",
 						"rows": [
 							[]
+						],
+						"styles": [
+							"av-blueprints-background-98301"
 						],
 						"subId": "483bb8006ce24c2a8d74081f9262b51e",
 						"type": "modal-background"
@@ -1617,6 +2434,7 @@
 															"rows": [
 																[
 																	{
+																		"htmlLabel": "<p>We&#39;ve sent a copy of your submission to your email address (<strong>{{Form.data.$submitResponse.emailSentTo ? Form.data.$submitResponse.emailSentTo : Form.data.emailAddress_1}}</strong>).</p><p>If you didn&#39;t receive it or would like another copy, just select the option below.</p>",
 																		"id": "textDisplay_3",
 																		"subId": "714e6460e28a464cafc130fc3b4b8bb2",
 																		"type": "text-display"
@@ -1625,6 +2443,9 @@
 																[
 																	{
 																		"id": "button",
+																		"rules": {
+																			"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"submit_success_send_receipt\")) {\nForm.data.submit_success_send_receipt.$responseStatus = \"\";\n}\nForm.data.emailAddress_1 = \"\";"
+																		},
 																		"subId": "6f9319a7b2ab4377bb9de43ec572300d",
 																		"type": "button"
 																	}
@@ -1697,7 +2518,9 @@
 		"AvokaSmartForm"
 	],
 	"path": "AvokaSmartForm",
-	"properties": {},
+	"properties": {
+		"checkboxRadioAutoScroll": false
+	},
 	"rows": [
 		[
 			{
@@ -1941,6 +2764,7 @@
 		],
 		[
 			{
+				"animateVisibility": true,
 				"exclude": false,
 				"htmlLabel": "Step title",
 				"id": "block_7",
@@ -1986,14 +2810,19 @@
 						}
 					]
 				],
+				"rules": {
+					"sh": "!Form.$Pages.currentPage.properties.hideFormHeader"
+				},
 				"styles": [
-					"bs-max-width-73189"
+					"bs-max-width-73189",
+					"bc-white-background-20804"
 				],
 				"type": "block"
 			}
 		],
 		[
 			{
+				"animateVisibility": true,
 				"exclude": false,
 				"htmlLabel": "Progress bar",
 				"id": "block_6",
@@ -2019,6 +2848,9 @@
 						}
 					]
 				],
+				"rules": {
+					"sh": "!Form.$Pages.currentPage.properties.hideFormHeader"
+				},
 				"styles": [
 					"bc-white-background-20804",
 					"bs-tramline-container-62540",
@@ -2044,6 +2876,119 @@
 							"rows": [
 								[
 									{
+										"animateVisibility": true,
+										"exclude": false,
+										"htmlLabel": "Landing page",
+										"id": "page_4",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Landing page",
+										"path": "",
+										"properties": {
+											"hideFormHeader": true,
+											"hideMenuButton": true,
+											"hideNavButtons": true,
+											"landing": true,
+											"offMenu": true
+										},
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"htmlLabel": "Deposit Account",
+													"id": "section_1",
+													"label": "Deposit Account",
+													"path": "",
+													"properties": {
+														"infoText": "<p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit. Donec rutrum congue leo eget malesuada. Nulla porttitor accumsan tincidunt. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus.</p><p>&nbsp;</p>"
+													},
+													"rows": [
+														[
+															{
+																"exclude": false,
+																"htmlLabel": "Get started",
+																"id": "button_4",
+																"label": "Get started",
+																"offset": {
+																	"lg": "8",
+																	"md": "8"
+																},
+																"path": "",
+																"rules": {
+																	"click": "Form.$Pages.move(true);"
+																},
+																"type": "button"
+															}
+														],
+														[
+															{
+																"exclude": false,
+																"htmlLabel": "Landing page content",
+																"id": "block_17",
+																"label": "Landing page content",
+																"path": "",
+																"rows": [
+																	[
+																		{
+																			"exclude": false,
+																			"htmlLabel": "<h1><font color=\"rgba(0, 0, 0, 0)\" face=\"roboto, helvetica, sans-serif\" size=\"3\"><span style=\"white-space:pre-wrap\">You are just 3 steps away from an instant decision</span></font></h1><p>Donec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus.</p>",
+																			"id": "textDisplay_21",
+																			"label": "You are just 3 steps away from an instant decisionDonec rutrum congue leo eget malesuada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus.",
+																			"path": "",
+																			"span": {
+																				"lg": 9,
+																				"md": 9
+																			},
+																			"type": "text-display"
+																		},
+																		{
+																			"exclude": false,
+																			"id": "image",
+																			"offset": {
+																				"lg": "1",
+																				"md": "1",
+																				"sm": "5",
+																				"xs": "5"
+																			},
+																			"path": "",
+																			"properties": {
+																				"src": {
+																					"fileName": "Group.png",
+																					"height": "60px",
+																					"width": "60px"
+																				}
+																			},
+																			"span": {
+																				"lg": 2,
+																				"md": 2,
+																				"sm": 2,
+																				"xs": 2
+																			},
+																			"styles": [],
+																			"type": "image"
+																		}
+																	]
+																],
+																"type": "block"
+															}
+														]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"rules": {
+											"sh": "!Util.isReceipt"
+										},
+										"styles": [
+											"mg-section-1",
+											"av-blue-prints-ladingpage-47134"
+										],
+										"type": "nav-page"
+									}
+								],
+								[
+									{
 										"exclude": false,
 										"htmlLabel": "Eligibility",
 										"id": "pageGroup",
@@ -2067,7 +3012,74 @@
 																"id": "section",
 																"path": "",
 																"rows": [
-																	[]
+																	[
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page content",
+																			"id": "block_15",
+																			"label": "Page content",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"id": "yesnoRadioButtons",
+																						"path": "YesnoRadioButtons",
+																						"properties": {},
+																						"type": "radio-buttons-yesno"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 8,
+																				"md": 8
+																			},
+																			"type": "block"
+																		},
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page icon",
+																			"id": "block_16",
+																			"label": "Page icon",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"htmlLabel": "Page icon",
+																						"id": "image_2",
+																						"label": "Page icon",
+																						"offset": {
+																							"lg": "4",
+																							"md": "4",
+																							"sm": "4",
+																							"xs": "4"
+																						},
+																						"path": "",
+																						"properties": {
+																							"src": {
+																								"fileName": "Bundle_Neutral.png"
+																							}
+																						},
+																						"span": {
+																							"lg": 4,
+																							"md": 4,
+																							"sm": 4,
+																							"xs": 4
+																						},
+																						"type": "image"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 4,
+																				"md": 4,
+																				"sm": 0,
+																				"xs": 0
+																			},
+																			"type": "block"
+																		}
+																	]
 																],
 																"type": "section-2"
 															}
@@ -2077,7 +3089,8 @@
 														"pagescroll": "/*var _scroll = $(window).scrollTop();\nif (_scroll > 0 && _scroll <= 50) Scroll.scrollTo(_scroll);\nelse if (_scroll > 50) Scroll.scrollTo(55);*/\nreturn false;"
 													},
 													"styles": [
-														"mg-section-1"
+														"mg-section-1",
+														"av-blue-prints-normal-page-24755"
 													],
 													"type": "nav-page"
 												}
@@ -2098,11 +3111,82 @@
 																"id": "section_2",
 																"path": "",
 																"rows": [
-																	[]
+																	[
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page content",
+																			"id": "block_18",
+																			"label": "Page content",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"id": "textField_1",
+																						"path": "TextField_1",
+																						"type": "text-input"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 8,
+																				"md": 8
+																			},
+																			"type": "block"
+																		},
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page icon",
+																			"id": "block_19",
+																			"label": "Page icon",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"htmlLabel": "Page icon",
+																						"id": "image_3",
+																						"label": "Page icon",
+																						"offset": {
+																							"lg": "4",
+																							"md": "4",
+																							"sm": "4",
+																							"xs": "4"
+																						},
+																						"path": "",
+																						"properties": {
+																							"src": {
+																								"fileName": "logo_BPAY.png",
+																								"width": "60px"
+																							}
+																						},
+																						"span": {
+																							"lg": 4,
+																							"md": 4,
+																							"sm": 4,
+																							"xs": 4
+																						},
+																						"type": "image"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 4,
+																				"md": 4,
+																				"sm": 0,
+																				"xs": 0
+																			},
+																			"type": "block"
+																		}
+																	]
 																],
 																"type": "section-2"
 															}
 														]
+													],
+													"styles": [
+														"mg-section-1",
+														"av-blue-prints-normal-page-24755"
 													],
 													"type": "nav-page"
 												}
@@ -2129,7 +3213,88 @@
 													"label": "Verify 3-1",
 													"path": "",
 													"rows": [
-														[]
+														[
+															{
+																"exclude": false,
+																"id": "section_14",
+																"path": "",
+																"rows": [
+																	[
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page content",
+																			"id": "block_20",
+																			"label": "Page content",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"id": "yesnoRadioButtons_2",
+																						"path": "YesnoRadioButtons_2",
+																						"properties": {},
+																						"type": "radio-buttons-yesno"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 8,
+																				"md": 8
+																			},
+																			"type": "block"
+																		},
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page icon",
+																			"id": "block_21",
+																			"label": "Page icon",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"htmlLabel": "Page icon",
+																						"id": "image_4",
+																						"label": "Page icon",
+																						"offset": {
+																							"lg": "4",
+																							"md": "4",
+																							"sm": "4",
+																							"xs": "4"
+																						},
+																						"path": "",
+																						"properties": {
+																							"src": {
+																								"fileName": "Bundle_Neutral.png"
+																							}
+																						},
+																						"span": {
+																							"lg": 4,
+																							"md": 4,
+																							"sm": 4,
+																							"xs": 4
+																						},
+																						"type": "image"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 4,
+																				"md": 4,
+																				"sm": 0,
+																				"xs": 0
+																			},
+																			"type": "block"
+																		}
+																	]
+																],
+																"type": "section-2"
+															}
+														]
+													],
+													"styles": [
+														"mg-section-1",
+														"av-blue-prints-normal-page-24755"
 													],
 													"type": "nav-page"
 												}
@@ -2156,7 +3321,88 @@
 													"label": "Legal 4-1",
 													"path": "",
 													"rows": [
-														[]
+														[
+															{
+																"exclude": false,
+																"id": "section_15",
+																"path": "",
+																"rows": [
+																	[
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page content",
+																			"id": "block_22",
+																			"label": "Page content",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"id": "yesnoRadioButtons_3",
+																						"path": "YesnoRadioButtons_3",
+																						"properties": {},
+																						"type": "radio-buttons-yesno"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 8,
+																				"md": 8
+																			},
+																			"type": "block"
+																		},
+																		{
+																			"exclude": false,
+																			"htmlLabel": "Page icon",
+																			"id": "block_23",
+																			"label": "Page icon",
+																			"path": "",
+																			"rows": [
+																				[
+																					{
+																						"exclude": false,
+																						"htmlLabel": "Page icon",
+																						"id": "image_5",
+																						"label": "Page icon",
+																						"offset": {
+																							"lg": "4",
+																							"md": "4",
+																							"sm": "4",
+																							"xs": "4"
+																						},
+																						"path": "",
+																						"properties": {
+																							"src": {
+																								"fileName": "Bundle_Neutral.png"
+																							}
+																						},
+																						"span": {
+																							"lg": 4,
+																							"md": 4,
+																							"sm": 4,
+																							"xs": 4
+																						},
+																						"type": "image"
+																					}
+																				]
+																			],
+																			"span": {
+																				"lg": 4,
+																				"md": 4,
+																				"sm": 0,
+																				"xs": 0
+																			},
+																			"type": "block"
+																		}
+																	]
+																],
+																"type": "section-2"
+															}
+														]
+													],
+													"styles": [
+														"mg-section-1",
+														"av-blue-prints-normal-page-24755"
 													],
 													"type": "nav-page"
 												}
@@ -2184,6 +3430,7 @@
 		],
 		[
 			{
+				"exclude": false,
 				"id": "NavigationButtons",
 				"rows": [
 					[
@@ -2211,11 +3458,216 @@
 								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\ndata.blockSubmit = false;\n$timeout(function() {\t\n  data.blockSubmit = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockSubmit = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
 								"dc": "return data.blockSubmit  ? \"error\" : \"\";"
 							},
+							"styles": [
+								"av-button",
+								"av-global-layout",
+								"bs-submit-button-65937"
+							],
 							"type": "submit"
 						}
 					]
 				],
 				"type": "nav-buttons"
+			}
+		],
+		[
+			{
+				"exclude": false,
+				"id": "formFooter",
+				"path": "",
+				"rows": [
+					[
+						{
+							"hideLabel": false,
+							"id": "footerSection",
+							"properties": {
+								"hideTitle": true
+							},
+							"rows": [
+								[
+									{
+										"exclude": true,
+										"id": "formFooterText",
+										"path": "",
+										"styles": [],
+										"subId": "8c9b02742d3841d8a9c30d826878b6af",
+										"type": "text-display"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Footer logo",
+										"id": "block_12",
+										"label": "Footer logo",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "image_1",
+													"path": "",
+													"properties": {
+														"src": {
+															"fileName": "2018-03-07_1604.png"
+														}
+													},
+													"type": "image"
+												}
+											]
+										],
+										"span": {
+											"lg": 2,
+											"md": 2,
+											"sm": 2,
+											"xs": 2
+										},
+										"type": "block"
+									},
+									{
+										"exclude": false,
+										"htmlLabel": "Footer content",
+										"id": "block_13",
+										"label": "Footer content",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"htmlLabel": "Site map box",
+													"id": "block_14",
+													"label": "Site map box",
+													"path": "",
+													"rows": [
+														[
+															{
+																"exclude": false,
+																"htmlLabel": "Security",
+																"id": "link",
+																"label": "Security",
+																"path": "Link",
+																"span": {
+																	"lg": 2,
+																	"md": 2,
+																	"sm": 2,
+																	"xs": 2
+																},
+																"type": "link"
+															},
+															{
+																"exclude": false,
+																"htmlLabel": "Legal",
+																"id": "link_1",
+																"label": "Legal",
+																"path": "Link_1",
+																"span": {
+																	"lg": 2,
+																	"md": 2,
+																	"sm": 2,
+																	"xs": 2
+																},
+																"type": "link"
+															},
+															{
+																"exclude": false,
+																"htmlLabel": "Privacy",
+																"id": "link_2",
+																"label": "Privacy",
+																"path": "Link_2",
+																"span": {
+																	"lg": 2,
+																	"md": 2,
+																	"sm": 2,
+																	"xs": 2
+																},
+																"type": "link"
+															},
+															{
+																"exclude": false,
+																"htmlLabel": "Accessible banking",
+																"id": "link_3",
+																"label": "Accessible banking",
+																"path": "Link_3",
+																"span": {
+																	"lg": 2,
+																	"md": 2,
+																	"sm": 2,
+																	"xs": 2
+																},
+																"type": "link"
+															},
+															{
+																"exclude": false,
+																"htmlLabel": "Site map",
+																"id": "link_4",
+																"label": "Site map",
+																"path": "Link_4",
+																"span": {
+																	"lg": 2,
+																	"md": 2,
+																	"sm": 2,
+																	"xs": 2
+																},
+																"type": "link"
+															},
+															{
+																"exclude": false,
+																"htmlLabel": "Community Reinvestment",
+																"id": "link_5",
+																"label": "Community Reinvestment",
+																"path": "Link_5",
+																"span": {
+																	"lg": 2,
+																	"md": 2,
+																	"sm": 2,
+																	"xs": 2
+																},
+																"type": "link"
+															}
+														]
+													],
+													"styles": [
+														"av-blue-prints-footer-sitebox-51239"
+													],
+													"type": "block"
+												}
+											],
+											[
+												{
+													"exclude": false,
+													"htmlLabel": "<p>&copy;&nbsp;{{Calc.date().getFullYear()}}&nbsp;Vault Bank All Rights Reserved</p>",
+													"id": "formFooterText_1",
+													"label": "Vault Bank All Rights Reserved",
+													"path": "",
+													"styles": [],
+													"type": "text-display"
+												}
+											]
+										],
+										"span": {
+											"lg": 10,
+											"md": 10,
+											"sm": 10,
+											"xs": 10
+										},
+										"styles": [
+											"av-blue-prints-footer-content-25574"
+										],
+										"type": "block"
+									}
+								]
+							],
+							"styles": [
+								"av-blue-prints-footer-23112"
+							],
+							"type": "section-2"
+						}
+					]
+				],
+				"styles": [
+					"bs-max-width-73189"
+				],
+				"type": "form-footer"
 			}
 		],
 		[
@@ -2599,14 +4051,41 @@
 		"dc": "data.pageChangeAnimation"
 	},
 	"selectedBrand": "Default",
-	"styleMods": {},
+	"styleMods": {
+		"id-block_14": {
+			"blocks": {},
+			"decs": {
+				"color": "#fcfcfc"
+			}
+		},
+		"id-formFooterText_1": {
+			"blocks": {},
+			"decs": {
+				"color": "#fdfdfd",
+				"padding-top": "10px"
+			}
+		},
+		"id-link": {
+			"blocks": {},
+			"decs": {
+				"color": "#ffffff"
+			}
+		},
+		"id-logo": {
+			"blocks": {},
+			"decs": {
+				"padding-bottom": "5px"
+			}
+		}
+	},
 	"styles": [
 		"mg-base",
 		"mg-form",
 		"bs-overrides-87851",
 		"bs-tooltip-39326",
 		"bs-fonts-79473",
-		"bs-hide-in-design-83044"
+		"bs-hide-in-design-83044",
+		"av-core-receipt"
 	],
 	"systemValues": {},
 	"templateName": "avoka-base-template",
@@ -2682,47 +4161,49 @@
 		},
 		"block": {
 			"availableStyles": [
+				"av-message-block",
+				"av-section",
 				"align-top",
 				"bc-white-background-20804",
 				"av-background-image",
+				"bs-ben-test-63099",
+				"bs-bottom-nav-15636",
+				"bs-dialog-navigation-56885",
+				"bs-fab-menu-background-88907",
+				"bs-fade-transition-50987",
+				"bs-fan-menu-mask-86056",
 				"bs-fixed-bottom-right-46166",
 				"bs-fixed-position-21768",
 				"bs-floating-layer-60091",
 				"bs-floating-right-29171",
+				"bs-form-header-34876",
+				"bs-form-name-03674",
+				"bs-full-screen-layer-18272",
+				"bs-functional-bar-background-56524",
 				"bs-functional-menu-10498",
 				"bs-max-width-73189",
-				"bs-primary-background-02324",
+				"bs-progress-banner-76461",
 				"bs-text-align-right-83697",
+				"bs-top-navigation-bar-05168",
+				"bs-top-navigation-container-95011",
 				"bs-tramline-container-62540",
 				"bs-transparent-background-93141",
+				"bs-dialog-footer-10282",
+				"bs-header-background-58145",
+				"bs-logo-container-86033",
+				"bs-test-progress-container-15954",
+				"bs-top-nav-container-18605",
 				"dialog-content",
 				"follow-on-options-block",
+				"nav-bar-73803",
 				"pull-right",
 				"reference-code-block",
 				"mg-selector-block",
-				"bs-form-name-03674",
-				"bs-functional-bar-background-56524",
-				"bs-full-screen-layer-18272",
-				"bs-fade-transition-50987",
-				"bs-bottom-nav-15636",
-				"bs-dialog-navigation-56885",
-				"bs-navigator-background-70332",
-				"bs-top-navigation-bar-05168",
-				"bs-top-navigation-container-95011",
-				"bs-fan-menu-mask-86056",
-				"nav-bar-73803",
-				"bs-fab-menu-background-88907",
-				"bs-dialog-footer-10282",
-				"bs-ben-test-63099",
-				"bs-test-progress-container-15954",
-				"bs-top-nav-container-18605",
-				"bs-logo-container-86033",
-				"bs-header-background-58145",
-				"bs-progress-banner-76461",
-				"bs-form-header-34876",
 				"av-blueprints-background-98301",
-				"av-section",
-				"av-message-block"
+				"av-tracking-code-70060",
+				"av-blue-prints-footer-sitebox-51239",
+				"av-blue-prints-footer-content-25574",
+				"av-blue-prints-dialog-header-65111"
 			],
 			"properties": {}
 		},
@@ -2948,7 +4429,8 @@
 				"bs-tooltip-39326",
 				"bs-fonts-79473",
 				"av-focus-styling",
-				"bs-hide-in-design-83044"
+				"bs-hide-in-design-83044",
+				"av-core-receipt"
 			],
 			"properties": {}
 		},
@@ -2963,7 +4445,8 @@
 			"availableStyles": [
 				"form-footer-container",
 				"align-top",
-				"bs-modal-footer-03990"
+				"bs-modal-footer-03990",
+				"av-blue-prints-footer-23112"
 			],
 			"properties": {}
 		},
@@ -3108,9 +4591,16 @@
 		"nav-page": {
 			"availableStyles": [
 				"bs-max-width-73189",
-				"align-top"
+				"align-top",
+				"av-blue-prints-ladingpage-47134",
+				"av-blue-prints-normal-page-24755"
 			],
-			"properties": {}
+			"properties": {},
+			"styles": [
+				"mg-section-1",
+				"av-blue-prints-normal-page-24755",
+				"bs-max-width-73189"
+			]
 		},
 		"nav-step-count": {
 			"availableStyles": [
@@ -3312,18 +4802,19 @@
 		},
 		"section-2": {
 			"availableStyles": [
+				"av-section",
 				"align-top",
 				"bc-white-background-20804",
-				"bs-transparent-background-93141",
-				"form-help-visit-us",
-				"mg-section-2",
-				"bs-max-width-73189",
 				"bs-center-align-19822",
-				"bs-save-dialog-text-82753",
-				"bs-modal-content-96022",
+				"bs-max-width-73189",
+				"bs-transparent-background-93141",
 				"bs-dialog-content-scroll-92184",
-				"av-section",
-				"fullpage-section-36560"
+				"bs-modal-content-96022",
+				"bs-save-dialog-text-82753",
+				"form-help-visit-us",
+				"fullpage-section-36560",
+				"mg-section-2",
+				"av-blue-prints-footer-23112"
 			],
 			"properties": {}
 		},

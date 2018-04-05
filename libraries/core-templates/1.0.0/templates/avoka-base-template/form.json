@@ -336,7 +336,8 @@
 											"hideFormHeader": true,
 											"hideNavButtons": true,
 											"hideMenuButton": true,
-											"fullPage": true
+											"fullPage": true,
+											"landing": true
 										},
 										"type": "nav-page",
 										"rules": {
@@ -2314,6 +2315,8 @@
 												"rows": [
 													[
 														{
+															"label": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
+															"htmlLabel": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
 															"styles": [
 																"av-global-layout",
 																"av-form-field",
@@ -2321,10 +2324,7 @@
 															],
 															"subId": "01580dd2461f46b1adcd5d798f9c9022",
 															"id": "cancel_confirm_text",
-															"type": "text-display",
-															"exclude": false,
-															"label": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
-															"htmlLabel": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!"
+															"type": "text-display"
 														}
 													],
 													[
@@ -2445,22 +2445,20 @@
 																	{
 																		"subId": "dde09b0b91bd4249929ecde1cbec14de",
 																		"id": "comments_2",
-																		"type": "text-area",
-																		"exclude": false
+																		"type": "text-area"
 																	}
 																]
 															],
 															"properties": {
 																"infoText": "We&#39;d really appreciate you letting us know why you are cancelling your submission."
 															},
-															"subId": "66800abae2f84be5953bd85d3488a708",
-															"id": "feedback_2",
-															"type": "section-2",
-															"exclude": false,
+															"animateVisibility": true,
 															"rules": {
 																"sh": "data.confirm_2 !== \"Confirm Cancel\";"
 															},
-															"animateVisibility": true
+															"subId": "66800abae2f84be5953bd85d3488a708",
+															"id": "feedback_2",
+															"type": "section-2"
 														}
 													]
 												],
@@ -2472,8 +2470,7 @@
 									],
 									"subId": "c5ad53604b5a45ebb50f466dce69b7e5",
 									"id": "dialog_content_cancel_confirm_1",
-									"type": "dialog-content",
-									"exclude": false
+									"type": "dialog-content"
 								}
 							],
 							[
@@ -2497,20 +2494,19 @@
 															"type": "button"
 														},
 														{
+															"label": "",
 															"styles": [
 																"bs-dialog-button-12962",
 																"av-form-field"
 															],
 															"rules": {
-																"sh": "",
-																"click": "if (data.confirm_2 === \"Confirm Cancel\") { data.confirm_2 = \"Cancel\" ;}\nelse {\nForm.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);\n}\n"
+																"click": "if (data.confirm_2 === \"Confirm Cancel\") { data.confirm_2 = \"Cancel\" ;}\nelse {\nForm.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);\n}\n",
+																"sh": ""
 															},
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c_1",
+															"htmlLabel": "{{data.confirm_2 || &quot;Cancel&quot;}}",
 															"id": "confirm_2",
-															"type": "button",
-															"exclude": false,
-															"label": "",
-															"htmlLabel": "{{data.confirm_2 || &quot;Cancel&quot;}}"
+															"type": "button"
 														}
 													]
 												],
@@ -2533,11 +2529,10 @@
 				]
 			],
 			"type": "cancel-confirm",
-			"id": "cancelconfirm",
-			"exclude": false,
 			"rules": {
 				"load": "data.confirm_2 = \"Confirm Cancel\";"
-			}
+			},
+			"id": "cancelconfirm"
 		},
 		"showxml": {
 			"rows": [
