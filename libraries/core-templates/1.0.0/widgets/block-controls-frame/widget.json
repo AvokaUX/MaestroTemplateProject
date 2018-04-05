@@ -1,0 +1,10 @@
+{
+  "category": "Containers",
+  "label": "Controls frame",
+  "icon": "block.png",
+  "type": "block",
+  "css": "block-controls-frame.css",
+  "rows": [[]],
+  "exMandatory": true,
+  "noData": true
+}

@@ -750,11 +750,223 @@
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "dialogFooterBlock_12",
 												"rows": [
 													[
 														{
 															"id": "okay_18",
+															"rules": {
+																"sh": ""
+															},
+															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "e62f57c6400f47a6b1f5fdcbcae4b38e",
+												"type": "block"
+											}
+										]
+									],
+									"subId": "2cd134f2d6f84810a8770240d8f4acc7",
+									"type": "block"
+								}
+							]
+						],
+						"subId": "1ea05f9f06654a3abe01133ecdc0782d",
+						"type": "block"
+					}
+				]
+			],
+			"type": "save-confirm"
+		},
+		"shareconfirm": {
+			"htmlLabel": "Share Confirm",
+			"id": "shareconfirm",
+			"label": "Share Confirm",
+			"rows": [
+				[
+					{
+						"id": "dialogHeader_10",
+						"rows": [
+							[
+								{
+									"id": "close_10",
+									"subId": "455d6eb5dfb44e8aa7bb7930597fada5",
+									"type": "icon-button"
+								}
+							]
+						],
+						"subId": "92a58e3bd4c94da895bad4b6f1b10f66",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"id": "dialogBody_9",
+						"rows": [
+							[
+								{
+									"htmlLabel": "Share Confirm Content",
+									"id": "dialog_content_save_confirm",
+									"label": "Share Confirm Content",
+									"rows": [
+										[
+											{
+												"exclude": true,
+												"htmlLabel": "Share it with your friends",
+												"id": "save_your_form_1",
+												"label": "Share it with your friends",
+												"rows": [
+													[
+														{
+															"htmlLabel": "Please save the form before share with your friends.",
+															"id": "save_confirm_message_1",
+															"label": "Please save the form before share with your friends.",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
+															"subId": "4aa53510219745c392c1b2c184aff183",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "security_question_save_confirm_1",
+															"rows": [
+																[]
+															],
+															"subId": "246e232b0ea94ee29fa591ebe0d93a26",
+															"type": "section-2"
+														}
+													]
+												],
+												"subId": "f95da043f0bf4debb102897946a959d8",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"animateVisibility": true,
+												"entityPath": "dialog_content_save",
+												"exclude": false,
+												"htmlLabel": "Share form",
+												"id": "dialog_content_save_section_8",
+												"label": "Share form",
+												"path": "",
+												"pathContext": "abs",
+												"properties": {
+													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+												},
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Recipient Email Address",
+															"id": "sharerecipientemail_1",
+															"label": "Recipient Email Address",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sharerecipientemail_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "email"
+														},
+														{
+															"exclude": false,
+															"htmlLabel": "Your Full Name",
+															"id": "sendername_1",
+															"label": "Your Full Name",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sendername_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "text-input"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Personal Message (optional)",
+															"id": "personalmessage_1",
+															"label": "Personal Message (optional)",
+															"path": "Personalmessage_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "text-area"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Share Now",
+															"id": "shareFormButton_1",
+															"label": "Share Now",
+															"offset": {
+																"lg": "4",
+																"md": "4"
+															},
+															"path": "",
+															"properties": {
+																"emailBodyRef": "personalmessage_1",
+																"emailFieldRef": "sharerecipientemail_1",
+																"senderNameRef": "sendername_1"
+															},
+															"rules": {
+																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
+															},
+															"styles": [
+																"message-banner",
+																"av-button-primary"
+															],
+															"type": "button-email-share-form"
+														}
+													]
+												],
+												"rules": {
+													"sh": "Form.data.hasOwnProperty(\"shareFormButton_1\") ? Form.data.shareFormButton_1.$responseStatus != \"success\": true;"
+												},
+												"styles": [
+													"bs-save-dialog-text-82753",
+													"bs-dialog-content-scroll-92184",
+													"mg-section-2"
+												],
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "00d88526276f4719ba460d7a9baede85",
+									"type": "dialog-content"
+								}
+							],
+							[
+								{
+									"id": "dialogFooter_19",
+									"rows": [
+										[
+											{
+												"id": "dialogFooterBlock_13",
+												"rows": [
+													[
+														{
+															"exclude": true,
+															"htmlLabel": "Save & Share",
+															"id": "okay_19",
+															"label": "Save & Share",
 															"rules": {
 																"sh": ""
 															},
@@ -814,6 +1026,11 @@
 													[
 														{
 															"id": "xml_display",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"show-xml-display-text"
+															],
 															"subId": "850a7f56abfa40d3a4167e74e6b576a1",
 															"type": "text-display"
 														}
@@ -914,6 +1131,9 @@
 				"save": {}
 			}
 		},
+		"share": {
+			"confirm": {}
+		},
 		"show": {
 			"xml": {}
 		},
@@ -954,19 +1174,20 @@
 		"savechallenge",
 		"cancelconfirm",
 		"showxml",
-		"formhelp"
+		"formhelp",
+		"shareconfirm"
 	],
 	"localModals": [
-		"submitsuccess",
+		"cancelsuccess",
 		"savesuccess",
-		"cancelsuccess"
+		"submitsuccess",
+		"sharesuccess"
 	],
 	"maestroReleaseVersion": "17.10.3",
 	"modals": {
 		"cancelsuccess": {
 			"htmlLabel": "Cancelsuccess",
 			"id": "cancelsuccess",
-			"label": "Cancelsuccess",
 			"properties": {},
 			"rows": [
 				[
@@ -1052,7 +1273,7 @@
 									"rows": [
 										[
 											{
-												"id": "textDisplay_11",
+												"id": "textDisplay_10",
 												"path": "",
 												"subId": "a3bbf8226e634e89bd683a2f32481642",
 												"type": "text-display"
@@ -1070,12 +1291,12 @@
 				],
 				[
 					{
-						"id": "modalContent_4",
+						"id": "modalContent_1",
 						"path": "",
 						"rows": [
 							[
 								{
-									"id": "extraInformation_3",
+									"id": "extraInformation_1",
 									"path": "",
 									"rows": [
 										[]
@@ -1086,21 +1307,21 @@
 							],
 							[
 								{
-									"id": "followOnOptions_4",
+									"id": "followOnOptions_1",
 									"rows": [
 										[
 											{
-												"id": "startANewForm_5",
+												"id": "startANewForm_2",
 												"subId": "3318fcfd2f244dd5b45e96c85cc2a45a",
 												"type": "button"
 											},
 											{
-												"id": "returnToPortal_4",
+												"id": "returnToPortal_1",
 												"subId": "77fa59715a74441b930f9c8d3c33789f",
 												"type": "button"
 											},
 											{
-												"id": "showFormXml_4",
+												"id": "showFormXml_1",
 												"subId": "c25c21e127554887858115ea909ae325",
 												"type": "button"
 											}
@@ -1125,9 +1346,8 @@
 			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
-			"htmlLabel": "Savesuccess",
+			"exclude": false,
 			"id": "savesuccess",
-			"label": "Savesuccess",
 			"properties": {},
 			"rows": [
 				[
@@ -1149,6 +1369,7 @@
 								{
 									"id": "stickyPanelModal_6",
 									"path": "StickyPanelModal_6",
+									"path": "StickyPanelModal_4",
 									"rows": [
 										[
 											{
@@ -1209,11 +1430,12 @@
 						"rows": [
 							[
 								{
-									"id": "formFooterText_8",
+									"id": "formFooterText_6",
 									"rows": [
 										[
 											{
 												"id": "textDisplay_13",
+												"path": "",
 												"path": "",
 												"subId": "58032c1494f04a78bf3cb8aae1c09afd",
 												"type": "text-display"
@@ -1238,14 +1460,339 @@
 								{
 									"id": "extraInformation_1",
 									"path": "",
+									"path": "",
 									"rows": [
 										[
 											{
-												"id": "block_6",
+												"id": "block_4",
 												"rows": [
 													[
 														{
 															"id": "textDisplay_10",
+															"subId": "21bd73fdb35241b08ab18b8701b25496",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "textDisplay_5",
+															"subId": "52b663ec1a88494e912364c3bef72ca7",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "button_1",
+															"subId": "81858aae177f48428df2be70a02b1c40",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"id": "textDisplay_6",
+															"subId": "440b40ec2e4647e89753d88271fbc6ea",
+															"type": "text-display"
+														}
+													]
+												],
+												"subId": "d36ce219a6fc4184b5f9206b30767329",
+												"type": "block"
+											}
+										],
+										[
+											{
+												"id": "section_6",
+												"rows": [
+													[
+														{
+															"id": "block_5",
+															"rows": [
+																[
+																	{
+																		"id": "emailAddress_2",
+																		"path": "EmailAddress_2",
+																		"subId": "b13fb61cc547468eb4f4ad948670b0f9",
+																		"type": "email"
+																	}
+																],
+																[
+																	{
+																		"id": "emailSavedFormButton",
+																		"subId": "12230fde7ef048229e26bd7e266d42ef",
+																		"type": "button-email-saved-form"
+																	}
+																]
+															],
+															"subId": "587211bc2f294535989e84d58a5fc39d",
+															"type": "block"
+														}
+													]
+												],
+												"subId": "39f81a0bd55242a5829cf25715d4b815",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"id": "section_7",
+												"rows": [
+													[
+														{
+															"id": "textDisplay_7",
+															"subId": "671deba5ac7a4c4eafe625624203bb1a",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"id": "button_2",
+															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"id": "section_8",
+												"rows": [
+													[
+														{
+															"exclude": false,
+															"id": "sharerecipientemail",
+															"path": "Sharerecipientemail",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"type": "email"
+														},
+														{
+															"exclude": false,
+															"id": "sendername",
+															"path": "Sendername",
+															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
+															"type": "text-input"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "personalmessage",
+															"path": "Personalmessage",
+															"subId": "1cc7b7cdb2b1421291056edc52e43525",
+															"type": "text-area"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "shareFormButton",
+															"subId": "4190d5a9a613410288c94ef8d968e01d",
+															"type": "button-email-share-form"
+														}
+													]
+												],
+												"subId": "61839116f7ec43688bcfe12801469d1a",
+												"type": "section-2"
+											}
+										],
+										[
+											{
+												"id": "section_9",
+												"rows": [
+													[
+														{
+															"id": "textDisplay_8",
+															"subId": "925a5c310b2847508048d33806aca3cb",
+															"type": "text-display"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"id": "button_3",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
+															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
+															"type": "button"
+														}
+													]
+												],
+												"subId": "aa9991c952134393abcae5d9f9a5eb27",
+												"type": "section-2"
+											}
+										]
+									],
+									"subId": "de99337db1f2469589104ceb5ccb8c33",
+									"type": "block"
+								}
+							],
+							[
+								{
+									"id": "followOnOptions",
+									"rows": [
+										[
+											{
+												"id": "startANewForm_1",
+												"subId": "f5d3a71e81244605b97d33064ec7ea04",
+												"type": "button"
+											},
+											{
+												"id": "returnToPortal",
+												"subId": "438498f8cfc04be294f4d4b11ada089c",
+												"type": "button"
+											},
+											{
+												"id": "showFormXml",
+												"subId": "6c6e2a6b68224f2b92492432657e985c",
+												"type": "button"
+											}
+										]
+									],
+									"subId": "690cb1870beb4928bff2d61e08c57ef3",
+									"type": "follow-on-options"
+								}
+							]
+						],
+						"subId": "2333d120d1b74667a8d32d0935672f5e",
+						"type": "section-2"
+					}
+				]
+			],
+			"type": "save-success-modal"
+		},
+		"sharesuccess": {
+			"exclude": false,
+			"htmlLabel": "Share Success Modal",
+			"id": "sharesuccess",
+			"label": "Share Success Modal",
+			"properties": {},
+			"rows": [
+				[
+					{
+						"id": "modalBackground_5",
+						"rows": [
+							[]
+						],
+						"subId": "f732f7ce92d343778d33422d566bccac",
+						"type": "modal-background"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"id": "modalHeader_10",
+						"rows": [
+							[
+								{
+									"id": "stickyPanelModal_5",
+									"path": "StickyPanelModal_5",
+									"rows": [
+										[
+											{
+												"id": "modalHeader_11",
+												"rows": [
+													[
+														{
+															"id": "modalLogo_5",
+															"rows": [
+																[
+																	{
+																		"id": "modalLogoImage_5",
+																		"properties": {},
+																		"subId": "753800ee88cf4fb5828cef5ff2d42942",
+																		"type": "image"
+																	}
+																]
+															],
+															"subId": "0da239b6d6dd4425b826c37bde2ed9be",
+															"type": "block"
+														}
+													]
+												],
+												"subId": "3211480eea7d45a4902f4096307e86e3",
+												"type": "form-header"
+											}
+										]
+									],
+									"subId": "9ff89a8968cf4669a2f0cfde2be17c63",
+									"type": "sticky-panel"
+								}
+							]
+						],
+						"subId": "239b00ef9f9c40ca81392d95bcbe9395",
+						"type": "block"
+					}
+				],
+				[
+					{
+						"id": "modalContent_5",
+						"rows": [
+							[
+								{
+									"id": "startANewForm_6",
+									"subId": "b424508c76b04541b46e1f5d5363b90a",
+									"type": "button"
+								}
+							]
+						],
+						"subId": "10e237c285f9418da41b60b370238bfc",
+						"type": "section-2"
+					}
+				],
+				[
+					{
+						"exclude": true,
+						"id": "modalFooter_5",
+						"rows": [
+							[
+								{
+									"id": "formFooterText_7",
+									"rows": [
+										[
+											{
+												"id": "textDisplay_12",
+												"path": "",
+												"subId": "58032c1494f04a78bf3cb8aae1c09afd",
+												"type": "text-display"
+											}
+										]
+									],
+									"subId": "0d94d9490724411199cd5164d7700297",
+									"type": "section-2"
+								}
+							]
+						],
+						"subId": "0be795c1d72f4ae2a4f58fb5a3234438",
+						"type": "form-footer"
+					}
+				],
+				[
+					{
+						"exclude": false,
+						"htmlLabel": "<h1>Form Shared</h1>",
+						"id": "modalContent_7",
+						"label": "Form Shared",
+						"path": "",
+						"properties": {
+							"infoText": ""
+						},
+						"rows": [
+							[
+								{
+									"id": "extraInformation_2",
+									"path": "",
+									"rows": [
+										[
+											{
+												"exclude": true,
+												"id": "block_6",
+												"rows": [
+													[
+														{
+															"id": "textDisplay_13",
 															"subId": "21bd73fdb35241b08ab18b8701b25496",
 															"type": "text-display"
 														}
@@ -1272,16 +1819,13 @@
 														}
 													]
 												],
-												"styles": [
-													"reference-code-block",
-													"av-message-block"
-												],
 												"subId": "d36ce219a6fc4184b5f9206b30767329",
 												"type": "block"
 											}
 										],
 										[
 											{
+												"exclude": true,
 												"id": "section_10",
 												"rows": [
 													[
@@ -1290,8 +1834,8 @@
 															"rows": [
 																[
 																	{
-																		"id": "emailAddress_4",
-																		"path": "EmailAddress_4",
+																		"id": "emailAddress_3",
+																		"path": "EmailAddress_3",
 																		"subId": "b13fb61cc547468eb4f4ad948670b0f9",
 																		"type": "email"
 																	}
@@ -1309,13 +1853,13 @@
 														}
 													]
 												],
-												"styles": [],
 												"subId": "39f81a0bd55242a5829cf25715d4b815",
 												"type": "section-2"
 											}
 										],
 										[
 											{
+												"exclude": true,
 												"id": "section_11",
 												"rows": [
 													[
@@ -1333,52 +1877,67 @@
 														}
 													]
 												],
-												"styles": [],
 												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
 												"type": "section-2"
 											}
 										],
 										[
 											{
+												"exclude": false,
 												"id": "section_12",
+												"properties": {
+													"hideTitle": true
+												},
 												"rows": [
 													[
 														{
-															"id": "emailAddress_5",
-															"path": "EmailAddress_5",
+															"id": "sharerecipientemail_2",
+															"path": "Sharerecipientemail_2",
 															"subId": "ea72110b798b4186be8e71d39c7206e1",
 															"type": "email"
 														},
 														{
-															"id": "textField",
+															"id": "sendername_2",
+															"path": "Sendername_2",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
 														}
 													],
 													[
 														{
-															"id": "multilineTextArea_1",
-															"path": "MultilineTextArea_1",
+															"exclude": false,
+															"id": "personalmessage_2",
+															"path": "Personalmessage_2",
 															"subId": "1cc7b7cdb2b1421291056edc52e43525",
 															"type": "text-area"
 														}
 													],
 													[
 														{
-															"id": "shareFormButton_1",
+															"id": "shareFormButton_2",
+															"properties": {
+																"emailBodyRef": "personalmessage_2",
+																"emailFieldRef": "sharerecipientemail_2",
+																"senderNameRef": "sendername_2"
+															},
 															"subId": "4190d5a9a613410288c94ef8d968e01d",
 															"type": "button-email-share-form"
 														}
 													]
 												],
-												"styles": [],
 												"subId": "61839116f7ec43688bcfe12801469d1a",
 												"type": "section-2"
 											}
 										],
 										[
 											{
+												"exclude": false,
+												"htmlLabel": "More share",
 												"id": "section_13",
+												"label": "More share",
+												"properties": {
+													"infoText": ""
+												},
 												"rows": [
 													[
 														{
@@ -1389,13 +1948,16 @@
 													],
 													[
 														{
+															"exclude": false,
 															"id": "button_7",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
+															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
 													]
 												],
-												"styles": [],
 												"subId": "aa9991c952134393abcae5d9f9a5eb27",
 												"type": "section-2"
 											}
@@ -1407,21 +1969,21 @@
 							],
 							[
 								{
-									"id": "followOnOptions_1",
+									"id": "followOnOptions_2",
 									"rows": [
 										[
 											{
-												"id": "startANewForm_2",
+												"id": "startANewForm_7",
 												"subId": "f5d3a71e81244605b97d33064ec7ea04",
 												"type": "button"
 											},
 											{
-												"id": "returnToPortal_1",
+												"id": "returnToPortal_2",
 												"subId": "438498f8cfc04be294f4d4b11ada089c",
 												"type": "button"
 											},
 											{
-												"id": "showFormXml_1",
+												"id": "showFormXml_2",
 												"subId": "6c6e2a6b68224f2b92492432657e985c",
 												"type": "button"
 											}
@@ -1431,12 +1993,6 @@
 									"type": "follow-on-options"
 								}
 							]
-						],
-						"styles": [
-							"bs-center-align-19822",
-							"av-max-width",
-							"bs-modal-content-96022",
-							"av-section"
 						],
 						"subId": "2333d120d1b74667a8d32d0935672f5e",
 						"type": "section-2"
@@ -1568,8 +2124,8 @@
 															"rows": [
 																[
 																	{
-																		"id": "emailAddress_1",
-																		"path": "EmailAddress_1",
+																		"id": "send_receipt_email",
+																		"path": "Send/Receipt/Email",
 																		"subId": "832ab4f37a6f44c1bf06b4df1f57dc94",
 																		"type": "email"
 																	}
@@ -1587,7 +2143,6 @@
 														}
 													]
 												],
-												"styles": [],
 												"subId": "37f4edbc8ab4491590c497f4d666a4f6",
 												"type": "section-2"
 											}
@@ -1605,7 +2160,6 @@
 														}
 													]
 												],
-												"styles": [],
 												"subId": "0db60ac2ec5443ba9186291c368ea50f",
 												"type": "section-2"
 											}
@@ -1636,10 +2190,7 @@
 														}
 													]
 												],
-												"styles": [
-													"reference-code-block",
-													"av-message-block"
-												],
+												"subId": "e2a49dc86e8248ad880fc76f6346e56f",
 												"subId": "e2a49dc86e8248ad880fc76f6346e56f",
 												"type": "block"
 											}
@@ -1672,7 +2223,6 @@
 														}
 													]
 												],
-												"styles": [],
 												"subId": "e67bbb466d394a2b92e29073118ff55e",
 												"type": "section-2"
 											}
@@ -1735,7 +2285,9 @@
 		"AvokaSmartForm"
 	],
 	"path": "AvokaSmartForm",
-	"properties": {},
+	"properties": {
+		"checkboxRadioAutoScroll": false
+	},
 	"rows": [
 		[
 			{
@@ -1900,6 +2452,9 @@
 														[
 															{
 																"id": "progressBar_1",
+																"properties": {
+																	"displayGroupIcon": true
+																},
 																"type": "progress-bar"
 															}
 														]
@@ -1934,10 +2489,39 @@
 						}
 					]
 				],
-				"rules": {
-					"sh": "Form.$Pages && Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.hideFormHeader;"
-				},
+				"rules": {},
 				"type": "form-header-main"
+			}
+		],
+		[
+			{
+				"animateVisibility": true,
+				"exclude": false,
+				"hasCustomId": true,
+				"htmlLabel": "Tracking Code",
+				"id": "trackingcode",
+				"label": "Tracking Code",
+				"path": "",
+				"rows": [
+					[
+						{
+							"exclude": false,
+							"hasCustomId": true,
+							"htmlLabel": "Tracking code:&nbsp;<strong>{{Form.data.SFMData.SystemProfile.TrackingCode}}</strong>",
+							"id": "trackingcodetext",
+							"label": "Tracking code:",
+							"path": "",
+							"type": "text-display"
+						}
+					]
+				],
+				"rules": {
+					"sh": "Util.isReceipt"
+				},
+				"styles": [
+					"av-tracking-code-70060"
+				],
+				"type": "block"
 			}
 		],
 		[
@@ -1959,6 +2543,7 @@
 							"rows": [
 								[
 									{
+										"animateVisibility": true,
 										"exclude": false,
 										"htmlLabel": "Landing Page",
 										"id": "landingPage",
@@ -1998,21 +2583,51 @@
 												}
 											]
 										],
+										"rules": {
+											"sh": "!Util.isReceipt"
+										},
 										"type": "nav-page"
 									}
 								],
 								[
 									{
 										"exclude": false,
+										"htmlLabel": "Page 1",
 										"id": "page",
 										"isFirstInGroup": false,
 										"isLastInGroup": false,
+										"label": "Page 1",
 										"path": "",
 										"rows": [
 											[
 												{
 													"exclude": false,
 													"id": "section_1",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page 2",
+										"id": "page_1",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Page 2",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section",
 													"path": "",
 													"rows": [
 														[]
@@ -2057,20 +2672,33 @@
 								[
 									{
 										"id": "back",
-										"type": "button-docking-left"
-									},
-									{
-										"id": "next",
-										"type": "button-docking-right"
-									},
-									{
-										"id": "submit",
-										"span": {
-											"lg": 2,
-											"md": 2
-										},
-										"type": "submit"
-									}
+							"type": "button-docking-left"
+					},
+						{
+							"id": "next",
+							"type": "button-docking-right"
+					},
+						{
+							"id": "submit",
+							"offset": {
+								"lg": "5",
+								"md": "5",
+								"sm": "3",
+								"xs": "3"
+							},
+							"rules": {
+								"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\ndata.blockSubmit = false;\n$timeout(function() {\t\n  data.blockSubmit = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockSubmit = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+								"dc": "return data.blockSubmit  ? \"error\" : \"\";"
+							},
+							"span": {
+								"lg": 2,
+								"md": 2},
+							"styles": [
+								"av-button",
+								"av-global-layout",
+								"bs-submit-button-65937"
+							],
+							"type": "submit"}
 								]
 							],
 							"id": "navContainer",
@@ -2099,6 +2727,9 @@
 						{
 							"exclude": false,
 							"id": "functionalMenu",
+							"rules": {
+								"click": "data[item.id] = data[item.id] !== true;\n$timeout(function(){\nconsole.log('ng-enter-active-----',$('.bs-functional-button-items-64706').hasClass('ng-enter-active'));\n  console.log('ng-leave-active-----',$('.bs-functional-button-items-64706').hasClass('ng-leave-active'))\n}, 1500)"
+							},
 							"subId": "6d8349dcfefa43e0b629a07c41b249ce",
 							"type": "button-toggle-icon"
 						}
@@ -2132,34 +2763,355 @@
 				],
 				"type": "fab-menu"
 			}
+		],
+		[
+			{
+				"exclude": true,
+				"id": "styleMasterBlock",
+				"rows": [
+					[
+						{
+							"exclude": false,
+							"id": "personalDetails",
+							"rows": [
+								[
+									{
+										"id": "firstName1",
+										"noData": true,
+										"path": "",
+										"subId": "6aa417b9582d40969acb60350725a52d",
+										"type": "text-input"
+									},
+									{
+										"id": "middleNameOptional",
+										"mandatory": "",
+										"noData": true,
+										"path": "",
+										"subId": "df57af35e318476cb223b379c1a5e01a",
+										"type": "text-input"
+									},
+									{
+										"id": "lastName1",
+										"noData": true,
+										"path": "",
+										"subId": "0382c8ac5f9844c4aeaf827a4780d248",
+										"type": "text-input"
+									}
+								],
+								[
+									{
+										"id": "country",
+										"noData": true,
+										"path": "",
+										"properties": {},
+										"subId": "2bd1d8e014264f38a82f66a931f57b9f",
+										"type": "dropdown"
+									}
+								],
+								[
+									{
+										"id": "dateOfBirthDropdown",
+										"rows": [
+											[
+												{
+													"id": "day",
+													"noData": true,
+													"path": "",
+													"subId": "76182bfd13724884b4288cd928247150",
+													"type": "data-dropdown"
+												},
+												{
+													"id": "month",
+													"noData": true,
+													"path": "",
+													"properties": {},
+													"subId": "d08f3ac71df4450094742607de9e92f4",
+													"type": "dropdown"
+												},
+												{
+													"id": "year",
+													"noData": true,
+													"path": "",
+													"subId": "4d099b1664374469a28d935e5f39fe25",
+													"type": "dropdown-years"
+												}
+											],
+											[
+												{
+													"id": "date",
+													"subId": "fb68b0fdefc64e8192c84c1aacf492dc",
+													"type": "data-field"
+												}
+											],
+											[
+												{
+													"id": "daysData",
+													"subId": "53b69d508a60404db8b3ef75b4aa4556",
+													"type": "data-field"
+												}
+											]
+										],
+										"subId": "eb2a794cd58c42af94471c18973dc8aa",
+										"type": "dropdown-dob-block"
+									}
+								]
+							],
+							"subId": "18bbf754f32a4d6e96b7eca3e68f4e86",
+							"type": "section-2"
+						}
+					],
+					[
+						{
+							"exclude": true,
+							"id": "otherDetails",
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"id": "emailAddress",
+										"noData": true,
+										"path": "",
+										"subId": "82537d43d5a541c78ae556a6a5f33098",
+										"type": "email"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"id": "datePicker",
+										"noData": true,
+										"path": "",
+										"subId": "9be4a2834e44441e818c98083d7c94d6",
+										"type": "date-picker"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"id": "currencyField",
+										"noData": true,
+										"path": "",
+										"subId": "3d4acf7191404c30a5619f5a4d4f5c2f",
+										"type": "currency"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"id": "decimalField",
+										"noData": true,
+										"path": "",
+										"subId": "1e7af05e0367400587f197c82eb6ce92",
+										"type": "decimal"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"id": "emailAddress2",
+										"mandatory": true,
+										"noData": true,
+										"path": "",
+										"subId": "d591a940ed7d4260b99e8adb7a67a47e",
+										"type": "email"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"id": "radioButtonGroup",
+										"noData": true,
+										"path": "",
+										"properties": {},
+										"subId": "16d7bc4912da4460a374f51a484d9228",
+										"type": "radio-button-group"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"id": "checkbox",
+										"noData": true,
+										"path": "",
+										"subId": "98ba81dcb4cb47e8a63ee89ee04412a6",
+										"type": "checkbox"
+									}
+								]
+							],
+							"subId": "0c6f9a0f209a4dfdadab56f9127b97e5",
+							"type": "section-2"
+						}
+					],
+					[
+						{
+							"exclude": true,
+							"id": "buttons",
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"id": "block",
+										"rows": [
+											[
+												{
+													"id": "leftLinkButton",
+													"subId": "f68f5692046d4f028d4569b7ce2d17df",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "primarySmall",
+													"subId": "1797ebe5044f4dd4ba71c19e2ddf5442",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "primarySmall1",
+													"subId": "682349e8c23f410a98982bff55d9a7af",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "primary",
+													"subId": "ae570d801c55486bb3b00e882df5a948",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "primary1",
+													"subId": "7d8c074047df4e37a0ab3b537b696e1a",
+													"type": "button"
+												}
+											]
+										],
+										"subId": "c245e3914ce44d36a8dab5fa4c067db9",
+										"type": "block"
+									},
+									{
+										"id": "block1",
+										"rows": [
+											[
+												{
+													"id": "secondary",
+													"subId": "6275f07e5ecb47dbb955679156197df7",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "secondary1",
+													"subId": "f724bde317d64b2fb927c1620164d50e",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "secondary2",
+													"subId": "9646615088ce475d849dc324140f4ae3",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "secondary3",
+													"subId": "a2068a5825ba48f18e58ab506d7a00dc",
+													"type": "button"
+												}
+											]
+										],
+										"subId": "bf0b1ea6ed8f42debcae7e3ae27e9a13",
+										"type": "block"
+									},
+									{
+										"id": "block2",
+										"rows": [
+											[
+												{
+													"id": "rightLinkButton",
+													"subId": "ff1871ad44dc436189332e0a8f4b23d6",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "tertiary",
+													"subId": "e79ba2d359074c6cac0d0d36dbb60bdb",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "tertiary1",
+													"subId": "23c01cbc4fb64d33beaf0a2dee6addf5",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "tertiary2",
+													"subId": "d03f424680414e3f96dce44bc39988a7",
+													"type": "button"
+												}
+											],
+											[
+												{
+													"id": "tertiary3",
+													"subId": "6096879ca2d44ece859e4e47e89d6f4e",
+													"type": "button"
+												}
+											]
+										],
+										"subId": "2ce4a1382d7a48d3bbc0e1be7192e9b4",
+										"type": "block"
+									}
+								]
+							],
+							"subId": "536df813050644f883b4f0e00cdb1a0f",
+							"type": "section-2"
+						}
+					],
+					[
+						{
+							"htmlLabel": "About You",
+							"id": "aboutYou",
+							"label": "About You",
+							"path": "",
+							"rows": [
+								[
+									{
+										"exclude": false,
+										"id": "block3",
+										"path": "",
+										"rows": [
+											[]
+										],
+										"type": "block"
+									}
+								]
+							],
+							"type": "section-2"
+						}
+					]
+				],
+				"type": "style-master-block"
+			}
 		]
 	],
 	"rules": {},
 	"selectedBrand": "Default",
-	"styleMods": {
-		"id-block_6": {
-			"blocks": {},
-			"decs": {
-				"padding-bottom": "16px",
-				"padding-top": "16px"
-			}
-		},
-		"id-section_3": {
-			"blocks": {},
-			"decs": {
-				"padding-bottom": "16px",
-				"padding-right": "0px",
-				"padding-top": "16px"
-			}
-		}
-	},
+	"styleMods": {},
 	"styles": [
 		"mg-base",
 		"av-global-form",
 		"bs-overrides-87851",
 		"bs-tooltip-39326",
 		"av-global-fonts",
-		"bs-hide-in-design-83044"
+		"bs-hide-in-design-83044",
+		"av-core-receipt"
 	],
 	"systemValues": {},
 	"templateName": "Core - Empty Form",
@@ -2235,9 +3187,10 @@
 		},
 		"block": {
 			"availableStyles": [
-				"av-background-image",
+				"av-message-block",
 				"av-section",
 				"align-top",
+				"av-background-image",
 				"bs-ben-test-63099",
 				"bs-bottom-nav-15636",
 				"bs-dialog-navigation-56885",
@@ -2271,7 +3224,7 @@
 				"pull-right",
 				"reference-code-block",
 				"mg-selector-block",
-				"av-message-block",
+				"av-tracking-code-70060",
 				"av-nav-bar",
 				"av-nav-container"
 			],
@@ -2571,11 +3524,14 @@
 				"mg-base",
 				"av-global-form",
 				"align-top",
-				"bs-overrides-87851",
+				"bs-fonts-79473",
+				"bs-hide-in-design-83044",
 				"bs-tooltip-39326",
 				"av-global-fonts",
 				"av-focus-styling",
-				"bs-hide-in-design-83044"
+				"mg-base",
+				"mg-form",
+				"av-core-receipt"
 			],
 			"properties": {}
 		},

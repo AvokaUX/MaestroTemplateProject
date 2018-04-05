@@ -94,11 +94,25 @@ define(["app"], function (app) {
                             if (notOneButton) {
                                 Form.fireRule("click", children[0].id, data);
                             }
-                            Form.showDialog("saveconfirm");
+                            Form.showDialog("shareconfirm");
                         });
                     }
                 });
-
+            var clickAnywhereHandler = function (event) {
+                if (!notOneButton) return;
+                var inside = ($element[0] === event.target) ||
+                    $(event.target).parents().index($element) !== -1;
+                if (!inside) {
+                    if(data[children[0].id]) {
+                        data[children[0].id] = false;
+                        $scope.$apply();
+                    }
+                }
+            };
+            $(document).on('click', clickAnywhereHandler);
+            $scope.$on('$destroy', function () {
+                $(document).off('click', clickAnywhereHandler);
+            });
         });
     }]);
 });

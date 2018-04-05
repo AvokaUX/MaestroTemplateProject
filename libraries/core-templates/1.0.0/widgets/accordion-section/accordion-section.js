@@ -1,8 +1,9 @@
 define(["app"], function (app) {
-    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll) {
+    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", "$anchorScroll", "$location", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll, $anchorScroll, $location) {
         Form.getItem($scope, $element).then(function (item) {
             $scope.accordionIsValid = true;
             $scope.accordionOpen = false;
+            $anchorScroll.yOffset = 80;
             var $thisAccordion = $element.find(".panel-collapse");
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
@@ -63,9 +64,11 @@ define(["app"], function (app) {
                     }, td, false)
                         .then(function () {
                             if(!item.$$parent.properties.allowMultipleOpen && someOpen && item.id !== firstAccordionId) {
-                                Scroll.scrollTo(firstAccordionId, false);
+                                Scroll.scrollTo(firstAccordionId, false, 10);
+                                // $timeout(function () {
+                                //     Scroll.scrollTo(firstAccordionId, false, 10);
+                                // }, transDuration * 1000);
                             }
-                            $scope.$apply();
                         });
                 }, 25, false);
             }
@@ -161,7 +164,8 @@ define(["app"], function (app) {
 
                 $scope.$on("siblingOpening", function (evt, data) {
                     if (item.id !== data.id && $scope.accordionOpen) {
-                        animateSlideOut(false);
+                        //animateSlideOut(false);
+                        animateSlideOut(true);
                     }
                 });
                 $scope.$on("openThisOne", function (evt, data) {

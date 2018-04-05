@@ -20,6 +20,7 @@
 						'page-visited': Form.$Pages.flatPages.indexOf(page) <= Form.$Pages.flatPages.indexOf(Form.$Pages.currentPage)}">
 						<div class="wdg-progress-page-bar" av-tooltip="{{page.label}}"></div>
 						<div data-ng-if="page.isFirstInGroup && item.properties.displayGroupIcon" class="wdg-progress-pagegroup-bar"
+							 data-ng-class="{'page-visited': Form.$Pages.flatPages.indexOf(page) <= Form.$Pages.flatPages.indexOf(Form.$Pages.currentPage)}"
 							 av-tooltip="{{page.$$parent.label}}"></div>
 					 </li>
 				</ol>

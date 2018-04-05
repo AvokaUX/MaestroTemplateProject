@@ -1,0 +1,9 @@
+{
+	"block": {},
+	"file": "style.less",
+	"label": "av-blueprints-receipt",
+	"receiptOnly": true,
+	"widgets": [
+		"form"
+	]
+}

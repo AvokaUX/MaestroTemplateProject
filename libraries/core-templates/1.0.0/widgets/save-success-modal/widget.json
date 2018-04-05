@@ -256,6 +256,9 @@
 																	"message-banner",
 																	"av-button-primary"
 																],
+																"properties": {
+																	"emailFieldRef": "emailAddress_2"
+																},
 																"type": "button-email-saved-form",
 																"rules": {
 																	"click": "Form.emailOperation('emailSavedForm', item.id, item.properties.emailFieldRef)"
@@ -288,7 +291,7 @@
 										"htmlLabel": "Send yourself a reminder email",
 										"path": "",
 										"rules": {
-											"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo == \"\" : true) &&\n(Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus != \"success\" : true)"
+											"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo === \"\" : true) &&\n(Form.data.hasOwnProperty(\"emailSavedFormButton\") ? Form.data.emailSavedFormButton.$responseStatus !== \"success\" : true)"
 										},
 										"type": "section-2",
 										"id": "section_6",
@@ -343,7 +346,7 @@
 										"htmlLabel": "Check your email",
 										"path": "",
 										"rules": {
-											"sh": "((Form.data.hasOwnProperty(\"save_success_send_reminder\") ? Form.data.save_success_send_reminder.$responseStatus == \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo != \"\" : false))"
+											"sh": "(Form.data.hasOwnProperty(\"emailSavedFormButton\") ? Form.data.emailSavedFormButton.$responseStatus === \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo !== \"\" : false)"
 										},
 										"type": "section-2",
 										"id": "section_7",
@@ -357,8 +360,8 @@
 											[
 												{
 													"offset": {
-														"md": "0",
-														"lg": "0"
+														"md": "3",
+														"lg": "3"
 													},
 													"label": "Recipient Email Address",
 													"styles": [
@@ -372,7 +375,7 @@
 													"htmlLabel": "Recipient Email Address",
 													"mandatory": true,
 													"path": "EmailAddress",
-													"id": "emailAddress_3",
+													"id": "sharerecipientemail",
 													"pubId": "ea72110b798b4186be8e71d39c7206e1"
 												},
 												{
@@ -380,12 +383,16 @@
 													"styles": [
 														"av-global-layout"
 													],
+													"offset": {
+														"md": "3",
+														"lg": "3"
+													},
 													"exclude": false,
 													"htmlLabel": "Your Full Name",
 													"mandatory": true,
 													"path": "TextField",
 													"type": "text-input",
-													"id": "textField",
+													"id": "sendername",
 													"pubId": "ada1f01635de4a4eb7eccf6d8ee26220"
 												}
 											],
@@ -399,7 +406,7 @@
 													"htmlLabel": "Personal Message (optional)",
 													"path": "MultilineTextArea",
 													"type": "text-area",
-													"id": "multilineTextArea",
+													"id": "personalmessage",
 													"pubId": "1cc7b7cdb2b1421291056edc52e43525"
 												}
 											],
@@ -415,9 +422,9 @@
 														"av-button-primary"
 													],
 													"properties": {
-														"emailFieldRef": "data.emailAddress_3",
-														"senderNameRef": "data.textField",
-														"emailBodyRef": "data.multilineTextArea"
+														"emailFieldRef": "sharerecipientemail",
+														"senderNameRef": "sendername",
+														"emailBodyRef": "personalmessage"
 													},
 													"type": "button-email-share-form",
 													"rules": {
@@ -442,7 +449,7 @@
 										"htmlLabel": "Share form",
 										"path": "",
 										"rules": {
-											"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus != \"success\": true;"
+											"sh": "Form.data.hasOwnProperty(\"shareFormButton\") ? Form.data.shareFormButton.$responseStatus != \"success\": true;"
 										},
 										"type": "section-2",
 										"id": "section_8",
@@ -500,7 +507,7 @@
 										"htmlLabel": "Share form",
 										"path": "",
 										"rules": {
-											"sh": "Form.data.hasOwnProperty(\"save_success_share_form\") ? Form.data.save_success_share_form.$responseStatus == \"success\": false;"
+											"sh": "Form.data.hasOwnProperty(\"shareFormButton\") ? Form.data.shareFormButton.$responseStatus == \"success\": false;"
 										},
 										"type": "section-2",
 										"id": "section_9",

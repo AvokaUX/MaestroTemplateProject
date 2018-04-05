@@ -1,9 +1,8 @@
 form[name='form'] {
 	.bs-submit-button-65937 {
-      position : fixed;
-      bottom : 1%;
-      left: 50%;
-      transform: translateX(-50%);
+      //position : fixed;
+      //bottom : 1%;
+      left: 0;
       .wdg-button {		// Button
         outline: none;
         border: 1px solid @av-primary-color;
@@ -23,6 +22,11 @@ form[name='form'] {
           }
         
 		}
+      &.error {
+        .wdg-button {
+          animation: glowing 600ms 1;
+        }
+      }
 
 		.wdg-button-icon {		// Button icon
 		
@@ -33,33 +37,39 @@ form[name='form'] {
                
 		}
       
-      /* Custom, iPhone Retina *//*
+      /* Custom, iPhone Retina */ 
       @media only screen and (min-width : 320px) {
-        left: 20%;
+        //left: 20%;
         bottom : 0px;
-      }*/
+      }
 
-      /* Extra Small Devices, Phones */ /*
+      /* Extra Small Devices, Phones */ 
       @media only screen and (min-width : 480px) {
-        left: 20%;
+        //left: 20%;
         bottom : 0px;
-      }*/
+      }
 
-      /* Small Devices, Tablets *//*
+      /* Small Devices, Tablets */
       @media only screen and (min-width : 768px) {
-        left: 26%;
+        //left: 26%;
         bottom : 0px;
-      }*/
+      }
 
-      /* Medium Devices, Desktops *//*
+      /* Medium Devices, Desktops */
       @media only screen and (min-width : 1200px) {
-        left: 33%;
-      }*/
+        //left: 33%;
+      }
 
-      /* Large Devices, Wide Screens *//*
+      /* Large Devices, Wide Screens */
       @media only screen and (min-width : 1300px) {
-        left: 35%;
-      }*/
+        //left: 35%;
+      }
 
 	}
+}
+@keyframes glowing {
+  0% { background-color: transparent; }
+  10% { background-color:rgba(255, 0, 0, 0.8); }
+  60% { background-color:rgba(255, 0, 0, 0.8); }
+  100% { background-color: transparent; }
 }

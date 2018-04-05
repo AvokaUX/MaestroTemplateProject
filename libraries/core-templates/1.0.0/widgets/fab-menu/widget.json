@@ -131,7 +131,7 @@
 					"bs-functional-button-items-64706"
 				],
 				"properties": {
-					"icon": "fa fa-share-alt"
+					"icon": "fa fa-share"
 				},
 				"type": "button",
 				"path": "",
