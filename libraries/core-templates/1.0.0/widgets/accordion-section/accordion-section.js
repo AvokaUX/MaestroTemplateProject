@@ -1,9 +1,8 @@
 define(["app"], function (app) {
-    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", "$anchorScroll", "$location", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll, $anchorScroll, $location) {
+    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll) {
         Form.getItem($scope, $element).then(function (item) {
             $scope.accordionIsValid = true;
             $scope.accordionOpen = item.properties.defaultCollapse || Form.data[item.id];
-            $anchorScroll.yOffset = 80;
             var $thisAccordion = $element.find(".panel-collapse");
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
@@ -11,6 +10,8 @@ define(["app"], function (app) {
             var transDuration = item.$$parent.properties.transitionDuration/1000;
             var focusedErrorId = "";
             $scope.lastAccordion = item.id === $element.parent().parent().find('.panel-group')[$allAccordions.length - 1].id;
+            console.log('children---',$scope.children);
+
             function validateAccordion(errors) {
                 $scope.validationErrors = errors;
                 $scope.accordionIsValid = false;
@@ -123,11 +124,6 @@ define(["app"], function (app) {
                 if (!$scope.accordionOpen) {
                         $thisAccordion.addClass("av-hidden");
                     }
-                // if (!item.properties.defaultCollapse) {
-                //     $thisAccordion.addClass("av-hidden");
-                // } else {
-                //     $scope.accordionOpen = true;
-                // }
                 $element.find("input, textarea, select").focus(function (e) {
                         if ((!$scope.accordionOpen)) {
                             focusedErrorId = e.currentTarget.id;
@@ -182,7 +178,7 @@ define(["app"], function (app) {
                     }
                 });
                 $scope.openNext = function () {
-                    Form.validate().then(function (result) {
+                    Form.validate(item).then(function (result) {
                         if(result.valid) {
                             $scope.$emit('openNext', item.id);
                         } else {
@@ -198,15 +194,13 @@ define(["app"], function (app) {
                     if ($scope.accordionOpen) {
                         animateSlideOut(true);
                     } else {
+                        if (item.properties.isDependant) {
+
+                        }
                         $timeout(function () {
                             $thisAccordion.removeClass("av-hidden");
                         },0).then(function () {
-                            if(item.$$parent.properties.allowMultipleOpen) {
                                 animateSlideIn(true);
-                            }
-                            else {
-                                animateSlideIn(true);
-                            }
                         });
                     }
                 };
