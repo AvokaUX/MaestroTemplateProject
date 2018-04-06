@@ -6,11 +6,14 @@ define(["app"], function (app) {
             var $thisAccordion = $element.find(".panel-collapse");
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
-            var firstAccordionId = $element.parent().parent().find('.panel-group')[0].id;
+            var firstAccordionId = $scope.children[0].id;
             var transDuration = item.$$parent.properties.transitionDuration/1000;
             var focusedErrorId = "";
-            $scope.lastAccordion = item.id === $element.parent().parent().find('.panel-group')[$allAccordions.length - 1].id;
-            console.log('children---',$scope.children);
+            var aboveAccordionId = "";
+            $scope.lastAccordion = item.id === $scope.children[$scope.children.length - 1].id;
+            for ( var i = 1; i < $scope.children.length; i++) {
+                if ( item.id === $scope.children[i].id ) aboveAccordionId = $scope.children[i-1].id;
+            }
 
             function validateAccordion(errors) {
                 $scope.validationErrors = errors;
@@ -30,7 +33,7 @@ define(["app"], function (app) {
                 var td = 0;
                 var bodyHeight = $thisAccordion[0].offsetHeight;
                 var closedOnes = $element.parent().parent().find(".panel-collapse.av-hidden").length;
-                var someOpen = ($allAccordions.length - closedOnes) > 1;
+                var someOpen = ($scope.children.length - closedOnes) > 1;
                 if (noDelay) {
                     accordionTransition = "all " + transDuration + "s" + " ease-in-out";
                     td = transDuration * 1000;
@@ -189,19 +192,30 @@ define(["app"], function (app) {
 
                 $scope.toggleCollapse = function () {
                     if (!$scope.accordionOpen && !item.$$parent.properties.allowMultipleOpen) {
-                        $scope.$emit("accordionOpening", item);
+                        if (item.properties.isDependant && aboveAccordionId) {
+                            Form.validate(aboveAccordionId).then(function (result) {
+                                if(result.valid) {
+                                    $scope.$emit("accordionOpening", item);
+                                    $timeout(function () {
+                                        $thisAccordion.removeClass("av-hidden");
+                                    },0).then(function () {
+                                        animateSlideIn(true);
+                                    });
+                                } else {
+                                    return;
+                                }
+                            });
+                        } else {
+                            $scope.$emit("accordionOpening", item);
+                            $timeout(function () {
+                                $thisAccordion.removeClass("av-hidden");
+                            },0).then(function () {
+                                animateSlideIn(true);
+                            });
+                        }
                     }
                     if ($scope.accordionOpen) {
                         animateSlideOut(true);
-                    } else {
-                        if (item.properties.isDependant) {
-
-                        }
-                        $timeout(function () {
-                            $thisAccordion.removeClass("av-hidden");
-                        },0).then(function () {
-                                animateSlideIn(true);
-                        });
                     }
                 };
             }
