@@ -10,6 +10,7 @@ define(["app"], function (app) {
             var transDuration = item.$$parent.properties.transitionDuration/1000;
             var focusedErrorId = "";
             var aboveAccordionId = "";
+            item.properties.isDependant = false;//p;ace holder
             $scope.lastAccordion = item.id === $scope.children[$scope.children.length - 1].id;
             for ( var i = 1; i < $scope.children.length; i++) {
                 if ( item.id === $scope.children[i].id ) aboveAccordionId = $scope.children[i-1].id;
@@ -123,6 +124,14 @@ define(["app"], function (app) {
                 }, 25, false);
             }
 
+            var openThisAccordion = function () {
+                $scope.$emit("accordionOpening", item);
+                $timeout(function () {
+                    $thisAccordion.removeClass("av-hidden");
+                }, 0).then(function () {
+                    animateSlideIn(true);
+                });
+            };
             if (!Util.isReceipt && !Resource.design) {
                 if (!$scope.accordionOpen) {
                         $thisAccordion.addClass("av-hidden");
@@ -181,13 +190,7 @@ define(["app"], function (app) {
                     }
                 });
                 $scope.openNext = function () {
-                    Form.validate(item).then(function (result) {
-                        if(result.valid) {
-                            $scope.$emit('openNext', item.id);
-                        } else {
-                            return;
-                        }
-                    });
+                    $scope.$emit('openNext', item.id);
                 };
 
                 $scope.toggleCollapse = function () {
@@ -195,23 +198,13 @@ define(["app"], function (app) {
                         if (item.properties.isDependant && aboveAccordionId) {
                             Form.validate(aboveAccordionId).then(function (result) {
                                 if(result.valid) {
-                                    $scope.$emit("accordionOpening", item);
-                                    $timeout(function () {
-                                        $thisAccordion.removeClass("av-hidden");
-                                    },0).then(function () {
-                                        animateSlideIn(true);
-                                    });
+                                    openThisAccordion();
                                 } else {
                                     return;
                                 }
                             });
                         } else {
-                            $scope.$emit("accordionOpening", item);
-                            $timeout(function () {
-                                $thisAccordion.removeClass("av-hidden");
-                            },0).then(function () {
-                                animateSlideIn(true);
-                            });
+                            openThisAccordion();
                         }
                     }
                     if ($scope.accordionOpen) {

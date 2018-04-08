@@ -20,3 +20,8 @@ form[name='form'] .wdg-accordion-section-container .panel-collapse {
 form[name='form'] .wdg-accordion-section-container .av-accordion-body {
   border: 1px solid #ddd;
 }
+form[name='form'] .wdg-accordion-section-container .panel-collapse .av-accordion-body .wdg-accordion-button{
+  border: 1px solid #7bd5ff;
+  background: #7bd5ff;
+  color: #64767f;
+}

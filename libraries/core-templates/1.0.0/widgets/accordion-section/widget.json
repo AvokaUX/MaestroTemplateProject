@@ -36,12 +36,6 @@
       "category" : "Display options",
       "helpText": "Select the button icon position"
     },
-    "isDependant": {
-      "label": "Dependant accordion",
-      "type": "boolean",
-      "value": false,
-      "helpText": "Tick if you want open this accordion only above accordion validated."
-    },
     "goNextLabel": {
       "label": "Button label",
       "type": "richText",
