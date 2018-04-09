@@ -59,9 +59,7 @@
     []
   ],
   "validChildren": [
-    "accordion-section",
-    "repeat",
-    "repeating-block-template"
+    "accordion-section"
   ],
   "styles": [
     "av-form-field"

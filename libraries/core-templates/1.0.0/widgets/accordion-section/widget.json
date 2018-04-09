@@ -46,6 +46,7 @@
   },
   "rows": [[]],
   "styles": ["accordion-section-style"],
+  "validParents": ["accordion"],
   "exMandatory": true,
   "noData": true
 }
