@@ -14,7 +14,7 @@
     <div  class="panel-collapse">
       <div class="panel-body av-accordion-body">
         <div data-widget-children></div>
-        <div class="col-xs-12" data-ng-if="item.$$parent.properties.showNextButton && !lastAccordion">
+        <div class="col-xs-12" data-ng-if="item.$$parent.properties.showNextButton && !lastAccordion && !nextAccordionIsOpen">
           <button type="button" class="wdg-accordion-button btn wdg-button" data-ng-click="openNext()">
               <i class="wdg-button-icon av-icon-button"
                  data-ng-if="item.properties.icon && item.properties.iconPos == 'left'"

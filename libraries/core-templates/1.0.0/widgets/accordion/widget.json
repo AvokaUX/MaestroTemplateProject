@@ -3,6 +3,7 @@
   "label": "Accordion",
   "html": "accordion.html",
   "js": "accordion.js",
+  "css": "accordion.css",
   "icon": "accordion.png",
   "propDefs": {
     "showMoreIcon": {
@@ -28,7 +29,7 @@
     "transitionDuration": {
       "label": "Transition duration",
       "type": "integer",
-      "value": "300",
+      "value": 300,
       "preventNegative": true,
       "helpText": "Set transition duration of accordion in ms."
     },
@@ -62,9 +63,10 @@
     "accordion-section"
   ],
   "styles": [
-    "av-form-field"
+    "av-form-field",
+    "accordion-style"
   ],
   "noData": true,
   "exMandatory": true,
-  "hideLabel": true
+  "hideLabel": false
 }

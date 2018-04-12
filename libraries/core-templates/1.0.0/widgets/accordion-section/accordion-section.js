@@ -1,8 +1,7 @@
 define(["app"], function (app) {
     app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll) {
         Form.getItem($scope, $element).then(function (item) {
-            $scope.accordionIsValid = true;
-            $scope.accordionOpen = item.properties.defaultCollapse || Form.data[item.id];
+
             var $thisAccordion = $element.find(".panel-collapse");
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
@@ -10,17 +9,40 @@ define(["app"], function (app) {
             var transDuration = item.$$parent.properties.transitionDuration/1000;
             var focusedErrorId = "";
             var aboveAccordionId = "";
-            item.properties.isDependant = false;//p;ace holder
+            var belowAccordionIndex = 0;
+            item.properties.isDependant = false;//place holder
+            $scope.accordionIsValid = true;
             $scope.lastAccordion = item.id === $scope.children[$scope.children.length - 1].id;
+
+            if (Resource.design) {
+                sessionStorage.removeItem(item.id + '_acState');
+            }
+
+            if (sessionStorage.getItem(item.id + '_acState')) {
+                item.properties.defaultCollapse = false;
+            }
+
             for ( var i = 1; i < $scope.children.length; i++) {
                 if ( item.id === $scope.children[i].id ) aboveAccordionId = $scope.children[i-1].id;
             }
+            for ( var i = 0; i < $scope.children.length - 1; i++) {
+                if ( item.id === $scope.children[i].id ) belowAccordionIndex = i+1;
+            }
 
+            item.accordionIsOpen = $scope.accordionOpen = item.properties.defaultCollapse || sessionStorage.getItem(item.id + '_acState') === "open";
+            /**
+             *
+             * @param errors
+             */
             function validateAccordion(errors) {
                 $scope.validationErrors = errors;
                 $scope.accordionIsValid = false;
             }
 
+            /**
+             *
+             * @param isOpen
+             */
             function setAccordionHeadIcon(isOpen) {
                 if (isOpen) {
                     $scope.accordionHeaderIcon = item.$$parent.properties.showLessIcon;
@@ -29,6 +51,10 @@ define(["app"], function (app) {
                 }
             }
 
+            /**
+             *
+             * @param noDelay
+             */
             function animateSlideIn(noDelay) {
                 var accordionTransition = "";
                 var td = 0;
@@ -83,6 +109,10 @@ define(["app"], function (app) {
                 }, 25, false);
             }
 
+            /**
+             *
+             * @param noDelay
+             */
             function animateSlideOut(noDelay) {
                 var accordionTransition = "";
                 var td = 0;
@@ -124,6 +154,9 @@ define(["app"], function (app) {
                 }, 25, false);
             }
 
+            /**
+             * Open this accordion and let siblings know
+             */
             var openThisAccordion = function () {
                 $scope.$emit("accordionOpening", item);
                 $timeout(function () {
@@ -160,7 +193,7 @@ define(["app"], function (app) {
                         return !$thisAccordion.hasClass("av-hidden");
                     },
                     function (hidden) {
-                        $scope.accordionOpen = hidden;
+                        item.accordionIsOpen = $scope.accordionOpen = hidden;
                     }
                 );
 
@@ -179,14 +212,28 @@ define(["app"], function (app) {
                     }
                 );
 
+                $scope.$watch(
+                    function () {
+                        return $allAccordions[belowAccordionIndex].className.indexOf('av-hidden') === -1;
+                    },
+                    function (belowIsOpen) {
+                        $scope.nextAccordionIsOpen = belowIsOpen;
+                    }
+                );
+
                 $scope.$on("siblingOpening", function (evt, data) {
                     if (item.id !== data.id && $scope.accordionOpen) {
                         animateSlideOut(true);
                     }
                 });
                 $scope.$on("openThisOne", function (evt, data) {
-                    if (item.id == data) {
+                    if (item.id == data && !$scope.accordionOpen) {
                         $scope.toggleCollapse();
+                    }
+                });
+                $scope.$on("openAll", function (evt, data) {
+                    if (!$scope.accordionOpen) {
+                        openThisAccordion();
                     }
                 });
                 $scope.openNext = function () {
@@ -194,7 +241,8 @@ define(["app"], function (app) {
                 };
 
                 $scope.toggleCollapse = function () {
-                    if (!$scope.accordionOpen && !item.$$parent.properties.allowMultipleOpen) {
+                    if (!$scope.accordionOpen) {
+                        if (!item.$$parent.properties.allowMultipleOpen) {
                         if (item.properties.isDependant && aboveAccordionId) {
                             Form.validate(aboveAccordionId).then(function (result) {
                                 if(result.valid) {
@@ -206,8 +254,12 @@ define(["app"], function (app) {
                         } else {
                             openThisAccordion();
                         }
+
+                        } else {
+                            openThisAccordion();
                     }
-                    if ($scope.accordionOpen) {
+
+                    } else {
                         animateSlideOut(true);
                     }
                 };
@@ -223,9 +275,9 @@ define(["app"], function (app) {
             }
             $scope.$on("$destroy", function () {
                 if($scope.accordionOpen) {
-                    Form.data[item.id] = true;
+                    sessionStorage.setItem(item.id + '_acState', 'open');
                 } else {
-                    Form.data[item.id] = false;
+                    sessionStorage.setItem(item.id + '_acState', 'close');
                 }
             })
         });

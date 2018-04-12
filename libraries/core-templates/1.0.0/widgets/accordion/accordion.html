@@ -1,4 +1,8 @@
 <fieldset id="{{item.id}}" class="av-accordion-container" data-ng-controller="avAccordionController">
-        <legend class="wdg-label">{{item.label}}</legend>
+    <h3 class="av-accordion-legend-container">
+        <legend class="wdg-label av-accordion-legend" data-ng-bind-html="item.label"></legend>
+        <span class="wdg-accordion-openall-text" data-ng-click="openAll()" data-ng-if="!Util.isReceipt && item.properties.allowMultipleOpen
+                && children.length > 1 && !item.hideLabel && someAccordionIsClosed">Open&nbspall</span>
+    </h3>
         <div class="av-accordion-items-container" data-widget-children></div>
 </fieldset>
