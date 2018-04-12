@@ -48,12 +48,6 @@
       "label": "Toggle button label when open",
       "type": "richText",     
       "value": "Show less"
-    },
-    "helpText": {
-      "label": "Popover Help Text",
-      "type": "helpText",
-      "category": "Help Text",
-      "value": ""
     }
   },
   "rows": [
@@ -67,6 +61,5 @@
     "accordion-style"
   ],
   "noData": true,
-  "exMandatory": true,
-  "hideLabel": false
+  "exMandatory": true
 }

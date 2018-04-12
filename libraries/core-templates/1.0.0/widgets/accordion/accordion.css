@@ -12,8 +12,7 @@ form[name='form'] .av-accordion-container .av-accordion-legend-container .av-acc
 }
 
 form[name='form'] .av-accordion-container .av-accordion-legend-container .wdg-accordion-openall-text {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 5px;
     right: 15px;
     cursor: pointer;
     font-size: 16px;
