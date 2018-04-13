@@ -14,11 +14,7 @@ define(["app"], function (app) {
             $scope.accordionIsValid = true;
             $scope.lastAccordion = item.id === $scope.children[$scope.children.length - 1].id;
 
-            if (Resource.design) {
-                sessionStorage.removeItem(item.id + '_acState');
-            }
-
-            if (sessionStorage.getItem(item.id + '_acState')) {
+            if (Form.data[item.id] === 'close') {
                 item.properties.defaultCollapse = false;
             }
 
@@ -29,7 +25,7 @@ define(["app"], function (app) {
                 if ( item.id === $scope.children[i].id ) belowAccordionIndex = i+1;
             }
 
-            item.accordionIsOpen = $scope.accordionOpen = item.properties.defaultCollapse || sessionStorage.getItem(item.id + '_acState') === "open";
+            item.accordionIsOpen = $scope.accordionOpen = item.properties.defaultCollapse || Form.data[item.id] === "open";
             /**
              *
              * @param errors
@@ -243,27 +239,28 @@ define(["app"], function (app) {
                 $scope.toggleCollapse = function () {
                     if (!$scope.accordionOpen) {
                         if (!item.$$parent.properties.allowMultipleOpen) {
-                        if (item.properties.isDependant && aboveAccordionId) {
-                            Form.validate(aboveAccordionId).then(function (result) {
-                                if(result.valid) {
-                                    openThisAccordion();
-                                } else {
-                                    return;
-                                }
-                            });
-                        } else {
-                            openThisAccordion();
-                        }
+                            if (item.properties.isDependant && aboveAccordionId) {
+                                Form.validate(aboveAccordionId).then(function (result) {
+                                    if(result.valid) {
+                                        openThisAccordion();
+                                    } else {
+                                        return;
+                                    }
+                                });
+                            } else {
+                                openThisAccordion();
+                            }
 
                         } else {
                             openThisAccordion();
-                    }
+                        }
 
                     } else {
                         animateSlideOut(true);
                     }
                 };
             }
+
             if (Util.isReceipt) {
                 $element.find('.wdg-accordion-panel').css("border-style", "none");
                 $element.find('.av-accordion-body').css({
@@ -273,11 +270,12 @@ define(["app"], function (app) {
                 $element.find('.panel-heading').css("padding-left", "0");
                 $element.find('.panel-collapse').css("margin-left", "0");
             }
+
             $scope.$on("$destroy", function () {
                 if($scope.accordionOpen) {
-                    sessionStorage.setItem(item.id + '_acState', 'open');
+                    Form.data[item.id] = 'open';
                 } else {
-                    sessionStorage.setItem(item.id + '_acState', 'close');
+                    Form.data[item.id] = 'close';
                 }
             })
         });

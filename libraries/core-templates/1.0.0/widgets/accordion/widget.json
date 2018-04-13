@@ -6,25 +6,16 @@
   "css": "accordion.css",
   "icon": "accordion.png",
   "propDefs": {
-    "showMoreIcon": {
-      "label": "Icon when closed",
-      "type": "icon",
-      "imageStyleTarget": "show more icon",
-      "value": "fa fa-angle-right",
-      "helpText": "Select the show more icon"
-    },
-    "showLessIcon": {
-      "label": "Icon when open",
-      "type": "icon",
-      "imageStyleTarget": "Show less icon",
-      "value": "fa fa-angle-down",
-      "helpText": "Select the show less icon"
-    },
     "allowMultipleOpen": {
       "label": "Allow multiple open sections",
       "type": "boolean",
-      "value": false,      
+      "value": false,
       "helpText": "Tick if you want multiple accordion sections openning while user interacts."
+    },
+    "openAllText": {
+      "label": "Label for open all button",
+      "type": "richText",
+      "value": "Open all"
     },
     "transitionDuration": {
       "label": "Transition duration",
@@ -38,6 +29,20 @@
       "type": "boolean",
       "value": true,
       "helpText": "Tick if you want open next button showing in accordion sections."
+    },
+    "showMoreIcon": {
+      "label": "Icon when closed",
+      "type": "icon",
+      "imageStyleTarget": "show more icon",
+      "value": "fa fa-angle-right",
+      "helpText": "Select the show more icon"
+    },
+    "showLessIcon": {
+      "label": "Icon when open",
+      "type": "icon",
+      "imageStyleTarget": "Show less icon",
+      "value": "fa fa-angle-down",
+      "helpText": "Select the show less icon"
     },
     "openText": {
       "label": "Toggle button label when closed",

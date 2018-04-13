@@ -3,9 +3,10 @@ define(["app"], function (app) {
 		Form.getItem($scope, $element).then(function (item) {
 			var originalAllowOpen = item.properties.allowMultipleOpen;
             $scope.children = Util.children(item);
+
             $scope.$on("accordionOpening", function(evt, data) {
             	if (!item.properties.allowMultipleOpen) {
-                $scope.$broadcast("siblingOpening", data);
+                    $scope.$broadcast("siblingOpening", data);
             	}
             });
             $scope.$on("openNext", function(evt, data) {
@@ -29,8 +30,8 @@ define(["app"], function (app) {
                 return a;
             }, function (someClose) {
                 $scope.someAccordionIsClosed = someClose;
-
+                item.properties.allowMultipleOpen = originalAllowOpen;
             });
-		});
+        });
 	}]);
 });
