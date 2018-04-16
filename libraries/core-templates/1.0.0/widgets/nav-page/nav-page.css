@@ -12,3 +12,14 @@ form[name='form'] .av-landing-page .wdg-section-1-body > .row {
   height: 100%;
   vertical-align: middle;
 }
+
+form[name='form'] .av-normal-page .wdg-section-1-body {
+  display: table;
+  height: calc(100vh - 250px);
+  width: calc(100% - 40px);
+}
+form[name='form'] .av-normal-page .wdg-section-1-body > .row {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}

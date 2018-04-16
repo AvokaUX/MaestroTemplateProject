@@ -1,0 +1,80 @@
+form[name='form'] {
+	.av-submit-button {
+      position : fixed;
+      bottom : 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      .wdg-button {		// Button
+        outline: none;
+        border: 1px solid @av-primary-color;
+        background: @av-primary-color;
+        transition: all 0.7s ease;
+        pointer-events: initial;
+        padding-top: 8px;
+        &:hover, &:focus{
+          border: solid 1px;
+          .override-color(background-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
+          .override-color(border-color, @av-primary-color, @av-button-docking-color);
+          .override-color(color, @av-primary-color, @av-button-docking-color);
+        }
+
+        &:active{
+          opacity: 1;
+        }
+        @media only screen and (max-width: (@screen-md)) {
+          .override-color(background-color, fade(@av-primary-color, 70%), @av-button-docking-color);
+        }
+        
+		}
+
+      &.error {
+        .wdg-button {
+          animation: glowing 600ms 1;
+        }
+      }
+
+		.wdg-button-icon {		// Button icon
+		
+		}
+
+		.wdg-button-label {		// Button label
+        font-size: 16px;
+               
+		}
+      
+      /* Custom, iPhone Retina */ 
+      @media only screen and (min-width : 320px) {
+        //left: 20%;
+        bottom : 0px;
+      }
+
+      /* Extra Small Devices, Phones */ 
+      @media only screen and (min-width : 480px) {
+        //left: 20%;
+        bottom : 0px;
+      }
+
+      /* Small Devices, Tablets */
+      @media only screen and (min-width : 768px) {
+        //left: 26%;
+        bottom : 0px;
+      }
+
+      /* Medium Devices, Desktops */
+      @media only screen and (min-width : 1200px) {
+        //left: 33%;
+      }
+
+      /* Large Devices, Wide Screens */
+      @media only screen and (min-width : 1300px) {
+        //left: 35%;
+      }
+
+	}
+}
+@keyframes glowing {
+  0% { background-color: transparent; }
+  10% { background-color:rgba(255, 0, 0, 0.8); }
+  60% { background-color:rgba(255, 0, 0, 0.8); }
+  100% { background-color: transparent; }
+}

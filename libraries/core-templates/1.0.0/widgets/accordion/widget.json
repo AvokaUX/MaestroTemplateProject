@@ -25,6 +25,13 @@
       "value": false,      
       "helpText": "Tick if you want multiple accordion sections openning while user interacts."
     },
+    "transitionDuration": {
+      "label": "Transition duration",
+      "type": "integer",
+      "value": "300",
+      "preventNegative": true,
+      "helpText": "Set transition duration of accordion in ms."
+    },
     "showNextButton": {
       "label": "Show next button in accordion",
       "type": "boolean",
@@ -52,7 +59,9 @@
     []
   ],
   "validChildren": [
-    "accordion-section"
+    "accordion-section",
+    "repeat",
+    "repeating-block-template"
   ],
   "styles": [
     "av-form-field"

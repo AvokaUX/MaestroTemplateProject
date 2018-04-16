@@ -1,8 +1,8 @@
 {
-  "label": "BS logo container",
-  "block": {},
-  "file": "style.less",
-  "widgets": [
-    "block"
-  ]
+	"block": {},
+	"file": "style.less",
+	"label": "BS logo container",
+	"widgets": [
+		"block"
+	]
 }

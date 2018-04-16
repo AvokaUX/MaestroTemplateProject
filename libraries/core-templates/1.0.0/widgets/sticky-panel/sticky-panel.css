@@ -1,0 +1,7 @@
+form[name='form'] .av-sticky-panel {
+  position: static;
+  z-index: 99;
+}
+form[name='form'] .av-sticky-panel.float-over {
+  position: absolute !important;
+}

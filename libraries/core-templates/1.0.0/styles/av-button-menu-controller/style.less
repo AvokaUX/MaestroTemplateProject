@@ -1,0 +1,58 @@
+form[name='form'] {
+  .av-fab-menu {
+    width: 100%;
+    z-index: 900;
+    min-height: @av-header-height;
+    .override-color(color, @av-button-docking-font-color, @av-font-color);
+
+    .av-fab-menu-background {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 150%;
+      height: 0;
+      .override-color(background-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
+      transform: translateX(-50%);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      opacity: 0.8;
+      transition: 0.7s height ease-in-out;
+      transition-delay: 0.2s;
+
+      &.av-show-background {
+        transition-delay: 0s;
+        height: 420px;
+      }
+    }
+
+    @media only screen and (max-width: (@av-max-form-width + 240)) {
+      width: 50px;
+      min-height: 50px;
+
+      .av-fab-menu-background {
+        border-radius: 50%;
+        transform: translate(-50%, 50%);
+        width: 150px;
+        height: 150px;
+        top: initial;
+        left: 0;
+        bottom: 0;
+        right: initial;
+        .override-color(background-color, @av-primary-color, @av-button-docking-color);
+        transition: 0.1s opacity ease-in-out, 0.1s width ease-in-out, 0.1s height ease-in-out;
+        transition-delay: 0.5s;
+
+        &.av-show-background {
+          transition-delay: 0s;
+          width: 650px;
+          height: 650px;
+        }
+      }
+
+      .wdg-button:focus + .av-fab-menu-background,.wdg-button:hover + .av-fab-menu-background, .av-fab-menu-background.av-show-background {
+        .override-color(background-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
+        .override-color(color, @av-primary-color, @av-button-docking-color);
+      }
+    }
+  }
+}

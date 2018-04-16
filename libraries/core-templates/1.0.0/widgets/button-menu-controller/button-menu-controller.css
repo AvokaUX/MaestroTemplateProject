@@ -1,0 +1,29 @@
+form[name='form'] .button-menu .wdg-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius:50%;
+    outline:0;
+    pointer-events: initial;
+    background: transparent;
+    padding: 10px;
+}
+
+form[name='form'] .button-menu .wdg-button:active {
+     opacity: 1;
+}
+
+form[name='form'] .button-menu .wdg-button .wdg-button-icon {
+    height: 45px;
+    width: 100%;
+    line-height: 34px;
+}
+
+form[name='form'] .button-menu .av-fab-menu-background {
+    pointer-events: initial;
+}
+
+

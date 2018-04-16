@@ -1,7 +1,7 @@
 {
-  "label": "AV primary button",
-  "file": "style.less",
-  "widgets": [
-    "av-button"
-  ]
+	"file": "style.less",
+	"label": "AV primary button",
+	"widgets": [
+		"av-button"
+	]
 }

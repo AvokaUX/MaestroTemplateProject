@@ -1,0 +1,15 @@
+<div data-ng-controller="avMenuButtonController">
+	<button type="button" class="btn wdg-button"
+			aria-expanded="{{data[item.id] === true}}"
+			aria-haspopup="true">
+		<i class="wdg-button-icon av-icon-button"
+		   data-ng-if="item.properties.iconPos == 'left' && (item.properties.icon || item.properties.offIcon)"
+		   data-ng-class="data[item.id] === true ? item.properties.icon : item.properties.offIcon"></i>
+		<span data-av-compile class="wdg-button-label"
+			  data-ng-bind-html="item.htmlLabel || item.label"></span>
+		<i class="wdg-button-icon av-icon-button"
+		   data-ng-if="item.properties.iconPos == 'right' && (item.properties.icon || item.properties.offIcon)"
+		   data-ng-class="data[item.id] === true ? item.properties.icon : item.properties.offIcon"></i>
+	</button>
+	<div class="av-fab-menu-background" data-ng-class="{'av-show-background': showBackground}"></div>
+</div>

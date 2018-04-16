@@ -1,4 +1,4 @@
-<div class="av-section-1 av-page panel panel-default wdg-section-1-container" data-ng-class="{'av-landing-page': item.properties.fullPage, 'av-progressbar-showing': !item.properties.hideFormHeader && !item.properties.offMenu}" data-av-section>
+<div class="av-section-1 av-page panel panel-default wdg-section-1-container" data-ng-class="{'av-landing-page': item.properties.landing, 'av-normal-page': !item.properties.landing, 'av-progressbar-showing': !item.properties.hideFormHeader && !item.properties.offMenu}" data-av-section>
     <span class="av-hidden" role="alert" data-ng-show="!Form.dialogName">{{item.label}} page loaded</span>
     <div data-ng-if="Resource.generated || Pages.currentPage == page">
         <div class="av-heading-padding" data-ng-if="!item.properties.hideFormHeader && !Util.isReceipt"/>

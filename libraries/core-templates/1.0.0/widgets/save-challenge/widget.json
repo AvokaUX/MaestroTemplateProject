@@ -145,11 +145,34 @@
 											[
 												{
 													"rules": {
-														"click": "Form.resumeForm(item.$$parent.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
+														"click": "Form.resumeForm(item.properties.validationRef, item.properties.trackingCodeField, item.properties.challengeAnswerField).catch(function() {\nalert(\"Could not open saved form with the details provided\");\n});",
 														"sh": ""
 													},
 													"pubId": "e73c674fafa146b486eb2c6bd8530cb5",
 													"subId": "6471b7e4d063409483e51ff9138ed85e",
+													"propDefs": {
+														"trackingCodeField": {
+															"label": "Tracking Code Field",
+															"category": "Configuration",
+															"type": "fieldRef",
+															"helpText": "The tracking code field to link to.",
+															"value": "save_challenge_reference_code"
+														},
+														"challengeAnswerField": {
+															"label": "Challenge Answer Field",
+															"category": "Configuration",
+															"type": "fieldRef",
+															"helpText": "The challenge answer field to link to.",
+															"value": ""
+														},
+														"validationRef": {
+															"label": "Block Or Field To Validate",
+															"type": "text",
+															"value": "",
+															"helpText": "Block Or Field To Validate.",
+															"order": 3
+														}
+													},
 													"exclude": false,
 													"path": "",
 													"id": "open_6",
@@ -175,27 +198,6 @@
 													}
 												],
 												"order": 1
-											},
-											"trackingCodeField": {
-												"label": "Tracking Code Field",
-												"category": "Configuration",
-												"type": "fieldRef",
-												"helpText": "The tracking code field to link to.",
-												"value": ""
-											},
-											"challengeAnswerField": {
-												"label": "Challenge Answer Field",
-												"category": "Configuration",
-												"type": "fieldRef",
-												"helpText": "The challenge answer field to link to.",
-												"value": ""
-											},
-											"validationRef": {
-												"label": "Block Or Field To Validate",
-												"type": "text",
-												"value": "",
-												"helpText": "Block Or Field To Validate.",
-												"order": 3
 											}
 										},
 										"subId": "5e49ce4ad21c4dbb96b865b096c67eea",

@@ -1,0 +1,29 @@
+{
+	"category": "Buttons",
+    "label": "AV menu button",
+    "html": "button-menu.html",
+    "js":	"button-menu.js",
+    "css":	"button-menu.css",
+    "propDefs": {
+        "icon": {
+            "label": "Icon When On",
+            "type": "icon",
+            "value": "fa fa-minus",
+            "helpText": "Select the button icon"
+        },
+        "offIcon": {
+            "label": "Icon When Off",
+            "type": "icon",
+            "value": "fa fa-plus",
+            "helpText": "Select the button icon"
+        }
+    },
+    "properties": {
+        "icon": "fa fa-minus"
+    },
+    "rules": {
+        "click": "data[item.id] = data[item.id] !== true;"
+    },
+    "noData": false,
+    "type" : "icon-button"
+}

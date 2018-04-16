@@ -1,29 +1,51 @@
 {
   "category": "Containers",
-  "label": "Accordion Section",
+  "label": "Accordion section",
   "html": "accordion-section.html",
   "css": "accordion-section.css",
   "js": "accordion-section.js",
   "icon": "accordion-section.png",
   "propDefs" : {
     "ariaLabel": {
-      "label": "Aria Label",
+      "label": "Aria label",
       "type": "text",
       "value": "",
       "category" : "Accessibility",
-      "helpText": "Enter the Aria Label for this accordion section."
+      "helpText": "Enter the aria label for this accordion section."
     },
     "defaultCollapse": {
-			"label": "Default to open",
-			"type": "boolean",
-			"value": false,
-      "category" : "Display Options",
+      "label": "Default to open",
+      "type": "boolean",
+      "value": false,
+      "category" : "Display options",
       "helpText": "Set initial accordion section open status."
-    }    
+    },
+    "icon": {
+      "label": "Button icon",
+      "type": "icon",
+      "imageStyleTarget": "Button icon",
+      "value": "",
+      "category" : "Display options",
+      "helpText": "Select the button icon"
+    },
+    "iconPos": {
+      "label": "Button icon position",
+      "type": "option",
+      "value": "left",
+      "options" : [{"label":"Left","value":"left"},{"label":"Right","value":"right"}],
+      "category" : "Display options",
+      "helpText": "Select the button icon position"
+    },
+    "goNextLabel": {
+      "label": "Button label",
+      "type": "text",
+      "value": "",
+      "category" : "Display options",
+      "helpText": "Enter the button label for this accordion section."
+    }
   },
   "rows": [[]],
   "styles": ["accordion-section-style"],
-  "validParents": ["accordion"],  
   "exMandatory": true,
   "noData": true
 }

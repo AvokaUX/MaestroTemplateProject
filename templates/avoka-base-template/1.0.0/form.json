@@ -212,9 +212,16 @@
 												"rows": [
 													[
 														{
+															"htmlLabel": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
 															"id": "cancel_confirm_text",
+															"label": "Are you sure you want to cancel your submission? Before you go, you can securely save your progress and resume at a later time. Thank you!",
+															"styles": [
+																"av-global-layout",
+																"av-form-field",
+																"bs-center-align-19822"
+															],
 															"subId": "01580dd2461f46b1adcd5d798f9c9022",
-															"type": "text-input"
+															"type": "text-display"
 														}
 													],
 													[
@@ -316,6 +323,7 @@
 													],
 													[
 														{
+															"animateVisibility": true,
 															"id": "feedback_2",
 															"rows": [
 																[
@@ -334,6 +342,9 @@
 																	}
 																]
 															],
+															"rules": {
+																"sh": "data.confirm_2 !== \"Confirm Cancel\";"
+															},
 															"subId": "66800abae2f84be5953bd85d3488a708",
 															"type": "section-2"
 														}
@@ -362,7 +373,26 @@
 															"rules": {
 																"sh": ""
 															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field"
+															],
 															"subId": "30bcbd69db2b490e8e125e3ddd15e80c",
+															"type": "button"
+														},
+														{
+															"htmlLabel": "{{data.confirm_2 || &quot;Cancel&quot;}}",
+															"id": "confirm_2",
+															"label": "",
+															"rules": {
+																"click": "if (data.confirm_2 === \"Confirm Cancel\") { data.confirm_2 = \"Cancel\" ;}\nelse {\nForm.submit({'save':'Saved','abandon':'Abandoned'}[item.$$parent.properties.dialogNavButtons], item.properties.legacyMethod, false, item.$$parent.properties.validationRef);\n}\n",
+																"sh": ""
+															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field"
+															],
+															"subId": "30bcbd69db2b490e8e125e3ddd15e80c_1",
 															"type": "button"
 														}
 													]
@@ -382,6 +412,9 @@
 					}
 				]
 			],
+			"rules": {
+				"load": "data.confirm_2 = \"Confirm Cancel\";"
+			},
 			"type": "cancel-confirm"
 		},
 		"formhelp": {
@@ -860,26 +893,10 @@
 												"path": "",
 												"pathContext": "abs",
 												"properties": {
-													"infoText": "Enter the email of the person you wish to share with and optionally a personal message."
+													"infoText": "Email details of the person you wish to share with below:"
 												},
 												"rows": [
 													[
-														{
-															"exclude": false,
-															"htmlLabel": "Recipient Email Address",
-															"id": "sharerecipientemail_1",
-															"label": "Recipient Email Address",
-															"mandatory": true,
-															"offset": {
-																"lg": "3",
-																"md": "3"
-															},
-															"path": "Sharerecipientemail_1",
-															"styles": [
-																"av-global-layout"
-															],
-															"type": "email"
-														},
 														{
 															"exclude": false,
 															"htmlLabel": "Your Full Name",
@@ -900,6 +917,24 @@
 													[
 														{
 															"exclude": false,
+															"htmlLabel": "Recipient Email Address",
+															"id": "sharerecipientemail_1",
+															"label": "Recipient Email Address",
+															"mandatory": true,
+															"offset": {
+																"lg": "3",
+																"md": "3"
+															},
+															"path": "Sharerecipientemail_1",
+															"styles": [
+																"av-global-layout"
+															],
+															"type": "email"
+														}
+													],
+													[
+														{
+															"exclude": false,
 															"htmlLabel": "Personal Message (optional)",
 															"id": "personalmessage_1",
 															"label": "Personal Message (optional)",
@@ -908,32 +943,6 @@
 																"av-global-layout"
 															],
 															"type": "text-area"
-														}
-													],
-													[
-														{
-															"exclude": false,
-															"htmlLabel": "Share Now",
-															"id": "shareFormButton_1",
-															"label": "Share Now",
-															"offset": {
-																"lg": "4",
-																"md": "4"
-															},
-															"path": "",
-															"properties": {
-																"emailBodyRef": "personalmessage_1",
-																"emailFieldRef": "sharerecipientemail_1",
-																"senderNameRef": "sendername_1"
-															},
-															"rules": {
-																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
-															},
-															"styles": [
-																"message-banner",
-																"av-button-primary"
-															],
-															"type": "button-email-share-form"
 														}
 													]
 												],
@@ -955,10 +964,12 @@
 							],
 							[
 								{
+									"exclude": false,
 									"id": "dialogFooter_19",
 									"rows": [
 										[
 											{
+												"exclude": false,
 												"id": "dialogFooterBlock_13",
 												"rows": [
 													[
@@ -972,6 +983,33 @@
 															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
+														}
+													],
+													[
+														{
+															"exclude": false,
+															"htmlLabel": "Email Now",
+															"id": "shareFormButton_1",
+															"label": "Email Now",
+															"offset": {
+																"lg": "4",
+																"md": "4"
+															},
+															"path": "",
+															"properties": {
+																"emailBodyRef": "personalmessage_1",
+																"emailFieldRef": "sharerecipientemail_1",
+																"senderNameRef": "sendername_1"
+															},
+															"rules": {
+																"click": "Form.backgroundSave().then(function(){\t\t\t\nForm.emailOperation('emailShareForm', item.id, item.properties.emailFieldRef, item.properties.senderNameRef, item.properties.emailBodyRef)\n  .then(function(){\n  Form.showModal(\"sharesuccess\");\n  Form.data.shareFormButton_2 = {};\n  Form.data.shareFormButton_2.$responseStatus = Form.data.shareFormButton_1.$responseStatus;\n})\n})\n"
+															},
+															"styles": [
+																"bs-dialog-button-12962",
+																"av-form-field",
+																"av-global-layout"
+															],
+															"type": "button-email-share-form"
 														}
 													]
 												],
@@ -1178,9 +1216,9 @@
 	],
 	"localModals": [
 		"cancelsuccess",
-		"savesuccess",
 		"submitsuccess",
-		"sharesuccess"
+		"sharesuccess",
+		"savesuccess"
 	],
 	"maestroReleaseVersion": "17.10.3",
 	"modals": {
@@ -1566,6 +1604,12 @@
 															"path": "Sendername",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
+														},
+														{
+															"id": "sharerecipientemail",
+															"path": "Sharerecipientemail",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"type": "email"
 														}
 													],
 													[
@@ -1591,20 +1635,33 @@
 										[
 											{
 												"id": "section_9",
+												"properties": {
+													"hideTitle": true,
+													"infoText": ""
+												},
 												"rows": [
 													[
 														{
-															"id": "textDisplay_8",
-															"subId": "925a5c310b2847508048d33806aca3cb",
-															"type": "text-display"
+															"id": "message_block_1",
+															"properties": {
+																"hideHeader": true,
+																"hideIcon": true
+															},
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_8",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
 														}
 													],
 													[
 														{
 															"id": "button_3",
-															"rules": {
-																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.sharerecipientemail = \"\";\nForm.data.sendername = \"\";\nForm.data.personalmessage = \"\";\n}"
-															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
@@ -1852,6 +1909,7 @@
 												"rows": [
 													[
 														{
+															"htmlLabel": "<p>We&#39;ve sent instructions to your email address (<strong>{{Form.data.emailAddress_3}}</strong>) on how to return to the application when you are ready.</p><p>If you didn&#39;t receive it or would like a reminder send to a different email address, just click the link below and follow the instructions.</p>",
 															"id": "textDisplay_16",
 															"subId": "671deba5ac7a4c4eafe625624203bb1a",
 															"type": "text-display"
@@ -1878,16 +1936,16 @@
 												"rows": [
 													[
 														{
-															"id": "sharerecipientemail_2",
-															"path": "Sharerecipientemail_2",
-															"subId": "ea72110b798b4186be8e71d39c7206e1",
-															"type": "email"
-														},
-														{
 															"id": "sendername_2",
 															"path": "Sendername_2",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
 															"type": "text-input"
+														},
+														{
+															"id": "sharerecipientemail_2",
+															"path": "Sharerecipientemail_2",
+															"subId": "ea72110b798b4186be8e71d39c7206e1",
+															"type": "email"
 														}
 													],
 													[
@@ -1921,19 +1979,59 @@
 												"id": "section_13",
 												"label": "More share",
 												"properties": {
+													"hideTitle": true,
 													"infoText": ""
 												},
 												"rows": [
 													[
 														{
-															"id": "textDisplay_17",
-															"subId": "925a5c310b2847508048d33806aca3cb",
-															"type": "text-display"
+															"id": "message_block_4",
+															"properties": {
+																"hideHeader": true,
+																"hideIcon": true
+															},
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_19",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
 														}
 													],
 													[
 														{
 															"id": "button_7",
+															"rules": {
+																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
+															},
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
+															"type": "button"
+														}
+													],
+													[
+														{
+															"exclude": true,
+															"id": "message_block_2",
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_17",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
+														}
+													],
+													[
+														{
+															"exclude": true,
+															"id": "button_9",
 															"rules": {
 																"click": "if(Form.data.hasOwnProperty(\"shareFormButton_2\") ){\n  Form.data.shareFormButton_2 = {};\n//Form.data.save_success_share_form = \"\";\nForm.data.sharerecipientemail_2 = \"\";\nForm.data.sendername_2 = \"\";\nForm.data.personalmessage_2 = \"\";\n}"
 															},
@@ -2560,6 +2658,7 @@
 											"hideFormHeader": true,
 											"hideMenuButton": true,
 											"hideNavButtons": true,
+											"landing": true,
 											"offMenu": true
 										},
 										"rows": [

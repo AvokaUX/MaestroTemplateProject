@@ -34,7 +34,7 @@
 											[
 												{
 													"label": "Save confirm message",
-													"htmlLabel": "Save confirm message",
+													"htmlLabel": "This will end your current session but your form will be saved and may be re-opened later.",
 													"entityPath": "save_confirm",
 													"exclude": false,
 													"hasCustomId": true,
@@ -56,6 +56,9 @@
 													],
 													"properties": {
 														"infoText": "Please review your security question and answer. This question must be correctly answered to re-open the form."
+													},
+													"rules": {
+														"sh": "return item.rows[0].length > 0;"
 													},
 													"entityPath": "security_question_save",
 													"exclude": false,
