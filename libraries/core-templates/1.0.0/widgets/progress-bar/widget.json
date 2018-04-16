@@ -32,5 +32,6 @@
 		}
 	},
 	"styles": ["av-progress-bar"],
+	"noData": true,
 	"styleTargets": ["wdg-progress-group-icon", "wdg-progress-page-icon", "wdg-progress-bar-background"]
 }

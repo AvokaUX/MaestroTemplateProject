@@ -96,16 +96,17 @@
 			"label": "Default",
 			"styleVars": {
 				"av-body-background-color": "#FFFFFF",
-				"av-button-contrast": "",
+				"av-button-contrast": "#fff",
 				"av-button-docking-color": "",
 				"av-button-docking-contrast": "",
 				"av-button-docking-font-color": "",
 				"av-button-font-size": "16px",
-				"av-button-primary-color": "",
+				"av-button-primary-color": "#60006E",
 				"av-button-secondary-color": "",
-				"av-dialog-background": "#000",
-				"av-dialog-background-opacity": "70%",
-				"av-focus-color": "",
+				"av-dialog-background": "#441775",
+				"av-dialog-background-opacity": "96%",
+				"av-docking-point": "50px",
+				"av-focus-color": "#430B70",
 				"av-font-color": "#333333",
 				"av-font-family": "sans-serif, Arial, Helvetica, QuicksandRegular",
 				"av-form-background-color": "#FFFFFF",
@@ -121,18 +122,24 @@
 				"av-menu-hover-color": "",
 				"av-menu-text-color": "",
 				"av-menu-text-hover-color": "",
+				"av-msg-section-background": "#64767F",
+				"av-msg-section-background-opacity": "70%",
 				"av-neutral-color": "#EEEEEE",
 				"av-neutral-contrast": "#333333",
 				"av-popover-help": "#fff",
 				"av-popover-help-btn-focus": "#2a7ab0",
-				"av-primary-color": "#7bd5ff",
-				"av-primary-contrast": "#64767f",
+				"av-primary-color": "#D00065",
+				"av-primary-contrast": "#86006A",
+				"av-progressbar-background": "#64767F",
+				"av-progressbar-background-opacity": "70%",
 				"av-secondary-color": "#454753",
 				"av-secondary-contrast": "#64767f",
 				"av-section-1-header-color": "#202B34",
 				"av-section-1-title-font-size": "30px",
 				"av-section-2-header-color": "#202B34",
 				"av-section-2-title-font-size": "21px",
+				"av-section-background": "#fff",
+				"av-section-background-opacity": "90%",
 				"av-selected-color": "",
 				"av-slide-menu-color": "#005280",
 				"av-slide-menu-extra-item-active-color": "",
@@ -153,6 +160,7 @@
 				"av-slide-menu-item-text-active-color": "",
 				"av-slide-menu-item-text-color": "",
 				"av-slide-menu-item-text-hover-color": "",
+				"av-stepperav-progressbar-height": "50px",
 				"av-sub-menu-active-background-color": "#FFFFFF",
 				"av-sub-menu-active-text-color": "#005280",
 				"av-sub-menu-background-color": "#FFFFFF",
@@ -383,13 +391,14 @@
 									"rows": [
 										[
 											{
-												"exclude": false,
 												"id": "dialogFooterBlock_5",
 												"rows": [
 													[
 														{
-															"exclude": false,
 															"id": "confirm_3",
+															"rules": {
+																"sh": ""
+															},
 															"span": {
 																"md": 2
 															},
@@ -397,8 +406,10 @@
 															"type": "button"
 														},
 														{
-															"exclude": false,
 															"id": "confirm_2",
+															"rules": {
+																"sh": ""
+															},
 															"styles": [
 																"bs-dialog-button-12962"
 															],
@@ -604,6 +615,9 @@
 														{
 															"exclude": false,
 															"id": "okay_1",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "dc7f4001523f4d2abc3993898559c950",
 															"type": "button"
 														}
@@ -748,6 +762,9 @@
 													[
 														{
 															"id": "open_6",
+															"rules": {
+																"sh": ""
+															},
 															"styles": [
 																"bs-dialog-button-12962",
 																"av-global-layout"
@@ -876,6 +893,9 @@
 													[
 														{
 															"id": "okay_18",
+															"rules": {
+																"sh": ""
+															},
 															"styles": [
 																"bs-dialog-button-12962",
 																"av-global-layout"
@@ -1094,6 +1114,9 @@
 															"htmlLabel": "Save & Share",
 															"id": "okay_19",
 															"label": "Save & Share",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "44dc8c39515844248e6ad70c4e71e2b2",
 															"type": "button"
 														}
@@ -1230,6 +1253,9 @@
 													[
 														{
 															"id": "okay_8",
+															"rules": {
+																"sh": ""
+															},
 															"subId": "59aead05e87845a9acdbf2b2946a5169",
 															"type": "button"
 														}
@@ -1357,7 +1383,6 @@
 	"maestroReleaseVersion": "17.10.3",
 	"modals": {
 		"cancelsuccess": {
-			"exclude": false,
 			"id": "cancelsuccess",
 			"properties": {},
 			"rows": [
@@ -1514,13 +1539,11 @@
 			"type": "cancel-success-modal"
 		},
 		"savesuccess": {
-			"exclude": false,
 			"id": "savesuccess",
 			"properties": {},
 			"rows": [
 				[
 					{
-						"exclude": false,
 						"id": "modalBackground_4",
 						"rows": [
 							[]
@@ -1782,9 +1805,6 @@
 													[
 														{
 															"id": "button_3",
-															"rules": {
-																"click": "if(Form.data.hasOwnProperty(\"shareFormButton\") ){\nForm.data.shareFormButton = {};\nForm.data.emailAddress_4 = \"\";\nForm.data.textField = \"\";\nForm.data.multilineTextArea = \"\";\n}"
-															},
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
@@ -1834,7 +1854,6 @@
 			"type": "save-success-modal"
 		},
 		"sharesuccess": {
-			"exclude": false,
 			"htmlLabel": "Share Success Modal",
 			"id": "sharesuccess",
 			"label": "Share Success Modal",
@@ -1842,7 +1861,6 @@
 			"rows": [
 				[
 					{
-						"exclude": false,
 						"id": "modalBackground_5",
 						"rows": [
 							[]
@@ -2026,9 +2044,6 @@
 														}
 													]
 												],
-												"rules": {
-													"sh": "(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo === \"\" : true) &&\n(Form.data.hasOwnProperty(\"emailSavedFormButton_1\") ? Form.data.emailSavedFormButton_1.$responseStatus !== \"success\" : true)"
-												},
 												"subId": "39f81a0bd55242a5829cf25715d4b815",
 												"type": "section-2"
 											}
@@ -2049,17 +2064,11 @@
 													[
 														{
 															"id": "button_6",
-															"rules": {
-																"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"emailSavedFormButton_1\")) {\nForm.data.emailSavedFormButton_1.$responseStatus = \"\";\n}\nForm.data.emailAddress_3 = \"\";"
-															},
 															"subId": "a9f47eb0e2e94a9bb18feac5370cc0ee",
 															"type": "button"
 														}
 													]
 												],
-												"rules": {
-													"sh": "(Form.data.hasOwnProperty(\"emailSavedFormButton_1\") ? Form.data.emailSavedFormButton_1.$responseStatus === \"success\" : false) ||\n(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\") ? Form.data.$submitResponse.emailSentTo !== \"\" : false)"
-												},
 												"subId": "cacd2b03e4b749a482b2f5c16c330da3",
 												"type": "section-2"
 											}
@@ -2106,9 +2115,6 @@
 														}
 													]
 												],
-												"rules": {
-													"sh": "Form.data.hasOwnProperty(\"shareFormButton_2\") ? Form.data.shareFormButton_2.$responseStatus != \"success\": true;"
-												},
 												"subId": "61839116f7ec43688bcfe12801469d1a",
 												"type": "section-2"
 											}
@@ -2180,9 +2186,6 @@
 														}
 													]
 												],
-												"rules": {
-													"sh": "Form.data.hasOwnProperty(\"shareFormButton_2\") ? Form.data.shareFormButton_2.$responseStatus == \"success\": false;"
-												},
 												"subId": "aa9991c952134393abcae5d9f9a5eb27",
 												"type": "section-2"
 											}
@@ -2227,13 +2230,11 @@
 			"type": "save-success-modal"
 		},
 		"submitsuccess": {
-			"exclude": false,
 			"id": "submitsuccess",
 			"properties": {},
 			"rows": [
 				[
 					{
-						"exclude": false,
 						"id": "modalBackground_2",
 						"rows": [
 							[]
@@ -2443,9 +2444,6 @@
 																[
 																	{
 																		"id": "button",
-																		"rules": {
-																			"click": "if(Form.data.$submitResponse.hasOwnProperty(\"emailSentTo\")) {\nForm.data.$submitResponse.emailSentTo = \"\"\n}\nif(Form.data.hasOwnProperty(\"submit_success_send_receipt\")) {\nForm.data.submit_success_send_receipt.$responseStatus = \"\";\n}\nForm.data.emailAddress_1 = \"\";"
-																		},
 																		"subId": "6f9319a7b2ab4377bb9de43ec572300d",
 																		"type": "button"
 																	}
@@ -3156,8 +3154,9 @@
 																						"path": "",
 																						"properties": {
 																							"src": {
-																								"fileName": "logo_BPAY.png",
-																								"width": "60px"
+																								"fileName": "Bundle_Neutral.png",
+																								"height": "",
+																								"width": ""
 																							}
 																						},
 																						"span": {
@@ -3230,10 +3229,10 @@
 																				[
 																					{
 																						"exclude": false,
-																						"id": "yesnoRadioButtons_2",
-																						"path": "YesnoRadioButtons_2",
+																						"id": "dropdown",
+																						"path": "Dropdown",
 																						"properties": {},
-																						"type": "radio-buttons-yesno"
+																						"type": "dropdown"
 																					}
 																				]
 																			],
@@ -3338,10 +3337,9 @@
 																				[
 																					{
 																						"exclude": false,
-																						"id": "yesnoRadioButtons_3",
-																						"path": "YesnoRadioButtons_3",
-																						"properties": {},
-																						"type": "radio-buttons-yesno"
+																						"id": "datePicker_1",
+																						"path": "DatePicker_1",
+																						"type": "date-picker"
 																					}
 																				]
 																			],

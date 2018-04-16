@@ -1,21 +1,44 @@
 define(["app"], function (app) {
-    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", "$anchorScroll", "$location", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll, $anchorScroll, $location) {
+    app.ng.controller("avAccordionSectionController", ["$scope", "$q", "Form", "$rootScope", "Util", "Validation", "Resource", "$element", "$timeout", "$filter", "Scroll", function ($scope, $q, Form, $rootScope, Util, Validation, Resource, $element, $timeout, $filter, Scroll) {
         Form.getItem($scope, $element).then(function (item) {
-            $scope.accordionIsValid = true;
-            $scope.accordionOpen = item.properties.defaultCollapse || Form.data[item.id];
-            $anchorScroll.yOffset = 80;
+
             var $thisAccordion = $element.find(".panel-collapse");
             var $allAccordions = $element.parent().parent().find(".panel-collapse");
             var allAccordionClosed = true;
-            var firstAccordionId = $element.parent().parent().find('.panel-group')[0].id;
+            var firstAccordionId = $scope.children[0].id;
             var transDuration = item.$$parent.properties.transitionDuration/1000;
             var focusedErrorId = "";
-            $scope.lastAccordion = item.id === $element.parent().parent().find('.panel-group')[$allAccordions.length - 1].id;
+            var aboveAccordionId = "";
+            var belowAccordionIndex = 0;
+            item.properties.isDependant = false;//place holder
+            $scope.accordionIsValid = true;
+            $scope.lastAccordion = item.id === $scope.children[$scope.children.length - 1].id;
+
+            if (Form.data[item.id] === 'close') {
+                item.properties.defaultCollapse = false;
+            }
+
+            for ( var i = 1; i < $scope.children.length; i++) {
+                if ( item.id === $scope.children[i].id ) aboveAccordionId = $scope.children[i-1].id;
+            }
+            for ( var i = 0; i < $scope.children.length - 1; i++) {
+                if ( item.id === $scope.children[i].id ) belowAccordionIndex = i+1;
+            }
+
+            item.accordionIsOpen = $scope.accordionOpen = item.properties.defaultCollapse || Form.data[item.id] === "open";
+            /**
+             *
+             * @param errors
+             */
             function validateAccordion(errors) {
                 $scope.validationErrors = errors;
                 $scope.accordionIsValid = false;
             }
 
+            /**
+             *
+             * @param isOpen
+             */
             function setAccordionHeadIcon(isOpen) {
                 if (isOpen) {
                     $scope.accordionHeaderIcon = item.$$parent.properties.showLessIcon;
@@ -24,12 +47,16 @@ define(["app"], function (app) {
                 }
             }
 
+            /**
+             *
+             * @param noDelay
+             */
             function animateSlideIn(noDelay) {
                 var accordionTransition = "";
                 var td = 0;
                 var bodyHeight = $thisAccordion[0].offsetHeight;
                 var closedOnes = $element.parent().parent().find(".panel-collapse.av-hidden").length;
-                var someOpen = ($allAccordions.length - closedOnes) > 1;
+                var someOpen = ($scope.children.length - closedOnes) > 1;
                 if (noDelay) {
                     accordionTransition = "all " + transDuration + "s" + " ease-in-out";
                     td = transDuration * 1000;
@@ -78,6 +105,10 @@ define(["app"], function (app) {
                 }, 25, false);
             }
 
+            /**
+             *
+             * @param noDelay
+             */
             function animateSlideOut(noDelay) {
                 var accordionTransition = "";
                 var td = 0;
@@ -119,15 +150,21 @@ define(["app"], function (app) {
                 }, 25, false);
             }
 
+            /**
+             * Open this accordion and let siblings know
+             */
+            var openThisAccordion = function () {
+                $scope.$emit("accordionOpening", item);
+                $timeout(function () {
+                    $thisAccordion.removeClass("av-hidden");
+                }, 0).then(function () {
+                    animateSlideIn(true);
+                });
+            };
             if (!Util.isReceipt && !Resource.design) {
                 if (!$scope.accordionOpen) {
                         $thisAccordion.addClass("av-hidden");
                     }
-                // if (!item.properties.defaultCollapse) {
-                //     $thisAccordion.addClass("av-hidden");
-                // } else {
-                //     $scope.accordionOpen = true;
-                // }
                 $element.find("input, textarea, select").focus(function (e) {
                         if ((!$scope.accordionOpen)) {
                             focusedErrorId = e.currentTarget.id;
@@ -152,7 +189,7 @@ define(["app"], function (app) {
                         return !$thisAccordion.hasClass("av-hidden");
                     },
                     function (hidden) {
-                        $scope.accordionOpen = hidden;
+                        item.accordionIsOpen = $scope.accordionOpen = hidden;
                     }
                 );
 
@@ -171,46 +208,59 @@ define(["app"], function (app) {
                     }
                 );
 
+                $scope.$watch(
+                    function () {
+                        return $allAccordions[belowAccordionIndex].className.indexOf('av-hidden') === -1;
+                    },
+                    function (belowIsOpen) {
+                        $scope.nextAccordionIsOpen = belowIsOpen;
+                    }
+                );
+
                 $scope.$on("siblingOpening", function (evt, data) {
                     if (item.id !== data.id && $scope.accordionOpen) {
                         animateSlideOut(true);
                     }
                 });
                 $scope.$on("openThisOne", function (evt, data) {
-                    if (item.id == data) {
+                    if (item.id == data && !$scope.accordionOpen) {
                         $scope.toggleCollapse();
                     }
                 });
+                $scope.$on("openAll", function (evt, data) {
+                    if (!$scope.accordionOpen) {
+                        openThisAccordion();
+                    }
+                });
                 $scope.openNext = function () {
-                    Form.validate().then(function (result) {
-                        if(result.valid) {
-                            $scope.$emit('openNext', item.id);
-                        } else {
-                            return;
-                        }
-                    });
+                    $scope.$emit('openNext', item.id);
                 };
 
                 $scope.toggleCollapse = function () {
-                    if (!$scope.accordionOpen && !item.$$parent.properties.allowMultipleOpen) {
-                        $scope.$emit("accordionOpening", item);
-                    }
-                    if ($scope.accordionOpen) {
-                        animateSlideOut(true);
+                    if (!$scope.accordionOpen) {
+                        if (!item.$$parent.properties.allowMultipleOpen) {
+                            if (item.properties.isDependant && aboveAccordionId) {
+                                Form.validate(aboveAccordionId).then(function (result) {
+                                    if(result.valid) {
+                                        openThisAccordion();
+                                    } else {
+                                        return;
+                                    }
+                                });
+                            } else {
+                                openThisAccordion();
+                            }
+
+                        } else {
+                            openThisAccordion();
+                        }
+
                     } else {
-                        $timeout(function () {
-                            $thisAccordion.removeClass("av-hidden");
-                        },0).then(function () {
-                            if(item.$$parent.properties.allowMultipleOpen) {
-                                animateSlideIn(true);
-                            }
-                            else {
-                                animateSlideIn(true);
-                            }
-                        });
+                        animateSlideOut(true);
                     }
                 };
             }
+
             if (Util.isReceipt) {
                 $element.find('.wdg-accordion-panel').css("border-style", "none");
                 $element.find('.av-accordion-body').css({
@@ -220,11 +270,12 @@ define(["app"], function (app) {
                 $element.find('.panel-heading').css("padding-left", "0");
                 $element.find('.panel-collapse').css("margin-left", "0");
             }
+
             $scope.$on("$destroy", function () {
                 if($scope.accordionOpen) {
-                    Form.data[item.id] = true;
+                    Form.data[item.id] = 'open';
                 } else {
-                    Form.data[item.id] = false;
+                    Form.data[item.id] = 'close';
                 }
             })
         });

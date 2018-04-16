@@ -1,6 +1,6 @@
 <div id="{{item.id}}" class="panel-group wdg-accordion-section-container" data-ng-controller="avAccordionSectionController">
   <div class="panel panel-default wdg-accordion-panel" >
-    <div class="panel-heading" data-ng-click="toggleCollapse()">
+    <div class="panel-heading" data-ng-click="toggleCollapse()" data-ng-class="{'accordionOpen': accordionOpen}">
       <h4 class="panel-title" >
         <span data-ng-bind-html="sanitize(item.htmlLabel ? item.htmlLabel : item.label)"></span>
         <i data-ng-if="!accordionIsValid" class="wdg-error-icon fa fa-times-circle" 
@@ -14,7 +14,7 @@
     <div  class="panel-collapse">
       <div class="panel-body av-accordion-body">
         <div data-widget-children></div>
-        <div class="col-xs-offset-8 col-xs-4 col-md-offset-10 col-md-2" data-ng-if="item.$$parent.properties.showNextButton && !lastAccordion">
+        <div class="col-xs-12" data-ng-if="item.$$parent.properties.showNextButton && !lastAccordion && !nextAccordionIsOpen">
           <button type="button" class="wdg-accordion-button btn wdg-button" data-ng-click="openNext()">
               <i class="wdg-button-icon av-icon-button"
                  data-ng-if="item.properties.icon && item.properties.iconPos == 'left'"

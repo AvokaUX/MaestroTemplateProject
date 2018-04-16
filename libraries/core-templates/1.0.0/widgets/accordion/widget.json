@@ -3,8 +3,33 @@
   "label": "Accordion",
   "html": "accordion.html",
   "js": "accordion.js",
+  "css": "accordion.css",
   "icon": "accordion.png",
   "propDefs": {
+    "allowMultipleOpen": {
+      "label": "Allow multiple open sections",
+      "type": "boolean",
+      "value": false,
+      "helpText": "Tick if you want multiple accordion sections openning while user interacts."
+    },
+    "openAllText": {
+      "label": "Label for open all button",
+      "type": "richText",
+      "value": "Open all"
+    },
+    "transitionDuration": {
+      "label": "Transition duration",
+      "type": "integer",
+      "value": 300,
+      "preventNegative": true,
+      "helpText": "Set transition duration of accordion in ms."
+    },
+    "showNextButton": {
+      "label": "Show next button in accordion",
+      "type": "boolean",
+      "value": true,
+      "helpText": "Tick if you want open next button showing in accordion sections."
+    },
     "showMoreIcon": {
       "label": "Icon when closed",
       "type": "icon",
@@ -19,25 +44,6 @@
       "value": "fa fa-angle-down",
       "helpText": "Select the show less icon"
     },
-    "allowMultipleOpen": {
-      "label": "Allow multiple open sections",
-      "type": "boolean",
-      "value": false,      
-      "helpText": "Tick if you want multiple accordion sections openning while user interacts."
-    },
-    "transitionDuration": {
-      "label": "Transition duration",
-      "type": "integer",
-      "value": "300",
-      "preventNegative": true,
-      "helpText": "Set transition duration of accordion in ms."
-    },
-    "showNextButton": {
-      "label": "Show next button in accordion",
-      "type": "boolean",
-      "value": true,
-      "helpText": "Tick if you want open next button showing in accordion sections."
-    },
     "openText": {
       "label": "Toggle button label when closed",
       "type": "richText",      
@@ -47,26 +53,18 @@
       "label": "Toggle button label when open",
       "type": "richText",     
       "value": "Show less"
-    },
-    "helpText": {
-      "label": "Popover Help Text",
-      "type": "helpText",
-      "category": "Help Text",
-      "value": ""
     }
   },
   "rows": [
     []
   ],
   "validChildren": [
-    "accordion-section",
-    "repeat",
-    "repeating-block-template"
+    "accordion-section"
   ],
   "styles": [
-    "av-form-field"
+    "av-form-field",
+    "accordion-style"
   ],
   "noData": true,
-  "exMandatory": true,
-  "hideLabel": true
+  "exMandatory": true
 }

@@ -38,14 +38,14 @@
     },
     "goNextLabel": {
       "label": "Button label",
-      "type": "text",
-      "value": "",
+      "type": "richText",
+      "value": "Go next",
       "category" : "Display options",
       "helpText": "Enter the button label for this accordion section."
     }
   },
   "rows": [[]],
   "styles": ["accordion-section-style"],
-  "exMandatory": true,
-  "noData": true
+  "validParents": ["accordion"],
+  "exMandatory": true
 }

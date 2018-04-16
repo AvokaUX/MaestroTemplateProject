@@ -1,8 +1,3 @@
-@av-bp-primary-color: #D00065;
-@av-bp-button-primary-color: #60006E;
-@av-bp-primary-contrast: #86006A;
-@av-bp-button-contrast: #fff;
-@av-bp-focus-color: #430B70;
 form[name='form'] {
   .av-button-primary {
 	
@@ -10,17 +5,17 @@ form[name='form'] {
       background: transparent;
       border: 1px;
       border-style: solid;
-      .override-color(border-color, @av-bp-primary-color, @av-bp-button-primary-color);
-      .override-color(background, @av-bp-primary-color, @av-bp-button-primary-color);
-      .override-color(color, @av-bp-primary-contrast, @av-bp-button-contrast);
+      .override-color(border-color, @av-primary-color, @av-button-primary-color);
+      .override-color(background, @av-primary-color, @av-button-primary-color);
+      .override-color(color, @av-primary-contrast, @av-button-contrast);
             
       &:hover {
         background: transparent;
-        .override-color(color, @av-bp-primary-color, @av-bp-button-primary-color);  
+        .override-color(color, @av-primary-color, @av-button-primary-color);  
       } 
           
       &:focus, &:active {
-        background: @av-bp-focus-color;
+        background: @av-focus-color;
       }     
     } 
   }
