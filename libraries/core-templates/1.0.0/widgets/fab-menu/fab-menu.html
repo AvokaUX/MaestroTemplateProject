@@ -1,4 +1,2 @@
-<div class="av-fab-menu-container" data-ng-class="fabLayout" data-ng-controller="avFabMenuController" data-ng-if="!Pages.currentPage.properties.hideMenuButton">
-    <div class="av-fab-menu-background" data-ng-if="showBackground" data-ng-click="clickBackground()"></div>
-    <div data-widget-children></div>
+<div data-ng-controller="avFabMenuController" class="av-fab-menu-container" data-ng-class="noOfMenuFuncs" data-widget-children data-ng-if="Form.$Pages.currentPage && !Form.$Pages.currentPage.properties.hideFormHeader && !Pages.currentPage.properties.hideMenuButton && !Util.isReceipt">
 </div>

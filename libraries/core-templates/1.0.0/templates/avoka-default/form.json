@@ -429,7 +429,7 @@
 					[
 						{
 							"rules": {
-								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
+								"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonExit\")"
 							},
 							"exclude": false,
 							"subId": "618724928da14126a1ea9dda71f4b9b6",
@@ -438,7 +438,7 @@
 						},
 						{
 							"rules": {
-								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu"
+								"sh": "Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonResume\") && data.functionalMenu"
 							},
 							"exclude": false,
 							"subId": "80892dfc989d43dd9cfa852107d2d1b4",
@@ -447,7 +447,7 @@
 						},
 						{
 							"rules": {
-								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
+								"sh": "Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonHelp\") && data.functionalMenu"
 							},
 							"exclude": false,
 							"subId": "97601a07e3304ceab704b6152d1174b9",
@@ -456,7 +456,7 @@
 						},
 						{
 							"rules": {
-								"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu"
+								"sh": "Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonShare\") && data.functionalMenu"
 							},
 							"exclude": false,
 							"subId": "b5002e83c936475d81cabdae77a20513",
@@ -470,7 +470,7 @@
 				},
 				"type": "fab-menu",
 				"exclude": false,
-				"id": "functionalMenuFabMenu"
+				"id": "functionalMenuBlock"
 			}
 		]
 	],
@@ -522,7 +522,7 @@
 				"av-button",
 				"bs-float-right-04479",
 				"bs-functional-button-bottom-18795",
-				"bs-functional-button-items-64706",
+				"av-button-menu",
 				"bs-functional-buttons-items-vertical-04402",
 				"bs-functional-help-03059",
 				"bs-functional-print-16338",
@@ -1442,7 +1442,7 @@
 			"availableStyles": [
 				"av-button-navigation",
 				"bs-float-right-04479",
-				"bs-submit-button-65937",
+				"av-button-submit",
 				"align-top"
 			],
 			"properties": {}
@@ -1479,7 +1479,7 @@
 						"progressBarHeight": 50
 					}
 				},
-				"functionalMenuFabMenu": {
+				"functionalMenuBlock": {
 					"properties": {}
 				},
 				"logo": {
@@ -3282,7 +3282,7 @@
 				"path": "properties.progressBarHeight"
 			}
 		],
-		"functionalMenuFabMenu": [],
+		"functionalMenuBlock": [],
 		"logo": [
 			{
 				"category": "Logo",
@@ -3604,7 +3604,7 @@
 							"ariaLabel": ""
 						}
 					},
-					"functionalMenuFabMenu": {
+					"functionalMenuBlock": {
 						"label": "Functional Menu - FAB menu",
 						"htmlLabel": "Functional Menu - FAB menu",
 						"mandatoryMsg": "",

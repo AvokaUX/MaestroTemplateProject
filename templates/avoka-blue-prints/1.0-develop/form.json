@@ -12,7 +12,7 @@
 				"path": "properties.progressBarHeight"
 			}
 		],
-		"functionalMenuFabMenu": [],
+		"functionalMenuBlock": [],
 		"logo": [
 			{
 				"category": "Logo",
@@ -62,7 +62,7 @@
 						"progressBarHeight": 50
 					}
 				},
-				"functionalMenuFabMenu": {
+				"functionalMenuBlock": {
 					"properties": {}
 				},
 				"logo": {
@@ -3461,7 +3461,7 @@
 							"styles": [
 								"av-button",
 								"av-global-layout",
-								"bs-submit-button-65937"
+								"av-button-submit"
 							],
 							"type": "submit"
 						}
@@ -3673,7 +3673,7 @@
 		[
 			{
 				"exclude": false,
-				"id": "functionalMenuFabMenu",
+				"id": "functionalMenuBlock",
 				"properties": {
 					"menuLayout": " fab-menu"
 				},
@@ -4213,7 +4213,7 @@
 				"av-button",
 				"bs-float-right-04479",
 				"bs-functional-button-bottom-18795",
-				"bs-functional-button-items-64706",
+				"av-button-menu",
 				"bs-functional-buttons-items-vertical-04402",
 				"bs-functional-help-03059",
 				"bs-functional-print-16338",
@@ -4857,7 +4857,7 @@
 			"availableStyles": [
 				"av-button-navigation",
 				"bs-float-right-04479",
-				"bs-submit-button-65937",
+				"av-button-submit",
 				"align-top"
 			],
 			"properties": {}

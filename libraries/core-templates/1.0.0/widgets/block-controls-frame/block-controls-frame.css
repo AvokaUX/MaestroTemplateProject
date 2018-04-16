@@ -3,3 +3,6 @@ form[name='form'] .av-controls-frame {
   float: none;
   margin: 0 auto;
 }
+form[name='form'] .av-controls-frame > .row {
+  height: 100%;
+}

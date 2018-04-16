@@ -73,7 +73,7 @@
 				"label": "Exit",
 				"styles": [
 					"av-button-navigation",
-					"bs-functional-button-items-64706"
+					"av-button-menu"
 				],
 				"properties": {
 					"icon": "fa fa-close"
@@ -83,7 +83,7 @@
 				"htmlLabel": "Exit",
 				"rules": {
 					"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");\n",
-					"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonExit\")"
+					"sh": "data.functionalMenu && Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonExit\")"
 				},
 				"animateVisibility": false,
 				"pubId": "618724928da14126a1ea9dda71f4b9b6",
@@ -100,7 +100,7 @@
 				"label": "Resume",
 				"styles": [
 					"av-button-navigation",
-					"bs-functional-button-items-64706"
+					"av-button-menu"
 				],
 				"properties": {
 					"icon": "fa fa-reply"
@@ -109,7 +109,7 @@
 				"path": "",
 				"htmlLabel": "Resume",
 				"rules": {
-					"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") && data.functionalMenu",
+					"sh": "Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonResume\") && data.functionalMenu",
 					"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");"
 				},
 				"animateVisibility": false,
@@ -127,7 +127,7 @@
 				"label": "Help",
 				"styles": [
 					"av-button-navigation",
-					"bs-functional-button-items-64706"
+					"av-button-menu"
 				],
 				"properties": {
 					"icon": "fa fa-question"
@@ -137,7 +137,7 @@
 				"htmlLabel": "Help",
 				"rules": {
 					"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");",
-					"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") && data.functionalMenu"
+					"sh": "Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonHelp\") && data.functionalMenu"
 				},
 				"animateVisibility": false,
 				"pubId": "97601a07e3304ceab704b6152d1174b9",
@@ -154,7 +154,7 @@
 				"label": "Share",
 				"styles": [
 					"av-button-navigation",
-					"bs-functional-button-items-64706"
+					"av-button-menu"
 				],
 				"properties": {
 					"icon": "fa fa-share-alt"
@@ -163,7 +163,7 @@
 				"path": "",
 				"htmlLabel": "Share",
 				"rules": {
-					"sh": "Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") && data.functionalMenu",
+					"sh": "Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonShare\") && data.functionalMenu",
 					"click": "if (data.onlyOneVisible !== \"function-items-1\") {\n    Form.fireRule(\"click\" ,\"functionalMenu\" , data);\n}\nForm.showDialog(\"saveconfirm\");"
 				},
 				"animateVisibility": false,
@@ -176,7 +176,7 @@
 			{
 				"label": "Only one visible",
 				"rules": {
-					"eq": "var buttonResume = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonResume\") ? 1 : 0;\nvar buttonShare = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonShare\") ? 1 : 0;\nvar buttonHelp = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonHelp\") ? 1 : 0;\nvar buttonClose = Form.getItemProperty(\"data.functionalMenuFabMenu\",\"functionalButtonClose\") ? 1 : 0;\n\nvar buttonCount = buttonResume + buttonShare + buttonHelp + buttonClose;\nconsole.log(buttonCount +\"-\"+ buttonResume+\":\"+buttonShare+\":\"+buttonHelp);\n\nreturn {\n  0: \"function-items-0\",\n  1: \"function-items-1\",\n  2: \"function-items-2\",\n  3: \"function-items-3\",\n  4: \"function-items-4\"\n\n}[buttonCount]"
+					"eq": "var buttonResume = Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonResume\") ? 1 : 0;\nvar buttonShare = Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonShare\") ? 1 : 0;\nvar buttonHelp = Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonHelp\") ? 1 : 0;\nvar buttonClose = Form.getItemProperty(\"data.functionalMenuBlock\",\"functionalButtonClose\") ? 1 : 0;\n\nvar buttonCount = buttonResume + buttonShare + buttonHelp + buttonClose;\nconsole.log(buttonCount +\"-\"+ buttonResume+\":\"+buttonShare+\":\"+buttonHelp);\n\nreturn {\n  0: \"function-items-0\",\n  1: \"function-items-1\",\n  2: \"function-items-2\",\n  3: \"function-items-3\",\n  4: \"function-items-4\"\n\n}[buttonCount]"
 				},
 				"type": "data-field",
 				"path": "",
@@ -189,7 +189,7 @@
 			{
 				"label": "Menu Layout",
 				"rules": {
-					"eq": "//Provide a value or calculation for this data field\n\nreturn Form.getItemProperty(\"data.functionalMenuFabMenu\",\"menuLayout\");"
+					"eq": "//Provide a value or calculation for this data field\n\nreturn Form.getItemProperty(\"data.functionalMenuBlock\",\"menuLayout\");"
 				},
 				"type": "data-field",
 				"path": "",
@@ -215,7 +215,7 @@
 	"rules": {
 		"dc": "return data.onlyOneVisible + data.menuLayout\n "
 	},
-	"id": "functionalMenuFabMenu",
+	"id": "functionalMenuBlock",
 	"propDefs": {
 		"functionalButtonResume": {
 			"label": "Functional Button Resume",

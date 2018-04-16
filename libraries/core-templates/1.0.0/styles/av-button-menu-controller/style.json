@@ -1,7 +1,7 @@
 {
 	"file": "style.less",
-	"label": "AV fab menu",
+	"label": "AV menu button controller",
 	"widgets": [
-		"button-menu"
+		"button-menu-controller"
 	]
 }

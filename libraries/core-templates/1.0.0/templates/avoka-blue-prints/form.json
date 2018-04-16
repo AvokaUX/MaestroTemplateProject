@@ -467,7 +467,7 @@
 							},
 							"styles": [
 								"av-button",
-								"bs-submit-button-65937",
+								"av-button-submit",
 								"av-global-layout"
 							],
 							"properties": {
@@ -628,7 +628,7 @@
 				},
 				"type": "fab-menu",
 				"exclude": false,
-				"id": "functionalMenuFabMenu"
+				"id": "functionalMenuBlock"
 			}
 		],
 		[
@@ -1007,7 +1007,7 @@
 				"av-button",
 				"bs-float-right-04479",
 				"bs-functional-button-bottom-18795",
-				"bs-functional-button-items-64706",
+				"av-button-menu",
 				"bs-functional-buttons-items-vertical-04402",
 				"bs-functional-help-03059",
 				"bs-functional-print-16338",
@@ -1904,7 +1904,7 @@
 			"availableStyles": [
 				"av-button-navigation",
 				"bs-float-right-04479",
-				"bs-submit-button-65937",
+				"av-button-submit",
 				"align-top"
 			],
 			"properties": {}
@@ -1934,7 +1934,7 @@
 						"progressBarHeight": 50
 					}
 				},
-				"functionalMenuFabMenu": {
+				"functionalMenuBlock": {
 					"properties": {}
 				},
 				"logo": {
@@ -4104,7 +4104,7 @@
 				"path": "properties.progressBarHeight"
 			}
 		],
-		"functionalMenuFabMenu": [],
+		"functionalMenuBlock": [],
 		"logo": [
 			{
 				"category": "Logo",
@@ -4487,7 +4487,7 @@
 						"htmlLabel": "Page Change Animation",
 						"mandatoryMsg": ""
 					},
-					"functionalMenuFabMenu": {
+					"functionalMenuBlock": {
 						"label": "Functional Menu - FAB menu",
 						"htmlLabel": "Functional Menu - FAB menu",
 						"mandatoryMsg": "",

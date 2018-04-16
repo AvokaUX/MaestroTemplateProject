@@ -1,7 +1,9 @@
 form[name='form'] {
   .av-button-navigation-next { 
-  	top: 50%;
+  	position: absolute;
+    top: 50%;
   	right: 30px;
+    width: 100px;
 
     .wdg-button-icon {
       text-align: right;
@@ -11,8 +13,8 @@ form[name='form'] {
 
     @media only screen and (max-width: (@av-max-form-width + 240)) {
         right: -8px;
-        transform: translateX(50%);
        .wdg-button {
+        transform: translateX(50%);
         padding-right: 50%;
         padding-left: 0;
       }
@@ -32,18 +34,5 @@ form[name='form'] {
         border-radius: inherit;
       }
     }
-
-    &.error {
-      .wdg-button:after {
-        animation: glowing 600ms 1;
-      }
-    }
   }
-}
-
-@keyframes glowing {
-  0% { background-color: transparent; }
-  10% { background-color:rgba(255, 0, 0, 0.8); }
-  60% { background-color:rgba(255, 0, 0, 0.8); }
-  100% { background-color: transparent; }
 }

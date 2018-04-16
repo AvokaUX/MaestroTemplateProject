@@ -1,5 +1,5 @@
 {
-  "label": "AV Controls Frame",
+  "label": "AV controls frame",
   "file": "style.less",
   "widgets": [
     "block"

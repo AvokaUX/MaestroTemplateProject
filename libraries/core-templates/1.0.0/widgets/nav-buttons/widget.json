@@ -42,7 +42,8 @@
 							"label": "next",
 							"styles": [
 								"av-button-navigation-next",
-								"av-button-navigation"
+								"av-button-navigation",
+								"av-button-error"
 							],
 							"properties": {
 								"icon": "fa fa-angle-right"
@@ -84,8 +85,8 @@
 							},
 							"styles": [
 								"av-button",
-								"bs-submit-button-65937",
-								"av-global-layout"
+								"av-button-submit",
+								"av-button-error"
 							],
 							"type": "submit"
 						}

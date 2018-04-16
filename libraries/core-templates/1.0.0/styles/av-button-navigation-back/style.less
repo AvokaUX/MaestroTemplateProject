@@ -1,5 +1,6 @@
 form[name='form'] {
-  .av-button-navigation-back { 
+  .av-button-navigation-back {
+    position: absolute;
   	top: 50%;
   	left: 30px;
 
@@ -11,8 +12,8 @@ form[name='form'] {
 
     @media only screen and (max-width: (@av-max-form-width + 240)) {
       left: -8px;
-      transform: translateX(-50%);
       .wdg-button {
+        transform: translateX(-50%);
         padding-left: 50%;
         padding-right: 0;
       }

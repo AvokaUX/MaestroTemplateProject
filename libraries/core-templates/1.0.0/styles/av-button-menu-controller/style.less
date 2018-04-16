@@ -1,9 +1,30 @@
 form[name='form'] {
-  .av-fab-menu {
+  .av-button-menu-controller {
     width: 100%;
-    z-index: 900;
     min-height: @av-header-height;
     .override-color(color, @av-button-docking-font-color, @av-font-color);
+
+    .wdg-button { // Button
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      padding: 0;
+      background-color: transparent;
+      border-radius: 50%;
+      outline: 0;
+      pointer-events: initial;
+      z-index: 900;
+
+      .wdg-button-icon {		// Button icon
+        font-size: 30px;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+      }
+    }
 
     .av-fab-menu-background {
       position: absolute;
@@ -26,6 +47,8 @@ form[name='form'] {
     }
 
     @media only screen and (max-width: (@av-max-form-width + 240)) {
+      position: absolute;
+      bottom: 0;
       width: 50px;
       min-height: 50px;
 
@@ -39,7 +62,7 @@ form[name='form'] {
         bottom: 0;
         right: initial;
         .override-color(background-color, @av-primary-color, @av-button-docking-color);
-        transition: 0.1s opacity ease-in-out, 0.1s width ease-in-out, 0.1s height ease-in-out;
+        transition: 0.1s opacity ease-in-out, 0.1s width ease-in-out, 0.1s height ease-in-out, 0.6s background-color ease-in-out;
         transition-delay: 0.5s;
 
         &.av-show-background {

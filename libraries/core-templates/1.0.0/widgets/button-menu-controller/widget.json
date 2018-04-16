@@ -1,9 +1,9 @@
 {
 	"category": "Buttons",
-    "label": "AV menu button",
-    "html": "button-menu.html",
-    "js":	"button-menu.js",
-    "css":	"button-menu.css",
+    "label": "AV menu button controller",
+    "html": "button-menu-controller.html",
+    "js":	"button-menu-controller.js",
+    "css":	"button-menu-controller.css",
     "propDefs": {
         "icon": {
             "label": "Icon When On",
@@ -24,6 +24,7 @@
     "rules": {
         "click": "data[item.id] = data[item.id] !== true;"
     },
+    "styles": ["av-button-menu-controller"],
     "noData": false,
     "type" : "icon-button"
 }

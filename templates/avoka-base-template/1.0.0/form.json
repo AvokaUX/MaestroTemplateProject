@@ -12,7 +12,7 @@
 				"path": "properties.progressBarHeight"
 			}
 		],
-		"functionalMenuFabMenu": [],
+		"functionalMenuBlock": [],
 		"logo": [
 			{
 				"category": "Logo",
@@ -55,7 +55,7 @@
 						"progressBarHeight": 50
 					}
 				},
-				"functionalMenuFabMenu": {
+				"functionalMenuBlock": {
 					"properties": {}
 				},
 				"logo": {
@@ -1206,6 +1206,7 @@
 		]
 	},
 	"id": "AvokaSmartForm",
+	"isPreview": false,
 	"localDialogs": [
 		"saveconfirm",
 		"savechallenge",
@@ -1594,12 +1595,6 @@
 												"rows": [
 													[
 														{
-															"id": "sharerecipientemail",
-															"path": "Sharerecipientemail",
-															"subId": "ea72110b798b4186be8e71d39c7206e1",
-															"type": "email"
-														},
-														{
 															"id": "sendername",
 															"path": "Sendername",
 															"subId": "ada1f01635de4a4eb7eccf6d8ee26220",
@@ -1642,6 +1637,28 @@
 												"rows": [
 													[
 														{
+															"id": "message_block_3",
+															"rows": [
+																[
+																	{
+																		"id": "textDisplay_20",
+																		"subId": "925a5c310b2847508048d33806aca3cb",
+																		"type": "text-display"
+																	}
+																]
+															],
+															"type": "message-block"
+														}
+													],
+													[
+														{
+															"id": "button_3",
+															"subId": "ef6111641ce948f2ae60b0cd54f66211",
+															"type": "button"
+														}
+													],
+													[
+														{
 															"id": "message_block_1",
 															"properties": {
 																"hideHeader": true,
@@ -1661,7 +1678,7 @@
 													],
 													[
 														{
-															"id": "button_3",
+															"id": "button_8",
 															"subId": "ef6111641ce948f2ae60b0cd54f66211",
 															"type": "button"
 														}
@@ -2521,12 +2538,123 @@
 				"rows": [
 					[
 						{
+							"exclude": false,
+							"hasCustomId": true,
+							"htmlLabel": "Page Controller",
+							"id": "pageController",
+							"path": "",
+							"properties": {
+								"pageTransition": "slide"
+							},
+							"rows": [
+								[
+									{
+										"animateVisibility": true,
+										"exclude": false,
+										"htmlLabel": "Landing Page",
+										"id": "landingPage",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Landing Page",
+										"properties": {
+											"fullPage": true,
+											"hideFormHeader": true,
+											"hideMenuButton": true,
+											"hideNavButtons": true,
+											"landing": true,
+											"offMenu": true
+										},
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section_2",
+													"path": "",
+													"properties": {
+														"fullPage": true
+													},
+													"rows": [
+														[
+															{
+																"exclude": false,
+																"id": "button_4",
+																"path": "",
+																"rules": {
+																	"click": "Form.$Pages.move(true);"
+																},
+																"type": "button"
+															}
+														]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"rules": {
+											"sh": "!Util.isReceipt"
+										},
+										"type": "nav-page"
+									}
+								],
+								[
+									{
+										"exclude": false,
+										"htmlLabel": "Page 1",
+										"id": "page",
+										"isFirstInGroup": false,
+										"isLastInGroup": false,
+										"label": "Page 1",
+										"path": "",
+										"rows": [
+											[
+												{
+													"exclude": false,
+													"id": "section_1",
+													"path": "",
+													"rows": [
+														[]
+													],
+													"type": "section-2"
+												}
+											]
+										],
+										"type": "nav-page"
+									}
+								]
+							],
+							"rules": {
+								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
+								"dc": "return [data.pageChangeAnimation, data.pageChangeDirection];",
+								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = \"page-transition-\" + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n\nif (Form.getItemProperty(info.from, \"fullPage\") || Form.getItemProperty(info.to, \"fullPage\") || (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage)) {\n  pageTransition = \"page-transition-fade\";\n}\ndata.pageChangeAnimation = pageTransition;\n\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeDirection = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\n\nif (pageTransition == \"page-transition-slide\") {\n  var _scroll = $(window).scrollTop();\n  var dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\n  if (data.docked){\n    $(window).scrollTop(dp);\n    $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n  }\n  $(\"#\" + pageTo.id).css(\"top\", \"0\");\n}"
+							},
+							"styles": [
+								"av-page-transition",
+								"av-max-width"
+							],
+							"type": "page-controller"
+						}
+					]
+				],
+				"rules": {},
+				"styles": [],
+				"type": "block"
+			},
+			{
+				"exclude": false,
+				"hasCustomId": true,
+				"htmlLabel": "Controls layer",
+				"id": "controlsLayer",
+				"path": "",
+				"rows": [
+					[
+						{
 							"animateVisibility": false,
 							"exclude": false,
 							"id": "formHeader1",
 							"rows": [
 								[
 									{
+										"exclude": false,
 										"id": "stickyPanel1",
 										"properties": {
 											"floatOver": true
@@ -2636,148 +2764,15 @@
 					[
 						{
 							"exclude": false,
-							"hasCustomId": true,
-							"htmlLabel": "Page Controller",
-							"id": "pageController",
-							"path": "",
-							"properties": {
-								"pageTransition": "slide"
-							},
-							"rows": [
-								[
-									{
-										"animateVisibility": true,
-										"exclude": true,
-										"htmlLabel": "Landing Page",
-										"id": "landingPage",
-										"isFirstInGroup": false,
-										"isLastInGroup": false,
-										"label": "Landing Page",
-										"properties": {
-											"fullPage": true,
-											"hideFormHeader": true,
-											"hideMenuButton": true,
-											"hideNavButtons": true,
-											"landing": true,
-											"offMenu": true
-										},
-										"rows": [
-											[
-												{
-													"exclude": false,
-													"id": "section_2",
-													"path": "",
-													"properties": {
-														"fullPage": true
-													},
-													"rows": [
-														[
-															{
-																"exclude": false,
-																"id": "button_4",
-																"path": "",
-																"rules": {
-																	"click": "Form.$Pages.move(true);"
-																},
-																"type": "button"
-															}
-														]
-													],
-													"type": "section-2"
-												}
-											]
-										],
-										"rules": {
-											"sh": "!Util.isReceipt"
-										},
-										"type": "nav-page"
-									}
-								],
-								[
-									{
-										"exclude": false,
-										"htmlLabel": "Page 1",
-										"id": "page",
-										"isFirstInGroup": false,
-										"isLastInGroup": false,
-										"label": "Page 1",
-										"path": "",
-										"rows": [
-											[
-												{
-													"exclude": false,
-													"id": "section_1",
-													"path": "",
-													"rows": [
-														[]
-													],
-													"type": "section-2"
-												}
-											]
-										],
-										"type": "nav-page"
-									}
-								]
-							],
-							"rules": {
-								"click": "if(Form.validation && Form.validation.errors.length > 0 ) {  \n  data.showSmallErrorField = true;\n}",
-								"dc": "return [data.pageChangeAnimation, data.pageChangeDirection];",
-								"pagechange": "var pageFrom = Form.getItemFromPath(info.from);\nvar pageTo = Form.getItemFromPath(info.to);\nvar pageTransition = \"page-transition-\" + Form.getItemProperty(\"data.pageController\",\"pageTransition\");\n\nif (Form.getItemProperty(info.from, \"fullPage\") || Form.getItemProperty(info.to, \"fullPage\") || (Form.dialogName && Form.view.dialogs[Form.dialogName].properties.interpage)) {\n  pageTransition = \"page-transition-fade\";\n}\ndata.pageChangeAnimation = pageTransition;\n\nvar navigateForwards = Form.getNavPages().indexOf(pageTo) > Form.getNavPages().indexOf(pageFrom);\ndata.pageChangeDirection = navigateForwards ? \"Nav-To-Right\" : \"Nav-To-Left\";\n\nif (pageTransition == \"page-transition-slide\") {\n  var _scroll = $(window).scrollTop();\n  var dp = Form.getItemProperty(\"data.dockingController\",\"dockPosition\");\n  if (data.docked){\n    $(window).scrollTop(dp);\n    $(\"#\" + pageFrom.id).css(\"top\", \"-\" + (_scroll - dp) + \"px\");\n  }\n  $(\"#\" + pageTo.id).css(\"top\", \"0\");\n}"
-							},
-							"styles": [
-								"av-page-transition",
-								"av-max-width"
-							],
-							"type": "page-controller"
-						}
-					]
-				],
-				"rules": {},
-				"styles": [],
-				"type": "block"
-			}
-		],
-		[
-			{
-				"exclude": false,
-				"hasCustomId": true,
-				"htmlLabel": "Controls layer",
-				"id": "controlsLayer",
-				"path": "",
-				"rows": [
-					[
-						{
-							"exclude": false,
 							"htmlLabel": "Controls frame",
 							"id": "controlsFrame",
-							"label": "Controls frame",
 							"rows": [
 								[
 									{
-										"htmlLabel": "Navigation buttons",
-										"id": "navigationButtons",
-										"label": "Navigation buttons",
-										"rows": [
-											[
-												{
-													"id": "back",
-													"type": "button-docking-left"
-												},
-												{
-													"id": "next",
-													"type": "button-docking-right"
-												},
-												{
-													"id": "submit",
-													"type": "submit"
-												}
-											]
-										],
-										"type": "nav-buttons"
-									},
-									{
 										"exclude": false,
-										"id": "functionalMenuFabMenu",
+										"htmlLabel": "Menu button block",
+										"id": "functionalMenuBlock",
+										"label": "Menu button block",
 										"properties": {
 											"menuLayout": " fab-menu"
 										},
@@ -2786,14 +2781,21 @@
 												{
 													"exclude": false,
 													"id": "functionalMenu",
-													"rules": {
-														"click": "data[item.id] = data[item.id] !== true;\n$timeout(function(){\nconsole.log('ng-enter-active-----',$('.bs-functional-button-items-64706').hasClass('ng-enter-active'));\n  console.log('ng-leave-active-----',$('.bs-functional-button-items-64706').hasClass('ng-leave-active'))\n}, 1500)"
+													"offset": {
+														"lg": "0",
+														"md": "0",
+														"sm": "0",
+														"xs": "0"
 													},
+													"properties": {
+														"offIcon": "fa fa-ellipsis-v"
+													},
+													"styles": [
+														"av-button-menu-controller"
+													],
 													"subId": "6d8349dcfefa43e0b629a07c41b249ce",
-													"type": "button-toggle-icon"
-												}
-											],
-											[
+													"type": "button-menu-controller"
+												},
 												{
 													"exclude": false,
 													"id": "exit",
@@ -2821,6 +2823,131 @@
 											]
 										],
 										"type": "fab-menu"
+									},
+									{
+										"exclude": false,
+										"htmlLabel": "Back button block",
+										"id": "backButton",
+										"label": "Back button block",
+										"rows": [
+											[
+												{
+													"animateVisibility": true,
+													"exclude": false,
+													"htmlLabel": "back",
+													"id": "back",
+													"label": "back",
+													"path": "",
+													"properties": {
+														"icon": "fa fa-angle-left"
+													},
+													"rules": {
+														"click": "Form.$Pages.move(false);",
+														"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isFirst && !Form.$Pages.currentPage.properties.pageOfNoReturn && !Form.$Pages.currentPage.properties.hideNavButtons;\n} else {\n\treturn true;\n}\n"
+													},
+													"span": {
+														"lg": 2,
+														"md": 2,
+														"sm": 2,
+														"xs": 2
+													},
+													"styles": [
+														"av-button-navigation"
+													],
+													"type": "button-docking-left"
+												}
+											]
+										],
+										"styles": [
+											"av-button-navigation-back"
+										],
+										"type": "block"
+									},
+									{
+										"exclude": false,
+										"htmlLabel": "Next button block",
+										"id": "nextButton",
+										"label": "Next button block",
+										"rows": [
+											[
+												{
+													"animateVisibility": true,
+													"exclude": false,
+													"htmlLabel": "next",
+													"id": "next",
+													"label": "next",
+													"labelPlacementLeft": false,
+													"path": "",
+													"properties": {
+														"icon": "fa fa-angle-right"
+													},
+													"rules": {
+														"click": "data.errorsDockLock = true;\ndata.dockErrors = !($(\".av-menu-errors:visible\").length > 0);\nForm.$Pages.move(true);\n$timeout(function() {\t\n  data.blockNext = Form.validation && Form.validation.errors.length > 0;\n}, 200);\n$timeout(function() {  \n  data.blockNext = false;\n}, 800);\n$timeout(function() {  \n  data.errorsDockLock = false;\n}, 2000);\n",
+														"dc": "return data.blockNext  ? \"error\" : \"\";",
+														"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && !Form.$Pages.currentPage.$isLast && !Form.$Pages.currentPage.properties.hideNavButtons;\n} else {\n\treturn true;\n}"
+													},
+													"span": {
+														"lg": 2,
+														"md": 2,
+														"sm": 2,
+														"xs": 2
+													},
+													"styles": [
+														"av-button-navigation",
+														"av-button-error"
+													],
+													"type": "button-docking-right"
+												}
+											]
+										],
+										"styles": [
+											"av-button-navigation-next"
+										],
+										"type": "block"
+									},
+									{
+										"exclude": false,
+										"htmlLabel": "Submit button block",
+										"id": "submitButton",
+										"label": "Submit button block",
+										"rows": [
+											[
+												{
+													"animateVisibility": true,
+													"exclude": false,
+													"id": "submit",
+													"offset": {
+														"lg": "0",
+														"md": "0",
+														"sm": "0",
+														"xs": "0"
+													},
+													"path": "",
+													"properties": {
+														"legacyMethod": false
+													},
+													"rules": {
+														"click": "//Form.showModal(\"submitsuccess\");\n\nForm.submit(item.properties.submissionMethod, item.properties.legacyMethod).then(function(response){\n    Form.fireRule(\"onSuccess\", item, data, response);\n}, function(err) {\n    Form.fireRule(\"onFailure\", item, data, err);\n});",
+														"sh": "if (Form.$Pages) {\n\treturn Form.$Pages.currentPage && Form.$Pages.currentPage.$isLast;\n} else {\n\treturn true;\n}"
+													},
+													"styles": [
+														"av-button",
+														"av-button-error"
+													],
+													"type": "submit"
+												}
+											]
+										],
+										"span": {
+											"lg": 6,
+											"md": 6,
+											"sm": 4,
+											"xs": 4
+										},
+										"styles": [
+											"av-button-submit"
+										],
+										"type": "block"
 									}
 								]
 							],
@@ -2932,10 +3059,13 @@
 		},
 		"block": {
 			"availableStyles": [
+				"av-controls-frame",
+				"av-max-width",
+				"av-nav-bar",
+				"av-background-image",
 				"av-message-block",
 				"av-section",
 				"align-top",
-				"av-background-image",
 				"bs-ben-test-63099",
 				"bs-bottom-nav-15636",
 				"bs-dialog-navigation-56885",
@@ -2951,7 +3081,6 @@
 				"bs-full-screen-layer-18272",
 				"bs-functional-bar-background-56524",
 				"bs-functional-menu-10498",
-				"av-max-width",
 				"bs-progress-banner-76461",
 				"bs-text-align-right-83697",
 				"bs-top-navigation-bar-05168",
@@ -2965,12 +3094,14 @@
 				"bs-top-nav-container-18605",
 				"dialog-content",
 				"follow-on-options-block",
-				"av-nav-bar",
 				"pull-right",
 				"reference-code-block",
 				"mg-selector-block",
 				"av-tracking-code-70060",
-				"av-controls-frame"
+				"av-controls-container-85374",
+				"av-button-navigation-back",
+				"av-button-navigation-next",
+				"av-button-submit"
 			],
 			"properties": {}
 		},
@@ -2980,7 +3111,7 @@
 				"av-button",
 				"bs-float-right-04479",
 				"bs-functional-button-bottom-18795",
-				"bs-functional-button-items-64706",
+				"av-button-menu",
 				"bs-functional-buttons-items-vertical-04402",
 				"bs-functional-help-03059",
 				"bs-functional-print-16338",
@@ -3032,6 +3163,13 @@
 				"av-button-group",
 				"av-form-field"
 			]
+		},
+		"button-menu-controller": {
+			"availableStyles": [
+				"av-button-menu-controller",
+				"align-top"
+			],
+			"properties": {}
 		},
 		"cancel-success-modal": {
 			"availableStyles": [
@@ -3249,10 +3387,17 @@
 				"av-form-field"
 			]
 		},
+		"fab-menu": {
+			"availableStyles": [
+				"av-fab-menu-container",
+				"align-top"
+			],
+			"properties": {}
+		},
 		"floating-functional-component": {
 			"availableStyles": [
-				"bs-functional-fab-menu-06259",
-				"align-top"
+				"align-top",
+				"av-fab-menu-container"
 			],
 			"properties": {}
 		},
@@ -3756,7 +3901,7 @@
 			"availableStyles": [
 				"av-button-navigation",
 				"bs-float-right-04479",
-				"bs-submit-button-65937",
+				"av-button-submit",
 				"align-top"
 			],
 			"properties": {}

@@ -21,5 +21,4 @@ form[name='form'] .av-normal-page .wdg-section-1-body {
 form[name='form'] .av-normal-page .wdg-section-1-body > .row {
   display: table-cell;
   height: 100%;
-  vertical-align: middle;
 }

@@ -9,7 +9,7 @@
 		"decs": {}
 	},
 	"file": "style.less",
-	"label": "AV submit button",
+	"label": "AV error glow",
 	"widgets": [
 		"button"
 	]

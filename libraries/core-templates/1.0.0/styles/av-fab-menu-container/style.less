@@ -1,72 +1,162 @@
 form[name='form'] {
   .av-fab-menu-container {
-	
-    .av-fab-menu-background {
-      
-    }
-  
-    &.vertical-menu {
-      .av-fab-menu-background {
-		
-        &.ng-enter, &.ng-leave.ng-leave-active {
 
+    /* --------------------------------------------------------------
+    //                    Default Vertical Menu Starts             //
+    ---------------------------------------------------------------*/
+    top: 0;
+    right: 0;
+    width: 120px;
+
+    .row {
+      > div {
+        &.ng-enter, &.ng-leave {
+          transition: 0.2s all ease-in-out;
+        }
+        &.ng-enter, &.ng-leave.ng-leave-active {
+          opacity: 0;
         }
         &.ng-leave, &.ng-enter.ng-enter-active {
+          opacity: 1;
+        }
 
+        &:nth-child(2) {
+          &.ng-enter {
+            transition-delay: 0.2s;
+          }
+        }
+        &:nth-child(3) {
+          &.ng-enter {
+            transition-delay: 0.3s;
+          }
+        }
+        &:nth-child(4) {
+          &.ng-enter {
+            transition-delay: 0.4s;
+          }
+        }
+        &:nth-child(5) {
+          &.ng-enter {
+            transition-delay: 0.5s;
+          }
+        }
+
+        &:nth-last-child(1) {
+          &.ng-leave {
+            transition-delay: 0s;
+          }
+        }
+        &:nth-last-child(2) {
+          &.ng-leave {
+            transition-delay: 0.1s;
+          }
+        }
+        &:nth-last-child(3) {
+          &.ng-leave {
+            transition-delay: 0.2s;
+          }
+        }
+        &:nth-last-child(4) {
+          &.ng-leave {
+            transition-delay: 0.3s;
+          }
         }
       }
-      .id-functionalMenu {
-    	
-        @media (max-width:1200px){
+    }
 
+    .av-fab-menu-background {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      width: 150%;
+      height: 0;
+      .override-color(background-color, @av-neutral-contrast, fade(@av-progressbar-background, @av-progressbar-background-opacity));
+      transform: translateX(-50%);
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      opacity: 0.8;
+      transition: 0.7s height ease-in-out;
+      transition-delay: 0.2s;
+
+      &.av-show-background {
+        transition-delay: 0s;
+        height: 420px;
+      }
+    }
+
+    /* --------------------------------------------------------------
+    //                    Default Vertical Menu Ends               //
+    ---------------------------------------------------------------*/
+
+    /* --------------------------------------------------------------
+    //                       Fab Menu Starts                       //
+    ---------------------------------------------------------------*/
+
+    @media only screen and (max-width: (@av-max-form-width + 240)) {
+      position: fixed;
+      top: initial;
+      right: initial;
+      bottom: 0;
+      left: 0;
+      height: 100px;
+      width: 100px;
+
+      &.function-items-4 {
+         .row > div {
+           position: absolute;
+           &:nth-child(2) {
+             top: -160px;
+             left: 50px;
+           }
+           &:nth-child(3) {
+             top: -119px;
+             left: 127px;
+           }
+           &:nth-child(4) {
+             top: -63px;
+             left: 187px;
+           }
+           &:nth-child(5) {
+             top: 10px;
+             left: 220px;
+           }
+         }
+       }
+      &.function-items-3 {
+        .row > div {
+          position: absolute;
+          &:nth-child(2) {
+            top: -160px;
+            left: 50px;
+          }
+          &:nth-child(3) {
+            top: -119px;
+            left: 127px;
+          }
+          &:nth-child(4) {
+            top: -63px;
+            left: 187px;
+          }
         }
-        .wdg-button{
-          
-          @media (max-width:1200px){
-
+      }
+      &.function-items-2 {
+        .row > div {
+          position: absolute;
+          &:nth-child(2) {
+            top: -160px;
+            left: 50px;
+          }
+          &:nth-child(3) {
+            top: -119px;
+            left: 127px;
           }
         }
       }
 
     }
-    &.fab-menu {
-      .av-fab-menu-background {
 
-        &.ng-enter, &.ng-leave.ng-leave-active {
-
-        }
-        &.ng-leave, &.ng-enter.ng-enter-active {
-
-        }
-      }
-      .id-functionalMenu {
-
-      }
-    }
-    .id-functionalMenu {
-		
-      &.ng-enter, &.ng-leave {
-
-      }
-      &.ng-enter, &.ng-leave.ng-leave-active {
-
-      }
-      &.ng-leave, &.ng-enter.ng-enter-active {
-
-      }
-
-      .wdg-button {		// Button
-		
-
-      }
-
-      .wdg-button-icon {		// Button icon
-
-      }
-
-      .wdg-button-label {		// Button label
-
-      }
-    }
+    /* --------------------------------------------------------------
+    //                        Fab Menu Ends                        //
+    ---------------------------------------------------------------*/
   }
 }

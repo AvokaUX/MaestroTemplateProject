@@ -1,6 +1,6 @@
 {
   "category": "Containers",
-  "label": "Controls Layer",
+  "label": "Controls frame",
   "icon": "block.png",
   "type": "block",
   "css": "block-controls-frame.css",
